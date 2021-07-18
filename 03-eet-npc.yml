@@ -1,0 +1,103 @@
+version: "1"
+global:
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, english, "american english"]
+modules:
+  - name: Branwen
+    components: [0]
+  - name: Aura_BG1
+    components: [0]
+    #prompt for class (1. Artificer)
+    #prompt for portrait (2. BG2 style)
+  - name: nephele
+    components: [0]
+  - name: Emily
+    components: [0]
+  - name: Helga
+    #prompt for portrait (1. Default)
+    components: [0]
+  - name: Kale
+    components: [0]
+    #prompt for music (2. No)
+  - name: Recorder
+    components: [0]
+  - name: Vienxay
+    components: [0]
+    #prompt for portrait (1. Default)
+  - name: SkitiaNPCs
+    components: [0, 4]
+    #prompt for portrait (1. Default the 1. Default)
+  - name: Petsy
+    components: [0, 1]
+  - name: c#greythedog
+    components: [0]
+  - name: GlamNPCPack
+    version: 3.1
+    components: [0]
+  - name: XanBG1Friend
+    components: [0]
+  - name: FinchNPC
+    version: 5.2
+    components:  [0]
+  - name: IndiNPC
+    version: 13.1
+    components: ~ # v13.1
+  - name: Walahnan
+    version: 1.0
+    components: ~ # new
+  - name: chattyimoen
+    components: [0, 1, 4]  
+  - name: neera # neera expansion
+    components: [0, 2]
+  - name: neerabanters
+    components: [10, 20]
+  - name: korganfriendship
+    components: [0]
+  - name: korgan
+    components: [0]
+  - name: minscfriendship
+    components: [0]
+  - name: coranbgfriend # coran bg1 friendship
+    version: v5.1
+    components: [0]
+  - name: haerdalis_friendship
+    components: [0]
+  - name: valygarfriendship
+    components: [0]
+  - name: mazzy
+    components: [0]
+  - name: cernd
+    components: [0]
+  - name: deArnise
+    components: [0]
+  - name: imoenRomance
+    components: [0, 1]
+  - name: imoenisstone
+    components: [0]
+  - name: viconia
+    components: [0]
+  - name: yoshimo
+    components: [0]
+  - name: YoshimosRemorse
+    components: [0]
+    location:
+      source:
+        path: /home/mick/Games/modda-cache/static/lin-YoshimosRemorse-v3.0.tar.gz
+  - name: ajantisbg1
+    components: [0]
+  - name: Wings
+    components: [0, 1]
+  - name: npckit
+    components: [30, 31, 400, 410, 900, 1415, 2100, 2200, 2300, 2500, 2800]
+  - name: npcflirt
+    components: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+  - name: banterpack
+    components: [0, 2]
+  - name: iepbanters
+    components: [0, 1, 2, 3, 4, 5, 7]
+  - name: willowisp # only banters
+    components: [4] # banters with Sirene, Pai'na, Foundling
+  - name: crossmodbg2
+    components: [0, 1]
+  - name: c#sodtweaks
+    components: [0, 1, 2, 5, 13]

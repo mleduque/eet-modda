@@ -1,0 +1,133 @@
+version: "1"
+global:
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, english, "american english"]
+modules:
+  - name: MilitiaOfficer
+    components: [0]
+  - name: Mercenary
+    components: [0]
+  - name: ArtisansKitpack
+    components: [10, 11, 20, 60, 70, 80, 100, 110, 120, 130, 140, 160, 180]
+  - name: BearWalker
+    components: [0]
+  - name: Dreamwalker
+    components: [0]
+  - name: SpiritHunter
+    components: [0]
+    ignore_warnings: true # WARNING: no effects altered on UB_SH00.ITM
+  - name: Spiritwalker
+    components: [0]
+  - name: StormCaller
+    components: [0]
+  - name: Charlatan
+    components: [0]
+  - name: C0Warlock
+    components: [0]
+  - name: IHateUndead
+    components: [0, 1, 2, 4, 5, 6, 7, 9, 10, 11]
+  - name: A7-ChaosSorcerer
+    components: [0, 30]
+  - name: shadowadept # will prompt 2 times
+    description: Main component only - because error
+    components: 
+      - index: 0 # Shadow Magic: Main Component
+        ignore_warn: true # WARNING: no effects altered on C0SA112.itm
+      - 1 # Shadow Magic: Shadow Monk monk
+      - 2 # Shadow Magic: Quests and Encounters
+  - name: wsr # Wizard-Slayer revisited
+    components: [100, 302, 999] # hla must be after refinements
+  - name: rr # rogue rebalancing
+    description: Components up to addition equipment (excl.)
+    components:
+      - 0     # Mise a jour du Combat a deux armes pour les voleurs et les bardes
+      - 1     # Revisions des kits des voleurs
+      - 2     # Revisions des capacites de haut niveau du voleur
+      - 3     # Ajustements raciaux propres pour les capacites de voleur
+      - 4     # Revisions des kits des bardes
+      - 5     # Revisions des capacites de haut niveau des bardes
+      - index: 7     # Equipement supplementaire pour les voleurs et les bardes
+        ignore_warn: true # WARNING: no effects altered on MISC2P.ITM
+      - 8     # Equipement ameliorable
+      - 110   #  Revisions des roublards -> Garder les potions par defaut
+      - 11    #  Rencontre avec les Elus de Cyric
+      - 12    #  Amelioration des Voleurs de l'Ombre
+    location:
+      source:
+        github_user: FredrikLindgren
+        repository: rr
+        branch: devel
+      layout:
+        strip_leading: 1
+  - name: d5_random_tweaks
+    components:
+      - 2105
+      - 2108
+      - 1151
+      - 1152
+      - 2209
+      - 2212
+      - 2213
+      - 2215
+      - 2217
+      - 2224
+      - 2251
+      - 1202
+      - 1207
+      - 1212
+      - 1251
+      - 2305
+      - 2324
+      - 1323
+      - 1351
+      - 2413
+      - 2418
+      - 1404
+      # - 1451 # make smashing wave party-friendly WARNING: no effects altered on SPPR429.spl
+      - 2508
+      - 2518
+      - 2523
+      - 1603
+      - 1611
+      - 1613
+      - 1614
+      - 2708
+      - 1710
+      - 2808
+      - 2811
+      - 2916
+      - 2915
+      - 2914
+      - 2923
+      - 3000
+      - 3010
+      - 3020
+      - 3030
+      - 3040
+      - 3050
+      - 3060
+      - 3070
+      - 3080
+      - 3092
+      - 4010
+      - 4020
+      - 4031
+      - 2451
+      - 5000
+      - 5010
+      - 5031
+  - name: wsr # hla only
+    components: [200]
+  - name: cdtweaks
+    components: [2250, 2260, 2270, 2280, 2293] # only spell progression tables
+  - name: A7#ImprovedShamanicDance
+    components: [0, 10, 20, 30, 40]
+  - name: song_and_silence
+    components: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  # - name: TomeAndBlood
+  #   components: []
+  # - name: 
+  #   components: []
+  # - name: 
+  #   components: []
+

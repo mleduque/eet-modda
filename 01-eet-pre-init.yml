@@ -1,0 +1,68 @@
+version: "1"
+global:
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, english, "american english"]
+modules:
+  - name: sod2bg2_iu
+    version: 2.0.1
+    location:
+      github_user: Gibberlings3
+      repository: SoD-to-BG2EE-Item-Upgrade
+      release: v2.0.1
+      artifact_name: lin-sod2bg2_iu-{release}.zip
+    components:
+      - 0 # SoD to BG2:EE Item upgrade by Daeros_Trollkiller
+      # - 1 # Remove "Corny Jokes" effect from Jester's Bracers (BG2EE, BGEET)
+      # - 2 # same for BGEE
+      - 3 # Update names, appearances, icons, and lore values of existing dragonscale-based items to be consistent across Baldur's Gate 1, 2, and with new items introduced by this mod.  ***These changes are cosmetic only***
+      - 4 # Update resist of original shadow dragon scale armor for consistency with new variants
+      # - 5 # All importable items with Voidsword +3
+      # - 6 # All importable items with Voidhammer +3
+      - 7 # Force all import-able SoD items to be available in their normal locations -> All importable items with randomized Voidhammer +3/Voidsword +3
+      - 8 # Change Cromwell's equipment to be more in-line with his forging skills
+  - name: EET  # needs EET/bgee_dir.txt with path to bg1 /game subdirectory inside
+    version: v13.4
+    location:
+      github_user: Gibberlings3
+      repository: EET
+      tag: v13.4
+      layout_type: multi_dir
+    components:
+      - 0 # EET core (importation de ressource)
+    add_conf:
+      file_name: bgee_dir.txt
+      content: ../../bg1/game
+  - name: LeUI-SoD
+    components:
+      - 0 # lefreut's Enhanced UI (SoD skin) - Core component
+      - 1 # lefreut's Enhanced UI (SoD skin) - BG2 vanilla bams for spells
+      - 2 # lefreut's Enhanced UI (SoD skin) - BG2 vanilla fonts for descriptions
+    location:
+      github_user: r-e-d
+      repository: LeUI-SoD
+      commit: cd05a36
+      strip_leading: 1
+  - name: LightingPack
+    components:
+      - 2 # Shader script files for lighting control -> Moderately increased contrast, brightness and gamma (recommended)
+    location:
+      source: { github_user: Argent77, repository: A7-LightingPackEE, release: v3.1, artifact_name: lin-A7-LightingPackEE-v3.1.zip }
+  - name: EEUITweaks
+    components: 
+      - 1050 # Adul's Unhide Chargen Options
+      - 1070 # Faydark's Abilities Auto-Roller/GrimLefourbe's BG2 UI
+      - 1100 # Display max proficiency limits
+      - 2000 # Transparent Sidebars
+      - 2050 # Simple Centered Dialog
+      - 2070 # Dee's Permanent Thieving Button
+      - 3000 # Leveling Progress Bars Tweaks
+      - 4040 # Spell Books -> Kilivitz's Classic Spellbooks
+  - name: HiddenGameplayOptions
+    version: v3.0
+    components:
+      - 0 # Install all Hidden Gameplay Options at once
+    source:
+      github_user: Argent77
+      repository: A7-HiddenGameplayOptions
+      release: v3.0
+      artifact_name: A7-HiddenGameplayOptions-v3.0.iemod

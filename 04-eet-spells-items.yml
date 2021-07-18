@@ -1,0 +1,75 @@
+version: "1"
+global:
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, english, "american english"]
+modules:
+  - name: spell_rev
+    components: 
+      - 0   # Spell Revisions
+      - 10  # Deva and Planetar Animations
+      - 20  # Mirror Image Fix
+      - 30  # Dispel Magic Fix    <- must be before TotLM
+      - 55  # Spell Deflection blocks AoE spells
+      - 60  # Update Spellbooks of Joinable NPCs
+      #-65   # Revised Warrior HLAs
+  - name: spell_rev_rev
+    components: [0, 1]
+    ignore_warnings: true
+  - name: iwdification
+    components: ~
+  - name: A7-TotLM-BG2EE
+    components:
+      - 0  # Trials of the Luremaster for Baldur's Gate
+      - 31 # Reduce by 50 percent [XP]
+  - name: msfm
+    components: [2, 3, 8, 10, 12, 13, 14, 15, 17]
+  - name: thalan
+    components: [0]
+  - name: mih_ip
+    components: [0, 9, 11]
+  - name: valhorn
+    components: [0]
+  - name: swordap # haer'dalis swords
+    components: [0]
+  - name: itemupgrade
+    components: [10, 11]
+  - name: ruad
+    components: [0, 10]
+  - name: rolles
+    components: [0, 10]
+  - name: abystore
+    components: [0]
+  - name: hammers
+    components: [0, 15, 25, 35,50]
+  - name: underrep
+    components: [0]
+  - name: A7-MagicStore
+    components: [1, 10] # 1=fee required
+  - name: alchemy # jan's alchemy
+    components: [0]
+  - name: darron
+    components: [0]
+  - name: stuffofthemagi
+    components: [0]
+  - name: bolsa
+    components: [0]
+  - name: heartwood
+    components: [0]
+  - name: BardicWonders # 1. items
+    components: [5]
+  - name: A7#ImprovedArcher
+    components: [100]
+  - name: mih_sp
+    components: 
+      - 0   # Made in Heaven: Spell Restorations
+      - 1   # Made in Heaven: Arcane Spellpack
+      - 2   # Made in Heaven: Divine Spellpack
+      - 3   # Made in Heaven: Epic Spellpack ERROR
+      - 4   #revised paladin powers (ERROR)
+      - 6   # Revised Animal/Monster Summoning
+      - 7   # No Elemental Mind Battle
+      # - 8   # True Meteor Swarm
+      - 13  # Temples sell Priest Scrolls
+      - 15  # Sixth Circle Spell Scrolls in Siege of Dragonspear
+  - name: cdlore
+    components: [10, 20, 30, 40]
