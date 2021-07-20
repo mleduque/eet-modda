@@ -8,14 +8,14 @@ modules:
       github_user: Argent77
       repository: A7-DlcMerger
       release: v1.3
-      artifact_name: lin-A7-DlcMerger-v1.3.zip
+      asset: lin-A7-DlcMerger-v1.3.zip
     components:
-      - 1 # Merge DLC into game -> Merge "Siege of Dragonspear" 
+      - 1 # Merge DLC into game -> Merge "Siege of Dragonspear"
   - name: bg1ub
     description: BG1 Unfinished Business
-    version: 
+    version:
     location: { github_user: Pocket-Plane-Group, repository: bg1ub, release: v16.4,
-                artifact_name: bg1-unfinished-business-v16.4.zip }
+                asset: bg1-unfinished-business-v16.4.zip }
     components: [
       0,  # Ice Island Level Two Restoration
       11, # Scar and the Sashenstar's Daughter
@@ -36,16 +36,16 @@ modules:
     ]
   - name: BG1Aerie
     version: 1.1-fr
-    components: 
+    components:
       - 0 # Aerie for BG:EE
-    location: 
+    location:
       github_user: mleduque
       repository: aerie-bg1
       branch: french
       layout_type: single_dir_plus_tp2
       strip_leading: 1
   - name: drizztsaga
-    components: 
+    components:
       - 0 # The Drizzt Saga pour BGEE/Tutu/BGT -> Version par defaut : zones connectees par des declencheurs de voyage
       - 3  # Debut repousse : Drizzt revient apres la Tour de Durlag
     location:

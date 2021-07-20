@@ -9,7 +9,7 @@ modules:
       github_user: Gibberlings3
       repository: SoD-to-BG2EE-Item-Upgrade
       release: v2.0.1
-      artifact_name: lin-sod2bg2_iu-{release}.zip
+      asset: lin-sod2bg2_iu-{release}.zip
     components:
       - 0 # SoD to BG2:EE Item upgrade by Daeros_Trollkiller
       # - 1 # Remove "Corny Jokes" effect from Jester's Bracers (BG2EE, BGEET)
@@ -40,15 +40,15 @@ modules:
     location:
       github_user: r-e-d
       repository: LeUI-SoD
-      commit: cd05a36
-      strip_leading: 1
+      release: v4.4.2
+      asset: lefreuts-enhanced-ui-sod-skin-4.4.2.iemod
   - name: LightingPack
     components:
       - 2 # Shader script files for lighting control -> Moderately increased contrast, brightness and gamma (recommended)
     location:
-      source: { github_user: Argent77, repository: A7-LightingPackEE, release: v3.1, artifact_name: lin-A7-LightingPackEE-v3.1.zip }
+      source: { github_user: Argent77, repository: A7-LightingPackEE, release: v3.1, asset: lin-A7-LightingPackEE-v3.1.zip }
   - name: EEUITweaks
-    components: 
+    components:
       - 1050 # Adul's Unhide Chargen Options
       - 1070 # Faydark's Abilities Auto-Roller/GrimLefourbe's BG2 UI
       - 1100 # Display max proficiency limits
@@ -65,4 +65,4 @@ modules:
       github_user: Argent77
       repository: A7-HiddenGameplayOptions
       release: v3.0
-      artifact_name: A7-HiddenGameplayOptions-v3.0.iemod
+      asset: A7-HiddenGameplayOptions-v3.0.iemod
