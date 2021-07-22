@@ -5,99 +5,292 @@ global:
 modules:
   - name: Branwen
     components: [0]
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Branwen_for_BGII
+      release: v7
+      asset: branwen-npc-for-bgii-v7.iemod
   - name: Aura_BG1
     components: [0]
+    location:
+      github_user: ArtemiusI
+      repository: Aura_BG1
+      branch: master
+      strip_leading: 1
     #prompt for class (1. Artificer)
     #prompt for portrait (2. BG2 style)
   - name: nephele
     components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: Nephele_NPC
+      release: v2.6
+      asset: nephele_v2-6.zip
   - name: Emily
     components: [0]
+    location:
+      github_user: Skitia
+      repository: Emily-BG1
+      branch: master
+      strip_leading: 1
   - name: Helga
     #prompt for portrait (1. Default)
     components: [0]
+    location:
+      github_user: Skitia
+      repository: Helga-BG1
+      branch: master
+      strip_leading: 1
   - name: Kale
     components: [0]
+    location:
+      github_user: Skitia
+      repository: Kale-BG1
+      branch: master
+      strip_leading: 1
     #prompt for music (2. No)
   - name: Recorder
     components: [0]
+    location:
+      github_user: Skitia
+      repository: Recorder-BG1
+      branch: master
+      strip_leading: 1
   - name: Vienxay
     components: [0]
+    location:
+      github_user: Skitia
+      repository: Vienxay-BG1
+      branch: master
+      strip_leading: 1
     #prompt for portrait (1. Default)
   - name: SkitiaNPCs
     components: [0, 4]
+    location:
+      github_user: Skitia
+      repository: SkitiaNPCs
+      branch: master
+      strip_leading: 1
     #prompt for portrait (1. Default the 1. Default)
   - name: Petsy
     components: [0, 1]
+    location:
+      http: https://downloads.weaselmods.net/download/petsy/?wpdmdl=113&refresh=60f853870c4111626887047
+      rename: Petsy v4.1.zip
   - name: c#greythedog
     components: [0]
+    location:
+      github_user: Gibberlings3
+      repository: Grey_The_Dog
+      release: v6
+      asset: grey-the-dog-npc-6.iemod
   - name: GlamNPCPack
     version: 3.1
     components: [0]
+    location:
+      github_user: Gibberlings3
+      repository: Glam-NPC-Pack
+      release: v1
+      asset: lin-GlamNPCPack-v1.zip
   - name: XanBG1Friend
     components: [0]
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Xan_BG1_Friendship
+      release: v11
+      asset: xanbg1friend_v11.zip
   - name: FinchNPC
     version: 5.2
     components:  [0]
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Finch_NPC
+      release: v5.2
+      asset: finch-npc-mod-v5.2.iemod
   - name: IndiNPC
     version: 13.1
     components: ~ # v13.1
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Indi_NPC
+      release: v13.1
+      asset: indira-npc-mod-v13.1.iemod
   - name: Walahnan
     version: 1.0
     components: ~ # new
+    location:
+      http: https://downloads.weaselmods.net/download/walahnan-bg1ee/?wpdmdl=428&refresh=60f7f38b67d891626862475
+      rename: Walahnan v1.0.zip
   - name: chattyimoen
-    components: [0, 1, 4]  
-  - name: neera # neera expansion
+    components: [0, 1, 4]
+    location:
+      github_user: AstroBryGuy
+      repository: ChattyImoen
+      release: v1.3
+      asset: lin-chattyimoen-v1.3.zip
+  - name: neera
+    description: neera expansion
     components: [0, 2]
+    location:
+      github_user: SpellholdStudios
+      repository: Neera_Expansion
+      release: v1.3.0
+      asset: neera-expansion-v1.3.0.iemod
   - name: neerabanters
     components: [10, 20]
+    location:
+      github_user: AstroBryGuy
+      repository: NeeraBanters
+      release: v0.9.1
+      asset: win-neerabanters-v0.9.1.zip
   - name: korganfriendship
     components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: KorganFriendship
+      release: v1.6
+      asset: korgan-friendship-v1.6.iemod
   - name: korgan
+    description:
     components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: KorgansRedemption
+      release: v10.0.1
+      asset: korgans-redemption-v10.0.1.iemod
   - name: minscfriendship
     components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: MinscFriendship
+      release: v1.3
+      asset: minsc-friendship-v1.3.iemod
   - name: coranbgfriend # coran bg1 friendship
     version: v5.1
     components: [0]
+    location:
+      github_user:  Gibberlings3
+      repository: CoranBGFriend
+      release: v5.1
+      asset: corans-bg-extended-friendship-talks-v5.1.iemod
   - name: haerdalis_friendship
     components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: HaerdalisFriendship
+      release: v1.2
+      asset: haerdalis-friendship-v1.2.iemod
   - name: valygarfriendship
     components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: ValygarFriendship
+      release: v1.4
+      asset: valygar-friendship-v1.4.iemod
   - name: mazzy
+    description: Mazzy friendship
     components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: MazzyFriendship
+      release: v3.5
+      asset: mazzy-friendship-v3.5.iemod
   - name: cernd
     components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: CerndFriendship
+      release: v1.3
+      asset: Cernd-Friendship-v1.3.iemod
   - name: deArnise
     components: [0]
+      github_user:  Pocket-Plane-Group
+      repository: deArnise_Romance
+      release: v7
+      asset: deArnise_v7.zip
   - name: imoenRomance
     components: [0, 1]
+    location:
+      http: https://www.blindmonkey.org/imoen/files/Imoen%20Romance.zip
   - name: imoenisstone
     components: [0]
+    location:
+      http: https://www.gibberlings3.net/files/file/985-imoen-is-stone/?do=download&r=4412&confirm=1&t=1&csrfKey=26496983391408bcb5e250b559da1945
+      rename: lin-ImoenIsStone-v1.0.tgz
   - name: viconia
     components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: ViconiaFriendship
+      release: v4.5
+      asset: Viconia-Friendship-v4.5.iemod
   - name: yoshimo
     components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: YoshimoFriendship
+      release: v4.6
+      asset: yoshimo-friendship-v4.6.iemod
   - name: YoshimosRemorse
     components: [0]
     location:
-      source:
-        path: /home/mick/Games/modda-cache/static/lin-YoshimosRemorse-v3.0.tar.gz
+      path: /home/mick/Games/modda-cache/static/lin-YoshimosRemorse-v3.0.tar.gz
   - name: ajantisbg1
     components: [0]
+    location:
+      github_user: Gibberlings3
+      repository: Ajantis_BG1_Expansion
+      release: v17
+      asset: ajantis-bg1-expansion-modification-17.iemod
   - name: Wings
     components: [0, 1]
+    location:
+      github_user: mleduque
+      repository: wings
+      branch: master
+      strip_leading: 1
   - name: npckit
     components: [30, 31, 400, 410, 900, 1415, 2100, 2200, 2300, 2500, 2800]
+    location:
+      file: https://www.gibberlings3.net/files/file/793-npc-kitpack/?do=download&r=3968&confirm=1&t=1&csrfKey=26496983391408bcb5e250b559da1945
+      rename: lin-npckit-v5.tar.gz
   - name: npcflirt
     components: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    location:
+      github_user:  Pocket-Plane-Group
+      repository: NPC_Flirt_Packs
+      release: v1.07
+      asset: NPCFlirtV107.zip
   - name: banterpack
     components: [0, 2]
+    location:
+      github_user:  Pocket-Plane-Group
+      repository: Banter_Pack
+      release: v17
+      asset: BanterPacksV17.zip
   - name: iepbanters
     components: [0, 1, 2, 3, 4, 5, 7]
+    location:
+      github_user: SpellholdStudios
+      repository: IEP_Extended_Banter
+      release: v5.8
+      asset: iep-extended-banters-v5.8.iemod
   - name: willowisp # only banters
     components: [4] # banters with Sirene, Pai'na, Foundling
+    location:
+      http: https://downloads.weaselmods.net/download/will-of-the-wisps/?wpdmdl=91&refresh=60f1ac3e935bb1626451006
+      rename: willowisp v2.0.zip
   - name: crossmodbg2
     components: [0, 1]
+    location:
+      github_user: Gibberlings3
+      repository: Crossmod_Banter_Pack_for_Baldurs_Gate_II
+      release: v19
+      asset: lin-crossmodbg2-v19.zip
   - name: c#sodtweaks
     components: [0, 1, 2, 5, 13]
+    location:
+      github_user: Gibberlings3
+      repository: Jasteys_SoD_Tweakpack
+      branch: master
+      strip_leading: 1

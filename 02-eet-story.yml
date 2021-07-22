@@ -508,21 +508,51 @@ modules:
   - name: "snakes" # The slithering Menace
     components: [0]
     location:
-      file: http://www.shsforums.net/files/download/151-the-slithering-menace-tob/
+      http: http://www.shsforums.net/files/download/151-the-slithering-menace-tob/
   - name: SotSC # Shades of the Sword Coast
     version: 6.1
+    location:
+      http: https://downloads.weaselmods.net/download/shades-of-the-sword-coast/?wpdmdl=396&refresh=60f565294e7af1626694953
+      rename: SotSC v6.1.zip
     components: [0]
   - name: "JanQuest"
     components: [0]
+    location:
+      github_user: SpellholdStudios
+      repostory: JansAlchemy
+      release: v8.1.0
+      asset: jans-alchemy-v8.1.0.iemod
   - name: "butchery"
     components: [10, 20, 30]
+    location:
+      github_user: GwendolyneFreddy
+      repostory: butchery
+      release: v4.0.0
+      asset: butchery-4.0.0.zip
   - name: "TheBeaurinLegacy"
     components: [1000, 3010]
+    location:
+    http: https://www.gibberlings3.net/files/file/998-beaurin-legacy/?do=download&r=5213&confirm=1&t=1&csrfKey=26496983391408bcb5e250b559da1945
+    rename: lin-TheBeaurinLegacy-v4.0.tar.gz
   - name: "voloquest" # IM10
     components: [0]
+    location:
+      file: /home/mick/Games/modda-cache/static/im10/cmIM10distribution.rar
   - name: "IM10Kulyok" # IM10
     components: [0]
-  - name: "emad" # every mod and dog
+    location:
+      github_user: Pocket-Plane-Group
+      repostory: IronModder10_Kulyok
+      release: v1.1
+      asset: im10kulyok-v1.1.zip
+  - name: "emad"
+    description: every mod and dog
     components: [0, 1, 2, 3, 5]
+    location:
+      http: https://www.gibberlings3.net/files/file/707-every-mod-and-dog/?do=download
+      rename: emad_v11.zip
   - name: "xulaye"
     components: [0, 1, 2]
+    location:
+      http: http://www.shsforums.net/files/download/710-xulaye/
+      rename: Xulaye_v2.0.zip
