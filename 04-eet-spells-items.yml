@@ -4,63 +4,179 @@ global:
   lang_preferences: ["#rx#^fran[cç]ais", french, english, "american english"]
 modules:
   - name: spell_rev
-    components: 
+    components:
       - 0   # Spell Revisions
       - 10  # Deva and Planetar Animations
       - 20  # Mirror Image Fix
       - 30  # Dispel Magic Fix    <- must be before TotLM
       - 55  # Spell Deflection blocks AoE spells
       - 60  # Update Spellbooks of Joinable NPCs
-      #-65   # Revised Warrior HLAs
-  - name: spell_rev_rev
-    components: [0, 1]
-    ignore_warnings: true
+      #- 65   # Revised Warrior HLAs
+    location:
+      github_user: Gibberlings3
+      repository: SpellRevisions
+      release: v4b18
+      asset: lin-spell_rev-v4-beta18.zip
+  #- name: spell_rev_rev
+  #  components: [0, 1]
+  #  ignore_warnings: true
   - name: iwdification
     components: ~
+    location:
+      github_user: Gibberlings3
+      repository: iwdification
+      branch: road_to_v1
+      strip_leading: 1
   - name: A7-TotLM-BG2EE
-    components:
-      - 0  # Trials of the Luremaster for Baldur's Gate
-      - 31 # Reduce by 50 percent [XP]
+    components: ~
+      #- 0  # Trials of the Luremaster for Baldur's Gate
+      #- 31 # Reduce by 50 percent [XP]
+    location:
+      github_user: Argent77
+      repository: A7-TotLM-BG2EE
+      branch: devel
+      strip_leading: 1
   - name: msfm
     components: [2, 3, 8, 10, 12, 13, 14, 15, 17]
+    location:
+      github_user: Renegade0
+      repository: msfm
+      tag: "1.57"
   - name: thalan
+    description: Thalantyr Item Upgrade
     components: [0]
+    location:
+      github_user: CrevsDaak
+      repository: thalan
+      tag: v4.2.5
   - name: mih_ip
     components: [0, 9, 11]
+    location:
+      github_user:  AngelGryph
+      repository: MadeInHeaven_ItemPack
+      branch: master
+      strip_leading: 1
   - name: valhorn
     components: [0]
-  - name: swordap # haer'dalis swords
+    location:
+      github_user: Gibberlings3
+      repository: Improved_Horns_of_Valhalla
+      release: v2
+      asset: lin-valhorn-v2.tar.gz
+  - name: swordap
+    description: Improved Haer'Dalis' Swords
     components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: HaerDalis_Swords
+      release: v3.1.0
+      asset: improved-haerdalis-swords-v3.1.0.iemod
   - name: itemupgrade
     components: [10, 11]
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Item_Upgrade
+      release: v45
+      asset: lin-itemupgrade-v45.tar.gz
   - name: ruad
+    description: Ruad Ro'fhessa Item Upgrade
     components: [0, 10]
+    location:
+      github_user: SpellholdStudios
+      repository: RuadRofhessaItemUpgrade
+      release: v29.4.0
+      asset: ruad-rofhessa-item-upgrade-v29.4.0.iemod
   - name: rolles
+    description: Rolles Safyer
     components: [0, 10]
+    location:
+      github_user: SpellholdStudios
+      repository: Rolles
+      release: v5.0.5
+      asset: rolles-safyer-v5.0.5.iemod
   - name: abystore
+    description: The Unusual Oddities Shop
     components: [0]
+    location:
+      github_user: SpellholdStudios
+      repositoryrepositoryrepository: The_Unusual_Oddities_Shop
+      release: v5.0
+      asset: the-unusual-oddities-shop-5.0.iemod
   - name: hammers
     components: [0, 15, 25, 35,50]
+    location:
+      github_user: Sampsca
+      repository: ThrownHammers
+      tag: v6.1.1
+      strip_leading: 1
   - name: underrep
     components: [0]
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Under-Respresented_Items
+      release: v8
+      asset: lin-underrep-v8.tar.gz
   - name: A7-MagicStore
     components: [1, 10] # 1=fee required
-  - name: alchemy # jan's alchemy
+    location:
+      github_user: Argent77
+      repository: A7-MagicStore
+      release: v2.1
+      asset: A7-MagicStore-v2.1.iemod
+  - name: alchemy
+    description: jan's alchemy
     components: [0]
+    location:
+      github_user: SpellholdStudios
+      repostory: JansAlchemy
+      release: v8.1.0
+      asset: jans-alchemy-v8.1.0.iemod
   - name: darron
+    description: Darron the BG2 Thief Guild Vendor
     components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: Darron
+      release: v2.0.0
+      asset: darron-v2.0.0.iemod
   - name: stuffofthemagi
     components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: StuffofTheMagi
+      release: v6.0.0
+      asset: stuff-of-the-magi-6.0.0.iemod
   - name: bolsa
     components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: Bolsa
+      release: v6.0.0
+      asset: bolsa-v6.0.0.iemod
   - name: heartwood
+    description: Heart of the Wood
     components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: HeartOfTheWood
+      release: v7.0.0
+      asset:  heart-of-the-wood-7.0.0.iemod
   - name: BardicWonders # 1. items
     components: [5]
+    location:
+      github_user: ArtemiusI
+      repository: Bardic-Wonders
+      branch: master
+      strip_leading: 1
   - name: A7#ImprovedArcher
     components: [100]
+    location:
+      github_user: Argent77
+      repository: A7-ImprovedArcher
+      release: v3.2
+      asset: A7-ImprovedArcher-v3.2.iemod
   - name: mih_sp
-    components: 
+    components:
       - 0   # Made in Heaven: Spell Restorations
       - 1   # Made in Heaven: Arcane Spellpack
       - 2   # Made in Heaven: Divine Spellpack
@@ -71,5 +187,15 @@ modules:
       # - 8   # True Meteor Swarm
       - 13  # Temples sell Priest Scrolls
       - 15  # Sixth Circle Spell Scrolls in Siege of Dragonspear
+    location:
+      github_user: AngelGryph
+      repository: MadeInHeaven_SpellPack
+      branch: master
+      strip_leading: 1
   - name: cdlore
     components: [10, 20, 30, 40]
+      github_user: Gibberlings3
+
+      repository: Lore_From_Learning
+      release: v3
+      asset: lin-cdlore-v3.tar.gz

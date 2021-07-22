@@ -180,8 +180,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: BG1_Romantic_Encounters
-      release: v7
-      asset: baldurs-gate-romantic-encounters-modification-bg1re-7.0.iemod
+      release: v8.1
+      asset: baldurs-gate-romantic-encounters-modification-bg1re-8.1.iemod
   - name: wheels
     description: Wheels Of Prophecy
     components: [0]
@@ -518,10 +518,7 @@ modules:
   - name: "JanQuest"
     components: [0]
     location:
-      github_user: SpellholdStudios
-      repostory: JansAlchemy
-      release: v8.1.0
-      asset: jans-alchemy-v8.1.0.iemod
+      http: http://akadis.baldursgateworld.fr/Jan/zip/JansQuest1.5.0.zip
   - name: "butchery"
     components: [10, 20, 30]
     location:
