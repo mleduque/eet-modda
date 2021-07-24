@@ -52,7 +52,6 @@ modules:
       github_user: Argent77
       repository: A7-GolemConstruction
       branch: devel
-      strip_leading: 1
   - name: "c#endlessbg1"
     components: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12]
     location:
@@ -77,7 +76,6 @@ modules:
       github_user: Gibberlings3
       repository: transitions
       branch: master
-      strip_leading: 1
   - name: DSotSC
     components:
       - 0 # Dark Side of the Sword Coast (DSotSC)
@@ -112,7 +110,6 @@ modules:
       github_user: Gibberlings3
       repository: BG_Quests_And_Encounters
       tag: v24.1
-      strip_leading: 1
   - name: AC_QUEST
     description: Ascalon's Questpack
     components: [0]
@@ -304,7 +301,6 @@ modules:
       github_user: mleduque
       repository: garrick-tt
       branch: k4thos-eet-compat
-      strip_leading: 1
   - name: ajantisbg2
     components: [0, 1, 3, 42]
     location:
@@ -366,20 +362,13 @@ modules:
       github_user: ArtemiusI
       repository: Pai-Na-NPC-mod-for-BG2-EE
       branch: master
-      strip_leading: 1
   - name: Sirene_BG2
     components: [0]
     location:
       github_user: ArtemiusI
       repository: Sirene-NPC-for-BG2-EE
       branch: master
-      strip_leading: 1
     # prompt for portrait
-  - name: SkieCost
-    components: [0, 1, 2]
-    location:
-      http: https://downloads.weaselmods.net/download/skie-the-cost-of-one-girls-soul/?wpdmdl=92&refresh=60ecc65553e471626130005
-      rename: Skie - The Cost of One Girls Soul v3.7.zip
   - name: cowledmenace
     components: [1000, 2100, 3000]
     location:
@@ -433,7 +422,6 @@ modules:
       github_user: Gitjas
       repository: ToA
       branch: master
-      strip_leading: 1
   - name: "FishingForTrouble"
     components: [0, 1]
     location:
@@ -468,7 +456,6 @@ modules:
       github_user:  lzenner
       repository: themed_tweaks
       branch: master
-      strip_leading: 1
   - name: "framed"
     version: 1.9
     components:
@@ -484,7 +471,6 @@ modules:
       github_user: mleduque
       repository: Region_of_Terror
       branch: tamed-drizzt
-      strip_leading: 1
   - name: RE
     description: BG2 romantic Encounters
     components: [0, 1, 2, 3, 4, 6, 7, 8, 9, 11, 13, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 38, 39, 41, 42, 43, 45, 46, 47, 50, 52, 53, 54]

@@ -43,7 +43,6 @@ modules:
       repository: aerie-bg1
       branch: french
       layout_type: single_dir_plus_tp2
-      strip_leading: 1
   - name: drizztsaga
     components:
       - 0 # The Drizzt Saga pour BGEE/Tutu/BGT -> Version par defaut : zones connectees par des declencheurs de voyage
@@ -61,4 +60,3 @@ modules:
       github_user: ArtemiusI
       repository: Sirene-NPC
       branch: master
-      strip_leading: 1

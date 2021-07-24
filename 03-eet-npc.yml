@@ -16,7 +16,6 @@ modules:
       github_user: ArtemiusI
       repository: Aura_BG1
       branch: master
-      strip_leading: 1
     #prompt for class (1. Artificer)
     #prompt for portrait (2. BG2 style)
   - name: nephele
@@ -32,7 +31,6 @@ modules:
       github_user: Skitia
       repository: Emily-BG1
       branch: master
-      strip_leading: 1
   - name: Helga
     #prompt for portrait (1. Default)
     components: [0]
@@ -40,14 +38,12 @@ modules:
       github_user: Skitia
       repository: Helga-BG1
       branch: master
-      strip_leading: 1
   - name: Kale
     components: [0]
     location:
       github_user: Skitia
       repository: Kale-BG1
       branch: master
-      strip_leading: 1
     #prompt for music (2. No)
   - name: Recorder
     components: [0]
@@ -55,14 +51,12 @@ modules:
       github_user: Skitia
       repository: Recorder-BG1
       branch: master
-      strip_leading: 1
   - name: Vienxay
     components: [0]
     location:
       github_user: Skitia
       repository: Vienxay-BG1
       branch: master
-      strip_leading: 1
     #prompt for portrait (1. Default)
   - name: SkitiaNPCs
     components: [0, 4]
@@ -70,13 +64,18 @@ modules:
       github_user: Skitia
       repository: SkitiaNPCs
       branch: master
-      strip_leading: 1
     #prompt for portrait (1. Default the 1. Default)
   - name: Petsy
     components: [0, 1]
     location:
       http: https://downloads.weaselmods.net/download/petsy/?wpdmdl=113&refresh=60f853870c4111626887047
       rename: Petsy v4.1.zip
+  - name: Yvette
+    components:
+      0 # Yvette Romance - BG2 Romance Character
+    location:
+      http: https://downloads.weaselmods.net/download/yvette-romance/?wpdmdl=79&refresh=60f6277894a081626744696
+      rename: Yvette Romance v4.1.zip
   - name: c#greythedog
     components: [0]
     location:
@@ -242,13 +241,21 @@ modules:
       repository: Ajantis_BG1_Expansion
       release: v17
       asset: ajantis-bg1-expansion-modification-17.iemod
+  - name: SkieCost # install late because adds crossmod banters with Yvette & Foundling
+    description: "Skie: The Cost of One Girl’s Soul"
+    components:
+      - 0 # Skie: The Cost of One Girl's Soul - New quest for Baldur's Gate 2 EE
+      - 1 # Skie: The Cost of One Girl's Soul - Allow Skie to return as a joinable NPC
+      - 2 # Skie: The Cost of One Girl's Soul - Add brand new SoD-oriented items to BG2
+    location:
+      http: https://downloads.weaselmods.net/download/skie-the-cost-of-one-girls-soul/?wpdmdl=92&refresh=60ecc65553e471626130005
+      rename: Skie - The Cost of One Girls Soul v3.7.zip
   - name: Wings
     components: [0, 1]
     location:
       github_user: mleduque
       repository: wings
       branch: master
-      strip_leading: 1
   - name: npckit
     components: [30, 31, 400, 410, 900, 1415, 2100, 2200, 2300, 2500, 2800]
     location:
@@ -293,4 +300,3 @@ modules:
       github_user: Gibberlings3
       repository: Jasteys_SoD_Tweakpack
       branch: master
-      strip_leading: 1

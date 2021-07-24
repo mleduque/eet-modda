@@ -5,38 +5,98 @@ global:
 modules:
   - name: MilitiaOfficer
     components: [0]
+    location:
+      github_user: Raduziel
+      repository: MilitiaOfficer-Kit
+      tag: "1.8"
   - name: Mercenary
     components: [0]
+    location:
+      github_user: Raduziel
+      repository: Mercenary-Kit
+      tag: "3.1"
   - name: ArtisansKitpack
     components: [10, 11, 20, 60, 70, 80, 100, 110, 120, 130, 140, 160, 180]
+    location:
+      github_user: mleduque
+      repository: The-Artisan-s-Kitpack
+      branch: no-prompt
   - name: BearWalker
     components: [0]
+    location:
+      github_user: thisisulb
+      repository: BearWalkerKit
+      branch: master
   - name: Dreamwalker
     components: [0]
+    location:
+      github_user: thisisulb
+      repository: DreamWalkerShamanKit
+      branch: master
   - name: SpiritHunter
     components: [0]
+    location:
+      github_user: thisisulb
+      repository: SpiritHunterShamanKit
+      branch: master
     ignore_warnings: true # WARNING: no effects altered on UB_SH00.ITM
   - name: Spiritwalker
     components: [0]
+    location:
+      github_user: thisisulb
+      repository: SpiritwalkerKit
+      branch: master
   - name: StormCaller
     components: [0]
+    location:
+      github_user: thisisulb
+      repository: StormCallerKit
+      branch: master
   - name: Charlatan
     components: [0]
+    location:
+      github_user: Raduziel
+      repository: Charlatan-Kit
+      tag: "2.7"
   - name: C0Warlock
     components: [0]
+    location:
+      github_user: ArtemiusI
+      repository: Warlock
+      branch: master
   - name: IHateUndead
     components: [0, 1, 2, 4, 5, 6, 7, 9, 10, 11]
+    location:
+      github_user: Raduziel
+      repository: I-Hate-Undead-Kitpack
+      tag: "3.8.1"
   - name: A7-ChaosSorcerer
     components: [0, 30]
+    location:
+      github_user: Argent77
+      repository: A7-ChaosSorcerer
+      branch: devel
   - name: shadowadept # will prompt 2 times
-    description: Main component only - because error
-    components: 
-      - index: 0 # Shadow Magic: Main Component
-        ignore_warn: true # WARNING: no effects altered on C0SA112.itm
+    description: shadowadept- main component only - because error
+    ignore_warn: true # WARNING: no effects altered on C0SA112.itm
+    components:
+      - 0 # Shadow Magic: Main Component
+    location:
+      github_user: ArtemiusI
+      repository: Shadow-Magic
+      branch: master
+  - name: shadowadept
+    description: shadowadept - components without warningq
+    components:
       - 1 # Shadow Magic: Shadow Monk monk
       - 2 # Shadow Magic: Quests and Encounters
-  - name: wsr # Wizard-Slayer revisited
+  - name: wsr
+    description: Wizard Slayer Rebalancing
     components: [100, 302, 999] # hla must be after refinements
+    location:
+      github_user: aVENGER981
+      repository: Wizard-Slayer-Rebalancing
+      tag: v1.13
   - name: rr # rogue rebalancing
     description: Components up to addition equipment (excl.)
     components:
@@ -49,17 +109,16 @@ modules:
       - index: 7     # Equipement supplementaire pour les voleurs et les bardes
         ignore_warn: true # WARNING: no effects altered on MISC2P.ITM
       - 8     # Equipement ameliorable
-      - 110   #  Revisions des roublards -> Garder les potions par defaut
+      - 16
       - 11    #  Rencontre avec les Elus de Cyric
       - 12    #  Amelioration des Voleurs de l'Ombre
     location:
-      source:
-        github_user: FredrikLindgren
-        repository: rr
-        branch: devel
-      layout:
-        strip_leading: 1
+      github_user: FredrikLindgren
+      repository: rr
+      branch: devel
   - name: d5_random_tweaks
+    version: 1.1-mle1
+    description: SubtleDoctor's Random Tweaks
     components:
       - 2105
       - 2108
@@ -83,7 +142,7 @@ modules:
       - 2413
       - 2418
       - 1404
-      # - 1451 # make smashing wave party-friendly WARNING: no effects altered on SPPR429.spl
+      - 1451 # make smashing wave party-friendly WARNING: no effects altered on SPPR429.spl
       - 2508
       - 2518
       - 2523
@@ -116,18 +175,118 @@ modules:
       - 5000
       - 5010
       - 5031
+    location:
+      github_user: mleduque
+      repository: d5_Random_Tweaks
+      branch: french-translation
   - name: wsr # hla only
     components: [200]
+    # module location earlier
   - name: cdtweaks
-    components: [2250, 2260, 2270, 2280, 2293] # only spell progression tables
-  - name: A7#ImprovedShamanicDance
-    components: [0, 10, 20, 30, 40]
+    description: Tweaks Anthology - only spell progression tables
+    components: [2250, 2260, 2270, 2280, 2293]
+      - 2105
+      - 2108
+      - 1151
+      - 1152
+      - 2209
+      - 2212
+      - 2213
+      - 2215
+      - 2217
+      - 2224
+      - 2251
+      - 1202
+      - 1207
+      - 1212
+      - 1251
+      - 2305
+      - 2324
+      - 1323
+      - 1351
+      - 2413
+      - 2418
+      - 1404
+      - 1451 # make smashing wave party-friendly WARNING: no effects altered on SPPR429.spl
+      - 2508
+      - 2518
+      - 2523
+      - 1603
+      - 1611
+      - 1613
+      - 1614
+      - 2708
+      - 1710
+      - 2808
+      - 2811
+      - 2916
+      - 2915
+      - 2914
+      - 2923
+      - 3000
+      - 3010
+      - 3020
+      - 3030
+      - 3040
+      - 3050
+      - 3060
+      - 3070
+      - 3080
+      - 3092
+      - 4010
+      - 4020
+      - 4031
+      - 2451
+      - 5000
+      - 5010
+      - 5031
+    location:
+      github_user: mleduque
+      repository: Tweaks-Anthology
+      branch: eet-run-1
   - name: song_and_silence
-    components: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-  # - name: TomeAndBlood
-  #   components: []
-  # - name: 
-  #   components: []
-  # - name: 
+    components:
+      - 0  # Changements concernant les bardes et voleurs purs, ainsi que les kits originaux du jeu (necessaire pour les autres composants)
+      - 1  # Ajout d'une echoppe pour bardes et voleurs
+      - 2  # Installer l'Acrobate (kit de barde)
+      - 3  # Installer le Choriste (kit de barde)
+      - 4  # Installer le Chanteur Funebre (kit de barde)
+      - 5  # Installer le Gitan (kit de barde)
+      - 6  # Installer l'Aventurier (kit de voleur)
+      - 7  # Installer le Cambrioleur (kit de voleur)
+      - 8  # Installer le Lamesprit (kit de voleur)
+      - 9  # Installer le Tireur d'Elite (kit de voleur)
+    location:
+      github_user: Gibberlings3
+      repository: SongAndSilence
+      release: v10
+      asset: lin-song_and_silence-v10.zip
+  - name: TomeAndBlood
+    version: "0.9.11"
+    components: ~
+    location:
+      github_user: subtledoctor
+      repository: TomeAndBlood
+      tag: "0.9.11"
+  - name: A7#ImprovedShamanicDance
+    components:
+      - 0  # Danse shamanique amelioree
+      - 10 # Danse shamanique etendue pour les personnages de haut niveau
+      - 20 # Ajouter le sort "Pacte shamanique"
+      - 30 # Appliquer la Danse shamanique amelioree a tous les profils de Shama
+      - 40 # Objets specifiques aux Shamans
+    location:
+      github_user: Argent77
+      repository: A7-ImprovedShamanicDance
+      release: v4.3
+      asset: A7-ImprovedShamanicDance-v4.3.iemod
+  - name: item_rev
+    description: Item Revisions
+    components: ~
+    location: # temporary, hope for maintenance and releases soon
+      github_user: subtledoctor
+      repository: ItemRevisions
+      branch: master
+  # - name:
   #   components: []
 

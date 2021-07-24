@@ -26,7 +26,6 @@ modules:
       github_user: Gibberlings3
       repository: iwdification
       branch: road_to_v1
-      strip_leading: 1
   - name: A7-TotLM-BG2EE
     components: ~
       #- 0  # Trials of the Luremaster for Baldur's Gate
@@ -35,7 +34,6 @@ modules:
       github_user: Argent77
       repository: A7-TotLM-BG2EE
       branch: devel
-      strip_leading: 1
   - name: msfm
     components: [2, 3, 8, 10, 12, 13, 14, 15, 17]
     location:
@@ -55,7 +53,6 @@ modules:
       github_user:  AngelGryph
       repository: MadeInHeaven_ItemPack
       branch: master
-      strip_leading: 1
   - name: valhorn
     components: [0]
     location:
@@ -108,7 +105,6 @@ modules:
       github_user: Sampsca
       repository: ThrownHammers
       tag: v6.1.1
-      strip_leading: 1
   - name: underrep
     components: [0]
     location:
@@ -167,7 +163,6 @@ modules:
       github_user: ArtemiusI
       repository: Bardic-Wonders
       branch: master
-      strip_leading: 1
   - name: A7#ImprovedArcher
     components: [100]
     location:
@@ -191,11 +186,16 @@ modules:
       github_user: AngelGryph
       repository: MadeInHeaven_SpellPack
       branch: master
-      strip_leading: 1
+  - name: saradas_magic_2
+    components: ~
+    location:
+      github_user: SpellholdStudios
+      repository: Saradas_Magic_for_BG2
+      release: v2.0.0
+      asset: saradas-magic-for-bg2-v2.0.0.iemod
   - name: cdlore
     components: [10, 20, 30, 40]
       github_user: Gibberlings3
-
       repository: Lore_From_Learning
       release: v3
       asset: lin-cdlore-v3.tar.gz
