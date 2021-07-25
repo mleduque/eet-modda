@@ -76,6 +76,13 @@ modules:
       github_user: Argent77
       repository: A7-ChaosSorcerer
       branch: devel
+  - name: wildmage
+    components: ~
+    location:
+      github_user: BGforgeNet
+      repository: bg2-wildmage
+      release: v2.1
+      asset: wild-mage-additions-v2.1.iemod
   - name: shadowadept # will prompt 2 times
     description: shadowadept- main component only - because error
     ignore_warn: true # WARNING: no effects altered on C0SA112.itm
@@ -185,61 +192,6 @@ modules:
   - name: cdtweaks
     description: Tweaks Anthology - only spell progression tables
     components: [2250, 2260, 2270, 2280, 2293]
-      - 2105
-      - 2108
-      - 1151
-      - 1152
-      - 2209
-      - 2212
-      - 2213
-      - 2215
-      - 2217
-      - 2224
-      - 2251
-      - 1202
-      - 1207
-      - 1212
-      - 1251
-      - 2305
-      - 2324
-      - 1323
-      - 1351
-      - 2413
-      - 2418
-      - 1404
-      - 1451 # make smashing wave party-friendly WARNING: no effects altered on SPPR429.spl
-      - 2508
-      - 2518
-      - 2523
-      - 1603
-      - 1611
-      - 1613
-      - 1614
-      - 2708
-      - 1710
-      - 2808
-      - 2811
-      - 2916
-      - 2915
-      - 2914
-      - 2923
-      - 3000
-      - 3010
-      - 3020
-      - 3030
-      - 3040
-      - 3050
-      - 3060
-      - 3070
-      - 3080
-      - 3092
-      - 4010
-      - 4020
-      - 4031
-      - 2451
-      - 5000
-      - 5010
-      - 5031
     location:
       github_user: mleduque
       repository: Tweaks-Anthology
@@ -281,12 +233,177 @@ modules:
       release: v4.3
       asset: A7-ImprovedShamanicDance-v4.3.iemod
   - name: item_rev
+    description: [ "error check why split from rest", 2 ]
+    description: Item Revisions
+    components:
+      #- 1030 # Revision des boutiques - before other mod modifying store because regorganizes/overwrites
+      - 10   # Bonus des boucliers revus - scales shield 1->3 instead of all 1 / add THAC0 malus
+      - 17   # Modifications des armes
+  - name: Faiths_and_Powers
+    components: ~
+    location:
+      github_user: subtledoctor
+      repository: Faiths_and_Powers
+      tag: 79sd25
+  - name: might_and_guile
+    component: ~
+    location:
+      github_user: UnearthedArcana
+      repository: Might_and_Guile
+      tag: "4.12"
+  - name: sword_and_fist
+    component: ~
+    location:
+      http: https://www.gibberlings3.net/files/file/890-sword-and-fist/?do=download&r=4131&confirm=1&t=1&csrfKey=26496983391408bcb5e250b559da1945
+      rename: lin-sword_and_fist-v10.tar.gz
+  - name: refinements
+    component: ~
+    location:
+      github_user: UnearthedArcana
+      repository: refinements
+      tag: "4.29.1"
+  - name: Faiths_and_Powers_Multiclass
+    components: ~
+    # location see Faiths_and_Powers
+  - name: EpicThieving
+    components: ~
+    location:
+      github_user: OlvynChuru
+      repository: Epic-Thieving
+      branch: master
+  - name: item_rev
     description: Item Revisions
     components: ~
-    location: # temporary, hope for maintenance and releases soon
-      github_user: subtledoctor
-      repository: ItemRevisions
+      #- 1042 # Revised Armor - Without Movement Speed Penalties
+  - name: HouseTweaks
+    description: House Rule TweakPack
+    components: ~
+    location:
+      github_user: ArtemiusI
+      repository: House-Rule-Tweaks
       branch: master
+  - name: klatu
+    description: Klatu Tweaks
+    components: ~
+    location:
+      http: http://www.shsforums.net/files/download/1109-klatu-tweaks-and-fixes/
+      rename: klatu_Tweaks_and_Fixes_1.7.7z
+  - name: cdtweaks
+    description: Tweaks Anthology - Main batch of tweaks
+    components: ~
+    # location defined earlier
+  - name: METweaks
+    description: Olvyn's Tweaks
+    components: ~
+    location:
+      github_user: OlvynChuru
+      repository: Olvyn-Tweaks
+      branch: master
+  - name: scales_of_balance
+    components: ~
+    location:
+      github_user: UnearthedArcana
+      repository: Scales_of_Balance
+      tag: "5.31"
+  - name: jimfix
+    description: Fixes and convenience tweaks aimed at an Ascension + SCS v33 install
+    components: ~
+    location:
+      github_user: Banananaut
+      repository: Jimfix
+      release: v3.1a
+      asset: jimfix-v3.1a.iemod
+  - name: DruidGroveMakeover
+    components: ~
+    location:
+      github_user: thisisulb
+      repository: DruidGroveMakeover
+      tag: v1.2
+  - name: EET_Tweaks
+    components: ~
+    location:
+      github_user: K4thos
+      repository: EET_Tweaks
+      tag: v1.12
+  - name: Trap_Overhaul
+    description: Kjeron's Trap Overhaul
+    comment: >
+              OP https://forums.beamdog.com/discussion/71763/trap-detection-recovery-evasion/p1
+              original DL https://us.v-cdn.net/5019558/uploads/editor/cq/pzpto4fbfcov.zip
+    components:
+      - 111 # Monk Trap Evasion, Fast Trap Detection, Trap Recovery - i.e. all at once
+    location:
+      github_user: mleduque
+      repository: kjeron_Trap_Overhaul
+      branch: master
+  - name: enchant
+    description: "Dee's 'Enchant the Missile Launchers: A Small Ranged Weapon Tweak'"
+    comment: >
+              OP https://forums.beamdog.com/discussion/58374/enchant-the-missile-launchers-ranged-weapon-tweak
+              original DL https://us.v-cdn.net/5019558/uploads/editor/hc/n0q8dnnbhnsc.zip
+    components:
+      - 0  # Enchant the Missile Launchers
+    location:
+      github_user: mleduque
+      repository: kjeron_Trap_Overhaul
+      branch: master
+  - name: DUAL_TO_KIT
+    description: "Kjeron's 'Dual to Kit'"
+    comment: >
+              OP https://forums.beamdog.com/discussion/comment/985679#Comment_985679
+              original DL https://us.v-cdn.net/5019558/uploads/editor/m1/4sxyexv1ptj0.zip
+    components: ~
+    location:
+      github_user: mleduque
+      repository: kjeron_DUAL_TO_KIT
+      branch: master
+  - name: PPE
+    description: Portraits, Portraits Everywhere
+    components: ~
+    #location K4thos/Portraits-Portraits-Everywhere or DaftHunk/Portraits-Portraits-Everywhere
+  - name: thepicturestandard
+    components: ~
+  - name: A7-ConvenientEENPCs
+    components: ~
+  - name: cdportraits
+    components: ~
+  - name: S9BGEENPCTweaks
+    description: S9 BGEENPC Tweaks for BGEE / SOD / BG2EE / EET
+    comment: >
+      OP https://forums.beamdog.com/discussion/58941/mod-bgeenpc-tweaks-for-bgee-sod-bg2ee-eet
+      original download https://us.v-cdn.net/5019558/uploads/editor/sd/k7icmh3du8p3.zip
+    components: ~ # only convenience and abilities parts, not class, covered by NPC_EE
+    location:
+      github_user: mleduque
+      repository: s9-S9BGEENPCTWEAKS
+      branch: master
+    components: ~
+  - name: npc_ee
+    components: ~
+  # Probably coverd by NPC_EE
+  #- name : RelieveWizardSlayer
+  #  components:
+  #    - 1 # Valygar, the Wizard Slayer
+  #- name: MilitiaOfficier
+  #  components:
+  #    - 1 # Khalid, the milita officer
+  #- name: Mercenary
+  #  components:
+  #    - 1 # Kagain, the mercenary
+  #    - 2 # Korgan, the mercenary
+  #- name: Charlatan
+  #  components:
+  #    - 1 # Eldoth, the charlatan  - name: S9BGEENPCTweaks
+  # components: ~
+  - name: npc_ee
+    components: ~
+    # can configure any npc so no need for individual mods per npc?
+    location:
+      github_user: UnearthedArcana
+      repository: NPC_EE
+      tag: "4.3"
+
+
   # - name:
   #   components: []
 

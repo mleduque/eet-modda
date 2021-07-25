@@ -120,6 +120,26 @@ modules:
     location:
       http: https://downloads.weaselmods.net/download/walahnan-bg1ee/?wpdmdl=428&refresh=60f7f38b67d891626862475
       rename: Walahnan v1.0.zip
+  - name: gavin
+    components: ~ # new
+    location:
+      github_user: Gibberlings3
+      repository: Gavin
+      release: v14
+      asset: lin-gavin-v14.tar.gz
+  - name: gavin_bg2
+    components: ~ # new
+    location:
+      github_user: Gibberlings3
+      repository: Gavin
+      release: v23
+      asset: lin-gavin_bg2-v23.tar.gz
+  - name: arath
+    components: ~ # new
+    location:
+      github_user: SpellholdStudios
+      repository: Arath_NPC
+      tag: v5
   - name: chattyimoen
     components: [0, 1, 4]
     location:

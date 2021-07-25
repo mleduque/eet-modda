@@ -1,0 +1,63 @@
+version: "1"
+global:
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, english, "american english"]
+modules:
+  - name: EET_end
+    components:
+      - 0 # Standard installation
+    location:
+      github_user: Gibberlings3
+      repository: EET
+      tag: v13.4
+      layout_type: multi_dir
+  - name: stratagems
+    description: Sword Coast Stratagems
+    components: ~
+    location:
+      github_user: Gibberlings3
+      repository: SwordCoastStratagems
+      release: v33.7
+      asset: lin-stratagems-33.7.zip
+  - name: calling # install after stratagems or cdtweaks (even if quest mod)
+    description: The calling
+    components: ~
+    location:
+      github_user: Gibberlings3
+      repository: The_Calling
+      branch: master
+  - name: atweaks
+    components: ~
+    location:
+      github_user: CamDawg # canonical version: FredrikLindgren/aTweaks
+      repository: aTweaks
+      branch: master
+  - name: tnt
+    description: Tweaks and Tricks mod for Baldur's Gate 2
+    components: ~
+    location:
+      github_user: BGforgeNet
+      repository: bg2-tweaks-and-tricks
+      release: v8.8
+      asset: tweaks-and-tricks-v8.8.iemod
+  - name: 35thac0
+    components: [0]
+    location:
+      github_user: mleduque
+      repository: ie-mods-35
+      branch: master
+      layout_type: multi_dir # contains both 35thac0 and PathfinderHitDice
+  - name: PathfinderHitDice
+    components: [0]
+    location:
+      github_user: mleduque
+      repository: ie-mods-35
+      branch: master
+      layout_type: multi_dir # contains both 35thac0 and PathfinderHitDice
+  - name: m7multikit
+    components: ~
+    location:
+      github_user: mleduque # canonical: CrevsDaak, change: one fix for wildmage (PR submitted, no news)
+      repository: m7multikit
+      branch: unusability-output
+    # only install base component, after that must generate and install multikits

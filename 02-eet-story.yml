@@ -539,3 +539,10 @@ modules:
     location:
       http: http://www.shsforums.net/files/download/710-xulaye/
       rename: Xulaye_v2.0.zip
+  - name: TGC1e
+    description: the grey clan candelight(part 1)
+    components: ~0
+    location:
+      github_user: K4thos
+      repository: TGC1e
+      branch: master
