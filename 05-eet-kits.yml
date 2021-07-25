@@ -360,13 +360,31 @@ modules:
   - name: PPE
     description: Portraits, Portraits Everywhere
     components: ~
-    #location K4thos/Portraits-Portraits-Everywhere or DaftHunk/Portraits-Portraits-Everywhere
+    location:
+      github_user: DaftHunk # canonical:smeagolheart
+      repository: Portraits-Portraits-Everywhere
+      branch: master
   - name: thepicturestandard
     components: ~
+    location:
+      github_user: mleduque
+      repository: thepicturestandard
+      branch: master
   - name: A7-ConvenientEENPCs
+    description: Convenient Enhanced Edition NPCs
     components: ~
+    location:
+      github_user: Argent77
+      repository: A7-NoEENPCs
+      release: v4.3
+      asset: A7-ConvenientEENPCs-v4.3.iemod
   - name: cdportraits
+    description: Continuous NPC Portraits
     components: ~
+      github_user: Gibberlings3
+      repository: Continuous_NPC_Portraits
+      release: v1
+      asset: lin-cdportraits-v1.tar.gz
   - name: S9BGEENPCTweaks
     description: S9 BGEENPC Tweaks for BGEE / SOD / BG2EE / EET
     comment: >
@@ -377,9 +395,6 @@ modules:
       github_user: mleduque
       repository: s9-S9BGEENPCTWEAKS
       branch: master
-    components: ~
-  - name: npc_ee
-    components: ~
   # Probably coverd by NPC_EE
   #- name : RelieveWizardSlayer
   #  components:
@@ -402,8 +417,3 @@ modules:
       github_user: UnearthedArcana
       repository: NPC_EE
       tag: "4.3"
-
-
-  # - name:
-  #   components: []
-
