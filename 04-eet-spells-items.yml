@@ -161,7 +161,7 @@ modules:
     components: [0]
     location:
       github_user: SpellholdStudios
-      repostory: JansAlchemy
+      repository: JansAlchemy
       release: v8.1.0
       asset: jans-alchemy-v8.1.0.iemod
   - name: darron

@@ -27,9 +27,9 @@ modules:
       asset: ascension-2.0.19.iemod
   - name: A7-TestYourMettle
     components:
-      #- 0   # Test Your Mettle!
-      #- 11  # XP reduced by 50%
-      #- 20  # Make "Spacewarp" available to stores
+      - 0   # Test Your Mettle!
+      - 11  # XP reduced by 50%
+      - 20  # Make "Spacewarp" available to stores
     location:
       github_user: Argent77
       repository: A7-TestYourMettle
@@ -508,7 +508,7 @@ modules:
     components: [10, 20, 30]
     location:
       github_user: GwendolyneFreddy
-      repostory: butchery
+      repository: butchery
       release: v4.0.0
       asset: butchery-4.0.0.zip
   - name: "TheBeaurinLegacy"
@@ -524,7 +524,7 @@ modules:
     components: [0]
     location:
       github_user: Pocket-Plane-Group
-      repostory: IronModder10_Kulyok
+      repository: IronModder10_Kulyok
       release: v1.1
       asset: im10kulyok-v1.1.zip
   - name: "emad"
@@ -540,7 +540,7 @@ modules:
       rename: Xulaye_v2.0.zip
   - name: TGC1e
     description: the grey clan candelight(part 1)
-    components: ~0
+    components: ~
     location:
       github_user: K4thos
       repository: TGC1e
