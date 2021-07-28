@@ -25,7 +25,7 @@ modules:
     location:
       github_user: Gibberlings3
       repository: iwdification
-      branch: road_to_v1
+      branch: master
   - name: A7-TotLM-BG2EE
     components: ~
       #- 0  # Trials of the Luremaster for Baldur's Gate

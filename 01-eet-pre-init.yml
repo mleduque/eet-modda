@@ -9,7 +9,7 @@ modules:
       github_user: Gibberlings3
       repository: SoD-to-BG2EE-Item-Upgrade
       release: v2.0.1
-      asset: lin-sod2bg2_iu-{release}.zip
+      asset: lin-sod2bg2_iu-v2.0.1.zip
     components:
       - 0 # SoD to BG2:EE Item upgrade by Daeros_Trollkiller
       # - 1 # Remove "Corny Jokes" effect from Jester's Bracers (BG2EE, BGEET)
@@ -25,7 +25,7 @@ modules:
     location:
       github_user: Gibberlings3
       repository: EET
-      tag: v13.4
+      tag: V13.4
       layout_type: multi_dir
     components:
       - 0 # EET core (importation de ressource)
@@ -45,8 +45,7 @@ modules:
   - name: LightingPack
     components:
       - 2 # Shader script files for lighting control -> Moderately increased contrast, brightness and gamma (recommended)
-    location:
-      source: { github_user: Argent77, repository: A7-LightingPackEE, release: v3.1, asset: lin-A7-LightingPackEE-v3.1.zip }
+    location: { github_user: Argent77, repository: A7-LightingPackEE, release: v3.1, asset: lin-A7-LightingPackEE-v3.1.zip }
   - name: EEUITweaks
     components:
       - 1050 # Adul's Unhide Chargen Options
@@ -61,7 +60,7 @@ modules:
     version: v3.0
     components:
       - 0 # Install all Hidden Gameplay Options at once
-    source:
+    location:
       github_user: Argent77
       repository: A7-HiddenGameplayOptions
       release: v3.0

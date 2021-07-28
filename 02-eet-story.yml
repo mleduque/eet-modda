@@ -292,8 +292,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: BG1NPC
-      release: v27
-      asset: the-bg1npc-project-v27.iemod
+      release: v27.1
+      asset: the-bg1npc-project-v27.1.iemod
   - name: garrick-tt
     components:
       - 0 # Garrick : les contes d'un troubadour

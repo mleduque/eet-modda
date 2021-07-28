@@ -42,18 +42,24 @@ modules:
       github_user: mleduque
       repository: aerie-bg1
       branch: french
-      layout_type: single_dir_plus_tp2
+      layout:
+        layout_type: single_dir_plus_tp2
   - name: drizztsaga
     components:
       - 0 # The Drizzt Saga pour BGEE/Tutu/BGT -> Version par defaut : zones connectees par des declencheurs de voyage
       - 3  # Debut repousse : Drizzt revient apres la Tour de Durlag
     location:
       http: http://downloads.blackwyrmlair.net/drizztsaga/drizztsaga.zip
-  - name: soa #The Stone of Askavar
+  - name: soa # The Stone of Askavar
     components: [0]
     version: "2.2"
     location:
       http: http://downloads.chosenofmystra.net/bg1/tsoaV2_2.zip
+  - name: saradas_magic
+    components: [0]
+    location:
+      http: https://download1325.mediafire.com/9oh1se9asuug/rg5cyypji1om22o/Saradas%2520Magic%2520ENG%2520V_1.1.zip
+      rename: Saradas_Magic_ENG_V_1.1.zip
   - name: Sirene
     components: [0]
     location:
