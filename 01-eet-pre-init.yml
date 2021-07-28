@@ -56,6 +56,11 @@ modules:
       - 2070 # Dee's Permanent Thieving Button
       - 3000 # Leveling Progress Bars Tweaks
       - 4040 # Spell Books -> Kilivitz's Classic Spellbooks
+    location:
+      github_user: r-e-d
+      repository: EEUITweaks
+      release: "3.7.1"
+      asset: eeuitweaks-3.7.1.iemod
   - name: HiddenGameplayOptions
     version: v3.0
     components:

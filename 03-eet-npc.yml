@@ -279,7 +279,7 @@ modules:
   - name: npckit
     components: [30, 31, 400, 410, 900, 1415, 2100, 2200, 2300, 2500, 2800]
     location:
-      file: https://www.gibberlings3.net/files/file/793-npc-kitpack/?do=download&r=3968&confirm=1&t=1&csrfKey=26496983391408bcb5e250b559da1945
+      path: https://www.gibberlings3.net/files/file/793-npc-kitpack/?do=download&r=3968&confirm=1&t=1&csrfKey=26496983391408bcb5e250b559da1945
       rename: lin-npckit-v5.tar.gz
   - name: npcflirt
     components: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
