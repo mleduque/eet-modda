@@ -119,10 +119,12 @@ modules:
       asset: ac_quest_3-0.zip
   - name: BG_Travel
     description: New travel system between Baldur's Gate City areas
-    components: [66]
+    comment: Original location http://athkatla.cob-bg.pl/download.php?id=1595 (BG_Travel_v2.1.rar)
+    components: [66] # New travel system between Baldur's Gate City areas -> Full version of component
     location:
-      http: http://athkatla.cob-bg.pl/download.php?id=1595
-      rename: BG_Travel_v2.1.rar
+      github_user: mleduque
+      repository: BG_Travel
+      tag: v2.1
   - name: c#sb_silber
     components: [0]
     location:
