@@ -204,8 +204,8 @@ modules:
     location:
       github_user: SpellholdStudios
       repository: ValygarFriendship
-      release: v1.4
-      asset: valygar-friendship-v1.4.iemod
+      release: v1.5
+      asset: valygar-friendship-v1.5.iemod
   - name: mazzy
     description: Mazzy friendship
     components: [0]
