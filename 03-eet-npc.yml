@@ -140,6 +140,13 @@ modules:
       github_user: SpellholdStudios
       repository: Arath_NPC
       tag: v5
+  - name: valerie
+    components: ~ # new
+    location:
+      github_user: SpellholdStudios
+      repository: Valerie_NPC
+      release: v1.2
+      asset: valerie-npc-for-bg-v1.2.iemod
   - name: chattyimoen
     components: [0, 1, 4]
     location:
@@ -250,6 +257,13 @@ modules:
       repository: YoshimoFriendship
       release: v4.6
       asset: yoshimo-friendship-v4.6.iemod
+  - name: sarevokfriendship
+    components: ~
+    location:
+      github_user: SpellholdStudios
+      repository: SarevokFriendship
+      release: v2.6
+      asset: sarevok-friendship-v2.6.iemod
   - name: YoshimosRemorse
     components: [0]
     location:

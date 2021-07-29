@@ -10,7 +10,6 @@ modules:
       github_user: Gibberlings3
       repository: EET
       tag: v13.4
-      layout_type: multi_dir
   - name: stratagems
     description: Sword Coast Stratagems
     components: ~
@@ -46,14 +45,12 @@ modules:
       github_user: mleduque
       repository: ie-mods-35
       branch: master
-      layout_type: multi_dir # contains both 35thac0 and PathfinderHitDice
   - name: PathfinderHitDice
     components: [0]
     location:
       github_user: mleduque
       repository: ie-mods-35
       branch: master
-      layout_type: multi_dir # contains both 35thac0 and PathfinderHitDice
   - name: m7multikit
     components: ~
     location:

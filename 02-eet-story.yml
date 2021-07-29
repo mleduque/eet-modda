@@ -158,13 +158,12 @@ modules:
   - name: SouthernEdge
     components: [0]
     location:
-      http: https://downloads.weaselmods.net/download/southern-edge/?wpdmdl=36&refresh=60eccda966e951626131881
-      rename: SouthernEdge v3.21.zip
+      path: /home/mick/Games/modda-cache/static/SouthernEdge_v3.21.zip
   - name: Ooze
     components: [0]
     location:
       http: https://downloads.weaselmods.net/download/oozes-lounge/?wpdmdl=59&refresh=60ed1f85797ca1626152837
-      rename: Oozes Lounge v2.9.zip
+      rename: Oozes_Lounge_v2.9.zip
   - name: SirinesCall
     description: The Lure of the Sirine's Call
     components: [0, 1]
@@ -272,24 +271,34 @@ modules:
       release: v15
       asset: Alternatives_v15.zip
   - name: d0questpack
+    description: SimDing0's Quest Pack
     components: [0, 1, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
     location:
       http: http://mods.pocketplane.net/questpack-v35-win.zip
+      layout:
+        layout_type: multi_dir
+        dirs:
+          - questpack
+          - setup-d0questpack.tp2
   - name: bg1npc
     version: v27
     components:
-      #- 0   # BG1 NPC Project : modifications necessaires
-      #- 10  # BG1 NPC Project : bavardages, quetes et interjections
-      #- 32  # BG1 NPC Project : romance de Branwen, elements de base (contenu adolescent) -> Rythme : 30 minutes de temps reel entre les dialogues de romance
-      #- 53  # BG1 NPC Project : romance de Dynaheir, elements de base (contenu adolescent) -> Rythme : 15 minutes de temps reel entre les dialogues de romance
-      #- 62  # BG1 NPC Project : relation avec Shar-Teel, elements de base (contenu adulte) -> Rythme : 30 minutes de temps reel entre les dialogues de romance
-      #- 111 # Ajustement du rythme des bavardages pour BG:EE -> Rythme des bavardages : frequents
-      #- 120 # BG1 NPC Project : ajustement de reputation grace a des bardes
-      #- 130 # ajustements du journal de Sarevok -> Journal de Sarevok enrichi par SixofSpades
-      #- 150 # donner a Kivan son portait issu du mod "Kivan and Deheriana Companions"
-      #- 155 # donner a Coran son portrait de "Murder in Baldur's Gate"
-      #- 160 # ajouter des portraits de PNJs non-recrutables pour les dialogues et les quetes
-      #- 200 # dialogues inities par le joueur
+      - 0    # BG1 NPC Project : modifications necessaires
+      - 10   # BG1 NPC Project : bavardages, quetes et interjections
+      - 22   # BG1 NPC Project : romance d'Ajantis, elements de base (contenu adolescent) -> Rythme : 30 minutes de temps reel entre les dialogues de romance
+      - 32   # BG1 NPC Project : romance de Branwen, elements de base (contenu adolescent) -> Rythme : 30 minutes de temps reel entre les dialogues de romance
+      - 42   # BG1 NPC Project : romance de Coran, elements de base (contenu adulte) -> Rythme : 30 minutes de temps reel entre les dialogues de romance
+      - 53   # BG1 NPC Project : romance de Dynaheir, elements de base (contenu adolescent) -> Rythme : 15 minutes de temps reel entre les dialogues de romance
+      - 62   # BG1 NPC Project : relation avec Shar-Teel, elements de base (contenu adulte) -> Rythme : 30 minutes de temps reel entre les dialogues de romance
+      - 71   # BG1 NPC Project : romance de Xan, elements de base (contenu adolescent) -> Rythme : 45 minutes de temps reel entre les dialogues de romance
+      - 80   # BG1 NPC Project : conflits de romance pour personnage feminin, Ajantis - Xan - Coran
+      - 111  # Ajustement du rythme des bavardages pour BG:EE -> Rythme des bavardages : frequents
+      - 120  # BG1 NPC Project : ajustement de reputation grace a des bardes
+      - 130  # BG1 NPC Project : ajustements du journal de Sarevok -> Journal de Sarevok enrichi par SixofSpades
+      - 150  # BG1 NPC Project : donner a Kivan son portait issu du mod "Kivan and Deheriana Companions"
+      - 155  # BG1 NPC Project : donner a Coran son portrait de "Murder in Baldur's Gate"
+      - 160  # BG1 NPC Project : ajouter des portraits de PNJs non-recrutables pour les dialogues et les quetes
+      - 200  # BG1 NPC Project : dialogues inities par le joueur
     location:
       github_user: Gibberlings3
       repository: BG1NPC
@@ -303,15 +312,30 @@ modules:
       repository: garrick-tt
       branch: k4thos-eet-compat
   - name: ajantisbg2
-    components: [0, 1, 3, 42]
+    components:
+      - 0  # Sir Ajantis NPC for BGII
+      - 1  # Install the unique BG(II):EE BAM for Ajantis' Family Shield
+      - 3  # Installation of adult romance content
+      - 42 # Select Ajantis' Friendship Dialogues and Romance Speed: -> Speed: 30 minutes real time minimum between Dialogues
     location:
       path: /home/mick/Games/modda-cache/static/lin-ajantisbg2-v20.zip
   - name: hiddenadventure
-    components: ~ # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    components:
+      - 0  # Lady Elgea's extended plot
+      - 1  # Anomen's extended plot
+      - 2  # Jerlia's Ore Shop
+      - 3  # Elven holy water in the Temple of Lathander
+      - 4  # Wave Blade in Treasury
+      - 5  # Silver Dagger in Irenicus Dungeon
+      - 6  # Bards can spend the night at their stronghold (Five Flagons)
+      - 7  # A bard for the bard stronghold
+      - 8  # Silver Sword
+      - 9  # A Tunnel for Saradush
+      - 10 # Temple of Mask in Docks District
     location:
       github_user: Gitjas
       repository: hiddenadventure
-      release: VBeta_7
+      release: vBeta_7
       asset: hidden-adventures-beta_7.iemod
   - name: isra
     components: [0]
@@ -328,6 +352,9 @@ modules:
       repository: Xan_for_BGII
       release: v19
       asset: Xan_v19.zip
+      layout:
+        layout_type: multi_dir
+        dirs: [Xan] # xan v.s. Xan :/
   - name: isra_bg2
     components: [0, 1]
     location:
@@ -345,7 +372,7 @@ modules:
   - name: amber
     components: [0, 1]
     location:
-    path: /home/mick/Games/modda-cache/static/lin-amber-v5.1.zip
+      path: /home/mick/Games/modda-cache/static/lin-amber-v5.1.zip
   - name: Foundling
     components: [0]
     # will prompt for class - 1 Keep original class

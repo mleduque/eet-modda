@@ -26,7 +26,6 @@ modules:
       github_user: Gibberlings3
       repository: EET
       tag: V13.4
-      layout_type: multi_dir
     components:
       - 0 # EET core (importation de ressource)
     add_conf:
