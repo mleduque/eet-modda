@@ -380,7 +380,13 @@ modules:
       http: https://downloads.weaselmods.net/download/foundling-between-the-shades/?wpdmdl=81&refresh=60edb7ef9e0271626191855
       rename: Foundling v5.1.zip
   - name: willowisp
-    components: ~ # [0, 1, 3, 6] # 4 later
+    components: # 4 later
+      - 0 # Will NPC, shaman stronghold and new shaman kit for BG2EE
+      - 1 # Change shaman .tlk string to remove "Ineligible for any stronghold" line
+      - 2 # New items for shamans and undead NPCs
+      - 3 # Optional: Drider and Dark Treant Enemies
+      # 4 : crossmod banter later afet installing other mods
+      - 6 # [CHEAT] Enable shaman stronghold for all classes
     location:
       http: https://downloads.weaselmods.net/download/will-of-the-wisps/?wpdmdl=91&refresh=60f1ac3e935bb1626451006
       rename: willowisp v2.0.zip
