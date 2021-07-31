@@ -437,16 +437,17 @@ modules:
       http: https://downloads.weaselmods.net/download/tangled-oak-isle/?wpdmdl=317&refresh=60eccdb2c772f1626131890
       rename: TangledIsle v2.25.zip
   - name: "g3anniversary"
-    components: ~
+    components: [0] # The Gibberlings Three Anniversary Mod
     location:
       github_user: Gibberlings3
       repository: g3anniversary
-      release: v12
+      release: V12
       asset: lin-g3anniversary-v12.tar.gz
-  - name: "DC" # DungeonCrawl
+  - name: "DC"
+    description: Dungeon Crawl
     components: [0]
     location:
-      github_user:  Pocket-Plane-Group
+      github_user: Pocket-Plane-Group
       repository: Dungeon_Crawl
       release: v13.1
       asset: DungeonCrawl_v13-1.zip
