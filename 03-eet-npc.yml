@@ -99,27 +99,27 @@ modules:
       release: v11
       asset: xanbg1friend_v11.zip
   - name: FinchNPC
-    version: 5.2
-    components:  [0]
+    version: 6.0
+    components: ~
     location:
       github_user: Pocket-Plane-Group
       repository: Finch_NPC
-      release: v5.2
-      asset: finch-npc-mod-v5.2.iemod
+      release: v6.O
+      asset: finch-npc-mod-v6.0.iemod
   - name: IndiNPC
-    version: 13.1
-    components: ~ # v13.1
+    version: "14"
+    components: ~
     location:
       github_user: Pocket-Plane-Group
       repository: Indi_NPC
-      release: v13.1
-      asset: indira-npc-mod-v13.1.iemod
+      release: v14
+      asset: indira-npc-mod-v14.iemod
   - name: Walahnan
-    version: 1.0
+    version: 1.1
     components: ~ # new
     location:
-      http: https://downloads.weaselmods.net/download/walahnan-bg1ee/?wpdmdl=428&refresh=60f7f38b67d891626862475
-      rename: Walahnan v1.0.zip
+      http: https://downloads.weaselmods.net/download/walahnan-bg1ee/?wpdmdl=428&refresh=61055365813b31627738981
+      rename: Walahnan v1.1.zip
   - name: gavin
     components: ~ # new
     location:
