@@ -1,7 +1,7 @@
 version: "1"
 global:
   lang_dir: "fr_FR"
-  lang_preferences: ["#rx#^fran[cç]ais", french, english, "american english"]
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
 modules:
   - name: ascension
     components:
