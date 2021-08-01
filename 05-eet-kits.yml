@@ -221,12 +221,12 @@ modules:
       release: v10
       asset: lin-song_and_silence-v10.zip
   - name: TomeAndBlood
-    version: "0.9.11"
+    version: "0.9.12"
     components: ~
     location:
       github_user: subtledoctor
       repository: TomeAndBlood
-      tag: "0.9.11"
+      tag: "0.9.12"
   - name: A7#ImprovedShamanicDance
     components:
       - 0  # Danse shamanique amelioree
@@ -251,13 +251,13 @@ modules:
     location:
       github_user: subtledoctor
       repository: Faiths_and_Powers
-      tag: 79sd25
+      tag: 79sd26
   - name: might_and_guile
     component: ~
     location:
       github_user: UnearthedArcana
       repository: Might_and_Guile
-      tag: "4.12"
+      tag: "4.12.1"
   - name: sword_and_fist
     component: ~
     location:
@@ -311,7 +311,7 @@ modules:
     location:
       github_user: UnearthedArcana
       repository: Scales_of_Balance
-      tag: "5.31"
+      tag: "5.32"
   - name: jimfix
     description: Fixes and convenience tweaks aimed at an Ascension + SCS v33 install
     components: ~
