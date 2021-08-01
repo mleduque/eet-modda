@@ -423,4 +423,4 @@ modules:
     location:
       github_user: UnearthedArcana
       repository: NPC_EE
-      tag: "4.3"
+      tag: "4.4.1"
