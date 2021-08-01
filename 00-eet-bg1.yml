@@ -66,3 +66,10 @@ modules:
       github_user: ArtemiusI
       repository: Sirene-NPC
       branch: master
+  - name: msfm
+    description: More Stuff For Mages -BG1 part
+    components: ~ #just Wizard's Staff for BG:EE and Circlet of Revelation for BG:EE
+    location:
+      github_user: Renegade0
+      repository: msfm
+      tag: "1.57"
