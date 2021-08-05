@@ -328,9 +328,10 @@ modules:
       repository: Crossmod_Banter_Pack_for_Baldurs_Gate_II
       release: v19
       asset: lin-crossmodbg2-v19.zip
-  - name: c#sodtweaks
-    components: [0, 1, 2, 5, 13]
+  - name: c#sodtweaks #[0, 1, 2, 5, 13]
+    components: ~
     location:
       github_user: Gibberlings3
       repository: Jasteys_SoD_Tweakpack
-      branch: master
+      release: v5.1
+      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v5.1.iemod

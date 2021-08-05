@@ -533,8 +533,8 @@ modules:
   - name: SotSC # Shades of the Sword Coast
     version: 6.1
     location:
-      http: https://downloads.weaselmods.net/download/shades-of-the-sword-coast/?wpdmdl=396&refresh=60f565294e7af1626694953
-      rename: SotSC v6.1.zip
+      http: https://downloads.weaselmods.net/download/shades-of-the-sword-coast/?wpdmdl=396&refresh=610bf03e185411628172350
+      rename: SotSC v6.2.zip
     components: [0]
   - name: "JanQuest"
     components: [0]
@@ -581,3 +581,11 @@ modules:
       github_user: K4thos
       repository: TGC1e
       branch: master
+  - name: mih_eq
+    description: Made In Heaven Encounters and Quests
+    components: ~
+    location:
+      github_user: AngelGryph
+      repository: MadeInHeaven_EncountersAndQuests
+      release: v4
+      asset: lin-mih_eq-v4.tar.gz

@@ -86,11 +86,12 @@ modules:
       repository: thalan
       tag: v4.2.5
   - name: mih_ip
-    components: [0, 9, 11]
+    components: ~ #[0, 9, 11]
     location:
-      github_user:  AngelGryph
+      github_user: AngelGryph
       repository: MadeInHeaven_ItemPack
-      branch: master
+      release: v6
+      asset: lin-mih_ip-v6.tar.gz
   - name: valhorn
     components: [0]
     location:
@@ -209,21 +210,22 @@ modules:
       release: v3.2
       asset: A7-ImprovedArcher-v3.2.iemod
   - name: mih_sp
-    components:
-      - 0   # Made in Heaven: Spell Restorations
-      - 1   # Made in Heaven: Arcane Spellpack
-      - 2   # Made in Heaven: Divine Spellpack
-      - 3   # Made in Heaven: Epic Spellpack ERROR
-      - 4   #revised paladin powers (ERROR)
-      - 6   # Revised Animal/Monster Summoning
-      - 7   # No Elemental Mind Battle
-      # - 8   # True Meteor Swarm
-      - 13  # Temples sell Priest Scrolls
-      - 15  # Sixth Circle Spell Scrolls in Siege of Dragonspear
+    components: ~
+      #- 0   # Made in Heaven: Spell Restorations
+      #- 1   # Made in Heaven: Arcane Spellpack
+      #- 2   # Made in Heaven: Divine Spellpack
+      #- 3   # Made in Heaven: Epic Spellpack ERROR
+      #- 4   #revised paladin powers (ERROR)
+      #- 6   # Revised Animal/Monster Summoning
+      #- 7   # No Elemental Mind Battle
+      ## - 8   # True Meteor Swarm
+      #- 13  # Temples sell Priest Scrolls
+      #- 15  # Sixth Circle Spell Scrolls in Siege of Dragonspear
     location:
       github_user: AngelGryph
       repository: MadeInHeaven_SpellPack
-      branch: master
+      release: v4
+      asset: lin-mih_sp-v4.tar.gz
   - name: saradas_magic_2
     components: ~
     location:
