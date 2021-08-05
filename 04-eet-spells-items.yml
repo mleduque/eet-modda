@@ -237,5 +237,5 @@ modules:
     components: [10, 20, 30, 40]
       github_user: Gibberlings3
       repository: Lore_From_Learning
-      release: v3
-      asset: lin-cdlore-v3.tar.gz
+      release: v4
+      asset: lin-cdlore-v4.tar.gz
