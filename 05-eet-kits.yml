@@ -222,7 +222,7 @@ modules:
       asset: lin-song_and_silence-v10.zip
   - name: TomeAndBlood
     version: "0.9.12"
-    components: ~
+    components: ~ # 5E says "revised specialists": no, "rebalance spell schools": yes
     location:
       github_user: subtledoctor
       repository: TomeAndBlood
@@ -252,6 +252,13 @@ modules:
       github_user: subtledoctor
       repository: Faiths_and_Powers
       tag: 79sd26
+  - name: 5E_spellcasting
+    comment: It should be installed after Tome & Blood and Faiths & Powers; but before Might & Guile and Faiths & Powers Multiclass.
+    components: ~
+    location:
+      github_user: UnearthedArcana
+      repository: 5E_spellcasting
+      tag: "0.8"
   - name: might_and_guile
     component: ~
     location:
@@ -307,7 +314,7 @@ modules:
       repository: Olvyn-Tweaks
       branch: master
   - name: scales_of_balance
-    components: ~
+    components: ~ # at least "Ability Score-Based Bonus Spells"
     location:
       github_user: UnearthedArcana
       repository: Scales_of_Balance
