@@ -552,8 +552,7 @@ modules:
   - name: "TheBeaurinLegacy"
     components: [1000, 3010]
     location:
-    http: https://www.gibberlings3.net/files/file/998-beaurin-legacy/?do=download&r=5213&confirm=1&t=1&csrfKey=26496983391408bcb5e250b559da1945
-    rename: lin-TheBeaurinLegacy-v4.0.tar.gz
+      path: /home/mick/Games/modda-cache/static/lin-TheBeaurinLegacy-v4.0.tar.gz
   - name: "voloquest" # IM10
     components: [0]
     location:
