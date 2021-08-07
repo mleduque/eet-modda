@@ -547,7 +547,7 @@ modules:
     location:
       github_user: GwendolyneFreddy
       repository: butchery
-      release: v4.0.0
+      release: "4.0.0"
       asset: butchery-4.0.0.zip
   - name: "TheBeaurinLegacy"
     components: [1000, 3010]
