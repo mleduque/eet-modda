@@ -576,16 +576,12 @@ modules:
       rename: Xulaye_v2.0.zip
   - name: TGC1e
     description: the grey clan candelight(part 1)
-    components: ~
+    components:
+      - 0 # Le Clan Gris Episode Un : A la Lumiere d'une Bougie, BGT-WeiDU/EET/BG:EE edition v1.9 -> Edition normale
     location:
       github_user: K4thos
       repository: TGC1e
       branch: master
-  - name: mih_eq
-    description: Made In Heaven Encounters and Quests
-    components: ~
-    location:
-      github_user: AngelGryph
-      repository: MadeInHeaven_EncountersAndQuests
-      release: v4
-      asset: lin-mih_eq-v4.tar.gz
+      layout:
+        layout_type: single_dir_plus_tp2
+        tp2: Setup-TGC1E.tp2
