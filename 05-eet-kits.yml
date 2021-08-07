@@ -237,8 +237,8 @@ modules:
     location:
       github_user: Argent77
       repository: A7-ImprovedShamanicDance
-      release: v4.3
-      asset: A7-ImprovedShamanicDance-v4.3.iemod
+      release: v4.4
+      asset: A7-ImprovedShamanicDance-v4.4.iemod
   - name: item_rev
     description: [ "error check why split from rest", 2 ]
     description: Item Revisions

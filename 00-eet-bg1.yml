@@ -68,7 +68,12 @@ modules:
       branch: master
   - name: msfm
     description: More Stuff For Mages -BG1 part
-    components: ~ #just Wizard's Staff for BG:EE and Circlet of Revelation for BG:EE
+    components:  #just Wizard's Staff for BG:EE and Circlet of Revelation for BG:EE
+      - 1  # Add Wizard's Staff -> Add Wizard's Staff with 14 new color sets
+      - 10 # Add circlets
+      - 11 # Add Circlet of Revelation
+      - 12 # Add Wizard's Hat
+      - 13 # Add Wand Case
     location:
       github_user: Renegade0
       repository: msfm

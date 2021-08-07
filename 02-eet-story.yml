@@ -464,13 +464,14 @@ modules:
       repository: FishingForTrouble
       release: v3.2.8
       asset: fishing-for-trouble-v3.2.8.iemod
-  - name: "tod" # Tower of Deception
+  - name: "tod"
+    description: Tower O)f Deception
     components: [0, 1, 2]
     location:
       github_user: InfinityMods
       repository: TowerOfDeception
-      release: v4.0.4
-      asset: tower-of-deception-v4.0.4.iemod
+      release: v4.0.5
+      asset: tower-of-deception-v4.0.5.iemod
   - name: "SOS" # Shadows Over Soubar
     components: [0, 1]
     location:
@@ -490,7 +491,7 @@ modules:
     location:
       github_user:  lzenner
       repository: themed_tweaks
-      branch: master
+      branch: main
   - name: "framed"
     version: 1.9
     components:
@@ -516,20 +517,21 @@ modules:
       asset: RE_v15.zip
   - name: "HerThiMoney" # Heroes Thieves and Moneylenders
     version: 3.2
-    components: ~
-      #- 0    # Component 1. Interjections & Mini-quests (by Austin & Arcanecoast Team)
-      #- 10   # Component 2. First Calimport Bank Pack (by Scheele & Austin & Arcanecoast Team)
-      #- 20   # Component 3. Shadow-Covered Love (by Alisia & Austin)
-      #- 30   # Component 4. The Missing Troll Case (by Alisia & Austin)
+    components:
+      - 0    # Component 1. Interjections & Mini-quests (by Austin & Arcanecoast Team)
+      - 10   # Component 2. First Calimport Bank Pack (by Scheele & Austin & Arcanecoast Team)
+      - 20   # Component 3. Shadow-Covered Love (by Alisia & Austin)
+      - 30   # Component 4. The Missing Troll Case (by Alisia & Austin)
     location:
       github_user: Austin-BG
       repository: HTaM
-      release: v3.2
+      release: v.3.2
       asset: heroes-thieves-and-moneylenders-3.2.iemod
   - name: "snakes" # The slithering Menace
     components: [0]
     location:
       http: http://www.shsforums.net/files/download/151-the-slithering-menace-tob/
+      rename: the-slithering-menace-v4.0.0.zip
   - name: SotSC # Shades of the Sword Coast
     version: 6.1
     location:

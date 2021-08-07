@@ -23,9 +23,9 @@ modules:
   - name: EET  # needs EET/bgee_dir.txt with path to bg1 /game subdirectory inside
     version: v13.4
     location:
-      github_user: Gibberlings3
+      github_user: mleduque
       repository: EET
-      tag: V13.4
+      tag:  V13.4-msfm
     components:
       - 0 # EET core (importation de ressource)
     add_conf:
