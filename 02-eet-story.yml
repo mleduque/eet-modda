@@ -556,7 +556,7 @@ modules:
   - name: "voloquest" # IM10
     components: [0]
     location:
-      path: /home/mick/Games/modda-cache/static/im10/cmIM10distribution.rar
+      path: /home/mick/Games/modda-cache/static/im10_voloquest.zip
   - name: "IM10Kulyok" # IM10
     components: [0]
     location:
@@ -568,8 +568,7 @@ modules:
     description: every mod and dog
     components: [0, 1, 2, 3, 5]
     location:
-      http: https://www.gibberlings3.net/files/file/707-every-mod-and-dog/?do=download
-      rename: emad_v11.zip
+      path: /home/mick/Games/modda-cache/static/emad_v11.zip
   - name: "xulaye"
     components: [0, 1, 2]
     location:

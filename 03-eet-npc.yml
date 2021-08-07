@@ -72,7 +72,7 @@ modules:
       rename: Petsy v4.1.zip
   - name: Yvette
     components:
-      0 # Yvette Romance - BG2 Romance Character
+      - 0 # Yvette Romance - BG2 Romance Character
     location:
       http: https://downloads.weaselmods.net/download/yvette-romance/?wpdmdl=79&refresh=60f6277894a081626744696
       rename: Yvette Romance v4.1.zip
@@ -230,7 +230,8 @@ modules:
       asset: Cernd-Friendship-v1.3.iemod
   - name: deArnise
     components: [0]
-      github_user:  Pocket-Plane-Group
+    location:
+      github_user: Pocket-Plane-Group
       repository: deArnise_Romance
       release: v7
       asset: deArnise_v7.zip
