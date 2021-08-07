@@ -335,3 +335,10 @@ modules:
       repository: Jasteys_SoD_Tweakpack
       release: v5.1
       asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v5.1.iemod
+  - name: BG1NPCSoA # install after other versions of same npcs
+    description: BG1 NPCs in BG2
+    components: ~
+    location:
+      github_user: mleduque
+      repository: TBGCoM_BG1NPCSoA
+      branch: master
