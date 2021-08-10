@@ -255,8 +255,7 @@ modules:
   - name: imoenisstone
     components: [0]
     location:
-      http: https://www.gibberlings3.net/files/file/985-imoen-is-stone/?do=download&r=4412&confirm=1&t=1&csrfKey=26496983391408bcb5e250b559da1945
-      rename: lin-ImoenIsStone-v1.0.tgz
+      path: /home/mick/Games/modda-cache/static/lin-ImoenIsStone-v1.0.tar.gz
   - name: viconia
     components: [0]
     location:
@@ -272,7 +271,7 @@ modules:
       release: v4.6
       asset: yoshimo-friendship-v4.6.iemod
   - name: sarevokfriendship
-    components: ~
+    components: [0]
     location:
       github_user: SpellholdStudios
       repository: SarevokFriendship
@@ -304,11 +303,12 @@ modules:
       github_user: mleduque
       repository: wings
       branch: master
+      layout:
+        layout_type: single_dir_plus_tp2
   - name: npckit
     components: [30, 31, 400, 410, 900, 1415, 2100, 2200, 2300, 2500, 2800]
     location:
-      path: https://www.gibberlings3.net/files/file/793-npc-kitpack/?do=download&r=3968&confirm=1&t=1&csrfKey=26496983391408bcb5e250b559da1945
-      rename: lin-npckit-v5.tar.gz
+      path: /home/mick/Games/modda-cache/static/lin-npckit-v5.tar.gz
   - name: npcflirt
     components: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
     location:
@@ -340,10 +340,17 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Crossmod_Banter_Pack_for_Baldurs_Gate_II
-      release: v19
+      release: "19"
       asset: lin-crossmodbg2-v19.zip
   - name: c#sodtweaks #[0, 1, 2, 5, 13]
-    components: ~
+    components:
+      - 0  # Crossmod Banter Pack for Shadows of Amn
+      - 1  # Crossmod Banter Pack for Throne of Bhaal
+      - 3  # Do Not Miss NPC-PC Dialogues -> Activate All NPC-PC Dialogues Always
+      - 5  # More Dialogue Choices & Prevent Dead Ends:
+      - 6  # Use Imoen's SoD Portrait for BGII in EET & BGT
+      - 9  # Adjust PC's Starting XP at Beginning of SoD, by subtledoctor -> Set Starting XP to 90,000
+      - 12 # SoD Ending: jastey's Tweaks -> Revised Full Version
     location:
       github_user: Gibberlings3
       repository: Jasteys_SoD_Tweakpack
@@ -351,8 +358,20 @@ modules:
       asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v5.1.iemod
   - name: BG1NPCSoA # install after other versions of same npcs
     description: BG1 NPCs in BG2
-    components: ~
+    components:
+      - 0  # Water Gardens. New Athkatla's district & new quests
+      - 2  # Shar-Teel NPC in BG2. "Nightbringer of Shar" (SoA)
+      - 6  # Brave Sir Garrick NPC in BG2 (SoA)
+      - 25 # Alora (SoA & ToB)
+      - 35 # Kagain's Corner (SoA & ToB) -> Store with Vanilla Items Only
+      - 40 # Faldorn's New Leaf (SoA & ToB)
+      - 87 # Inter Component Banter Pack
     location:
       github_user: mleduque
       repository: TBGCoM_BG1NPCSoA
       branch: master
+  - name: BG1NPCSoA # install after other versions of same npcs
+    description: BG1 NPCs in BG2
+    components:
+      - 15 # Shar-Teel, Yeslick, Garrick, Branwen, Skie & Eldoth (ToB)
+    ignore_warnings: true

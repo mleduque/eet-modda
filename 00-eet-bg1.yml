@@ -61,11 +61,13 @@ modules:
       http: https://download1325.mediafire.com/9oh1se9asuug/rg5cyypji1om22o/Saradas%2520Magic%2520ENG%2520V_1.1.zip
       rename: Saradas_Magic_ENG_V_1.1.zip
   - name: Sirene
-    components: [0]
+    components:
+      - 0   # Sirene NPC for Baldur's Gate: Enhanced Edition
+      - 103 # ~Choose an portrait for Sirene (check mod folder for portraits): Alternate Light Armor portrait by Sirick
     location:
-      github_user: ArtemiusI
+      github_user: mleduque
       repository: Sirene-NPC
-      branch: master
+      branch: no-portrait-prompt
   - name: msfm
     description: More Stuff For Mages -BG1 part
     components:  #just Wizard's Staff for BG:EE and Circlet of Revelation for BG:EE

@@ -493,21 +493,22 @@ modules:
       github_user: mleduque
       repository: s9-S9BGEENPCTWEAKS
       branch: master
-  # Probably coverd by NPC_EE
-  #- name : RelieveWizardSlayer
-  #  components:
-  #    - 1 # Valygar, the Wizard Slayer
-  #- name: MilitiaOfficier
-  #  components:
-  #    - 1 # Khalid, the milita officer
-  #- name: Mercenary
-  #  components:
-  #    - 1 # Kagain, the mercenary
-  #    - 2 # Korgan, the mercenary
-  #- name: Charlatan
-  #  components:
-  #    - 1 # Eldoth, the charlatan  - name: S9BGEENPCTweaks
-  # components: ~
+  - name : RelieveWizardSlayer
+    components:
+      - 1 # Valygar, the Wizard Slayer
+  - name: MilitiaOfficier
+    components:
+      - 1 # Khalid, the milita officer
+  - name: Mercenary
+    components:
+      - 1 # Kagain, the mercenary
+      - 2 # Korgan, the mercenary
+  - name: Charlatan
+    components:
+      - 1 # Eldoth, the charlatan  - name: S9BGEENPCTweaks
+  - name: BG1NPCSoA # only npc kits
+    description: BG1NPCSoA - delayed change NPC kits components
+    components: ~
   - name: npc_ee
     components: ~
     # can configure any npc so no need for individual mods per npc?

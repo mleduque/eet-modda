@@ -23,9 +23,9 @@ modules:
   - name: iwdification
     components: ~
     location:
-      github_user: Gibberlings3
+      github_user: mleduque
       repository: iwdification
-      branch: master
+      commit: c19027727
   - name: A7-TotLM-BG2EE
     components: ~
       #- 0  # Trials of the Luremaster for Baldur's Gate
@@ -135,7 +135,7 @@ modules:
     components: [0]
     location:
       github_user: SpellholdStudios
-      repositoryrepositoryrepository: The_Unusual_Oddities_Shop
+      repository: The_Unusual_Oddities_Shop
       release: v5.0
       asset: the-unusual-oddities-shop-5.0.iemod
   - name: hammers
@@ -235,6 +235,7 @@ modules:
       asset: saradas-magic-for-bg2-v2.0.0.iemod
   - name: cdlore
     components: [10, 20, 30, 40]
+    location:
       github_user: Gibberlings3
       repository: Lore_From_Learning
       release: v4

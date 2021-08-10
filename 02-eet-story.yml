@@ -98,10 +98,9 @@ modules:
       - 6 # Svlast's Torment
       - 9 # Fighting Encounters
     location:
-      github_user: SpellholdStudios
+      github_user: mleduque
       repository: NTotSC
-      release: v4.2.0
-      asset: northern-tales-of-the-sword-coast-4.2.0.iemod
+      branch: ghotal
   - name: bgqe
     description: Baldur's Gate Mini Quests and Encounters
     components: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
@@ -374,18 +373,20 @@ modules:
     location:
       path: /home/mick/Games/modda-cache/static/lin-amber-v5.1.zip
   - name: Foundling
-    components: [0]
-    # will prompt for class - 1 Keep original class
+    components:
+      - 0   # Foundling
+    # original prompts for class - forks preselects 1 Keep original class
     location:
-      http: https://downloads.weaselmods.net/download/foundling-between-the-shades/?wpdmdl=81&refresh=60edb7ef9e0271626191855
-      rename: Foundling v5.1.zip
+      github_user: mleduque
+      repository: Lava_Foundling
+      branch: no-prompt
   - name: willowisp
     components: # 4 later
       - 0 # Will NPC, shaman stronghold and new shaman kit for BG2EE
       - 1 # Change shaman .tlk string to remove "Ineligible for any stronghold" line
       - 2 # New items for shamans and undead NPCs
       - 3 # Optional: Drider and Dark Treant Enemies
-      # 4 : crossmod banter later afet installing other mods
+      # 4 : crossmod banter later after installing other mods
       - 6 # [CHEAT] Enable shaman stronghold for all classes
     location:
       http: https://downloads.weaselmods.net/download/will-of-the-wisps/?wpdmdl=91&refresh=60f1ac3e935bb1626451006
@@ -397,11 +398,13 @@ modules:
       repository: Pai-Na-NPC-mod-for-BG2-EE
       branch: master
   - name: Sirene_BG2
-    components: [0]
+    components:
+      - 0   # Sirene NPC for BG2:EE
+      - 103 # Choose an portrait for Sirene (check mod folder for portraits) -> Alternate Light Armor portrait by Sirick
     location:
-      github_user: ArtemiusI
+      github_user: mleduque
       repository: Sirene-NPC-for-BG2-EE
-      branch: master
+      branch: noprompt
     # prompt for portrait
   - name: cowledmenace
     components: [1000, 2100, 3000]
