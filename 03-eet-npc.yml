@@ -123,6 +123,7 @@ modules:
       http: https://downloads.weaselmods.net/download/walahnan-bg1ee/?wpdmdl=428&refresh=61055365813b31627738981
       rename: Walahnan v1.1.zip
   - name: gavin
+    # will prompt for romance timer
     components:
       - 0  # Gavin NPC pour Tutu, BGT et BG:EE
       - 1  # Gavin : Romance (contenu pour adultes)²
@@ -134,6 +135,7 @@ modules:
       release: v14
       asset: lin-gavin-v14.tar.gz
   - name: gavin_bg2
+    # will prompt for romance timer
     components:
       - 0 # Gavin for BG2
       - 1 # Gavin heals the PC when below 50% health   (Can be disabled or enabled via player-initiated dialogue)

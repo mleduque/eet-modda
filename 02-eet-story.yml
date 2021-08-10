@@ -404,7 +404,7 @@ modules:
     location:
       github_user: mleduque
       repository: Sirene-NPC-for-BG2-EE
-      branch: noprompt
+      branch: no-prompt
     # prompt for portrait
   - name: cowledmenace
     components: [1000, 2100, 3000]
