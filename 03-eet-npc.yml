@@ -338,16 +338,15 @@ modules:
       http: https://downloads.weaselmods.net/download/will-of-the-wisps/?wpdmdl=91&refresh=60f1ac3e935bb1626451006
       rename: willowisp v2.0.zip
   - name: crossmodbg2
-    components: [0, 1]
+    components: ~
     location:
       github_user: Gibberlings3
       repository: Crossmod_Banter_Pack_for_Baldurs_Gate_II
-      release: "19"
-      asset: lin-crossmodbg2-v19.zip
+      release: "v20"
+      asset: lin-crossmodbg2-v20.tar.gz # .iemod is bigger!
   - name: c#sodtweaks #[0, 1, 2, 5, 13]
     components:
-      - 0  # Crossmod Banter Pack for Shadows of Amn
-      - 1  # Crossmod Banter Pack for Throne of Bhaal
+      - 1  # Ending Independent on PC Replies
       - 3  # Do Not Miss NPC-PC Dialogues -> Activate All NPC-PC Dialogues Always
       - 5  # More Dialogue Choices & Prevent Dead Ends:
       - 6  # Use Imoen's SoD Portrait for BGII in EET & BGT
