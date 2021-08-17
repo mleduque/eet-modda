@@ -536,18 +536,18 @@ modules:
       repository: Romantic_Encounters_BG2
       release: v15
       asset: RE_v15.zip
-  - name: "HerThiMoney" # Heroes Thieves and Moneylenders
-    version: 3.2
-    components:
-      - 0    # Component 1. Interjections & Mini-quests (by Austin & Arcanecoast Team)
-      - 10   # Component 2. First Calimport Bank Pack (by Scheele & Austin & Arcanecoast Team)
-      - 20   # Component 3. Shadow-Covered Love (by Alisia & Austin)
-      - 30   # Component 4. The Missing Troll Case (by Alisia & Austin)
+  - name: HerThiMoney # Heroes Thieves and Moneylenders
+    version: 3.4
+    components: ~
+      #- 0    # Component 1. Interjections & Mini-quests (by Austin & Arcanecoast Team)
+      #- 10   # Component 2. First Calimport Bank Pack (by Scheele & Austin & Arcanecoast Team)
+      #- 20   # Component 3. Shadow-Covered Love (by Alisia & Austin)
+      #- 30   # Component 4. The Missing Troll Case (by Alisia & Austin)
     location:
       github_user: Austin-BG
       repository: HTaM
-      release: v.3.2
-      asset: heroes-thieves-and-moneylenders-3.2.iemod
+      release: v.3.4
+      asset: heroes-thieves-and-moneylenders-3.3.iemod
   - name: "snakes" # The slithering Menace
     components: [0]
     location:
