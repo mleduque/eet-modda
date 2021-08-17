@@ -269,6 +269,24 @@ modules:
       repository: Alternatives
       release: v15
       asset: Alternatives_v15.zip
+  - name: imoen_forever
+    components:
+    - 0  # Imoen 4 Ever in BGII: Imoen returns at the beginning of chapter 2
+    - 1  # BGII content: ~Give Imoen dialogue content in SoA~
+    - 2  # BGII content: ~Yoshimo comes to Brynnlaw~
+    - 3  # BGII content: ~Give Imoen protection spell in Chapters 2 & 3~
+    - 9  # BGII content: ~Compatibility with Alternatives and Saerileth~
+    - 10 # SoD component: ~Imoen remains in the Group in SoD~
+    - 11 # second SoD part: Imoen returns to PC in first camp bd1000
+    - 12 # third SoD part: Imoen gives be5th SoD part: Give Imoen dialogue content during chapters 8 to 12tter reason to stay behind in Palace
+    - 13 # 4th SoD part: Play cutscene with Imoen an Duke Jannath
+    - 14 # 5th SoD part: Give Imoen dialogue content during chapters 8 to 12
+    - 15 # 6th SoD part: Imoen at the end of the game should be the one that was in party (SoD only)
+    location:
+      github_user: Gibberlings3
+      repository: Imoen4Ever
+      release: v7.2
+      asset: imoen-4-ever-v7.2.iemod
   - name: d0questpack
     description: SimDing0's Quest Pack
     components: [0, 1, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
