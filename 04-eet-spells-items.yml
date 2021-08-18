@@ -20,12 +20,22 @@ modules:
   #- name: spell_rev_rev
   #  components: [0, 1]
   #  ignore_warnings: true
+  - name:  stratagems # only iwd spells
+    description: Sword Coast Stratagems - iwd spells
+    components:
+      - 1500 # Include arcane spells from Icewind Dale: Enhanced Edition
+      - 1510 # Include divine spells from Icewind Dale: Enhanced Edition
+    location:
+      github_user: Gibberlings3
+      repository: SwordCoastStratagems
+      release: v33.7
+      asset: lin-stratagems-33.7.zip
   - name: iwdification
     components: ~
     location:
       github_user: mleduque
       repository: iwdification
-      commit: c19027727
+      branch: fix-french-tra
   - name: A7-TotLM-BG2EE
     components: ~
       #- 0  # Trials of the Luremaster for Baldur's Gate
