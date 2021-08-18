@@ -221,12 +221,11 @@ modules:
       release: v10
       asset: lin-song_and_silence-v10.zip
   - name: TomeAndBlood
-    version: "0.9.13"
     components: ~ # 5E says "revised specialists": no, "rebalance spell schools": yes
     location:
       github_user: subtledoctor
       repository: TomeAndBlood
-      tag: "0.9.12"
+      tag: "0.9.14"
   - name: A7#ImprovedShamanicDance
     components:
       - 0  # Danse shamanique amelioree
