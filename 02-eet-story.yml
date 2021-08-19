@@ -510,11 +510,18 @@ modules:
       release: v7
       asset: berelindes-keldorn-romance-7.iemod
   - name: "themed_tweaks"
-    components: [60, 70, 80, 90, 100, 140, 180]
+    components:
+      - 60  # SoD - Give Imoen a special wand for palace attack scene
+      - 70  # SoD - Allow PC to give aid to Imoen after attack in palace
+      - 80  # SoD - Stat-based observations and quest options
+      - 90  # SoD - Ditch Tour-Guide Corwin Schael
+      - 100 # SoD - Quest: Scouting the Coast Way Crossing
+      - 140 # SoD/BG2EE - Add a little snark to dialogues
+      - 180 # BG2EE - Give Imoen innnate Magic Missiles for attack scene
     location:
-      github_user:  lzenner
+      github_user: mleduque
       repository: themed_tweaks
-      branch: main
+      branch: fix-bom
   - name: "framed"
     version: 1.9
     components:
@@ -540,16 +547,17 @@ modules:
       asset: RE_v15.zip
   - name: HerThiMoney # Heroes Thieves and Moneylenders
     version: 3.4
-    components: ~
-      #- 0    # Component 1. Interjections & Mini-quests (by Austin & Arcanecoast Team)
-      #- 10   # Component 2. First Calimport Bank Pack (by Scheele & Austin & Arcanecoast Team)
-      #- 20   # Component 3. Shadow-Covered Love (by Alisia & Austin)
-      #- 30   # Component 4. The Missing Troll Case (by Alisia & Austin)
+    components:
+      - 0    # Component 1. Interjections & Mini-quests (by Austin & Arcanecoast Team)
+      - 10   # Component 2. First Calimport Bank Pack (by Scheele & Austin & Arcanecoast Team)
+      - 20   # Component 3. Shadow-Covered Love (by Alisia & Austin)
+      - 30   # Component 4. The Missing Troll Case (by Alisia & Austin)
     location:
       github_user: Austin-BG
       repository: HTaM
-      release: v.3.4
-      asset: heroes-thieves-and-moneylenders-3.3.iemod
+      commit: 0c3010788
+      patch:
+        relative: herthimoney-nopdf.diff
   - name: "snakes" # The slithering Menace
     components: [0]
     location:
@@ -566,14 +574,19 @@ modules:
     location:
       http: http://akadis.baldursgateworld.fr/Jan/zip/JansQuest1.5.0.zip
   - name: "butchery"
-    components: [10, 20, 30]
+    components:
+      - 10 # Combat contre Tazok et DigDag revise par DrAzTiK
+      - 20 # Reequilibrage de certaines creatures generiques (orques et ogres)
+      - 30 # Reequilibrage de Tazok et de DigDag
     location:
       github_user: GwendolyneFreddy
       repository: butchery
       release: "4.0.0"
       asset: butchery-4.0.0.zip
   - name: "TheBeaurinLegacy"
-    components: [1000, 3010]
+    components:
+      - 1000 # The Beaurin Legacy for BG2:SoA & ToB & BGII:EE
+      - 3010 # Minyae's Portrait -> Change Minyae's portrait to alternative by TamikaProud at DeviantArt
     location:
       path: /home/mick/Games/modda-cache/static/lin-TheBeaurinLegacy-v4.0.tar.gz
   - name: "voloquest" # IM10
@@ -589,11 +602,19 @@ modules:
       asset: im10kulyok-v1.1.zip
   - name: "emad"
     description: every mod and dog
-    components: [0, 1, 2, 3, 5]
+    components:
+      - 0 # Une aventure classée Z - Une non-entrée pour l'IM4
+      - 1 # La promesse d'un troll
+      - 2 # Le meilleur ami de l'enfant de Bhaal
+      - 3 # Sous son charme
+      - 5 # Pot-pourri de personnages
     location:
       path: /home/mick/Games/modda-cache/static/emad_v11.zip
   - name: "xulaye"
-    components: [0, 1, 2]
+    components:
+      - 0 # Xulaye NPC Mod for BG2:SoA
+      - 1 # Xulaye's Player Initiated Dialogues
+      - 2 # Korgan Fights at the Pits
     location:
       http: http://www.shsforums.net/files/download/710-xulaye/
       rename: Xulaye_v2.0.zip
