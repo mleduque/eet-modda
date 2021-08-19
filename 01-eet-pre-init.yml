@@ -10,16 +10,17 @@ modules:
       repository: SoD-to-BG2EE-Item-Upgrade
       release: v2.0.2
       asset: lin-sod2bg2_iu-v2.0.2.zip
-    components: ~
-      #- 0 # SoD to BG2:EE Item upgrade by Daeros_Trollkiller
+    components:
+      - 0 # SoD to BG2:EE Item upgrade by Daeros_Trollkiller
       ## - 1 # Remove "Corny Jokes" effect from Jester's Bracers (BG2EE, BGEET)
       ## - 2 # same for BGEE
-      #- 3 # Update names, appearances, icons, and lore values of existing dragonscale-based items to be consistent across Baldur's Gate 1, 2, and with new items introduced by this mod.  ***These changes are cosmetic only***
-      #- 4 # Update resist of original shadow dragon scale armor for consistency with new variants
+      - 3 # Update names, appearances, icons, and lore values of existing dragonscale-based items to be consistent across Baldur's Gate 1, 2, and with new items introduced by this mod.  ***These changes are cosmetic only***
+      - 4 # Update resist of original shadow dragon scale armor for consistency with new variants
       ## - 5 # All importable items with Voidsword +3
       ## - 6 # All importable items with Voidhammer +3
-      #- 7 # Force all import-able SoD items to be available in their normal locations -> All importable items with randomized Voidhammer +3/Voidsword +3
-      #- 8 # Change Cromwell's equipment to be more in-line with his forging skills
+      - 7 # Force all import-able SoD items to be available in their normal locations -> All importable items with randomized Voidhammer +3/Voidsword +3
+      - 8 # Change Cromwell's equipment to be more in-line with his forging skills
+      - 30
   - name: EET  # needs EET/bgee_dir.txt with path to bg1 /game subdirectory inside
     version: v13.4
     location:
