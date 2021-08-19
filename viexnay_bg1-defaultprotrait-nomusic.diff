@@ -1,0 +1,35 @@
+--- Vienxay/Vienxay.tp2
++++ Vienxay/Vienxay.tp2
+@@ -60,14 +60,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bdcaelar.cre~ THEN BEGIN
+ INCLUDE ~Vienxay/library/vien_sod.tpa~ 
+ END
+ 
+-PRINT ~Choose a portrait for Vienxay (check mod folder for portraits):~
+-
+-PRINT ~Please choose one of the following:
+-[1] Default by Crisshasart
+-[2] Alt by Aeries1986
+-[3] Old Version (NWN)~
+-
+-OUTER_SPRINT ~portrait~ ~placeholder_value~
++OUTER_SPRINT ~portrait~ 1
+ OUTER_WHILE (!(IS_AN_INT ~portrait~) OR (~portrait~ > 0x3) OR (~portrait~ < 0x1)) BEGIN
+   ACTION_READLN ~portrait~
+ END
+@@ -90,15 +83,8 @@ END
+       PRINT ~Portrait: Old Version (NWN)~
+          END
+ 
+-               
+-PRINT ~Would you like to install Music for Vienxay? These will play during banters with the player.~
+-
+-PRINT ~Please choose one of the following:
+-[1] Yes
+-[2] No
+-~
+ 
+-OUTER_SPRINT ~music~ ~placeholder_value~
++OUTER_SPRINT ~music~ 2
+ OUTER_WHILE (!(IS_AN_INT ~music~) OR (~music~ > 0x2) OR (~music~ < 0x1)) BEGIN
+   PRINT ~Please select 1 or 2 and press Enter.~
+   ACTION_READLN ~music~

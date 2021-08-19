@@ -1,0 +1,49 @@
+--- Helga/Setup-Helga.tp2
++++ Helga/Setup-Helga.tp2
+@@ -324,16 +324,8 @@ THEN BEGIN
+ COMPILE ~Helga/Dialogue/Crossmod/Aura.d~
+ END 
+ 
+-PRINT ~Choose a portrait for Helga (check mod folder for portraits):~
+ 
+-PRINT ~Please choose one of the following:
+-[1] Default by Acifer
+-[2] Alt NWN Portrait~
+-
+-OUTER_SPRINT ~portrait~ ~placeholder_value~
+-OUTER_WHILE (!(IS_AN_INT ~portrait~) OR (~portrait~ > 0x2) OR (~portrait~ < 0x1)) BEGIN
+-  ACTION_READLN ~portrait~
+-END
++OUTER_SPRINT ~portrait~ 1
+       ACTION_IF ("portrait" = 1) THEN BEGIN
+ 		COPY ~%MOD_FOLDER%/Portraits/HelgaL.bmp~ ~override/HelgaL.bmp~
+ 		COPY ~%MOD_FOLDER%/Portraits/HelgaM.bmp~ ~override/HelgaM.bmp~
+@@ -346,19 +338,8 @@ END
+ 		COPY ~%MOD_FOLDER%/Portraits/AHelgaS.bmp~ ~override/HelgaS.bmp~
+       PRINT ~Portrait: Alt NWN Portrait~
+ 	  END
+-		
+-PRINT ~Would you like to install Music for Helga? These will play during banters with the player.~
+-
+-PRINT ~Please choose one of the following:
+-[1] Yes
+-[2] No
+-~
+-
+-OUTER_SPRINT ~music~ ~placeholder_value~
+-OUTER_WHILE (!(IS_AN_INT ~music~) OR (~music~ > 0x2) OR (~music~ < 0x1)) BEGIN
+-  PRINT ~Please select 1 or 2 and press Enter.~
+-  ACTION_READLN ~music~
+-END
++
++OUTER_SPRINT ~music~ 2
+       ACTION_IF ("music" = 1) THEN BEGIN
+ 	COPY_EXISTING ~sw1h01.itm~ ~override/bg1npcmusic.g3~
+ 
+@@ -387,4 +368,4 @@ END
+ 
+ ACTION_IF ("music" = 2) THEN BEGIN
+ PRINT ~Did not install Music for Helga.~
+-END 
+\ No newline at end of file
++END 

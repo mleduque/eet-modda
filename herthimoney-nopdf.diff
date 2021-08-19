@@ -1,0 +1,36 @@
+--- HerThiMoney/HerThiMoney.tp2     2021-08-19 15:56:16.620622627 +0200
++++ HerThiMoney/HerThiMoney.tp2     2021-08-19 16:01:12.194389680 +0200
+@@ -385,8 +385,6 @@
+   ADD_JOURNAL @1025 @1026 @1038 @1039 USING ~%MOD_FOLDER%/tra/%LANGUAGE%/setup.tra~ 
+ END 
+ 
+-AT_INTERACTIVE_EXIT ~VIEW HerThiMoney/readme/%LANGUAGE%/readme.pdf~
+-
+ //
+ //
+ //
+@@ -1118,8 +1116,6 @@
+ COPY "%MOD_FOLDER%/spl/bdoffscr.spl" override
+ END
+ 
+-AT_INTERACTIVE_EXIT ~VIEW HerThiMoney/readme/%LANGUAGE%/readme.pdf~
+-
+ //
+ //
+ //
+@@ -1563,8 +1559,6 @@
+        END
+        BUT_ONLY_IF_IT_CHANGES
+ 
+-AT_INTERACTIVE_EXIT ~VIEW HerThiMoney/readme/%LANGUAGE%/readme.pdf~
+-
+ 
+ //
+ //
+@@ -1777,5 +1771,3 @@
+ 
+ COPY_EXISTING ~WAUKSQU.cre~ ~override\WAUKSQU.cre~
+ WRITE_ASCII 0x280 ~ANbelka~ (32)
+-
+-AT_INTERACTIVE_EXIT ~VIEW HerThiMoney/readme/%LANGUAGE%/readme.pdf~
+\ No newline at end of file

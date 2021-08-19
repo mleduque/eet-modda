@@ -1,0 +1,11 @@
+--- Yvette/Setup-Yvette.tp2
++++ Yvette/Setup-Yvette.tp2
+@@ -525,7 +525,7 @@ Dash 1 to install original dialogues
+ Dash 2 to install dialogues without action text/descriptions */
+ 
+ 
+-OUTER_SPRINT ~yvettedialogues~ ~placeholder_value~
++OUTER_SPRINT ~yvettedialogues~ 1
+ OUTER_WHILE (!(IS_AN_INT ~yvettedialogues~) OR (~yvettedialogues~ > 0x2) OR (~yvettedialogues~ < 0x1)) BEGIN
+   PRINT @100 /* Choose 1 or 2 and confirm by "enter" */
+   ACTION_READLN ~yvettedialogues~
