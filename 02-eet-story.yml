@@ -98,9 +98,9 @@ modules:
       - 6 # Svlast's Torment
       - 9 # Fighting Encounters
     location:
-      github_user: mleduque
+      github_user: SpellholdStudios
       repository: NTotSC
-      branch: ghotal
+      branch: master
   - name: bgqe
     description: Baldur's Gate Mini Quests and Encounters
     components: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
