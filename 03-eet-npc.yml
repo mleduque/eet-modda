@@ -396,6 +396,8 @@ modules:
       github_user: mleduque
       repository: TBGCoM_BG1NPCSoA
       branch: master
+      patch:
+        relative: bg1npcsoa-nopdf.diff
   - name: BG1NPCSoA # install after other versions of same npcs
     description: BG1 NPCs in BG2
     components:
