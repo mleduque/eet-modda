@@ -83,11 +83,11 @@ modules:
         add_backstabbing_penalties 	  = 0 // gives backstab penalties to certain weapons, overridden by "Penalties with Thief-only Weapons" if chosen.
   - name: msfm
     description: More Stuff For Mage - BG2 part
-    components: [2, 3, 8, 10, 12, 13, 14, 15, 17] # except wizard staff and circlet
+    components: ~ #[2, 3, 8, 10, 12, 13, 14, 15, 17] # must add wizard staff and circlet
     location:
-      github_user: Renegade0
+      github_user: mleduque
       repository: msfm
-      tag: "1.57"
+      branch: eet
   - name: thalan
     description: Thalantyr Item Upgrade
     components: [0]
