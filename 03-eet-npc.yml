@@ -177,7 +177,10 @@ modules:
       release: v1.2
       asset: valerie-npc-for-bg-v1.2.iemod
   - name: chattyimoen
-    components: [0, 1, 4]
+    components:
+      - 0 # Chatty Imoen : Repliques audio supplementaires
+      - 1 # Chatty Imoen : Interactions supplementaires avec les autres personnages
+      - 4 # Chatty Imoen : Changement de portrait pour Imoen -> Donner a Imoen son portrait de BG2
     location:
       github_user: AstroBryGuy
       repository: ChattyImoen
@@ -185,14 +188,18 @@ modules:
       asset: lin-chattyimoen-v1.3.zip
   - name: neera
     description: neera expansion
-    components: [0, 2]
+    components:
+      - 0 # Neera Expansion
+      - 2 # How much time would you like between talks (approximately)? -> 30 minutes
     location:
       github_user: SpellholdStudios
       repository: Neera_Expansion
       release: v1.3.0
       asset: neera-expansion-v1.3.0.iemod
   - name: neerabanters
-    components: [10, 20]
+    components:
+      - 10 # Neera Banters: Dialogue Banters and Interjections
+      - 20 # Neera Banters: Interaction Banters
     location:
       github_user: AstroBryGuy
       repository: NeeraBanters
