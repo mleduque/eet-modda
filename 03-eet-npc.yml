@@ -148,6 +148,8 @@ modules:
       repository: Gavin_BG
       release: v14
       asset: lin-gavin-v14.tar.gz
+      patch:
+        relative: gavin_bg1-romance-timer-30.diff
   - name: gavin_bg2
     # will prompt for romance timer
     components:
@@ -159,6 +161,8 @@ modules:
       repository: Gavin_BG2
       release: v23
       asset: lin-gavin_bg2-v23.tar.gz
+      patch:
+        relative: gavin_bg2_romance-timer-30.diff
   - name: arath
     components: [0]
     location:

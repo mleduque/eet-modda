@@ -1,0 +1,15 @@
+--- gavin/gavin.tp2
++++ gavin/gavin.tp2
+@@ -1206,11 +1206,8 @@ REQUIRE_COMPONENT ~Gavin.tp2~ 0 @101
+ REQUIRE_FILE ~override/GavinNPC.B~ @101
+ 
+   /* Gavin's romance timer */
+-PRINT @102
+ 
+-PRINT @103
+-
+-OUTER_SPRINT ~gavintimer~ ~placeholder_value~
++OUTER_SPRINT ~gavintimer~ 3
+ OUTER_WHILE (!(IS_AN_INT ~gavintimer~) OR (~gavintimer~ > 0x5) OR (~gavintimer~ < 0x1)) BEGIN
+   PRINT @105
+   ACTION_READLN ~gavintimer~
