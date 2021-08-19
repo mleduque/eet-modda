@@ -363,12 +363,14 @@ modules:
       http: https://downloads.weaselmods.net/download/will-of-the-wisps/?wpdmdl=91&refresh=60f1ac3e935bb1626451006
       rename: willowisp v2.0.zip
   - name: crossmodbg2
-    components: ~
+    components:
+      - 0 # Crossmod Banter Pack for Shadows of Amn
+      - 1 # Crossmod Banter Pack for Throne of Bhaal
     location:
       github_user: Gibberlings3
       repository: Crossmod_Banter_Pack_for_Baldurs_Gate_II
       release: "v20"
-      asset: lin-crossmodbg2-v20.tar.gz # .iemod is bigger!
+      asset: crossmod-banter-pack-for-baldurs-gate-ii-v20.iemod # tgz truncates some file names
   - name: c#sodtweaks #[0, 1, 2, 5, 13]
     components:
       - 1  # Ending Independent on PC Replies
