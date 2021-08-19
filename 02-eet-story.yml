@@ -397,7 +397,9 @@ modules:
     location:
       github_user: mleduque
       repository: Lava_Foundling
-      branch: no-prompt
+      branch: master
+      patch:
+        relative: foundling-class.diff
   - name: willowisp
     components: # 4 later
       - 0 # Will NPC, shaman stronghold and new shaman kit for BG2EE

@@ -1,0 +1,21 @@
+--- Foundling/install.tph
++++ Foundling/install.tph
+@@ -17,17 +17,7 @@ INCLUDE ~Foundling/lib/qd_multiclass.tpa~
+ ////////////////////////////////FOUNDLING THE SHADOW ADEPT THIEF////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////////////////////////
+ 
+-
+-PRINT ~~
+-PRINT @244 /* Foundling's class option:
+-Enter 1 to keep Foundling's original class (single-class mage: Shadow Adept)
+-Enter 2 to install Foundling's optional class (dual-class Shadow Adept/thief - he won't level up as a thief) */
+-
+-ACTION_READLN ~FouClass~
+-OUTER_WHILE (!(IS_AN_INT ~FouClass~) OR (~%FouClass%~ > 2) OR (~%FouClass%~ < 1)) BEGIN
+-  PRINT @244 // repeat prompt until valid answer
+-  ACTION_READLN ~FouClass~
+-END
++OUTER_SET FouClass = 1
+ 
+ ACTION_IF (~%FouClass%~ = 1) THEN BEGIN
+   PRINT @245 /* Keeping Foundling's original class. */
