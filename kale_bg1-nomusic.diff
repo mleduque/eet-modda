@@ -10,7 +10,7 @@
 -[1] Yes
 -[2] No
 -~
-+OUTER_SPRINT ~music~ 2^M
++OUTER_SPRINT ~music~ 2
  
 -OUTER_SPRINT ~music~ ~placeholder_value~
 -OUTER_WHILE (!(IS_AN_INT ~music~) OR (~music~ > 0x2) OR (~music~ < 0x1)) BEGIN

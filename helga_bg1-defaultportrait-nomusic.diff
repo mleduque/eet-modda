@@ -40,10 +40,3 @@
        ACTION_IF ("music" = 1) THEN BEGIN
  	COPY_EXISTING ~sw1h01.itm~ ~override/bg1npcmusic.g3~
  
-@@ -387,4 +368,4 @@ END
- 
- ACTION_IF ("music" = 2) THEN BEGIN
- PRINT ~Did not install Music for Helga.~
--END 
-\ No newline at end of file
-+END 
