@@ -24,13 +24,6 @@
        ACTION_IF ("portrait" = 8) THEN BEGIN
  		COPY ~%MOD_FOLDER%/alt-portrait/originalbg2/AuraL.bmp~ ~override/AuraL.bmp~
  		COPY ~%MOD_FOLDER%/alt-portrait/originalbg2/AuraM.bmp~ ~override/AuraM.bmp~
-@@ -103,4 +90,4 @@ END
- 		COPY ~%MOD_FOLDER%/portraits/AuraM.bmp~ ~override/AuraM.bmp~
- 		COPY ~%MOD_FOLDER%/portraits/AuraS.bmp~ ~override/AuraS.bmp~
-       PRINT ~Portrait: BG1 Default by Artemius_I/AionZ~
--      END
-\ No newline at end of file
-+      END
 --- Aura_BG1/lib/aura_kit.tpa
 +++ Aura_BG1/lib/aura_kit.tpa
 @@ -2,18 +2,8 @@
@@ -53,10 +46,3 @@
        ACTION_IF ("auraclass" = 1) THEN BEGIN
  ADD_KIT ~C0AURA~
   // appended to CLASWEAP.2da
-@@ -2234,4 +2224,4 @@ WRITE_LONG 0x34 7000
-   COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/scripts/c0ausumm.baf~
-   COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/scripts/c0auin2.baf~
-   COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/scripts/c0auin3.baf~
--  COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/scripts/c0auin4.baf~
-\ No newline at end of file
-+  COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/scripts/c0auin4.baf~
