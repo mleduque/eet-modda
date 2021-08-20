@@ -1,0 +1,11 @@
+--- sod2bg2_iu/sod2bg2_iu.tp2     2021-08-20 10:51:41.531649187 +0200
++++ sod2bg2_iu/sod2bg2_iu.tp2      2021-08-20 10:53:07.822209389 +0200
+@@ -4992,8 +4992,7 @@
+ COPY_EXISTING ~firkra02.cre~ ~override~
+   ADD_CRE_ITEM ~bdhelm01~ #0 #0 #0 ~NONE~ ~INV~                //Crown Of Lies
+        ADD_CRE_ITEM ~dtkascrl~ #0 #0 #0 ~NONE~ ~INV~           //Ancient Scroll
+-               ADD_CRE_ITEM ~dtkrnd01~ #0 #0 #0 ~NONE~ ~INV~           // 50/50 Carsomyr +5 or Aster's Edge +3
+-                       REMOVE_CRE_ITEM ~sw2h10~        // Removing Carsomyr +5 from inventory
++               ADD_CRE_ITEM ~dtkaster~ #0 #0 #0 ~NONE~ ~INV~           // Aster's Edge +3
+                                ADD_CRE_ITEM ~dtkdgbl2~ #0 #0 #0 ~NONE~ ~INV~           //Dragon's Blood
+                                        ADD_CRE_ITEM ~dtkrnd13~ #0 #0 #0 ~NONE~ ~INV~           //Random new spell Level 5 or lower
