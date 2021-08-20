@@ -1,6 +1,6 @@
---- gavin/gavin.tp2
-+++ gavin/gavin.tp2
-@@ -1206,11 +1206,8 @@ REQUIRE_COMPONENT ~Gavin.tp2~ 0 @101
+--- gavin/gavin.tp2     2021-08-20 13:11:22.413333747 +0200
++++ gavin/gavin.tp2     2021-08-20 13:22:36.515507848 +0200
+@@ -1192,11 +1192,8 @@
  REQUIRE_FILE ~override/GavinNPC.B~ @101
  
    /* Gavin's romance timer */

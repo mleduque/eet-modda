@@ -40,10 +40,3 @@
  OUTER_WHILE (!(IS_AN_INT ~portrait~) OR (~portrait~ > 0x3) OR (~portrait~ < 0x1)) BEGIN
    ACTION_READLN ~portrait~
  END
-@@ -398,4 +392,4 @@ END
-       PRINT ~Portrait: Old Version (NWN)~
- 	  END
- 
--LOAD_TRA ~%MOD_FOLDER%/Tra/%LANGUAGE%/setup.tra~
-\ No newline at end of file
-+LOAD_TRA ~%MOD_FOLDER%/Tra/%LANGUAGE%/setup.tra~
