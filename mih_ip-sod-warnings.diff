@@ -1,0 +1,32 @@
+--- mih_ip/shared/summons/more_summons.tpa     2021-08-19 23:06:15.322120824 +0200
++++ mih_ip/shared/summons/more_summons.tpa      2021-08-19 23:06:26.822483450 +0200
+@@ -1,6 +1,6 @@
+ DEFINE_ACTION_FUNCTION more_summons
+ BEGIN
+-  ACTION_IF GAME_IS "bgee sod"
++  ACTION_IF GAME_IS "bgee"
+   BEGIN
+     OUTER_TEXT_SPRINT game "BGEE"
+   END
+--- mih_ip/lib/missing_files.tpa       2021-08-19 23:05:41.973069040 +0200
++++ mih_ip/lib/missing_files.tpa        2021-08-19 23:05:50.245329969 +0200
+@@ -29,7 +29,7 @@
+ 
+ // Creature files used that are missing in some game versions.
+ 
+-ACTION_IF GAME_IS "bgee sod"
++ACTION_IF GAME_IS "bgee"
+ BEGIN
+   OUTER_TEXT_SPRINT game "BGEE"
+ END
+--- mih_ip/lib/lib_ini.tpa        2021-08-20 09:43:06.927530954 +0200
++++ mih_ip/lib/lib_ini.tpa        2021-08-20 09:43:19.475925300 +0200
+@@ -43,7 +43,7 @@
+         PATCH_IF !VARIABLE_IS_SET $SFO_reserved_ini_hash(~%ini%~) BEGIN
+            SPRINT value 0
+            PATCH_IF !silent BEGIN
+-                               PATCH_WARN "ini entry %ini% has been checked, but is not present in the ini file"
++                               PATCH_LOG "ini entry %ini% has been checked, but is not present in the ini file"
+                   END
+         END ELSE BEGIN
+            SPRINT value $SFO_reserved_ini_hash(~%ini%~)

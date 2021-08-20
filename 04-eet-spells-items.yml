@@ -31,19 +31,26 @@ modules:
       release: v33.7
       asset: lin-stratagems-33.7.zip
   - name: iwdification
-    components: ~
+    components:
+      - 10  # Incantation des sorts style Icewind Dale (Andyr)
+      - 60  # Pack de haches a deux mains
+      - 50  # Chanson du barde d'IWD
+      - 72  # IWD Class Updates: Druid -> Install Both of the Above
+      - 120 # IWD Class Updates: Thief
     location:
       github_user: mleduque
       repository: iwdification
       branch: fix-french-tra
   - name: A7-TotLM-BG2EE
-    components: ~
-      #- 0  # Trials of the Luremaster for Baldur's Gate
-      #- 31 # Reduce by 50 percent [XP]
+    components:
+      - 0  # Trials of the Luremaster for Baldur's Gate
+      - 31 # Reduce by 50 percent [XP]
     location:
       github_user: Argent77
       repository: A7-TotLM-BG2EE
       branch: devel
+      patch:
+        relative: a7-totlm-unbreak_shield.diff
   - name: item_rev # component 0: "Any modifications made to items prior to installing this component will be overwritten"
     description: Item Revision (main compoennt)
     component: [0] # Item Revisions by Demivrgvs (main component)
@@ -83,7 +90,17 @@ modules:
         add_backstabbing_penalties 	  = 0 // gives backstab penalties to certain weapons, overridden by "Penalties with Thief-only Weapons" if chosen.
   - name: msfm
     description: More Stuff For Mage - BG2 part
-    components: ~ #[2, 3, 8, 10, 12, 13, 14, 15, 17] # must add wizard staff and circlet
+    components:
+      - 1  # Add Wizard's Staff -> Add Wizard's Staff with 14 new color sets
+      - 2  # Add Staff of Wizardry
+      - 3  # Add custom inventory animation to the Staff of Wizardry
+      - 9  # Add ranged attack and a tweak to the Staff of the Magi -> Add ranged attack + replace invisibility with spell restoration
+      - 10 # Add circlets
+      - 11 # Add Circlet of Revelation
+      - 12 # Add Wizard's Hat
+      - 13 # Add Wand Case
+      - 14 # Add a stone of teleportation
+      - 17 # Add Robes of Archimagi with colorsets from Mr. Pennyway's Cosmetic Changes mod
     location:
       github_user: mleduque
       repository: msfm
@@ -96,12 +113,54 @@ modules:
       repository: thalan
       tag: v4.2.5
   - name: mih_ip
-    components: ~ #[0, 9, 11]
+    components:
+      - 0  # Made in Heaven: Item Pack
+      - 8  # Turn all Dragon Scale Armor into Scale Mail
+      - 10 # Miscellaneous Item Improvements
+      - 11 # Add Potions of Extra Healing in BG1
+      - 13 # Sensible Shops (see readme)
     location:
       github_user: AngelGryph
       repository: MadeInHeaven_ItemPack
       release: v6
       asset: lin-mih_ip-v6.tar.gz
+      patch:
+        relative: mih_ip-sod-warnings.diff
+    add_conf:
+      file_name: mih_ip.ini
+      content: |
+        [general]
+        debug_variable=0
+        use_perl_natively=0
+        use_ee_half_damage=1
+
+        [item_pack]
+        max_stack_ammo=0
+        max_stack_thrown=0
+        max_stack_potions=0
+        max_stack_jewels=0
+        update_itemexcl_2da=1
+        visible_ioun_stones=1
+        brokk_buying_markup=70
+        brokk_selling_markup=130
+        phendra_buying_markup=50
+        phendra_selling_markup=150
+
+        [better_items]
+        baldurans_cloak_magic_resistance=25
+        baldurans_cloak_in_bg2=1
+
+        [extra_healing_in_bg1]
+        extra_healing_minimum=2
+        extra_healing_maximum=5
+        extra_healing_shops=1
+        extra_healing_durlag=1
+
+        [sensible_shops]
+        bg1_fix_large_shields=0
+        bg1_add_obscure_items=1
+        bg1_move_thieving_stuff=1
+        bg2_swap_hammers=1
   - name: valhorn
     components: [0]
     location:
@@ -220,31 +279,58 @@ modules:
       release: v3.2
       asset: A7-ImprovedArcher-v3.2.iemod
   - name: mih_sp
-    components: ~
-      #- 0   # Made in Heaven: Spell Restorations
-      #- 1   # Made in Heaven: Arcane Spellpack
-      #- 2   # Made in Heaven: Divine Spellpack
-      #- 3   # Made in Heaven: Epic Spellpack ERROR
-      #- 4   #revised paladin powers (ERROR)
-      #- 6   # Revised Animal/Monster Summoning
-      #- 7   # No Elemental Mind Battle
-      ## - 8   # True Meteor Swarm
-      #- 13  # Temples sell Priest Scrolls
-      #- 15  # Sixth Circle Spell Scrolls in Siege of Dragonspear
+    components:
+      - 0  # Made in Heaven: Spell Restorations
+      - 1  # Made in Heaven: Arcane Spellpack
+      - 2  # Made in Heaven: Divine Spellpack
+      - 3  # Made in Heaven: Epic Spellpack
+      - 4  # Revised Paladin Powers
+      - 7  # Revised Monster/Animal Summoning
+      - 8  # No Elemental Mind Battle
+      - 9  # True Meteor Swarm
+      - 12 # Spell Improvements (see readme)
+      - 14 # Expanded Temple Services
+      - 16 # Sixth Circle Spell Scrolls in Siege of Dragonspear
     location:
       github_user: AngelGryph
       repository: MadeInHeaven_SpellPack
       release: v4
       asset: lin-mih_sp-v4.tar.gz
+      patch:
+        relative: mih_sp-warnings.diff
+      add_conf:
+        file_name: mih_sp.ini
+        content: |
+          [general]
+          debug_variable=0
+          use_perl_natively=0
+          use_ee_half_damage=1
+
+          [restorations]
+          recycle_unused_idsnames=1
+
+          [epic_spellpack]
+          maximize_spell_level_plus=3
+          [revised_animate_dead]
+          animate_dead_base_power=32
+
+          [revised_summoning]
+          monster_summoning_base_power=32
+          animal_summoning_base_power=32
   - name: saradas_magic_2
-    components: ~
+    components:
+      - 1 # Saradas Magic NPC Mod for BGII -> Saradas has a mage sprite (optional)
     location:
       github_user: SpellholdStudios
       repository: Saradas_Magic_for_BG2
       release: v2.0.0
       asset: saradas-magic-for-bg2-v2.0.0.iemod
   - name: cdlore
-    components: [10, 20, 30, 40]
+    components:
+      - 10 # Books Provide Lore Bonuses
+      - 20 # Weapon Knowledge Provides Lore Bonuses
+      - 30 # Party Members Provide Lore Bonuses
+      - 40 # Defeating Monsters Provides Lore Bonuses
     location:
       github_user: Gibberlings3
       repository: Lore_From_Learning

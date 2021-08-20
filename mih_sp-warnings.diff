@@ -1,0 +1,11 @@
+--- mih_ip/lib/lib_ini.tpa        2021-08-20 09:43:06.927530954 +0200
++++ mih_ip/lib/lib_ini.tpa        2021-08-20 09:43:19.475925300 +0200
+@@ -43,7 +43,7 @@
+         PATCH_IF !VARIABLE_IS_SET $SFO_reserved_ini_hash(~%ini%~) BEGIN
+            SPRINT value 0
+            PATCH_IF !silent BEGIN
+-                               PATCH_WARN "ini entry %ini% has been checked, but is not present in the ini file"
++                               PATCH_LOG "ini entry %ini% has been checked, but is not present in the ini file"
+                   END
+         END ELSE BEGIN
+            SPRINT value $SFO_reserved_ini_hash(~%ini%~)

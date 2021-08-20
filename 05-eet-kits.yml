@@ -278,6 +278,13 @@ modules:
   - name: Faiths_and_Powers_Multiclass
     components: ~
     # location see Faiths_and_Powers
+  - name: m7multikit
+    components: ~
+    location:
+      github_user: mleduque
+      repository: m7multikit
+      branch: unusability-output
+    interrupt: true
   - name: EpicThieving
     components: ~
     location:
