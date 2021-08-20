@@ -57,10 +57,3 @@
  
  
  // Optional component 
-@@ -10996,4 +10988,4 @@ END
- 
- ACTION_IF FILE_EXISTS_IN_GAME ~B7XSafa.dlg~ AND FILE_EXISTS_IN_GAME ~B7XGar.dlg~ BEGIN
- COMPILE ~%MOD_FOLDER%/crossbanter/garrick-safana.d~ USING ~%MOD_FOLDER%/tra/%LANGUAGE%/crossbanter.tra~
--END
-\ No newline at end of file
-+END

@@ -400,6 +400,7 @@ modules:
       branch: master
       patch:
         relative: bg1npcsoa-nopdf.diff
+        encoding: WIN1251
   - name: BG1NPCSoA # install after other versions of same npcs
     description: BG1 NPCs in BG2
     components:
