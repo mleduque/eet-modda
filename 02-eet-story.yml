@@ -509,7 +509,7 @@ modules:
       repository: Keldorn_Romance
       release: v7
       asset: berelindes-keldorn-romance-7.iemod
-  - name: "themed_tweaks"
+  - name: themed_tweaks
     components:
       - 60  # SoD - Give Imoen a special wand for palace attack scene
       - 70  # SoD - Allow PC to give aid to Imoen after attack in palace
@@ -519,9 +519,9 @@ modules:
       - 140 # SoD/BG2EE - Add a little snark to dialogues
       - 180 # BG2EE - Give Imoen innnate Magic Missiles for attack scene
     location:
-      github_user: mleduque
+      github_user: lzenner
       repository: themed_tweaks
-      branch: fix-bom
+      commit: cf07ec1
   - name: "framed"
     version: 1.9
     components:
