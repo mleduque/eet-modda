@@ -72,13 +72,13 @@ modules:
       github_user: Raduziel
       repository: I-Hate-Undead-Kitpack
       tag: "3.8.1"
-  - name: shurininja
-    components: ~
-    location:
-      github_user: GwendolyneFreddy
-      repository: Shuri-Ninja
-      release: v2.0.0
-      asset: shuri-ninja-kit-2.0.0.iemod
+  #- name: shurininja
+  #  components: ~
+  #  location:
+  #    github_user: GwendolyneFreddy
+  #    repository: Shuri-Ninja
+  #    release: v2.0.0
+  #    asset: shuri-ninja-kit-2.0.0.iemod
   - name: A7-ChaosSorcerer
     components: [0, 30]
     location:
