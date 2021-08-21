@@ -1,0 +1,19 @@
+--- shadowadept/lib/kit.tpa     2021-08-21 14:42:19.617390737 +0200
++++ shadowadept/lib/kit.tpa     2021-08-21 14:42:13.737203209 +0200
+@@ -1,10 +1,10 @@
+-PRINT ~Please choose one of the following:
+-[1] Constitution drain on cast
+-[2] Drain Current Hit Points on cast
+-[3] Drain Maximum Hit Points on cast
+-[4] No Cost~
++//PRINT ~Please choose one of the following:
++//[1] Constitution drain on cast
++//[2] Drain Current Hit Points on cast
++//[3] Drain Maximum Hit Points on cast
++//[4] No Cost~
+ 
+-OUTER_SPRINT ~hpcost~ ~placeholder_value~
++OUTER_SPRINT ~hpcost~ 1
+ OUTER_WHILE (!(IS_AN_INT ~hpcost~) OR (~hpcost~ > 0x5) OR (~hpcost~ < 0x1)) BEGIN
+   PRINT ~Please select 1, 2, 3 or 4 and press Enter.~
+   ACTION_READLN ~hpcost~

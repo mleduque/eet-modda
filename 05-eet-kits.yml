@@ -101,6 +101,8 @@ modules:
       github_user: ArtemiusI
       repository: Shadow-Magic
       branch: master
+      patch:
+        relative: shadowmagic-condrain.diff
   - name: shadowadept
     description: shadowadept - components without warningq
     components:
