@@ -80,13 +80,19 @@ modules:
   #    release: v2.0.0
   #    asset: shuri-ninja-kit-2.0.0.iemod
   - name: A7-ChaosSorcerer
-    components: [0, 30]
+    components:
+      - 0 # Kit d'Ensorceleur du Chaos
+      - 30 # Ajouter des artefacts primordiaux
     location:
       github_user: Argent77
       repository: A7-ChaosSorcerer
       branch: devel
   - name: wildmage
-    components: ~
+    components:
+      - 0 # New Wild Magic Spells -> Ironman
+      - 2 # Retain Rhialto's items
+      - 3 # Spellshaper Kit -> Original avatar
+      - 5 # Diverses Modifications de Sorts
     location:
       github_user: BGforgeNet
       repository: bg2-wildmage
