@@ -259,18 +259,18 @@ modules:
       repository: 5E_spellcasting
       tag: "0.9"
   - name: might_and_guile
-    component: ~
+    components: ~
     location:
       github_user: UnearthedArcana
       repository: Might_and_Guile
       tag: "4.12.2"
   - name: sword_and_fist
-    component: ~
+    components: ~
     location:
       http: https://www.gibberlings3.net/files/file/890-sword-and-fist/?do=download&r=4131&confirm=1&t=1&csrfKey=26496983391408bcb5e250b559da1945
       rename: lin-sword_and_fist-v10.tar.gz
   - name: refinements
-    component: ~
+    components: ~
     location:
       github_user: UnearthedArcana
       repository: refinements

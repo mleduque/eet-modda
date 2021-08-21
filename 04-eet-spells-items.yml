@@ -53,7 +53,8 @@ modules:
         relative: a7-totlm-unbreak_shield.diff
   - name: item_rev # component 0: "Any modifications made to items prior to installing this component will be overwritten"
     description: Item Revision (main compoennt)
-    component: [0] # Item Revisions by Demivrgvs (main component)
+    components:
+      - 0 # Item Revisions by Demivrgvs (main component)
     location: # temporary, hope for maintenance and releases soon
       github_user: subtledoctor
       repository: ItemRevisions
