@@ -64,6 +64,8 @@ modules:
       github_user: ArtemiusI
       repository: Warlock
       branch: master
+      patch:
+        relative: c0warlock-noprompt.diff
   - name: IHateUndead
     components: [0, 1, 2, 4, 5, 6, 7, 9, 10, 11]
     location:
