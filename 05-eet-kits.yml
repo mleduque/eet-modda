@@ -485,6 +485,7 @@ modules:
   - name: cdportraits
     description: Continuous NPC Portraits
     components: ~
+    location:
       github_user: Gibberlings3
       repository: Continuous_NPC_Portraits
       release: v1
