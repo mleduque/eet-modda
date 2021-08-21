@@ -51,10 +51,3 @@ modules:
       github_user: mleduque
       repository: ie-mods-35
       branch: master
-  - name: m7multikit
-    components: ~
-    location:
-      github_user: mleduque # canonical: CrevsDaak, change: one fix for wildmage (PR submitted, no news)
-      repository: m7multikit
-      branch: unusability-output
-    # only install base component, after that must generate and install multikits
