@@ -51,3 +51,9 @@ modules:
       github_user: mleduque
       repository: ie-mods-35
       branch: master
+  - name: cd_appraiser
+    components: [ 0 ]
+    location:
+      github_user: Gibberlings3
+      repository: Bardic_Appraisal
+      commit: 9e66c38
