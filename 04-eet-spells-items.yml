@@ -71,13 +71,13 @@ modules:
         // Store Revisions
         install_masterwork_weapons      = 0 // +1 weapons are changed to masterwork; outdated - mostly functional, but not recommended (use SCS component instead)
 
-        // Revised Armor
+        // Revised Armor - Won't be used (component not installed) Prefer scale of balance version
         armor_dexterity_penalty         = 1 // adds dexterity penalties to armor
         armor_speed_factor_penalty      = 0 // ditto for attack speed factor
         armor_physical_resistance       = 1 // adds physical resistance bonus
         armor_ac_modifiers              = 1 // modifies AC bonuses vs different weapon types (slashing, piercing etc.)
 
-        // Spellcasting in Armor
+        // Spellcasting in Armor - Same
         armor_casting_speed_clerics     = 0 // divine spellcasters will be affected as well ("Casting Speed Penalties for Arcane Casters" subcomponent only)
         armor_free_casting              = 0 // cheat version, will override other options and enable unrestricted spellcasting in armor (either subcomponent)
         bards_armor_spell_penalties	  = 0 // Bards get the normal penalties to casting when using any armor lighter than chain mail
