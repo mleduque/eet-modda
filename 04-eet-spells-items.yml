@@ -275,7 +275,12 @@ modules:
       repository: Bardic-Wonders
       branch: master
   - name: A7#ImprovedArcher
-    components: ~
+    components:
+      - 0   # Profil d'Archer ameliore
+      - 10  # Ajouter le profil de guerrier : Tireur d'elite
+      - 20  # Ajouter le profil de paladin : Chevalier archer
+      - 30  # Ajouter le profil de voleur : Tireur de precision
+      - 100 # Ajouter des fleches et des carreaux +4, et des arcs puissants et dans le jeu
     location:
       github_user: Argent77
       repository: A7-ImprovedArcher
