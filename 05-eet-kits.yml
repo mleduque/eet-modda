@@ -212,7 +212,9 @@ modules:
       - 1451 # make smashing wave party-friendly WARNING: no effects altered on SPPR429.spl
       - 2305 # Modifer Rapidité et Lenteur pour qu'ils s'annulent l'un l'autre WARNING: no effects altered on potn14.spl
   - name: wsr # hla only
-    components: [200]
+    description: Wizard Slayer Rebalancing - HLA
+    components:
+      - 200 # Revision des facultes de haut niveau du Tueur de magiciens
     # module location earlier
   - name: cdtweaks
     description: Tweaks Anthology - only spell progression tables
