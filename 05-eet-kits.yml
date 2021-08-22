@@ -298,6 +298,8 @@ modules:
       - 1070 # Les Voleurs peuvent utiliser des baguettes
   - name: Faiths_and_Powers
     components: ~
+      #- 21 # FnP original sphere system
+      #- 31 # Install Cleric kits
     location:
       github_user: subtledoctor
       repository: Faiths_and_Powers
