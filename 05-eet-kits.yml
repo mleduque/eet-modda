@@ -311,11 +311,21 @@ modules:
             - FnP_Multiclass
   - name: 5E_spellcasting
     comment: It should be installed after Tome & Blood and Faiths & Powers; but before Might & Guile and Faiths & Powers Multiclass.
-    components: ~
+    components:
+      - 100 # Change All Casters to 5E System
+      - 900 # Set Bonus Spell Slot Items to Work for 5E Casters
+    ignore_warnings: true # no effect altered on... for each component
     location:
       github_user: UnearthedArcana
       repository: 5E_spellcasting
-      tag: "0.9"
+      tag: "0.9" # remove mod below if version >= 1.0
+  - name: 5e_casting_priests_hotfix
+    description: fix for priests with 5E conversion
+    components: [0]
+    location:
+      github_user: subtledoctor
+      repository: SubtleD_hotfixes
+      tag: v6
   - name: might_and_guile
     components: ~
     location:
