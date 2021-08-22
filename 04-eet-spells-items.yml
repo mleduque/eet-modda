@@ -59,6 +59,8 @@ modules:
       github_user: subtledoctor
       repository: ItemRevisions
       branch: master
+      patch:
+        relative: item_rev-store-charep.diff
     add_conf:
       file_name: settings.ini
       content: |
@@ -273,12 +275,12 @@ modules:
       repository: Bardic-Wonders
       branch: master
   - name: A7#ImprovedArcher
-    components: [100]
+    components: ~
     location:
       github_user: Argent77
       repository: A7-ImprovedArcher
-      release: v3.2
-      asset: A7-ImprovedArcher-v3.2.iemod
+      release: v4.0
+      asset: A7-ImprovedArcher-v4.0.iemod
   - name: mih_sp
     components:
       - 0  # Made in Heaven: Spell Restorations

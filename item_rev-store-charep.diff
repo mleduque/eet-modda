@@ -1,0 +1,12 @@
+--- item_rev/components/store_revisions.tpa   2021-08-22 11:43:43.417913865 +0200
++++ item_rev/components/store_revisions.tpa     2021-08-22 11:43:56.218324254 +0200
+@@ -7,9 +7,6 @@
+ // use this detection check - 'FILE_EXISTS_IN_GAME ag#store_revisions.mrk'
+ COPY ag#dummy ~override/ag#store_revisions.mrk~
+ 
+-COPY ~item_rev/components/store/chrmodst.2da~ ~override~
+-COPY ~item_rev/components/store/repmodst.2da~ ~override~
+-
+ LAM buy_group
+ LAM spelldesc
+ LAF make_scrolls END
