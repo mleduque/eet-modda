@@ -327,11 +327,33 @@ modules:
       repository: SubtleD_hotfixes
       tag: v6
   - name: might_and_guile
-    components: ~
+    description: Might And Guile - Main component (warns)
+    components:
+      - 220 # Revised Multiclassing and Multiclass Kits
+    ignore_warnings: true
     location:
       github_user: UnearthedArcana
       repository: Might_and_Guile
       tag: "4.12.2"
+  - name: might_and_guile
+    description: Might And Guile - Other components
+    components:
+      - 240 # Improved Rangers
+      - 245 # Revised Movement Bonuses (Quickstride)
+      - 250 # Revised Berserker and Rage
+      - 310 # Add the Corsair (fighter kit)
+      - 320 # Add the Marksman (fighter kit)
+      - 322 # Add the Elven Archer (ranger kit)
+      - 324 # Add the Halfling Slinger (fighter/thief kit)
+      - 350 # Add the Mage Hunter (ranger kit)
+      - 360 # Add the Barbarian Ranger (ranger kit)
+      - 410 # Add the Sniper (thief kit)
+      - 420 # Add the Scout (thief kit) and revise the Swashbuckler
+      - 450 # Add the Jongleur (bard kit)
+      - 460 # Add the Loremaster (bard kit)
+      - 470 # Add the Gallant (bard kit)
+      - 480 # Add the Meistersinger (bard kit)
+      - 490 # Add the Loresinger (bard kit)
   - name: sword_and_fist
     components: ~
     location:
