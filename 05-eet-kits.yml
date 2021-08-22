@@ -355,10 +355,19 @@ modules:
       - 480 # Add the Meistersinger (bard kit)
       - 490 # Add the Loresinger (bard kit)
   - name: sword_and_fist
-    components: ~
+    components:
+      - 30 # Installer le kit de guerrier : Champion Occultiste
+      - 31 # Installer le kit de guerrier : Duelliste
+      - 32 # Installer le kit de guerrier : Poing de l'Ordre
+      - 34 # Installer le kit de guerrier : Magelame (by ronin69hof, ronin69hof@gmail.com
     location:
-      http: https://www.gibberlings3.net/files/file/890-sword-and-fist/?do=download&r=4131&confirm=1&t=1&csrfKey=26496983391408bcb5e250b559da1945
-      rename: lin-sword_and_fist-v10.tar.gz
+      github_user: mleduque
+      repository: sword_and_fist
+      branch: main
+  - name: sword_and_fist
+    components:
+      - 33 # Installer le kit de guerrier : Chevalier Noir
+    ignore_warnings: true # o effect altered on...
   - name: refinements
     components: ~
     location:
