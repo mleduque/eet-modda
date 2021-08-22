@@ -246,6 +246,7 @@ modules:
       release: v10
       asset: lin-song_and_silence-v10.zip
   - name: TomeAndBlood
+    description: Tome And Blood - main
     components: # 5E says "revised specialists": no, "rebalance spell schools": yes
       - 11 # Rebalanced Spell Schools
       - 13 # Revised Illusionary Clones
@@ -265,7 +266,6 @@ modules:
       - 66 # Innate Find Familiar
       #- 67 # Choose-Your-Own Familiar - CRASH on use
       - 80 # Multiclass Sorcerers
-      - 82 # Arcanist
       - 85 # Sorcerer Kit: Mana Sorcerer
       #- 93 # Make +Spell Slot Items work with MultiSorcerers and Arcanists
       - 95 # Ability Score Spellcasting Bonuses (install AFTER any mod that changes spell tables!)
@@ -273,6 +273,11 @@ modules:
       github_user: subtledoctor
       repository: TomeAndBlood
       tag: "0.9.14"
+  - name: TomeAndBlood
+    description: Tome And Blood - arcanist warns
+    components:
+      - 82 # Arcanist
+    ignore_warnings: true
   - name: A7#ImprovedShamanicDance
     components:
       - 0  # Danse shamanique amelioree
@@ -297,9 +302,11 @@ modules:
       - 1060 # Les Kensai peuvent porter des bracelets
       - 1070 # Les Voleurs peuvent utiliser des baguettes
   - name: Faiths_and_Powers
-    components: ~
-      #- 21 # FnP original sphere system
-      #- 31 # Install Cleric kits
+    components:
+      - 21 # Create a sphere system -> FnP: the Faiths & Powers original sphere system
+      - 31 # Install Cleric kits
+      - 80 # Apply sphere system
+    ignore_warnings: true # all except 31 emit no eddect changed/added
     location:
       github_user: subtledoctor
       repository: Faiths_and_Powers
