@@ -148,65 +148,69 @@ modules:
     version: 1.1-mle1
     description: SubtleDoctor's Random Tweaks
     components:
-      - 2105
-      - 2108
-      - 1151
-      - 1152
-      - 2209
-      - 2212
-      - 2213
-      - 2215
-      - 2217
-      - 2224
-      - 2251
-      - 1202
-      - 1207
-      - 1212
-      - 1251
-      - 2305
-      - 2324
-      - 1323
-      - 1351
-      - 2413
-      - 2418
-      - 1404
-      - 1451 # make smashing wave party-friendly WARNING: no effects altered on SPPR429.spl
-      - 2508
-      - 2518
-      - 2523
-      - 1603
-      - 1611
-      - 1613
-      - 1614
-      - 2708
-      - 1710
-      - 2808
-      - 2811
-      - 2916
-      - 2915
-      - 2914
-      - 2923
-      - 3000
-      - 3010
-      - 3020
-      - 3030
-      - 3040
-      - 3050
-      - 3060
-      - 3070
-      - 3080
-      - 3092
-      - 4010
-      - 4020
-      - 4031
-      - 2451
-      - 5000
-      - 5010
-      - 5031
+      - 2105 # Ajouter un effet d'aveuglement pour 1 round à Vapeur Colorée
+      - 2108 # Changer Protection contre la Pétrification en 'Rétrovision'
+      - 1151 # Réduire les dégâts mais améliorer la Cécité pour le Soleil Ardent de Spell Revisions
+      - 1152 # Améliorer Lueur Féérique
+      - 2209 # Modifier Chance pour affecter tout le groupe
+      - 2212 # Déplacer Image Miroir au niveau 3
+      - 2213 # Ajouter des effets persistants au Nuage Puant de Spell Revisions
+      - 2215 # Modifier Toile d'Araignée pour ralentir au lieu d'immobiliser
+      - 2217 # Changer Incinérateur d'Agannazar en Projectiles Ardents de Melf
+      - 2224 # Améliorer Poussière Scintillante
+      - 2251 # Ajouter un effet de Surdité au toucher à Baton Décuplé
+      - 1202 # Modifier Peau d'écorce pour bloquer une attaque par round
+      - 1207 # Modifier Baies magiques pour en faire une régénération hors combat
+      - 1212 # Ajuster Ralentissement du Poison
+      - 1251 # Améliorer les dégâts et modifier le type de dégâts pour Lance d'Alicorne
+      - 2324 # Modifier Immobilisation des Morts-Vivants et Contrôle des Morts-Vivants pour ignorer la résistance à la magie
+      - 1323 # Améliorer le temps d'incantation pour Exaltation et Clarté Spirituelle
+      - 1351 # Ajouter des effets de Lueur Féérique et Lenteur au toucher de la Lame de Lune
+      - 2413 # Autoriser la cible de Sphère Résistante d'Otiluke à utiliser son inventaire
+      - 2418 # Rendre Bouclier de Feu et Gaine Acide de Mestil dissipable par Brêche
+      - 2451 # Modifier les monstres de Convocation d'Ombre plus illusoires
+      - 1404 # Remplacer Neutralisation du Poison en 'Suppression des Afflictions'
+      - 2508 # Améliorer Vagues de Fatigue de Spell Revisions
+      - 2518 # Changer le type de dégâts et l'école de Lame Fantomatique
+      - 2523 # Remplacer Feu du Soleil par 'Tempête de Projectiles'
+      - 1603 # Rendre BarriÃšre de Lames dissipable par Brêche
+      - 1611 # Modifier Souvenir Merveilleux pour restaurer tous les sorts de niveau 1 et 2
+      - 1613 # Modifier Miroir Physique pour bloquer une attaque toutes les 3 secondes
+      - 1614 # Rendre Orbe Desséchant de Sol plus facile à lancer
+      - 2708 # Remplacer Manteau par 'Peau de Fer'
+      - 1710 # Ajouter un effet de Lenteur à Parole Sacrée
+      - 2808 # Rendre Moment de Prescience dissipable par Brêche
+      - 2811 # Déplacer Symbole, Terreur au niveau 7
+      - 2916 # Déplacer Changement de Forme au niveau 8
+      - 2915 # Déplacer Lame Noire du Désastre au niveau 8
+      - 2914 # Ajouter un effet de mort instantanée à Absorption d'Énergie
+      - 2923 # Remplacer Convocation de Planétaire en Convocation de Djinn Noble
+      - 3000 # Donner aux armes créées par les sort 2 attaques par round (APR)
+      - 3010 # Ajouter une immunité aux attaques sournoises à l'Anneau de Perception du danger
+      - 3020 # Donner une vraie déviation des projectile aux Bracelets antiprojectiles
+      - 3030 # Améliorer les armes avec effet de détonation
+      - 3040 # Ajouter un effet de Peau d'Écorce 'révisé' à l'Armure de la Foi +3
+      - 3050 # Rendre le Bâton d'Absorption d'Item Revisions réellement instantanné
+      - 3060 # Modifier la Cape de Gargouille pour appliquer un effet de Peau de Pierre au lieu d'un bonus à la CA
+      - 3070 # Rendre les marteaux de jet nains utilisables par les non-nains
+      - 3080 # Améliorer la Harpe d'Azlaer et la Harpe de Methild
+      - 3092 # Dégrader l'amulette d'Edwin -> Limiter les emplacements de sorts bonus aux sorts de niveau 7
+      - 4010 # Ajouter un jet de sauvegarde pour les effets d'absorption de niveau
+      - 4020 # Améliorer les valeurs de caractéristiques des monstres
+      - 4031 # Augmenter les points de vie des dragons -> 50% de points de vie en plus
+      - 5000 # Réviser les batailles magiques
+      - 5010 # Modifier les sorts de soin et similaires pour ignorer les protections contre les sorts
+      - 5031 # Modifier Perce-Bouclier -> Perce-Bouclier lance juste Brêche
     location:
       github_user: mleduque
       repository: d5_Random_Tweaks
       branch: french-translation
+  - name: d5_random_tweaks
+    description: SubtleDoctor's Random Tweaks - ignore component warnins
+    ignore_warnings: true
+    components:
+      - 1451 # make smashing wave party-friendly WARNING: no effects altered on SPPR429.spl
+      - 2305 # Modifer Rapidité et Lenteur pour qu'ils s'annulent l'un l'autre WARNING: no effects altered on potn14.spl
   - name: wsr # hla only
     components: [200]
     # module location earlier
