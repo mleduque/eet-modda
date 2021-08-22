@@ -288,9 +288,14 @@ modules:
   - name: item_rev
     description: Item Revisions (more changes)
     components:
-      ##- 1030 # Revision des boutiques - before other mod modifying store because regorganizes/overwrites
-      #- 10   # Bonus des boucliers revus - scales shield 1->3 instead of all 1 / add THAC0 malus
-      #- 17   # Modifications des armes
+      - 1030 # Revision des boutiques
+      - 10   # Bonus des boucliers revus
+      - 17   # Weapon Changes
+      - 11   # Le combat a deux armes differe selon le type d'arme, legere ou lourde
+      - 20   # Attaque sournoise revue (avec et sans penalite) -> Toutes les armes de melee et a projectiles utilisables pour l'attaque sournoise
+      - 1200 # Evitement des coups critiques revu
+      - 1060 # Les Kensai peuvent porter des bracelets
+      - 1070 # Les Voleurs peuvent utiliser des baguettes
   - name: Faiths_and_Powers
     components: ~
     location:
