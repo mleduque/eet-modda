@@ -42,7 +42,7 @@ modules:
       - 2050 # Simple Centered Dialog
       - 2070 # Dee's Permanent Thieving Button
       - 3000 # Leveling Progress Bars Tweaks
-      - 4040 # Spell Books -> Kilivitz's Classic Spellbooks
+      #- 4040 # Spell Books -> Kilivitz's Classic Spellbooks => issue with 5E conversion
     location:
       github_user: r-e-d
       repository: EEUITweaks
