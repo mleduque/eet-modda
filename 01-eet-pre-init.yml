@@ -9,6 +9,11 @@ modules:
       github_user: Gibberlings3
       repository: EET
       tag:  V13.4
+      layout:
+          layout_type: multi_dir
+          dirs:
+            - EET
+            - EET_end
     components:
       - 0 # EET core (importation de ressource)
     add_conf:
