@@ -116,11 +116,15 @@ modules:
       - 2 # Shadow Magic: Quests and Encounters
   - name: wsr
     description: Wizard Slayer Rebalancing
-    components: [100, 302, 999] # hla must be after refinements
+    components:
+      - 100 # Revision du kit de Tueur de magiciens
+      - 302 # Revision des restrictions d'utilisation d'objets pour le Tueur de magiciens -> Changements moderes
+      - 999 # Icones style BG2 pour le contenu de WSR
+      # hla must be after refinements
     location:
-      github_user: aVENGER981
+      github_user: mleduque
       repository: Wizard-Slayer-Rebalancing
-      tag: v1.13
+      branch: mle
   - name: rr # rogue rebalancing
     description: Components up to addition equipment (excl.)
     components:
