@@ -369,12 +369,24 @@ modules:
       - 33 # Installer le kit de guerrier : Chevalier Noir
     ignore_warnings: true # o effect altered on...
   - name: refinements
-    components: ~
+    components:
+      - 11  # Capacites de haut niveau (HLA) modifiees -> Choisir quelles classes obtiennent les HLA modifiees
+      - 101 # HLAs de guerrier
+      - 102 # HLAs de barbare
+      - 103 # HLAs de rodeur
+      - 104 # HLAs de paladin
+      - 107 # HLAs de moine
+      - 108 # HLAs de magicien
+      - 109 # HLAs de barde
+      - 110 # HLAs de voleur
+      - 40  # Robes de bas niveau universelles
     location:
       github_user: UnearthedArcana
       repository: refinements
       tag: "4.29.1"
-  - name: Faiths_and_Powers_Multiclass
+      patch:
+        relative: refinements-restore-thief-uai.diff
+  - name: FnP_Multiclass
     components: ~
     # location see Faiths_and_Powers
   - name: m7multikit
