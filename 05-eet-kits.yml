@@ -100,7 +100,7 @@ modules:
       asset: wild-mage-additions-v2.1.iemod
   - name: shadowadept # will prompt 2 times
     description: shadowadept- main component only - because error
-    ignore_warn: true # WARNING: no effects altered on C0SA112.itm
+    ignore_warnings: true # WARNING: no effects altered on C0SA112.itm
     components:
       - 0 # Shadow Magic: Main Component
     location:
