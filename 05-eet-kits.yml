@@ -304,6 +304,11 @@ modules:
       github_user: subtledoctor
       repository: Faiths_and_Powers
       tag: 79sd27
+      layout:
+          layout_type: multi_dir
+          dirs:
+            - faiths_and_powers
+            - FnP_Multiclass
   - name: 5E_spellcasting
     comment: It should be installed after Tome & Blood and Faiths & Powers; but before Might & Guile and Faiths & Powers Multiclass.
     components: ~
