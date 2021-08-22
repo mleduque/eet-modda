@@ -1,0 +1,10 @@
+--- refinements/lib/hla_thief.tpa      2021-08-21 23:35:28.260736413 +0200
++++ refinements/lib/hla_thief.tpa       2021-08-21 23:35:36.016980195 +0200
+@@ -196,7 +196,6 @@
+ 
+ LAF action_remove_hla STR_VAR kit_name = ~THIEF~ remove_ability = ~GA_SPCL913~ END
+ LAF action_remove_hla STR_VAR kit_name = ~THIEF~ remove_ability = ~GA_SPCL914~ END
+-LAF action_remove_hla STR_VAR kit_name = ~THIEF~ remove_ability = ~AP_SPCL915~ END
+ LAF action_remove_hla STR_VAR kit_name = ~THIEF~ remove_ability = ~GA_SPCL917~ END
+ LAF action_remove_hla STR_VAR kit_name = ~THIEF~ remove_ability = ~GA_SPCL919~ END
+ LAF action_add_hla STR_VAR kit_name = ~THIEF~ ability = ~GA_SPCL917~ num_allowed = ~16~ prerequisite = ~GA_TG#EVAS~ END
