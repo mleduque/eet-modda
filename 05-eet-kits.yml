@@ -267,6 +267,7 @@ modules:
       - 66 # Innate Find Familiar
       #- 67 # Choose-Your-Own Familiar - CRASH on use
       - 80 # Multiclass Sorcerers
+      #- 82 #Arcanist - conflict with 5E 1.0
       - 85 # Sorcerer Kit: Mana Sorcerer
       #- 93 # Make +Spell Slot Items work with MultiSorcerers and Arcanists
       - 95 # Ability Score Spellcasting Bonuses (install AFTER any mod that changes spell tables!)
@@ -274,11 +275,6 @@ modules:
       github_user: subtledoctor
       repository: TomeAndBlood
       tag: "0.9.15"
-  - name: TomeAndBlood
-    description: Tome And Blood - arcanist warns
-    components:
-      - 82 # Arcanist
-    ignore_warnings: true
   - name: A7#ImprovedShamanicDance
     components:
       - 0  # Danse shamanique amelioree
