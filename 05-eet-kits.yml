@@ -388,7 +388,7 @@ modules:
       - 91 # Multiclass Druids
       - 92 # Multiclass Shamans
       - 95 # Multiclass Cleric kits (install AFTER all other kit mods
-    ignore_warning: true # apparently intentional
+    ignore_warnings: true # apparently intentional
     # location see Faiths_and_Powers
   - name: m7multikit
     components: [10] # core multikit files
@@ -434,7 +434,6 @@ modules:
       - 1020 # Prepared Wishes
       - 1030 # Romance Cheat: Isra will Romance Neutral Characters
       - 1050 # Appropriate XP Rewards for Cowled Enforcers
-      - 1090 # RoT: Remove cutscenes from Chateau Irenicus
       - 2020 # No Item Deprecation
       - 2030 # Identify all store items
       - 2040 # Fix Wild Mage Items and Spells
@@ -450,6 +449,11 @@ modules:
       github_user: mleduque
       repository: Klatu_tweaks_and_fixes
       branch: main
+  - name: klatu
+    description: Klatu Tweaks
+    components:
+      - 1090 # RoT: Remove cutscenes from Chateau Irenicus
+    ignore_warnings: true
   - name: cdtweaks
     description: Tweaks Anthology - Main batch of tweaks
     components: ~
