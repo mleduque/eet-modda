@@ -395,12 +395,12 @@ modules:
     ignore_warning: true # apparently intentional
     # location see Faiths_and_Powers
   - name: m7multikit
-    components: ~
+    components: [10] # core multikit files
     location:
       github_user: mleduque
       repository: m7multikit
       branch: unusability-output
-    interrupt: true
+    ignore_warnings: true
   - name: EpicThieving
     components: ~
     location:
