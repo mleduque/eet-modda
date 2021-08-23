@@ -459,6 +459,117 @@ modules:
   - name: cdtweaks
     description: Tweaks Anthology - Main batch of tweaks
     components: ~
+      - 30 # Avatar de voleur pour Nalia
+      - 40 # Peau bleue pour Viconia
+      - 50 # Script de changement d'avatar
+      - 60 # Animation des armes amelioree
+      - 70 # Incantation des sorts style Icewind Dale (Andyr)
+      - 90 # Masquer les icones de portrait ajoutees par les objets
+      - 110 # Amelioration des icones des objets
+      - 130 # Mode pause dans tous les dialogues
+      - 140 # Correction du cri de Bouh
+      - 160 # Rendre rougeoyants les boucliers magiques (plainab/grogerson)
+      - 170 # Icones uniques
+      - 182 # Recipients uniques -> Recipients et noms uniques
+      - 191 # Utiliser les couleurs du personnage plutot que les couleurs de l'objet -> Pour tous les boucliers et casques non magiques
+      - 200 # Retirer l'effet de Flou des objets, par exemple la Cape de deplacement
+      - 2010 # Separer l'icone de resistance au feu/froid en icones distinctes (Angel)
+      - 1010 # Davantage d'interjections
+      - 1020 # Modifier la valeur limite des points de vie pour les dialogues des PNJs blesses
+      - 1035 # Rendre disponibles les zones de Bois-Manteau en avance -> Seulement la premiere zone
+      - 1040 # Ameliorer les gardes d'Athkatla
+      - 1050 # Transformation progressive des objets des Elfes Noirs en poussiere
+      - 1060 # Casques, Boucliers et Armures de fer cassables
+      - 1070 # Amelioration du dialogue d'ejection pour les PNJs multijoueurs
+      - 1075 # Envoyer les PNJs de BioWare dans une auberge (DavidW/Zed Nocear)
+      - 1080 # Ajouter des sacs de contenance
+      - 1090 # Pack d'objets exotiques
+      - 1101 # Ne pas explorer automatiquement les villes
+      - 1120 # Plus de munitions dans les boutiques
+      - 1160 # Forteresses pour toutes les classes -> Pas de restrictions (Baldurdash)
+      - 1180 # Portrait feminin pour Edwina
+      - 1220 # Permettre a Cromwell d'ameliorer les objets de la Tour de Garde
+      - 1225 # Ajuster le temps de forgeage de Cromwell -> Forgeage instantane (reglage BG2 original)
+      - 1230 # Permettre a Cespenar d'utiliser les recettes de Cromwell
+      - 1251 # Move NPCs to Convenient Locations: Move Alora to Gullykin
+      - 1252 # Move NPCs to Convenient Locations: Move Eldoth to the Coast Way
+      - 1254 # Move NPCs to Convenient Locations: Move Shar-Teel to North Nashkel Road
+      - 1256 # Move NPCs to Convenient Locations: Move Viconia to South Beregost Road
+      - 1270 # Changer le declencheur de fin de chapitre des mines de Bois-Manteau pour la methode sans TotSC (plainab) (BETA)
+      - 2020 # Epees batardes a deux mains
+      - 2030 # Katanas a deux mains
+      - 2035 # Haches a deux mains
+      - 2040 # Gourdins universels
+      - 2060 # Styles de combat pour toutes les classes
+      - 2090 # Changer la limite de points d'experience -> Retirer la limite
+      - 2140 # Options de jumelage etendues
+      - 2150 # Port de plusieurs objets de protection -> Restrictions style P&P
+      - 2160 # Modifier le systeme des competences martiales -> Reequilibrage des competences martiales
+      - 2200 # Grande maitrise pour les multi-classes (Weimer)
+      - 2210 # Modifier les bonus de grande maitrise -> Veritable grande maitrise (Baldurdash)
+      - 2220 # Donner un poids de 0 aux armes creees par magie
+      - 2240 # Table debridee des TAC0
+      - 2300 # Tables de capacites de haut niveau pour les triclasses
+      - 2312 # Ajouter des penalites aux jets de sauvegarde des sorts des lanceurs de sorts de haut niveau (BETA) -> Magie divine et des arcanes
+      - 2320 # Suppression de la limite du nombre de pieges (Ardanis/GeN1e)
+      - 2330 # Suppression du delai pour les pieges magiques (Ardanis/GeN1e)
+      - 2339 # Suppression de la limite de convocation pour les creatures normales
+      - 2340 # Suppression de la limite de convocation des creatures celestes (Ardanis/GeN1e)
+      - 2357 # Alterer les restrictions des multi-classses -> Installer les options une et deux (tout le monde a acces aux multi-classes sans contrainte)
+      - 2360 # Suppression des restrictions raciales pour les mono-classes
+      - 2371 # Alterer les restrictions de jumelage -> Autoriser les non-humains a se jumeler
+      - 2390 # Les paladins utilisent les tables de sort d'Icewind Dale - Heart of Winter (grogerson)
+      - 2400 # Les rodeurs utilisent les tables de sort d'Icewind Dale - Heart of Winter (grogerson)
+      - 2410 # Les druides utilisent les restrictions d'alignement de la 3eme edition
+      - 2420 # Attenuer les restrictions d'equipement pour les clercs multi-classes
+      - 2430 # Modifier les restrictions d'equipement pour les druides multi-classes -> Attenuer les restrictions d'equipement pour les druides multi-classes
+      - 2440 # Tout le monde obtient le bonus d'attaque par round de specialisation
+      - 2500 # Modification de la limite de poids de la force exceptionnelle
+      - 2520 # Permettre aux mages d'utiliser une targe et les voleurs d'utiliser une rondache (Angel)
+      - 2530 # Les eclairs ne rebondissent pas (Angel)
+      - 2540 # Accelerer les quetes de forteresse du chateau d'Arnise
+      - 2999 # Maximum de PV au niveau 1
+      - 3031 # Apprentissage des sorts assoupli -> 100% de chance d'apprendre un sort et nombre de sorts illimite
+      - 3040 # Sacs de contenance sans fond
+      - 3050 # Retirer l'effet de fatigue des sorts de restauration
+      - 3083 # Augmenter la taille de la pile de munitions -> Piles de 120
+      - 3092 # Augmenter la limite d'empilement des gemmes et des bijoux -> Piles de 80
+      - 3102 # Augmenter la limite d'empilement des potions -> Piles de 80
+      - 3111 # Augmenter la limite d'empilement des parchemins -> Piles de 40
+      - 3121 # Patch du bonheur (les PNJs du groupe ne se plaignent pas de la reputation) -> Les PNJs peuvent etre en colere a propos de la reputation mais ne partent jamais (Salk)
+      - 3124 # Empecher le romance entre Aerie et Haer'Dalis des le commencement
+      - 3125 # Rendre heureux les personnages neutres lorsque la reputation est moyenne
+      - 3150 # Retirer l'animation de la Cape de renvoi (la laisser  pour les sorts et effets donnant le meme graphisme)
+      - 3170 # Pas d'avatar Elfe Noir sur le groupe en Ombre-Terre
+      - 3176 # Accelerer/ralentir les romances
+      - 3183 # Triche sur les romances
+      - 3196 # Alterer les interruptions du repos hostiles -> Augmenter la frequence de 50 %
+      - 3200 # Batons, gourdins et frondes vendables (Icelus)
+      - 3205 # Les magasins achetent tous les types d'objets
+      - 3230 # Taerum fabrique une armure d'Ankheg supplementaire (Icendoan/grogerson)
+      - 3264 # Munitions recuperables -> 25% de chance de recuperer apres une attaque reussie, contre les ennemis seulement
+      - 3274 # Armes de jet recuperables -> 25% de chance de recuperer apres une attaque reussie, contre les ennemis seulement
+      - 3280 # Accorder a chaque classe/kit quatre emplacements d'arme
+      - 3290 # Personnaliser le nom des sauvegardes automatiques -> Employer la forme : 000000000-Protagoniste-Nom de sauvegarde
+      - 3300 # Focus camera en cas de mort
+      - 3320 # Pas de depreciation dans les magasins
+      - 3330 # Rendre les membres du groupe moins susceptibles de   mourir de facon permanente
+      - 3340 # Increase party movement speed outside combat -> By 50 percent
+      - 4000 # Ajuster le jet de reputation des PNJs mauvais recrutables
+      - 4020 # PNJs style ToB
+      - 4025 # Permettre de separer les couples de PNJ
+      - 4031 # Caracteristiques coherentes : Edwin -> Valeurs de BG2
+      - 4041 # Caracteristiques coherentes : Jaheira -> Valeurs de BG2
+      - 4050 # Changer l'alignement de Jaheira en "Neutre Bon"
+      - 4061 # Caracteristiques coherentes : Minsc -> Valeurs de BG2
+      - 4071 # Caracteristiques coherentes : Viconia -> Valeurs de BG2
+      - 4100 # Changer l'alignement de Korgan en "Neutre Mauvais"
+      - 4110 # Donner a Kagain une valeur reglementaire de 19 en constitution
+      - 4120 # Donner a Coran une valeur reglementaire de 19 en dexterite
+      - 4130 # Transformer Xan en mage generaliste (Mike1072)
+      - 4150 # Deplacer Bouh dans le sac de Minsc
+      - 4160 # Permettre a Yeslick d'utiliser les haches
+      - 4170 # S'assurer que Shar-Teel ne meurt pas lors du defi originel
     # location defined earlier
   - name: METweaks
     description: Olvyn's Tweaks
