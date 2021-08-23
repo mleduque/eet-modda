@@ -631,7 +631,7 @@ modules:
     location:
       github_user: thisisulb
       repository: DruidGroveMakeover
-      tag: v1.2
+      tag: V1.2
   - name: sleep_fix
     components:
       - 0
