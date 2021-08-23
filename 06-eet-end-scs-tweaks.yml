@@ -18,6 +18,17 @@ modules:
       repository: SwordCoastStratagems
       release: v33.7
       asset: lin-stratagems-33.7.zip
+  - name: jimfix
+    description: Fixes and convenience tweaks aimed at an Ascension + SCS v33 install
+    components:
+      - 300 # Add expiration notifications for buffs
+      - 600 # Add expiration notifications for item buffs
+      - 700 # Make Spell Shield block Wish Breach and Mordenkainen's Disjunction
+    location:
+      github_user: Banananaut
+      repository: Jimfix
+      release: v3.1a
+      asset: jimfix-v3.1a.iemod
   - name: calling # install after stratagems or cdtweaks (even if quest mod)
     description: The calling
     components: ~
