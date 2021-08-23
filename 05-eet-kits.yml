@@ -626,13 +626,15 @@ modules:
       patch:
         relative: scales-config.diff
   - name: DruidGroveMakeover
-    components: ~
+    components:
+      - 0
     location:
       github_user: thisisulb
       repository: DruidGroveMakeover
       tag: v1.2
   - name: sleep_fix
-    components: ~
+    components:
+      - 0
     location:
       github_user: 4Luke4
       repository: Sleep-Fix
