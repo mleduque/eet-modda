@@ -433,10 +433,27 @@ modules:
       branch: master
   - name: klatu
     description: Klatu Tweaks
-    components: ~
+    components:
+      - 1000 # The Gloves of Goodman Hayes
+      - 1020 # Prepared Wishes
+      - 1030 # Romance Cheat: Isra will Romance Neutral Characters
+      - 1050 # Appropriate XP Rewards for Cowled Enforcers
+      - 1090 # RoT: Remove cutscenes from Chateau Irenicus
+      - 2020 # No Item Deprecation
+      - 2030 # Identify all store items
+      - 2040 # Fix Wild Mage Items and Spells
+      - 2050 # Prevent Wish Spells from Interrupting Caster
+      - 2060 # Standardize Poison Immunity
+      - 2070 # Free Action does not prevent Haste or Movement Rate Bonus
+      - 2080 # Drop Equipment on Disintegration
+      - 2090 # Drop Equipment on Petrification
+      - 2100 # Drop Equipment on Imprisonment
+      - 2160 # Remove Delay from Improved Haste Spells
+      - 2200 # Familiars can sort magical scrolls
     location:
-      http: http://www.shsforums.net/files/download/1109-klatu-tweaks-and-fixes/
-      rename: klatu_Tweaks_and_Fixes_1.7.7z
+      github_user: mleduque
+      repository: Klatu_tweaks_and_fixes
+      branch: main
   - name: cdtweaks
     description: Tweaks Anthology - Main batch of tweaks
     components: ~
