@@ -412,10 +412,6 @@ modules:
       github_user: OlvynChuru
       repository: Epic-Thieving
       branch: master
-  - name: item_rev
-    description: Item Revisions
-    components: ~
-      #- 1042 # Revised Armor - Without Movement Speed Penalties
   - name: HouseTweaks
     description: House Rule TweakPack
     components: ~
