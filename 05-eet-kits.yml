@@ -270,7 +270,7 @@ modules:
       #- 82 #Arcanist - conflict with 5E 1.0
       - 85 # Sorcerer Kit: Mana Sorcerer
       #- 93 # Make +Spell Slot Items work with MultiSorcerers and Arcanists
-      - 95 # Ability Score Spellcasting Bonuses (install AFTER any mod that changes spell tables!)
+      #- 95 # Ability Score Spellcasting Bonuses (install AFTER any mod that changes spell tables!) - prefer scalesofbalance
     location:
       github_user: subtledoctor
       repository: TomeAndBlood
@@ -595,19 +595,24 @@ modules:
       repository: Olvyn-Tweaks
       branch: master
   - name: scales_of_balance
-    components: ~ # at least "Ability Score-Based Bonus Spells"
+    components:
+      - 100 # IWO - Yet Another Revised Armor System
+      - 102 # IWO - Functional Weapon Tweaks
+      - 109 # IWO - All Potions Usable by Any Class
+      - 121 # WPO - Weapon Category Collapse
+      - 125 # WPO - APR on Spec
+      - 172 # STO - IWD Spell Evasion -> For Expanded Spell List
+      - 200 # SBO - Stat Bonus Overhaul
+      - 201 # stat-based bonus spells
+      - 204 # SBO - Enable Concentration Checks
+      - 223 # XPO - Choose SoD Starting XP -> 125,000
+      - 228 # XPO - Choose SoA Starting XP -> 240,000
     location:
       github_user: UnearthedArcana
       repository: Scales_of_Balance
       tag: "5.32.5"
-  - name: jimfix
-    description: Fixes and convenience tweaks aimed at an Ascension + SCS v33 install
-    components: ~
-    location:
-      github_user: Banananaut
-      repository: Jimfix
-      release: v3.1a
-      asset: jimfix-v3.1a.iemod
+      patch:
+        relative: scales-config.diff
   - name: DruidGroveMakeover
     components: ~
     location:
