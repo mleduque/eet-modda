@@ -639,7 +639,7 @@ modules:
       github_user: AngelGryph
       repository: MadeInHeaven_EncountersAndQuests
       release: v4
-      asset: ERROR_CONFIG_NOT_READY_lin-mih_eq-v4.tar.gz
+      asset: lin-mih_eq-v4.tar.gz
     add_conf:
       file_name: mih_eq.ini
       content: |
@@ -649,73 +649,92 @@ modules:
         disable_ssl=0
         hitpoint_percentage=100
         use_ee_half_damage=1
+
         [revised_dragons]
         dragon_hp_per_hd=12
+
         [revised_liches]
         lich_spell_level_immunity=3
         lich_powers_save_penalty=6
         demilich_howl_save_penalty=4
         demilich_curse_debuff=12
+
         [revised_lycanthropes]
         lycanthrope_hd_bonus=2
+
         [revised_magical_beasts]
         dread_wolf_disease_duration=2400
         relocate_winter_wolves=1
         wyvern_hd_bonus=4
         wyvern_ac_bonus=2
+
         [revised_monstrous_spiders]
         spider_hd_bonus=3
         spider_ac_bonus=4
+
         [ankheg_pit]
         ankheg_wave_count=10
-        ankheg_wave_interval=ONE_TURN
+        ankheg_wave_interval=TWO_TURNS
+
         [spider_plague]
         spider_wave_count=20
         spider_wave_interval=TWO_TURNS
+
         [sod_enemy_groups]
         sod_group_size=4
+
         [korlasz_tomb]
         korlasz_tomb_level_bonus=5
+
         [zavians_vision_quest]
         spectacle_charges=9
+
         [firkraags_lair]
         firkraag_legendary_rank=scion
         firkraag_minion_count=10
-        firkraag_minion_interval=THREE_ROUNDS
+        firkraag_minion_interval=FIVE_ROUNDS
+
         [underdark]
         kuotoa_level_bonus=6
         deirex_minion_count=10
         deirex_minion_interval=ONE_ROUND
+
         [temple_ruins]
         thaxll_legendary_rank=scion
         thaxll_minion_count=10
-        thaxll_minion_interval=THREE_ROUNDS
+        thaxll_minion_interval=FIVE_ROUNDS
+
         [suldanessenar]
         nizid_legendary_rank=scion
         nizid_minion_count=10
-        nizid_minion_interval=THREE_ROUNDS
+        nizid_minion_interval=FIVE_ROUNDS
+
         [watchers_keep]
         saladrex_legendary_rank=elder
         saladrex_minion_count=10
-        saladrex_minion_interval=THREE_ROUNDS
+        saladrex_minion_interval=FIVE_ROUNDS
         trial_dragon_legendary_rank=elder
         trial_dragon_minion_count=4
-        trial_dragon_minion_interval=THREE_ROUNDS
+        trial_dragon_minion_interval=FIVE_ROUNDS
         orc_horde_count=20
         orc_horde_duration=THREE_TURNS
         orc_horde_level_bonus=10
+
         [pocket_plane]
         sarevok_party_level_bonus=10
+
         [saradush]
         barracks_battle_level_bonus=8
         prison_vampires_legendary_rank=lesser_scion
+
         [forest_of_mir]
         master_wraith_minion_count=10
-        master_wraith_minion_interval=THREE_ROUNDS
+        master_wraith_minion_interval=FIVE_ROUNDS
+
         [yaga-shuras_army]
         yaga_shura_army_level_bonus=3
-        yaga_shura_army_count=20
-        yaga_shura_army_interval=THREE_ROUNDS
+        yaga_shura_army_count=15
+        yaga_shura_army_interval=FIVE_ROUNDS
   - name: Trap_Overhaul
     description: Kjeron's Trap Overhaul
     comment: >
