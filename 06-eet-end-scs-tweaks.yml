@@ -69,3 +69,13 @@ modules:
       repository: Bardic_Appraisal
       release: v2
       asset: bardic-appraisal-v2.iemod
+  - name: DUAL_TO_KIT
+    description: "Kjeron's 'Dual to Kit'"
+    comment: >
+              OP https://forums.beamdog.com/discussion/comment/985679#Comment_985679
+              original DL https://us.v-cdn.net/5019558/uploads/editor/m1/4sxyexv1ptj0.zip
+    components: ~
+    location:
+      github_user: mleduque
+      repository: kjeron_DUAL_TO_KIT
+      branch: master
