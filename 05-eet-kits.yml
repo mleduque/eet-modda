@@ -402,7 +402,12 @@ modules:
       branch: unusability-output
     ignore_warnings: true
   - name: EpicThieving
-    components: ~
+    components:
+      - 0   # Epic Locks
+      - 100 # Epic Traps
+      - 200 # Epic Trap Setting
+      - 300 # Epic Pickpocketing
+      - 400 # Epic Detect Illusions
     location:
       github_user: OlvynChuru
       repository: Epic-Thieving
