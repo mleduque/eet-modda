@@ -225,9 +225,10 @@ modules:
       - 2280 # Alterer la table de progression des sorts du clerc -> Table debridee (Blucher)
       - 2293 # Alterer les tables de progression des sorts et de niveaux du druide -> Utiliser la table de progression des clercs et la table debridee des sorts des druides (Blucher)
     location:
-      github_user: mleduque
+      github_user: Gibberlings3
       repository: Tweaks-Anthology
-      branch: eet-run-1
+      release: v9
+      asset: lin-cdtweaks-v9.zip
   - name: song_and_silence
     components:
       - 0  # Changements concernant les bardes et voleurs purs, ainsi que les kits originaux du jeu (necessaire pour les autres composants)
