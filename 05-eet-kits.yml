@@ -229,6 +229,18 @@ modules:
       repository: Tweaks-Anthology
       release: v9
       asset: lin-cdtweaks-v9.zip
+      add_conf:
+        file_name: cdtweaks.txt
+        content: |
+          OUTER_SET romance_speed_use_config_values = 1
+          OUTER_SET romance_speed_factor = 40
+
+          OUTER_SET romance_use_config_values = 1
+          OUTER_SET remove_romance_racial_requirements = 1
+          OUTER_SET remove_romance_gender_requirements = 0
+          OUTER_SET romance_multiple = 1
+          OUTER_SET romance_nothing_kills = 0
+          OUTER_SET romance_starts_in_ToB = 1
   - name: song_and_silence
     components:
       - 0  # Changements concernant les bardes et voleurs purs, ainsi que les kits originaux du jeu (necessaire pour les autres composants)
