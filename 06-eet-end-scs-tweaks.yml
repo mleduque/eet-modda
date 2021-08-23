@@ -56,4 +56,5 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Bardic_Appraisal
-      commit: 9e66c38
+      release: v2
+      asset: bardic-appraisal-v2.iemod
