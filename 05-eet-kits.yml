@@ -323,6 +323,8 @@ modules:
       github_user: UnearthedArcana
       repository: 5E_spellcasting
       tag: "1.0" #
+      patch:
+        relative: 5e-config.diff
   - name: might_and_guile
     description: Might And Guile - Main component (warns)
     components:
