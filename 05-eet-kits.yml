@@ -414,7 +414,19 @@ modules:
       branch: master
   - name: HouseTweaks
     description: House Rule TweakPack
-    components: ~
+    components:
+      - 0  # House Tweaks: Expanded Racial Enemies
+      - 1  # House Tweaks: Expanded Shapeshifting
+      - 2  # House Tweaks: Expanded Racial Bonuses
+      - 3  # House Tweaks: Rebalanced Weapon Styles
+      - 4  # House Tweaks: Monk Can Use Quarterstaves
+      - 5  # House Tweaks: Increased Constitution Bonuses
+      - 6  # House Tweaks: Warrior HLAs
+      - 7  # House Tweaks: Improved Dialogues (BG:EE)
+      - 8  # House Tweaks: Not-So-Indestructible Rats
+      - 9  # House Tweaks: Good-Aligned Roleplay Rewards (BG2:EE)
+      - 10 # House Tweaks: Cloak of Dragomir only decreases stats in daylight
+      - 13 # House Tweaks: Faster Troll Unconsciousness
     location:
       github_user: ArtemiusI
       repository: House-Rule-Tweaks
