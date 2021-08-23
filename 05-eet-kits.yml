@@ -388,7 +388,11 @@ modules:
       patch:
         relative: refinements-restore-thief-uai.diff
   - name: FnP_Multiclass
-    components: ~
+    components:
+      - 91 # Multiclass Druids
+      - 92 # Multiclass Shamans
+      - 95 # Multiclass Cleric kits (install AFTER all other kit mods
+    ignore_warning: true # apparently intentional
     # location see Faiths_and_Powers
   - name: m7multikit
     components: ~
