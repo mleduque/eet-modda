@@ -936,9 +936,6 @@ modules:
   - name: Charlatan
     components:
       - 1 # Eldoth, the charlatan  - name: S9BGEENPCTweaks
-  - name: BG1NPCSoA # only npc kits
-    description: BG1NPCSoA - delayed change NPC kits components
-    components: ~
   - name: npc_ee
     components: ~
     # can configure any npc so no need for individual mods per npc?
