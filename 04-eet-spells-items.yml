@@ -42,15 +42,19 @@ modules:
       repository: iwdification
       branch: fix-french-tra
   - name: A7-TotLM-BG2EE
+    description: Trial of the Luremaster - Main component (warns)
     components:
       - 0  # Trials of the Luremaster for Baldur's Gate
-      - 31 # Reduce by 50 percent [XP]
+    ignore_warnings: true
     location:
       github_user: Argent77
       repository: A7-TotLM-BG2EE
-      branch: devel
-      patch:
-        relative: a7-totlm-unbreak_shield.diff
+      release: v3.0
+      asset: A7-TotLM-BG2EE-v3.0.iemod
+  - name: A7-TotLM-BG2EE
+    description: Trial of the Luremaster - XP reduction
+    components:
+      - 30 # Reduire les points d'experience des monstres et des quetes. -> Reduction de 25 pour cent
   - name: item_rev # component 0: "Any modifications made to items prior to installing this component will be overwritten"
     description: Item Revision (main compoennt)
     components:
