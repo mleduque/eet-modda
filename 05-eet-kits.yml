@@ -632,14 +632,14 @@ modules:
       github_user: thisisulb
       repository: DruidGroveMakeover
       tag: V1.2
-  - name: sleep_fix
-    components:
-      - 0
-    location:
-      github_user: 4Luke4
-      repository: Sleep-Fix
-      release:  v0.1-beta
-      asset: sleep-fix-v0.1.iemod
+  #- name: sleep_fix
+  #  components:
+  #    - 0
+  #  location:
+  #    github_user: 4Luke4
+  #    repository: Sleep-Fix
+  #    release:  v0.1-beta
+  #    asset: sleep-fix-v0.1.iemod
   - name: EET_Tweaks
     components: ~
     location:
