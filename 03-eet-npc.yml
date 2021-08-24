@@ -394,6 +394,7 @@ modules:
       - 25 # Alora (SoA & ToB)
       - 35 # Kagain's Corner (SoA & ToB) -> Store with Vanilla Items Only
       - 40 # Faldorn's New Leaf (SoA & ToB)
+      - 83 # Garrick skald
       - 87 # Inter Component Banter Pack
     location:
       github_user: mleduque
