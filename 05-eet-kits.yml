@@ -663,7 +663,42 @@ modules:
       tag: v1.12
   - name: mih_eq
     description: Made In Heaven Encounters and Quests
-    components: ~
+    components:
+      - 0  # Revised Corporal Undead
+      - 1  # Revised Dragons
+      - 4  # Revised Lycanthropes
+      - 5  # Revised Magical Beasts
+      - 6  # Revised Monstrous Spiders
+      - 7  # Revised Oozes, Slimes & Jellies
+      - 10 # Enhanced Battles: Candlekeep Catacombs
+      - 11 # Enhanced Battles: Mutamin's Garden
+      - 12 # Enhanced Battles: Ramazith's Tower
+      - 13 # Enhanced Battles: The Spider Plague
+      - 14 # Enhanced Battles: Thieves' Maze & Undercity
+      - 15 # Enhanced Battles: Ulcaster Ruins
+      - 16 # Enhanced Battles: Xvart Village
+      - 17 # Enhanced Battles: Zombie Farm
+      - 18 # Enhanced Battles: Durlag's Tower
+      - 19 # The Surgeon's Plight
+      - 20 # Sarevok's Assassins
+      - 22 # Minor Quest Tweaks (BG1)
+      - 23 # Enhanced Battles: Bridgefort
+      - 24 # Enhanced Battles: Cyric's Temple
+      - 26 # Enhanced Battles: Korlasz' Tomb
+      - 27 # Enhanced Battles: Vampire Encounters
+      - 28 # Complete more/all Vision Quest encounters
+      - 30 # Enhanced Battles: Athkatla Liches
+      - 31 # Enhanced Battles: Firkraag's Lair
+      - 32 # Enhanced Battles: Graveyard Catacombs
+      - 33 # Enhanced Battles: Lower Reaches
+      - 34 # Enhanced Battles: Slum Sewers
+      - 36 # Enhanced Battles: Suldanessenar
+      - 38 # Enhanced Battles: Trademeet
+      - 41 # Enhanced Battles: Forest of Mir
+      - 42 # Enhanced Battles: Pocket Plane
+      - 43 # Enhanced Battles: Saradush
+      - 44 # Enhanced Battles: Sendai's Enclave
+      - 47 # Minor Quest Tweaks (ToB)
     location:
       github_user: AngelGryph
       repository: MadeInHeaven_EncountersAndQuests
