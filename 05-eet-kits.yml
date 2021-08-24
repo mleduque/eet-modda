@@ -641,7 +641,22 @@ modules:
   #    release:  v0.1-beta
   #    asset: sleep-fix-v0.1.iemod
   - name: EET_Tweaks
-    components: ~
+    components:
+      - 1001 # Edwin appearance -> BG2
+      - 1011 # Imoen appearance -> BG2
+      - 1021 # Jaheira appearance -> BG2
+      - 1031 # Minsc appearance -> BG2
+      - 1041 # Viconia appearance -> BG2
+      - 1050 # Cameo NPCs appearance
+      - 2002 # Total XP CAP -> Disabled
+      - 2042 # XP for Traps, Spells and Lockpicking -> Vanilla friendly progressive
+      - 3000 # Disable hostile reaction after charm
+      - 3010 # PnP spell scroll caster levels
+      - 3022 # Familiar death consequences -> Disabled
+      - 4040 # Import party items to SoA
+      - 4050 # Books/Scrolls categorization
+      - 4060 # Wand Case
+      - 4070 # Key Ring
     location:
       github_user: K4thos
       repository: EET_Tweaks
