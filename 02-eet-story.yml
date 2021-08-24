@@ -629,3 +629,19 @@ modules:
       layout:
         layout_type: single_dir_plus_tp2
         tp2: Setup-TGC1E.tp2
+  - name: ExtraExpandedEnhancedEncounters
+    components:
+      - 0 # EEEE: Melia Quicknight, Crossroads
+      - 1 # EEEE: Bimmy's Badgering Bandits
+      - 2 # EEEE: Reinforced Gnoll Stronghold
+      - 3 # EEEE: Bear Encounter near the Gnoll Stronghold
+      - 4 # EEEE: Xan's New Grove (new items in Mulahey's cave)
+      - 5 # EEEE: Daenni's Bridge Bandits
+      - 6 # EEEE: The Fire Drake in the Wyvern Cave
+      - 7 # EEEE: Undercity Magma Bulwark Encounter; Red Skeleton-(U.M.B.E.R.S.)
+    location:
+      github_user: GraionDilach
+      repository: ExtraExpandedEnhancedEncounters
+      release: "2.0"
+      asset: extra-enhanced-expanded-encounters-2.0.iemod
+
