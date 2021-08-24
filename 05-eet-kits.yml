@@ -842,41 +842,91 @@ modules:
       repository: Portraits-Portraits-Everywhere
       branch: npc-fixes
   - name: thepicturestandard
-    components: ~
+    components:
+      - 1500 # Main -> Lore Alternative
+      - 2000 # Followers -> Vanilla
+      - 3500 # BG1NPC -> Lore Alternative
+      - 4500 # Dark Horizons -> Lore Alternative
+      - 5500 # Drizzt Saga -> Lore Alternative
+      - 6500 # Dark Side of the Sword Coast -> Lore Alternative
+      - 7000 # Eilistraee's Song -> Vanilla
+      - 8000 # Innershade -> Vanilla
+      - 9000 # I Shall Never Forget -> Vanilla
+      - 10500 # Rogue Rebalancing -> Lore Alternative
+      - 11500 # Sellswords -> Lore Alternative
+      - 12000 # Tales Of The Deep Gardens -> Vanilla
+      - 14000 # Finch -> Vanilla
+      - 15000 # Gavin -> Vanilla
+      - 16000 # Indira
+      - 17000 # Isra
+      - 18000 # Valerie
+      - 19000 # The White Queen -> Vanilla
+      - 20000 # The Darkest Day -> Vanilla
+      - 21000 # Tower of Deception
+      - 22000 # Siege of Dragonspear -> Vanilla
+      - 80300 # Standardized Edwin -> BG2 Edwin
+      - 81100 # Standardized Iomen -> BG2 Iomen
+      - 82300 # Standardized Jaheira -> BG2 Jaheira
+      - 83500 # Standardized Minsc -> BG2 Minsc
+      - 84100 # Standardized Viconia -> BG2 Viconia
     location:
       github_user: mleduque
       repository: thepicturestandard
       branch: master
   - name: A7-ConvenientEENPCs
     description: Convenient Enhanced Edition NPCs
-    components: ~
+    components:
+      - 3   # Modifier les NPJ des Editions Ameliorees -> Decider pour chaque PNJ
+      - 201 # Modification selective : Baeloth -> Rendre Baeloth passif
+      - 203 # Modification selective : Hexxat -> Rendre Hexxat passive
+      - 205 # Modification selective : Rasaad -> Rendre Rasaad passif
+      - 410 # Changer le portrait de Dorn -> Graphisme de BG2
+      - 430 # Changer le portrait de Neera -> Graphisme de BG2
+      - 440 # Changer le portrait de Rasaad -> Graphisme de BG2
+      - 450 # Portrait ameliore pour Wilson
+      - 542 # Modifier la classe et le profil de Neera -> Ensorceleur du Chaos
     location:
       github_user: Argent77
       repository: A7-NoEENPCs
       release: v4.3
       asset: A7-ConvenientEENPCs-v4.3.iemod
-  - name: cdportraits
-    description: Continuous NPC Portraits
-    components: ~
-    location:
-      github_user: Gibberlings3
-      repository: Continuous_NPC_Portraits
-      release: v1
-      asset: lin-cdportraits-v1.tar.gz
+  # already done multiple time now :D
+  #- name: cdportraits
+  #  description: Continuous NPC Portraits
+  #  components: ~
+  #  location:
+  #    github_user: Gibberlings3
+  #    repository: Continuous_NPC_Portraits
+  #    release: v1
+  #    asset: lin-cdportraits-v1.tar.gz
   - name: S9BGEENPCTweaks
     description: S9 BGEENPC Tweaks for BGEE / SOD / BG2EE / EET
     comment: >
       OP https://forums.beamdog.com/discussion/58941/mod-bgeenpc-tweaks-for-bgee-sod-bg2ee-eet
       original download https://us.v-cdn.net/5019558/uploads/editor/sd/k7icmh3du8p3.zip
-    components: ~ # only convenience and abilities parts, not class, covered by NPC_EE
+    components:
+      - 30 # Convenient NPCs
+      - 42 # Make Dynaheir a Sorcerer
+      - 44 # Make Faldorn an Avenger
+      - 45 # Make Garrick a Skald
+      - 48 # Make Kivan an Archer
+      - 49 # Make Safana a Swashbuckler
+      - 50 # Shar-Teel's Class -> Make Shar-Teel a Berserker
+      - 52 # Make Skie a Shadowdancer
+      - 60 # Dual Class Friendly Stats for Branwen, Dynaheir, Safana and Xzar
     location:
       github_user: mleduque
       repository: s9-S9BGEENPCTWEAKS
       branch: master
   - name : RelieveWizardSlayer
     components:
+      - 0 # Relieve Wizard Slayer
       - 1 # Valygar, the Wizard Slayer
-  - name: MilitiaOfficier
+    location:
+      github_user: Raduziel
+      repository: Relieve-Wizard-Slayer
+      tag: "1.7"
+  - name: MilitiaOfficer
     components:
       - 1 # Khalid, the milita officer
   - name: Mercenary
