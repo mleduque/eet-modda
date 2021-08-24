@@ -97,14 +97,15 @@ modules:
       repository: Grey_The_Dog
       release: v6
       asset: grey-the-dog-npc-6.iemod
-  - name: GlamNPCPack
-    version: 3.1
-    components: [0]
-    location:
-      github_user: Gibberlings3
-      repository: Glam-NPC-Pack
-      release: v1
-      asset: lin-GlamNPCPack-v1.zip
+  # issues with EET_end
+  #- name: GlamNPCPack
+  #  version: 3.1
+  #  components: [0]
+  #  location:
+  #    github_user: Gibberlings3
+  #    repository: Glam-NPC-Pack
+  #    release: v1
+  #    asset: lin-GlamNPCPack-v1.zip
   - name: XanBG1Friend
     components: [0]
     location:
