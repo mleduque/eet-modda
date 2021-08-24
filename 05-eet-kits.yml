@@ -824,11 +824,23 @@ modules:
   #    branch: master
   - name: PPE
     description: Portraits, Portraits Everywhere
-    components: ~
+    components:
+      - 0   # Portraits Portraits Everywhere (PPE) - Composant principal
+      - 100 # Categorie de portraits (Recommande) -> Sequenced
+      - 10  # Utiliser les portraits d'Isandir pour le CHARNAME
+      - 20  # Replacer les portraits en basse qualite de TOB & SOA
+      - 302 # Change Imoen portraits -> BG2 Portrait
+      - 312 # Change Viconia portraits -> BG2 Portrait
+      - 322 # Change Jaheira portraits -> BG2 Portrait
+      - 332 # Change Minsc portraits -> BG2 Portrait
+      - 342 # Change Edwin portraits -> BG2 Portrait
+      - 30  # Ust Natha Drow NPCs
+      - 40  # Vampire NPCs
     location:
-      github_user: DaftHunk # canonical:smeagolheart
+      #github_user: DaftHunk # canonical:smeagolheart
+      github_user: mleduque
       repository: Portraits-Portraits-Everywhere
-      branch: master
+      branch: npc-fixes
   - name: thepicturestandard
     components: ~
     location:
