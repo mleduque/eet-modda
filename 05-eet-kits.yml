@@ -810,17 +810,18 @@ modules:
       github_user: mleduque
       repository: kjeron_Trap_Overhaul
       branch: master
-  - name: enchant
-    description: "Dee's 'Enchant the Missile Launchers: A Small Ranged Weapon Tweak'"
-    comment: >
-              OP https://forums.beamdog.com/discussion/58374/enchant-the-missile-launchers-ranged-weapon-tweak
-              original DL https://us.v-cdn.net/5019558/uploads/editor/hc/n0q8dnnbhnsc.zip
-    components:
-      - 0  # Enchant the Missile Launchers
-    location:
-      github_user: mleduque
-      repository: kjeron_Trap_Overhaul
-      branch: master
+  # should be included in item_rev "weapon changes"
+  #- name: enchant
+  #  description: "Dee's 'Enchant the Missile Launchers: A Small Ranged Weapon Tweak'"
+  #  comment: >
+  #            OP https://forums.beamdog.com/discussion/58374/enchant-the-missile-launchers-ranged-weapon-tweak
+  #            original DL https://us.v-cdn.net/5019558/uploads/editor/hc/n0q8dnnbhnsc.zip
+  #  components:
+  #    - 0  # Enchant the Missile Launchers
+  #  location:
+  #    github_user: mleduque
+  #    repository: kjeron_Trap_Overhaul
+  #    branch: master
   - name: PPE
     description: Portraits, Portraits Everywhere
     components: ~
