@@ -279,14 +279,14 @@ modules:
       - 66 # Innate Find Familiar
       #- 67 # Choose-Your-Own Familiar - CRASH on use
       - 80 # Multiclass Sorcerers
-      #- 82 #Arcanist - conflict with 5E 1.0
+      - 82 # Arcanist
       - 85 # Sorcerer Kit: Mana Sorcerer
       #- 93 # Make +Spell Slot Items work with MultiSorcerers and Arcanists
       #- 95 # Ability Score Spellcasting Bonuses (install AFTER any mod that changes spell tables!) - prefer scalesofbalance
     location:
       github_user: subtledoctor
       repository: TomeAndBlood
-      tag: "0.9.15"
+      tag: "0.9.16"
   - name: A7#ImprovedShamanicDance
     components:
       - 0  # Danse shamanique amelioree
@@ -319,7 +319,7 @@ modules:
     location:
       github_user: subtledoctor
       repository: Faiths_and_Powers
-      tag: 79sd28
+      tag: 79sd29
       layout:
           layout_type: multi_dir
           dirs:
@@ -334,7 +334,7 @@ modules:
     location:
       github_user: UnearthedArcana
       repository: 5E_spellcasting
-      tag: "1.0" #
+      tag: "1.0.1"
       patch:
         relative: spellcasting-5e-config.diff
   - name: might_and_guile
@@ -345,7 +345,7 @@ modules:
     location:
       github_user: UnearthedArcana
       repository: Might_and_Guile
-      tag: "4.12.5"
+      tag: "4.12.6"
   - name: might_and_guile
     description: Might And Guile - Other components
     components:
@@ -622,7 +622,7 @@ modules:
     location:
       github_user: UnearthedArcana
       repository: Scales_of_Balance
-      tag: "5.32.5"
+      tag: "5.32.6"
       patch:
         relative: scales-config.diff
   - name: DruidGroveMakeover
