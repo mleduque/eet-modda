@@ -12,12 +12,199 @@ modules:
       tag: v13.4
   - name: stratagems
     description: Sword Coast Stratagems
-    components: ~
+    interrupt: true # not complete
+    components:
+      #3505 // Plus vaste selection de parchemins aleatoires: 33.7
+      #3580 // Les sorts de Restauration majeure et de Restitution mineure restaurent egalement les absorptions de capacites: 33.7
+      #4000 // Ours plus rapides: 33.7
+      #4030 // Metamorphose amelioree: 33.7
+      #4050 // Reduit la vitesse a laquelle la reputation augmente -> La reputation augmente au 2/3 de sa vitesse normale: 33.7
+      #4115 // Les roublards attribuent leurs points de competence par multiples de cinq: 33.7
+      #4145 // Passe les sections tutoriel de Chateau-Suif -> Retire les PNJ tutoriel de Chateau-Suif: 33.7
+      #4150 // Permettre aux Mages Cagoules de deceler le lancement de sorts a l'interieur, dans les zones au niveau du sol, a Athkatla: 33.7
+      #4164 // Augmenter le prix de la licence pour pratiquer la magie a Athkatla -> La licence coute 50.000 po: 33.7
+      #4173 // Augmenter le prix demande par Gaelan Bayle -> Gaelan veut 100.000 pieces d'or: 33.7
+      #4215 // Retirer les objets exagerement opportuns de certaines regions: 33.7
+      #5000 // IA du groupe plus simple: 33.7
+      #5080 // Amelioration des cinematiques de chapitre de l'extension Tales of the Sword Coast: 33.7
+      #5900 // Initialise les composants de l'IA (requis pour les composants tactiques et d'IA): 33.7
+      #6000 // IA generale plus efficace: 33.7
+      #6010 // Meilleurs appels a l'aide: 33.7
+      #6030 // Mages plus intelligents: 33.7
+      #6040 // Pretres plus intelligents: 33.7
+      #6100 // Potions pour PNJ: 33.7
+      #6200 // Araignees ameliorees: 33.7
+      #6300 // Sirenes et dryades plus intelligentes: 33.7
+      #6310 // Vers charognards legerement plus intelligents: 33.7
+      #6320 // Basilics plus intelligents: 33.7
+      #6500 // Golems ameliores: 33.7
+      #6510 // Demons et celestes ameliores: 33.7
+      #6520 // Genies plus intelligents: 33.7
+      #6540 // Dragons plus intelligents: 33.7
+      #6550 // Spectateurs plus intelligents: 33.7
+      #6560 // Flagelleurs mentaux plus intelligents: 33.7
+      #6570 // Githyankis plus intelligents: 33.7
+      #6580 // Vampires ameliores: 33.7
+      #6590 // Boss de fin de ToB plus intelligent: 33.7
+      #6800 // Illasera plus intelligente: 33.7
+      #6810 // Gromnir plus intelligent: 33.7
+      #6820 // Yaga-Shura plus intelligent: 33.7
+      #6830 // Abazigal plus intelligent: 33.7
+      #6840 // Les versions Ascension de Irenicus et Sendai utilisent les capacites et l'IA de SCS: 33.7
+      #6850 // Donner aux demons les scripts et capacites d'Ascension: 33.7
+      #7000 // Dopplegangers ameliores: 33.7
+      #7010 // Gardes des Griffes Noires et du Trone de Fer plus coriaces: 33.7
+      #7020 // Deploiements des groupes d'assassins ameliores: 33.7
+      #7030 // Kobolds ameliores: 33.7
+      #7040 // Chasseurs de primes deplaces: 33.7
+      #7050 // Ulcaster ameliore: 33.7
+      #7060 // Ile de Balduran amelioree: 33.7
+      #7070 // Tour de Durlag amelioree: 33.7
+      #7090 // Druides de Bois-Manteau ameliores: 33.7
+      #7110 // Groupe de Drasus ameliore: 33.7
+      #7130 // Mages Rouges ameliores: 33.7
+      #7140 // Assassins d'Ombre-ville ameliore: 33.7
+      #7200 // Combat de fin du chapitre deux plus difficile: 33.7
+      #7210 // Combat de fin du chapitre trois plus difficile: 33.7
+      #7220 // Combat de fin du chapitre quatre plus difficile: 33.7
+      #7230 // Combat de fin du chapitre cinq plus difficile: 33.7
+      #7250 // Combat final ameliore: 33.7
+      #7900 // Rencontres mineures ameliorees: 33.7
+      #8000 // Rendre le debut du donjon d'Irenicus legerement plus difficile: 33.7
+      #8020 // Les demi-liches lancent des sortileges: 33.7
+      #8040 // Ajuster la difficulte des regroupements de monstres en fonction du curseur de difficulte: 33.7
+      #8050 // Rencontres aleatoires ameliorees: 33.7
+      #8060 // Chateau de'Arnise ameliore (inspire du mod Tactics): 33.7
+      #8070 // Oeil aveugle ameliore: 33.7
+      #8080 // Bodhi amelioree: 33.7
+      #8085 // La version Ascension de Bodhi utilise les capacites ameliorees de Bodhi: 33.7
+      #8090 // Les objets des membres du groupe leur sont enleves a Spellhold: 33.7
+      #8100 // Combat contre Irenicus a l'Asile ameliore: 33.7
+      #8110 // Sahuagins ameliores: 33.7
+      #8120 // Antre des spectateurs amelioree: 33.7
+      #8130 // Reequilibrage de la regeneration des trolls: 33.7
+      #8140 // Drows ameliores: 33.7
+      #8150 // Tour de Garde amelioree: 33.7
+      #8160 // Temple des geants de feu ameliore: 33.7
+      #8170 // Enclave de Sendai amelioree: 33.7
+      #8190 // Rencontres mineures ameliorees: 33.7
     location:
       github_user: Gibberlings3
       repository: SwordCoastStratagems
       release: v33.7
       asset: lin-stratagems-33.7.zip
+    add_conf:
+      file_name: stratagems.ini
+      content: | # no change ATM
+        [Spell system changes]
+
+        no_initial_change_modify_breach = 0
+        no_initial_change_web_and_the_large = 0
+        no_initial_change_elemental_area_immunity = 0
+        no_initial_change_fiend_summoning = 0
+        no_initial_change_bonus_spell_scrolls = 0
+        no_initial_change_freedom_scrolls = 0
+
+        no_initial_change_nerf_greater_restoration = 0
+        no_initial_change_pro_normal_missiles = 0
+        no_initial_change_spellstrike_vs_pm_scroll = 0
+        no_initial_change_antimagic_penetrates_ii = 0
+        no_initial_change_blade_barrier = 0
+        no_initial_change_npc_symbols = 0
+        no_initial_change_power_word_blind = 0
+        no_initial_change_meteors = 0
+        no_initial_change_insect_plague = 0
+        no_initial_change_elemental_summoning = 0
+        no_initial_change_harm = 0
+        no_initial_change_spell_immunity = 0
+        no_initial_change_universal_trigger = 0
+        no_initial_change_truesight_blindness = 0
+        no_initial_change_mantle = 0
+        no_initial_change_skull_trap = 0
+        no_initial_change_clone_slots = 0
+
+        no_initial_change_sanctity_of_mind = 0
+        no_initial_change_rebalance_lathander = 0
+        no_initial_change_circle_of_bones_duration = 0
+        no_initial_change_enhance_thorn_spray = 0
+        no_initial_change_entropy_shield_abjuration = 0
+        no_initial_change_nerf_beetles = 0
+
+        no_initial_change_acid_storm_tonedown = 0
+        no_initial_change_rebalance_force_missiles = 0
+        no_initial_change_create_boneguard = 0
+
+        no_initial_change_ironskins = 0
+        no_initial_change_npc_fiend_summoning_backup = 0
+        no_initial_change_extra_healing=0
+
+        [nerfed and moved items]
+
+        no_item_nerf_balduran_shield=1
+        no_item_nerf_magi_staff=0
+        no_item_nerf_mirror_cloak = 0
+        no_item_nerf_carsomyr = 0
+        no_item_nerf_resurrection_rod = 0
+        no_item_nerf_vhailor_helm = 0
+        no_item_nerf_vecna = 0
+        no_initial_change_elemental_arrows = 0
+
+        [component tweaks]
+
+        mage_level_add = 0
+        mage_level_scale = 100
+        priest_level_add = 0
+        priest_level_scale = 100
+        no_deployment_change = 0
+        no_cursed_golem_wounds = 0
+        bypass_dragon_immunity_changes = 0
+        spellhold_easycore = 0
+        fiend_staying_power=150
+        dragon_staying_power = 300
+        genie_staying_power =150
+        Sendai_Component_Is_Sendai_Only = 0
+        force_old_assassin_spawn = 0
+        no_spirit_troll_magic = 0
+        no_swift_shapeshift = 0
+        potion_version=6
+        dispel_arrow_maximum=5
+        do_not_lose_soul=0
+        keep_cause_wounds_alignment_restrictions = 0
+        troll_regen_multiplication=2
+        troll_regen_addition=0
+        ulgoths_beard_textscreen=1
+        respace_seavoyage_textscreen=1
+        teleport_maze_number=0
+        hitpoint_percentage=0
+
+        [hotkeys]
+        hot_key_A=A
+        hot_key_B=B
+        hot_key_C=C
+        hot_key_D=D
+        hot_key_E=E
+        hot_key_F=F
+        hot_key_K=K
+        hot_key_S=S
+        hot_key_V=V
+
+        [other]
+
+        AI_Does_Not_Detect_Items = 0
+        AI_Is_Omniscient = 0
+        Do_Not_Fix_Save_Errors = 0
+        Do_Not_Fix_Thac0_Errors = 0
+        Genai_Does_Not_Adjust_Kits = 0
+        Genai_Does_Not_Adjust_Levels = 0
+        Genai_Does_Not_Adjust_Profs = 0
+        Conceal_Prebuff_Spell_Names = 0
+        Force_No_HLA_Repeats = 0
+        thac0_tolerance=6
+        library_override = none
+        disable_easter_eggs = 0
+        enable_difficulty_based_damage_changes = 0
+        difficulty_icon = v6
+        Force_Difficulty_Widget = 0
   - name: jimfix
     description: Fixes and convenience tweaks aimed at an Ascension + SCS v33 install
     components:
