@@ -12,7 +12,6 @@ modules:
       tag: v13.4
   - name: stratagems
     description: Sword Coast Stratagems
-    interrupt: true # not complete
     components:
       #3505 // Plus vaste selection de parchemins aleatoires: 33.7
       #3580 // Les sorts de Restauration majeure et de Restitution mineure restaurent egalement les absorptions de capacites: 33.7
@@ -216,22 +215,84 @@ modules:
       repository: Jimfix
       release: v3.1a
       asset: jimfix-v3.1a.iemod
-  - name: calling # install after stratagems or cdtweaks (even if quest mod)
+  - name: thecalling # install after stratagems or cdtweaks (even if quest mod)
     description: The calling
-    components: ~
+    components:
+      - 20
     location:
       github_user: Gibberlings3
       repository: The_Calling
       branch: master
   - name: atweaks
-    components: ~
+    components:
+      - 100 # Restaurer l'infravision innee des personnages demi-orques
+      - 101 # Empecher les morts-vivants squelettiques et desincarnes d'etre affectes par les attaques illithids devorant le cerveau
+      - 115 # Autoriser les mages a retranscrire des sorts memorises sur des parchemins -> Les parchemins peuvent etre retranscrits partout depuis le livre de sorts
+      - 120 # Retablir l'immunite naturelle des paladins aux maladies
+      - 125 # L'Empathie animale des rodeurs s'ameliore avec l'experience
+      - 130 # Caracteristiques raciales supplementaires pour les nains
+      - 140 # Caracteristiques raciales supplementaires pour les gnomes
+      - 180 # Mephites version papier
+      - 185 # Creatures feeriques version papier
+      - 186 # Sort Appel des creatures des bois revise
+      - 190 # Elementaires version papier
+      - 191 # Augmenter le nombre de DV des princes elementaires
+      - 200 # Permettre a Breche de dissiper les effets de Peau de Pierre conferes par des objets
+      - 201 # Incantation immediate pour les capacites innees du guerrier
+      - 202 # Pouvoirs de Bhaal revises -> Ameliorer les pouvoirs de Bhaal et standardiser leur temps d'incantation
+      - 218 # Recuperer les pouvoirs de Bhaal dans ToB
+      - 203 # Rendre la metamorphose druidique impossible a interrompre
+      - 210 # Restaurer la vulnerabilite a la Dissipation de la Magie des Nishruu et Hakeashar
+      - 212 # Rendre les sorts de detection des alignements plus precis
+      - 213 # Tables des bonus aux jets de sauvegardes etendus pour les nains, les gnomes et les halfelins
+      - 270 # Recompenses de quetes impartiales
+      - 220 # Script simple du voleur
+      - 230 # Script simple du Barde (chante Chant du Barde quand inactif)
+      - 239 # Script simple pour clerc/paladin
+      - 300 # Utiliser l'animation de Porte Dimensionnelle issue d'Icewind Dale -> Rythme d'animation eleve (equivalent a IWD)
+      - 301 # Changer l'apparence de l'armure de Valygar
+      - 302 # Changer l'apparence de la Robe de Vecna
+      - 310 # Coloration distinctive des creatures
+      - 315 # Jeux de sons de crÃ©atures distincts
+      - 500 # Capacite de stockage des contenants legerement etendue -> Utiliser la capacite de stockage recommandee (999)
+      - 510 # Services etendus des temples
+      - 999 # Icones du style de BG2 pour le contenu d'aTweaks
     location:
       github_user: CamDawg # canonical version: FredrikLindgren/aTweaks
       repository: aTweaks
       branch: master
   - name: tnt
     description: Tweaks and Tricks mod for Baldur's Gate 2
-    components: ~
+    components:
+      - 0  # Smarter familiars
+      - 1  # More resilient familiars
+      - 2  # Improved trap detection: instant detection
+      - 3  # Improved trap detection: increase trap sense range
+      - 5  # Trap reminders -> generic
+      - 6  # Trap intuition -> not in combat
+      - 9  # Trap intuition: pause game -> all traps
+      - 11 # Trap intuition: center screen -> on the character
+      - 13 # Trap intuition: play "trap found" sound
+      - 14 # Improved trap detection: core (REQUIRED for any of previous traps components to work
+      - 24 # Hassle-free ammo
+      - 27 # Throwing weapons damage type -> Both of the above options
+      - 29 # Sensible Cloak of Mirroring
+      - 33 # Potion of Really Mirrored Eyes
+      - 34 # Unlimited goodberries stacking
+      - 35 # Improved Shandalar's cloak
+      - 37 # Improved Equalizer
+      - 38 # Distinct color for Perdue's sword
+      - 39 # Working protection from poison
+      - 41 # Spider form ignores web
+      - 44 # Cheesy Slayer: reputation -> reduced loss
+      - 46 # Sensible Otiluke's Resilient Sphere
+      - 47 # Greater Command AoE
+      - 48 # Working Non-Detection
+      - 52 # Sensible Blade spins
+      - 65 # Improved strongholds
+      - 67 # More map notes
+      - 69 # Mod romance cheats
+      - 74 # Starting bags -> Starting bags
     location:
       github_user: BGforgeNet
       repository: bg2-tweaks-and-tricks
@@ -242,13 +303,13 @@ modules:
     location:
       github_user: mleduque
       repository: ie-mods-35
-      branch: master
+      branch: main
   - name: PathfinderHitDice
     components: [0]
     location:
       github_user: mleduque
       repository: ie-mods-35
-      branch: master
+      branch: main
   - name: cd_appraiser
     components: [ 0 ]
     location:
@@ -261,7 +322,10 @@ modules:
     comment: >
               OP https://forums.beamdog.com/discussion/comment/985679#Comment_985679
               original DL https://us.v-cdn.net/5019558/uploads/editor/m1/4sxyexv1ptj0.zip
-    components: ~
+    components:
+      - 0 # DUAL_TO_KIT_MENU -> Enable Dualclassing into Kits
+      - 1 # Grant second-class Specialists their Bonus Spell Slots
+      - 2 # Grant second-class Kits their Proper Proficiency Selection
     location:
       github_user: mleduque
       repository: kjeron_DUAL_TO_KIT
