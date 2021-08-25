@@ -937,7 +937,8 @@ modules:
     components:
       - 1 # Eldoth, the charlatan  - name: S9BGEENPCTweaks
   - name: npc_ee
-    components: ~
+    components:
+      - 2000 # NPC kit choices
     # can configure any npc so no need for individual mods per npc?
     location:
       github_user: UnearthedArcana
