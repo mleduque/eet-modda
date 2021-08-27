@@ -469,7 +469,8 @@ modules:
       - 1090 # RoT: Remove cutscenes from Chateau Irenicus
     ignore_warnings: true
   - name: cdtweaks
-    description: Tweaks Anthology - Main batch of tweaks
+    description: Tweaks Anthology - Main batch of tweaks p1
+    interrupt: true
     components:
       - 30 # Avatar de voleur pour Nalia
       - 40 # Peau bleue pour Viconia
@@ -528,7 +529,7 @@ modules:
       - 2339 # Suppression de la limite de convocation pour les creatures normales
       - 2340 # Suppression de la limite de convocation des creatures celestes (Ardanis/GeN1e)
       - 2357 # Alterer les restrictions des multi-classses -> Installer les options une et deux (tout le monde a acces aux multi-classes sans contrainte)
-      - 2360 # Suppression des restrictions raciales pour les mono-classes
+      #- 2360 # Suppression des restrictions raciales pour les mono-classes BUG
       - 2371 # Alterer les restrictions de jumelage -> Autoriser les non-humains a se jumeler
       - 2390 # Les paladins utilisent les tables de sort d'Icewind Dale - Heart of Winter (grogerson)
       - 2400 # Les rodeurs utilisent les tables de sort d'Icewind Dale - Heart of Winter (grogerson)
@@ -551,34 +552,70 @@ modules:
       - 3121 # Patch du bonheur (les PNJs du groupe ne se plaignent pas de la reputation) -> Les PNJs peuvent etre en colere a propos de la reputation mais ne partent jamais (Salk)
       - 3124 # Empecher le romance entre Aerie et Haer'Dalis des le commencement
       - 3125 # Rendre heureux les personnages neutres lorsque la reputation est moyenne
+  - name: cdtweaks
+    description: Tweaks Anthology - Main batch of tweaks p25
+    interrupt: true
+    components:
       - 3150 # Retirer l'animation de la Cape de renvoi (la laisser  pour les sorts et effets donnant le meme graphisme)
       - 3170 # Pas d'avatar Elfe Noir sur le groupe en Ombre-Terre
       - 3176 # Accelerer/ralentir les romances
       - 3183 # Triche sur les romances
+  - name: cdtweaks
+    description: Tweaks Anthology - Main batch of tweaks p26
+    interrupt: true
+    components:
       - 3196 # Alterer les interruptions du repos hostiles -> Augmenter la frequence de 50 %
       - 3200 # Batons, gourdins et frondes vendables (Icelus)
       - 3205 # Les magasins achetent tous les types d'objets
       - 3230 # Taerum fabrique une armure d'Ankheg supplementaire (Icendoan/grogerson)
+  - name: cdtweaks
+    description: Tweaks Anthology - Main batch of tweaks p27
+    interrupt: true
+    components:
       - 3264 # Munitions recuperables -> 25% de chance de recuperer apres une attaque reussie, contre les ennemis seulement
       - 3274 # Armes de jet recuperables -> 25% de chance de recuperer apres une attaque reussie, contre les ennemis seulement
       - 3280 # Accorder a chaque classe/kit quatre emplacements d'arme
+  - name: cdtweaks
+    description: Tweaks Anthology - Main batch of tweaks p28
+    interrupt: true
+    components:
       - 3290 # Personnaliser le nom des sauvegardes automatiques -> Employer la forme : 000000000-Protagoniste-Nom de sauvegarde
       - 3300 # Focus camera en cas de mort
       - 3320 # Pas de depreciation dans les magasins
+  - name: cdtweaks
+    description: Tweaks Anthology - Main batch of tweaks p29
+    interrupt: true
+    components:
       - 3330 # Rendre les membres du groupe moins susceptibles de   mourir de facon permanente
       - 3340 # Increase party movement speed outside combat -> By 50 percent
       - 4000 # Ajuster le jet de reputation des PNJs mauvais recrutables
       - 4020 # PNJs style ToB
+  - name: cdtweaks
+    description: Tweaks Anthology - Main batch of tweaks p30
+    interrupt: true
+    components:
       - 4025 # Permettre de separer les couples de PNJ
       - 4031 # Caracteristiques coherentes : Edwin -> Valeurs de BG2
       - 4041 # Caracteristiques coherentes : Jaheira -> Valeurs de BG2
       - 4050 # Changer l'alignement de Jaheira en "Neutre Bon"
+  - name: cdtweaks
+    description: Tweaks Anthology - Main batch of tweaks p31
+    interrupt: true
+    components:
       - 4061 # Caracteristiques coherentes : Minsc -> Valeurs de BG2
       - 4071 # Caracteristiques coherentes : Viconia -> Valeurs de BG2
       - 4100 # Changer l'alignement de Korgan en "Neutre Mauvais"
+  - name: cdtweaks
+    description: Tweaks Anthology - Main batch of tweaks p32
+    interrupt: true
+    components:
       - 4110 # Donner a Kagain une valeur reglementaire de 19 en constitution
       - 4120 # Donner a Coran une valeur reglementaire de 19 en dexterite
       - 4130 # Transformer Xan en mage generaliste (Mike1072)
+  - name: cdtweaks
+    description: Tweaks Anthology - Main batch of tweaks p33
+    interrupt: true
+    components:
       - 4150 # Deplacer Bouh dans le sac de Minsc
       - 4160 # Permettre a Yeslick d'utiliser les haches
       - 4170 # S'assurer que Shar-Teel ne meurt pas lors du defi originel
