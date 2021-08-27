@@ -470,7 +470,6 @@ modules:
     ignore_warnings: true
   - name: cdtweaks
     description: Tweaks Anthology - Main batch of tweaks p1
-    interrupt: true
     components:
       - 30 # Avatar de voleur pour Nalia
       - 40 # Peau bleue pour Viconia
