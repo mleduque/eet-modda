@@ -546,7 +546,7 @@ modules:
       release: v15
       asset: RE_v15.zip
   - name: HerThiMoney # Heroes Thieves and Moneylenders
-    version: 3.4
+    version: 3.5
     components:
       - 0    # Component 1. Interjections & Mini-quests (by Austin & Arcanecoast Team)
       - 10   # Component 2. First Calimport Bank Pack (by Scheele & Austin & Arcanecoast Team)
@@ -555,7 +555,8 @@ modules:
     location:
       github_user: Austin-BG
       repository: HTaM
-      commit: 0c3010788
+      release: v.3.5
+      asset: heroes-thieves-and-moneylenders-3.5.iemod
       patch:
         relative: herthimoney-nopdf.diff
   - name: "snakes" # The slithering Menace
