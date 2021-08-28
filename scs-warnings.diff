@@ -1,0 +1,42 @@
+--- stratagems/lib/lib_ini.tpa
++++ stratagems/lib/lib_ini.tpa
+@@ -43,7 +43,7 @@ BEGIN
+         PATCH_IF !VARIABLE_IS_SET $SFO_reserved_ini_hash(~%ini%~) BEGIN
+            SPRINT value 0
+            PATCH_IF !silent BEGIN
+-                               PATCH_WARN "ini entry %ini% has been checked, but is not present in the ini file"
++                               PATCH_LOG "_W_A_R_N ini entry %ini% has been checked, but is not present in the ini file"
+                   END
+         END ELSE BEGIN
+            SPRINT value $SFO_reserved_ini_hash(~%ini%~)
+--- stratagems/sfo/general/lib_tools.tpa
++++ stratagems/sfo/general/lib_tools.tpa
+@@ -25,7 +25,7 @@ BEGIN
+      "" null BEGIN END
+      DEFAULT
+         PATCH_PRINT ~%warning%%arguments%~
+-        LPF log_this STR_VAR file=sfo_warnings.txt input= ~%TP2_BASE_NAME% component %COMPONENT_NUMBER%: %warning%%arguments%~ repeat END
++        //LPF log_this STR_VAR file=sfo_warnings.txt input= ~%TP2_BASE_NAME% component %COMPONENT_NUMBER%: %warning%%arguments%~ repeat END
+      END
+ END
+ 
+--- stratagems/lib/alter_effect.tpa
++++ stratagems/lib/alter_effect.tpa
+@@ -591,7 +591,7 @@ BEGIN
+   END
+ 
+   PATCH_IF (new_fx = 0 && !silent) BEGIN
+-    PATCH_WARN "WARNING: no effects added to %SOURCE_FILE%"
++    PATCH_LOG "WARNING: no effects added to %SOURCE_FILE%"
+   END ELSE PATCH_IF (verbose && !silent) BEGIN
+     READ_LONG 0x0c strref
+     PATCH_IF ((strref > 0) AND (strref < 200000)) BEGIN
+@@ -1165,7 +1165,7 @@ BEGIN
+   END // end ability loop
+ 
+   PATCH_IF (alter = 0 && !silent) BEGIN
+-    PATCH_WARN "WARNING: no effects altered on %SOURCE_FILE%"
++    PATCH_LOG "WARNING: no effects altered on %SOURCE_FILE%"
+   END
+ 
+   PATCH_IF (verbose && !silent) BEGIN
