@@ -153,11 +153,15 @@ modules:
       - 6010 # Meilleurs appels a l'aide
       - 6030 # Mages plus intelligents
       - 6040 # Pretres plus intelligents
+  - name: stratagems
+    description: Sword Coast Stratagems - p2
+    components:
       - 6100 # Potions pour PNJ
-      - 6200 # Araignees ameliorees
+    ignore_warnings: true
   - name: stratagems
     description: Sword Coast Stratagems - p3
     components:
+      - 6200 # Araignees ameliorees
       - 6300 # Sirenes et dryades plus intelligentes
       - 6310 # Vers charognards legerement plus intelligents
       - 6320 # Basilics plus intelligents

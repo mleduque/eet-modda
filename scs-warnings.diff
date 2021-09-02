@@ -27,7 +27,7 @@
  
    PATCH_IF (new_fx = 0 && !silent) BEGIN
 -    PATCH_WARN "WARNING: no effects added to %SOURCE_FILE%"
-+    PATCH_LOG "WARNING: no effects added to %SOURCE_FILE%"
++    PATCH_LOG "W_A_R_N_I_N_G: no effects added to %SOURCE_FILE%"
    END ELSE PATCH_IF (verbose && !silent) BEGIN
      READ_LONG 0x0c strref
      PATCH_IF ((strref > 0) AND (strref < 200000)) BEGIN
@@ -36,7 +36,7 @@
  
    PATCH_IF (alter = 0 && !silent) BEGIN
 -    PATCH_WARN "WARNING: no effects altered on %SOURCE_FILE%"
-+    PATCH_LOG "WARNING: no effects altered on %SOURCE_FILE%"
++    PATCH_LOG "W_A_R_N_I_N_G: no effects altered on %SOURCE_FILE%"
    END
  
    PATCH_IF (verbose && !silent) BEGIN
