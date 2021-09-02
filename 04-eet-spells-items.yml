@@ -28,9 +28,9 @@ modules:
       - 60  # Update Spellbooks of Joinable NPCs
       #- 65   # Revised Warrior HLAs
     location:
-      github_user: mleduque
+      github_user: Gibberlings3
       repository: SpellRevisions
-      branch: install-fixes
+      branch: master
   - name: A7-TotLM-BG2EE
     description: Trial of the Luremaster - Main component (warns)
     components:
