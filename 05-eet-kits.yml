@@ -661,6 +661,8 @@ modules:
       github_user: K4thos
       repository: EET_Tweaks
       tag: v1.12
+      patch:
+        relative: eet_tweaks-xpbonus.diff
   - name: mih_eq
     description: Made In Heaven Encounters and Quests
     components:
