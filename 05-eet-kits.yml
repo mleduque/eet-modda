@@ -21,57 +21,58 @@ modules:
       github_user: mleduque
       repository: The-Artisan-s-Kitpack
       branch: no-prompt
-  - name: BearWalker
-    components: [0]
-    location:
-      github_user: thisisulb
-      repository: BearWalkerKit
-      branch: master
-  - name: Dreamwalker
-    components: [0]
-    location:
-      github_user: thisisulb
-      repository: DreamWalkerShamanKit
-      branch: master
-  - name: SpiritHunter
-    components: [0]
-    location:
-      github_user: thisisulb
-      repository: SpiritHunterShamanKit
-      branch: master
-    ignore_warnings: true # WARNING: no effects altered on UB_SH00.ITM
-  - name: Spiritwalker
-    components: [0]
-    location:
-      github_user: thisisulb
-      repository: SpiritwalkerKit
-      branch: master
-  - name: StormCaller
-    components: [0]
-    location:
-      github_user: thisisulb
-      repository: StormCallerKit
-      branch: master
+  #- name: BearWalker
+  #  components: [0]
+  #  location:
+  #    github_user: thisisulb
+  #    repository: BearWalkerKit
+  #    branch: master
+  #- name: Dreamwalker
+  #  components: [0]
+  #  location:
+  #    github_user: thisisulb
+  #    repository: DreamWalkerShamanKit
+  #    branch: master
+  #- name: SpiritHunter
+  #  components: [0]
+  #  location:
+  #    github_user: thisisulb
+  #    repository: SpiritHunterShamanKit
+  #    branch: master
+  #  ignore_warnings: true # WARNING: no effects altered on UB_SH00.ITM
+  #- name: Spiritwalker
+  #  components: [0]
+  #  location:
+  #    github_user: thisisulb
+  #    repository: SpiritwalkerKit
+  #    branch: master
+  #- name: StormCaller
+  #  components: [0]
+  #  location:
+  #    github_user: thisisulb
+  #    repository: StormCallerKit
+  #    branch: master
   - name: Charlatan
     components: [0]
     location:
       github_user: Raduziel
       repository: Charlatan-Kit
       tag: "2.7"
-  - name: C0Warlock
-    components: [0]
-    location:
-      github_user: ArtemiusI
-      repository: Warlock
-      branch: master
-      patch:
-        relative: c0warlock-noprompt.diff
-  - name: IHateUndead
-    components: [0, 1, 2, 4, 5, 6, 7, 9, 10, 11]
-    location:
-      github_user: Raduziel
-      repository: I-Hate-Undead-Kitpack
-      tag: "3.8.1"
+  #- name: C0Warlock
+  #  components: [0]
+  #  location:
+  #    github_user: ArtemiusI
+  #    repository: Warlock
+  #    branch: master
+  #    patch:
+  #      relative: c0warlock-noprompt.diff
+  # 256 kits limit
+  #- name: IHateUndead
+  #  components: [0, 1, 2, 4, 5, 6, 7, 9, 10, 11]
+  #  location:
+  #    github_user: Raduziel
+  #    repository: I-Hate-Undead-Kitpack
+  #    tag: "3.8.1"
   #- name: shurininja
   #  components: ~
   #  location:
@@ -245,13 +246,13 @@ modules:
     components:
       - 0  # Changements concernant les bardes et voleurs purs, ainsi que les kits originaux du jeu (necessaire pour les autres composants)
       - 1  # Ajout d'une echoppe pour bardes et voleurs
-      - 2  # Installer l'Acrobate (kit de barde)
-      - 3  # Installer le Choriste (kit de barde)
-      - 4  # Installer le Chanteur Funebre (kit de barde)
-      - 5  # Installer le Gitan (kit de barde)
+      #- 2  # Installer l'Acrobate (kit de barde)
+      #- 3  # Installer le Choriste (kit de barde)
+      #- 4  # Installer le Chanteur Funebre (kit de barde)
+      #- 5  # Installer le Gitan (kit de barde)
       - 6  # Installer l'Aventurier (kit de voleur)
       - 7  # Installer le Cambrioleur (kit de voleur)
-      - 8  # Installer le Lamesprit (kit de voleur)
+      #- 8  # Installer le Lamesprit (kit de voleur)
       - 9  # Installer le Tireur d'Elite (kit de voleur)
     location:
       github_user: Gibberlings3
@@ -267,10 +268,10 @@ modules:
       - 16 # Revised Identify -- needed with 5E conversion
       #- 20 # REVISED DRAGON DISCIPLES -- NOPE
       - 25 # Sorcerer: Magus
-      - 31 # Sorcerer: Favored Soul
-      - 33 # Sorcerer: Sylvan Disciple
-      - 35 # Sorcerer: Revenant Disciple
-      - 37 # Sorcerer: Amorphous Disciple
+      #- 31 # Sorcerer: Favored Soul
+      #- 33 # Sorcerer: Sylvan Disciple
+      #- 35 # Sorcerer: Revenant Disciple
+      #- 37 # Sorcerer: Amorphous Disciple
       #- 40 # Revised specialists #-- NOPE because 5E spellcasting
       #- 45 # ArcaneCarfting NOPE: deprecated
       #- 48 # Armored Casting for Bards
@@ -279,8 +280,8 @@ modules:
       - 66 # Innate Find Familiar
       #- 67 # Choose-Your-Own Familiar - CRASH on use
       - 80 # Multiclass Sorcerers
-      - 82 # Arcanist
-      - 85 # Sorcerer Kit: Mana Sorcerer
+      #- 82 # Arcanist
+      #- 85 # Sorcerer Kit: Mana Sorcerer
       #- 93 # Make +Spell Slot Items work with MultiSorcerers and Arcanists
       #- 95 # Ability Score Spellcasting Bonuses (install AFTER any mod that changes spell tables!) - prefer scalesofbalance
     location:
@@ -360,17 +361,17 @@ modules:
       - 360 # Add the Barbarian Ranger (ranger kit)
       - 410 # Add the Sniper (thief kit)
       - 420 # Add the Scout (thief kit) and revise the Swashbuckler
-      - 450 # Add the Jongleur (bard kit)
-      - 460 # Add the Loremaster (bard kit)
-      - 470 # Add the Gallant (bard kit)
-      - 480 # Add the Meistersinger (bard kit)
-      - 490 # Add the Loresinger (bard kit)
+      #- 450 # Add the Jongleur (bard kit)
+      #- 460 # Add the Loremaster (bard kit)
+      #- 470 # Add the Gallant (bard kit)
+      #- 480 # Add the Meistersinger (bard kit)
+      #- 490 # Add the Loresinger (bard kit)
   - name: sword_and_fist
     components:
-      - 30 # Installer le kit de guerrier : Champion Occultiste
+      #- 30 # Installer le kit de guerrier : Champion Occultiste
       - 31 # Installer le kit de guerrier : Duelliste
-      - 32 # Installer le kit de guerrier : Poing de l'Ordre
-      - 34 # Installer le kit de guerrier : Magelame (by ronin69hof, ronin69hof@gmail.com
+      #- 32 # Installer le kit de guerrier : Poing de l'Ordre
+      #- 34 # Installer le kit de guerrier : Magelame (by ronin69hof, ronin69hof@gmail.com
     location:
       github_user: mleduque
       repository: sword_and_fist
