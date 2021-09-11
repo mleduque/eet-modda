@@ -35,14 +35,13 @@ modules:
     location: { github_user: Argent77, repository: A7-LightingPackEE, release: v3.1, asset: lin-A7-LightingPackEE-v3.1.zip }
   - name: EEUITweaks
     components:
+      - 1000 # Mods Options
+      # - 1010 # Hidden Game Options -> defer to A7-Hidden
       - 1050 # Adul's Unhide Chargen Options
       - 1070 # Faydark's Abilities Auto-Roller/GrimLefourbe's BG2 UI
       - 1100 # Display max proficiency limits
-      - 2000 # Transparent Sidebars
-      - 2050 # Simple Centered Dialog
-      - 2070 # Dee's Permanent Thieving Button
       - 3000 # Leveling Progress Bars Tweaks
-      #- 4040 # Spell Books -> Kilivitz's Classic Spellbooks => issue with 5E conversion
+      - 3010 # Leveling Progress Bars Options
     location:
       github_user: r-e-d
       repository: EEUITweaks
