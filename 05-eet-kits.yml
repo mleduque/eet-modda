@@ -629,9 +629,9 @@ modules:
     location:
       github_user: UnearthedArcana
       repository: Scales_of_Balance
-      tag: "5.32.6"
+      tag: "5.33"
       patch:
-        relative: scales-config.diff
+        relative: scales-config.diff-review-new-version
   - name: DruidGroveMakeover
     components:
       - 0
