@@ -402,7 +402,7 @@ modules:
     location:
       github_user: UnearthedArcana
       repository: refinements
-      tag: "4.29.1"
+      tag: "4.30"
       patch:
         relative: refinements-restore-thief-uai.diff
   - name: FnP_Multiclass
