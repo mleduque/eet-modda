@@ -26,10 +26,13 @@ modules:
       release: "2.0.20"
       asset: ascension-2.0.20.iemod
   - name: turnabout
-    components: ~
+    components:
+      - 0 # Ascension: Turnabout
     location:
       http: http://mods.pocketplane.net/TurnaboutV13EE.zip
       rename: TurnaboutV13EE.zip
+      layout:
+        layout_type: single_dir_plus_tp2
   - name: A7-TestYourMettle
     components:
       - 0   # Test Your Mettle!
