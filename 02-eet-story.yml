@@ -115,12 +115,12 @@ modules:
       tag: v24.1
   - name: AC_QUEST
     description: Ascalon's Questpack
-    components: [0]
+    components: ~
     location:
       github_user: Gitjas
-      repository: AC_QUEST
-      release: v3.0
-      asset: ac_quest_3-0.zip
+      repository: Ascalons_Questpack
+      release: "4.0"
+      asset: ascalons-questpack-4.0.iemod
   - name: BG_Travel
     description: New travel system between Baldur's Gate City areas
     comment: Original location http://athkatla.cob-bg.pl/download.php?id=1595 (BG_Travel_v2.1.rar)
