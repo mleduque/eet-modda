@@ -217,13 +217,6 @@ modules:
       repository: Under-Respresented_Items
       release: v8
       asset: lin-underrep-v8.tar.gz
-  - name: A7-MagicStore
-    components: [1, 10] # 1=fee required
-    location:
-      github_user: Argent77
-      repository: A7-MagicStore
-      release: v2.1
-      asset: A7-MagicStore-v2.1.iemod
   - name: alchemy
     description: jan's alchemy
     components: [0]
@@ -254,6 +247,12 @@ modules:
       repository: Bolsa
       release: v6.0.0
       asset: bolsa-v6.0.0.iemod
+  - name: A7-MagicStore
+    components: [1, 10] # 1=fee required
+    location:
+      github_user: Argent77
+      repository: A7-MagicStore
+      branch: devel
   - name: heartwood
     description: Heart of the Wood
     components: [0]
