@@ -300,6 +300,13 @@ modules:
       repository: A7-ImprovedShamanicDance
       release: v4.4
       asset: A7-ImprovedShamanicDance-v4.4.iemod
+  - name: divine_remix
+    components: ~ # not the sphere system
+    location:
+      github_user: Gibberlings3
+      repository: Divine_Remix
+      release: v8_beta
+      asset: lin-divine_remix-v8beta.tar.gz
   - name: item_rev
     description: Item Revisions (more changes)
     components:
