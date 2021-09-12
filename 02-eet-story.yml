@@ -662,4 +662,5 @@ modules:
       repository: ExtraExpandedEnhancedEncounters
       release: "2.0"
       asset: extra-enhanced-expanded-encounters-2.0.iemod
-
+      patch:
+        relative: ExtraExpandedEnhancedEncouter-reducegnolls.diff
