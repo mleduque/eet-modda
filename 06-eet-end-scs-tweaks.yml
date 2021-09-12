@@ -351,3 +351,19 @@ modules:
       github_user: mleduque
       repository: kjeron_DUAL_TO_KIT
       branch: master
+  - name: zg_iwd_voices
+    description: Icewind Dale Voice Pack for EE 2.6+
+    components: ~
+    location:
+      github_user: GraionDilach
+      repository: Icewind-Dale-Voice-Pack-For-EE-2.6
+      release: version-1.0.0
+      asset: zg-iwd-voices-1.0.0.iemod
+  - name: zg_bg2_voices
+    description: Baldur's Gate II Voice Pack for EE 2.6+
+    components: ~
+    location:
+      github_user: GraionDilach
+      repository: Baldurs-Gate-II-Voice-Pack-for-EE-2.6
+      release: version-1.0.0
+      asset: zg-bg2-voices-1.0.0.iemod
