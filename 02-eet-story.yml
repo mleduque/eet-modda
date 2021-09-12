@@ -118,7 +118,17 @@ modules:
       tag: v24.1
   - name: AC_QUEST
     description: Ascalon's Questpack
-    components: ~
+    components:
+      - 0 # A Job Well-Paid
+      - 1 # A Feast for the Gnolls
+      - 2 # Jumper
+      - 3 # The Lost Son
+      - 4 # Of Wolves and Men -> Quest uses hut near Thalantyr in High Hedge.
+      - 6 # The Great Carlini
+      - 7 # A Home for the Gibberlings
+      - 8 # Fangirls
+      - 9 # The Serpents of Abbathor
+      - 10 # A Halfling among the Eyeless
     location:
       github_user: Gitjas
       repository: Ascalons_Questpack
