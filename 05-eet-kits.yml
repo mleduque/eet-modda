@@ -88,6 +88,8 @@ modules:
       github_user: Argent77
       repository: A7-ChaosSorcerer
       branch: devel
+      patch:
+        relative: A7-ChaosSorcerer-remove_str_con_malus.diff
   - name: wildmage
     components:
       - 0 # New Wild Magic Spells -> Ironman

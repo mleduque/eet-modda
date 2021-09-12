@@ -1,0 +1,11 @@
+--- A7-ChaosSorcerer/lib/kit-2.tph      2021-09-12 12:09:35.002937900 +0200
++++ A7-ChaosSorcerer/lib/kit.tph        2021-09-12 12:09:51.315431494 +0200
+@@ -29,7 +29,7 @@
+         ~A7_CHAOS_SORCERER 1 1 1 1 1 0 0 0~  // clasweap.2da
+         ~A7_CHAOS_SORCERER 0 1 0 0 1 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~  // weapprof.2da
+         ~A7_CHAOS_SORCERER 0 12 0 9 0 9~  // abclasrq.2da
+-        ~A7_CHAOS_SORCERER -2 0 -2 0 0 0~  // abclsmod.2da
++        ~A7_CHAOS_SORCERER 0 0 0 0 0 0~  // abclsmod.2da
+         ~A7_CHAOS_SORCERER 0 17 0 17 0 17~  // abdcdsrq.2da
+         ~A7_CHAOS_SORCERER 0 15 0 15 0 15~  // abdcscrq.2da
+         ~A7_CHAOS_SORCERER 0 0 0 0 0 0 1 1 1~  // alignmnt.2da
