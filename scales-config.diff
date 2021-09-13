@@ -1,59 +1,74 @@
---- scales_of_balance/ini/YARAS.ini   2021-08-23 18:26:37.331190510 +0200
-+++ scales_of_balance/ini/YARAS.ini     2021-08-23 18:46:57.196710886 +0200
-@@ -31,7 +31,7 @@
+--- scales_of_balance/ini/YARAS_default.ini
++++ scales_of_balance/ini/YARAS_default.ini
+@@ -34,7 +34,7 @@
  //
- //     CASTING SPEED PENALTY:                                  //      (**NOTE:** max = 6)
+ //	CASTING SPEED PENALTY: 					// this is a static modifier
+ //											// 	(**NOTE** the max value = 6)
+-		SET leather_cast =		2
++		SET leather_cast =		1
+ 		SET studded_cast =		2
+ 		SET chain_cast = 		3
+ 		SET splint_cast = 		4
+@@ -81,17 +81,17 @@
+ //	DEX PENALTIES: 							// 	Dex penalties are reduced for enchanted items.
+ //											// 	If you don't want that, then...
+ 		PATCH_IF (%enchantment% = 0) BEGIN 	// 	...make the numbers in these two blocks identical.
+-		  SET leather_dex =		1
+-		  SET studded_dex =		2
+-		  SET chain_dex = 		3
++		  SET leather_dex =		0
++		  SET studded_dex =		1
++		  SET chain_dex = 		2
+ 		  SET splint_dex = 		4
+ 		  SET plate_dex = 		5
+ 		  SET fullplate_dex = 	5
+ 		END
+ 		PATCH_IF (%enchantment% >= 1) BEGIN
+ 		  SET leather_dex =		0
+-		  SET studded_dex =		1
+-		  SET chain_dex = 		2
++		  SET studded_dex =		0
++		  SET chain_dex = 		1
+ 		  SET splint_dex = 		3
+ 		  SET plate_dex = 		4
+ 		  SET fullplate_dex = 	4
+@@ -123,7 +123,7 @@
+ 		SET hide_miscast =	%chain_miscast%
+ 		SET hide_move =		%studded_move%
+ 		SET hide_weap =		%studded_weap%
+-		SET hide_dex =		%chain_dex%
++		SET hide_dex =		%studded_dex%
  //
--               SET leather_cast =              2
-+               SET leather_cast =              1
-                SET studded_cast =              2
-                SET chain_cast =                3
-                SET splint_cast =               4
-@@ -41,17 +41,17 @@
- //     DEX PENALTIES:                                                  //      Dex penalties are affected by item enchantment.
- //                                                                                     //      If you don't want them to, then...
-                PATCH_IF (%enchantment% = 0) BEGIN      //      Make the numbers in these three blocks identical.
--                 SET leather_dex =             1
--                 SET studded_dex =             2
--                 SET chain_dex =               3
-+                 SET leather_dex =             0
-+                 SET studded_dex =             1
-+                 SET chain_dex =               2
-                  SET splint_dex =              4
-                  SET plate_dex =               5
-                  SET fullplate_dex =   4
-                END
-                PATCH_IF (%enchantment% = 1) BEGIN
-                  SET leather_dex =             0
--                 SET studded_dex =             1
--                 SET chain_dex =               2
-+                 SET studded_dex =             0
-+                 SET chain_dex =               1
-                  SET splint_dex =              3
-                  SET plate_dex =               4
-                  SET fullplate_dex =   3
-@@ -88,19 +88,19 @@
-                SET hide_ac =           %studded_ac%
-                SET hide_dr =           %chain_dr%
-                SET hide_cast =         %chain_cast%
--               SET hide_dex =          %chain_dex%
-+               SET hide_dex =          %studded_dex%
+ //	HOW TO TREAT ELVEN CHAIN:				// Elven chain is as light as leather.
+ //											// Or you can just set these to 0 if you want.
+@@ -133,15 +133,15 @@
+ 		SET elven_weap =	%leather_weap%
+ 		SET elven_dex =		%leather_dex%
  //
- //     HOW TO TREAT ELVEN CHAIN:                               // Elven chain is as light as leather.
- //                                                                                     // Or you can just set these to 0 if you want.
-                SET elven_cast =        %leather_cast%
-                SET elven_dex =         %leather_dex%
- //
--//     HOW TO TREAT (DRAGON-)SCALE ARMOR:              // Dragonscale is equivalent to plate for AC;
-+//     HOW TO TREAT (DRAGON-)SCALE ARMOR:              // Dragonscale is equivalent to fullplate_ac for AC;
- //                                                                                     // but like splint or chain for DR, DEX, and casting
--               SET scale_ac =          %plate_ac%
--               SET scale_dr =          %splint_dr%
-+               SET scale_ac =          %fullplate_ac%
-+               SET scale_dr =          %plate_dr%
-                SET scale_cast =        %chain_cast%
--               SET scale_dex =         %splint_dex%
-+               SET scale_dex =         (%splint_dex% - 1)
-                SET scale_stealth =  %splint_stealth%
-                SET scale_mech =        %splint_mech%
-                SET scale_detect =      %splint_detect%
+-//	HOW TO TREAT (DRAGON-)SCALE ARMOR:		// Dragonscale is equivalent to plate for AC;
++//	HOW TO TREAT (DRAGON-)SCALE ARMOR:		// Dragonscale is equivalent to fullplate_ac for AC;
+ //											// but like splint or chain for DR, DEX, and casting
+-		SET scale_ac = 		%plate_ac%
+-		SET scale_dr = 		%splint_dr%
++		SET scale_ac = 		%fullplate_ac%
++		SET scale_dr = 		%plate_dr%
+ 		SET scale_cast =	%chain_cast%
+ 		SET scale_miscast =	%chain_miscast%
+ 		SET scale_move =	%chain_move%
+ 		SET scale_weap =	%chain_weap%
+-		SET scale_dex =		%splint_dex%
++		SET scale_dex =		(%splint_dex% - 1)
+ 		SET scale_stealth =  %splint_stealth%
+ 		SET scale_mech = 	%splint_mech%
+ 		SET scale_detect = 	%splint_detect%
+--- scales_of_balance/ini/styles.ini
++++ scales_of_balance/ini/styles.ini
+@@ -7,7 +7,7 @@
+ //__________________________________________________________________________________
+ 
+ 
+-	OUTER_SET 2H_weap_apr = 0	//	change to 1 for +.5 APR with spec. in 2-hand weapon style
++	OUTER_SET 2H_weap_apr = 1	//	change to 1 for +.5 APR with spec. in 2-hand weapon style
+ 
+ 
+ //__________________________________________________________________________________
