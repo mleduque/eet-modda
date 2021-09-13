@@ -654,16 +654,16 @@ modules:
       - 125 # WPO - APR on Spec
       - 172 # STO - IWD Spell Evasion -> For Expanded Spell List
       - 200 # SBO - Stat Bonus Overhaul
-      - 201 # stat-based bonus spells
+      - 201 # SBO - Stat-based Bonus Spells
       - 204 # SBO - Enable Concentration Checks
-      - 223 # XPO - Choose SoD Starting XP -> 125,000
-      - 228 # XPO - Choose SoA Starting XP -> 240,000
+      - 224 # XPO - Choose SoD Starting XP -> 161,000
+      - 229 # XPO - Choose SoA Starting XP -> 400,000
     location:
       github_user: UnearthedArcana
       repository: Scales_of_Balance
       tag: "5.33"
       patch:
-        relative: scales-config.diff-review-new-version
+        relative: scales-config.diff
   - name: DruidGroveMakeover
     components:
       - 0
