@@ -303,7 +303,24 @@ modules:
       release: v4.4
       asset: A7-ImprovedShamanicDance-v4.4.iemod
   - name: divine_remix
-    components: ~ # not the sphere system
+    components:
+      - 11 # Install new spells -> Only add spells if not present from other mods
+      - 100 # Cleric Remix
+      - 103 # Install Silverstar of Selune Cleric Kit
+      - 106 # Install Nightcloak of Shar Cleric Kit
+      #- 107 # Install Holy Strategist of the Red Knight Cleric Kit
+      #- 112 # Install Painbearer of Ilmater Cleric Kit
+      #- 115 # Install Firewalker of Kossuth Cleric Kit
+      #- 118 # Install Authlim of Iyachtu Xvim Cleric Kit
+      #- 121 # Install Lorekeeper of Oghma Cleric Kit
+      #- 124 # Install Heartwarder of Sune Cleric Kit
+      - 127 # Install Feywarden of Corellon Cleric Kit
+      #- 130 # Install Strifeleader of Cyric Cleric Kit
+      - 200 # Druid Remix
+      - 203 # Install Oozemaster Druid kit
+      - 403 # Install Bowslinger Ranger Kit
+      - 409 # Install Forest Runner Ranger Kit
+      - 415 # Install Wilderness Runner Ranger Kit
     location:
       github_user: Gibberlings3
       repository: Divine_Remix
