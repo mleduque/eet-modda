@@ -342,7 +342,7 @@ modules:
       - 21 # Create a sphere system -> FnP: the Faiths & Powers original sphere system
       - 31 # Install Cleric kits
       - 80 # Apply sphere system
-    ignore_warnings: true # all except 31 emit no eddect changed/added
+    ignore_warnings: true # all except 31 emit no effect changed/added
     location:
       github_user: subtledoctor
       repository: Faiths_and_Powers
