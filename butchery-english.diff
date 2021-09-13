@@ -1,0 +1,23 @@
+--- butchery/lang/english/setup.tra
++++ butchery/lang/english/setup.tra
+@@ -1,5 +1,5 @@
+ /* DEPRECATED
+-@1 = ~/****************************************~
++@1 = ~****************************************~
+ @2 = ~*BuTcHeRy Mod Version 1.0        *~
+ @3 = ~*DrAzTiK01@msn.com         *~
+ @4 = ~*Copyright 2009                         *~
+@@ -11,9 +11,8 @@
+ @10 = ~Il semble que ToB ne soit pas installe sur votre systeme.~
+ */
+ 
+-@1 = ~This mod requires ToB, BGT, BG2:EE or EET to be installed.~
+-
+-@10 = ~DrAzTiK's revisited fight against Tazok and DigDag~
+-@20 = ~Rebalancing a few generic creatures (orcs and ogres)~
+-@30 = ~Rebalanced Tazok and DigDag~
++@1 = ~Ce mod necessite l'installation de ToB, BGT, BG2:EE ou EET.~
+ 
++@10 = ~Combat contre Tazok et DigDag revise par DrAzTiK~
++@20 = ~Reequilibrage de certaines creatures generiques (orques et ogres)~
++@30 = ~Reequilibrage de Tazok et de DigDag~

@@ -602,6 +602,8 @@ modules:
       repository: butchery
       release: "4.0.0"
       asset: butchery-4.0.0.zip
+      patch:
+        relative: butchery-english.diff
   - name: "TheBeaurinLegacy"
     components:
       - 1000 # The Beaurin Legacy for BG2:SoA & ToB & BGII:EE
