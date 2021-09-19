@@ -1,5 +1,7 @@
 version: "1"
 global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
   lang_dir: "fr_FR"
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
 modules:
@@ -132,8 +134,8 @@ modules:
     location:
       github_user: Gitjas
       repository: Ascalons_Questpack
-      release: "4.0"
-      asset: ascalons-questpack-4.0.iemod
+      release: v4.1
+      asset: ascalons-questpack-4.1.iemod
   - name: BG_Travel
     description: New travel system between Baldur's Gate City areas
     comment: Original location http://athkatla.cob-bg.pl/download.php?id=1595 (BG_Travel_v2.1.rar)
@@ -564,7 +566,7 @@ modules:
       release: v15
       asset: RE_v15.zip
   - name: HerThiMoney # Heroes Thieves and Moneylenders
-    version: 3.5
+    version: 3.5.1
     components:
       - 0    # Component 1. Interjections & Mini-quests (by Austin & Arcanecoast Team)
       - 10   # Component 2. First Calimport Bank Pack (by Scheele & Austin & Arcanecoast Team)
@@ -573,8 +575,8 @@ modules:
     location:
       github_user: Austin-BG
       repository: HTaM
-      release: v.3.5
-      asset: heroes-thieves-and-moneylenders-3.5.iemod
+      release: V.3.5.1
+      asset: heroes-thieves-and-moneylenders-3.5.1.iemod
       patch:
         relative: herthimoney-nopdf.diff
   - name: "snakes" # The slithering Menace
@@ -594,16 +596,19 @@ modules:
       http: http://akadis.baldursgateworld.fr/Jan/zip/JansQuest1.5.0.zip
   - name: "butchery"
     components:
-      - 10 # Combat contre Tazok et DigDag revise par DrAzTiK
-      - 20 # Reequilibrage de certaines creatures generiques (orques et ogres)
-      - 30 # Reequilibrage de Tazok et de DigDag
+      - 10 #
+      - 11 #
+      - 12 #
+      - 21 #
+      - 22 #
+      - 32 #
+      - 40 #
     location:
       github_user: GwendolyneFreddy
       repository: butchery
-      release: "4.0.0"
-      asset: butchery-4.0.0.zip
+      branch: master
       patch:
-        relative: butchery-english.diff
+        relative: butchery-strings.diff
   - name: "TheBeaurinLegacy"
     components:
       - 1000 # The Beaurin Legacy for BG2:SoA & ToB & BGII:EE

@@ -18,9 +18,9 @@
  END
 @@ -90,15 +83,8 @@ END
        PRINT ~Portrait: Old Version (NWN)~
-          END
+ 	  END
  
--               
+-		
 -PRINT ~Would you like to install Music for Vienxay? These will play during banters with the player.~
 -
 -PRINT ~Please choose one of the following:

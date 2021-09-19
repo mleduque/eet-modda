@@ -1,22 +1,22 @@
 --- Kale/Kale.tp2
 +++ Kale/Kale.tp2
-@@ -36,18 +36,9 @@ END
-                COPY ~%MOD_FOLDER%/portraits/KaleM.bmp~ ~override/KaleM.bmp~
-                COPY ~%MOD_FOLDER%/portraits/KaleS.bmp~ ~override/KaleS.bmp~
-                
+@@ -36,18 +36,7 @@ END
+ 		COPY ~%MOD_FOLDER%/portraits/KaleM.bmp~ ~override/KaleM.bmp~
+ 		COPY ~%MOD_FOLDER%/portraits/KaleS.bmp~ ~override/KaleS.bmp~
+ 		
 -PRINT ~Would you like to install Music for Kale? These will play during banters with the player.~
- 
+-
 -PRINT ~Please choose one of the following:
 -[1] Yes
 -[2] No
 -~
-+OUTER_SPRINT ~music~ 2
- 
+-
 -OUTER_SPRINT ~music~ ~placeholder_value~
 -OUTER_WHILE (!(IS_AN_INT ~music~) OR (~music~ > 0x2) OR (~music~ < 0x1)) BEGIN
 -  PRINT ~Please select 1 or 2 and press Enter.~
 -  ACTION_READLN ~music~
 -END
++OUTER_SPRINT ~music~ 2
        ACTION_IF ("music" = 1) THEN BEGIN
- //     COPY_EXISTING ~sw1h01.itm~ ~override/bg1npcmusic.g3~
+ //	COPY_EXISTING ~sw1h01.itm~ ~override/bg1npcmusic.g3~
  

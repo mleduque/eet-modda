@@ -19,8 +19,8 @@
  //
  //
 @@ -1563,8 +1559,6 @@
-        END
-        BUT_ONLY_IF_IT_CHANGES
+ 	END
+ 	BUT_ONLY_IF_IT_CHANGES
  
 -AT_INTERACTIVE_EXIT ~VIEW HerThiMoney/readme/%LANGUAGE%/readme.pdf~
 -

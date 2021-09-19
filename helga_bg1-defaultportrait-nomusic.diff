@@ -35,7 +35,6 @@
 -  PRINT ~Please select 1 or 2 and press Enter.~
 -  ACTION_READLN ~music~
 -END
-+
 +OUTER_SPRINT ~music~ 2
        ACTION_IF ("music" = 1) THEN BEGIN
  	COPY_EXISTING ~sw1h01.itm~ ~override/bg1npcmusic.g3~

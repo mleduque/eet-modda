@@ -1,7 +1,9 @@
 version: "1"
 global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
   lang_dir: "fr_FR"
-  lang_preferences: ["#rx#^fran[cç]ais", french, english, "american english"]
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
 modules:
   - name: iwdification
     components:
@@ -15,9 +17,137 @@ modules:
       - 100 # IWD Class Updates: Paladin
       - 120 # IWD Class Updates: Thief: Release Candidate 2
     location:
-      github_user: mleduque
+      github_user: Gibberlings3
       repository: iwdification
-      branch: temp-french
+      branch: master
+  - name: stratagems
+    description: Sword Coast Stratagems
+    components:
+      - 1500
+      - 1510
+    location:
+      github_user: Gibberlings3
+      repository: SwordCoastStratagems
+      release: v34.1
+      asset: lin-stratagems-34.1.zip
+      patch:
+        relative: scs-warnings.diff
+    add_conf:
+      file_name: stratagems.ini
+      content: | # no change ATM
+        [Spell system changes]
+
+        no_initial_change_modify_breach = 0
+        no_initial_change_web_and_the_large = 0
+        no_initial_change_elemental_area_immunity = 0
+        no_initial_change_fiend_summoning = 0
+        no_initial_change_bonus_spell_scrolls = 0
+        no_initial_change_freedom_scrolls = 0
+
+        no_initial_change_nerf_greater_restoration = 0
+        no_initial_change_pro_normal_missiles = 0
+        no_initial_change_spellstrike_vs_pm_scroll = 0
+        no_initial_change_antimagic_penetrates_ii = 0
+        no_initial_change_blade_barrier = 0
+        no_initial_change_npc_symbols = 0
+        no_initial_change_power_word_blind = 0
+        no_initial_change_meteors = 0
+        no_initial_change_insect_plague = 0
+        no_initial_change_elemental_summoning = 0
+        no_initial_change_harm = 0
+        no_initial_change_spell_immunity = 0
+        no_initial_change_universal_trigger = 0
+        no_initial_change_truesight_blindness = 0
+        no_initial_change_mantle = 0
+        no_initial_change_skull_trap = 0
+        no_initial_change_clone_slots = 0
+
+        no_initial_change_sanctity_of_mind = 0
+        no_initial_change_rebalance_lathander = 0
+        no_initial_change_circle_of_bones_duration = 0
+        no_initial_change_enhance_thorn_spray = 0
+        no_initial_change_entropy_shield_abjuration = 0
+        no_initial_change_nerf_beetles = 0
+
+        no_initial_change_acid_storm_tonedown = 0
+        no_initial_change_rebalance_force_missiles = 0
+        no_initial_change_create_boneguard = 0
+
+        no_initial_change_ironskins = 0
+        no_initial_change_npc_fiend_summoning_backup = 0
+        no_initial_change_extra_healing=0
+        no_initial_change_nature_beauty_blindness=0
+
+        [nerfed and moved items]
+
+        no_item_nerf_balduran_shield=1
+        no_item_nerf_magi_staff=0
+        no_item_nerf_mirror_cloak = 0
+        no_item_nerf_carsomyr = 0
+        no_item_nerf_resurrection_rod = 0
+        no_item_nerf_vhailor_helm = 0
+        no_item_nerf_vecna = 0
+        no_initial_change_elemental_arrows = 0
+
+        [component tweaks]
+
+        mage_level_add = 0
+        mage_level_scale = 100
+        priest_level_add = 0
+        priest_level_scale = 100
+        no_deployment_change = 0
+        no_cursed_golem_wounds = 0
+        bypass_dragon_immunity_changes = 0
+        spellhold_easycore = 0
+        fiend_staying_power=150
+        dragon_staying_power = 300
+        genie_staying_power =150
+        Sendai_Component_Is_Sendai_Only = 0
+        force_old_assassin_spawn = 0
+        no_spirit_troll_magic = 0
+        no_swift_shapeshift = 0
+        potion_version=6
+        dispel_arrow_maximum=5
+        do_not_lose_soul=0
+        keep_cause_wounds_alignment_restrictions = 0
+        troll_regen_multiplication=2
+        troll_regen_addition=0
+        ulgoths_beard_textscreen=1
+        respace_seavoyage_textscreen=1
+        teleport_maze_number=0
+        hitpoint_percentage=0
+        no_nabassu_color_change=0
+        no_kahrk_treasure=0
+
+        [hotkeys]
+        hot_key_A=A
+        hot_key_B=B
+        hot_key_C=C
+        hot_key_D=D
+        hot_key_E=E
+        hot_key_F=F
+        hot_key_K=K
+        hot_key_S=S
+        hot_key_V=V
+
+        [other]
+
+        AI_Does_Not_Detect_Items = 0
+        AI_Is_Omniscient = 0
+        Do_Not_Fix_Save_Errors = 0
+        Do_Not_Fix_Thac0_Errors = 0
+        Genai_Does_Not_Adjust_Kits = 0
+        Genai_Does_Not_Adjust_Levels = 0
+        Genai_Does_Not_Adjust_Profs = 0
+        Conceal_Prebuff_Spell_Names = 0
+        Force_No_HLA_Repeats = 0
+        thac0_tolerance=6
+        library_override = none
+        disable_easter_eggs = 0
+        enable_difficulty_based_damage_changes = 0
+        difficulty_icon = v6
+        Force_Difficulty_Widget = 0
+        iwd_overrides_sr = 1
   - name: spell_rev
     components:
       - 0   # Spell Revisions
@@ -337,3 +467,9 @@ modules:
       repository: Lore_From_Learning
       release: v4
       asset: lin-cdlore-v4.tar.gz
+  - name: kittomes
+    components: ~
+    location:
+      github_user: mleduque
+      repository: s9-kittomes
+      branch: master

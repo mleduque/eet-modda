@@ -1,7 +1,9 @@
 version: "1"
 global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
   lang_dir: "fr_FR"
-  lang_preferences: ["#rx#^fran[cç]ais", french, english, "american english"]
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
 modules:
   - name: Branwen
     components: [0]
@@ -34,12 +36,12 @@ modules:
       repository: Emily-BG1
       branch: master
   - name: Helga
-    #prompt for portrait (1. Default)
-    components: [0]
+    components:
+      - 0
     location:
       github_user: Skitia
       repository: Helga-BG1
-      branch: master
+      commit: 40f7c22
       patch:
         relative: helga_bg1-defaultportrait-nomusic.diff
   - name: Kale
@@ -349,8 +351,8 @@ modules:
     location:
       github_user:  Pocket-Plane-Group
       repository: Banter_Pack
-      release: v17
-      asset: BanterPacksV17.zip
+      release: v18
+      asset: banter-packs-v18.iemod
   - name: iepbanters
     components: [0, 1, 2, 3, 4, 5, 7]
     location:
@@ -408,3 +410,10 @@ modules:
     components:
       - 15 # Shar-Teel, Yeslick, Garrick, Branwen, Skie & Eldoth (ToB)
     ignore_warnings: true
+  #- name: jaheirarecast # english only
+  #  components:
+  #  location:
+  #    github_user: AstroBryGuy
+  #    repository: JaheiraRecast
+  #    release: v3.0
+  #    asset: lin-jaheirarecast-v3.0.zip

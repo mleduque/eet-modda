@@ -4,9 +4,9 @@
          PATCH_IF !VARIABLE_IS_SET $SFO_reserved_ini_hash(~%ini%~) BEGIN
             SPRINT value 0
             PATCH_IF !silent BEGIN
--                               PATCH_WARN "ini entry %ini% has been checked, but is not present in the ini file"
-+                               PATCH_LOG "_W_A_R_N ini entry %ini% has been checked, but is not present in the ini file"
-                   END
+-				PATCH_WARN "ini entry %ini% has been checked, but is not present in the ini file"
++				PATCH_LOG "_W_A_R_N ini entry %ini% has been checked, but is not present in the ini file"
+ 		   END
          END ELSE BEGIN
             SPRINT value $SFO_reserved_ini_hash(~%ini%~)
 --- stratagems/sfo/general/lib_tools.tpa

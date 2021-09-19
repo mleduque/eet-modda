@@ -1,7 +1,9 @@
 version: "1"
 global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
   lang_dir: "fr_FR"
-  lang_preferences: ["#rx#^fran[cç]ais", french, english, "american english"]
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
 modules:
   - name: MilitiaOfficer
     components: [0]
@@ -302,7 +304,7 @@ modules:
     location:
       github_user: subtledoctor
       repository: TomeAndBlood
-      tag: "0.9.16"
+      tag: "0.9.17"
   - name: A7#ImprovedShamanicDance
     components:
       - 0  # Danse shamanique amelioree
@@ -365,18 +367,18 @@ modules:
           dirs:
             - faiths_and_powers
             - FnP_Multiclass
-  - name: 5E_spellcasting
-    comment: It should be installed after Tome & Blood and Faiths & Powers; but before Might & Guile and Faiths & Powers Multiclass.
-    components:
-      - 100 # Change All Casters to 5E System
-      - 900 # Set Bonus Spell Slot Items to Work for 5E Casters
-    ignore_warnings: true # no effect altered on... for each component
-    location:
-      github_user: UnearthedArcana
-      repository: 5E_spellcasting
-      tag: "1.1"
-      patch:
-        relative: spellcasting-5e-config.diff
+  #- name: 5E_spellcasting
+  #  comment: It should be installed after Tome & Blood and Faiths & Powers; but before Might & Guile and Faiths & Powers Multiclass.
+  #  components:
+  #    - 100 # Change All Casters to 5E System
+  #    - 900 # Set Bonus Spell Slot Items to Work for 5E Casters
+  #  ignore_warnings: true # no effect altered on... for each component
+  #  location:
+  #    github_user: UnearthedArcana
+  #    repository: 5E_spellcasting
+  #    tag: "1.1"
+  #    patch:
+  #      relative: spellcasting-5e-config.diff
   - name: might_and_guile
     description: Might And Guile - Main component (warns)
     components:
