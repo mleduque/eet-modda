@@ -1,0 +1,13 @@
+diff --git a/setup-iwdification.tp2 b/setup-iwdification.tp2
+index 59e3d89..c5a4aae 100644
+--- iwdification/setup-iwdification.tp2
++++ iwdification/setup-iwdification.tp2
+@@ -370,7 +370,7 @@ OUTER_SET anim_beetle = 0 // 30720 gibb for testing
+ ACTION_IF enhanced_edition BEGIN 
+ 
+   OUTER_SET anim_beetle = 57888
+-  COPY ~iwdification/data/anim/e220.ini~             ~override~
++  COPY ~iwdification/bam/e220.ini~             ~override~
+        ~iwdification/dw_iwdspells_resource/anim/bam~ ~override~
+        ~iwdification/dw_iwdspells_resource/anim/wav~ ~override~
+        

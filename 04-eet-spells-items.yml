@@ -5,21 +5,6 @@ global:
   lang_dir: "fr_FR"
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
 modules:
-  - name: iwdification
-    components:
-      - 10  # Incantation des sorts style Icewind Dale (Andyr)
-      - 60  # Pack de haches a deux mains
-      - 90  # Expanded Polymorph Self
-      - 30  # Pack de sortileges profanes d'IWD
-      - 40  # Pack de sortileges divins d'IWD
-      - 50  # Chanson du barde d'IWD
-      - 72  # IWD Class Updates: Druid -> Install Both of the Above
-      - 100 # IWD Class Updates: Paladin
-      - 120 # IWD Class Updates: Thief: Release Candidate 2
-    location:
-      github_user: Gibberlings3
-      repository: iwdification
-      branch: master
   - name: stratagems
     description: Sword Coast Stratagems
     components:
@@ -28,8 +13,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: SwordCoastStratagems
-      release: v34.1
-      asset: lin-stratagems-34.1.zip
+      release: v34.2
+      asset: lin-stratagems-34.2.zip
       patch:
         relative: scs-warnings.diff
     add_conf:
@@ -148,6 +133,24 @@ modules:
         difficulty_icon = v6
         Force_Difficulty_Widget = 0
         iwd_overrides_sr = 1
+  - name: iwdification
+    components:
+      - 10  # Incantation des sorts style Icewind Dale (Andyr)
+      - 60  # Pack de haches a deux mains
+      #- 90  # Expanded Polymorph Self == Currently FAILS
+      # take SCS versions for now
+      #- 30  # Pack de sortileges profanes d'IWD
+      #- 40  # Pack de sortileges divins d'IWD
+      - 50  # Chanson du barde d'IWD
+      - 72  # IWD Class Updates: Druid -> Install Both of the Above
+      - 100 # IWD Class Updates: Paladin
+      - 120 # IWD Class Updates: Thief: Release Candidate 2
+    location:
+      github_user: Gibberlings3
+      repository: iwdification
+      branch: master
+      patch:
+        relative: iwdification-e220_ini-location.diff
   - name: spell_rev
     components:
       - 0   # Spell Revisions

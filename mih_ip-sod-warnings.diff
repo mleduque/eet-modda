@@ -25,9 +25,9 @@
          PATCH_IF !VARIABLE_IS_SET $SFO_reserved_ini_hash(~%ini%~) BEGIN
             SPRINT value 0
             PATCH_IF !silent BEGIN
--                               PATCH_WARN "ini entry %ini% has been checked, but is not present in the ini file"
-+                               PATCH_LOG "ini entry %ini% has been checked, but is not present in the ini file"
-                   END
+-				PATCH_WARN "ini entry %ini% has been checked, but is not present in the ini file"
++				PATCH_LOG "ini entry %ini% has been checked, but is not present in the ini file"
+ 		   END
          END ELSE BEGIN
             SPRINT value $SFO_reserved_ini_hash(~%ini%~)
 --- mih_ip/tweaks/item_improvements.tpa        2021-08-21 14:08:55.341802610 +0200
@@ -35,8 +35,8 @@
 @@ -132,6 +132,7 @@
    LAUNCH_ACTION_FUNCTION externalise_item_ability
      STR_VAR
-     item       = "potn11"
-+    spell      = "potn11"
+     item	= "potn11"
++    spell	= "potn11"
    END
  
    MAKE_PATCH
