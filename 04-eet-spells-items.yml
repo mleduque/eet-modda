@@ -13,8 +13,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: SwordCoastStratagems
-      release: v34.2
-      asset: lin-stratagems-34.2.zip
+      release: v34.3
+      asset: lin-stratagems-34.3.zip
       patch:
         relative: scs-warnings.diff
     add_conf:
@@ -160,10 +160,11 @@ modules:
       - 55  # Spell Deflection blocks AoE spells
       - 60  # Update Spellbooks of Joinable NPCs
       #- 65   # Revised Warrior HLAs
+      - 140 # Randomized equipment - with HQ items
     location:
-      github_user: Gibberlings3
+      github_user: mleduque
       repository: SpellRevisions
-      branch: master
+      branch: some-branch-with-translation-added
   - name: A7-TotLM-BG2EE
     description: Trial of the Luremaster - Main component (warns)
     components:
@@ -470,9 +471,9 @@ modules:
       repository: Lore_From_Learning
       release: v4
       asset: lin-cdlore-v4.tar.gz
-  - name: kittomes
-    components: ~
-    location:
-      github_user: mleduque
-      repository: s9-kittomes
-      branch: master
+  #- name: kittomes
+  #  components: ~
+  #  location:
+  #    github_user: mleduque
+  #    repository: s9-kittomes
+  #    branch: master

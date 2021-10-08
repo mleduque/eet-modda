@@ -99,6 +99,13 @@ modules:
       repository: Grey_The_Dog
       release: v6
       asset: grey-the-dog-npc-6.iemod
+  - name: ACBre
+    components: [0]
+    location:
+      github_user: Gitjas
+      repository: ACBre
+      release: v11.0.0
+      asset: ascalons-breagar-11.0.0.iemod
   # issues with EET_end
   #- name: GlamNPCPack
   #  version: 3.1
@@ -387,6 +394,14 @@ modules:
       repository: Jasteys_SoD_Tweakpack
       release: v5.1
       asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v5.1.iemod
+  - name: sodrtd
+    description: Road To Discovery
+    components:
+    location:
+      github_user: Gitjas
+      repository: Road_To_Discovery_for_SoD
+      release: v0.1Beta
+      asset: road-to-discovery-for-sod-0.1-.beta.iemod
   - name: BG1NPCSoA # install after other versions of same npcs
     description: BG1 NPCs in BG2
     components:

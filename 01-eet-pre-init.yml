@@ -34,6 +34,12 @@ modules:
     add_conf:
       file_name: bgee_dir.txt
       content: ../../bg1/game
+  #- name: infinityanimations
+  #  components: ~
+  #  location:
+  #    github_user: GwendolyneFreddy
+  #    repository: Infinity-Animations
+  #    branch: master
   - name: LeUI-SoD
     components:
       - 0 # lefreut's Enhanced UI (SoD skin) - Core component
