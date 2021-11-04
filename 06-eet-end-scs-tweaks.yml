@@ -127,14 +127,6 @@ modules:
       repository: Jimfix
       release: v3.1a
       asset: jimfix-v3.1a.iemod
-  - name: thecalling # install after stratagems or cdtweaks (even if quest mod)
-    description: The calling
-    components:
-      - 20
-    location:
-      github_user: Gibberlings3
-      repository: The_Calling
-      branch: master
   - name: atweaks
     components:
       - 100 # Restaurer l'infravision innee des personnages demi-orques
@@ -176,40 +168,40 @@ modules:
   - name: tnt
     description: Tweaks and Tricks mod for Baldur's Gate 2
     components:
-      - 0  # Smarter familiars
-      - 1  # More resilient familiars
-      - 2  # Improved trap detection: instant detection
-      - 3  # Improved trap detection: increase trap sense range
-      - 5  # Trap reminders -> generic
-      - 6  # Trap intuition -> not in combat
-      - 9  # Trap intuition: pause game -> all traps
-      - 11 # Trap intuition: center screen -> on the character
-      - 13 # Trap intuition: play "trap found" sound
-      - 14 # Improved trap detection: core (REQUIRED for any of previous traps components to work
-      - 24 # Hassle-free ammo
-      - 27 # Throwing weapons damage type -> Both of the above options
-      - 29 # Sensible Cloak of Mirroring
-      - 33 # Potion of Really Mirrored Eyes
-      - 34 # Unlimited goodberries stacking
-      - 35 # Improved Shandalar's cloak
-      - 37 # Improved Equalizer
-      - 38 # Distinct color for Perdue's sword
-      - 39 # Working protection from poison
-      - 41 # Spider form ignores web
-      - 44 # Cheesy Slayer: reputation -> reduced loss
-      - 46 # Sensible Otiluke's Resilient Sphere
-      - 47 # Greater Command AoE
-      - 48 # Working Non-Detection
-      - 52 # Sensible Blade spins
-      - 65 # Improved strongholds
-      - 67 # More map notes
-      - 69 # Mod romance cheats
-      - 74 # Starting bags -> Starting bags
+      #- 0  # Smarter familiars
+      #- 1  # More resilient familiars
+      #- 2  # Improved trap detection: instant detection
+      #- 3  # Improved trap detection: increase trap sense range
+      #- 5  # Trap reminders -> generic
+      #- 6  # Trap intuition -> not in combat
+      #- 9  # Trap intuition: pause game -> all traps
+      #- 11 # Trap intuition: center screen -> on the character
+      #- 13 # Trap intuition: play "trap found" sound
+      #- 14 # Improved trap detection: core (REQUIRED for any of previous traps components to work
+      #- 24 # Hassle-free ammo
+      #- 27 # Throwing weapons damage type -> Both of the above options
+      #- 29 # Sensible Cloak of Mirroring
+      #- 33 # Potion of Really Mirrored Eyes
+      #- 34 # Unlimited goodberries stacking
+      #- 35 # Improved Shandalar's cloak
+      #- 37 # Improved Equalizer
+      #- 38 # Distinct color for Perdue's sword
+      #- 39 # Working protection from poison
+      #- 41 # Spider form ignores web
+      #- 44 # Cheesy Slayer: reputation -> reduced loss
+      #- 46 # Sensible Otiluke's Resilient Sphere
+      #- 47 # Greater Command AoE
+      #- 48 # Working Non-Detection
+      #- 52 # Sensible Blade spins
+      #- 65 # Improved strongholds
+      #- 67 # More map notes
+      #- 69 # Mod romance cheats
+      #- 74 # Starting bags -> Starting bags
     location:
       github_user: BGforgeNet
       repository: bg2-tweaks-and-tricks
-      release: v8.11
-      asset: tweaks-and-tricks-v8.11.iemod
+      release: v8.12
+      asset: tweaks-and-tricks-v8.12.iemod
   - name: 35thac0
     components: [0]
     location:
@@ -240,6 +232,13 @@ modules:
       - 2 # Grant second-class Kits their Proper Proficiency Selection
     location:
       github_user: mleduque
+      repository: sorc_tweak
+      branch: master
+  - name: sorc_tweak
+    components:
+      - 2
+    location:
+      github_user: mleduque
       repository: kjeron_DUAL_TO_KIT
       branch: master
   - name: zg_iwd_voices
@@ -258,3 +257,15 @@ modules:
       repository: Baldurs-Gate-II-Voice-Pack-for-EE-2.6
       release: version-1.0.0
       asset: zg-bg2-voices-1.0.0.iemod
+  - name: ee_cosmetic_enhancements
+    components: ~
+    location:
+      github_user: DaerosTrollkiller
+      repository: EE_Cosmetic_Item_Enhancement
+      branch: master
+  - name: better_spell_visuals
+    components: ~
+    location:
+      github_user: Gibberlings3
+      repository: Better-Spell-Visuals
+      branch: master

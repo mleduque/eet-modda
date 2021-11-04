@@ -51,7 +51,9 @@ modules:
       - 0 # The Drizzt Saga pour BGEE/Tutu/BGT -> Version par defaut : zones connectees par des declencheurs de voyage
       - 3  # Debut repousse : Drizzt revient apres la Tour de Durlag
     location:
-      http: http://downloads.blackwyrmlair.net/drizztsaga/drizztsaga.zip
+      github_user: MattyGroove
+      repository: DrizztSaga
+      tag: V3.02
   - name: soa # The Stone of Askavar
     components: [0]
     version: "2.2"

@@ -8,10 +8,9 @@ modules:
   - name: Branwen
     components: [0]
     location:
-      github_user: Pocket-Plane-Group
+      github_user: Jazira33
       repository: Branwen_for_BGII
-      release: v7
-      asset: branwen-npc-for-bgii-v7.iemod
+      branch: master
   - name: Aura_BG1
     components: [0]
     location:
@@ -104,8 +103,29 @@ modules:
     location:
       github_user: Gitjas
       repository: ACBre
-      release: v11.0.0
-      asset: ascalons-breagar-11.0.0.iemod
+      release: v11.1.0
+      asset: ascalons-breagar-11.1.0.iemod
+  - name: btl
+    components: ~
+    location:
+      github_user: SpellholdStudios
+      repository: Beyond_the_Law
+      release: v2.0.0
+      asset: beyond-the-law-v2.0.0.iemod
+  - name: kiara-zaiya
+    components: ~
+    location:
+      github_user: SpellholdStudios
+      repository: Kiara-Zaiya
+      release: v2.0.1
+      asset: kiara-zaiya-v2.0.1.iemod
+  - name: alora
+    components: ~
+    location:
+      github_user: GwendolyneFreddy
+      repository: Alora-NPC-for-BG2
+      release: v2.0
+      asset: alora-npc-for-bg2-2.0.iemod
   # issues with EET_end
   #- name: GlamNPCPack
   #  version: 3.1
@@ -144,8 +164,11 @@ modules:
     version: 1.1
     components: [0]
     location:
-      http: https://downloads.weaselmods.net/download/walahnan-bg1ee/?wpdmdl=428&refresh=61055365813b31627738981
-      rename: Walahnan v1.1.zip
+      path: /home/mick/Games/modda-cache/static/Walahnan v1.1.zip
+  - name: WalahnanBG2
+    components: ~
+    location:
+      path: /home/mick/Games/modda-cache/static/WalahnanBG2 v0.9.zip
   - name: gavin
     # will prompt for romance timer
     components:
@@ -335,13 +358,14 @@ modules:
       http: https://downloads.weaselmods.net/download/skie-the-cost-of-one-girls-soul/?wpdmdl=92&refresh=60ecc65553e471626130005
       rename: Skie - The Cost of One Girls Soul v3.7.zip
   - name: Wings
-    components: [0, 1]
+    components:
+      - 0 # Wings - Wings for BG2:EE
+      - 1 # Wings - Restore missing banters?
+      #- 1 # Wings - Remove conflict with Hexxat?
     location:
-      github_user: mleduque
-      repository: wings
-      branch: master
-      layout:
-        layout_type: single_dir_plus_tp2
+      github_user: Skitia
+      repository: Wings
+      tag: v0.99
   - name: npckit
     components: [30, 31, 400, 410, 900, 1415, 2100, 2200, 2300, 2500, 2800]
     location:
@@ -376,32 +400,33 @@ modules:
     components:
       - 0 # Crossmod Banter Pack for Shadows of Amn
       - 1 # Crossmod Banter Pack for Throne of Bhaal
+      # - 2 # Crossmod Romance Conflicts
     location:
       github_user: Gibberlings3
       repository: Crossmod_Banter_Pack_for_Baldurs_Gate_II
-      release: "v20"
-      asset: crossmod-banter-pack-for-baldurs-gate-ii-v20.iemod # tgz truncates some file names
+      release: v21
+      asset: crossmod-banter-pack-for-baldurs-gate-ii-v21.iemod # tgz truncates some file names
   - name: c#sodtweaks #[0, 1, 2, 5, 13]
     components:
-      - 1  # Ending Independent on PC Replies
-      - 3  # Do Not Miss NPC-PC Dialogues -> Activate All NPC-PC Dialogues Always
-      - 5  # More Dialogue Choices & Prevent Dead Ends:
-      - 6  # Use Imoen's SoD Portrait for BGII in EET & BGT
-      - 9  # Adjust PC's Starting XP at Beginning of SoD, by subtledoctor -> Set Starting XP to 90,000
-      - 12 # SoD Ending: jastey's Tweaks -> Revised Full Version
+      #- 1  # Ending Independent on PC Replies
+      #- 3  # Do Not Miss NPC-PC Dialogues -> Activate All NPC-PC Dialogues Always
+      #- 5  # More Dialogue Choices & Prevent Dead Ends:
+      #- 6  # Use Imoen's SoD Portrait for BGII in EET & BGT
+      #- 9  # Adjust PC's Starting XP at Beginning of SoD, by subtledoctor -> Set Starting XP to 90,000
+      #- 12 # SoD Ending: jastey's Tweaks -> Revised Full Version
     location:
       github_user: Gibberlings3
       repository: Jasteys_SoD_Tweakpack
-      release: v5.1
-      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v5.1.iemod
+      release: v6
+      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v6.iemod
   - name: sodrtd
     description: Road To Discovery
     components:
     location:
       github_user: Gitjas
       repository: Road_To_Discovery_for_SoD
-      release: v0.1Beta
-      asset: road-to-discovery-for-sod-0.1-.beta.iemod
+      release: v0.3Beta
+      asset: road-to-discovery-for-sod-0.3pre-.beta.iemod
   - name: BG1NPCSoA # install after other versions of same npcs
     description: BG1 NPCs in BG2
     components:

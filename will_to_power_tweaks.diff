@@ -1,0 +1,117 @@
+--- Will_to_Power/components/200_thief_psion.tpa
++++ Will_to_Power/components/200_thief_psion.tpa
+@@ -51,7 +51,7 @@ ADD_KIT ~D5_PSION~
+ 
+ //ALIGNMENT RESTRICTIONS______________________________________________________________
+ //                 LG LN LE NG TN NE CG CN CE
+-~D5_PSION          1  1  1  1  1  1  0  0  0~
++~D5_PSION          1  1  1  1  1  1  1  1  1~
+ 
+ //DUAL CLASS OPTIONS__________________________________________________________________
+ //                 FT CL MA TH DR RA
+@@ -89,10 +89,10 @@ ACTION_IF GAME_IS ~bgee bg2ee eet iwdee~ THEN BEGIN
+ 			briefdesc = RESOLVE_STR_REF (@203)
+ 		STR_VAR
+ 			kit_name = D5_PSION
+-			backstab = ~1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2~
++			backstab = ~1 2 2 2 2 2 2 3 3 3 3 3 3 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4~
+ 			clswpbon = ~0 0 3~
+-			thiefskl = ~30 12~
+-			thiefscl = ~0 100 100 100 100 100 0 0~
++			thiefskl = ~40 20~
++			thiefscl = ~0 100 100 100 100 100 100 0~
+ 			clsrcreq = ~1 1 1 1 1 1 1~
+ 	END
+ END
+@@ -181,7 +181,7 @@ ADD_KIT ~D5_PSION_MENU~
+ 
+ //ALIGNMENT RESTRICTIONS______________________________________________________________
+ //                 LG LN LE NG TN NE CG CN CE
+-~D5_PSION_MENU     1  1  1  1  1  1  0  0  0~
++~D5_PSION_MENU          1  1  1  1  1  1  1  1  1~
+ 
+ //DUAL CLASS OPTIONS__________________________________________________________________
+ //                 FT CL MA TH DR RA
+@@ -219,11 +219,11 @@ ACTION_IF GAME_IS ~bgee bg2ee eet iwdee~ THEN BEGIN
+ 			briefdesc = RESOLVE_STR_REF (@203)
+ 		STR_VAR
+ 			kit_name = D5_PSION_MENU
+-			hpclass = ~HPWIZ~
+-			backstab = ~1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2~
++			hpclass = ~HPROG~
++			backstab = ~1 2 2 2 2 2 2 3 3 3 3 3 3 3 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4~
+ 			clswpbon = ~0 0 3~
+-			thiefskl = ~30 15~
+-			thiefscl = ~0 100 100 100 100 100 0 0~
++			thiefskl = ~40 20~
++			thiefscl = ~0 100 100 100 100 100 100 0~
+ 			clsrcreq = ~1 1 1 1 1 1 1~
+ 	END
+ END
+@@ -364,13 +364,13 @@ IF_EXISTS BUT_ONLY
+ //PSIONIC HLA TABLES__________________________________________________________________
+ //
+ // ***** need to work out whether to keep getting new powers via clab at high levels, or to use HLAs
+-LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~GA_SPCL910~ END	
+-LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~GA_SPCL911~ END
+-LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~GA_SPCL912~ END
+-LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~GA_RR#THL04~ END
+-LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~GA_RR#ALCHT~ END
+-LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~GA_TG#BRPO~ END
+-LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~AP_SPCL915~ END
++//LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~GA_SPCL910~ END	
++//LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~GA_SPCL911~ END
++//LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~GA_SPCL912~ END
++//LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~GA_RR#THL04~ END
++//LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~GA_RR#ALCHT~ END
++//LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~GA_TG#BRPO~ END
++//LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~AP_SPCL915~ END
+ LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~GA_SPCL916~ END
+ LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~GA_SPCL918~ END
+ LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~GA_SPCL919~ END
+--- Will_to_Power/components/300_fighter_psion.tpa
++++ Will_to_Power/components/300_fighter_psion.tpa
+@@ -47,7 +47,7 @@ ADD_KIT ~D5_SOULBLADE~
+ 
+ //ALIGNMENT RESTRICTIONS______________________________________________________________
+ //                    LG LN LE NG TN NE CG CN CE
+-~D5_SOULBLADE          1  1  1  1  1  1  0  0  0~
++~D5_SOULBLADE          1  1  1  1  1  1  1  1  1~
+ 
+ //DUAL CLASS OPTIONS__________________________________________________________________
+ //                 	  FT CL MA TH DR RA
+--- Will_to_Power/components/400_ranger_psion.tpa
++++ Will_to_Power/components/400_ranger_psion.tpa
+@@ -48,7 +48,7 @@ ADD_KIT ~D5_PSYPHER~
+ 
+ //ALIGNMENT RESTRICTIONS______________________________________________________________
+ //                  LG LN LE NG TN NE CG CN CE
+-~D5_PSYPHER          1  1  1  1  1  1  0  0  0~
++~D5_PSYPHER          1  1  1  1  1  1  1  1  1~
+ 
+ //DUAL CLASS OPTIONS__________________________________________________________________
+ //                  FT CL MA TH DR RA
+--- Will_to_Power/components/500_mage_psion.tpa
++++ Will_to_Power/components/500_mage_psion.tpa
+@@ -48,7 +48,7 @@ ADD_KIT ~D5_CEREBRO~
+ 
+ //ALIGNMENT RESTRICTIONS______________________________________________________________
+ //                  LG LN LE NG TN NE CG CN CE
+-~D5_CEREBRO          1  1  1  1  1  1  0  0  0~
++~D5_CEREBRO          1  1  1  1  1  1  1  1  1~
+ 
+ //DUAL CLASS OPTIONS__________________________________________________________________
+ //                  FT CL MA TH DR RA
+--- Will_to_Power/components/900_dark_sun_mode.tpa
++++ Will_to_Power/components/900_dark_sun_mode.tpa
+@@ -10,8 +10,8 @@ DEFINE_ACTION_FUNCTION dark_sun_mode BEGIN
+ 
+ COPY_EXISTING ~d5pswt0.spl~ ~override~
+   LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 146 probability1 = 93 probability2 = 0 STR_VAR match_resource = ~d5pswt1~ END
+-  LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 146 probability1 = 96 probability2 = 89 STR_VAR match_resource = ~d5pswt2~ END
+-  LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 146 probability1 = 100 probability2 = 94 STR_VAR match_resource = ~d5pswt3~ END
++  LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 146 probability1 = 96 probability2 = 49 STR_VAR match_resource = ~d5pswt2~ END
++  LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 146 probability1 = 100 probability2 = 74 STR_VAR match_resource = ~d5pswt3~ END
+ IF_EXISTS BUT_ONLY
+ 
+ END 	//	end define function

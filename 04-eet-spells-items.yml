@@ -145,6 +145,7 @@ modules:
       - 72  # IWD Class Updates: Druid -> Install Both of the Above
       - 100 # IWD Class Updates: Paladin
       - 120 # IWD Class Updates: Thief: Release Candidate 2
+    language: 0 # translation is not up to date with recent changes
     location:
       github_user: Gibberlings3
       repository: iwdification
@@ -161,10 +162,11 @@ modules:
       - 60  # Update Spellbooks of Joinable NPCs
       #- 65   # Revised Warrior HLAs
       - 140 # Randomized equipment - with HQ items
+    language: 0 # translation is not up to date with recent changes
     location:
-      github_user: mleduque
+      github_user: Gibberlings3
       repository: SpellRevisions
-      branch: some-branch-with-translation-added
+      branch: master
   - name: A7-TotLM-BG2EE
     description: Trial of the Luremaster - Main component (warns)
     components:
@@ -386,7 +388,8 @@ modules:
     location:
       github_user: Argent77
       repository: A7-MagicStore
-      branch: devel
+      release: v2.2
+      asset: A7-MagicStore-v2.2.iemod
   - name: heartwood
     description: Heart of the Wood
     components: [0]
@@ -429,8 +432,8 @@ modules:
     location:
       github_user: AngelGryph
       repository: MadeInHeaven_SpellPack
-      release: v4
-      asset: lin-mih_sp-v4.tar.gz
+      release: v5
+      asset: lin-mih_sp-v5.tar.gz
       patch:
         relative: mih_sp-warnings.diff
       add_conf:
@@ -460,6 +463,19 @@ modules:
       repository: Saradas_Magic_for_BG2
       release: v2.0.0
       asset: saradas-magic-for-bg2-v2.0.0.iemod
+  - name: trovador
+    components: ~
+    location:
+      github_user: SpellholdStudios
+      repository: Trovador_REO
+      release: v2.5.0
+      asset: trovador-reo-v2.5.0.iemod
+  - name: Unofficial Item Pack
+    components:
+    location:
+      github_user: mleduque-not sod items
+      repository: edvin_unofficial_item_pack
+      tag: v2.7b
   - name: cdlore
     components:
       - 10 # Books Provide Lore Bonuses
@@ -477,3 +493,21 @@ modules:
   #    github_user: mleduque
   #    repository: s9-kittomes
   #    branch: master
+  - name: POISON_NO_BYPASS
+    components: ~
+    location:
+      github_user: mleduque
+      repository: kjeron_poison_no_bypass
+      branch: master
+  - name: polydisp-unsure
+    components: ~
+    location:
+      github_user: mleduque
+      repository: polytope_revised_dispelling
+      branch: master
+  - name: polyvorp
+    components: ~
+    location:
+      github_user: mleduque
+      repository: polytope_rebalanced_vorpal
+      branch: master
