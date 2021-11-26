@@ -112,10 +112,10 @@ modules:
   - name: "butchery"
     description: butchery components that must be installed after SCS
     components:
-      - 44 #
-      - 46 #
-      - 47 #
-      - 53 #
+      #- 44 #
+      #- 46 #
+      #- 47 #
+      #- 53 #
   - name: jimfix
     description: Fixes and convenience tweaks aimed at an Ascension + SCS v33 install
     components:

@@ -85,10 +85,7 @@ modules:
     components:
       - 0 # Yvette Romance - BG2 Romance Character
     location:
-      github_user: mleduque
-      repository: Lava_Yvette
-      branch: main
-      original: https://downloads.weaselmods.net/download/yvette-romance/?wpdmdl=79&refresh=60f6277894a081626744696
+      path: /home/mick/Games/modda-cache/static/Yvette Romance v5.00.zip
       patch:
         relative: yvette-noprompt.diff
   - name: c#greythedog
@@ -96,15 +93,16 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Grey_The_Dog
-      release: v6
-      asset: grey-the-dog-npc-6.iemod
+      release: v7
+      asset: grey-the-dog-npc-7.iemod
   - name: ACBre
+    description: Ascalon's Breagar
     components: [0]
     location:
       github_user: Gitjas
       repository: ACBre
-      release: v11.1.0
-      asset: ascalons-breagar-11.1.0.iemod
+      release: v11.3.0
+      asset: ascalons-breagar-11.3.0.iemod
   - name: btl
     components: ~
     location:
@@ -346,8 +344,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Ajantis_BG1_Expansion
-      release: v17
-      asset: ajantis-bg1-expansion-modification-17.iemod
+      release: v18.1
+      asset: ajantis-bg1-expansion-modification-18.1.iemod
   - name: SkieCost # install late because adds crossmod banters with Yvette & Foundling
     description: "Skie: The Cost of One Girl’s Soul"
     components:
@@ -417,8 +415,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Jasteys_SoD_Tweakpack
-      release: v6
-      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v6.iemod
+      release: v7.0
+      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v7pre.iemod
   - name: sodrtd
     description: Road To Discovery
     components:

@@ -147,11 +147,9 @@ modules:
       - 120 # IWD Class Updates: Thief: Release Candidate 2
     language: 0 # translation is not up to date with recent changes
     location:
-      github_user: Gibberlings3
+      github_user: mleduque
       repository: iwdification
-      branch: master
-      patch:
-        relative: iwdification-e220_ini-location.diff
+      branch: french-tra
   - name: spell_rev
     components:
       - 0   # Spell Revisions
@@ -167,6 +165,26 @@ modules:
       github_user: Gibberlings3
       repository: SpellRevisions
       branch: master
+  - name : Weasels!
+    components:
+      - 0
+    location:
+      github_user: mleduque
+      repository: lava_weasels
+      branch: v3-french
+  #- name: polydisp-unsure # some compat issue with... everything
+  #  components: ~
+  #  location:
+  #    github_user: mleduque
+  #    repository: polytope_revised_dispelling
+  #    branch: master
+  - name: Magic_Battles_Revised
+    components:
+      - 10 # Revised Magic Battles
+    location:
+      github_user: mleduque
+      repository: magic_battles_revised
+      branch: fr-translation
   - name: A7-TotLM-BG2EE
     description: Trial of the Luremaster - Main component (warns)
     components:
@@ -498,12 +516,6 @@ modules:
     location:
       github_user: mleduque
       repository: kjeron_poison_no_bypass
-      branch: master
-  - name: polydisp-unsure
-    components: ~
-    location:
-      github_user: mleduque
-      repository: polytope_revised_dispelling
       branch: master
   - name: polyvorp
     components: ~

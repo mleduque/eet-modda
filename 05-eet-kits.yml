@@ -245,8 +245,7 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Tweaks-Anthology
-      release: v10
-      asset: lin-cdtweaks-v10.zip
+      branch: master
     add_conf:
       file_name: cdtweaks.txt
       content: |
@@ -274,8 +273,16 @@ modules:
     location:
       github_user: Gibberlings3
       repository: SongAndSilence
-      release: v11
-      asset: lin-song_and_silence-v11.tar.gz
+      release: v12
+      asset: lin-song_and_silence-v12.tar.gz
+  - name: spstuff
+    description: Sorcerer's Place Collection
+    components: ~
+    location:
+      github_user: Gibberlings3
+      repository: SP_Collection
+      release: v12
+      asset: lin-spstuff-v12.tar.gz
   - name: TomeAndBlood
     description: Tome And Blood - main
     components: # 5E says "revised specialists": no, "rebalance spell schools": yes

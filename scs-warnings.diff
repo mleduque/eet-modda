@@ -40,3 +40,14 @@
    END
  
    PATCH_IF (verbose && !silent) BEGIN
+--- stratagems/priest/spellchoices_defensive/demivrgvs/druid.tph
++++ stratagems/priest/spellchoices_defensive/demivrgvs/druid.tph
+@@ -38,7 +38,7 @@ BEGIN
+       7 BEGIN
+          PUSH spells ~BLESS FLAME_BLADE BARKSKIN~
+          PUSH_RANDOM spells (CURE_DISEASE null)
+-         PUSH_RANDOM spells (DEFENSIVE_HARMONY null
++         PUSH_RANDOM spells (DEFENSIVE_HARMONY null)^M
+       END
+ /////////////////////////////////////////// level 8 /////////////////////////////////////
+       8 BEGIN

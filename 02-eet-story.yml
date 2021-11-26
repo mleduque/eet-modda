@@ -183,8 +183,7 @@ modules:
   - name: Eilistraee
     components: [0]
     location:
-      http: https://downloads.weaselmods.net/download/eilistraees-song/?wpdmdl=89&refresh=60ed5f1bb7f541626169115
-      rename: Eilistraees Song v6.8.zip
+      path: /home/mick/Games/modda-cache/static/Eilistraees Song v7.00.zip
   - name: TotDG
     components: [0]
     location:
@@ -193,8 +192,7 @@ modules:
   - name: Innershade
     components: [0]
     location:
-      http: https://downloads.weaselmods.net/download/innershade/?wpdmdl=73&refresh=60ed99cdd05d91626184141
-      rename: Innershade v10.4.zip
+      path: /home/mick/Games/modda-cache/static/Innershade v11.0.zip
   - name: WhiteQueen
     components: [0]
     location:
@@ -203,8 +201,7 @@ modules:
   - name: ISNF
     components: [0]
     location:
-      http: https://downloads.weaselmods.net/download/i-shall-never-forget/?wpdmdl=77&refresh=60edd79b1e8e31626199963
-      rename: I Shall Never Forget v5.8.zip
+      path: /home/mick/Games/modda-cache/static/I Shall Never Forget v6.0.zip
   - name: SouthernEdge
     components: [0]
     location:
@@ -381,6 +378,13 @@ modules:
       repository: Imoen4Ever
       release: v8
       asset: imoen-4-ever-v8.iemod
+  - name: c#anotherfinehell # after imoen4ever, before sod tweaks
+    components: ~
+    location:
+      github_user: Gitjas
+      repository: Another_Fine_Hell
+      release: Alpha_211102
+      asset: another-fine-hell-for-sod-alpha_211102.iemod
   - name: d0questpack
     description: SimDing0's Quest Pack
     components: [0, 1, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
@@ -545,8 +549,8 @@ modules:
     location:
       github_user: Gitjas
       repository: Solaufeins_Rescue_NPC
-      release: v2.2
-      asset: solaufeins-rescue-jasteys-solaufein-npc-mod-for-bgii-2.2-beta.iemod
+      release: v3
+      asset: solaufeins-rescue-jasteys-solaufein-npc-mod-for-bgii-3.iemod
   - name: "TangledIsle"
     components: [0]
     location:
@@ -670,20 +674,19 @@ modules:
     location:
       http: http://akadis.baldursgateworld.fr/Jan/zip/JansQuest1.5.0.zip
   - name: "butchery"
-    components:
-      - 10 #
-      - 11 #
-      - 12 #
-      - 21 #
-      - 22 #
-      - 32 #
-      - 40 #
+    components: #components installé avant SCS, deuxèmeliste pour après SCS
+      #- 10 #
+      #- 11 #
+      #- 12 #
+      #- 21 #
+      #- 22 #
+      #- 32 #
+      #- 40 #
     location:
       github_user: GwendolyneFreddy
       repository: butchery
-      branch: master
-      patch:
-        relative: butchery-strings.diff
+      release: v5.0.0
+      asset: butchery-v5.0.0.iemod
   - name: "TheBeaurinLegacy"
     components:
       - 1000 # The Beaurin Legacy for BG2:SoA & ToB & BGII:EE
