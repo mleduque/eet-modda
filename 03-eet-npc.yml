@@ -110,13 +110,14 @@ modules:
       repository: Beyond_the_Law
       release: v2.0.0
       asset: beyond-the-law-v2.0.0.iemod
-  - name: kiara-zaiya
-    components: ~
-    location:
-      github_user: SpellholdStudios
-      repository: Kiara-Zaiya
-      release: v2.0.1
-      asset: kiara-zaiya-v2.0.1.iemod
+  # apparently blocks access to watcher's keep from soa
+  #- name: kiara-zaiya
+  #  components: ~
+  #  location:
+  #    github_user: SpellholdStudios
+  #    repository: Kiara-Zaiya
+  #    release: v2.0.1
+  #    asset: kiara-zaiya-v2.0.1.iemod
   - name: alora
     components: ~
     location:
@@ -166,7 +167,7 @@ modules:
   - name: WalahnanBG2
     components: ~
     location:
-      path: /home/mick/Games/modda-cache/static/WalahnanBG2 v0.9.zip
+      path: /home/mick/Games/modda-cache/static/WalahnanBG2 v0.92.zip
   - name: gavin
     # will prompt for romance timer
     components:
@@ -207,6 +208,10 @@ modules:
       repository: Valerie_NPC
       release: v1.2
       asset: valerie-npc-for-bg-v1.2.iemod
+  - name: Bristlelick
+    components: ~
+    location:
+      pah: /home/mick/Games/modda-cache/static/Bristlelick v2.0.zip
   - name: chattyimoen
     components:
       - 0 # Chatty Imoen : Repliques audio supplementaires
@@ -359,11 +364,11 @@ modules:
     components:
       - 0 # Wings - Wings for BG2:EE
       - 1 # Wings - Restore missing banters?
-      #- 1 # Wings - Remove conflict with Hexxat?
+      #- 2 # Wings - Remove conflict with Hexxat?
     location:
       github_user: Skitia
       repository: Wings
-      tag: v0.99
+      tag: v1.00
   - name: npckit
     components: [30, 31, 400, 410, 900, 1415, 2100, 2200, 2300, 2500, 2800]
     location:
@@ -415,8 +420,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Jasteys_SoD_Tweakpack
-      release: v7.0
-      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v7pre.iemod
+      release: v7.2
+      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v7.2.iemod
   - name: sodrtd
     description: Road To Discovery
     components:
@@ -439,7 +444,7 @@ modules:
     location:
       github_user: mleduque
       repository: TBGCoM_BG1NPCSoA
-      branch: master
+      commit: fe40e3d
       patch:
         relative: bg1npcsoa-nopdf.diff
         encoding: WIN1251

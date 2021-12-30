@@ -78,8 +78,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: EndlessBG1
-      release: v8
-      asset: endless-bg1-mod-8.iemod
+      release: v9
+      asset: endless-bg1-mod-9.iemod
   - name: transitions
     components:
       #- 0   # Main component: Allow continued play after Sarevok and/or Irenicus is defeated
@@ -96,8 +96,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: transitions
-      release: v2.0
-      asset: transitions-v2.0.iemod
+      release: v2.3
+      asset: transitions-v2.3.iemod
   - name: DSotSC
     components:
       - 0 # Dark Side of the Sword Coast (DSotSC)
@@ -147,8 +147,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: BG_Quests_And_Encounters
-      release: v25
-      asset: baldurs-gate-mini-quests-and-encounters-modification-v25.iemod
+      release: v25.2
+      asset: baldurs-gate-mini-quests-and-encounters-modification-v25.2.iemod
   - name: AC_QUEST
     description: Ascalon's Questpack
     components:
@@ -207,10 +207,13 @@ modules:
     location:
       path: /home/mick/Games/modda-cache/static/SouthernEdge_v3.21.zip
   - name: Ooze
-    components: [0]
+    components: ~
     location:
-      http: https://downloads.weaselmods.net/download/oozes-lounge/?wpdmdl=59&refresh=60ed1f85797ca1626152837
-      rename: Oozes_Lounge_v2.9.zip
+      path: /home/mick/Games/modda-cache/static/Oozes Lounge v2.92.zip
+  - name: BridgesBlock
+    components: ~
+    location:
+      path: /home/mick/Games/modda-cache/static/BridgesBlock v0.91.zip
   - name: SirinesCall
     description: The Lure of the Sirine's Call
     components: [0, 1]
@@ -358,33 +361,33 @@ modules:
     location:
       github_user: Gibberlings3
       repository: The_Calling
-      release: Beta_3
-      asset: lin-thecalling-Beta_3.tar.gz
+      release: v1
+      asset: lin-thecalling-v1.tar.gz
   - name: imoen_forever
     components:
-    - 0  # Imoen 4 Ever in BGII: Imoen returns at the beginning of chapter 2
-    - 1  # BGII content: ~Give Imoen dialogue content in SoA~
-    - 2  # BGII content: ~Yoshimo comes to Brynnlaw~
-    - 3  # BGII content: ~Give Imoen protection spell in Chapters 2 & 3~
-    - 9  # BGII content: ~Compatibility with Alternatives and Saerileth~
-    - 10 # SoD component: ~Imoen remains in the Group in SoD~
-    - 11 # second SoD part: Imoen returns to PC in first camp bd1000
-    - 12 # third SoD part: Imoen gives be5th SoD part: Give Imoen dialogue content during chapters 8 to 12tter reason to stay behind in Palace
-    - 13 # 4th SoD part: Play cutscene with Imoen an Duke Jannath
-    - 14 # 5th SoD part: Give Imoen dialogue content during chapters 8 to 12
-    - 15 # 6th SoD part: Imoen at the end of the game should be the one that was in party (SoD only)
+    #- 0  # Imoen 4 Ever in BGII: Imoen returns at the beginning of chapter 2
+    #- 1  # BGII content: ~Give Imoen dialogue content in SoA~
+    #- 2  # BGII content: ~Yoshimo comes to Brynnlaw~
+    #- 3  # BGII content: ~Give Imoen protection spell in Chapters 2 & 3~
+    #- 9  # BGII content: ~Compatibility with Alternatives and Saerileth~
+    #- 10 # SoD component: ~Imoen remains in the Group in SoD~
+    #- 11 # second SoD part: Imoen returns to PC in first camp bd1000
+    #- 12 # third SoD part: Imoen gives be5th SoD part: Give Imoen dialogue content during chapters 8 to 12tter reason to stay behind in Palace
+    #- 13 # 4th SoD part: Play cutscene with Imoen an Duke Jannath
+    #- 14 # 5th SoD part: Give Imoen dialogue content during chapters 8 to 12
+    #- 15 # 6th SoD part: Imoen at the end of the game should be the one that was in party (SoD only)
     location:
       github_user: Gibberlings3
       repository: Imoen4Ever
-      release: v8
-      asset: imoen-4-ever-v8.iemod
+      release: v9
+      asset: imoen-4-ever-v9.iemod
   - name: c#anotherfinehell # after imoen4ever, before sod tweaks
     components: ~
     location:
       github_user: Gitjas
       repository: Another_Fine_Hell
-      release: Alpha_211102
-      asset: another-fine-hell-for-sod-alpha_211102.iemod
+      release: vAlpha_211220
+      asset: another-fine-hell-for-sod-alpha_211220.iemod
   - name: d0questpack
     description: SimDing0's Quest Pack
     components: [0, 1, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
@@ -523,13 +526,6 @@ modules:
       repository: Sirene-NPC-for-BG2-EE
       branch: no-prompt
     # prompt for portrait
-  - name: cowledmenace
-    components: [1000, 2100, 3000]
-    location:
-      github_user: Gibberlings3
-      repository: CowledMenace
-      release: "0.2.1"
-      asset: lin-cowledmenace-v0.2.1.BETA.zip
   - name: bst
     components: [0]
     location:
@@ -542,8 +538,8 @@ modules:
     location:
       github_user: Gitjas
       repository: Brages_Redemption
-      release: v6.2
-      asset: brages-redemption-brage-npc-for-the-whole-baldurs-gate-epic-6.2.iemod
+      release: v7
+      asset: brages-redemption-brage-npc-for-the-whole-baldurs-gate-epic-7.iemod
   - name: "c#solaufein"
     components: [0, 1]
     location:
@@ -552,10 +548,9 @@ modules:
       release: v3
       asset: solaufeins-rescue-jasteys-solaufein-npc-mod-for-bgii-3.iemod
   - name: "TangledIsle"
-    components: [0]
+    components: ~
     location:
-      http: https://downloads.weaselmods.net/download/tangled-oak-isle/?wpdmdl=317&refresh=60eccdb2c772f1626131890
-      rename: TangledIsle v2.25.zip
+      path: /home/mick/Games/modda-cache/static/TangledIsle v2.6.zip
   - name: "g3anniversary"
     components: [0] # The Gibberlings Three Anniversary Mod
     location:
@@ -620,14 +615,14 @@ modules:
       repository: themed_tweaks
       commit: cf07ec1
   - name: "framed"
-    version: 1.11
+    version: 1.12
     components:
-      - 1 # Framed: Provide multiple versions of chapter 6 -> Leave out the custom chapter voice-overs
+      - #1 # Framed: Provide multiple versions of chapter 6 -> Leave out the custom chapter voice-overs
     location:
       github_user:  Gibberlings3
       repository: framed
-      release: v1.11
-      asset: framed-v1.11.iemod
+      release: v1.12
+      asset: framed-v1.12.iemod
   - name: "RoT" # Reign of Terror
     components: [0]
     location:
@@ -646,7 +641,7 @@ modules:
       release: v15
       asset: RE_v15.zip
   - name: HerThiMoney # Heroes Thieves and Moneylenders
-    version: 3.5.2
+    version: 3.6.2
     components:
       - 0    # Component 1. Interjections & Mini-quests (by Austin & Arcanecoast Team)
       - 10   # Component 2. First Calimport Bank Pack (by Scheele & Austin & Arcanecoast Team)
@@ -655,8 +650,8 @@ modules:
     location:
       github_user: Austin-BG
       repository: HTaM
-      release: V.3.5.2
-      asset: heroes-thieves-and-moneylenders-3.5.2.iemod
+      release: v.3.6.2
+      asset: heroes-thieves-and-moneylenders-3.6.2.iemod
       patch:
         relative: herthimoney-nopdf.diff
   - name: "snakes" # The slithering Menace
@@ -665,9 +660,9 @@ modules:
       http: http://www.shsforums.net/files/download/151-the-slithering-menace-tob/
       rename: the-slithering-menace-v4.0.0.zip
   - name: SotSC # Shades of the Sword Coast
-    version: 6.4
+    version: 6.6
     location:
-      path: /home/mick/Games/modda-cache/static/SotSC v6.4.zip
+      path: /home/mick/Games/modda-cache/static/SotSC v6.6.zip
     components: [0]
   - name: "JanQuest"
     components: [0]

@@ -273,8 +273,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: SongAndSilence
-      release: v12
-      asset: lin-song_and_silence-v12.tar.gz
+      release: v13
+      asset: lin-song_and_silence-v13.tar.gz
   - name: spstuff
     description: Sorcerer's Place Collection
     components: ~
@@ -283,7 +283,7 @@ modules:
       repository: SP_Collection
       release: v12
       asset: lin-spstuff-v12.tar.gz
-  - name: TomeAndBlood
+  - name: TomeAndBlood - Chaos Sorcerer worked fine when it came before TnB and I reshuffled Neera's stats with NPC_EE to adjust Scales's shift of sorcs from INT to CHA. Thinking about it, I might shift Dynaheir's sorceress shift before TnB, to ensure she gets all the class updates.
     description: Tome And Blood - main
     components: # 5E says "revised specialists": no, "rebalance spell schools": yes
       - 11 # Rebalanced Spell Schools
@@ -377,13 +377,13 @@ modules:
   - name: 5E_spellcasting
     comment: It should be installed after Tome & Blood and Faiths & Powers; but before Might & Guile and Faiths & Powers Multiclass.
     components:
-  #    - 100 # Change All Casters to 5E System
-  #    - 900 # Set Bonus Spell Slot Items to Work for 5E Casters
+      - 100 # Change All Casters to 5E System
+      - 900 # Set Bonus Spell Slot Items to Work for 5E Casters
     ignore_warnings: true # no effect altered on... for each component
     location:
-      github_user: UnearthedArcana
+      github_user: mleduque
       repository: 5E_spellcasting
-      tag: "1.1.1"
+      tag: "1.1.1-fr"
       patch:
         relative: spellcasting-5e-config.diff
   - name: sword_and_fist
@@ -420,22 +420,19 @@ modules:
   - name: might_and_guile
     description: Might And Guile - Other components
     components:
-      #- 240 # Improved Rangers
-      #- 245 # Revised Movement Bonuses (Quickstride)
-      #- 250 # Revised Berserker and Rage
-      #- 310 # Add the Corsair (fighter kit)
-      #- 320 # Add the Marksman (fighter kit)
-      ##- 322 # Add the Elven Archer (ranger kit)
-      #- 324 # Add the Halfling Slinger (fighter/thief kit)
-      ##- 350 # Add the Mage Hunter (ranger kit)
-      #- 360 # Add the Barbarian Ranger (ranger kit)
-      #- 410 # Add the Sniper (thief kit)
-      #- 420 # Add the Scout (thief kit) and revise the Swashbuckler
-      ##- 450 # Add the Jongleur (bard kit)
-      ##- 460 # Add the Loremaster (bard kit)
-      ##- 470 # Add the Gallant (bard kit)
-      ##- 480 # Add the Meistersinger (bard kit)
-      ##- 490 # Add the Loresinger (bard kit)
+      - 210 # Bard Overhaul: Multiclass Bards: 4.13
+      - 240 # Improved Rangers: 4.13
+      - 245 # Revised Movement Bonuses (Quickstride): 4.13
+      - 250 # Revised Berserker and Rage: 4.13
+      - 265 # Revised Monk Fists: 4.13
+      - 310 # Add the Corsair (fighter kit): 4.13
+      - 320 # Add the Marksman (fighter kit): 4.13
+      - 322 # Add the Elven Archer (ranger kit): 4.13
+      - 324 # Add the Halfling Slinger (fighter/thief kit): 4.13
+      - 350 # Add the Mage Hunter (ranger kit): 4.13
+      - 360 # Add the Barbarian Ranger (ranger kit): 4.13
+      - 410 # Add the Sniper (thief kit): 4.13
+      - 420 # Add the Scout (thief kit) and revise the Swashbuckler: 4.13
   - name: refinements
     components:
       - 11  # Capacites de haut niveau (HLA) modifiees -> Choisir quelles classes obtiennent les HLA modifiees
@@ -993,7 +990,7 @@ modules:
       - 30 # Convenient NPCs
       - 42 # Make Dynaheir a Sorcerer
       - 44 # Make Faldorn an Avenger
-      - 45 # Make Garrick a Skald
+      #- 45 # Make Garrick a Skald
       - 48 # Make Kivan an Archer
       - 49 # Make Safana a Swashbuckler
       - 50 # Shar-Teel's Class -> Make Shar-Teel a Berserker
@@ -1023,9 +1020,19 @@ modules:
       - 1 # Eldoth, the charlatan  - name: S9BGEENPCTweaks
   - name: npc_ee
     components:
+      - 102 # Choose a class for Imoen -> Make Imoen a multiclass mage/thief
+      #- 104 # Choose a class for Imoen -> Make Imoen a bard
+      - 483 # Xan is fighter/mage
       - 2000 # NPC kit choices
     # can configure any npc so no need for individual mods per npc?
     location:
       github_user: UnearthedArcana
       repository: NPC_EE
       tag: "4.4.3"
+  - name: cowledmenace
+    components: [1000, 2100, 3000]
+    location:
+      github_user: Gibberlings3
+      repository: CowledMenace
+      release: "0.2.1"
+      asset: lin-cowledmenace-v0.2.1.BETA.zip

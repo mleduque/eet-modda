@@ -60,7 +60,8 @@ modules:
     location:
       http: http://downloads.chosenofmystra.net/bg1/tsoaV2_2.zip
   - name: saradas_magic
-    components: [0]
+    components:
+      - 0 # Saradas magic
     location:
       http: https://download1325.mediafire.com/9oh1se9asuug/rg5cyypji1om22o/Saradas%2520Magic%2520ENG%2520V_1.1.zip
       rename: Saradas_Magic_ENG_V_1.1.zip

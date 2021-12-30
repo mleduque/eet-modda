@@ -8,8 +8,6 @@ modules:
   - name: stratagems
     description: Sword Coast Stratagems
     components:
-      - 1500
-      - 1510
     location:
       github_user: Gibberlings3
       repository: SwordCoastStratagems
@@ -135,17 +133,20 @@ modules:
         iwd_overrides_sr = 1
   - name: iwdification
     components:
-      - 10  # Incantation des sorts style Icewind Dale (Andyr)
-      - 60  # Pack de haches a deux mains
-      #- 90  # Expanded Polymorph Self == Currently FAILS
-      # take SCS versions for now
-      #- 30  # Pack de sortileges profanes d'IWD
-      #- 40  # Pack de sortileges divins d'IWD
-      - 50  # Chanson du barde d'IWD
-      - 72  # IWD Class Updates: Druid -> Install Both of the Above
-      - 100 # IWD Class Updates: Paladin
-      - 120 # IWD Class Updates: Thief: Release Candidate 2
-    language: 0 # translation is not up to date with recent changes
+      - 10 # Icewind Dale Casting Graphics (Andyr): Release Candidate 2
+      - 60 # Two Handed Axe Item Pack: Release Candidate 2
+      - 90 # Expanded Polymorph Self: Release Candidate 2
+      - 30 # IWD Arcane Spell Pack: Release Candidate 2
+      - 40 # IWD Divine Spell Pack: Release Candidate 2
+      - 50 # IWD Class Updates: Bard: Add IWD Bard Songs: Release Candidate 2
+      - 100 # IWD Class Updates: Paladin: IWD Abilities and Skills: Release Candidate 2
+      - 120 # IWD Class Updates: Thief: Evasion: Release Candidate 2
+      - 140 # Randomized Enemy Equipment -> Add High Quality Items: Release Candidate 2
+      - 150 # IWD Class Updates: Bard: Use IWD Spell Progression: Release Candidate 2
+      - 70 # IWD Class Updates: Druid: Use IWD Shapeshifting and Ability Progression: Release Candidate 2
+      - 71 # IWD Class Updates: Druid: Allow Elves to be Druids: Release Candidate 2
+      - 160 # IWD Class Updates: Paladin: Use IWD Spell Progression: Release Candidate 2
+      - 170 # IWD Class Updates: Ranger: Use IWD Spell Progression: Release Candidate 2
     location:
       github_user: mleduque
       repository: iwdification
@@ -171,7 +172,7 @@ modules:
     location:
       github_user: mleduque
       repository: lava_weasels
-      branch: v3-french
+      branch: 20b8796
   #- name: polydisp-unsure # some compat issue with... everything
   #  components: ~
   #  location:
@@ -332,8 +333,8 @@ modules:
     location:
       github_user: Pocket-Plane-Group
       repository: Item_Upgrade
-      release: v45
-      asset: lin-itemupgrade-v45.tar.gz
+      release: v47
+      asset: lin-itemupgrade-v47.tar.gz
   - name: ruad
     description: Ruad Ro'fhessa Item Upgrade
     components: [0, 10]
