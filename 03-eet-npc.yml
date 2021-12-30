@@ -18,7 +18,7 @@ modules:
       repository: Aura_BG1
       branch: master
       patch:
-        relative: aura_bg1-select-artificer.diff
+        relative: patches/aura_bg1-select-artificer.diff
     #prompt for class (1. Artificer)
     #prompt for portrait (2. BG2 style)
   - name: nephele
@@ -42,7 +42,7 @@ modules:
       repository: Helga-BG1
       commit: 40f7c22
       patch:
-        relative: helga_bg1-defaultportrait-nomusic.diff
+        relative: patches/helga_bg1-defaultportrait-nomusic.diff
   - name: Kale
     components: [0]
     location:
@@ -50,7 +50,7 @@ modules:
       repository: Kale-BG1
       branch: master
       patch:
-        relative: kale_bg1-nomusic.diff
+        relative: patches/kale_bg1-nomusic.diff
     #prompt for music (2. No)
   - name: Recorder
     components: [0]
@@ -65,7 +65,7 @@ modules:
       repository: Vienxay-BG1
       branch: master
       patch:
-        relative: viexnay_bg1-defaultprotrait-nomusic.diff
+        relative: patches/viexnay_bg1-defaultprotrait-nomusic.diff
     #prompt for portrait (1. Default)
   - name: SkitiaNPCs
     components: [0, 4]
@@ -74,7 +74,7 @@ modules:
       repository: SkitiaNPCs
       branch: master
       patch:
-        relative: skitia_npc_defaultportraits.diff
+        relative: patches/skitia_npc_defaultportraits.diff
     #prompt for portrait (1. Default the 1. Default)
   - name: Petsy
     components: [0, 1]
@@ -87,7 +87,7 @@ modules:
     location:
       path: /home/mick/Games/modda-cache/static/Yvette Romance v5.00.zip
       patch:
-        relative: yvette-noprompt.diff
+        relative: patches/yvette-noprompt.diff
   - name: c#greythedog
     components: [0]
     location:
@@ -181,7 +181,7 @@ modules:
       release: v14
       asset: lin-gavin-v14.tar.gz
       patch:
-        relative: gavin_bg1-romance-timer-30.diff
+        relative: patches/gavin_bg1-romance-timer-30.diff
   - name: gavin_bg2
     # will prompt for romance timer
     components:
@@ -194,7 +194,7 @@ modules:
       release: v23
       asset: lin-gavin_bg2-v23.tar.gz
       patch:
-        relative: gavin_bg2_romance-timer-30.diff
+        relative: patches/gavin_bg2_romance-timer-30.diff
   - name: arath
     components: [0]
     location:
@@ -446,7 +446,7 @@ modules:
       repository: TBGCoM_BG1NPCSoA
       commit: fe40e3d
       patch:
-        relative: bg1npcsoa-nopdf.diff
+        relative: patches/bg1npcsoa-nopdf.diff
         encoding: WIN1251
   - name: BG1NPCSoA # install after other versions of same npcs
     description: BG1 NPCs in BG2

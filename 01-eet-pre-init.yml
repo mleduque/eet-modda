@@ -85,7 +85,7 @@ modules:
       release: v2.0.2
       asset: lin-sod2bg2_iu-v2.0.2.zip
       patch:
-        relative: sod2bg2ui_carsomyr.diff
+        relative: patches/sod2bg2ui_carsomyr.diff
     components:
       - 0 # SoD to BG2:EE Item upgrade by Daeros_Trollkiller
       ## - 1 # Remove "Corny Jokes" effect from Jester's Bracers (BG2EE, BGEET)

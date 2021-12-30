@@ -80,7 +80,7 @@ modules:
   #    repository: Warlock
   #    branch: master
   #    patch:
-  #      relative: c0warlock-noprompt.diff
+  #      relative: patches/c0warlock-noprompt.diff
   # 256 kits limit
   #- name: IHateUndead
   #  components: [0, 1, 2, 4, 5, 6, 7, 9, 10, 11]
@@ -104,7 +104,7 @@ modules:
       repository: A7-ChaosSorcerer
       branch: devel
       patch:
-        relative: A7-ChaosSorcerer-remove_str_con_malus.diff
+        relative: patches/A7-ChaosSorcerer-remove_str_con_malus.diff
   - name: wildmage
     components:
       - 0 # New Wild Magic Spells -> Ironman
@@ -126,7 +126,7 @@ modules:
       repository: Shadow-Magic
       branch: master
       patch:
-        relative: shadowmagic-condrain.diff
+        relative: patches/shadowmagic-condrain.diff
   - name: shadowadept
     description: shadowadept - components without warningq
     components:
@@ -385,7 +385,7 @@ modules:
       repository: 5E_spellcasting
       tag: "1.1.1-fr"
       patch:
-        relative: spellcasting-5e-config.diff
+        relative: patches/spellcasting-5e-config.diff
   - name: sword_and_fist
     components:
       #- 30 # Installer le kit de guerrier : Champion Occultiste
@@ -407,7 +407,7 @@ modules:
       repository: Will_to_Power
       tag: "1.3.2"
       patch:
-        relative: will_to_power_tweaks.diff
+        relative: patches/will_to_power_tweaks.diff
   - name: might_and_guile
     description: Might And Guile - Main component (warns)
     components:
@@ -704,7 +704,7 @@ modules:
       repository: Scales_of_Balance
       tag: "5.34"
       patch:
-        relative: scales-config.diff
+        relative: patches/scales-config.diff
   - name: DruidGroveMakeover
     components:
       - 0
@@ -742,7 +742,7 @@ modules:
       repository: EET_Tweaks
       tag: v1.12
       patch:
-        relative: eet_tweaks-xpbonus.diff
+        relative: patches/eet_tweaks-xpbonus.diff
   - name: mih_eq
     description: Made In Heaven Encounters and Quests
     components:

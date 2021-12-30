@@ -14,7 +14,7 @@ modules:
       release: v34.3
       asset: lin-stratagems-34.3.zip
       patch:
-        relative: scs-warnings.diff
+        relative: patches/scs-warnings.diff
     add_conf:
       file_name: stratagems.ini
       content: | # no change ATM
@@ -209,7 +209,7 @@ modules:
       repository: ItemRevisions
       branch: master
       patch:
-        relative: item_rev-store-charep.diff
+        relative: patches/item_rev-store-charep.diff
     add_conf:
       file_name: settings.ini
       content: |
@@ -277,7 +277,7 @@ modules:
       release: v6
       asset: lin-mih_ip-v6.tar.gz
       patch:
-        relative: mih_ip-sod-warnings.diff
+        relative: patches/mih_ip-sod-warnings.diff
     add_conf:
       file_name: mih_ip.ini
       content: |
@@ -454,7 +454,7 @@ modules:
       release: v5
       asset: lin-mih_sp-v5.tar.gz
       patch:
-        relative: mih_sp-warnings.diff
+        relative: patches/mih_sp-warnings.diff
       add_conf:
         file_name: mih_sp.ini
         content: |
