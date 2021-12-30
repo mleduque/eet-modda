@@ -1,0 +1,37 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: DlcMerger
+    location:
+      github_user: Argent77
+      repository: A7-DlcMerger
+      release: v1.3
+      asset: lin-A7-DlcMerger-v1.3.zip
+    components:
+      - 1 # Merge DLC into game -> Merge "Siege of Dragonspear"  - name: iwdification
+  - name: iwdification
+    components:
+      #- 10 # Incantation des sorts style Icewind Dale (Andyr): Release Candidate 2
+      #- 60 # Pack de haches a deux mains: Release Candidate 2
+      #- 90 # Extension de Metamorphose: Release Candidate 2
+      #- 130 # Utiliser les animations de degats d'IWD: Release Candidate 2
+      #- 140 # Equipement des ennemis aleatoire -> Ajouter des objets "de maitre": Release Candidate 2
+      #- 30 # Pack de sortileges profanes d'IWD: Release Candidate 2
+      #- 40 # Pack de sortileges divins d'IWD: Release Candidate 2
+      - 50 # IWD Class Updates: Bard: Add IWD Bard Songs: Release Candidate 2
+      - 150 # Mises a jour de classes IWD : Barde : Utiliser la progression de sorts d'IWD: Release Candidate 2
+      - 70 # Mises a jour de classes IWD : Druide : Utiliser la metamorphose et la progression de sorts d'IWD: Release Candidate 2
+      - 71 # Mises a jour de classes IWD : Druide : Permettre aux elfes d'etre druide: Release Candidate 2
+      - 100 # Mises a jour de classes IWD : Paladin : Capacités et compétences d'IWD: Release Candidate 2
+      - 160 # Mises a jour de classes IWD : Paladin : Utiliser la progression de sorts d'IWD: Release Candidate 2
+      - 170 # Mises a jour de classes IWD : Rodeur : Utiliser la progression de sorts d'IWD: Release Candidate 2
+      - 120 # Mises a jour de classes IWD : Voleur : Evasion: Release Candidate 2
+    location:
+      github_user: mleduque
+      repository: iwdification
+      commit: "13624c1"
+

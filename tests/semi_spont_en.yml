@@ -1,0 +1,41 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "en_US"
+  lang_preferences: ["#rx#^english", "american english"]
+modules:
+  - name: DlcMerger
+    location:
+      github_user: Argent77
+      repository: A7-DlcMerger
+      release: v1.3
+      asset: lin-A7-DlcMerger-v1.3.zip
+    components:
+      - 1 # Merge DLC into game -> Merge "Siege of Dragonspear"  - name: iwdification
+
+  - name: iwdification
+    components:
+    - 170 # Mises a jour de classes IWD : Rodeur : Utiliser la progression de sorts d'IWD: Release Candidate 2
+    location:
+      github_user: mleduque
+      repository: iwdification
+      commit: "13624c1"
+  - name: 5E_spellcasting
+    comment: It should be installed after Tome & Blood and Faiths & Powers; but before Might & Guile and Faiths & Powers Multiclass.
+    components:
+      - 100 # Change All Casters to 5E System
+      - 900 # Set Bonus Spell Slot Items to Work for 5E Casters
+    ignore_warnings: true # no effect altered on... for each component
+    location:
+      github_user: mleduque
+      repository: 5E_spellcasting
+      commit: 4778f28
+  - name: cdtweaks
+    description: Tweaks Anthology - only spell progression tables
+    components:
+      - 2090 # Changer la limite de points d'experience -> Retirer la limite
+    location:
+      github_user: Gibberlings3
+      repository: Tweaks-Anthology
+      branch: master

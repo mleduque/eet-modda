@@ -1,0 +1,25 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: DlcMerger
+    location:
+      github_user: Argent77
+      repository: A7-DlcMerger
+      release: v1.3
+      asset: lin-A7-DlcMerger-v1.3.zip
+    components:
+      - 1 # Merge DLC into game -> Merge "Siege of Dragonspear"  - name: iwdification
+  - name: 5E_spellcasting
+    comment: It should be installed after Tome & Blood and Faiths & Powers; but before Might & Guile and Faiths & Powers Multiclass.
+    components:
+      - 100 # Change All Casters to 5E System
+      - 900 # Set Bonus Spell Slot Items to Work for 5E Casters
+    ignore_warnings: true # no effect altered on... for each component
+    location:
+      github_user: mleduque
+      repository: 5E_spellcasting
+      commit: f347620

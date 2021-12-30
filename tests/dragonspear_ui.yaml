@@ -1,0 +1,13 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: dragonspear_ui++
+    components:
+    location:
+      github_user:  anongit
+      repository: DragonspearUI
+      branch: master

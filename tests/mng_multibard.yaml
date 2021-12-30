@@ -1,0 +1,36 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: might_and_guile
+    components:
+        - 210 # Bard Overhaul: Multiclass Bards: 4.13
+        - 220 # Revised Multiclassing and Multiclass Kits: 4.13
+        - 240 # Improved Rangers: 4.13
+        - 245 # Revised Movement Bonuses (Quickstride): 4.13
+        - 250 # Revised Berserker and Rage: 4.13
+        - 265 # Revised Monk Fists: 4.13
+        - 310 # Add the Corsair (fighter kit): 4.13
+        - 320 # Add the Marksman (fighter kit): 4.13
+        - 322 # Add the Elven Archer (ranger kit): 4.13
+        - 324 # Add the Halfling Slinger (fighter/thief kit): 4.13
+        - 350 # Add the Mage Hunter (ranger kit): 4.13
+        - 360 # Add the Barbarian Ranger (ranger kit): 4.13
+        - 410 # Add the Sniper (thief kit): 4.13
+        - 420 # Add the Scout (thief kit) and revise the Swashbuckler: 4.13
+    location:
+      github_user:  UnearthedArcana
+      repository: Might_and_Guile/
+      tag: "4.13"
+    ignore_warnings: true
+  - name: npc_ee
+    components:
+      - 102
+      - 2000 # NPC kit choices
+    location:
+      github_user: UnearthedArcana
+      repository: NPC_EE
+      tag: "4.4.3"
