@@ -68,13 +68,14 @@ modules:
       #- 2
       #- 3
       #- 4
-      #- 5
-      #- 6
-      #- 7
+      #- 5 # overwritten by transitions
+      #- 6 # overwritten by transitions
+      #- 7 # overwritten by transitions
       #- 8
       #- 10
       #- 11
       #- 12
+      # - 15 # overwritten by transitions
     location:
       github_user: Gibberlings3
       repository: EndlessBG1
@@ -96,8 +97,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: transitions
-      release: v2.3
-      asset: transitions-v2.3.iemod
+      release: v2.4
+      asset: transitions-v2.4.iemod
   - name: DSotSC
     components:
       - 0 # Dark Side of the Sword Coast (DSotSC)
@@ -165,8 +166,8 @@ modules:
     location:
       github_user: Gitjas
       repository: Ascalons_Questpack
-      release: v4.1
-      asset: ascalons-questpack-4.1.iemod
+      release: v4.2
+      asset: ascalons-questpack-4.2.iemod
   - name: BG_Travel
     description: New travel system between Baldur's Gate City areas
     comment: Original location http://athkatla.cob-bg.pl/download.php?id=1595 (BG_Travel_v2.1.rar)
@@ -381,13 +382,14 @@ modules:
       repository: Imoen4Ever
       release: v9
       asset: imoen-4-ever-v9.iemod
-  - name: c#anotherfinehell # after imoen4ever, before sod tweaks
-    components: ~
-    location:
-      github_user: Gitjas
-      repository: Another_Fine_Hell
-      release: vAlpha_211220
-      asset: another-fine-hell-for-sod-alpha_211220.iemod
+      # disabled for first sod run
+  #- name: c#anotherfinehell # after imoen4ever, before sod tweaks
+  #  components: ~
+  #  location:
+  #    github_user: Gitjas
+  #    repository: Another_Fine_Hell
+  #    release: vAlpha_220117
+  #    asset: another-fine-hell-for-sod-alpha_220117.iemod
   - name: d0questpack
     description: SimDing0's Quest Pack
     components: [0, 1, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
@@ -497,7 +499,7 @@ modules:
     location:
       github_user: mleduque
       repository: Lava_Foundling
-      branch: master
+      commit: 4db30a2
       patch:
         relative: patches/foundling-class.diff
   - name: willowisp
@@ -640,18 +642,18 @@ modules:
       repository: Romantic_Encounters_BG2
       release: v15
       asset: RE_v15.zip
-  - name: HerThiMoney # Heroes Thieves and Moneylenders
-    version: 3.6.2
+  - name: HerThiMoney
+    description: Heroes Thieves and Moneylenders
     components:
-      - 0    # Component 1. Interjections & Mini-quests (by Austin & Arcanecoast Team)
-      - 10   # Component 2. First Calimport Bank Pack (by Scheele & Austin & Arcanecoast Team)
-      - 20   # Component 3. Shadow-Covered Love (by Alisia & Austin)
-      - 30   # Component 4. The Missing Troll Case (by Alisia & Austin)
+      #- 0    # Component 1. Interjections & Mini-quests (by Austin & Arcanecoast Team)
+      #- 10   # Component 2. First Calimport Bank Pack (by Scheele & Austin & Arcanecoast Team)
+      #- 20   # Component 3. Shadow-Covered Love (by Alisia & Austin)
+      #- 30   # Component 4. The Missing Troll Case (by Alisia & Austin)
     location:
       github_user: Austin-BG
       repository: HTaM
-      release: v.3.6.2
-      asset: heroes-thieves-and-moneylenders-3.6.2.iemod
+      release: v.4.2
+      asset: heroes-thieves-and-moneylenders-4.2.iemod
       patch:
         relative: patches/herthimoney-nopdf.diff
   - name: "snakes" # The slithering Menace
@@ -740,7 +742,7 @@ modules:
     location:
       github_user: GraionDilach
       repository: ExtraExpandedEnhancedEncounters
-      release: "2.0"
-      asset: extra-enhanced-expanded-encounters-2.0.iemod
+      release: "3.0"
+      asset: extra-enhanced-expanded-encounters-3.0.iemod
       patch:
         relative: patches/ExtraExpandedEnhancedEncouter-reducegnolls.diff

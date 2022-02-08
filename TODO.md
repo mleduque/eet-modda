@@ -1,0 +1,12 @@
+
+- REBASE french translation for FnP !!!!!
+- Edit faith & power spheres to include mih_sp
+- Edit faith & power spheres to include SOD2BG2
+- Translate FnP
+- Translate TnB
+- Translate mih_sp
+- submit iwdification translation
+- reproduce "no opposition school"  https://github.com/btigi/iiTweak/blob/6dcf4ee89b82393fc633d5ceec56df50d0e84d54/iiTweak/iiTweak.tp2#L32-L37
+- traduire iiItems et iiKeyNames
+- item_rev or forgotten armament 
+- incorporate scs fixes here https://www.gibberlings3.net/forums/topic/33191-sword-coast-stratagems-v34-edit-343-now-available/page/23/#comment-304102

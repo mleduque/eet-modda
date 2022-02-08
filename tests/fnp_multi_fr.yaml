@@ -1,0 +1,20 @@
+version: "1"
+global:
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: FnP_Multiclass
+    components:
+      - 91 # Multiclass Druids
+      - 92 # Multiclass Shamans
+      - 95 # Multiclass Cleric kits (install AFTER all other kit mods
+    ignore_warnings: true # apparently intentional
+    location:
+      github_user: mleduque
+      repository: Faiths_and_Powers
+      commit: e450c46
+      layout:
+          layout_type: multi_dir
+          dirs:
+            - faiths_and_powers
+            - FnP_Multiclass

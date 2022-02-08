@@ -185,7 +185,7 @@ modules:
     location:
       github_user: mleduque
       repository: magic_battles_revised
-      branch: fr-translation
+      branch: fr-translation-to-update-1.2
   - name: A7-TotLM-BG2EE
     description: Trial of the Luremaster - Main component (warns)
     components:
@@ -495,6 +495,31 @@ modules:
       github_user: mleduque-not sod items
       repository: edvin_unofficial_item_pack
       tag: v2.7b
+  - name:
+    components: ~
+    location:
+      github_user:  Gibberlings3
+      repository: Forgotten-Armament
+      release: 0.2.1-beta
+      asset: forgotten-armament-v0.2.1-beta.iemod
+  - name: iiItemMod
+    components: ~
+    location:
+      github_user: btigi
+      repository: iiItem
+      release: v5.2
+      asset: iiitemmod-v5.2.iemod
+      patch:
+        relative: patches/iiItem-translate.diff
+  - name: iiKeyNames
+    description: Renames the keys after use
+    components: ~
+    location:
+      github_user: btigi
+      repository: iiKeyNames
+      patch:
+        relative: patches/iiKeyNames-translate.diff
+    location:
   - name: cdlore
     components:
       - 10 # Books Provide Lore Bonuses

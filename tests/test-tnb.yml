@@ -1,0 +1,36 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: TomeAndBlood
+    description: Tome And Blood - main
+    components: # 5E says "revised specialists": no, "rebalance spell schools": yes
+      - 11 # Rebalanced Spell Schools
+      - 13 # Revised Illusionary Clones
+      - 14 # Revised Invisibility and True Seeing
+      - 16 # Revised Identify -- needed with 5E conversion
+      #- 20 # REVISED DRAGON DISCIPLES -- NOPE
+      #- 25 # Sorcerer: Magus
+      #- 31 # Sorcerer: Favored Soul
+      #- 33 # Sorcerer: Sylvan Disciple
+      #- 35 # Sorcerer: Revenant Disciple
+      #- 37 # Sorcerer: Amorphous Disciple
+      #- 40 # Revised specialists #-- NOPE because 5E spellcasting
+      #- 45 # ArcaneCarfting NOPE: deprecated
+      #- 48 # Armored Casting for Bards
+      - 55 # Revised Metamagic -> Metamagic spells, fill sequencers free (usable by Arcanist/Multi Sorcerers) =>recommended for 5E
+      - 61 # Cantrips -> Innate Cantrips - CRASH on use
+      - 66 # Innate Find Familiar
+      - 67 # Choose-Your-Own Familiar - CRASH on use
+      #- 80 # Multiclass Sorcerers
+      #- 82 # Arcanist
+      #- 85 # Sorcerer Kit: Mana Sorcerer
+      #- 93 # Make +Spell Slot Items work with MultiSorcerers and Arcanists
+      #- 95 # Ability Score Spellcasting Bonuses (install AFTER any mod that changes spell tables!) - prefer scalesofbalance
+    location:
+      github_user: subtledoctor
+      repository: TomeAndBlood
+      tag: "0.9.20"

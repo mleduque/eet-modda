@@ -1,0 +1,67 @@
+version: "1"
+global:
+  lang_dir: "en_US"
+  lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  #lang_dir: "fr_FR"
+  #lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: iwdification
+    components:
+      - 100 # Mises a jour de classes IWD : Paladin : Capacités et compétences d'IWD: Release Candidate 2
+      - 160 # Mises a jour de classes IWD : Paladin : Utiliser la progression de sorts d'IWD: Release Candidate 2
+      - 170 # Mises a jour de classes IWD : Rodeur : Utiliser la progression de sorts d'IWD: Release Candidate 2
+    location:
+      github_user: mleduque
+      repository: iwdification
+      commit: "13624c1"
+  #- name: divine_remix
+  #  components:
+  #    - 11 # Installer les nouveaux sorts -> Ajouter les nouveaux sorts uniquement si d'autres mods ne l'ont pas deja fait: 8.1
+  #    - 100 # Modification des Clercs: 8.1
+  #    - 103 # Installer le kit de clerc d'Etoile d'Argent de Selune: 8.1
+  #    - 106 # Installer le kit de clerc de Manteau de la Nuit de Shar: 8.1
+  #    - 107 # Installer le kit de clerc de Stratege Divin de la Cavaliere Rouge: 8.1
+  #    - 112 # Installer le kit de clerc de Noble Martyr d'Ilmater: 8.1
+  #    - 115 # Installer le kit de clerc d'Adepte des Flammes de Kossuth: 8.1
+  #    - 118 # Installer le kit de clerc de Tyran d'Iyachtu Xvim: 8.1
+  #    - 121 # Installer le kit de clerc de Gardien du Savoir d'Oghma: 8.1
+  #    - 124 # Installer le kit de clerc de Garde du Coeur de Sunie: 8.1
+  #    - 127 # Installer le kit de clerc de Protecteur Feerique de Corellon: 8.1
+  #    - 130 # Installer le kit de clerc de Maitre des Conflits de Cyric: 8.1
+  #    - 200 # Modification des Druides: 8.1
+  #    - 203 # Installer le kit de Druide de Maitre des Vases: 8.1
+  #    - 403 # Installer le kit de Rodeur d'Archer Sylvain: 8.1
+  #    - 406 # Installer le kit de Rodeur Sauvage: 8.1
+  #    - 409 # Installer le kit de Rodeur de Coureur des Bois: 8.1
+  #    - 412 # Installer le kit de Rodeur de Vengeur: 8.1
+  #    - 415 # Installer le kit de Rodeur de Coureur Sauvage: 8.1
+  #  location:
+  #    github_user: TotoR115
+  #    repository: Divine_Remix
+  #    branch: master
+  - name: Faiths_and_Powers
+    components:
+      - 21 # Créer un système de sphères -> FnP : le système de sphères original de Faiths & Powers: 0.81.2
+      - 31 # Installer les kits de clerc: 0.81.2
+      - 33 # Installer les kits de druide: 0.81.2
+      - 35 # Installer les kts de paladin: 0.81.2
+      - 37 # Installer les kits de rôdeur: 0.81.2
+      - 75 # Modifier l'utilisabilité des armes et les compétences d'armes des prêtres: 0.81.2
+      - 80 # Appliquer le système de sphères: 0.81.2
+      - 85 # Appliquer les kits de FnP aux PNJ: 0.81.2
+    ignore_warnings: true # all except 31 emit no effect changed/added
+    location:
+      github_user: mleduque
+      repository: Faiths_and_Powers
+      commit: 021f158
+      layout:
+          layout_type: multi_dir
+          dirs:
+            - faiths_and_powers
+            - FnP_Multiclass
+  - name: FnP_Multiclass
+    components:
+      - 91 # Multiclass Druids
+      - 92 # Multiclass Shamans
+      - 95 # Multiclass Cleric kits (install AFTER all other kit mods
+    ignore_warnings: true # apparently intentional

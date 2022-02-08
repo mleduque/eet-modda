@@ -93,8 +93,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Grey_The_Dog
-      release: v7
-      asset: grey-the-dog-npc-7.iemod
+      release: v7.1
+      asset: grey-the-dog-npc-7.1.iemod
   - name: ACBre
     description: Ascalon's Breagar
     components: [0]
@@ -368,7 +368,7 @@ modules:
     location:
       github_user: Skitia
       repository: Wings
-      tag: v1.00
+      tag: v1.02
   - name: npckit
     components: [30, 31, 400, 410, 900, 1415, 2100, 2200, 2300, 2500, 2800]
     location:
@@ -416,12 +416,12 @@ modules:
       #- 5  # More Dialogue Choices & Prevent Dead Ends:
       #- 6  # Use Imoen's SoD Portrait for BGII in EET & BGT
       #- 9  # Adjust PC's Starting XP at Beginning of SoD, by subtledoctor -> Set Starting XP to 90,000
-      #- 12 # SoD Ending: jastey's Tweaks -> Revised Full Version
+      #- 12 # SoD Ending: jastey's Tweaks -> Revised Full Version # overwrittern by afh if installed
     location:
       github_user: Gibberlings3
       repository: Jasteys_SoD_Tweakpack
-      release: v7.2
-      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v7.2.iemod
+      release: v8
+      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v8.iemod
   - name: sodrtd
     description: Road To Discovery
     components:
@@ -433,18 +433,18 @@ modules:
   - name: BG1NPCSoA # install after other versions of same npcs
     description: BG1 NPCs in BG2
     components:
-      - 0  # Water Gardens. New Athkatla's district & new quests
-      - 2  # Shar-Teel NPC in BG2. "Nightbringer of Shar" (SoA)
-      - 6  # Brave Sir Garrick NPC in BG2 (SoA)
-      - 25 # Alora (SoA & ToB)
-      - 35 # Kagain's Corner (SoA & ToB) -> Store with Vanilla Items Only
-      - 40 # Faldorn's New Leaf (SoA & ToB)
-      - 83 # Garrick skald
-      - 87 # Inter Component Banter Pack
+      #- 0  # Water Gardens. New Athkatla's district & new quests
+      #- 2  # Shar-Teel NPC in BG2. "Nightbringer of Shar" (SoA)
+      #- 6  # Brave Sir Garrick NPC in BG2 (SoA)
+      #- 25 # Alora (SoA & ToB)
+      #- 35 # Kagain's Corner (SoA & ToB) -> Store with Vanilla Items Only
+      #- 40 # Faldorn's New Leaf (SoA & ToB)
+      #- 83 # Garrick skald
+      #- 87 # Inter Component Banter Pack
     location:
       github_user: mleduque
       repository: TBGCoM_BG1NPCSoA
-      commit: fe40e3d
+      tag: v14.2
       patch:
         relative: patches/bg1npcsoa-nopdf.diff
         encoding: WIN1251

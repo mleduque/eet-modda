@@ -116,6 +116,15 @@ modules:
       #- 46 #
       #- 47 #
       #- 53 #
+  - name: skills-and-abilities
+    components:
+    location:
+      github_user: Gibberlings3
+      repository: Skills-and-Abilities
+      release: 0.2.1-alpha
+      asset: skills-and-abilities-v0.2.1-alpha.iemod
+      patch:
+        relative: patches/skills-and-abilities-prof-points.diff
   - name: jimfix
     description: Fixes and convenience tweaks aimed at an Ascension + SCS v33 install
     components:
@@ -202,8 +211,32 @@ modules:
     location:
       github_user: BGforgeNet
       repository: bg2-tweaks-and-tricks
-      release: v8.12
-      asset: tweaks-and-tricks-v8.12.iemod
+      release: v8.14
+      asset: tweaks-and-tricks-v8.14.iemod
+  - name: mih_metamod
+    components: ~
+    location:
+      github_user: AngelGryph
+      repository: MadeIn_Heaven_Meta-Mod
+      branch: main
+  - name: polytweaks
+    components: ~ # exclude trolls
+    location:
+      github_user: mleduque
+      repository: polytope_polytweaks
+      tag: v2.0
+  - name: Bart_Tweaks
+    components: ~
+    location:
+      github_user: BartyMae
+      repository: Bart_Tweaks
+      commit: fd90f68CHECK
+  - name: jtweaks
+    components: ~
+    location:
+      github_user: mleduque
+      repository: jmerry_jtweaks
+      tag: v1.1
   - name: 35thac0
     components: [0]
     location:

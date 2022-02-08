@@ -1,0 +1,65 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: Faiths_and_Powers
+    components:
+      - 21 # Create a sphere system -> FnP: the Faiths & Powers original sphere system
+      - 31 # Install Cleric kits
+      - 80 # Apply sphere system
+    ignore_warnings: true # all except 31 emit no effect changed/added
+    location:
+      github_user: subtledoctor
+      repository: Faiths_and_Powers
+      tag: 79sd31
+      layout:
+          layout_type: multi_dir
+          dirs:
+            - faiths_and_powers
+            - FnP_Multiclass
+  - name: 5E_spellcasting
+    comment: It should be installed after Tome & Blood and Faiths & Powers; but before Might & Guile and Faiths & Powers Multiclass.
+    components:
+      - 100 # Change All Casters to 5E System
+      - 900 # Set Bonus Spell Slot Items to Work for 5E Casters
+    ignore_warnings: true # no effect altered on... for each component
+    location:
+      github_user: mleduque
+      repository: 5E_spellcasting
+      commit: 4778f28
+  - name: might_and_guile
+    description: Might And Guile - Main component (warns)
+    components:
+      - 220 # Revised Multiclassing and Multiclass Kits
+    ignore_warnings: true
+    location:
+      github_user: mleduque
+      repository: Might_and_Guile
+      commit: 7d9da87
+  - name: might_and_guile
+    description: Might And Guile - Other components
+    components:
+      - 210 # Bard Overhaul: Multiclass Bards: 4.13
+      - 240 # Improved Rangers: 4.13
+      - 245 # Revised Movement Bonuses (Quickstride): 4.13
+      - 250 # Revised Berserker and Rage: 4.13
+      - 265 # Revised Monk Fists: 4.13
+      - 310 # Add the Corsair (fighter kit): 4.13
+      - 320 # Add the Marksman (fighter kit): 4.13
+      - 322 # Add the Elven Archer (ranger kit): 4.13
+      - 324 # Add the Halfling Slinger (fighter/thief kit): 4.13
+      - 350 # Add the Mage Hunter (ranger kit): 4.13
+      - 360 # Add the Barbarian Ranger (ranger kit): 4.13
+      - 410 # Add the Sniper (thief kit): 4.13
+      - 420 # Add the Scout (thief kit) and revise the Swashbuckler: 4.13
+  - name: cdtweaks
+    description: Tweaks Anthology - only spell progression tables
+    components:
+      - 2090 # Changer la limite de points d'experience -> Retirer la limite
+    location:
+      github_user: Gibberlings3
+      repository: Tweaks-Anthology
+      branch: master
