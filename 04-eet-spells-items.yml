@@ -181,11 +181,11 @@ modules:
   #    branch: master
   - name: Magic_Battles_Revised
     components:
-      - 10 # Revised Magic Battles
+      #- 10 # Revised Magic Battles
     location:
       github_user: mleduque
       repository: magic_battles_revised
-      branch: fr-translation-to-update-1.2
+      branch: 1.3a-fr
   - name: A7-TotLM-BG2EE
     description: Trial of the Luremaster - Main component (warns)
     components:
@@ -500,8 +500,8 @@ modules:
     location:
       github_user:  Gibberlings3
       repository: Forgotten-Armament
-      release: 0.2.1-beta
-      asset: forgotten-armament-v0.2.1-beta.iemod
+      release: 0.3-beta
+      asset: forgotten-armament-v0.3-beta.iemod
   - name: iiItemMod
     components: ~
     location:

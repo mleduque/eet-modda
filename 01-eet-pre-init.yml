@@ -66,8 +66,8 @@ modules:
     location:
       github_user: r-e-d
       repository: EEUITweaks
-      release: "3.7.1"
-      asset: eeuitweaks-3.7.1.iemod
+      release: "3.8"
+      asset: eeuitweaks-3.8.iemod
   - name: HiddenGameplayOptions
     version: v3.0
     components:

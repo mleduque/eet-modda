@@ -12,11 +12,11 @@ modules:
       repository: Branwen_for_BGII
       branch: master
   - name: Aura_BG1
-    components: [0]
+    components:
     location:
       github_user: ArtemiusI
       repository: Aura_BG1
-      branch: master
+      ta: v3.4c
       patch:
         relative: patches/aura_bg1-select-artificer.diff
     #prompt for class (1. Artificer)
@@ -370,7 +370,7 @@ modules:
       repository: Wings
       tag: v1.02
   - name: npckit
-    components: [30, 31, 400, 410, 900, 1415, 2100, 2200, 2300, 2500, 2800]
+    components: #[30, 31, 400, 410, 900, 1415, 2100, 2200, 2300, 2500, 2800]
     location:
       path: /home/mick/Games/modda-cache/static/lin-npckit-v5.tar.gz
   - name: npcflirt
@@ -444,7 +444,7 @@ modules:
     location:
       github_user: mleduque
       repository: TBGCoM_BG1NPCSoA
-      tag: v14.2
+      tag: v13.4
       patch:
         relative: patches/bg1npcsoa-nopdf.diff
         encoding: WIN1251

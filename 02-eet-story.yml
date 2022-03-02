@@ -33,8 +33,8 @@ modules:
     location:
       github_user: Pocket-Plane-Group
       repository: Turnabout
-      release: v1.5
-      asset: turnabout-v1.5.iemod
+      release: v1.7
+      asset: turnabout-v1.7.iemod
   - name: A7-TestYourMettle
     components:
       - 0   # Test Your Mettle!
@@ -214,7 +214,7 @@ modules:
   - name: BridgesBlock
     components: ~
     location:
-      path: /home/mick/Games/modda-cache/static/BridgesBlock v0.91.zip
+      path: /home/mick/Games/modda-cache/static/BridgesBlock v1.0.zip
   - name: SirinesCall
     description: The Lure of the Sirine's Call
     components: [0, 1]
@@ -362,8 +362,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: The_Calling
-      release: v1
-      asset: lin-thecalling-v1.tar.gz
+      release: v2
+      asset: lin-thecalling-v2.tar.gz
   - name: imoen_forever
     components:
     #- 0  # Imoen 4 Ever in BGII: Imoen returns at the beginning of chapter 2
@@ -652,8 +652,8 @@ modules:
     location:
       github_user: Austin-BG
       repository: HTaM
-      release: v.4.2
-      asset: heroes-thieves-and-moneylenders-4.2.iemod
+      release: v.4.2.2
+      asset: heroes-thieves-and-moneylenders-4.2.2.iemod
       patch:
         relative: patches/herthimoney-nopdf.diff
   - name: "snakes" # The slithering Menace
@@ -746,3 +746,10 @@ modules:
       asset: extra-enhanced-expanded-encounters-3.0.iemod
       patch:
         relative: patches/ExtraExpandedEnhancedEncouter-reducegnolls.diff
+  - name: gbthfkp
+    description: Expanded Thief Stronghold
+    components:
+    location:
+      github_user: GwendolyneFreddy
+      repository: Expanded_Thief_Stronghold
+      commit: 92bb3bd

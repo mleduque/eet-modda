@@ -13,7 +13,7 @@ modules:
     location:
       github_user: mleduque
       repository: iwdification
-      commit: "13624c1"
+      commit: "5d060e2"
   #- name: divine_remix
   #  components:
   #    - 11 # Installer les nouveaux sorts -> Ajouter les nouveaux sorts uniquement si d'autres mods ne l'ont pas deja fait: 8.1

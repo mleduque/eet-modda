@@ -1,0 +1,43 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: Faiths_and_Powers
+    components:
+      - 21 # Créer un système de sphères -> FnP : le système de sphères original de Faiths & Powers: 0.81.2
+      - 31 # Installer les kits de clerc: 0.81.2
+      - 33 # Installer les kits de druide: 0.81.2
+      - 35 # Installer les kts de paladin: 0.81.2
+      - 37 # Installer les kits de rôdeur: 0.81.2
+      - 75 # Modifier l'utilisabilité des armes et les compétences d'armes des prêtres: 0.81.2
+      - 80 # Appliquer le système de sphères: 0.81.2
+      - 85 # Appliquer les kits de FnP aux PNJ: 0.81.2
+    ignore_warnings: true # all except 31 emit no effect changed/added
+    location:
+      github_user: mleduque
+      repository: Faiths_and_Powers
+      branch: clean-up-unused #0.81.8-fr
+      layout:
+          layout_type: multi_dir
+          dirs:
+            - faiths_and_powers
+            - FnP_Multiclass
+  - name: FnP_Multiclass
+    components:
+      - 91 # Multiclass Druids
+      - 92 # Multiclass Shamans
+      - 95 # Multiclass Cleric kits (install AFTER all other kit mods
+    ignore_warnings: true # apparently intentional
+  - name: cdtweaks
+    description: Tweaks Anthology - only spell progression tables
+    components:
+      - 2090 # Changer la limite de points d'experience -> Retirer la limite
+    location:
+      github_user: Gibberlings3
+      repository: Tweaks-Anthology
+      release: v10
+      asset: lin-cdtweaks-v10.tar.gz
+

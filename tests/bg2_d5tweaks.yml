@@ -1,0 +1,47 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: iwdification
+    components:
+      - 30 # IWD Arcane Spell Pack: Release Candidate 2
+      - 40 # IWD Divine Spell Pack: Release Candidate 2
+      - 100 # IWD Class Updates: Paladin: IWD Abilities and Skills: Release Candidate 2
+      - 150 # IWD Class Updates: Bard: Use IWD Spell Progression: Release Candidate 2
+      - 70 # IWD Class Updates: Druid: Use IWD Shapeshifting and Ability Progression: Release Candidate 2
+      - 160 # IWD Class Updates: Paladin: Use IWD Spell Progression: Release Candidate 2
+      - 170 # IWD Class Updates: Ranger: Use IWD Spell Progression: Release Candidate 2
+    location:
+      github_user: mleduque
+      repository: iwdification
+      branch: french-tra
+  - name: spell_rev
+    components:
+      - 0 # Spell Revisions: v4 Beta 18
+      - 10 # Animations des Devas et Planetaires: v4 Beta 18
+      - 20 # Correction d'Image Miroir: v4 Beta 18
+      - 30 # Correction de la Dissipation de la Magie: v4 Beta 18
+      - 60 # Mise a jour du Livre de sorts des PNJs recrutables: v4 Beta 18
+    location:
+      github_user: Gibberlings3
+      repository: SpellRevisions
+      branch: master
+  - name: d5_random_tweaks
+    version: 1.3.1
+    description: SubtleDoctor's Random Tweaks
+    components:
+    location:
+      github_user: mleduque
+      repository: d5_Random_Tweaks
+      branch: french-proofreading
+  - name: cdtweaks
+    description: Tweaks Anthology - only spell progression tables
+    components:
+      - 2090 # Changer la limite de points d'experience -> Retirer la limite
+    location:
+      github_user: Gibberlings3
+      repository: Tweaks-Anthology
+      branch: master

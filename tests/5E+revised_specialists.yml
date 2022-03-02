@@ -1,0 +1,87 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: cdtweaks
+    description: Tweaks Anthology - only spell progression tables
+    components:
+      - 2250 # Table de progression des sorts du sorcier debridee
+      - 2260 # Alterer la table de progression des sorts du mage -> Table debridee (Blucher)
+      - 2270 # Alterer la table de progression des sorts du barde -> Table debridee (Blucher)
+      - 2280 # Alterer la table de progression des sorts du clerc -> Table debridee (Blucher)
+      - 2293 # Alterer les tables de progression des sorts et de niveaux du druide -> Utiliser la table de progression des clercs et la table debridee des sorts des druides (Blucher)
+    location:
+      github_user: Gibberlings3
+      repository: Tweaks-Anthology
+      release: v10
+      asset: lin-cdtweaks-v10.tar.gz
+  - name: Faiths_and_Powers
+    components:
+      - 21 # Créer un système de sphères -> FnP : le système de sphères original de Faiths & Powers: 0.81.2
+      - 31 # Installer les kits de clerc: 0.81.2
+      - 33 # Installer les kits de druide: 0.81.2
+      - 35 # Installer les kts de paladin: 0.81.2
+      - 37 # Installer les kits de rôdeur: 0.81.2
+      - 75 # Modifier l'utilisabilité des armes et les compétences d'armes des prêtres: 0.81.2
+      - 80 # Appliquer le système de sphères: 0.81.2
+      - 85 # Appliquer les kits de FnP aux PNJ: 0.81.2
+    ignore_warnings: true # all except 31 emit no effect changed/added
+    location:
+      github_user: mleduque
+      repository: Faiths_and_Powers
+      branch: clean-up-unused #0.81.7-fr
+      layout:
+          layout_type: multi_dir
+          dirs:
+            - faiths_and_powers
+            - FnP_Multiclass
+  - name: 5E_spellcasting
+    comment: It should be installed after Tome & Blood and Faiths & Powers; but before Might & Guile and Faiths & Powers Multiclass.
+    components:
+      #- 100 # Change All Casters to 5E System
+      #- 900 # Set Bonus Spell Slot Items to Work for 5E Casters
+    ignore_warnings: true # no effect altered on... for each component
+    location:
+      github_user: mleduque
+      repository: 5E_spellcasting
+      commit: 1.5.2-fr
+  - name: TomeAndBlood
+    description: Tome And Blood (main)
+    components:
+      - 11 #// Rebalanced Spell Schools: 0.9.25
+      - 1201 #// Rebalanced Arcane Opposition Schools -> No Opposition Schools: 0.9.25
+      - 13 #// Revised Illusionary Clones: 0.9.25
+      - 16 #// Improved Identify spell (usable by Arcanist/Multi Sorcerers): 0.9.25
+      - 25 #// Sorcerer: Magus: 0.9.25
+      - 31 #// Sorcerer: Favored Soul: 0.9.25
+      - 33 #// Sorcerer: Sylvan Disciple: 0.9.25
+      - 35 #// Sorcerer: Revenant Disciple: 0.9.25
+      - 37 #// Sorcerer: Amorphous Disciple: 0.9.25
+      - 40 #// Revised Specialists: 0.9.25
+      - 55 #// Revised Metamagic -> Metamagic spells, fill sequencers free (usable by Arcanist/Multi Sorcerers): 0.9.25
+      - 61 #// Cantrips -> Innate Cantrips: 0.9.25
+      - 66 #// Innate Find Familiar: 0.9.25
+      - 67 #// Choose-Your-Own Familiar: 0.9.25
+      - 71 #// Sorcerer Spell Switching -> Change spells every level: 0.9.25
+      - 80 #// Multiclass Sorcerers: 0.9.25
+      - 93 #// Make +Spell Slot Items work with MultiSorcerers and Arcanists: 0.9.25
+    location:
+      github_user: subtledoctor
+      repository: TomeAndBlood
+      tag: "0.9.26"
+  - name: TomeAndBlood
+    description: Tome And Blood (warning components)
+    components:
+      - 14 #// Revised Invisibility and True Seeing: 0.9.25
+      - 68 #// Pooky's Mod: Imbue Familiars: 0.9.25
+    ignore_warnings: true # no effect altered on... for each component
+  - name: cdtweaks
+    description: Tweaks Anthology - only spell progression tables
+    components:
+      - 2090 # Changer la limite de points d'experience -> Retirer la limite
+  - name: cdtweaks
+    description: Tweaks Anthology - only spell progression tables
+
