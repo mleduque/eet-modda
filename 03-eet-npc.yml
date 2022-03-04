@@ -100,9 +100,9 @@ modules:
     components: [0]
     location:
       github_user: Gitjas
-      repository: ACBre
-      release: v11.3.0
-      asset: ascalons-breagar-11.3.0.iemod
+      repository: Ascalons_Breagar
+      release: 11.4.0
+      asset: ascalons-breagar-11.4.0.iemod
   - name: btl
     components: ~
     location:

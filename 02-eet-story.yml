@@ -543,12 +543,12 @@ modules:
       release: v7
       asset: brages-redemption-brage-npc-for-the-whole-baldurs-gate-epic-7.iemod
   - name: "c#solaufein"
-    components: [0, 1]
+    components: ~
     location:
       github_user: Gitjas
       repository: Solaufeins_Rescue_NPC
-      release: v3
-      asset: solaufeins-rescue-jasteys-solaufein-npc-mod-for-bgii-3.iemod
+      release: v3.1
+      asset: solaufeins-rescue-jasteys-solaufein-npc-mod-for-bgii-3.1.iemod
   - name: "TangledIsle"
     components: ~
     location:
@@ -750,6 +750,7 @@ modules:
     description: Expanded Thief Stronghold
     components:
     location:
-      github_user: GwendolyneFreddy
+      github_user: SpellholdStudios
       repository: Expanded_Thief_Stronghold
-      commit: 92bb3bd
+      release: v3.0.0
+      asset: expanded-thief-stronghold-v3.0.0.iemod

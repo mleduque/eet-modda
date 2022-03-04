@@ -224,7 +224,7 @@ modules:
     location:
       github_user: subtledoctor
       repository: d5_Random_Tweaks
-      branch: 1.4.2-fr
+      branch: 1.4.3-fr
   #- name: d5_random_tweaks
   #  description: SubtleDoctor's Random Tweaks - ignore component warnins
   #  ignore_warnings: true
@@ -429,7 +429,7 @@ modules:
     location:
       github_user: mleduque
       repository: Might_and_Guile
-      commit: 4.18.3-fr
+      commit: 4.18.4-fr
   - name: might_and_guile
     description: Might And Guile - Other components
     components:
