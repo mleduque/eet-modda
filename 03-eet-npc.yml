@@ -93,8 +93,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Grey_The_Dog
-      release: v7.1
-      asset: grey-the-dog-npc-7.1.iemod
+      release: v8
+      asset: grey-the-dog-npc-8.iemod
   - name: ACBre
     description: Ascalon's Breagar
     components: [0]
@@ -103,6 +103,14 @@ modules:
       repository: Ascalons_Breagar
       release: 11.4.0
       asset: ascalons-breagar-11.4.0.iemod
+  - name: c#brandock
+    description: Brandock the mage
+    components: ~
+    location:
+      github_user: Gitjas
+      repository: Brandock_the_Mage
+      release: vBeta-14
+      asset: brandock-the-mage-beta_14.iemod
   - name: btl
     components: ~
     location:
@@ -349,8 +357,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Ajantis_BG1_Expansion
-      release: v18.1
-      asset: ajantis-bg1-expansion-modification-18.1.iemod
+      release: v18.2
+      asset: ajantis-bg1-expansion-modification-18.2.iemod
   - name: SkieCost # install late because adds crossmod banters with Yvette & Foundling
     description: "Skie: The Cost of One Girl’s Soul"
     components:
@@ -420,16 +428,16 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Jasteys_SoD_Tweakpack
-      release: v8
-      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v8.iemod
+      release: v8.1
+      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v8.1.iemod
   - name: sodrtd
     description: Road To Discovery
     components:
     location:
       github_user: Gitjas
       repository: Road_To_Discovery_for_SoD
-      release: v0.3Beta
-      asset: road-to-discovery-for-sod-0.3pre-.beta.iemod
+      release: v0.4Beta
+      asset: road-to-discovery-for-sod-0.4-.beta.iemod
   - name: BG1NPCSoA # install after other versions of same npcs
     description: BG1 NPCs in BG2
     components:

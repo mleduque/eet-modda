@@ -388,8 +388,8 @@ modules:
   #  location:
   #    github_user: Gitjas
   #    repository: Another_Fine_Hell
-  #    release: vAlpha_220117
-  #    asset: another-fine-hell-for-sod-alpha_220117.iemod
+  #    release: vAlpha_220123
+  #    asset: another-fine-hell-for-sod-alpha_220123.iemod
   - name: d0questpack
     description: SimDing0's Quest Pack
     components: [0, 1, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
@@ -540,8 +540,8 @@ modules:
     location:
       github_user: Gitjas
       repository: Brages_Redemption
-      release: v7
-      asset: brages-redemption-brage-npc-for-the-whole-baldurs-gate-epic-7.iemod
+      release: v7.1
+      asset: brages-redemption-brage-npc-for-the-whole-baldurs-gate-epic-7.1.iemod
   - name: "c#solaufein"
     components: ~
     location:
