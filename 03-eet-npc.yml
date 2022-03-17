@@ -452,7 +452,7 @@ modules:
     location:
       github_user: mleduque
       repository: TBGCoM_BG1NPCSoA
-      tag: v13.4
+      tag: v13.5
       patch:
         relative: patches/bg1npcsoa-nopdf.diff
         encoding: WIN1251
@@ -468,3 +468,15 @@ modules:
   #    repository: JaheiraRecast
   #    release: v3.0
   #    asset: lin-jaheirarecast-v3.0.zip
+  - name: TorturedSoulsLite
+    components:
+    location:
+      github_user: RealApxu
+      repository: TorturedSoulsLite
+      tag: v0.4
+  -name: TS_sime
+    components:
+    location:
+      github_user: RealApxu
+      repository: TS_Sime
+      tag: "0.8"

@@ -150,7 +150,7 @@ modules:
     location:
       github_user: mleduque
       repository: iwdification
-      branch: french-tra
+      branch: 2.0-fr
   - name: spell_rev
     components:
       - 0   # Spell Revisions
@@ -185,7 +185,7 @@ modules:
     location:
       github_user: mleduque
       repository: magic_battles_revised
-      branch: 1.3a-fr
+      branch: 1.4-fr
   - name: A7-TotLM-BG2EE
     description: Trial of the Luremaster - Main component (warns)
     components:
@@ -495,6 +495,14 @@ modules:
       github_user: mleduque-not sod items
       repository: edvin_unofficial_item_pack
       tag: v2.7b
+  - name: rttitempack
+    components: ~
+    location:
+      path: /home/mick/Games/modda-cache/static/RTTItemPack_v1.3.zip
+  - name: iwditempack
+    components: ~
+    location:
+      path: /home/mick/Games/modda-cache/static/IWD Item Pack.zip
   - name:
     components: ~
     location:
@@ -502,6 +510,11 @@ modules:
       repository: Forgotten-Armament
       release: 0.3-beta
       asset: forgotten-armament-v0.3-beta.iemod
+  - name: Mystigan
+    components:
+    location:
+      http: https://akadis.baldursgateworld.fr/Mystigan/zip/Mystigan1.6.zip
+      rename: Mystigan1.6.zip
   - name: iiItemMod
     components: ~
     location:

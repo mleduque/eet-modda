@@ -251,7 +251,28 @@ modules:
     location:
       github_user: mleduque
       repository: jmerry_jtweaks
-      tag: v2.0
+      tag: v2.2
+  - name: tb#tweaks
+    components:
+      ## probably
+      # Covenient Wish
+      # maybe faster romances?
+      # WSPATCK for all?
+      # stat training?
+      # 3e stats?
+      # Mages drop spellbooks
+    location:
+      github_user: vbigiani
+      repository: tb-tweaks
+      branch: master
+  - name: Miscellaneous
+    components:
+      - 1100 # Dragon breath fix
+      - 1500 # Revenant Animation Fix
+    location:
+      github_user: mleduque
+      repository: ac_misc_tweaks
+      tag: v1.21
   - name: 35thac0
     components: [0]
     location:

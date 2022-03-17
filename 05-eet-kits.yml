@@ -224,7 +224,7 @@ modules:
     location:
       github_user: subtledoctor
       repository: d5_Random_Tweaks
-      branch: 1.4.4-fr
+      branch: 1.5.1-fr
   #- name: d5_random_tweaks
   #  description: SubtleDoctor's Random Tweaks - ignore component warnins
   #  ignore_warnings: true
@@ -245,8 +245,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Tweaks-Anthology
-      release: v10
-      asset: lin-cdtweaks-v10.tar.gz
+      release: v12
+      asset: lin-cdtweaks-v11.tar.gz
     add_conf:
       file_name: cdtweaks.txt
       content: |
@@ -274,8 +274,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: SongAndSilence
-      release: v15
-      asset: lin-song_and_silence-v15.tar.gz
+      release: v16
+      asset: lin-song_and_silence-v16.tar.gz
   - name: spstuff
     description: Sorcerer's Place Collection
     components: ~
@@ -396,7 +396,7 @@ modules:
     location:
       github_user: mleduque
       repository: 5E_spellcasting
-      commit: 1.7.1-fr
+      commit: 1.8-fr
       patch:
         relative: patches/spellcasting-5e-config.diff
   - name: sword_and_fist
@@ -708,7 +708,7 @@ modules:
     location:
       github_user: UnearthedArcana
       repository: Scales_of_Balance
-      tag: "5.37.5"
+      tag: "5.38.1"
       patch:
         relative: patches/scales-config.diff
   - name: DruidGroveMakeover
@@ -1035,7 +1035,7 @@ modules:
     location:
       github_user: UnearthedArcana
       repository: NPC_EE
-      tag: "v5"
+      tag: "5.1"
   - name: cowledmenace
     components: [1000, 2100, 3000]
     location:

@@ -48,8 +48,8 @@ modules:
     location:
       github_user: r-e-d
       repository: LeUI-SoD
-      release: v4.4.3
-      asset: lefreuts-enhanced-ui-sod-skin-4.4.3.iemod
+      release: v4.4.4
+      asset: lefreuts-enhanced-ui-sod-skin-4.4.4.iemod
   - name: LightingPack
     components:
       - 2 # Shader script files for lighting control -> Moderately increased contrast, brightness and gamma (recommended)
