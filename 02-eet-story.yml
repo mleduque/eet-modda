@@ -148,7 +148,7 @@ modules:
     location:
       github_user: Gibberlings3
       repository: BG_Quests_And_Encounters
-      release: v25.2
+      release: v25.3
       asset: baldurs-gate-mini-quests-and-encounters-modification-v25.2.iemod
   - name: AC_QUEST
     description: Ascalon's Questpack
@@ -540,8 +540,8 @@ modules:
     location:
       github_user: Gitjas
       repository: Brages_Redemption
-      release: v7.1
-      asset: brages-redemption-brage-npc-for-the-whole-baldurs-gate-epic-7.1.iemod
+      release: v7.2
+      asset: brages-redemption-brage-npc-for-the-whole-baldurs-gate-epic-7.2.iemod
   - name: "c#solaufein"
     components: ~
     location:

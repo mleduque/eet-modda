@@ -1,0 +1,178 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: iwdification
+    components:
+      - 10 #// Incantation des sorts style Icewind Dale (Andyr): v1
+      - 60 #// Pack de haches a deux mains: v1
+      - 90 #// Extension de Metamorphose: v1
+      - 130 #// Utiliser les animations de degats d'IWD: v1
+      - 140 #// Equipement des ennemis aleatoire -> Ajouter des objets "de maitre": v1
+      - 50 #// Chanson du barde d'IWD: v1
+      - 150 #// Mises a jour de classes IWD : Barde : Utiliser la progression de sorts d'IWD: v1
+      - 70 #// Mises a jour de classes IWD : Druide : Utiliser la metamorphose et la progression de sorts d'IWD: v1
+      - 71 #// Mises a jour de classes IWD : Druide : Permettre aux elfes d'etre druide: v1
+      - 100 #// Mises a jour de classes IWD : Paladin : Capacités et compétences d'IWD: v1
+      - 160 #// Mises a jour de classes IWD : Paladin : Utiliser la progression de sorts d'IWD: v1
+      - 170 #// Mises a jour de classes IWD : Rodeur : Utiliser la progression de sorts d'IWD: v1
+      - 120 #// Mises a jour de classes IWD : Voleur : Esquive totale: v1
+      - 30 #// Pack de sortileges profanes d'IWD: v1
+      - 40 #// Pack de sortileges divins d'IWD: v1
+    location:
+      github_user: mleduque
+      repository: iwdification
+      commit: "6f1ba47d33d2bac6"
+  - name: spell_rev
+    components:
+      - 0   # Spell Revisions
+      - 10  # Deva and Planetar Animations
+      - 20  # Mirror Image Fix
+      - 30  # Dispel Magic Fix    <- must be before TotLM
+      - 55  # Spell Deflection blocks AoE spells
+      - 60  # Update Spellbooks of Joinable NPCs
+    language: 0 # translation is not up to date with recent changes
+    location:
+      github_user: Gibberlings3
+      repository: SpellRevisions
+      commit: f3ad6761ddec5
+  - name: TomeAndBlood
+    description: Tome And Blood - main
+    components:
+      - 1201 # Ré-équilibrage des écoles profanes opposées -> Pas d'écoles opposées: 0.9.27
+      - 13 # Révision des clones illusoires: 0.9.27
+      - 14 # Révision d'Invisibilité et de Vision véritable: 0.9.27
+      - 16 # Sort Identification amélioré (utilisable par les Arcanistes et les Ensorceleurs multiclassés): 0.9.27
+      - 20 # Révision des Disciples du Dragon: 0.9.27
+      - 25 # Kit d'ensorceleur : Magus: 0.9.27
+      - 31 # Kit d'ensorceleur : Âme favorite: 0.9.27
+      - 33 # Kit d'ensorceleur : Disciple sylvain: 0.9.27
+      - 35 # Kit d'ensorceleur : Disciple revenant: 0.9.27
+      - 37 # Kit d'ensorceleur : Disciple amorphe: 0.9.27
+      - 40 # Révision des spécialistes: 0.9.27
+      - 48 # Lancer de sort en armure pour les bardes: 0.9.27
+      - 51 # Révision de la  Métamagie -> Métamagie innée, apprise automatiquement par tout le monde: 0.9.27
+      - 66 # Sort de Familier inné: 0.9.27
+      - 67 # Choisir son familier: 0.9.27
+      - 71 # Changement de sorts pour les ensorceleurs -> Changer les sorts à tous les niveaux: 0.9.27
+      - 92 # Rendre les objets à emplacement de sorts bonus compatibles avec les ensorceleurs multi et les arcanistes -> Bonus pour la mémorisation ET les emplacements de lancer: 0.9.27
+    location:
+      github_user: mleduque
+      repository: TomeAndBlood
+      commit: f3295b7af2b41e2 # 0.9.28-fr
+  - name: TomeAndBlood
+    description: Tome And Blood - main
+    components:
+      - 68 # Le mod de Pooky : Infuser les familiers: 0.9.27
+    ignore_warnings: true # WARNING: no effects altered on D5L411.SPL
+  - name: divine_remix
+    components:
+      - 11 # Installer les nouveaux sorts -> Ajouter les nouveaux sorts uniquement si d'autres mods ne l'ont pas deja fait: 8.1
+      - 100 # Modification des Clercs: 8.1
+      - 103 # Installer le kit de clerc d'Etoile d'Argent de Selune: 8.1
+      - 106 # Installer le kit de clerc de Manteau de la Nuit de Shar: 8.1
+      - 107 # Installer le kit de clerc de Stratege Divin de la Cavaliere Rouge: 8.1
+      - 112 # Installer le kit de clerc de Noble Martyr d'Ilmater: 8.1
+      - 115 # Installer le kit de clerc d'Adepte des Flammes de Kossuth: 8.1
+      - 118 # Installer le kit de clerc de Tyran d'Iyachtu Xvim: 8.1
+      - 121 # Installer le kit de clerc de Gardien du Savoir d'Oghma: 8.1
+      - 124 # Installer le kit de clerc de Garde du Coeur de Sunie: 8.1
+      - 127 # Installer le kit de clerc de Protecteur Feerique de Corellon: 8.1
+      - 130 # Installer le kit de clerc de Maitre des Conflits de Cyric: 8.1
+      - 200 # Modification des Druides: 8.1
+      - 203 # Installer le kit de Druide de Maitre des Vases: 8.1
+      - 403 # Installer le kit de Rodeur d'Archer Sylvain: 8.1
+      - 406 # Installer le kit de Rodeur Sauvage: 8.1
+      - 409 # Installer le kit de Rodeur de Coureur des Bois: 8.1
+      - 412 # Installer le kit de Rodeur de Vengeur: 8.1
+      - 415 # Installer le kit de Rodeur de Coureur Sauvage: 8.1
+    location:
+      github_user: TotoR115
+      repository: Divine_Remix
+      commit: a443b16
+  - name: Faiths_and_Powers
+    components:
+      - 24 # Créer un système de sphères -> Nouveau FnP : un nouveau système de sphères (moins de sphères, plus équilibré globalement): 0.82.3
+      - 31 # Installer les kits de clerc: 0.82.3
+      - 33 # Installer les kits de druide: 0.82.3
+      - 35 # Installer les kits de paladin: 0.82.3
+      - 37 # Installer les kits de rôdeur: 0.82.3
+      - 80 # Appliquer le système de sphères (REQUIS pour que le système de sphères fonctionne): 0.82.3
+      - 85 # Appliquer les kits de FnP aux PNJ: 0.82.3
+    location:
+      github_user: mleduque
+      repository: Faiths_and_Powers
+      commit: de93a373fa #0.82.4-fr
+      layout:
+          layout_type: multi_dir
+          dirs:
+            - faiths_and_powers
+            - FnP_Multiclass
+  - name: 5E_spellcasting
+    comment: It should be installed after Tome & Blood and Faiths & Powers; but before Might & Guile and Faiths & Powers Multiclass.
+    components:
+      - 100 # Change All Casters to 5E System
+      - 901 # Set Bonus Spell Slot Items to Work for 5E Casters
+    location:
+      github_user: mleduque
+      repository: 5E_spellcasting
+      branch: master
+      commit: 4f9002278 #1.8.1-fr
+  - name: Will_to_Power
+    components: ~
+    location:
+      github_user: UnearthedArcana
+      repository: Will_to_Power
+      tag: "1.3.4"
+      patch:
+        relative: patches/will_to_power_tweaks.diff
+  - name: FnP_Multiclass
+    components:
+      - 91 # Multiclass Druids
+      - 92 # Multiclass Shamans
+      - 95 # Multiclass Cleric kits (install AFTER all other kit mods
+    ignore_warnings: true # apparently intentional
+  - name: cdtweaks
+    description: Tweaks Anthology - only spell progression tables
+    components:
+    location:
+      github_user: Gibberlings3
+      repository: Tweaks-Anthology
+      release: v12
+      asset: lin-cdtweaks-v12.tar.gz
+  - name: METweaks
+    description: Olvyn's Tweaks
+    components:
+      - 400  # Remove the limit of two proficiency points in a weapon at character creation
+      - 505  # Increase the rate at which warriors get proficiency points -> Fighters, Rangers and Paladins get 1 point per 2 levels
+      - 900  # Let Rangers and Paladins cast spells at their full caster level
+      - 1400 # Power Up Ranger Charm Animal
+      - 1500 # Turn Paladin Detect Evil into a passive ability that can be toggled on and off
+      - 2000 # Allow cursed scrolls to be used on enemies
+      - 3805 # Modify Sneak Attack and Crippling Strike -> Reduce the delay before a creature can be sneak-attacked again to 1 round
+    location:
+      github_user: OlvynChuru
+      repository: Olvyn-Tweaks
+      branch: master
+  - name: scales_of_balance
+    components:
+      ##- 100 # IWO - Yet Another Revised Armor System
+      #- 102 # IWO - Functional Weapon Tweaks
+      #- 109 # IWO - All Potions Usable by Any Class
+      ##- 121 # WPO - Weapon Category Collapse
+      #- 125 # WPO - APR on Spec
+      #- 172 # STO - IWD Spell Evasion -> For Expanded Spell List
+      ##- 200 # SBO - Stat Bonus Overhaul
+      #- 201 # SBO - Stat-based Bonus Spells
+      #- 204 # SBO - Enable Concentration Checks
+      #- 224 # XPO - Choose SoD Starting XP -> 161,000
+      #- 229 # XPO - Choose SoA Starting XP -> 400,000
+    location:
+      github_user: UnearthedArcana
+      repository: Scales_of_Balance
+      tag: "5.38.1"
+      patch:
+        relative: patches/scales-config.diff
