@@ -1,11 +1,9 @@
 
-- REBASE french translation for FnP !!!!!
 - Edit faith & power spheres to include mih_sp
-- Edit faith & power spheres to include SOD2BG2
-- Translate FnP
-- Translate TnB
 - Translate mih_sp
 - submit iwdification translation
 - traduire iiItems et iiKeyNames
-- item_rev or forgotten armament 
+- remove item_rev (or limit savagely)
 - incorporate scs fixes here https://www.gibberlings3.net/forums/topic/33191-sword-coast-stratagems-v34-edit-343-now-available/page/23/#comment-304102
+- debug FnP multiclass and freeze
+- SR en français

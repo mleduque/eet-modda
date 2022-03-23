@@ -418,7 +418,7 @@ modules:
     location:
       github_user: UnearthedArcana
       repository: Will_to_Power
-      tag: "1.3.4"
+      branch: 1.3.4-fr
       patch:
         relative: patches/will_to_power_tweaks.diff
   - name: might_and_guile
@@ -550,6 +550,8 @@ modules:
       github_user: mleduque
       repository: Klatu_tweaks_and_fixes
       branch: main
+      patch:
+        relative: patches/klatu-fix-manual_of_war.diff
   - name: klatu
     description: Klatu Tweaks
     components:
@@ -692,25 +694,6 @@ modules:
       github_user: OlvynChuru
       repository: Olvyn-Tweaks
       branch: master
-  - name: scales_of_balance
-    components:
-      ##- 100 # IWO - Yet Another Revised Armor System
-      #- 102 # IWO - Functional Weapon Tweaks
-      #- 109 # IWO - All Potions Usable by Any Class
-      ##- 121 # WPO - Weapon Category Collapse
-      #- 125 # WPO - APR on Spec
-      #- 172 # STO - IWD Spell Evasion -> For Expanded Spell List
-      ##- 200 # SBO - Stat Bonus Overhaul
-      #- 201 # SBO - Stat-based Bonus Spells
-      #- 204 # SBO - Enable Concentration Checks
-      #- 224 # XPO - Choose SoD Starting XP -> 161,000
-      #- 229 # XPO - Choose SoA Starting XP -> 400,000
-    location:
-      github_user: UnearthedArcana
-      repository: Scales_of_Balance
-      tag: "5.38.1"
-      patch:
-        relative: patches/scales-config.diff
   - name: DruidGroveMakeover
     components:
       - 0

@@ -98,10 +98,11 @@ modules:
       - 24 # Créer un système de sphères -> Nouveau FnP : un nouveau système de sphères (moins de sphères, plus équilibré globalement): 0.82.3
       - 31 # Installer les kits de clerc: 0.82.3
       - 33 # Installer les kits de druide: 0.82.3
-      - 35 # Installer les kits de paladin: 0.82.3
-      - 37 # Installer les kits de rôdeur: 0.82.3
+      #- 35 # Installer les kits de paladin: 0.82.3
+      #- 37 # Installer les kits de rôdeur: 0.82.3
       - 80 # Appliquer le système de sphères (REQUIS pour que le système de sphères fonctionne): 0.82.3
       - 85 # Appliquer les kits de FnP aux PNJ: 0.82.3
+    ignore_warnings: true # no affect added/altered
     location:
       github_user: mleduque
       repository: Faiths_and_Powers
@@ -122,13 +123,17 @@ modules:
       branch: master
       commit: 4f9002278 #1.8.1-fr
   - name: Will_to_Power
-    components: ~
+    components:
+      - 200 # Ajouter le Psioniste, voleur/psion: 1.3.4
+      - 300 # Ajouter le Guerrier Psychique, guerrier/psion: 1.3.4
+      - 400 # Ajouter le Psypher, rôdeur/psion: 1.3.4
+      - 500 # Ajouter le Cerebromant, mage/psion: 1.3.4
+      - 900 # Mode Dark Sun : Tout le monde est un talent natif: 1.3.4
     location:
-      github_user: UnearthedArcana
+      github_user: mleduque
       repository: Will_to_Power
-      tag: "1.3.4"
-      patch:
-        relative: patches/will_to_power_tweaks.diff
+      commit: 125cdcf7ff99 # "1.3.4-fr"
+    ignore_warnings: true # no effects altered on ohbantim.spl
   - name: FnP_Multiclass
     components:
       - 91 # Multiclass Druids
@@ -138,35 +143,123 @@ modules:
   - name: cdtweaks
     description: Tweaks Anthology - only spell progression tables
     components:
+      - 20 # Avatar de mage pour Imoen: v12
+      - 30 # Avatar de voleur pour Nalia: v12
+      - 40 # Peau bleue pour Viconia: v12
+      - 50 # Script de changement d'avatar: v12
+      - 60 # Animation des armes amelioree: v12
+      - 110 # Amelioration des icones des objets: v12
+      - 130 # Mode pause dans tous les dialogues: v12
+      - 140 # Correction du cri de Bouh: v12
+      - 160 # Rendre rougeoyants les boucliers magiques (plainab/grogerson): v12
+      - 170 # Icones uniques: v12
+      - 182 # Recipients uniques -> Recipients et noms uniques: v12
+      - 191 # Utiliser les couleurs du personnage plutot que les couleurs de l'objet -> Pour tous les boucliers et casques non magiques: v12
+      - 3151 # Retirer les effets visuels ennuyeux des objets equipes -> Retirer tout ce qui est mentionne ci-dessus: v12
+      - 2010 # Separer l'icone de resistance au feu/froid en icones distinctes (Angel): v12
+      - 1010 # Davantage d'interjections: v12
+      - 1020 # Modifier la valeur limite des points de vie pour les dialogues des PNJs blesses: v12
+      - 1040 # Ameliorer les gardes d'Athkatla: v12
+      - 1050 # Transformation progressive des objets des Elfes Noirs en poussiere: v12
+      - 1080 # Ajouter des sacs de contenance: v12
+      - 1101 # Ne pas explorer automatiquement les villes: v12
+      - 1120 # Plus de munitions dans les boutiques: v12
+      - 1160 # Forteresses pour toutes les classes -> Pas de restrictions (Baldurdash): v12
+      - 1180 # Portrait feminin pour Edwina: v12
+      - 1220 # Permettre a Cromwell d'ameliorer les objets de la Tour de Garde: v12
+      - 1225 # Ajuster le temps de forgeage de Cromwell -> Forgeage instantane (reglage BG2 original): v12
+      - 1230 # Permettre a Cespenar d'utiliser les recettes de Cromwell: v12
+      - 2020 # Epees batardes a deux mains: v12
+      - 2030 # Katanas a deux mains: v12
+      - 2035 # Haches a deux mains: v12
+      - 2040 # Gourdins universels: v12
+      - 2060 # Styles de combat pour toutes les classes: v12
+      - 2090 # Changer la limite de points d'experience -> Retirer la limite: v12
+      - 2140 # Options de jumelage etendues: v12
+      - 2150 # Port de plusieurs objets de protection -> Restrictions style P&P: v12
+      - 2160 # Modifier le systeme des competences martiales -> Reequilibrage des competences martiales: v12
+      - 2200 # Grande maitrise pour les multi-classes (Weimer): v12
+      - 2210 # Modifier les bonus de grande maitrise -> Veritable grande maitrise (Baldurdash): v12
+      - 2220 # Donner un poids de 0 aux armes creees par magie: v12
+      - 2240 # Table debridee des TAC0: v12
+      - 2250 # Table de progression des sorts du sorcier debridee: v12
+      - 2260 # Alterer la table de progression des sorts du mage -> Table debridee (Blucher): v12
+      - 2270 # Alterer la table de progression des sorts du barde -> Table debridee (Blucher): v12
+      - 2280 # Alterer la table de progression des sorts du clerc -> Table debridee (Blucher): v12
+      - 2296 # Alterer les tables de progression des sorts et de niveaux du druide -> Utiliser la table de progression des clercs et la table debridee des sorts des clercs (Blucher): v12
+      - 2300 # Tables de capacites de haut niveau pour les triclasses: v12
+      - 2312 # Ajouter des penalites aux jets de sauvegarde des sorts des lanceurs de sorts de haut niveau -> Magie divine et des arcanes: v12
+      - 2320 # Suppression de la limite du nombre de pieges (Ardanis/GeN1e): v12
+      - 2330 # Suppression du delai pour les pieges magiques (Ardanis/GeN1e): v12
+      - 2339 # Suppression de la limite de convocation pour les creatures normales: v12
+      - 2340 # Suppression de la limite de convocation des creatures celestes (Ardanis/GeN1e): v12
+      - 2360 # Suppression des restrictions raciales pour les mono-classes: v12
+      - 2380 # Suppression des restrictions raciales pour les kits: v12
+      - 2371 # Alterer les restrictions de jumelage -> Autoriser les non-humains a se jumeler: v12
+      - 2357 # Alterer les restrictions des multi-classses -> Installer les options une et deux (tout le monde a acces aux multi-classes sans contrainte): v12
+      - 2550 # Modifier les options de kit/multi-classe du gnome -> Conserve l'illusionniste pour les gnome multi-classes, autorise tous les kits pour les mono-classes: v12
+      - 2410 # Les druides utilisent les restrictions d'alignement de la 3eme edition: v12
+      - 2420 # Attenuer les restrictions d'equipement pour les clercs multi-classes: v12
+      - 2430 # Modifier les restrictions d'equipement pour les druides multi-classes -> Attenuer les restrictions d'equipement pour les druides multi-classes: v12
+      - 2440 # Tout le monde obtient le bonus d'attaque par round de specialisation: v12
+      - 2500 # Modification de la limite de poids de la force exceptionnelle: v12
+      - 2520 # Permettre aux mages d'utiliser une targe et les voleurs d'utiliser une rondache (Angel): v12
+      - 2530 # Les eclairs ne rebondissent pas (Angel): v12
+      - 2540 # Accelerer les quetes de forteresse du chateau de'Arnise: v12
+      - 2560 # Autorise le port du casque pour les moines: v12
+      - 2999 # Maximum de PV au niveau 1: v12
+      - 3001 # Davantage de points de vie a la montee de niveau -> Style NWN: v12
+      - 3008 # Autoriser le tirage des PV jusqu'au niveau 20 (Angel): v12
+      - 3031 # Apprentissage des sorts assoupli -> 100 % de chance d'apprendre un sort et nombre de sorts illimite: v12
+      - 3040 # Sacs de contenance sans fond: v12
+      - 3050 # Retirer l'effet de fatigue des sorts de restauration: v12
+      - 3083 # Augmenter la taille de la pile de munitions -> Piles de 120: v12
+      - 3093 # Augmenter la limite d'empilement des gemmes et des bijoux -> Piles de 120: v12
+      - 3101 # Augmenter la limite d'empilement des potions -> Piles de 40: v12
+      - 3111 # Augmenter la limite d'empilement des parchemins -> Piles de 40: v12
+      - 3121 # Patch du bonheur (les PNJs du groupe ne se plaignent pas de la reputation) -> Les PNJs peuvent etre en colere a propos de la reputation mais ne partent jamais (Salk): v12
+      - 3124 # Empecher le romance entre Aerie et Haer'Dalis des le commencement: v12
+      - 3125 # Rendre heureux les personnages neutres lorsque la reputation est moyenne: v12
+      - 3170 # Pas d'avatar d'elfe noir pour le groupe en Ombre-Terre: v12
+      - 3176 # Accelerer/ralentir les romances: v12
+      - 3183 # Triche sur les romances: v12
+      - 3196 # Alterer les interruptions du repos hostiles -> Augmenter la frequence de 50 %: v12
+      - 3200 # Batons, gourdins et frondes vendables (Icelus): v12
+      - 3210 # Minimum pour les stats (triche): v12
+      - 3260 # Munitions recuperables -> 25 % de chance de recuperer apres une attaque reussie: v12
+      - 3274 # Armes de jet recuperables -> 25 % de chance de recuperer apres une attaque reussie, contre les ennemis seulement: v12
+      - 3280 # Accorder a chaque classe/kit quatre emplacements d'arme: v12
+      - 3292 # Personnaliser le nom des sauvegardes automatiques -> Employer la forme : 000000000-(Protagoniste)-Nom de sauvegarde: v12
+      - 3300 # Focus camera en cas de mort: v12
+      - 3320 # Pas de depreciation dans les magasins: v12
+      - 3330 # Rendre les membres du groupe moins susceptibles de mourir de facon permanente: v12
+      - 3343 # Augmenter la vitesse de deplacement et/ou la vitesse d'incantation des sorts du groupe en dehors des combats -> Vitesse de deplacement et d'incantation des sorts de 50 pour cent: v12
+      - 3354 # Creer des sauvegardes periodiques -> Toutes les 15 minutes (cycle de quatre emplacements de sauvegarde): v12
+      - 4010 # Convocation par l'Esprit du Destin amelioree: v12
+      - 4020 # PNJs style ToB: v12
+      - 4031 # Caracteristiques coherentes : Edwin -> Valeurs de BG2: v12
+      - 4041 # Caracteristiques coherentes : Jaheira -> Valeurs de BG2: v12
+      - 4050 # Changer l'alignement de Jaheira en "Neutre Bon": v12
+      - 4061 # Caracteristiques coherentes : Minsc -> Valeurs de BG2: v12
+      - 4071 # Caracteristiques coherentes : Viconia -> Valeurs de BG2: v12
+      - 4100 # Changer l'alignement de Korgan en "Neutre Mauvais": v12
+      - 4150 # Deplacer Bouh dans le sac de Minsc: v12
+      - 4180 # Objets detachables des PNJ: v12
     location:
       github_user: Gibberlings3
       repository: Tweaks-Anthology
       release: v12
       asset: lin-cdtweaks-v12.tar.gz
-  - name: METweaks
-    description: Olvyn's Tweaks
-    components:
-      - 400  # Remove the limit of two proficiency points in a weapon at character creation
-      - 505  # Increase the rate at which warriors get proficiency points -> Fighters, Rangers and Paladins get 1 point per 2 levels
-      - 900  # Let Rangers and Paladins cast spells at their full caster level
-      - 1400 # Power Up Ranger Charm Animal
-      - 1500 # Turn Paladin Detect Evil into a passive ability that can be toggled on and off
-      - 2000 # Allow cursed scrolls to be used on enemies
-      - 3805 # Modify Sneak Attack and Crippling Strike -> Reduce the delay before a creature can be sneak-attacked again to 1 round
-    location:
-      github_user: OlvynChuru
-      repository: Olvyn-Tweaks
-      branch: master
   - name: scales_of_balance
     components:
       ##- 100 # IWO - Yet Another Revised Armor System
       #- 102 # IWO - Functional Weapon Tweaks
       #- 109 # IWO - All Potions Usable by Any Class
-      ##- 121 # WPO - Weapon Category Collapse
+      - 121 # WPO - Weapon Category Collapse
       #- 125 # WPO - APR on Spec
-      #- 172 # STO - IWD Spell Evasion -> For Expanded Spell List
+      - 172 # STO - IWD Spell Evasion -> For Expanded Spell List
       ##- 200 # SBO - Stat Bonus Overhaul
-      #- 201 # SBO - Stat-based Bonus Spells
+      - 201 # SBO - Stat-based Bonus Spells
       #- 204 # SBO - Enable Concentration Checks
       #- 224 # XPO - Choose SoD Starting XP -> 161,000
       #- 229 # XPO - Choose SoA Starting XP -> 400,000
@@ -174,5 +267,52 @@ modules:
       github_user: UnearthedArcana
       repository: Scales_of_Balance
       tag: "5.38.1"
-      patch:
-        relative: patches/scales-config.diff
+  - name: METweaks
+    description: Olvyn's Tweaks
+    components:
+      #- 400  # Remove the limit of two proficiency points in a weapon at character creation
+      #- 505  # Increase the rate at which warriors get proficiency points -> Fighters, Rangers and Paladins get 1 point per 2 levels
+      #- 900  # Let Rangers and Paladins cast spells at their full caster level
+      #- 1400 # Power Up Ranger Charm Animal
+      #- 1500 # Turn Paladin Detect Evil into a passive ability that can be toggled on and off
+      #- 2000 # Allow cursed scrolls to be used on enemies
+      #- 3805 # Modify Sneak Attack and Crippling Strike -> Reduce the delay before a creature can be sneak-attacked again to 1 round
+    location:
+      github_user: OlvynChuru
+      repository: Olvyn-Tweaks
+      branch: master
+  - name: zgtweaks
+    components:
+      - 10 # one arcane scroll on the level of the highest arcane level memorized
+      - 11 # one arcane scroll up to the level of the highest arcane level memorized
+      - 12 # one arcane scroll on the level above 4 of the highest arcane level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive level 2 scroll etc.)
+      - 13 # one arcane scroll up to the level above 4 of the highest arcane level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive up to level 2 scroll etc.)
+      - 20 # one arcane scroll on the level of the highest divine level memorized
+      #- 21 # one arcane scroll up to the level of the highest divine level memorized
+      #- 22 # one arcane scroll on the level above 4 of the highest divine level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive level 2 scroll etc.)
+      - 23 # one arcane scroll up to the level above 4 of the highest divine level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive up to level 2 scroll etc.)
+    location:
+      github_user: GraionDilach
+      repository: RandomGraionTweaks
+      release: version-1.1
+      asset: random-graion-tweaks-1.1.iemod
+  - name: tb#tweaks
+    components:
+      - 4000 # 3rd edition style Strength: TB#Tweaks, V 2.99
+      - 4500 # 3rd edition style Dexterity: TB#Tweaks, V 2.99
+      - 5000 # 3rd edition style Constitution: TB#Tweaks, V 2.99
+      - 6000 # 3rd edition style Wisdom: TB#Tweaks, V 2.99
+      - 6500 # 3rd edition style Charisma: TB#Tweaks, V 2.99
+      - 7600 # Gain stats as you level up -> 5 points for a full BGT game; everybody can advance over their racial maximum.: TB#Tweaks, V 2.99
+      - 9150 # spell book drop 25% - 25%
+      ## probably
+      # Covenient Wish
+      # maybe faster romances?
+      # WSPATCK for all?
+      # stat training?
+      # 3e stats?
+      # Mages drop spellbooks
+    location:
+      github_user: vbigiani
+      repository: tb-tweaks
+      branch: master

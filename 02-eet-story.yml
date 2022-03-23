@@ -221,8 +221,8 @@ modules:
     location:
       github_user: Pocket-Plane-Group
       repository: Lure_Of_Sirines_Call
-      release: v16.2
-      asset: the-lure-of-the-sirines-call-v16.2.iemod
+      release: v16.3
+      asset: the-lure-of-the-sirines-call-v16.3.iemod
   - name: bg1re
     components:
      #- 100

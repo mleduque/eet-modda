@@ -66,8 +66,8 @@ modules:
     location:
       github_user: r-e-d
       repository: EEUITweaks
-      release: "3.8"
-      asset: eeuitweaks-3.8.iemod
+      release: "3.8.1"
+      asset: eeuitweaks-3.8.1.iemod
   - name: HiddenGameplayOptions
     version: v3.0
     components:
@@ -78,14 +78,11 @@ modules:
       release: v3.0
       asset: A7-HiddenGameplayOptions-v3.0.iemod
   - name: sod2bg2_iu
-    version: v2.0.2
+    version: v2.0.3
     location:
-      github_user: Gibberlings3
+      github_user: mleduque
       repository: SoD-to-BG2EE-Item-Upgrade
-      release: v2.0.2
-      asset: lin-sod2bg2_iu-v2.0.2.zip
-      patch:
-        relative: patches/sod2bg2ui_carsomyr.diff
+      branch: 2.0.3-restore
     components:
       - 0 # SoD to BG2:EE Item upgrade by Daeros_Trollkiller
       ## - 1 # Remove "Corny Jokes" effect from Jester's Bracers (BG2EE, BGEET)

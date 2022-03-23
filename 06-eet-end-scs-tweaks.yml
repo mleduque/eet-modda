@@ -12,6 +12,14 @@ modules:
       github_user: Gibberlings3
       repository: EET
       tag: v13.4
+  - name: normalize_kit_table_cols
+    description: SCS refusess to process some tables, normalize them before
+    components:
+      - 0 # Make Kit Ability Tables Uniform
+    location:
+      github_user: subtledoctor
+      repository: SubtleD_hotfixes
+      tag: v17
   - name: stratagems
     description: Sword Coast Stratagems - p1
     components:
@@ -116,15 +124,6 @@ modules:
       #- 46 #
       #- 47 #
       #- 53 #
-  - name: skills-and-abilities
-    components:
-    location:
-      github_user: Gibberlings3
-      repository: Skills-and-Abilities
-      release: 0.3-alpha
-      asset: skills-and-abilities-v0.3-alpha.iemod
-      patch:
-        relative: patches/skills-and-abilities-prof-points.diff
   - name: jimfix
     description: Fixes and convenience tweaks aimed at an Ascension + SCS v33 install
     components:
@@ -176,6 +175,15 @@ modules:
       github_user: CamDawg # canonical version: FredrikLindgren/aTweaks
       repository: aTweaks
       commit: fa70698
+  - name: skills-and-abilities
+    components:
+    location:
+      github_user: Gibberlings3
+      repository: Skills-and-Abilities
+      release: 0.3-alpha
+      asset: skills-and-abilities-v0.3-alpha.iemod
+      patch:
+        relative: patches/skills-and-abilities-prof-points.diff
   - name: tnt
     description: Tweaks and Tricks mod for Baldur's Gate 2
     components: # avoid 34 (d5 random tweaks instead)
@@ -244,8 +252,8 @@ modules:
     location:
       github_user: GraionDilach
       repository: RandomGraionTweaks
-      release: version-1.0
-      asset: random-graion-tweaks-1.0.iemod
+      release: version-1.1
+      asset: random-graion-tweaks-1.1.iemod
   - name: jtweaks
     components: ~
     location:
@@ -303,14 +311,14 @@ modules:
       - 2 # Grant second-class Kits their Proper Proficiency Selection
     location:
       github_user: mleduque
-      repository: sorc_tweak
+      repository: kjeron_DUAL_TO_KIT
       branch: master
   - name: sorc_tweak
     components:
       - 2
     location:
       github_user: mleduque
-      repository: kjeron_DUAL_TO_KIT
+      repository: sorc_tweak
       branch: master
   - name: zg_iwd_voices
     description: Icewind Dale Voice Pack for EE 2.6+
