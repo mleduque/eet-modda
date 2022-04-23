@@ -23,14 +23,12 @@ modules:
         - 420 # Add the Scout (thief kit) and revise the Swashbuckler: 4.13
     location:
       github_user:  UnearthedArcana
-      repository: Might_and_Guile/
+      repository: Might_and_Guile
       tag: "4.13"
     ignore_warnings: true
   - name: npc_ee
     components:
-      - 102
-      - 2000 # NPC kit choices
     location:
       github_user: UnearthedArcana
       repository: NPC_EE
-      tag: "4.4.3"
+      tag: "5.1.4-fr"

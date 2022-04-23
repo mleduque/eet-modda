@@ -1,0 +1,2925 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: eefixpack
+    components:
+    location:
+      github_user: Gibberlings3
+      repository: EE_Fixpack
+      commit: f9906c2-update-it
+  - name: correctfrbg2ee
+    components:
+      - 10
+      - 20
+      - 30
+    location:
+      github_user: r-e-d
+      repository: correctfrBG2EE
+      branch: master
+      precopy:
+        command: bash
+        subdir: correctfrBG2EE-master
+        args: [ "-c", "node dist/index.js" ]
+  - name: EET  # needs EET/bgee_dir.txt with path to bg1 /game subdirectory inside
+    version: v13.4
+    location:
+      github_user: Gibberlings3
+      repository: EET
+      tag:  V13.4
+      layout:
+          layout_type: multi_dir
+          dirs:
+            - EET
+            - EET_end
+    components:
+      - 0 # EET core (importation de ressource)
+    add_conf:
+      file_name: bgee_dir.txt
+      content: ../../bg1/game
+  - name: LeUI-SoD
+    components:
+      - 0 # lefreut's Enhanced UI (SoD skin) - Core component
+      - 1 # lefreut's Enhanced UI (SoD skin) - BG2 vanilla bams for spells
+      - 2 # lefreut's Enhanced UI (SoD skin) - BG2 vanilla fonts for descriptions
+    location:
+      github_user: r-e-d
+      repository: LeUI-SoD
+      release: v4.4.4
+      asset: lefreuts-enhanced-ui-sod-skin-4.4.4.iemod
+  - name: LightingPack
+    components:
+      - 2 # Shader script files for lighting control -> Moderately increased contrast, brightness and gamma (recommended)
+    location: { github_user: Argent77, repository: A7-LightingPackEE, release: v3.1, asset: lin-A7-LightingPackEE-v3.1.zip }
+  - name: EEUITweaks
+    components:
+      - 1000 # Mods Options
+      # - 1010 # Hidden Game Options -> defer to A7-Hidden
+      - 1050 # Adul's Unhide Chargen Options
+      - 1070 # Faydark's Abilities Auto-Roller/GrimLefourbe's BG2 UI
+      #- 1100 # Display max proficiency limits
+      - 3000 # Leveling Progress Bars Tweaks
+      - 3010 # Leveling Progress Bars Options
+    location:
+      github_user: r-e-d
+      repository: EEUITweaks
+      release: "3.8.1"
+      asset: eeuitweaks-3.8.1.iemod
+  - name: HiddenGameplayOptions
+    version: v3.0
+    components:
+      - 0 # Install all Hidden Gameplay Options at once
+    location:
+      github_user: Argent77
+      repository: A7-HiddenGameplayOptions
+      release: v3.0
+      asset: A7-HiddenGameplayOptions-v3.0.iemod
+  - name: mih_fr
+    description: Made in Heaven - Fixes & Restoration; 'fixes' part only
+    components:
+      - 5  # BG1 fixpack
+      - 7  # SoDfixpack
+      - 6  # BG2 fixpack
+      ## components below are installed later
+      #- 2  # item restorations
+      #- 3  # spell restorations
+      #- 4  # Minor Encounter Restorations (BG2)
+      #- 12 # Artemis Entreri in Bodhi's Lair
+      #- 13 # Minor Dialog Restorations (BG2)
+      #- 10 # Allies are Better Prepared
+      ## this component will not be installed
+      #- 11 # Volume Adjustments -> change voice of a NPC, english only
+    location:
+      github_user: AngelGryph
+      repository: MadeInHeaven_FixesAndRestorations
+      commit: 054fcb7-fr
+
+  #########
+  # story
+  #########
+  - name: ascension
+    components:
+      - 0     # Rewritten Final Chapter of Throne of Bhaal
+      - 10    # Balthazar can be redeemed
+      - 20    # Improved Sarevok-Player Interactions
+      - 30    # Improved Imoen-Player Interactions in Throne of Bhaal
+      - 40    # Restored Bhaalspawn Powers
+      - 50    # Improved Slayer Transformation
+      - 60    # Expanded Epilogues for Bioware NPCs -> David Gaider's expanded epilogues for Bioware NPCs
+      #- 1200  # Tougher Demogorgon
+      #- 1300  # Tougher Gromnir
+      #- 1400  # Tougher Illasera
+      #- 1500  # Tougher Yaga-Shura
+      - 2000  # Full-body portrait for Bodhi
+      - 2200  # Extended Epilogues for additional Beamdog NPCs, by shawne
+      - 2300  # Sharper portraits of Abazigal and Gromnir for the Enhanced Edition, by DavidW
+      - 2400  # Slightly improved cutscenes, by DavidW
+    location:
+      github_user:  InfinityMods
+      repository: Ascension
+      release: "2.0.23"
+      asset: ascension-2.0.23.iemod
+  - name: c#sodboabri
+    description: The Boareskyr Bridge Scene
+    link: https://github.com/Gitjas/The_Boareskyr_Bridge_Scene
+    installation: early story mod, before npc mods and before EET_end
+    components:
+      - 0 # Scene at Boareskyr Bridge will be Acknowledged: Add NPC Reactions
+      - 1 # Add Description Text to Original Scene at Bridge
+      - 2 # Bridge Scene has Different Choices
+      - 3 # Add Stat Changes to Choices at Bridge
+    location:
+      github_user: Gitjas
+      repository: The_Boareskyr_Bridge_Scene
+      release: Alpha_220421
+      asset: the-boareskyr-bridge-scene-alpha_220421.iemod
+  - name: turnabout
+    components:
+      - 0 # Ascension: Turnabout
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Turnabout
+      release: v1.7
+      asset: turnabout-v1.7.iemod
+  - name: A7-TestYourMettle
+    components:
+      - 0   # Test Your Mettle!
+      - 11  # XP reduced by 50%
+      - 20  # Make "Spacewarp" available to stores
+    location:
+      github_user: Argent77
+      repository: A7-TestYourMettle
+      release: v1.4
+      asset: A7-TestYourMettle-v1.4.iemod
+  - name: A7-GolemConstruction
+    components:
+      - 0   # Capacite de Fabrication de Golem pour lanceurs de sorts
+      - 10  # Remplacer le Grimoire des golems original
+      - 15  # Ameliorer l'IA des lanceurs de sorts ennemis
+      - 20  # Des golems pour les lanceurs de sorts ennemis
+      - 25  # Une plus grande diversite de types de golems ennemis
+      - 30  # Les golems de la Forteresse du guerrier ont une chance de vous servir
+      - 35  # Rendre les golems vulnerables aux effets de certains sorts
+      - 40  # Reduire les resistances et l'immunite aux armes des golems fabriques
+      - 45  # Identifier tous les objets du module
+      - 50  # Ajouter la capacite "Teleportation" aux golems
+    location:
+      github_user: Argent77
+      repository: A7-GolemConstruction
+      branch: devel
+  - name: "c#endlessbg1"
+    components:
+      #- 0
+      #- 1
+      #- 2
+      #- 3
+      #- 4
+      #- 5 # overwritten by transitions
+      #- 6 # overwritten by transitions
+      #- 7 # overwritten by transitions
+      #- 8
+      #- 10
+      #- 11
+      #- 12
+      # - 15 # overwritten by transitions
+    location:
+      github_user: Gibberlings3
+      repository: EndlessBG1
+      release: v10
+      asset: endless-bg1-mod-10.iemod
+  - name: transitions
+    components:
+      #- 0   # Main component: Allow continued play after Sarevok and/or Irenicus is defeated
+      #- 10  # Use BGI ending movie as a dream and give new bhaal-spawn power at first rest
+      #- 20  # Give Sarevok his armor, helm, and sword -> Equipped
+      #- 32  # Clean-up Quests -> Option 1 and use gentler Tamoko quest
+      #- 200 # Close quests and rumors that can't be finished after Sarevok is defeated
+      #- 40  # Clean up the town folk chatter with regard to Sarevok
+      #- 60  # Elminster makes an appearance outside of the Ducal Palace
+      #- 72  # Duke Eltan's reward option: Gray house in NW Beregost
+      #- 73  # Duke Eltan's reward option: House across from Flaming Fist compound
+      #- 80  # Add Waves of Refugees to Baldur's Gate
+      #- 140 # Use Irenicus in hell movie to restore Bhaal-spawn powers after he is defeated
+    location:
+      github_user: Gibberlings3
+      repository: transitions
+      release: v2.4
+      asset: transitions-v2.4.iemod
+  - name: DSotSC
+    description: Dark Side of the Sword Coast
+    components:
+      - 0 # Dark Side of the Sword Coast (DSotSC)
+      #- 1, # DSotSC Wizard spells
+      #- 2, # DSotSC Priest spells
+      #- 3 # More common encounters in vanilla areas
+      #- 4  # Distribute DSotSC items also in vanilla content
+    location:
+      github_user: SpellholdStudios
+      repository: DSotSC
+      release: v4.1
+      asset: dark-side-of-the-sword-coast-v4.1.iemod
+  - name: ntotsc
+    description: Northern Tales of the Sword Coast
+    components:
+      - 0 # Northern Tales of the Sword Coast (NTotSC) for BGT-Weidu, BG:EE, and EET
+      - 1 # Spawn less Monsters depending on Game Difficulty
+      - 2 # Keelor the Dwarf
+      - 3 # Llindellyn's Lucky Arrow
+      - 4 # Nim Furlwing's Hunting Hounds
+      - 5 # Pilar and Gheldehar
+      - 6 # Svlast's Torment
+      - 9 # Fighting Encounters
+    location:
+      github_user: SpellholdStudios
+      repository: NTotSC
+      commit: 4c76ed5
+  - name: bgqe
+    description: Baldur's Gate Mini Quests and Encounters
+    components:
+    #- 0
+    #- 1
+    #- 2
+    #- 3
+    #- 4
+    #- 5
+    #- 6
+    #- 7
+    #- 8
+    #- 9
+    #- 10
+    #- 11
+    #- 12
+    #- 13
+    #- 14
+    #- 15
+    #- 16
+    location:
+      github_user: Gibberlings3
+      repository: BG_Quests_And_Encounters
+      release: v25.3
+      asset: baldurs-gate-mini-quests-and-encounters-modification-v25.2.iemod
+  - name: AC_QUEST
+    description: Ascalon's Questpack
+    components:
+      - 0 # A Job Well-Paid
+      - 1 # A Feast for the Gnolls
+      - 2 # Jumper
+      - 3 # The Lost Son
+      - 4 # Of Wolves and Men -> Quest uses hut near Thalantyr in High Hedge.
+      - 6 # The Great Carlini
+      - 7 # A Home for the Gibberlings
+      - 8 # Fangirls
+      - 9 # The Serpents of Abbathor
+      - 10 # A Halfling among the Eyeless
+    location:
+      github_user: Gitjas
+      repository: Ascalons_Questpack
+      release: v4.2
+      asset: ascalons-questpack-4.2.iemod
+  - name: BG_Travel
+    description: New travel system between Baldur's Gate City areas
+    comment: Original location http://athkatla.cob-bg.pl/download.php?id=1595 (BG_Travel_v2.1.rar)
+    components: [66] # New travel system between Baldur's Gate City areas -> Full version of component
+    location:
+      github_user: mleduque
+      repository: BG_Travel
+      tag: v2.1
+  - name: c#sb_silber
+    description: Adalon's blood
+    components: [0]
+    location:
+      path: /home/mick/Games/modda-cache/static/AdalonsBlood_v14.zip
+  - name: Eilistraee
+    description: Eilistraee's Song
+    components: [0]
+    location:
+      path: /home/mick/Games/modda-cache/static/Eilistraees Song v7.1.zip
+  - name: TotDG
+    description: "Colours of Infinity: Tales of the Deep Gardens"
+    components: [0]
+    location:
+      path: /home/mick/Games/modda-cache/static/Tales of the Deep Gardens v12.7.zip
+  - name: Innershade
+    description: "Colours of Infinity: Innershade"
+    components: [0]
+    location:
+      path: /home/mick/Games/modda-cache/static/Innershade v11.0.zip
+  - name: WhiteQueen
+    description: "Colours of Infinity: The White Queen"
+    components: [0]
+    location:
+      path: /home/mick/Games/modda-cache/static/The White Queen v6.9.zip
+  - name: ISNF
+    description: "Colours of Infinity: I Shall Never Forget"
+    components: [0]
+    location:
+      path: /home/mick/Games/modda-cache/static/I Shall Never Forget v6.0.zip
+  - name: SouthernEdge
+    description: "Athkatlan Grounds: Southern Edge"
+    components: [0]
+    location:
+      path: /home/mick/Games/modda-cache/static/SouthernEdge v3.4.zip
+  - name: Ooze
+    description: "Athkatlan Grounds: The Ooze’s Lounge"
+    components: ~
+    location:
+      path: /home/mick/Games/modda-cache/static/Oozes Lounge v2.92.zip
+  - name: BridgesBlock
+    description: "Athkatlan Grounds: Bridge’s Block"
+    components: ~
+    location:
+      path: /home/mick/Games/modda-cache/static/BridgesBlock v1.13.zip
+  - name: SirinesCall
+    description: The Lure of the Sirine's Call
+    components: [0, 1]
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Lure_Of_Sirines_Call
+      release: v16.3
+      asset: the-lure-of-the-sirines-call-v16.3.iemod
+  - name: bg1re
+    components:
+     #- 100
+     #- 1
+     #- 2
+     #- 4
+     #- 5
+     #- 7
+     #- 8
+     #- 9
+     #- 10
+     #- 11
+     #- 14
+     #- 15
+     #- 16
+     #- 17
+     #- 18
+     #- 19
+     #- 20
+     #- 21
+     #- 22
+     #- 26
+     #- 28
+     #- 29
+     #- 30
+     #- 31
+     #- 32
+     #- 33
+     #- 34
+     #- 35
+     #- 36
+     #- 37
+     #- 40
+     #- 41
+     #- 42
+     #- 43
+     #- 44
+    location:
+      github_user: Gibberlings3
+      repository: BG1_Romantic_Encounters
+      release: v9
+      asset: baldurs-gate-romantic-encounters-modification-bg1re-9.0.iemod
+  - name: wheels
+    description: Wheels Of Prophecy
+    components: [0]
+    location:
+      github_user: Gibberlings3
+      repository: WheelsOfProphecy
+      release: v8.5
+      asset: lin-wheels-v8.5.tar.gz
+  - name: fadingpromises
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: Fading_Promises
+      release: v9
+      asset: fading-promises-v9.iemod
+  - name: Assassinations
+    components: [0]
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Assassinations
+      release: v17
+      asset: assassinations-v17.iemod
+  - name: BackBrynnlaw
+    components: [0]
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Back_to_Brynnlaw
+      release: v9
+      asset: back-to-brynnlaw-mod-for-baldurs-gate-ii-bgii-bgt-bgiiee-and-eet-v9.iemod
+  - name: Sellswords
+    components: [0]
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Sellswords
+      release: v9.1
+      asset: the-sellswords-mod-for-baldurs-gate-ii-v9.1.iemod
+  - name: lucy
+    description: Lucy the Wyvern
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: Lucy_the_Wyvern
+      release: v5.0
+      asset: lucy-the-wyvern-v5.0.iemod
+  - name: slandor
+    description: The Minotaur and Lilacor
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: The_Minotaur_and_Lilacor
+      release: v2.0
+      asset: the-minotaur-and-lilacor-2.0.iemod
+  - name: reunion
+    components: [0]
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Reunion
+      release: v7
+      asset: the-reunion-v7.iemod
+  - name: arestorationp
+    description: Almateria's Restoration Project
+    components: [0, 1, 2, 3, 4, 5, 6, 8, 11, 12, 13]
+    location:
+      path: /home/mick/Games/modda-cache/static/ARPv8-4.zip
+  - name: ub
+    description: Unfinished Business
+    components: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+    location:
+      github_user: Pocket-Plane-Group
+      repository: UnfinishedBusiness
+      release: v28
+      asset: lin-ub-v28.tar.gz
+  - name: mih_fr
+    description: Made in Heaven - Fixes & Restoration; encouter restoration and tweaks
+    components:
+      - 4  # Minor Encounter Restorations (BG2)
+      - 12 # Artemis Entreri in Bodhi's Lair
+      - 13 # Minor Dialog Restorations (BG2)
+      - 10 # Allies are Better Prepared
+  - name: alternatives
+    installation: s
+      before: imoen4ever except imoen4ever compatibility (should be after alternative)
+    components: [0]
+    location:
+      github_user: Gibberlings3
+      repository: Alternatives
+      release: v15
+      asset: Alternatives_v15.zip
+  - name: imoen_forever
+    components:
+    #- 0  # Imoen 4 Ever in BGII: Imoen returns at the beginning of chapter 2
+    #- 1  # BGII content: ~Give Imoen dialogue content in SoA~
+    #- 2  # BGII content: ~Yoshimo comes to Brynnlaw~
+    #- 3  # BGII content: ~Give Imoen protection spell in Chapters 2 & 3~
+    #- 9  # BGII content: ~Compatibility with Alternatives and Saerileth~
+    #- 10 # SoD component: ~Imoen remains in the Group in SoD~
+    #- 11 # second SoD part: Imoen returns to PC in first camp bd1000
+    #- 12 # third SoD part: Imoen gives be5th SoD part: Give Imoen dialogue content during chapters 8 to 12tter reason to stay behind in Palace
+    #- 13 # 4th SoD part: Play cutscene with Imoen an Duke Jannath
+    #- 14 # 5th SoD part: Give Imoen dialogue content during chapters 8 to 12
+    #- 15 # 6th SoD part: Imoen at the end of the game should be the one that was in party (SoD only)
+    location:
+      github_user: Gibberlings3
+      repository: Imoen4Ever
+      release: v9
+      asset: imoen-4-ever-v9.iemod
+  - name: imoen_forever
+    components:
+    - 9  # BGII content: ~Compatibility with Alternatives and Saerileth~
+  - name: c#anotherfinehell
+    installation:
+      general: Install Another fine Hell as an early quest mod, before NPC mods
+      after: Imoen4Ever
+      before : Jastey's SoD Tweakpack
+      incompatible: "any of the ending tweaks from Jastey's SoD Tweakpack component 8 SoD Ending: jastey's Tweaks"
+    components: ~
+    location:
+      github_user: Gitjas
+      repository: Another_Fine_Hell
+      release: vAlpha_220123
+      asset: another-fine-hell-for-sod-alpha_220123.iemod
+  - name: c#sodtweaks #[0, 1, 2, 5, 13]
+    components:
+      #- 1  # Ending Independent on PC Replies
+      #- 3  # Do Not Miss NPC-PC Dialogues -> Activate All NPC-PC Dialogues Always
+      #- 5  # More Dialogue Choices & Prevent Dead Ends:
+      #- 6  # Use Imoen's SoD Portrait for BGII in EET & BGT
+      #- 9  # Adjust PC's Starting XP at Beginning of SoD, by subtledoctor -> Set Starting XP to 90,000
+      #- 12 # SoD Ending: jastey's Tweaks -> Revised Full Version # overwrittern by afh if installed
+    location:
+      github_user: Gibberlings3
+      repository: Jasteys_SoD_Tweakpack
+      release: v8.1
+      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v8.1.iemod
+  - name: DjinniCompanion
+    description: Afaaq, the Djinni Companion v2.9
+    components:
+      - 0   # Afaaq, le compagnon Djinn -> Version complete (avec quetes, conversations et plus encore)
+      - 103 # Changer la frequence des conversations (n'affecte que le djinn, par defaut : 60 minutes) -> 45 minutes
+      - 300 # Portrait de djinn alternatif par Ulb
+    location:
+      github_user: Argent77
+      repository: DjinniCompanion
+      release: v2.9
+      asset: A7-DjinniCompanion-v2.9.iemod
+  - name: thecalling # install after stratagems or cdtweaks (even if quest mod)
+    description: The calling
+    components: ~
+    location:
+      github_user: Gibberlings3
+      repository: The_Calling
+      release: v2
+      asset: lin-thecalling-v2.tar.gz
+  - name: d0questpack
+    description: SimDing0's Quest Pack
+    components: [0, 1, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+    original_location: http://mods.pocketplane.net/questpack-v35-win.zip
+    location:
+      github_user: mleduque
+      repository: simding0_questpack
+      tag: v3.5
+      layout:
+        layout_type: multi_dir
+        dirs:
+          - questpack
+          - setup-d0questpack.tp2
+  - name: bg1npc
+    version: v27
+    components:
+      - 0    # BG1 NPC Project : modifications necessaires
+      - 10   # BG1 NPC Project : bavardages, quetes et interjections
+      - 22   # BG1 NPC Project : romance d'Ajantis, elements de base (contenu adolescent) -> Rythme : 30 minutes de temps reel entre les dialogues de romance
+      - 32   # BG1 NPC Project : romance de Branwen, elements de base (contenu adolescent) -> Rythme : 30 minutes de temps reel entre les dialogues de romance
+      - 42   # BG1 NPC Project : romance de Coran, elements de base (contenu adulte) -> Rythme : 30 minutes de temps reel entre les dialogues de romance
+      - 53   # BG1 NPC Project : romance de Dynaheir, elements de base (contenu adolescent) -> Rythme : 15 minutes de temps reel entre les dialogues de romance
+      - 62   # BG1 NPC Project : relation avec Shar-Teel, elements de base (contenu adulte) -> Rythme : 30 minutes de temps reel entre les dialogues de romance
+      - 71   # BG1 NPC Project : romance de Xan, elements de base (contenu adolescent) -> Rythme : 45 minutes de temps reel entre les dialogues de romance
+      - 80   # BG1 NPC Project : conflits de romance pour personnage feminin, Ajantis - Xan - Coran
+      - 111  # Ajustement du rythme des bavardages pour BG:EE -> Rythme des bavardages : frequents
+      - 120  # BG1 NPC Project : ajustement de reputation grace a des bardes
+      - 130  # BG1 NPC Project : ajustements du journal de Sarevok -> Journal de Sarevok enrichi par SixofSpades
+      - 150  # BG1 NPC Project : donner a Kivan son portait issu du mod "Kivan and Deheriana Companions"
+      - 155  # BG1 NPC Project : donner a Coran son portrait de "Murder in Baldur's Gate"
+      - 160  # BG1 NPC Project : ajouter des portraits de PNJs non-recrutables pour les dialogues et les quetes
+      - 200  # BG1 NPC Project : dialogues inities par le joueur
+    location:
+      github_user: Gibberlings3
+      repository: BG1NPC
+      commit: 2a1678c409
+  - name: garrick-tt
+    components:
+      - 0 # Garrick : les contes d'un troubadour
+    location:
+      github_user: mleduque
+      repository: garrick-tt
+      branch: k4thos-eet-compat
+  - name: ajantisbg2
+    components:
+      - 0  # Sir Ajantis NPC for BGII
+      - 1  # Install the unique BG(II):EE BAM for Ajantis' Family Shield
+      - 3  # Installation of adult romance content
+      - 42 # Select Ajantis' Friendship Dialogues and Romance Speed: -> Speed: 30 minutes real time minimum between Dialogues
+    location:
+      path: /home/mick/Games/modda-cache/static/lin-ajantisbg2-v20.zip
+    components:
+      - 0  # Lady Elgea's extended plot
+      - 1  # Anomen's extended plot
+      - 2  # Jerlia's Ore Shop
+      - 3  # Elven holy water in the Temple of Lathander
+      - 4  # Wave Blade in Treasury
+      - 5  # Silver Dagger in Irenicus Dungeon
+      - 6  # Bards can spend the night at their stronghold (Five Flagons)
+      - 7  # A bard for the bard stronghold
+      - 8  # Silver Sword
+      - 9  # A Tunnel for Saradush
+      - 10 # Temple of Mask in Docks District
+    location:
+      github_user: Gitjas
+      repository: hiddenadventure
+      release: vBeta_7
+      asset: hidden-adventures-beta_7.iemod
+  - name: isra
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: Isra_NPC
+      release: v3.5
+      asset: isra-npc-for-bg-v3.5.iemod
+  - name: xan
+    description: Xan NPC for BG2
+    components: [0, 2]
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Xan_for_BGII
+      release: v19
+      asset: Xan_v19.zip
+      layout:
+        layout_type: multi_dir
+        dirs: [Xan] # xan v.s. Xan :/
+  - name: isra_bg2
+    components: [0, 1]
+    location:
+      github_user: SpellholdStudios
+      repository: Isra_NPC_BG2
+      release: v3.1
+      asset: isra-npc-for-bgii-v3.1.iemod
+  - name: yeslicknpc
+    components: [1]
+    location:
+      github_user: SpellholdStudios
+      repository: Yeslick_NPC
+      release: v5.0
+      asset: yeslick-npc-v5.0.iemod
+  - name: amber
+    components: [0, 1]
+    location:
+      path: /home/mick/Games/modda-cache/static/lin-amber-v5.1.zip
+  - name: Foundling
+    description: "Colours of Infinity: Foundling"
+    components:
+      - 0   # Foundling
+    location:
+      path: /home/mick/Games/modda-cache/static/Foundling v5.3.zip # selectskit
+      patch:
+        relative: patches/foundling-class.diff
+  - name: willowisp
+    components: # 4 later
+      - 0 # Will NPC, shaman stronghold and new shaman kit for BG2EE
+      - 1 # Change shaman .tlk string to remove "Ineligible for any stronghold" line
+      - 2 # New items for shamans and undead NPCs
+      - 3 # Optional: Drider and Dark Treant Enemies
+      # 4 : crossmod banter later after installing other mods
+      - 6 # [CHEAT] Enable shaman stronghold for all classes
+    location:
+      path: /home/mick/Games/modda-cache/static/Will of the Wisp v2.20.zip
+  - name: paina
+    components: [0, 1]
+    location:
+      github_user: ArtemiusI
+      repository: Pai-Na-NPC-mod-for-BG2-EE
+      branch: master
+  - name: Sirene_BG2
+    components:
+      - 0   # Sirene NPC for BG2:EE
+      - 103 # Choose an portrait for Sirene (check mod folder for portraits) -> Alternate Light Armor portrait by Sirick
+    location:
+      github_user: mleduque
+      repository: Sirene-NPC-for-BG2-EE
+      branch: no-prompt
+    # prompt for portrait
+  - name: bst
+    components: [0]
+    location:
+      github_user: Gibberlings3
+      repository: BS_Baldurans_Seatower
+      tag: 1dcafad6f0bc # before vEAOB.8
+      asset: bs-baldurans-seatower-veaob.6.iemod
+  - name: "c#brage"
+    components: [0, 1]
+    location:
+      github_user: Gitjas
+      repository: Brages_Redemption
+      release: v7.2
+      asset: brages-redemption-brage-npc-for-the-whole-baldurs-gate-epic-7.2.iemod
+  - name: "c#solaufein"
+    components: ~
+    location:
+      github_user: Gitjas
+      repository: Solaufeins_Rescue_NPC
+      release: v3.2
+      asset: solaufeins-rescue-jasteys-solaufein-npc-mod-for-bgii-3.2.iemod
+  - name: "TangledIsle"
+    description: "Athkatlan Grounds: The Tangled Oak Isle"
+    components: ~
+    location:
+      path: /home/mick/Games/modda-cache/static/TangledIsle v2.6.zip
+  - name: "g3anniversary"
+    components: [0] # The Gibberlings Three Anniversary Mod
+    location:
+      github_user: Gibberlings3
+      repository: g3anniversary
+      release: V12
+      asset: lin-g3anniversary-v12.tar.gz
+  - name: "DC"
+    description: Dungeon Crawl
+    components: [0]
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Dungeon_Crawl
+      release: v13.1
+      asset: DungeonCrawl_v13-1.zip
+  - name: "ToA"
+    description: Tales of Anegh
+    components: [1, 10, 20, 30, 40, 50]
+    location:
+      github_user: Gitjas
+      repository: ToA
+      branch: master
+  - name: FishingForTrouble
+    components: [0, 1]
+    location:
+      github_user: InfinityMods
+      repository: FishingForTrouble
+      release: v3.2.8
+      asset: fishing-for-trouble-v3.2.8.iemod
+  - name: "tod"
+    description: Tower O)f Deception
+    components: [0, 1, 2]
+    location:
+      github_user: InfinityMods
+      repository: TowerOfDeception
+      release: v4.0.5
+      asset: tower-of-deception-v4.0.5.iemod
+  - name: "SOS" # Shadows Over Soubar
+    components: [0, 1]
+    location:
+      github_user: SpellholdStudios
+      repository: Shadows_over_Soubar
+      tag: dca61c01378b862 # post v1.16
+  - name: "keldorn_rom"
+    components: [0, 2, 8]
+    location:
+      github_user: Gibberlings3
+      repository: Keldorn_Romance
+      release: v8
+      asset: berelindes-keldorn-romance-8.iemod
+  - name: themed_tweaks
+    components:
+      - 60  # SoD - Give Imoen a special wand for palace attack scene
+      - 70  # SoD - Allow PC to give aid to Imoen after attack in palace
+      - 80  # SoD - Stat-based observations and quest options
+      - 90  # SoD - Ditch Tour-Guide Corwin Schael
+      - 100 # SoD - Quest: Scouting the Coast Way Crossing
+      - 140 # SoD/BG2EE - Add a little snark to dialogues
+      - 180 # BG2EE - Give Imoen innnate Magic Missiles for attack scene
+    location:
+      github_user: lzenner
+      repository: themed_tweaks
+      commit: aa91555c3 # committed on 2021-10-08
+  - name: framed
+    components:
+      - 0 # FFramed ou Piege: Propose plusieurs versions du chapitre 6 -> LUtilisez des voix personnalisees pour les films des nouveaux chapitres
+    location:
+      github_user:  Gibberlings3
+      repository: framed
+      release: v1.12
+      asset: framed-v1.12.iemod
+  - name: "RoT" # Reign of Terror
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: Region_of_Terror
+      commit: 67299678d0 # post 4.0
+      patch:
+        relative: patches/rot-taming-drizzt.diff
+  - name: RE
+    description: BG2 romantic Encounters
+    components: [0, 1, 2, 3, 4, 6, 7, 8, 9, 11, 13, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 38, 39, 41, 42, 43, 45, 46, 47, 50, 52, 53, 54]
+    location:
+      github_user: Gibberlings3
+      repository: Romantic_Encounters_BG2
+      release: v15
+      asset: RE_v15.zip
+  - name: HerThiMoney
+    description: Heroes Thieves and Moneylenders
+    components:
+      #- 0    # Component 1. Interjections & Mini-quests (by Austin & Arcanecoast Team)
+      #- 10   # Component 2. First Calimport Bank Pack (by Scheele & Austin & Arcanecoast Team)
+      #- 20   # Component 3. Shadow-Covered Love (by Alisia & Austin)
+      #- 30   # Component 4. The Missing Troll Case (by Alisia & Austin)
+    location:
+      github_user: Austin-BG
+      repository: HTaM
+      release: v.4.2.3
+      asset: heroes-thieves-and-moneylenders-4.2.3.iemod
+      patch:
+        relative: patches/herthimoney-nopdf.diff
+  - name: "snakes" # The slithering Menace
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: TheSlitheringMenace
+  - name: SotSC
+    description: Shades of the Sword Coast
+    version: 6.6
+    location:
+      path: /home/mick/Games/modda-cache/static/SotSC v6.6.zip
+    components: [0]
+  - name: "JanQuest"
+    components: [0]
+    location:
+      http: http://akadis.baldursgateworld.fr/Jan/zip/JansQuest1.5.0.zip
+  - name: "butchery"
+    components: #components installé avant SCS, deuxèmeliste pour après SCS
+      #- 10 #
+      #- 11 #
+      #- 12 #
+      #- 21 #
+      #- 22 #
+      #- 32 #
+      #- 40 #
+    location:
+      github_user: GwendolyneFreddy
+      repository: butchery
+      release: v5.0.0
+      asset: butchery-v5.0.0.iemod
+  - name: "TheBeaurinLegacy"
+    components:
+      - 1000 # The Beaurin Legacy for BG2:SoA & ToB & BGII:EE
+      - 3010 # Minyae's Portrait -> Change Minyae's portrait to alternative by TamikaProud at DeviantArt
+    location:
+      path: /home/mick/Games/modda-cache/static/lin-TheBeaurinLegacy-v4.0.tar.gz
+  - name: "voloquest" # IM10
+    components: [0]
+    location:
+      path: /home/mick/Games/modda-cache/static/im10_voloquest.zip
+  - name: "IM10Kulyok" # IM10
+    components: [0]
+    location:
+      github_user: Pocket-Plane-Group
+      repository: IronModder10_Kulyok
+      release: v1.1
+      asset: im10kulyok-v1.1.zip
+  - name: "emad"
+    description: every mod and dog
+    components:
+      - 0 # Une aventure classée Z - Une non-entrée pour l'IM4
+      - 1 # La promesse d'un troll
+      - 2 # Le meilleur ami de l'enfant de Bhaal
+      - 3 # Sous son charme
+      - 5 # Pot-pourri de personnages
+    location:
+      path: /home/mick/Games/modda-cache/static/emad_v11.zip
+  - name: "xulaye"
+    components:
+      - 0 # Xulaye NPC Mod for BG2:SoA
+      - 1 # Xulaye's Player Initiated Dialogues
+      - 2 # Korgan Fights at the Pits
+    location:
+      http: http://www.shsforums.net/files/download/710-xulaye/
+      rename: Xulaye_v2.0.zip
+  - name: TGC1e
+    description: the grey clan candelight(part 1)
+    components:
+      - 0 # Le Clan Gris Episode Un : A la Lumiere d'une Bougie, BGT-WeiDU/EET/BG:EE edition v1.9 -> Edition normale
+    location:
+      github_user: K4thos
+      repository: TGC1e
+      commit: 2159a26
+      layout:
+        layout_type: single_dir_plus_tp2
+        tp2: Setup-TGC1E.tp2
+  - name: ExtraExpandedEnhancedEncounters
+    components:
+      #- 0 # EEEE: Melia Quicknight, Crossroads
+      #- 1 # EEEE: Bimmy's Badgering Bandits
+      #- 2 # EEEE: Reinforced Gnoll Stronghold
+      #- 3 # EEEE: Bear Encounter near the Gnoll Stronghold
+      #- 5 # EEEE: Daenni's Bridge Bandits
+      #- 6 # EEEE: The Fire Drake in the Wyvern Cave
+      #- 7 # EEEE: Undercity Magma Bulwark Encounter; Red Skeleton-(U.M.B.E.R.S.)
+    location:
+      github_user: GraionDilach
+      repository: ExtraExpandedEnhancedEncounters
+      release: "3.1"
+      asset: extra-enhanced-expanded-encounters-3.1.iemod
+      patch:
+        relative: patches/ExtraExpandedEnhancedEncouter-reducegnolls.diff
+  - name: gbthfkp
+    description: Expanded Thief Stronghold
+    components:
+    location:
+      github_user: SpellholdStudios
+      repository: Expanded_Thief_Stronghold
+      release: v3.0.0
+      asset: expanded-thief-stronghold-v3.0.0.iemod
+  - name: shardsofice
+    components:
+    location:
+      github_user: Gibberlings3
+      repository: Shards_of_Ice
+      release: v7
+      asset: lin-shardsofice-v7.tar.gz
+  - name: magestronghold_eet
+    components:
+    location:
+      github_user: RoxanneSHS
+      repository: Magestronghold
+      tag: V0.5
+
+  #########
+  # NPC
+  #########
+  - name: Branwen
+    components: [0]
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Branwen_for_BGII
+      commit: 95381b1 # pst v7
+  - name: Aura_BG1
+    components:
+    location:
+      github_user: ArtemiusI
+      repository: Aura_BG1
+      tag: v3.4c
+      patch:
+        relative: patches/aura_bg1-select-artificer.diff
+    #prompt for class (1. Artificer)
+    #prompt for portrait (2. BG2 style)
+  - name: nephele
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: Nephele_NPC
+      release: v2.6
+      asset: nephele_v2-6.zip
+  - name: Emily
+    components: [0]
+    location:
+      github_user: Skitia
+      repository: Emily-BG1
+      tag: v.165
+  - name: Helga
+    components:
+      - 0
+    location:
+      github_user: Skitia
+      repository: Helga-BG1
+      commit: 1a333f3
+      patch:
+        relative: patches/helga_bg1-defaultportrait-nomusic.diff
+  - name: Kale
+    components: [0]
+    location:
+      github_user: Skitia
+      repository: Kale-BG1
+      commit: 7e427fb
+      patch:
+        relative: patches/kale_bg1-nomusic.diff
+    #prompt for music (2. No)
+  - name: Recorder
+    components: [0]
+    location:
+      github_user: Skitia
+      repository: Recorder-BG1
+      commit: d38ab73
+  - name: Vienxay
+    components: [0]
+    location:
+      github_user: Skitia
+      repository: Vienxay-BG1
+      branch: "45176de"
+      patch:
+        relative: patches/viexnay_bg1-defaultprotrait-nomusic.diff
+    #prompt for portrait (1. Default)
+  - name: SkitiaNPCs
+    components: [0, 4]
+    location:
+      github_user: Skitia
+      repository: SkitiaNPCs
+      commit: "778bb34"
+      patch:
+        relative: patches/skitia_npc_defaultportraits.diff
+    #prompt for portrait (1. Default the 1. Default)
+  - name: Petsy
+    components: [0, 1]
+    location:
+      path: /home/mick/Games/modda-cache/static/Petsy v4.2.zip
+  - name: Yvette
+    description: "Colours of Infinity: Yvette Romance"
+    components:
+      - 0 # Yvette Romance - BG2 Romance Character
+    location:
+      path: /home/mick/Games/modda-cache/static/Yvette Romance v5.00.zip
+      patch:
+        relative: patches/yvette-noprompt.diff
+  - name: c#greythedog
+    description: Grey the dog
+    components: [0]
+    location:
+      github_user: Gibberlings3
+      repository: Grey_The_Dog
+      release: v8
+      asset: grey-the-dog-npc-8.iemod
+  - name: ACBre
+    description: Ascalon's Breagar
+    components: [0]
+    location:
+      github_user: Gitjas
+      repository: Ascalons_Breagar
+      release: "11.4.0"
+      asset: ascalons-breagar-11.4.0.iemod
+  - name: c#brandock
+    description: Brandock the mage
+    components: ~
+    location:
+      github_user: Gitjas
+      repository: Brandock_the_Mage
+      release: vBeta-16
+      asset: brandock-the-mage-beta_16.iemod
+  - name: btl
+    description: Beyond the Law
+    detailed_description: 2 NPCs, Kova (CG half-elf mage/thief) & Kiyone (LG half-elf archer) + quest
+    components: ~
+    location:
+      github_user: SpellholdStudios
+      repository: Beyond_the_Law
+      release: v2.0.0
+      asset: beyond-the-law-v2.0.0.iemod
+  - name: alora
+    components: ~
+    location:
+      github_user: GwendolyneFreddy
+      repository: Alora-NPC-for-BG2
+      release: v2.0
+      asset: alora-npc-for-bg2-2.0.iemod
+  - name: XanBG1Friend
+    components: [0]
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Xan_BG1_Friendship
+      release: v11
+      asset: xanbg1friend_v11.zip
+  - name: FinchNPC
+    version: 6.0
+    components: [0]
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Finch_NPC
+      release: v6.0
+      asset: finch-npc-mod-v6.0.iemod
+  - name: IndiNPC
+    version: "14"
+    components:
+      - 0 # Indira PNJ
+      - 1 # Install Interjections for Indira (BETA)
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Indira_NPC
+      release: v14
+      asset: indira-npc-mod-v14.iemod
+  - name: Walahnan
+    components: [0]
+    location:
+      path: /home/mick/Games/modda-cache/static/Walahnan v1.2.zip
+  - name: WalahnanBG2
+    components: ~
+    location:
+      path: /home/mick/Games/modda-cache/static/WalahnanBG2 v0.92.zip
+  - name: WilsonChronicles
+    components: ~
+    location:
+      path: /home/mick/Games/modda-cache/static/Wilson Chronicles v1.9.zip
+  - name: gavin
+    # will prompt for romance timer
+    components:
+      - 0  # Gavin NPC pour Tutu, BGT et BG:EE
+      - 1  # Gavin : Romance (contenu pour adultes)²
+      - 2  # Gavin : Flirts (contenu pour adultes)²
+      - 10 # Gavin : Dialogues inities par le joueur²
+    location:
+      github_user: Gibberlings3
+      repository: Gavin_BG
+      release: v14
+      asset: lin-gavin-v14.tar.gz
+      patch:
+        relative: patches/gavin_bg1-romance-timer-30.diff
+  - name: gavin_bg2
+    # will prompt for romance timer
+    components:
+      - 0 # Gavin for BG2
+      - 1 # Gavin heals the PC when below 50% health   (Can be disabled or enabled via player-initiated dialogue)
+      - 3 # Multi-romance cheat -> No romance kills
+    location:
+      github_user: Gibberlings3
+      repository: Gavin_BG2
+      release: v23
+      asset: lin-gavin_bg2-v23.tar.gz
+      patch:
+        relative: patches/gavin_bg2_romance-timer-30.diff
+  - name: arath
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: Arath_NPC
+      tag: v5
+  - name: valerie
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: Valerie_NPC
+      release: v1.2
+      asset: valerie-npc-for-bg-v1.2.iemod
+  - name: Bristlelick
+    components: ~
+    location:
+      pah: /home/mick/Games/modda-cache/static/Bristlelick v2.0.zip
+  - name: chattyimoen
+    components:
+      - 0 # Chatty Imoen : Repliques audio supplementaires
+      - 1 # Chatty Imoen : Interactions supplementaires avec les autres personnages
+      - 4 # Chatty Imoen : Changement de portrait pour Imoen -> Donner a Imoen son portrait de BG2
+    location:
+      github_user: AstroBryGuy
+      repository: ChattyImoen
+      release: v1.3
+      asset: lin-chattyimoen-v1.3.zip
+  - name: neera
+    description: neera expansion
+    components:
+      - 0 # Neera Expansion
+      - 2 # How much time would you like between talks (approximately)? -> 30 minutes
+    location:
+      github_user: SpellholdStudios
+      repository: Neera_Expansion
+      release: v1.3.0
+      asset: neera-expansion-v1.3.0.iemod
+  - name: neerabanters
+    components:
+      - 10 # Neera Banters: Dialogue Banters and Interjections
+      - 20 # Neera Banters: Interaction Banters
+    location:
+      github_user: AstroBryGuy
+      repository: NeeraBanters
+      release: v0.9.1
+      asset: win-neerabanters-v0.9.1.zip
+  - name: korganfriendship
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: KorganFriendship
+      release: v1.6
+      asset: korgan-friendship-v1.6.iemod
+  - name: korgan
+    description:
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: KorgansRedemption
+      release: v10.0.1
+      asset: korgans-redemption-v10.0.1.iemod
+  - name: minscfriendship
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: MinscFriendship
+      release: v1.3
+      asset: minsc-friendship-v1.3.iemod
+  - name: coranbgfriend # coran bg1 friendship
+    version: v5.1
+    components: [0]
+    location:
+      github_user:  Gibberlings3
+      repository: CoranBGFriend
+      release: v5.1
+      asset: corans-bg-extended-friendship-talks-v5.1.iemod
+  - name: haerdalis_friendship
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: HaerdalisFriendship
+      release: v1.2
+      asset: haerdalis-friendship-v1.2.iemod
+  - name: valygarfriendship
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: ValygarFriendship
+      release: v1.5
+      asset: valygar-friendship-v1.5.iemod
+  - name: mazzy
+    description: Mazzy friendship
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: MazzyFriendship
+      release: v3.5
+      asset: mazzy-friendship-v3.5.iemod
+  - name: cernd
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: CerndFriendship
+      release: v1.3
+      asset: Cernd-Friendship-v1.3.iemod
+  - name: deArnise
+    components: [0]
+    location:
+      github_user: Pocket-Plane-Group
+      repository: deArnise_Romance
+      release: v7
+      asset: deArnise_v7.zip
+  - name: imoenRomance
+    components: [0, 1]
+    location:
+      # original location https://www.blindmonkey.org/imoen/files/Imoen%20Romance.zip
+      # started to give SSL errors
+      github_user: mleduque
+      repository: ImoenRomance
+      branch: main
+  - name: imoenisstone
+    components: [0]
+    location:
+      path: /home/mick/Games/modda-cache/static/lin-ImoenIsStone-v1.0.tar.gz
+  - name: viconia
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: ViconiaFriendship
+      release: v4.5
+      asset: Viconia-Friendship-v4.5.iemod
+  - name: yoshimo
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: YoshimoFriendship
+      release: v4.6
+      asset: yoshimo-friendship-v4.6.iemod
+  - name: sarevokfriendship
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: SarevokFriendship
+      release: v2.6
+      asset: sarevok-friendship-v2.6.iemod
+  - name: YoshimosRemorse
+    components: [0]
+    location:
+      path: /home/mick/Games/modda-cache/static/lin-YoshimosRemorse-v3.0.tar.gz
+  - name: ajantisbg1
+    components: [0]
+    location:
+      github_user: Gibberlings3
+      repository: Ajantis_BG1_Expansion
+      release: v18.3
+      asset: ajantis-bg1-expansion-modification-18.3.iemod
+  - name: SkieCost # install late because adds crossmod banters with Yvette & Foundling
+    description: "Skie: The Cost of One Girl’s Soul"
+    components:
+    location:
+      path: /home/mick/Games/modda-cache/static/Skie The Cost of One Girls Soul v4.01.zip
+  - name: Wings
+    components:
+      - 0 # Wings - Wings for BG2:EE
+      - 1 # Wings - Restore missing banters?
+      #- 2 # Wings - Remove conflict with Hexxat?
+    location:
+      github_user: Skitia
+      repository: Wings
+      tag: v1.02
+  - name: banterpack
+    components:
+      - 0 # Pack de Dialogues du Pocket Plane Group pour BG2 : SoA
+      - 1 # Installer le script accelerateur de dialogues de SoA
+      - 2 # Pack de Dialogues du Pocket Plane Group pour BG2 : ToB
+      - 3 # Installer le script accelerateur de dialogues de ToB
+    location:
+      github_user:  Pocket-Plane-Group
+      repository: Banter_Pack
+      release: v18
+      asset: banter-packs-v18.iemod
+  - name: iepbanters
+    description: IEP Extended Banter - https://github.com/SpellholdStudios/IEP_Extended_Banter#iep-extended-banter
+    components:
+      - 0 # Extended NPC-NPC Interaction SoA
+      - 1 # Extended Minsc/Aerie Interaction ToB
+      - 2 # Imoen "Retrospection" dialogue for BGII: ToB
+      - 3 # Wake-Up dialogue for Anomen Romance
+      - 4 # NPC Conflict Revisions
+      - 5 # Restored Aerie/Jaheira/Anomen interjection in Underdark
+      - 6 # Banter Accelerator -> 10 minutes  -- same as banterpack accelerator, more configurable, overrides
+    location:
+      github_user: SpellholdStudios
+      repository: IEP_Extended_Banter
+      release: v5.8
+      asset: iep-extended-banters-v5.8.iemod
+  - name: willowisp # only banters
+    components: [4] # banters with Sirene, Pai'na, Foundling
+  - name: crossmodbg2
+    description: Crossmod Banter Pack
+    components:
+      - 0 # Crossmod Banter Pack for Shadows of Amn
+      - 1 # Crossmod Banter Pack for Throne of Bhaal
+      # - 2 # Crossmod Romance Conflicts
+    location:
+      github_user: Gibberlings3
+      repository: Crossmod_Banter_Pack_for_Baldurs_Gate_II
+      release: v21
+      asset: crossmod-banter-pack-for-baldurs-gate-ii-v21.iemod # tgz truncates some file names
+  - name: sodrtd
+    description: Road To Discovery
+    components:
+    location:
+      github_user: Gitjas
+      repository: Road_To_Discovery_for_SoD
+      release: v0.4Beta
+      asset: road-to-discovery-for-sod-0.4-.beta.iemod
+  - name: BG1NPCSoA # install after other versions of same npcs
+    description: BG1 NPCs in BG2
+    components:
+      #- 0  # Water Gardens. New Athkatla's district & new quests
+      #- 2  # Shar-Teel NPC in BG2. "Nightbringer of Shar" (SoA)
+      #- 6  # Brave Sir Garrick NPC in BG2 (SoA)
+      #- 25 # Alora (SoA & ToB)
+      #- 35 # Kagain's Corner (SoA & ToB) -> Store with Vanilla Items Only
+      #- 40 # Faldorn's New Leaf (SoA & ToB)
+      #- 83 # Garrick skald
+      #- 87 # Inter Component Banter Pack
+      #- 15 # Shar-Teel, Yeslick, Garrick, Branwen, Skie & Eldoth (ToB)   <- maybe with WARNngs
+    location:
+      github_user: mleduque
+      repository: TBGCoM_BG1NPCSoA
+      tag: v13.5
+      patch:
+        relative: patches/bg1npcsoa-nopdf.diff
+        encoding: WIN1251
+  - name: TorturedSoulsLite
+    components:
+    location:
+      github_user: RealApxu
+      repository: TorturedSoulsLite
+      cmmit: 971c692527fa
+  -name: TS_sime
+    components:
+    location:
+      github_user: RealApxu
+      repository: TS_Sime
+      tag: "0.8"
+  - name:
+    components:
+    location:
+      github_user: Austin-BG
+      repository: SmilingImpCrossBanterMod
+      release: v.1.4
+      asset: smiling-imps-cross-banter-mod-1.4.iemod
+
+  #########
+  # Spells
+  #########
+  - name: mih_fr
+    description: Made in Heaven - Fixes & Restorations ; spell restorations only
+    components:
+      - 3  # spell restorations
+  - name: mih_sp
+    components:
+    location:
+      github_user: AngelGryph
+      repository: MadeInHeaven_SpellPack
+      commit: 9e672ab
+  ##
+  ## Both iwdification and spell_rev will check existing spells before installing, mih_* doesn't so
+  ## put them first
+  - name: spell_rev
+    components:
+      - 0   # Spell Revisions
+      - 10  # Deva and Planetar Animations
+      - 20  # Mirror Image Fix
+      - 30  # Dispel Magic Fix    <- must be before TotLM
+      - 55  # Spell Deflection blocks AoE spells
+      - 60  # Update Spellbooks of Joinable NPCs
+      #- 65   # Revised Warrior HLAs
+    location:
+      github_user: mleduque
+      repository: SpellRevisions
+      branch: b19-update-fr
+  - name: iwdification
+    components:
+      - 10 # Icewind Dale Casting Graphics (Andyr): Release Candidate 2
+      - 60 # Two Handed Axe Item Pack: Release Candidate 2
+      - 90 # Expanded Polymorph Self: Release Candidate 2
+      - 30 # IWD Arcane Spell Pack: Release Candidate 2
+      - 40 # IWD Divine Spell Pack: Release Candidate 2
+      - 50 # IWD Class Updates: Bard: Add IWD Bard Songs: Release Candidate 2
+      - 100 # IWD Class Updates: Paladin: IWD Abilities and Skills: Release Candidate 2
+      - 120 # IWD Class Updates: Thief: Evasion: Release Candidate 2
+      - 140 # Randomized Enemy Equipment -> Add High Quality Items: Release Candidate 2
+      - 150 # IWD Class Updates: Bard: Use IWD Spell Progression: Release Candidate 2
+      - 70 # IWD Class Updates: Druid: Use IWD Shapeshifting and Ability Progression: Release Candidate 2
+      - 71 # IWD Class Updates: Druid: Allow Elves to be Druids: Release Candidate 2
+      - 160 # IWD Class Updates: Paladin: Use IWD Spell Progression: Release Candidate 2
+      - 170 # IWD Class Updates: Ranger: Use IWD Spell Progression: Release Candidate 2
+    location:
+      github_user: mleduque
+      repository: iwdification
+      branch: 2.0-fr
+  - name : Weasels!
+    components:
+      - 0
+    location:
+      github_user: mleduque
+      repository: lava_weasels
+      branch: v3.3
+  - name: Magic_Battles_Revised
+    components:
+      - 10 # Revised Magic Battles
+    location:
+      github_user: mleduque
+      repository: magic_battles_revised
+      branch: 1.4-fr
+      patch:
+        relative: patches/mbr_spell_thrust_lv2.diff
+  - name: A7-TotLM-BG2EE
+    description: Trial of the Luremaster - Main component (warns)
+    components:
+      - 0  # Trials of the Luremaster for Baldur's Gate
+    ignore_warnings: true
+    location:
+      github_user: Argent77
+      repository: A7-TotLM-BG2EE
+      release: v3.0
+      asset: A7-TotLM-BG2EE-v3.0.iemod
+  - name: A7-TotLM-BG2EE
+    description: Trial of the Luremaster - XP reduction
+    components:
+      - 30 # Reduire les points d'experience des monstres et des quetes. -> Reduction de 25 pour cent
+  - name: Unofficial Item Pack
+    components:
+    location:
+      github_user: mleduque-not sod items
+      repository: edvin_unofficial_item_pack
+      tag: v2.7b-french
+  - name: item_rev
+    description: Item revisions ; main component only
+    components:
+      - 0 # Item Revisions by Demivrgvs (main component)
+    location: # temporary, hope for maintenance and releases soon
+      github_user: mleduque
+      repository: ItemRevisions
+      branch: run/v4b10/2022-04-02
+    add_conf:
+      file_name: settings.ini
+      content: |
+        // Main Component
+        install_tobex                   = 0 // installs ToBEx; automatically skipped if ToBEx is already installed and up to date or it's not a non-EE ToB game
+        install_sensible_lore           = 1 // balances lore gains so classes other than bard have a better chance of identifying items
+        install_ioun_stone_animations   = 1 // new ioun stone animations by WoRm
+        install_item_reallocation       = 0 // removes two items from bonus merchant and equips them on enemies, matching SCS behaviour
+
+        // Store Revisions
+        install_masterwork_weapons      = 0 // +1 weapons are changed to masterwork; outdated - mostly functional, but not recommended (use SCS component instead)
+
+        // Revised Armor - Won't be used (component not installed) Prefer scale of balance version
+        armor_dexterity_penalty         = 1 // adds dexterity penalties to armor
+        armor_speed_factor_penalty      = 0 // ditto for attack speed factor
+        armor_physical_resistance       = 1 // adds physical resistance bonus
+        armor_ac_modifiers              = 1 // modifies AC bonuses vs different weapon types (slashing, piercing etc.)
+
+        // Spellcasting in Armor - Same
+        armor_casting_speed_clerics     = 0 // divine spellcasters will be affected as well ("Casting Speed Penalties for Arcane Casters" subcomponent only)
+        armor_free_casting              = 0 // cheat version, will override other options and enable unrestricted spellcasting in armor (either subcomponent)
+        bards_armor_spell_penalties	  = 0 // Bards get the normal penalties to casting when using any armor lighter than chain mail
+
+        // Weapon Changes
+        halberds_can_slash_too          = 1 // adds a slashing mode to halberds
+        flails_have_extended_range      = 1 // extends flails' range to 2
+        dnd_3e_scimitars                = 1 // sets scimitars' damage to 1d6 (from 1d8) and add +5% critical chance
+
+        // Revised Backstabbing
+        add_backstabbing_penalties 	  = 0 // gives backstab penalties to certain weapons, overridden by "Penalties with Thief-only Weapons" if chosen.
+  - name: mih_fr
+    description: Made in Heaven - Fixes & Restorations ; items restorations only
+    components:
+      - 2  # item restorations
+  - name: mih_ip
+    components:
+      #- 0  # Made in Heaven: Item Pack
+      #- 8  # Turn all Dragon Scale Armor into Scale Mail
+      #- 10 # Miscellaneous Item Improvements
+      #- 11 # Add Potions of Extra Healing in BG1
+      #- 13 # Sensible Shops (see readme)
+    location:
+      github_user: AngelGryph
+      repository: MadeInHeaven_ItemPack
+      commit: bb41d18 # post v6
+      patch:
+        relative: patches/mih_ip-sod-warnings.diff
+    add_conf: ????
+      file_name: mih_ip.ini
+      content: |
+        [general]
+        debug_variable=0
+        use_perl_natively=0
+        use_ee_half_damage=1
+
+        [item_pack]
+        max_stack_ammo=0
+        max_stack_thrown=0
+        max_stack_potions=0
+        max_stack_jewels=0
+        update_itemexcl_2da=1
+        visible_ioun_stones=1
+        brokk_buying_markup=80
+        brokk_selling_markup=120
+        phendra_buying_markup=70
+        phendra_selling_markup=130
+
+        charge_cap_wands=10
+        charge_cap_staves=16
+
+        [better_items]
+        baldurans_cloak_magic_resistance=25
+        baldurans_cloak_in_bg2=1
+
+        [extra_healing_in_bg1]
+        extra_healing_minimum=5
+        extra_healing_maximum=8
+        extra_healing_shops=1
+        extra_healing_durlag=1
+
+        [sensible_shops]
+        bg1_fix_large_shields=0
+        bg1_add_obscure_items=1
+        bg1_move_thieving_stuff=1
+        bg2_swap_hammers=1
+  - name: msfm
+    description: More Stuff For Mage - BG2 part
+    components:
+      - 1  # Add Wizard's Staff -> Add Wizard's Staff with 14 new color sets
+      - 2  # Add Staff of Wizardry
+      - 3  # Add custom inventory animation to the Staff of Wizardry
+      - 9  # Add ranged attack and a tweak to the Staff of the Magi -> Add ranged attack + replace invisibility with spell restoration
+      - 10 # Add circlets
+      - 11 # Add Circlet of Revelation
+      - 12 # Add Wizard's Hat
+      - 13 # Add Wand Case
+      - 14 # Add a stone of teleportation
+      - 17 # Add Robes of Archimagi with colorsets from Mr. Pennyway's Cosmetic Changes mod
+    location:
+      github_user: mleduque
+      repository: msfm
+      branch: eet
+  - name: thalan
+    description: Thalantyr Item Upgrade
+    components: [0]
+    location:
+      github_user: CrevsDaak
+      repository: thalan
+      tag: v4.2.5
+  - name: thalan
+    description: Thalantyr Item Upgrade
+    components: [0]
+    location:
+      github_user: CrevsDaak
+      repository: thalan
+      tag: v4.2.5
+  - name: valhorn
+    components: [0]
+    location:
+      github_user: Gibberlings3
+      repository: Improved_Horns_of_Valhalla
+      release: v2
+      asset: lin-valhorn-v2.tar.gz
+  - name: swordap
+    description: Improved Haer'Dalis' Swords
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: HaerDalis_Swords
+      release: v3.1.0
+      asset: improved-haerdalis-swords-v3.1.0.iemod
+  - name: ruad
+    description: Ruad Ro'fhessa Item Upgrade
+    components: [0, 10]
+    location:
+      github_user: SpellholdStudios
+      repository: RuadRofhessaItemUpgrade
+      release: v29.4.0
+      asset: ruad-rofhessa-item-upgrade-v29.4.0.iemod
+  - name: rolles
+    description: Rolles Safyer
+    components: [0, 10]
+    location:
+      github_user: SpellholdStudios
+      repository: Rolles
+      release: v5.0.5
+      asset: rolles-safyer-v5.0.5.iemod
+  - name: abystore
+    description: The Unusual Oddities Shop
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: The_Unusual_Oddities_Shop
+      release: v5.0
+      asset: the-unusual-oddities-shop-5.0.iemod
+  - name: hammers
+    components: [0, 15, 25, 35,50]
+    location:
+      github_user: Sampsca
+      repository: ThrownHammers
+      tag: v6.1.1
+  - name: underrep
+    components: [0]
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Under-Respresented_Items
+      release: v8
+      asset: lin-underrep-v8.tar.gz
+  - name: alchemy
+    description: jan's alchemy
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: JansAlchemy
+      release: v8.1.0
+      asset: jans-alchemy-v8.1.0.iemod
+  - name: darron
+    description: Darron the BG2 Thief Guild Vendor
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: Darron
+      release: v2.0.0
+      asset: darron-v2.0.0.iemod
+  - name: stuffofthemagi
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: StuffofTheMagi
+      release: v6.0.0
+      asset: stuff-of-the-magi-6.0.0.iemod
+  - name: bolsa
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: Bolsa
+      release: v6.0.0
+      asset: bolsa-v6.0.0.iemod
+  - name: A7-MagicStore
+    components: [1, 10] # 1=fee required
+    location:
+      github_user: Argent77
+      repository: A7-MagicStore
+      release: v2.2
+      asset: A7-MagicStore-v2.2.iemod
+  - name: heartwood
+    description: Heart of the Wood
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: HeartOfTheWood
+      release: v7.0.0
+      asset:  heart-of-the-wood-7.0.0.iemod
+  - name: BardicWonders
+    components:
+      - 5 # ~Bardic Wonders: Items
+    location:
+      github_user: ArtemiusI
+      repository: Bardic-Wonders
+      tag: v1.3
+  - name: A7#ImprovedArcher
+    components:
+      - 0   # Profil d'Archer ameliore
+      - 10  # Ajouter le profil de guerrier : Tireur d'elite
+      - 20  # Ajouter le profil de paladin : Chevalier archer
+      - 30  # Ajouter le profil de voleur : Tireur de precision
+      - 100 # Ajouter des fleches et des carreaux +4, et des arcs puissants et dans le jeu
+    location:
+      github_user: Argent77
+      repository: A7-ImprovedArcher
+      commit: 7b291cd
+  - name: saradas_magic_2
+    components:
+      - 1 # Saradas Magic NPC Mod for BGII -> Saradas has a mage sprite (optional)
+    location:
+      github_user: SpellholdStudios
+      repository: Saradas_Magic_for_BG2
+      release: v2.0.0
+      asset: saradas-magic-for-bg2-v2.0.0.iemod
+  - name: trovador
+    components: ~
+    location:
+      github_user: SpellholdStudios
+      repository: Trovador_REO
+      release: v2.5.0
+      asset: trovador-reo-v2.5.0.iemod
+  - name: rttitempack
+    components: ~
+    location:
+      path: /home/mick/Games/modda-cache/static/RTTItemPack_v1.3.zip
+  - name: iwditempack
+    components: ~
+    location:
+      path: /home/mick/Games/modda-cache/static/IWD Item Pack.zip
+  - name: Mystigan
+    components:
+    location:
+      http: https://akadis.baldursgateworld.fr/Mystigan/zip/Mystigan1.6.zip
+      rename: Mystigan1.6.zip
+  - name: OfHeirloomsAndClasses
+    components: ~
+    location:
+      path: /home/mick/Games/modda-cache/static/OfHeirloomsAndClasses v1.11.zip
+  - name: iiItemMod
+    components: ~
+    location:
+      github_user: btigi
+      repository: iiItem
+      release: v5.2
+      asset: iiitemmod-v5.2.iemod
+  - name: iiKeyNames
+    description: Renames the keys after use
+    components: ~
+    location:
+      github_user: mleduque
+      repository: iiKeyNames
+      branch: v2.1-fr
+  - name: rr # rogue rebalancing
+    description: additional equipment & story  only
+    components:
+      - index: 7     # Equipement supplementaire pour les voleurs et les bardes
+        ignore_warn: true # WARNING: no effects altered on MISC2P.ITM
+      - 8     # Equipement ameliorable
+      - 11    #  Rencontre avec les Elus de Cyric
+      - 12    #  Amelioration des Voleurs de l'Ombre
+    location:
+      github_user: FredrikLindgren
+      repository: rr
+      branch: devel
+  - name: cdlore
+    components:
+      - 10 # Books Provide Lore Bonuses
+      - 20 # Weapon Knowledge Provides Lore Bonuses
+      - 30 # Party Members Provide Lore Bonuses
+      - 40 # Defeating Monsters Provides Lore Bonuses
+    location:
+      github_user: Gibberlings3
+      repository: Lore_From_Learning
+      commit: 979ba99 # post-v2, adds multi-bard support
+  - name: POISON_NO_BYPASS
+    components:
+      - 3 # Limited Exclusions(Anti-magic, AoE, Gaze): Mirror Image or Stoneskin
+    location:
+      github_user: mleduque
+      repository: kjeron_poison_no_bypass
+      tag: v1.0
+  - name: polyvorp
+    components:
+      - 10 # Rebalanced Vorpal Weapons (affects enemies and players)
+      # - 20 # Make all Dragons immune to Vorpal hits (previously some were, with default rebalancing none are)
+    location:
+      github_user: mleduque
+      repository: polytope_rebalanced_vorpal
+      tag: v1.00
+  - name: item_rev
+    description: Item Revisions (more changes)
+    components:
+      - 1030 # Revision des boutiques
+      #- 10   # Bonus des boucliers revus
+      - 17   # Weapon Changes
+      #- 11   # Le combat a deux armes differe selon le type d'arme, legere ou lourde
+      #- 20   # Attaque sournoise revue (avec et sans penalite) -> Toutes les armes de melee et a projectiles utilisables pour l'attaque sournoise
+      - 1200 # Evitement des coups critiques revu
+      - 1060 # Les Kensai peuvent porter des bracelets
+      - 1070 # Les Voleurs peuvent utiliser des baguettes
+  - name: forgotten-armament
+    components:
+      - 1 # Add New Forgotten Armament Items into the Game
+      - 8 # Replace Boots of Speed (Paws of the Cheetah)
+      - 10 # Improved Spears -> prefer scales of balance version
+    location:
+      github_user:  Gibberlings3
+      repository: Forgotten-Armament
+      release: 0.5-beta
+      asset: lin-forgotten-armament-v0.5-beta.zip
+
+  #########
+  # Kits
+  #########
+  - name: MilitiaOfficer
+    components: [0]
+    location:
+      github_user: Raduziel
+      repository: MilitiaOfficer-Kit
+      tag: "1.8"
+  - name: Mercenary
+    components: [0]
+    location:
+      github_user: Raduziel
+      repository: Mercenary-Kit
+      tag: "3.1"
+  - name: ArtisansKitpack
+    components:
+      - 10 # Artisan's Kitpack: Arcane Archer Fighter Kit
+      - 11 # Install Arcane Archer/Mage multiclass kit
+      - 20 # Artisan's Kitpack: Vanguard Fighter Kit
+      #- 60 # Artisan's Kitpack: Dark Hunter Ranger Kit
+      - 70 # Artisan's Kitpack: Divine Champion Paladin Kit
+      - 80 # Artisan's Kitpack: Mystic Fire Paladin Kit
+      - 100 # Artisan's Kitpack: Elementalist Druid Kit
+      #- 110 # Artisan's Kitpack: Hivemaster Druid Kit
+      - 120 # Artisan's Kitpack: Rogue Archer Thief Kit
+      #- 130 # Artisan's Kitpack: Magekiller Thief Kit
+      - 140 # Artisan's Kitpack: Trickster Thief Kit
+      #- 160 # Artisan's Kitpack: Pale Master Sorcerer Kit
+      - 180 # Artisan's Kitpack: Warhorn Shaman Kit
+    location:
+      github_user: mleduque
+      repository: The-Artisan-s-Kitpack
+      branch: no-prompt
+  - name: BearWalker
+    components: [0]
+    location:
+      github_user: thisisulb
+      repository: BearWalkerKit
+      branch: master
+  - name: Dreamwalker
+    components: [0]
+    location:
+      github_user: thisisulb
+      repository: DreamWalkerShamanKit
+      branch: master
+  - name: SpiritHunter
+    components: [0]
+    location:
+      github_user: thisisulb
+      repository: SpiritHunterShamanKit
+      branch: master
+    ignore_warnings: true # WARNING: no effects altered on UB_SH00.ITM
+  - name: Spiritwalker
+    components: [0]
+    location:
+      github_user: thisisulb
+      repository: SpiritwalkerKit
+      branch: master
+  - name: StormCaller
+    components: [0]
+    location:
+      github_user: thisisulb
+      repository: StormCallerKit
+      branch: master
+  - name: wildmage
+    components:
+      - 0 # New Wild Magic Spells -> Ironman
+      - 2 # Retain Rhialto's items
+      - 3 # Spellshaper Kit -> Original avatar
+      - 5 # Diverses Modifications de Sorts
+    location:
+      github_user: BGforgeNet
+      repository: bg2-wildmage
+      release: v2.2
+      asset: wild-mage-additions-v2.2.iemod
+  - name: shadowadept # will prompt 2 times
+    description: shadowadept- main component only - because error
+    ignore_warnings: true # WARNING: no effects altered on C0SA112.itm
+    components:
+      - 0 # Shadow Magic: Main Component
+    location:
+      github_user: ArtemiusI
+      repository: Shadow-Magic
+      branch: master
+      patch:
+        relative: patches/shadowmagic-condrain.diff
+  - name: shadowadept
+    description: shadowadept - components without warningq
+    components:
+      - 1 # Shadow Magic: Shadow Monk monk
+      - 2 # Shadow Magic: Quests and Encounters
+  - name: wsr
+    description: Wizard Slayer Rebalancing
+    components:
+      - 100 # Revision du kit de Tueur de magiciens
+      - 302 # Revision des restrictions d'utilisation d'objets pour le Tueur de magiciens -> Changements moderes
+      - 999 # Icones style BG2 pour le contenu de WSR
+      # hla must be after refinements
+    location:
+      github_user: mleduque
+      repository: Wizard-Slayer-Rebalancing
+      branch: mle
+  - name: rr # rogue rebalancing
+    description: Components up to addition equipment (excl.)
+    components:
+      #- 0     # Mise a jour du Combat a deux armes pour les voleurs et les bardes -> NOPE The first component of Rogue Rebalancing is not compatible, and not necessary, with SoB's component #122 "the Weapon Proficiency Overall Overhaul."
+      - 1     # Revisions des kits des voleurs
+      #- 2     # Revisions des capacites de haut niveau du voleur
+      - 3     # Ajustements raciaux propres pour les capacites de voleur
+      #- 4     # Revisions des kits des bardes
+      #- 5     # Revisions des capacites de haut niveau des bardes
+      #- 9 # Use PnP thievery potions and prevent their effects from stacking
+      - 10 #  Retain default thievery potions and prevent their effects from stacking
+    location:
+      github_user: FredrikLindgren
+      repository: rr
+      branch: devel
+  - name: d5_random_tweaks
+    description: SubtleDoctor's Random Tweaks
+    components:
+      #- 2105 # Ajouter un effet d'aveuglement pour 1 round à Vapeur Colorée
+      #- 2108 # Changer Protection contre la Pétrification en 'Rétrovision'
+      #- 1151 # Réduire les dégâts mais améliorer la Cécité pour le Soleil Ardent de Spell Revisions
+      #- 1152 # Améliorer Lueur Féérique
+      #- 2212 # Déplacer Image Miroir au niveau 3
+      #- 2213 # Ajouter des effets persistants au Nuage Puant de Spell Revisions
+      #- 2215 # Modifier Toile d'Araignée pour ralentir au lieu d'immobiliser
+      #- 2217 # Changer Incinérateur d'Agannazar en Projectiles Ardents de Melf
+      #- 2224 # Améliorer Poussière Scintillante
+      #- 2251 # Ajouter un effet de Surdité au toucher à Baton Décuplé
+      #- 1202 # Modifier Peau d'écorce pour bloquer une attaque par round
+      #- 1207 # Modifier Baies magiques pour en faire une régénération hors combat
+      #- 1212 # Ajuster Ralentissement du Poison
+      #- 1251 # Améliorer les dégâts et modifier le type de dégâts pour Lance d'Alicorne
+      #- 2324 # Modifier Immobilisation des Morts-Vivants et Contrôle des Morts-Vivants pour ignorer la résistance à la magie
+      #- 1323 # Améliorer le temps d'incantation pour Exaltation et Clarté Spirituelle
+      #- 1351 # Ajouter des effets de Lueur Féérique et Lenteur au toucher de la Lame de Lune
+      #- 1451 # make smashing wave party-friendly WARNING: no effects altered on SPPR429.spl
+      #- 2209 # Modifier Chance pour affecter tout le groupe
+      #- 2413 # Autoriser la cible de Sphère Résistante d'Otiluke à utiliser son inventaire
+      #- 2418 # Rendre Bouclier de Feu et Gaine Acide de Mestil dissipable par Brêche
+      #- 2451 # Modifier les monstres de Convocation d'Ombre plus illusoires
+      #- 1404 # Remplacer Neutralisation du Poison en 'Suppression des Afflictions'
+      #- 2508 # Améliorer Vagues de Fatigue de Spell Revisions
+      #- 2518 # Changer le type de dégâts et l'école de Lame Fantomatique
+      #- 2523 # Remplacer Feu du Soleil par 'Tempête de Projectiles'
+      #- 1603 # Rendre BarriÃšre de Lames dissipable par Brêche
+      #- 1611 # Modifier Souvenir Merveilleux pour restaurer tous les sorts de niveau 1 et 2
+      #- 1613 # Modifier Miroir Physique pour bloquer une attaque toutes les 3 secondes
+      #- 1614 # Rendre Orbe Desséchant de Sol plus facile à lancer
+      #- 2708 # Remplacer Manteau par 'Peau de Fer'
+      #- 1710 # Ajouter un effet de Lenteur à Parole Sacrée
+      #- 2808 # Rendre Moment de Prescience dissipable par Brêche
+      #- 2811 # Déplacer Symbole, Terreur au niveau 7
+      #- 2916 # Déplacer Changement de Forme au niveau 8
+      #- 2915 # Déplacer Lame Noire du Désastre au niveau 8
+      #- 2914 # Ajouter un effet de mort instantanée à Absorption d'Énergie
+      #- 2923 # Remplacer Convocation de Planétaire en Convocation de Djinn Noble
+      #- 3000 # Donner aux armes créées par les sort 2 attaques par round (APR)
+      #- 3010 # Ajouter une immunité aux attaques sournoises à l'Anneau de Perception du danger
+      #- 3020 # Donner une vraie déviation des projectile aux Bracelets antiprojectiles
+      #- 3030 # Améliorer les armes avec effet de détonation
+      #- 3040 # Ajouter un effet de Peau d'Écorce 'révisé' à l'Armure de la Foi +3
+      #- 3050 # Rendre le Bâton d'Absorption d'Item Revisions réellement instantanné
+      #- 3060 # Modifier la Cape de Gargouille pour appliquer un effet de Peau de Pierre au lieu d'un bonus à la CA
+      #- 3070 # Rendre les marteaux de jet nains utilisables par les non-nains
+      #- 3080 # Améliorer la Harpe d'Azlaer et la Harpe de Methild
+      #- 3092 # Dégrader l'amulette d'Edwin -> Limiter les emplacements de sorts bonus aux sorts de niveau 7
+      #- 4010 # Ajouter un jet de sauvegarde pour les effets d'absorption de niveau
+      #- 4020 # Améliorer les valeurs de caractéristiques des monstres
+      #- 4031 # Augmenter les points de vie des dragons -> 50% de points de vie en plus
+      #- 5000 # Réviser les batailles magiques
+      #- 5010 # Modifier les sorts de soin et similaires pour ignorer les protections contre les sorts
+      #- 5031 # Modifier Perce-Bouclier -> Perce-Bouclier lance juste Brêche
+      #- 2305 # Modifer Rapidité et Lenteur pour qu'ils s'annulent l'un l'autre WARNING: no effects altered on potn14.spl
+    location:
+      github_user: mleduque
+      repository: d5_Random_Tweaks
+      branch: 1.5.3-fr
+  - name: wsr # hla only
+    description: Wizard Slayer Rebalancing - HLA
+    components:
+      - 200 # Revision des facultes de haut niveau du Tueur de magiciens
+  - name: cdtweaks
+    description: Tweaks Anthology - only spell progression tables
+    components:
+      - 2250 # Table de progression des sorts du sorcier debridee
+      - 2260 # Alterer la table de progression des sorts du mage -> Table debridee (Blucher)
+      - 2270 # Alterer la table de progression des sorts du barde -> Table debridee (Blucher)
+      - 2280 # Alterer la table de progression des sorts du clerc -> Table debridee (Blucher)
+      - 2293 # Alterer les tables de progression des sorts et de niveaux du druide -> Utiliser la table de progression des clercs et la table debridee des sorts des druides (Blucher)
+    location:
+      github_user: Gibberlings3
+      repository: Tweaks-Anthology
+      release: v14
+      asset: lin-cdtweaks-v14.tar.gz
+    add_conf:
+      file_name: cdtweaks.txt
+      content: |
+        OUTER_SET romance_speed_use_config_values = 1
+        OUTER_SET romance_speed_factor = 35
+
+        OUTER_SET romance_use_config_values = 1
+        OUTER_SET remove_romance_racial_requirements = 1
+        OUTER_SET remove_romance_gender_requirements = 0
+        OUTER_SET romance_multiple = 1
+        OUTER_SET romance_nothing_kills = 1
+        OUTER_SET romance_starts_in_ToB = 1
+
+        OUTER_SET always_install_unique_icons = 1
+
+        OUTER_SET minimum_stats_use_config_values = 1
+        OUTER_SET minimum_stats_strength     = 11
+        OUTER_SET minimum_stats_constitution = 11
+        OUTER_SET minimum_stats_dexterity    = 11
+        OUTER_SET minimum_stats_intelligence = 11
+        OUTER_SET minimum_stats_wisdom       = 11
+        OUTER_SET minimum_stats_charisma     = 11
+  - name: song_and_silence
+    components:
+      - 0  # Changements concernant les bardes et voleurs purs, ainsi que les kits originaux du jeu (necessaire pour les autres composants)
+      - 1  # Ajout d'une echoppe pour bardes et voleurs
+      ##- 2  # Installer l'Acrobate (kit de barde)
+      ##- 3  # Installer le Choriste (kit de barde)
+      ##- 4  # Installer le Chanteur Funebre (kit de barde)
+      ##- 5  # Installer le Gitan (kit de barde)
+      - 6  # Installer l'Aventurier (kit de voleur)
+      - 7  # Installer le Cambrioleur (kit de voleur)
+      ##- 8  # Installer le Lamesprit (kit de voleur)
+      - 9  # Installer le Tireur d'Elite (kit de voleur)
+    location:
+      github_user: Gibberlings3
+      repository: SongAndSilence
+      release: v16
+      asset: lin-song_and_silence-v16.tar.gz
+  - name: spstuff
+    description: Sorcerer's Place Collection
+    components: ~
+    location:
+      github_user: Gibberlings3
+      repository: SP_Collection
+      release: v12
+      asset: lin-spstuff-v12.tar.gz
+  - name: TomeAndBlood
+    description: Tome And Blood - main
+    components:
+      - 1201 #// Rebalanced Arcane Opposition Schools -> No Opposition Schools: 0.9.25
+      - 13 # Révision des clones illusoires: 0.9.27
+      - 14 # Révision d'Invisibilité et de Vision véritable: 0.9.27
+      - 16 # Sort Identification amélioré (utilisable par les Arcanistes et les Ensorceleurs multiclassés): 0.9.27
+      - 20 # Révision des Disciples du Dragon: 0.9.27
+      - 25 # Kit d'ensorceleur : Magus: 0.9.27
+      - 31 # Kit d'ensorceleur : Âme favorite: 0.9.27
+      - 33 # Kit d'ensorceleur : Disciple sylvain: 0.9.27
+      - 35 # Kit d'ensorceleur : Disciple revenant: 0.9.27
+      - 37 # Kit d'ensorceleur : Disciple amorphe: 0.9.27
+      - 40 # Révision des spécialistes: 0.9.27
+      #- 45 # ArcaneCarfting NOPE: deprecated
+      - 48 # Lancer de sort en armure pour les bardes: 0.9.27
+      - 51 # Révision de la  Métamagie -> Métamagie innée, apprise automatiquement par tout le monde: 0.9.27
+      #- 61 #// Cantrips -> Innate Cantrips: 0.9.25
+      - 66 # Sort de Familier inné: 0.9.27
+      - 67 # Choisir son familier: 0.9.27
+      - 71 # Changement de sorts pour les ensorceleurs -> Changer les sorts à tous les niveaux: 0.9.27
+      #- 80 #// Multiclass Sorcerers: 0.9.25
+      #- 82 # Arcanist NOPE - incompatible with 5E
+      - 92 # Rendre les objets à emplacement de sorts bonus compatibles avec les ensorceleurs multi et les arcanistes -> Bonus pour la mémorisation ET les emplacements de lancer: 0.9.27
+      #- 95 # Ability Score Spellcasting Bonuses (install AFTER any mod that changes spell tables!) - prefer scalesofbalance
+    location:
+      github_user: mleduque
+      repository: TomeAndBlood
+      tag: "0.9.30-fr"
+  - name: TomeAndBlood
+    description: Tome And Blood (warning components)
+    components:
+      - 68 #// Pooky's Mod: Imbue Familiars: 0.9.25
+    ignore_warnings: true # no effect altered on... for each component
+  - name: A7#ImprovedShamanicDance
+    components:
+      - 0  # Danse shamanique amelioree
+      - 10 # Danse shamanique etendue pour les personnages de haut niveau
+      - 20 # Ajouter le sort "Pacte shamanique"
+      - 30 # Appliquer la Danse shamanique amelioree a tous les profils de Shama
+      - 40 # Objets specifiques aux Shamans
+    location:
+      github_user: Argent77
+      repository: A7-ImprovedShamanicDance
+      release: v4.4
+      asset: A7-ImprovedShamanicDance-v4.4.iemod
+  - name: divine_remix
+    components:
+      - 11 # Installer les nouveaux sorts -> Ajouter les nouveaux sorts uniquement si d'autres mods ne l'ont pas deja fait: 8.1
+      - 100 # Modification des Clercs: 8.1
+      - 103 # Installer le kit de clerc d'Etoile d'Argent de Selune: 8.1
+      - 106 # Installer le kit de clerc de Manteau de la Nuit de Shar: 8.1
+      - 107 # Installer le kit de clerc de Stratege Divin de la Cavaliere Rouge: 8.1
+      - 112 # Installer le kit de clerc de Noble Martyr d'Ilmater: 8.1
+      - 115 # Installer le kit de clerc d'Adepte des Flammes de Kossuth: 8.1
+      - 118 # Installer le kit de clerc de Tyran d'Iyachtu Xvim: 8.1
+      - 121 # Installer le kit de clerc de Gardien du Savoir d'Oghma: 8.1
+      - 124 # Installer le kit de clerc de Garde du Coeur de Sunie: 8.1
+      - 127 # Installer le kit de clerc de Protecteur Feerique de Corellon: 8.1
+      - 130 # Installer le kit de clerc de Maitre des Conflits de Cyric: 8.1
+      - 200 # Modification des Druides: 8.1
+      - 203 # Installer le kit de Druide de Maitre des Vases: 8.1
+      - 403 # Installer le kit de Rodeur d'Archer Sylvain: 8.1
+      - 406 # Installer le kit de Rodeur Sauvage: 8.1
+      - 409 # Installer le kit de Rodeur de Coureur des Bois: 8.1
+      - 412 # Installer le kit de Rodeur de Vengeur: 8.1
+      - 415 # Installer le kit de Rodeur de Coureur Sauvage: 8.1
+    location:
+      github_user: TotoR115
+      repository: Divine_Remix
+      commit: a443b16
+  - name: Faiths_and_Powers
+    components:
+      #- 21 # Créer un système de sphères -> FnP : le système de sphères original de Faiths & Powers: 0.81.2
+      #- 31 # Installer les kits de clerc: 0.81.2
+      #- 33 # Installer les kits de druide: 0.81.2
+      #- 35 # Installer les kts de paladin: 0.81.2
+      #- 37 # Installer les kits de rôdeur: 0.81.2
+      #- 75 # Modifier l'utilisabilité des armes et les compétences d'armes des prêtres: 0.81.2
+      #- 80 # Appliquer le système de sphères: 0.81.2
+      #- 85 # Appliquer les kits de FnP aux PNJ: 0.81.2
+    #ignore_warnings: true # all except 31 emit no effect changed/added
+    location:
+      github_user: mleduque
+      repository: Faiths_and_Powers
+      branch: 0.83.5-fr
+      layout:
+          layout_type: multi_dir
+          dirs:
+            - faiths_and_powers
+            - FnP_Multiclass
+  - name: 5E_spellcasting
+    installation:
+      after: Tome & Blood and Faiths & Powers
+      before: Might & Guile and Faiths & Powers Multiclass.
+    components:
+      #- 100 # Change All Casters to 5E System
+      #- 900 # Set Bonus Spell Slot Items to Work for 5E Casters
+    ignore_warnings: true # no effect altered on... for each component
+    location:
+      github_user: mleduque
+      repository: 5E_spellcasting
+      commit: 1.9.1-fr
+      patch:
+        # configure "lose spell on interrupted" and "int bonus slots"
+        relative: patches/spellcasting-5e-config.diff
+  - name: sword_and_fist
+    components:
+      - 30 # Installer le kit de guerrier : Champion Occultiste
+      - 31 # Installer le kit de guerrier : Duelliste
+      - 32 # Installer le kit de guerrier : Poing de l'Ordre
+      - 34 # Installer le kit de guerrier : Magelame (by ronin69hof, ronin69hof@gmail.com
+    location:
+      github_user: mleduque
+      repository: sword_and_fist
+      branch: main
+  - name: sword_and_fist
+    components:
+      - 33 # Installer le kit de guerrier : Chevalier Noir
+    ignore_warnings: true # o effect altered on...
+  - name: Will_to_Power
+    components: ~
+    location:
+      github_user: UnearthedArcana
+      repository: Will_to_Power
+      branch: 1.3.4-fr
+      patch:
+        relative: patches/will_to_power_tweaks.diff
+  - name: might_and_guile
+    description: Might And Guile - Main component (warns)
+    components:
+      - 220 # Revised Multiclassing and Multiclass Kits
+    ignore_warnings: true
+    location:
+      github_user: mleduque
+      repository: Might_and_Guile
+      commit: 4.20.3-fr
+  - name: might_and_guile
+    description: Might And Guile - Other components
+    components:
+      #- 210 # Bard Overhaul: Multiclass Bards: 4.13
+      #- 240 # Improved Rangers: 4.13
+      #- 245 # Revised Movement Bonuses (Quickstride): 4.13
+      #- 250 # Revised Berserker and Rage: 4.13
+      #- 265 # Revised Monk Fists: 4.13
+      #- 310 # Add the Corsair (fighter kit): 4.13
+      #- 320 # Add the Marksman (fighter kit): 4.13
+      #- 322 # Add the Elven Archer (ranger kit): 4.13
+      #- 324 # Add the Halfling Slinger (fighter/thief kit): 4.13
+      #- 350 # Add the Mage Hunter (ranger kit): 4.13
+      #- 360 # Add the Barbarian Ranger (ranger kit): 4.13
+      #- 410 # Add the Sniper (thief kit): 4.13
+      #- 420 # Add the Scout (thief kit) and revise the Swashbuckler: 4.13
+  - name: refinements
+    components:
+      - 11  # Capacites de haut niveau (HLA) modifiees -> Choisir quelles classes obtiennent les HLA modifiees
+      - 101 # HLAs de guerrier
+      - 102 # HLAs de barbare
+      - 103 # HLAs de rodeur
+      - 104 # HLAs de paladin
+      - 107 # HLAs de moine
+      - 108 # HLAs de magicien
+      #- 109 # HLAs de barde
+      #- 110 # HLAs de voleur - Prefer rr hlas
+      - 40  # Robes de bas niveau universelles
+    location:
+      github_user: mleduque
+      repository: refinements
+      branch: configurable-changes
+      add_conf:
+        file_name: d5_refinements_settings.ini
+        content: |
+          OUTER_SET d5_refine_mod_kits		=	1
+          OUTER_SET hla_remove_barbarian_greater_whirlwind = 1
+
+          OUTER_SET hla_remove_sorcerer_dragon_breath = 0
+          OUTER_SET hla_remove_sorcerer_bonus_slots = 0
+          OUTER_SET hla_remove_sorcerer_energy_blade = 1
+          OUTER_SET hla_remove_sorcerer_improved_alacrity = 3
+          OUTER_SET hla_remove_sorcerer_summon_planetars = 0
+          OUTER_SET hla_remove_sorcerer_comet = 1
+
+          OUTER_SET hla_remove_dragon_disc_dragon_breath = 0
+          OUTER_SET hla_remove_dragon_disc_bonus_slots = 1
+          OUTER_SET hla_remove_dragon_disc_energy_blade = 1
+          OUTER_SET hla_remove_dragon_disc_improved_alacrity = 3
+          OUTER_SET hla_remove_dragon_disc_summon_planetars = 1
+          OUTER_SET hla_remove_dragon_disc_comet = 1
+
+          OUTER_SET hla_remove_thief_uai = 1
+          OUTER_SET hla_remove_fmt_uai = 1
+          OUTER_SET hla_remove_ct_uai = 1
+          OUTER_SET hla_remove_mt_uai = 1
+          OUTER_SET hla_remove_ft_uai = 1
+          OUTER_SET hla_remove_shadowdancer_uai = 1
+          OUTER_SET hla_remove_swashbuckler_uai = 1
+          OUTER_SET hla_remove_bountyhunter_uai = 1
+          OUTER_SET hla_remove_assassin_uai = 1
+  - name: FnP_Multiclass
+    components:
+      - 91 # Multiclass Druids
+      - 92 # Multiclass Shamans
+      - 95 # Multiclass Cleric kits (install AFTER all other kit mods
+    ignore_warnings: true # apparently intentional
+  - name: EpicThieving
+    components:
+      - 0   # Epic Locks
+      - 100 # Epic Traps
+      - 200 # Epic Trap Setting
+      - 300 # Epic Pickpocketing
+      - 400 # Epic Detect Illusions
+    location:
+      github_user: OlvynChuru
+      repository: Epic-Thieving
+      commit: f76c317
+  - name: HouseTweaks
+    description: House Rule TweakPack
+    components:
+      - 0  # House Tweaks: Expanded Racial Enemies
+      #- 1  # House Tweaks: Expanded Shapeshifting  --> possible incompat with SCS
+      - 2  # House Tweaks: Expanded Racial Bonuses
+      #- 3  # House Tweaks: Rebalanced Weapon Styles
+      - 4  # House Tweaks: Monk Can Use Quarterstaves
+      #- 5  # House Tweaks: Increased Constitution Bonuses
+      #- 6  # House Tweaks: Warrior HLAs
+      - 7  # House Tweaks: Improved Dialogues (BG:EE)
+      - 8  # House Tweaks: Not-So-Indestructible Rats
+      - 9  # House Tweaks: Good-Aligned Roleplay Rewards (BG2:EE)
+      - 10 # House Tweaks: Cloak of Dragomir only decreases stats in daylight
+      - 13 # House Tweaks: Faster Troll Unconsciousness
+    location:
+      github_user: ArtemiusI
+      repository: House-Rule-Tweaks
+      tag: v1.91
+  - name: klatu
+    description: Klatu Tweaks
+    components:
+      - 1000 # The Gloves of Goodman Hayes
+      - 1020 # Prepared Wishes
+      - 1030 # Romance Cheat: Isra will Romance Neutral Characters
+      - 1050 # Appropriate XP Rewards for Cowled Enforcers
+      - 2020 # No Item Deprecation
+      - 2030 # Identify all store items
+      - 2040 # Fix Wild Mage Items and Spells
+      - 2050 # Prevent Wish Spells from Interrupting Caster
+      - 2060 # Standardize Poison Immunity
+      - 2070 # Free Action does not prevent Haste or Movement Rate Bonus
+      # apparently already in SR
+      #- 2080 # Drop Equipment on Disintegration
+      #- 2090 # Drop Equipment on Petrification
+      #- 2100 # Drop Equipment on Imprisonment
+      - 2160 # Remove Delay from Improved Haste Spells
+      - 2200 # Familiars can sort magical scrolls
+    location:
+      github_user: mleduque
+      repository: Klatu_tweaks_and_fixes
+      branch: main
+      patch:
+        relative: patches/klatu-fix-manual_of_war.diff
+  - name: klatu
+    description: Klatu Tweaks
+    components:
+      - 1090 # RoT: Remove cutscenes from Chateau Irenicus
+    ignore_warnings: true
+  - name: cdtweaks
+    description: Tweaks Anthology - Main batch of tweaks p1
+    components:
+  - name: scales_of_balance
+    components:
+    location:
+      github_user: mleduque
+      repository: Scales_of_Balance
+      tag: "5.38.2-fr"
+      patch:
+        relative: patches/scales-config.diff
+  - name: METweaks
+    description: Olvyn's Tweaks
+    components:
+      - 200  # Make quest experience divided among party members
+      - 400  # Remove the limit of two proficiency points in a weapon at character creation
+      - 505  # Increase the rate at which warriors get proficiency points -> Fighters, Rangers and Paladins get 1 point per 2 levels
+      - 600  # Allow Shamans to move while dancing
+      - 900  # Let Rangers and Paladins cast spells at their full caster level
+      - 1000 # Give Monks a cooler Deflect Missiles ability
+      # already in iwdification
+      #- 1200 # Give Rangers the Tracking ability (from Throne of Bhaal) starting at level 1
+      - 1400 # Power Up Ranger Charm Animal
+      #- 1500 # Turn Paladin Detect Evil into a passive ability that can be toggled on and off
+      - 2000 # Allow cursed scrolls to be used on enemies
+      - 2200 # Make creatures take up less space
+      #- 2400 # Make enemies change their attack targets more quickly
+      - 3100 # Make it so the Jacil and Wiven encounters aren't replaced by other quests
+      - 3150 # Give Belhifet more reasonable immunities
+      - 3205 # Make Infravision actually do something -> Creatures without infravision have reduced visual range at night or in dark places
+      - 3805 # Modify Sneak Attack and Crippling Strike -> Reduce the delay before a creature can be sneak-attacked again to 1 round
+    location:
+      github_user: OlvynChuru
+      repository: Olvyn-Tweaks
+      commit: 2603c3d
+  - name: DruidGroveMakeover
+    components:
+      - 0
+    location:
+      github_user: thisisulb
+      repository: DruidGroveMakeover
+      tag: V1.2
+  - name: EET_Tweaks
+    components:
+      - 1001 # Edwin appearance -> BG2
+      - 1011 # Imoen appearance -> BG2
+      - 1021 # Jaheira appearance -> BG2
+      - 1031 # Minsc appearance -> BG2
+      - 1041 # Viconia appearance -> BG2
+      - 1050 # Cameo NPCs appearance
+      - 2002 # Total XP CAP -> Disabled
+      - 2042 # XP for Traps, Spells and Lockpicking -> Vanilla friendly progressive
+      - 3000 # Disable hostile reaction after charm
+      - 3010 # PnP spell scroll caster levels
+      - 3022 # Familiar death consequences -> Disabled
+      - 4040 # Import party items to SoA
+      - 4050 # Books/Scrolls categorization
+      - 4060 # Wand Case
+      - 4070 # Key Ring
+    location:
+      github_user: K4thos
+      repository: EET_Tweaks
+      tag: v1.12
+      patch:
+        relative: patches/eet_tweaks-xpbonus.diff
+  - name: mih_eq
+    description: Made In Heaven Encounters and Quests
+    installation:
+      before: SCS
+    components:
+      #- 0  # Revised Corporal Undead
+      #- 1  # Revised Dragons
+      #- 4  # Revised Lycanthropes
+      #- 5  # Revised Magical Beasts
+      #- 6  # Revised Monstrous Spiders
+      #- 7  # Revised Oozes, Slimes & Jellies
+      #- 10 # Enhanced Battles: Candlekeep Catacombs
+      #- 11 # Enhanced Battles: Mutamin's Garden
+      #- 12 # Enhanced Battles: Ramazith's Tower
+      #- 13 # Enhanced Battles: The Spider Plague
+      #- 14 # Enhanced Battles: Thieves' Maze & Undercity
+      #- 15 # Enhanced Battles: Ulcaster Ruins
+      #- 16 # Enhanced Battles: Xvart Village
+      #- 17 # Enhanced Battles: Zombie Farm
+      #- 18 # Enhanced Battles: Durlag's Tower
+      #- 19 # The Surgeon's Plight
+      #- 20 # Sarevok's Assassins
+      #- 22 # Minor Quest Tweaks (BG1)
+      #- 23 # Enhanced Battles: Bridgefort
+      #- 24 # Enhanced Battles: Cyric's Temple
+      #- 26 # Enhanced Battles: Korlasz' Tomb
+      #- 27 # Enhanced Battles: Vampire Encounters
+      #- 28 # Complete more/all Vision Quest encounters
+      #- 30 # Enhanced Battles: Athkatla Liches
+      #- 31 # Enhanced Battles: Firkraag's Lair
+      #- 32 # Enhanced Battles: Graveyard Catacombs
+      #- 33 # Enhanced Battles: Lower Reaches
+      #- 34 # Enhanced Battles: Slum Sewers
+      #- 36 # Enhanced Battles: Suldanessenar
+      #- 38 # Enhanced Battles: Trademeet
+      #- 41 # Enhanced Battles: Forest of Mir
+      #- 42 # Enhanced Battles: Pocket Plane
+      #- 43 # Enhanced Battles: Saradush
+      #- 44 # Enhanced Battles: Sendai's Enclave
+      #- 47 # Minor Quest Tweaks (ToB)
+    location:
+      github_user: mleduque
+      repository: MadeInHeaven_EncountersAndQuests
+      tag: french
+      patch:
+        relative: patches/mih_eq_customize_ini.diff
+  - name: Trap_Overhaul
+    description: Kjeron's Trap Overhaul
+    original_thread: https://forums.beamdog.com/discussion/71763/trap-detection-recovery-evasion
+    original_dl: https://us.v-cdn.net/5019558/uploads/editor/cq/pzpto4fbfcov.zip
+    components:
+      #- 111 # Monk Trap Evasion, Fast Trap Detection, Trap Recovery - i.e. all at once
+    location:
+      github_user: mleduque
+      repository: kjeron_Trap_Overhaul
+      tag: v0.20
+  - name: enchant
+    description: "Dee's 'Enchant the Missile Launchers: A Small Ranged Weapon Tweak'"
+    original_thread: https://forums.beamdog.com/discussion/58374/enchant-the-missile-launchers-ranged-weapon-tweak
+    original_dl: https://us.v-cdn.net/5019558/uploads/editor/hc/n0q8dnnbhnsc.zip
+    components:
+      #- 0  # Enchant the Missile Launchers
+    location:
+      github_user: mleduque
+      repository: dee_enchant
+      tag: v1
+  - name: PPE
+    description: Portraits, Portraits Everywhere
+    components:
+      - 0   # Portraits Portraits Everywhere (PPE) - Composant principal
+      - 100 # Categorie de portraits (Recommande) -> Sequenced
+      - 10  # Utiliser les portraits d'Isandir pour le CHARNAME
+      - 20  # Replacer les portraits en basse qualite de TOB & SOA
+      - 302 # Change Imoen portraits -> BG2 Portrait
+      - 312 # Change Viconia portraits -> BG2 Portrait
+      - 322 # Change Jaheira portraits -> BG2 Portrait
+      - 332 # Change Minsc portraits -> BG2 Portrait
+      - 342 # Change Edwin portraits -> BG2 Portrait
+      - 30  # Ust Natha Drow NPCs
+      - 40  # Vampire NPCs
+    location:
+      #github_user: DaftHunk # canonical:smeagolheart
+      github_user: mleduque
+      repository: Portraits-Portraits-Everywhere
+      branch: npc-fixes
+  - name: thepicturestandard
+    components:
+      - 1500 # Main -> Lore Alternative
+      - 2000 # Followers -> Vanilla
+      - 3500 # BG1NPC -> Lore Alternative
+      - 4500 # Dark Horizons -> Lore Alternative
+      - 5500 # Drizzt Saga -> Lore Alternative
+      - 6500 # Dark Side of the Sword Coast -> Lore Alternative
+      - 7000 # Eilistraee's Song -> Vanilla
+      - 8000 # Innershade -> Vanilla
+      - 9000 # I Shall Never Forget -> Vanilla
+      - 10500 # Rogue Rebalancing -> Lore Alternative
+      - 11500 # Sellswords -> Lore Alternative
+      - 12000 # Tales Of The Deep Gardens -> Vanilla
+      - 14000 # Finch -> Vanilla
+      - 15000 # Gavin -> Vanilla
+      - 16000 # Indira
+      - 17000 # Isra
+      - 18000 # Valerie
+      - 19000 # The White Queen -> Vanilla
+      - 20000 # The Darkest Day -> Vanilla
+      - 21000 # Tower of Deception
+      - 22000 # Siege of Dragonspear -> Vanilla
+      - 80300 # Standardized Edwin -> BG2 Edwin
+      - 81100 # Standardized Iomen -> BG2 Iomen
+      - 82300 # Standardized Jaheira -> BG2 Jaheira
+      - 83500 # Standardized Minsc -> BG2 Minsc
+      - 84100 # Standardized Viconia -> BG2 Viconia
+    location:
+      github_user: mleduque
+      repository: thepicturestandard
+      branch: master
+  - name: A7-ConvenientEENPCs
+    description: Convenient Enhanced Edition NPCs
+    components:
+      - 3   # Modifier les NPJ des Editions Ameliorees -> Decider pour chaque PNJ
+      - 201 # Modification selective : Baeloth -> Rendre Baeloth passif
+      - 203 # Modification selective : Hexxat -> Rendre Hexxat passive
+      - 205 # Modification selective : Rasaad -> Rendre Rasaad passif
+      - 410 # Changer le portrait de Dorn -> Graphisme de BG2
+      - 430 # Changer le portrait de Neera -> Graphisme de BG2
+      - 440 # Changer le portrait de Rasaad -> Graphisme de BG2
+      - 450 # Portrait ameliore pour Wilson
+      - 542 # Modifier la classe et le profil de Neera -> Ensorceleur du Chaos
+    location:
+      github_user: Argent77
+      repository: A7-NoEENPCs
+      release: v4.3
+      asset: A7-ConvenientEENPCs-v4.3.iemod
+  - name: S9BGEENPCTweaks
+    description: S9 BGEENPC Tweaks for BGEE / SOD / BG2EE / EET
+    comment: >
+      OP https://forums.beamdog.com/discussion/58941/mod-bgeenpc-tweaks-for-bgee-sod-bg2ee-eet
+      original download https://us.v-cdn.net/5019558/uploads/editor/sd/k7icmh3du8p3.zip
+    components:
+      - 30 # Convenient NPCs
+      - 42 # Make Dynaheir a Sorcerer
+      - 44 # Make Faldorn an Avenger
+      #- 45 # Make Garrick a Skald
+      - 48 # Make Kivan an Archer
+      - 49 # Make Safana a Swashbuckler
+      - 50 # Shar-Teel's Class -> Make Shar-Teel a Berserker
+      - 52 # Make Skie a Shadowdancer
+      - 60 # Dual Class Friendly Stats for Branwen, Dynaheir, Safana and Xzar
+    location:
+      github_user: mleduque
+      repository: s9-S9BGEENPCTWEAKS
+      branch: master
+  - name : RelieveWizardSlayer
+    components:
+      - 0 # Relieve Wizard Slayer
+      - 1 # Valygar, the Wizard Slayer
+    location:
+      github_user: Raduziel
+      repository: Relieve-Wizard-Slayer
+      tag: "1.7"
+  - name: npckit
+    components: #[30, 31, 400, 410, 900, 1415, 2100, 2200, 2300, 2500, 2800]
+      #- 30 # Improved Specialist Mage Descriptions
+      - 31 # replace berserker with battlerager for dwarves
+      - 400 # Anomen Gains Helm Kit on Passing Knighthood Test
+      #- 410 # Anomen Gains Berserker Kit on Failing Knighthood Test
+      #- 420 # Prevent CN Anomen Gaining a Holy Symbol
+      - 900 # Add Red Wizard to Edwin's Kit Description
+      #- 1400 # Give Imoen Adventurer Kit
+      #- 1410 # Give Imoen a Mage Kit -> abjurer
+      #- 1411 # Give Imoen a Mage Kit -> conjurer
+      #- 1412 # Give Imoen a Mage Kit -> diviner
+      #- 1413 # Give Imoen a Mage Kit -> enchanter
+      #- 1414 # Give Imoen a Mage Kit -> illusionist
+      #- 1415 # Give Imoen a Mage Kit -> invoker
+      #- 1416 # Give Imoen a Mage Kit -> necromancer
+      #- 1417 # Give Imoen a Mage Kit -> transmuter
+      - 2100 # Change Korgan's Kit to Battlerager
+      - 2200 # Give Mazzy a Proper Truesword of Arvoreen Kit
+      - 2300 # Change Minsc's Title to Rashemaar Ranger
+      - 2500 # Give Nalia Adventurer Kit
+      #- 1410 # Give Nalia a Mage Kit -> abjurer
+      #- 1411 # Give Nalia a Mage Kit -> conjurer
+      #- 1412 # Give Nalia a Mage Kit -> diviner
+      #- 1413 # Give Nalia a Mage Kit -> enchanter
+      #- 1414 # Give Nalia a Mage Kit -> illusionist
+      #- 1415 # Give Nalia a Mage Kit -> invoker
+      #- 1416 # Give Nalia a Mage Kit -> necromancer
+      #- 1417 # Give Nalia a Mage Kit -> transmuter
+      - 2800 # Give Sarevok a Proper Deathbringer Kit
+    location:
+      path: /home/mick/Games/modda-cache/static/lin-npckit-v5.tar.gz
+  - name: npc_ee
+    components:
+    location:
+      github_user: UnearthedArcana
+      repository: NPC_EE
+      tag: "5.1.4-fr"
+  - name: cowledmenace
+    components:
+      - 1000 # Main Component - The Cowled Menace
+      - 2100 # Appropriate Items for High-Level Spellcasters
+      - 3000 # Mages cast Gate far from themselves, so they don't end up fighting their own summoned demon
+    location:
+      github_user: Gibberlings3
+      repository: CowledMenace
+      release: "0.2.1"
+      asset: lin-cowledmenace-v0.2.1.BETA.zip
+
+  #########
+  # EET_end
+  #########
+  - name: EET_end
+    components:
+      - 0 # Standard installation
+    location:
+      github_user: Gibberlings3
+      repository: EET
+      tag: v13.4
+  - name: normalize_kit_table_cols
+    description: SCS refusess to process some tables, normalize them before
+    components:
+      - 0 # Make Kit Ability Tables Uniform
+    location:
+      github_user: subtledoctor
+      repository: SubtleD_hotfixes
+      tag: v17
+
+  #########
+  # SCS
+  #########
+  - name: stratagems
+    description: Sword Coast Stratagems - p1
+    components:
+      - 3505 # Plus vaste selection de parchemins aleatoires
+      - 3580 # Les sorts de Restauration majeure et de Restitution mineure restaurent egalement les absorptions de capacites
+      - 4000 # Ours plus rapides
+      - 4030 # Metamorphose amelioree
+      - 4050 # Reduit la vitesse a laquelle la reputation augmente -> La reputation augmente au 2/3 de sa vitesse normale
+      - 4115 # Les roublards attribuent leurs points de competence par multiples de cinq
+      - 4145 # Passe les sections tutoriel de Chateau-Suif -> Retire les PNJ tutoriel de Chateau-Suif
+      - 4150 # Permettre aux Mages Cagoules de deceler le lancement de sorts a l'interieur, dans les zones au niveau du sol, a Athkatla
+      - 4164 # Augmenter le prix de la licence pour pratiquer la magie a Athkatla -> La licence coute 50.000 po
+      - 4173 # Augmenter le prix demande par Gaelan Bayle -> Gaelan veut 100.000 pieces d'or
+      - 4215 # Retirer les objets exagerement opportuns de certaines regions
+      - 5000 # IA du groupe plus simple
+      - 5080 # Amelioration des cinematiques de chapitre de l'extension Tales of the Sword Coast
+      - 5900 # Initialise les composants de l'IA (requis pour les composants tactiques et d'IA)
+    location:
+      github_user: mleduque
+      repository: SwordCoastStratagems
+      branch: run/34.3/2022-04-01
+      patch:
+        relative: patches/scs-item-nerf-config.diff
+  - name: stratagems
+    description: Sword Coast Stratagems - p2
+    components:
+      - 6000 # IA generale plus efficace
+      - 6010 # Meilleurs appels a l'aide
+      - 6030 # Mages plus intelligents
+      - 6040 # Pretres plus intelligents
+      - 6200 # Araignees ameliorees
+      - 6300 # Sirenes et dryades plus intelligentes
+      - 6310 # Vers charognards legerement plus intelligents
+      - 6320 # Basilics plus intelligents
+      - 6500 # Golems ameliores
+      - 6510 # Demons et celestes ameliores
+      - 6520 # Genies plus intelligents
+  - name: stratagems
+    description: Sword Coast Stratagems - p3
+    components:
+      - 6540 # Dragons plus intelligents
+      - 6550 # Spectateurs plus intelligents
+      - 6560 # Flagelleurs mentaux plus intelligents
+      - 6570 # Githyankis plus intelligents
+      - 6580 # Vampires ameliores
+      - 6590 # Boss de fin de ToB plus intelligent
+      - 6800 # Illasera plus intelligente
+      - 6810 # Gromnir plus intelligent
+      - 6820 # Yaga-Shura plus intelligent
+      - 6830 # Abazigal plus intelligent
+      - 6840 # Les versions Ascension de Irenicus et Sendai utilisent les capacites et l'IA de SCS
+      - 6850 # Donner aux demons les scripts et capacites d'Ascension
+      - 7000 # Dopplegangers ameliores
+  - name: stratagems
+    description: Sword Coast Stratagems - p4
+    components:
+      - 7010 # Gardes des Griffes Noires et du Trone de Fer plus coriaces
+      - 7020 # Deploiements des groupes d'assassins ameliores
+      - 7030 # Kobolds ameliores
+      - 7040 # Chasseurs de primes deplaces
+      - 7050 # Ulcaster ameliore
+      - 7060 # Ile de Balduran amelioree
+      - 7070 # Tour de Durlag amelioree
+      - 7090 # Druides de Bois-Manteau ameliores
+      - 7110 # Groupe de Drasus ameliore
+      - 7130 # Mages Rouges ameliores
+      - 7140 # Assassins d'Ombre-ville ameliore
+  - name: stratagems
+    description: Sword Coast Stratagems - p5
+    components:
+      - 7150 # Carsa and Kahrk
+      - 7200 # Combat de fin du chapitre deux plus difficile
+      - 7210 # Combat de fin du chapitre trois plus difficile
+      - 7220 # Combat de fin du chapitre quatre plus difficile
+      - 7230 # Combat de fin du chapitre cinq plus difficile
+      - 7250 # Combat final ameliore
+      - 7900 # Rencontres mineures ameliorees
+      - 8000 # Rendre le debut du donjon d'Irenicus legerement plus difficile
+      - 8020 # Les demi-liches lancent des sortileges
+      - 8040 # Ajuster la difficulte des regroupements de monstres en fonction du curseur de difficulte
+      - 8050 # Rencontres aleatoires ameliorees
+      - 8060 # Chateau de'Arnise ameliore (inspire du mod Tactics)
+      - 8070 # Oeil aveugle ameliore
+      - 8080 # Bodhi amelioree
+  - name: stratagems
+    description: Sword Coast Stratagems - p6
+    components:
+      - 8085 # La version Ascension de Bodhi utilise les capacites ameliorees de Bodhi
+      - 8090 # Les objets des membres du groupe leur sont enleves a Spellhold
+      - 8100 # Combat contre Irenicus a l'Asile ameliore
+      - 8110 # Sahuagins ameliores
+      - 8120 # Antre des spectateurs amelioree
+      - 8130 # Reequilibrage de la regeneration des trolls
+      - 8140 # Drows ameliores
+      - 8150 # Tour de Garde amelioree
+      - 8160 # Temple des geants de feu ameliore
+      - 8170 # Enclave de Sendai amelioree
+      - 8190 # Rencontres mineures ameliorees
+  - name: stratagems
+    description: Sword Coast Stratagems - potions (warns)
+    components:
+      - 6100 # Potions pour PNJ
+    ignore_warnings: true
+
+  #########
+  # Final Tweaks
+  #########
+  - name: "butchery"
+    components: #components installé avant SCS, deuxèmeliste pour après SCS
+      #- 10 #
+      #- 11 #
+      #- 12 #
+      #- 21 #
+      #- 22 #
+      #- 32 #
+      #- 40 #
+  - name: jimfix
+    description: Fixes and convenience tweaks aimed at an Ascension + SCS v33 install
+    components:
+      - 300 # Add expiration notifications for buffs
+      - 600 # Add expiration notifications for item buffs
+      - 700 # Make Spell Shield block Wish Breach and Mordenkainen's Disjunction
+    location:
+      github_user: Banananaut
+      repository: Jimfix
+      release: v3.1a
+      asset: jimfix-v3.1a.iemod
+  - name: atweaks
+    components: # 120 probably already done by iwdificagtion?
+      - 100 # Restaurer l'infravision innee des personnages demi-orques
+      - 101 # Empecher les morts-vivants squelettiques et desincarnes d'etre affectes par les attaques illithids devorant le cerveau
+      - 115 # Autoriser les mages a retranscrire des sorts memorises sur des parchemins -> Les parchemins peuvent etre retranscrits partout depuis le livre de sorts
+      - 120 # Retablir l'immunite naturelle des paladins aux maladies
+      - 125 # L'Empathie animale des rodeurs s'ameliore avec l'experience
+      - 130 # Caracteristiques raciales supplementaires pour les nains
+      - 140 # Caracteristiques raciales supplementaires pour les gnomes
+      - 180 # Mephites version papier
+      - 185 # Creatures feeriques version papier
+      - 186 # Sort Appel des creatures des bois revise
+      - 190 # Elementaires version papier
+      - 191 # Augmenter le nombre de DV des princes elementaires
+      - 200 # Permettre a Breche de dissiper les effets de Peau de Pierre conferes par des objets
+      - 201 # Incantation immediate pour les capacites innees du guerrier
+      - 202 # Pouvoirs de Bhaal revises -> Ameliorer les pouvoirs de Bhaal et standardiser leur temps d'incantation
+      - 218 # Recuperer les pouvoirs de Bhaal dans ToB
+      - 203 # Rendre la metamorphose druidique impossible a interrompre
+      - 210 # Restaurer la vulnerabilite a la Dissipation de la Magie des Nishruu et Hakeashar
+      - 212 # Rendre les sorts de detection des alignements plus precis
+      - 213 # Tables des bonus aux jets de sauvegardes etendus pour les nains, les gnomes et les halfelins
+      - 270 # Recompenses de quetes impartiales
+      - 220 # Script simple du voleur
+      - 230 # Script simple du Barde (chante Chant du Barde quand inactif)
+      - 239 # Script simple pour clerc/paladin
+      - 300 # Utiliser l'animation de Porte Dimensionnelle issue d'Icewind Dale -> Rythme d'animation eleve (equivalent a IWD)
+      - 301 # Changer l'apparence de l'armure de Valygar
+      #- 302 # Changer l'apparence de la Robe de Vecna -> item_rev removes it
+      - 310 # Coloration distinctive des creatures
+      - 315 # Jeux de sons de crÃ©atures distincts
+      - 500 # Capacite de stockage des contenants legerement etendue -> Utiliser la capacite de stockage recommandee (999)
+      - 510 # Services etendus des temples
+      - 999 # Icones du style de BG2 pour le contenu d'aTweaks
+    location:
+      # github_user: TotoR115
+      # commit: 00c1388
+      github_user: CamDawg # canonical version: FredrikLindgren/aTweaks
+      repository: aTweaks
+      commit: fa70698
+  - name: skills-and-abilities
+    components:
+    location:
+      github_user: Gibberlings3
+      repository: Skills-and-Abilities
+      release: 0.6.2-alpha
+      asset: lin-skills-and-abilities-v0.6.2-alpha.zip
+      patch:
+        relative: patches/skills-and-abilities-prof-points.diff
+  - name: tnt
+    description: Tweaks and Tricks mod for Baldur's Gate 2
+    components: # avoid 34 (d5 random tweaks instead)
+      #- 0  # Smarter familiars
+      #- 1  # More resilient familiars
+      #- 2  # Improved trap detection: instant detection
+      #- 3  # Improved trap detection: increase trap sense range
+      #- 5  # Trap reminders -> generic
+      #- 6  # Trap intuition -> not in combat
+      #- 9  # Trap intuition: pause game -> all traps
+      #- 11 # Trap intuition: center screen -> on the character
+      #- 13 # Trap intuition: play "trap found" sound
+      #- 14 # Improved trap detection: core (REQUIRED for any of previous traps components to work
+      #- 24 # Hassle-free ammo
+      #- 27 # Throwing weapons damage type -> Both of the above options
+      #- 29 # Sensible Cloak of Mirroring
+      #- 33 # Potion of Really Mirrored Eyes
+      #- 34 # Unlimited goodberries stacking
+      #- 35 # Improved Shandalar's cloak
+      #- 37 # Improved Equalizer
+      #- 38 # Distinct color for Perdue's sword
+      #- 39 # Working protection from poison
+      #- 41 # Spider form ignores web
+      #- 44 # Cheesy Slayer: reputation -> reduced loss
+      #- 46 # Sensible Otiluke's Resilient Sphere
+      #- 47 # Greater Command AoE
+      #- 48 # Working Non-Detection
+      #- 52 # Sensible Blade spins
+      #- 65 # Improved strongholds
+      #- 67 # More map notes
+      #- 69 # Mod romance cheats
+      #- 74 # Starting bags -> Starting bags
+    location:
+      github_user: BGforgeNet
+      repository: bg2-tweaks-and-tricks
+      release: v8.19
+      asset: tweaks-and-tricks-v8.19.iemod
+  - name: mih_metamod
+    description: fixes for toher mods (bg1areie, askavar)
+    components: ~
+    location:
+      github_user: AngelGryph
+      repository: MadeIn_Heaven_Meta-Mod
+      branch: main
+  - name: polytweaks
+    components: ~ # exclude trolls
+    location:
+      github_user: mleduque
+      repository: polytope_polytweaks
+      tag: v2.0
+  - name: zgtweaks
+    components:
+      - 10 # one arcane scroll on the level of the highest arcane level memorized
+      - 11 # one arcane scroll up to the level of the highest arcane level memorized
+      - 12 # one arcane scroll on the level above 4 of the highest arcane level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive level 2 scroll etc.)
+      - 13 # one arcane scroll up to the level above 4 of the highest arcane level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive up to level 2 scroll etc.)
+      - 20 # one arcane scroll on the level of the highest divine level memorized
+      #- 21 # one arcane scroll up to the level of the highest divine level memorized
+      #- 22 # one arcane scroll on the level above 4 of the highest divine level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive level 2 scroll etc.)
+      - 23 # one arcane scroll up to the level above 4 of the highest divine level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive up to level 2 scroll etc.)
+    location:
+      github_user: GraionDilach
+      repository: RandomGraionTweaks
+      release: version-1.1
+      asset: random-graion-tweaks-1.1.iemod
+  - name: jtweaks
+    components: ~
+    location:
+      github_user: mleduque
+      repository: jmerry_jtweaks
+      tag: v2.2
+  - name: HouseTweaks
+    description: House Rule TweakPack
+    comment: put before tb_tweaks cCON component so regen is changed (house) and the rest comes from tb_tweaks
+    components:
+      - 5  # House Tweaks: Increased Constitution Bonuses
+  - name: tb#tweaks
+    components:
+      ## probably
+      # Covenient Wish
+      # maybe faster romances?
+      # WSPATCK for all?
+      # stat training?
+      # 3e stats?
+      # Mages drop spellbooks -> nope, zgtweaksdrop scrolls
+    location:
+      github_user: vbigiani
+      repository: tb-tweaks
+      branch: master
+  - name: cd_appraiser
+    components: [ 0 ]
+    location:
+      github_user: Gibberlings3
+      repository: Bardic_Appraisal
+      release: v2
+      asset: bardic-appraisal-v2.iemod
+  - name: DUAL_TO_KIT
+    description: "Kjeron's 'Dual to Kit'"
+    original_thread: https://forums.beamdog.com/discussion/comment/985679#Comment_985679
+    original_dl: https://us.v-cdn.net/5019558/uploads/editor/m1/4sxyexv1ptj0.zip
+    components:
+      - 0 # DUAL_TO_KIT_MENU -> Enable Dualclassing into Kits
+      - 1 # Grant second-class Specialists their Bonus Spell Slots
+      - 2 # Grant second-class Kits their Proper Proficiency Selection
+    location:
+      github_user: mleduque
+      repository: kjeron_DUAL_TO_KIT
+      tag: V0.34
+  - name: better_spell_visuals
+    components: ~
+    location:
+      github_user: Gibberlings3
+      repository: Better-Spell-Visuals
+      commit: 1a73272
+  - name: 35thac0
+    components: [0]
+    location:
+      github_user: mleduque
+      repository: ie-mods-35
+      branch: main
+  - name: PathfinderHitDice
+    components: [0]
+    location:
+      github_user: mleduque
+      repository: ie-mods-35
+      branch: main
+  - name: sorc_tweak
+    components:
+      - 2 # Augmente le nombre de sorts connus de un partout (sauf là où il est nul) mais poursuit un peu la progression
+    location:
+      github_user: mleduque
+      repository: sorc_tweak
+      commit: 6c54023ed64
+  - name: late_fixes
+    components:
+      - 10 # Maze Leaving Permanent Effects on Characters
+    location:
+      github_user: mleduque
+      repository: late_fixes
+      commit: c293d6f
+
+
+  ## portraits
+  - name: PortraitsFromIWD2
+    components:
+    location:
+      github_user: Ineth2
+      repository: PortraitsFromIWD2
+      tag: v01
+  - name: iwd_portrait_variations
+    components:
+    location:
+      github_user: Ineth2
+      repository: iwd_portrait_variations
+      tag: v1.3

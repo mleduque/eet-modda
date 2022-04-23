@@ -5,6 +5,12 @@ global:
   lang_dir: "fr_FR"
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
 modules:
+  - name: eefixpack
+    components:
+    location:
+      github_user: Gibberlings3
+      repository: EE_Fixpack
+      commit: f9906c2-update-it
   - name: correctfrbg2ee
     components:
       - 10

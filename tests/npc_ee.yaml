@@ -1,0 +1,22 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  lang_dir: "fr_FR"
+  #lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+  lang_preferences: ["#rx#^english", "american english" ]
+modules:
+  - name: cdtweaks
+    description: Tweaks Anthology - change proficiencies
+    components:
+    - 2163 # Modifier le systeme des competences martiales -> Competences style IWD, avec les styles de combat
+    location:
+      github_user: Gibberlings3
+      repository: Tweaks-Anthology
+      release: v14
+      asset: lin-cdtweaks-v14.tar.gz
+  - name: npc_ee
+    components:
+    location:
+      github_user: mleduque
+      repository: NPC_EE
+      branch: "5.1.4-fr"

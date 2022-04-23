@@ -1,0 +1,21 @@
+--- stratagems/stratagems.ini
++++ stratagems/stratagems.ini
+@@ -41,12 +41,12 @@ no_initial_change_nature_beauty_blindness=0
+ 
+ no_item_nerf_balduran_shield=1
+ no_item_nerf_magi_staff=0
+-no_item_nerf_mirror_cloak = 0
+-no_item_nerf_carsomyr = 0
+-no_item_nerf_resurrection_rod = 0
+-no_item_nerf_vhailor_helm = 0
+-no_item_nerf_vecna = 0
+-no_initial_change_elemental_arrows = 0
++no_item_nerf_mirror_cloak = 1
++no_item_nerf_carsomyr = 1
++no_item_nerf_resurrection_rod = 1
++no_item_nerf_vhailor_helm = 1
++no_item_nerf_vecna = 1
++no_initial_change_elemental_arrows = 1
+ 
+ [component tweaks]
+ 

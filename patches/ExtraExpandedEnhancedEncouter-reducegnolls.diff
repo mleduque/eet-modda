@@ -219,3 +219,10 @@
      CreateCreature("OLGNOLLE",[606.67],E)
      CreateCreature("OLGNOLLV",[184.65],E)
      CreateCreature("OLGNOLLE",[600.120],E)
+--- ExtraExpandedEnhancedEncounters/ini/ol_eeee.ini
++++ ExtraExpandedEnhancedEncounters/ini/ol_eeee.ini
+@@ -1,3 +1,3 @@
+ // Set to 0 if you don't want EEEE to patch the Magma Bulwark's icon.
+ 
+-OUTER_SET ol_magma_bulwark_icon = 1
++OUTER_SET ol_magma_bulwark_icon = 0

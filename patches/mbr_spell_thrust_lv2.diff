@@ -1,0 +1,10 @@
+--- Magic_Battles_Revised/MBR_settings.ini
++++ Magic_Battles_Revised/MBR_settings.ini
+@@ -11,7 +11,7 @@
+   OUTER_SET  greater_deflection_levels_blocked      =  20
+   OUTER_SET  shield_of_the_archons_levels_blocked   =  30
+ 
+-  OUTER_SET  spell_thrust_level                =       3
++  OUTER_SET  spell_thrust_level                =       2
+ 
+   OUTER_SET  spell_attack_delay                =       0

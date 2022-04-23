@@ -37,6 +37,12 @@ modules:
       - 5000 # IA du groupe plus simple
       - 5080 # Amelioration des cinematiques de chapitre de l'extension Tales of the Sword Coast
       - 5900 # Initialise les composants de l'IA (requis pour les composants tactiques et d'IA)
+    location:
+      github_user: mleduque
+      repository: SwordCoastStratagems
+      branch: run/34.3/2022-04-01
+      patch:
+        relative: patches/scs-item-nerf-config.diff
   - name: stratagems
     description: Sword Coast Stratagems - p2
     components:
@@ -117,7 +123,7 @@ modules:
     components:
       - 6100 # Potions pour PNJ
     ignore_warnings: true
-  - name: "butchery"
+  - name: butchery
     description: butchery components that must be installed after SCS
     components:
       #- 44 #
@@ -180,8 +186,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Skills-and-Abilities
-      release: 0.3-alpha
-      asset: skills-and-abilities-v0.3-alpha.iemod
+      release: 0.6.2-alpha
+      asset: lin-skills-and-abilities-v0.6.2-alpha.zip
       patch:
         relative: patches/skills-and-abilities-prof-points.diff
   - name: tnt
@@ -219,9 +225,10 @@ modules:
     location:
       github_user: BGforgeNet
       repository: bg2-tweaks-and-tricks
-      release: v8.14
-      asset: tweaks-and-tricks-v8.14.iemod
+      release: v8.19
+      asset: tweaks-and-tricks-v8.19.iemod
   - name: mih_metamod
+    description: fixes for toher mods (bg1areie, askavar)
     components: ~
     location:
       github_user: AngelGryph
@@ -260,6 +267,11 @@ modules:
       github_user: mleduque
       repository: jmerry_jtweaks
       tag: v2.2
+  - name: HouseTweaks
+    description: House Rule TweakPack
+    comment: put before tb_tweaks cCON component so regen is changed (house) and the rest comes from tb_tweaks
+    components:
+      - 5  # House Tweaks: Increased Constitution Bonuses
   - name: tb#tweaks
     components:
       ## probably
@@ -268,7 +280,7 @@ modules:
       # WSPATCK for all?
       # stat training?
       # 3e stats?
-      # Mages drop spellbooks
+      # Mages drop spellbooks -> nope, zgtweaksdrop scrolls
     location:
       github_user: vbigiani
       repository: tb-tweaks
@@ -281,6 +293,38 @@ modules:
       github_user: mleduque
       repository: ac_misc_tweaks
       tag: v1.21
+  - name: cd_appraiser
+    components: [ 0 ]
+    location:
+      github_user: Gibberlings3
+      repository: Bardic_Appraisal
+      release: v2
+      asset: bardic-appraisal-v2.iemod
+  - name: DUAL_TO_KIT
+    description: "Kjeron's 'Dual to Kit'"
+    original_thread: https://forums.beamdog.com/discussion/comment/985679#Comment_985679
+    original_dl: https://us.v-cdn.net/5019558/uploads/editor/m1/4sxyexv1ptj0.zip
+    components:
+      - 0 # DUAL_TO_KIT_MENU -> Enable Dualclassing into Kits
+      - 1 # Grant second-class Specialists their Bonus Spell Slots
+      - 2 # Grant second-class Kits their Proper Proficiency Selection
+    location:
+      github_user: mleduque
+      repository: kjeron_DUAL_TO_KIT
+      tag: V0.34
+  - name: ee_cosmetic_enhancements
+    components: ~
+    location:
+      github_user: DaerosTrollkiller
+      repository: EE_Cosmetic_Item_Enhancement
+      release: v1.0.1
+      asset: EE_Cosmetic_Item_Enhancement.zip
+  - name: better_spell_visuals
+    components: ~
+    location:
+      github_user: Gibberlings3
+      repository: Better-Spell-Visuals
+      commit: 1a73272
   - name: 35thac0
     components: [0]
     location:
@@ -293,33 +337,13 @@ modules:
       github_user: mleduque
       repository: ie-mods-35
       branch: main
-  - name: cd_appraiser
-    components: [ 0 ]
-    location:
-      github_user: Gibberlings3
-      repository: Bardic_Appraisal
-      release: v2
-      asset: bardic-appraisal-v2.iemod
-  - name: DUAL_TO_KIT
-    description: "Kjeron's 'Dual to Kit'"
-    comment: >
-              OP https://forums.beamdog.com/discussion/comment/985679#Comment_985679
-              original DL https://us.v-cdn.net/5019558/uploads/editor/m1/4sxyexv1ptj0.zip
-    components:
-      - 0 # DUAL_TO_KIT_MENU -> Enable Dualclassing into Kits
-      - 1 # Grant second-class Specialists their Bonus Spell Slots
-      - 2 # Grant second-class Kits their Proper Proficiency Selection
-    location:
-      github_user: mleduque
-      repository: kjeron_DUAL_TO_KIT
-      branch: master
   - name: sorc_tweak
     components:
-      - 2
+      - 2 # Augmente le nombre de sorts connus de un partout (sauf là où il est nul) mais poursuit un peu la progression
     location:
       github_user: mleduque
       repository: sorc_tweak
-      branch: master
+      commit: 6c54023ed64
   - name: zg_iwd_voices
     description: Icewind Dale Voice Pack for EE 2.6+
     components: ~
@@ -336,15 +360,27 @@ modules:
       repository: Baldurs-Gate-II-Voice-Pack-for-EE-2.6
       release: version-1.0.0
       asset: zg-bg2-voices-1.0.0.iemod
-  - name: ee_cosmetic_enhancements
-    components: ~
+  - name: late_fixes
+    components:
+      - 10 # Maze Leaving Permanent Effects on Characters
     location:
-      github_user: DaerosTrollkiller
-      repository: EE_Cosmetic_Item_Enhancement
-      branch: master
-  - name: better_spell_visuals
-    components: ~
+      github_user: mleduque
+      repository: late_fixes
+      commit: c293d6f
+  - name: HouseTweaks
+    description: House Rule TweakPack
+    components:
+      - 5  # House Tweaks: Increased Constitution Bonuses
+  ## portraits
+  - name: PortraitsFromIWD2
+    components:
     location:
-      github_user: Gibberlings3
-      repository: Better-Spell-Visuals
-      branch: master
+      github_user: Ineth2
+      repository: PortraitsFromIWD2
+      tag: v01
+  - name: iwd_portrait_variations
+    components:
+    location:
+      github_user: Ineth2
+      repository: iwd_portrait_variations
+      tag: v1.3

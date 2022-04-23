@@ -7,19 +7,11 @@ global:
 modules:
   - name: Faiths_and_Powers
     components:
-      - 21 # Créer un système de sphères -> FnP : le système de sphères original de Faiths & Powers: 0.81.2
-      - 31 # Installer les kits de clerc: 0.81.2
-      - 33 # Installer les kits de druide: 0.81.2
-      - 35 # Installer les kts de paladin: 0.81.2
-      - 37 # Installer les kits de rôdeur: 0.81.2
-      - 75 # Modifier l'utilisabilité des armes et les compétences d'armes des prêtres: 0.81.2
-      - 80 # Appliquer le système de sphères: 0.81.2
-      - 85 # Appliquer les kits de FnP aux PNJ: 0.81.2
-    ignore_warnings: true # all except 31 emit no effect changed/added
+    #ignore_warnings: true # all except 31 emit no effect changed/added
     location:
       github_user: mleduque
       repository: Faiths_and_Powers
-      branch: clean-up-unused #0.81.8-fr
+      branch: 0.83.4-fr
       layout:
           layout_type: multi_dir
           dirs:

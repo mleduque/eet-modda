@@ -24,23 +24,24 @@ modules:
     version:
     location: { github_user: Pocket-Plane-Group, repository: bg1ub, release: v16.4,
                 asset: bg1-unfinished-business-v16.4.zip }
-    components:
-      - 0  # Ice Island Level Two Restoration
-      - 11 # Scar and the Sashenstar's Daughter
-      - 12 # Quoningar, the Cleric
-      - 13 # Shilo Chen and the Ogre-Magi
-      - 14 # Edie, the Merchant League Applicant
-      - 16 # Creature Corrections
-      - 17 # Creature Restorations
-      - 18 # Creature Name Restorations
-      - 19 # Minor Dialogue Restorations
-      - 21 # Store, Tavern and Inn Fixes and Restorations
-      - 22 # Item Corrections and Restorations
-      - 29 # Duke Eltan in the Harbor Master's Building
-      - 30 # Nim Furlwing Encounter
-      - 32 # Svlast, the Fallen Paladin Encounter
-      - 33 # Mal-Kalen, the Ulcaster Ghost
-      - 34  # Chapter 6 Dialogue Restorations
+    components: [
+      0,  # Ice Island Level Two Restoration
+      11, # Scar and the Sashenstar's Daughter
+      12, # Quoningar, the Cleric
+      13, # Shilo Chen and the Ogre-Magi
+      14, # Edie, the Merchant League Applicant
+      16, # Creature Corrections
+      17, # Creature Restorations
+      18, # Creature Name Restorations
+      19, # Minor Dialogue Restorations
+      21, # Store, Tavern and Inn Fixes and Restorations
+      22, # Item Corrections and Restorations
+      29, # Duke Eltan in the Harbor Master's Building
+      30, # Nim Furlwing Encounter
+      32, # Svlast, the Fallen Paladin Encounter
+      33, # Mal-Kalen, the Ulcaster Ghost
+      34  # Chapter 6 Dialogue Restorations
+    ]
   - name: BG1Aerie
     version: 1.1-fr
     components:
@@ -58,7 +59,7 @@ modules:
     location:
       github_user: MattyGroove
       repository: DrizztSaga
-      tag: V3.02
+      tag: V3.03
   - name: soa # The Stone of Askavar
     components: [0]
     version: "2.2"
@@ -66,12 +67,6 @@ modules:
       github_user: mleduque
       repository: redcarnelian_stone_of_askavar
       tag: v2.2
-  - name: saradas_magic
-    components:
-      - 0 # Saradas magic
-    location:
-      http: https://download1325.mediafire.com/9oh1se9asuug/rg5cyypji1om22o/Saradas%2520Magic%2520ENG%2520V_1.1.zip
-      rename: Saradas_Magic_ENG_V_1.1.zip
   - name: Sirene
     components:
       - 0   # Sirene NPC for Baldur's Gate: Enhanced Edition

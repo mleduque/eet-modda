@@ -1,0 +1,207 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: eefixpack
+    components:
+    location:
+      github_user: Gibberlings3
+      repository: EE_Fixpack
+      commit: f9906c2-update-it
+  ## story
+  - name: ub_iwd
+    description: Unfinished Business for Icewind Dale
+    compatibility: "Only Marketh's Ring is available for Icewind Dale: Enhanced Edition (or the EET conversion). The rest of the restorations were included in IWDEE itself."
+    location:
+      github_user: Gibberlings3
+      repository: iwd_unfinished_business
+      release: v9
+      asset: lin-ub_iwd-v9.tar.gz
+  - name: Kuldahar
+    description: The Rediscovery of Kuldahar
+    components:
+    location:
+      path: /home/mick/Games/modda-cache/static-iwd/Kuldahar v1.3.zip
+  - name: willowisp
+    components:
+    location:
+      path: /home/mick/Games/modda-cache/static/Will of the Wisp v2.20.zip
+  - name: BlinkingDead
+    components:
+    location:
+      path: /home/mick/Games/modda-cache/static-iwd/BlinkingDead v2.2.zip
+  - name: OurLady
+    description: Tale of Our Lady Dreamless
+    components:
+    location:
+      path: /home/mick/Games/modda-cache/static-iwd/Tale of Our Lady Dreamless v2.4.zip
+  - name: InnBB
+    description: Below & Below Inn
+    components:
+    location:
+      path: /home/mick/Games/modda-cache/static-iwd/InnBB v2.1.zip
+  - name: Skineater
+    components:
+    location:
+      path: /home/mick/Games/modda-cache/static-iwd/Skineater v2.1.zip
+  ## npc
+  - name: iwdnpc
+    description: 5 npcs with banter, friendship, interjections, romance
+    components:
+    location:
+      github_user: Pocket-Plane-Group
+      repository: IWD_NPC
+  - name: dendjelion
+    description: male halfling blackguard + quest
+    components:
+    location:
+      path: /home/mick/Games/modda-cache/static-iwd/dendjelion v1.2.zip
+  - name: Dusky
+    description: male half-orcish cleric/thief, chaotic neutral; m/m romance
+    components:
+    location:
+      path: /home/mick/Games/modda-cache/static-iwd/Dusky v2.3.2.zip
+  - name: Hommet
+    description: necromancer, chaotic good + dialogues, items, spells
+    components:
+    location:
+      path: /home/mick/Games/modda-cache/static-iwd/Hommet v1.0.zip
+  - name: Ina
+    description: female bard spectre + banter +romance (with female)
+    components:
+    location:
+      path: /home/mick/Games/modda-cache/static-iwd/Ina v2.1.zip
+  - name: Lanna
+    description: elven paladin, quest, talks, romance
+    components:
+    location:
+      path: /home/mick/Games/modda-cache/static-iwd/Lanna v1.3.0.zip
+  - name: OakMaw
+    description: dark fey hunter
+    components:
+    location:
+      path: /home/mick/Games/modda-cache/static-iwd/OakMaw v2.1.zip
+  - name: Orra
+    description: fighter/mage/cleric.woman + friendship
+    components:
+    location:
+      path: /home/mick/Games/modda-cache/static-iwd/Orra v2.1.zip
+  - name: Tipps
+    description: halfling geomantic sorcerer + talks + romance + items
+    components:
+    location:
+      path: /home/mick/Games/modda-cache/static-iwd/Tipps v2.1.zip
+  - name: Tviy
+    description: chaotic evil gnome cleric, follows Urdlen
+    components:
+    location:
+      path: /home/mick/Games/modda-cache/static-iwd/Tviy v2.2.zip
+  - name: Urchin
+    description: urchin(creature) + area=night glade
+    components:
+    location:
+      path: /home/mick/Games/modda-cache/static-iwd/Urchin v2.1.zip
+  - name: Afaaq
+  - name: TuraldNPC
+    description: male dwarf figther/cleric, NG, dialogs, interjections, crossmod
+    components:
+    location:
+      path: /home/mick/Games/modda-cache/static-iwd/TuraldNPC.zip
+  - name: KarihiNPC
+    description: genasi pyromancer + friendship + romance + encounter + spells + crossmod banters support
+    components: ~
+    location:
+      github_user: ArtemiusI
+      repository: KarihiNPC
+      tag: v1.01
+  - name: MinervaNPC
+    components: ~
+    location:
+      github_user: ArtemiusI
+      repository: KarihiNPC
+      tag: v1.1
+  - name: iwdcrossmodpack
+    components: ~
+    location:
+      path: /home/mick/Games/modda-cache/static-iwd/lin-IWDCrossmodPack-v1.4.tar.gz
+  - name: MinorNPCPortraitsforIWDEE
+    components: ~
+    location:
+      path: /home/mick/Games/modda-cache/static-iwd/Setup-MinorNPCPortraitsforIWDEEv1.04.zip
+  ## items- name: FindIt-IWD
+    description: new items
+    components:
+    location:
+  - name: iu_iwd-IWD
+    description: Item Upgrade for Icewind Dale
+    components:
+    location:
+      github_user: Gibberlings3
+      repository: itemupgrade_iwd
+      release: v6
+      asset: lin-iu_iwd-v6.tar.gz
+  - name: ForgeIt-IWD
+    description: new items to create
+    components:
+    location:
+      path: /home/mick/Games/modda-cache/static-iwd/ForgeIt-IWD v1.7.zip
+  - name: msfm
+  ## spells
+  - name: Weasels!
+    components:
+      - 0
+    location:
+      github_user: mleduque
+      repository: lava_weasels
+      branch: v3.3
+  - name: A7-GolemConstruction
+    components:
+    location:
+      github_user: Argent77
+      repository: A7-GolemConstruction
+      branch: devel
+  ## kits
+  - name: k9IWDEEKit
+    home: http://www.shsforums.net/files/file/1099-a-frosty-journey-the-iwdee-kitpack/
+    components: ~
+    location:
+      http: http://www.shsforums.net/files/getdownload/12410-a-frosty-journey-the-iwdee-kitpack/
+  ## tweaks
+  - name: cdtweaks
+  - name: aTweaks
+  - name: S9HouseRules
+    components: ~
+    location:
+      github_user: mleduque
+      repository: S9HouseRules
+      tag: v1.1
+  - name: cd_appraiser
+    components: [ 0 ]
+    location:
+      github_user: Gibberlings3
+      repository: Bardic_Appraisal
+      release: v2
+      asset: bardic-appraisal-v2.iemod
+  - name: House-Rule-Tweaks
+    components: # maybe hpconbon + NPC Soundsets for Icewind Dale
+    location:
+      github_user: ArtemiusI
+      repository: House-Rule-Tweaks
+      branch: master
+  ## portraits
+  - name: PortraitsFromIWD2
+    components:
+    location:
+      github_user: Ineth2
+      repository: PortraitsFromIWD2
+      tag: v01
+  - name: iwd_portrait_variations
+    components:
+    location:
+      github_user: Ineth2
+      repository: iwd_portrait_variations
+      tag: v1.3
+

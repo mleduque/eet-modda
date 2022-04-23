@@ -8,15 +8,15 @@ modules:
   - name: Branwen
     components: [0]
     location:
-      github_user: Jazira33
+      github_user: Pocket-Plane-Group
       repository: Branwen_for_BGII
-      branch: master
+      commit: 95381b1 # pst v7
   - name: Aura_BG1
     components:
     location:
       github_user: ArtemiusI
       repository: Aura_BG1
-      ta: v3.4c
+      tag: v3.4c
       patch:
         relative: patches/aura_bg1-select-artificer.diff
     #prompt for class (1. Artificer)
@@ -33,14 +33,14 @@ modules:
     location:
       github_user: Skitia
       repository: Emily-BG1
-      branch: master
+      tag: v.165
   - name: Helga
     components:
       - 0
     location:
       github_user: Skitia
       repository: Helga-BG1
-      commit: 40f7c22
+      commit: 1a333f3
       patch:
         relative: patches/helga_bg1-defaultportrait-nomusic.diff
   - name: Kale
@@ -48,7 +48,7 @@ modules:
     location:
       github_user: Skitia
       repository: Kale-BG1
-      branch: master
+      commit: 7e427fb
       patch:
         relative: patches/kale_bg1-nomusic.diff
     #prompt for music (2. No)
@@ -57,13 +57,13 @@ modules:
     location:
       github_user: Skitia
       repository: Recorder-BG1
-      branch: master
+      commit: d38ab73
   - name: Vienxay
     components: [0]
     location:
       github_user: Skitia
       repository: Vienxay-BG1
-      branch: master
+      branch: "3808737"
       patch:
         relative: patches/viexnay_bg1-defaultprotrait-nomusic.diff
     #prompt for portrait (1. Default)
@@ -72,16 +72,16 @@ modules:
     location:
       github_user: Skitia
       repository: SkitiaNPCs
-      branch: master
+      commit: a620650
       patch:
         relative: patches/skitia_npc_defaultportraits.diff
     #prompt for portrait (1. Default the 1. Default)
   - name: Petsy
     components: [0, 1]
     location:
-      http: https://downloads.weaselmods.net/download/petsy/?wpdmdl=113&refresh=60f853870c4111626887047
-      rename: Petsy v4.1.zip
+      path: /home/mick/Games/modda-cache/static/Petsy v4.2.zip
   - name: Yvette
+    description: "Colours of Infinity: Yvette Romance"
     components:
       - 0 # Yvette Romance - BG2 Romance Character
     location:
@@ -89,6 +89,7 @@ modules:
       patch:
         relative: patches/yvette-noprompt.diff
   - name: c#greythedog
+    description: Grey the dog
     components: [0]
     location:
       github_user: Gibberlings3
@@ -101,7 +102,7 @@ modules:
     location:
       github_user: Gitjas
       repository: Ascalons_Breagar
-      release: 11.4.0
+      release: "11.4.0"
       asset: ascalons-breagar-11.4.0.iemod
   - name: c#brandock
     description: Brandock the mage
@@ -109,9 +110,11 @@ modules:
     location:
       github_user: Gitjas
       repository: Brandock_the_Mage
-      release: vBeta-15
-      asset: brandock-the-mage-beta_15.iemod
+      release: vBeta-16
+      asset: brandock-the-mage-beta_16.iemod
   - name: btl
+    description: Beyond the Law
+    detailed_description: 2 NPCs, Kova (CG half-elf mage/thief) & Kiyone (LG half-elf archer) + quest
     components: ~
     location:
       github_user: SpellholdStudios
@@ -168,14 +171,17 @@ modules:
       release: v14
       asset: indira-npc-mod-v14.iemod
   - name: Walahnan
-    version: 1.1
     components: [0]
     location:
-      path: /home/mick/Games/modda-cache/static/Walahnan v1.1.zip
+      path: /home/mick/Games/modda-cache/static/Walahnan v1.2.zip
   - name: WalahnanBG2
     components: ~
     location:
       path: /home/mick/Games/modda-cache/static/WalahnanBG2 v0.92.zip
+  - name: WilsonChronicles
+    components: ~
+    location:
+      path: /home/mick/Games/modda-cache/static/Wilson Chronicles v1.9.zip
   - name: gavin
     # will prompt for romance timer
     components:
@@ -362,12 +368,8 @@ modules:
   - name: SkieCost # install late because adds crossmod banters with Yvette & Foundling
     description: "Skie: The Cost of One Girl’s Soul"
     components:
-      - 0 # Skie: The Cost of One Girl's Soul - New quest for Baldur's Gate 2 EE
-      - 1 # Skie: The Cost of One Girl's Soul - Allow Skie to return as a joinable NPC
-      - 2 # Skie: The Cost of One Girl's Soul - Add brand new SoD-oriented items to BG2
     location:
-      http: https://downloads.weaselmods.net/download/skie-the-cost-of-one-girls-soul/?wpdmdl=92&refresh=60ecc65553e471626130005
-      rename: Skie - The Cost of One Girls Soul v3.7.zip
+      path: /home/mick/Games/modda-cache/static/Skie The Cost of One Girls Soul v4.01.zip
   - name: Wings
     components:
       - 0 # Wings - Wings for BG2:EE
@@ -377,10 +379,6 @@ modules:
       github_user: Skitia
       repository: Wings
       tag: v1.02
-  - name: npckit
-    components: #[30, 31, 400, 410, 900, 1415, 2100, 2200, 2300, 2500, 2800]
-    location:
-      path: /home/mick/Games/modda-cache/static/lin-npckit-v5.tar.gz
   - name: npcflirt
     components: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
     location:
@@ -389,25 +387,37 @@ modules:
       release: v1.07
       asset: NPCFlirtV107.zip
   - name: banterpack
-    components: [0, 2]
+    description: Banter Pack _ https://github.com/Pocket-Plane-Group/Banter_Pack#banter-packs
+    components:
+      - 0 # Pack de Dialogues du Pocket Plane Group pour BG2 : SoA
+      - 1 # Installer le script accelerateur de dialogues de SoA
+      - 2 # Pack de Dialogues du Pocket Plane Group pour BG2 : ToB
+      - 3 # Installer le script accelerateur de dialogues de ToB
     location:
       github_user:  Pocket-Plane-Group
       repository: Banter_Pack
       release: v18
       asset: banter-packs-v18.iemod
   - name: iepbanters
-    components: [0, 1, 2, 3, 4, 5, 7]
+    description: IEP Extended Banter - https://github.com/SpellholdStudios/IEP_Extended_Banter#iep-extended-banter
+    components:
+      - 0 # Extended NPC-NPC Interaction SoA
+      - 1 # Extended Minsc/Aerie Interaction ToB
+      - 2 # Imoen "Retrospection" dialogue for BGII: ToB
+      - 3 # Wake-Up dialogue for Anomen Romance
+      - 4 # NPC Conflict Revisions
+      - 5 # Restored Aerie/Jaheira/Anomen interjection in Underdark
+      - 6 # Banter Accelerator -> 10 minutes  -- same as banterpack accelerator, more configurable, overrides
     location:
       github_user: SpellholdStudios
       repository: IEP_Extended_Banter
       release: v5.8
       asset: iep-extended-banters-v5.8.iemod
   - name: willowisp # only banters
+    description: Will'o Wisp - banters
     components: [4] # banters with Sirene, Pai'na, Foundling
-    location:
-      http: https://downloads.weaselmods.net/download/will-of-the-wisps/?wpdmdl=91&refresh=60f1ac3e935bb1626451006
-      rename: willowisp v2.0.zip
   - name: crossmodbg2
+    description: Crossmod Banter Pack
     components:
       - 0 # Crossmod Banter Pack for Shadows of Amn
       - 1 # Crossmod Banter Pack for Throne of Bhaal
@@ -417,21 +427,11 @@ modules:
       repository: Crossmod_Banter_Pack_for_Baldurs_Gate_II
       release: v21
       asset: crossmod-banter-pack-for-baldurs-gate-ii-v21.iemod # tgz truncates some file names
-  - name: c#sodtweaks #[0, 1, 2, 5, 13]
-    components:
-      #- 1  # Ending Independent on PC Replies
-      #- 3  # Do Not Miss NPC-PC Dialogues -> Activate All NPC-PC Dialogues Always
-      #- 5  # More Dialogue Choices & Prevent Dead Ends:
-      #- 6  # Use Imoen's SoD Portrait for BGII in EET & BGT
-      #- 9  # Adjust PC's Starting XP at Beginning of SoD, by subtledoctor -> Set Starting XP to 90,000
-      #- 12 # SoD Ending: jastey's Tweaks -> Revised Full Version # overwrittern by afh if installed
-    location:
-      github_user: Gibberlings3
-      repository: Jasteys_SoD_Tweakpack
-      release: v8.1
-      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v8.1.iemod
   - name: sodrtd
     description: Road To Discovery
+    installation:
+      after: themed_tweaks, sodtweaks, npc&story mods that add dialog in sod
+      before: EET_end
     components:
     location:
       github_user: Gitjas
@@ -474,9 +474,16 @@ modules:
       github_user: RealApxu
       repository: TorturedSoulsLite
       tag: v0.4
-  -name: TS_sime
+  - name: TS_sime
     components:
     location:
       github_user: RealApxu
       repository: TS_Sime
       tag: "0.8"
+  - name:
+    components:
+    location:
+      github_user: Austin-BG
+      repository: SmilingImpCrossBanterMod
+      release: v.1.4
+      asset: smiling-imps-cross-banter-mod-1.4.iemod

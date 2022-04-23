@@ -5,132 +5,21 @@ global:
   lang_dir: "fr_FR"
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
 modules:
-  - name: stratagems
-    description: Sword Coast Stratagems
+  - name: spell_rev
     components:
+      - 0   # Spell Revisions
+      - 10  # Deva and Planetar Animations
+      - 20  # Mirror Image Fix
+      - 30  # Dispel Magic Fix    <- must be before TotLM
+      - 55  # Spell Deflection blocks AoE spells
+      - 60  # Update Spellbooks of Joinable NPCs
+      #- 65   # Revised Warrior HLAs
     location:
-      github_user: Gibberlings3
-      repository: SwordCoastStratagems
-      release: v34.3
-      asset: lin-stratagems-34.3.zip
+      github_user: mleduque
+      repository: SpellRevisions
+      branch: b19-update-fr
       patch:
-        relative: patches/scs-warnings.diff
-    add_conf:
-      file_name: stratagems.ini
-      content: | # no change ATM
-        [Spell system changes]
-
-        no_initial_change_modify_breach = 0
-        no_initial_change_web_and_the_large = 0
-        no_initial_change_elemental_area_immunity = 0
-        no_initial_change_fiend_summoning = 0
-        no_initial_change_bonus_spell_scrolls = 0
-        no_initial_change_freedom_scrolls = 0
-
-        no_initial_change_nerf_greater_restoration = 0
-        no_initial_change_pro_normal_missiles = 0
-        no_initial_change_spellstrike_vs_pm_scroll = 0
-        no_initial_change_antimagic_penetrates_ii = 0
-        no_initial_change_blade_barrier = 0
-        no_initial_change_npc_symbols = 0
-        no_initial_change_power_word_blind = 0
-        no_initial_change_meteors = 0
-        no_initial_change_insect_plague = 0
-        no_initial_change_elemental_summoning = 0
-        no_initial_change_harm = 0
-        no_initial_change_spell_immunity = 0
-        no_initial_change_universal_trigger = 0
-        no_initial_change_truesight_blindness = 0
-        no_initial_change_mantle = 0
-        no_initial_change_skull_trap = 0
-        no_initial_change_clone_slots = 0
-
-        no_initial_change_sanctity_of_mind = 0
-        no_initial_change_rebalance_lathander = 0
-        no_initial_change_circle_of_bones_duration = 0
-        no_initial_change_enhance_thorn_spray = 0
-        no_initial_change_entropy_shield_abjuration = 0
-        no_initial_change_nerf_beetles = 0
-
-        no_initial_change_acid_storm_tonedown = 0
-        no_initial_change_rebalance_force_missiles = 0
-        no_initial_change_create_boneguard = 0
-
-        no_initial_change_ironskins = 0
-        no_initial_change_npc_fiend_summoning_backup = 0
-        no_initial_change_extra_healing=0
-        no_initial_change_nature_beauty_blindness=0
-
-        [nerfed and moved items]
-
-        no_item_nerf_balduran_shield=1
-        no_item_nerf_magi_staff=0
-        no_item_nerf_mirror_cloak = 0
-        no_item_nerf_carsomyr = 0
-        no_item_nerf_resurrection_rod = 0
-        no_item_nerf_vhailor_helm = 0
-        no_item_nerf_vecna = 0
-        no_initial_change_elemental_arrows = 0
-
-        [component tweaks]
-
-        mage_level_add = 0
-        mage_level_scale = 100
-        priest_level_add = 0
-        priest_level_scale = 100
-        no_deployment_change = 0
-        no_cursed_golem_wounds = 0
-        bypass_dragon_immunity_changes = 0
-        spellhold_easycore = 0
-        fiend_staying_power=150
-        dragon_staying_power = 300
-        genie_staying_power =150
-        Sendai_Component_Is_Sendai_Only = 0
-        force_old_assassin_spawn = 0
-        no_spirit_troll_magic = 0
-        no_swift_shapeshift = 0
-        potion_version=6
-        dispel_arrow_maximum=5
-        do_not_lose_soul=0
-        keep_cause_wounds_alignment_restrictions = 0
-        troll_regen_multiplication=2
-        troll_regen_addition=0
-        ulgoths_beard_textscreen=1
-        respace_seavoyage_textscreen=1
-        teleport_maze_number=0
-        hitpoint_percentage=0
-        no_nabassu_color_change=0
-        no_kahrk_treasure=0
-
-        [hotkeys]
-        hot_key_A=A
-        hot_key_B=B
-        hot_key_C=C
-        hot_key_D=D
-        hot_key_E=E
-        hot_key_F=F
-        hot_key_K=K
-        hot_key_S=S
-        hot_key_V=V
-
-        [other]
-
-        AI_Does_Not_Detect_Items = 0
-        AI_Is_Omniscient = 0
-        Do_Not_Fix_Save_Errors = 0
-        Do_Not_Fix_Thac0_Errors = 0
-        Genai_Does_Not_Adjust_Kits = 0
-        Genai_Does_Not_Adjust_Levels = 0
-        Genai_Does_Not_Adjust_Profs = 0
-        Conceal_Prebuff_Spell_Names = 0
-        Force_No_HLA_Repeats = 0
-        thac0_tolerance=6
-        library_override = none
-        disable_easter_eggs = 0
-        enable_difficulty_based_damage_changes = 0
-        difficulty_icon = v6
-        Force_Difficulty_Widget = 0
-        iwd_overrides_sr = 1
+        relative: iwdification-customize.diff # maybe?
   - name: iwdification
     components:
       - 10 # Icewind Dale Casting Graphics (Andyr): Release Candidate 2
@@ -151,27 +40,13 @@ modules:
       github_user: mleduque
       repository: iwdification
       branch: 2.0-fr
-  - name: spell_rev
-    components:
-      - 0   # Spell Revisions
-      - 10  # Deva and Planetar Animations
-      - 20  # Mirror Image Fix
-      - 30  # Dispel Magic Fix    <- must be before TotLM
-      - 55  # Spell Deflection blocks AoE spells
-      - 60  # Update Spellbooks of Joinable NPCs
-      #- 65   # Revised Warrior HLAs
-    language: 0 # translation is not up to date with recent changes
-    location:
-      github_user: Gibberlings3
-      repository: SpellRevisions
-      branch: master
   - name : Weasels!
     components:
       - 0
     location:
       github_user: mleduque
       repository: lava_weasels
-      branch: 20b8796
+      branch: v3.3
   #- name: polydisp-unsure # some compat issue with... everything
   #  components: ~
   #  location:
@@ -180,11 +55,14 @@ modules:
   #    branch: master
   - name: Magic_Battles_Revised
     components:
-      #- 10 # Revised Magic Battles
+      - 10 # Revised Magic Battles
     location:
       github_user: mleduque
       repository: magic_battles_revised
       branch: 1.4-fr
+      patch:
+        relative: patches/mbr_spell_thrust_lv2.diff
+  # must be after iwdification/SCS spell packs
   - name: A7-TotLM-BG2EE
     description: Trial of the Luremaster - Main component (warns)
     components:
@@ -199,14 +77,59 @@ modules:
     description: Trial of the Luremaster - XP reduction
     components:
       - 30 # Reduire les points d'experience des monstres et des quetes. -> Reduction de 25 pour cent
+  - name: mih_fr
+    components:
+    location:
+      github_user: AngelGryph
+      repository: MadeInHeaven_FixesAndRestorations
+      branch: french
+  - name: mih_sp
+    components:
+      #- 0  # Made in Heaven: Spell Restorations
+      #- 1  # Made in Heaven: Arcane Spellpack
+      #- 2  # Made in Heaven: Divine Spellpack
+      #- 3  # Made in Heaven: Epic Spellpack
+      #- 4  # Revised Paladin Powers
+      #- 7  # Revised Monster/Animal Summoning
+      #- 8  # No Elemental Mind Battle
+      #- 9  # True Meteor Swarm
+      #- 12 # Spell Improvements (see readme)
+      #- 14 # Expanded Temple Services
+      #- 16 # Sixth Circle Spell Scrolls in Siege of Dragonspear
+    location:
+      github_user: AngelGryph
+      repository: MadeInHeaven_SpellPack
+      release: v5
+      asset: lin-mih_sp-v5.tar.gz
+      patch:
+        relative: patches/mih_sp-warnings.diff
+      add_conf:
+        file_name: mih_sp.ini
+        content: |
+          [general]
+          debug_variable=0
+          use_perl_natively=0
+          use_ee_half_damage=1
+
+          [restorations]
+          recycle_unused_idsnames=1
+
+          [epic_spellpack]
+          maximize_spell_level_plus=3
+          [revised_animate_dead]
+          animate_dead_base_power=32
+
+          [revised_summoning]
+          monster_summoning_base_power=32
+          animal_summoning_base_power=32
   - name: item_rev # component 0: "Any modifications made to items prior to installing this component will be overwritten"
     description: Item Revision (main compoennt)
     components:
       - 0 # Item Revisions by Demivrgvs (main component)
     location: # temporary, hope for maintenance and releases soon
-      github_user: subtledoctor
+      github_user: mleduque
       repository: ItemRevisions
-      branch: master
+      branch: run/v4b10/2022-04-02
       patch:
         relative: patches/item_rev-store-charep.diff
     add_conf:
@@ -239,6 +162,12 @@ modules:
 
         // Revised Backstabbing
         add_backstabbing_penalties 	  = 0 // gives backstab penalties to certain weapons, overridden by "Penalties with Thief-only Weapons" if chosen.
+  - name: Unofficial Item Pack
+    components:
+    location:
+      github_user: mleduque-not sod items
+      repository: edvin_unofficial_item_pack
+      tag: v2.7b-french
   - name: msfm
     description: More Stuff For Mage - BG2 part
     components:
@@ -416,12 +345,13 @@ modules:
       repository: HeartOfTheWood
       release: v7.0.0
       asset:  heart-of-the-wood-7.0.0.iemod
-  - name: BardicWonders # 1. items
-    components: [5]
+  - name: BardicWonders
+    components:
+      - 5 # ~Bardic Wonders: Items
     location:
       github_user: ArtemiusI
       repository: Bardic-Wonders
-      branch: master
+      tag: v1.3
   - name: A7#ImprovedArcher
     components:
       - 0   # Profil d'Archer ameliore
@@ -434,45 +364,6 @@ modules:
       repository: A7-ImprovedArcher
       release: v4.0
       asset: A7-ImprovedArcher-v4.0.iemod
-  - name: mih_sp
-    components:
-      - 0  # Made in Heaven: Spell Restorations
-      - 1  # Made in Heaven: Arcane Spellpack
-      - 2  # Made in Heaven: Divine Spellpack
-      - 3  # Made in Heaven: Epic Spellpack
-      - 4  # Revised Paladin Powers
-      - 7  # Revised Monster/Animal Summoning
-      - 8  # No Elemental Mind Battle
-      - 9  # True Meteor Swarm
-      - 12 # Spell Improvements (see readme)
-      - 14 # Expanded Temple Services
-      - 16 # Sixth Circle Spell Scrolls in Siege of Dragonspear
-    location:
-      github_user: AngelGryph
-      repository: MadeInHeaven_SpellPack
-      release: v5
-      asset: lin-mih_sp-v5.tar.gz
-      patch:
-        relative: patches/mih_sp-warnings.diff
-      add_conf:
-        file_name: mih_sp.ini
-        content: |
-          [general]
-          debug_variable=0
-          use_perl_natively=0
-          use_ee_half_damage=1
-
-          [restorations]
-          recycle_unused_idsnames=1
-
-          [epic_spellpack]
-          maximize_spell_level_plus=3
-          [revised_animate_dead]
-          animate_dead_base_power=32
-
-          [revised_summoning]
-          monster_summoning_base_power=32
-          animal_summoning_base_power=32
   - name: saradas_magic_2
     components:
       - 1 # Saradas Magic NPC Mod for BGII -> Saradas has a mage sprite (optional)
@@ -488,12 +379,6 @@ modules:
       repository: Trovador_REO
       release: v2.5.0
       asset: trovador-reo-v2.5.0.iemod
-  - name: Unofficial Item Pack
-    components:
-    location:
-      github_user: mleduque-not sod items
-      repository: edvin_unofficial_item_pack
-      tag: v2.7b
   - name: rttitempack
     components: ~
     location:
@@ -502,18 +387,15 @@ modules:
     components: ~
     location:
       path: /home/mick/Games/modda-cache/static/IWD Item Pack.zip
-  - name:
-    components: ~
-    location:
-      github_user:  Gibberlings3
-      repository: Forgotten-Armament
-      release: 0.3-beta
-      asset: forgotten-armament-v0.3-beta.iemod
   - name: Mystigan
     components:
     location:
       http: https://akadis.baldursgateworld.fr/Mystigan/zip/Mystigan1.6.zip
       rename: Mystigan1.6.zip
+  - name: OfHeirloomsAndClasses
+    components: ~
+    location:
+      path: /home/mick/Games/modda-cache/static/OfHeirloomsAndClasses v1.11.zip
   - name: iiItemMod
     components: ~
     location:
@@ -521,17 +403,34 @@ modules:
       repository: iiItem
       release: v5.2
       asset: iiitemmod-v5.2.iemod
-      patch:
-        relative: patches/iiItem-translate.diff
   - name: iiKeyNames
     description: Renames the keys after use
     components: ~
     location:
-      github_user: btigi
+      github_user: mleduque
       repository: iiKeyNames
-      patch:
-        relative: patches/iiKeyNames-translate.diff
+      branch: v2.1-fr
+  - name: item_rev
+    description: Item Revisions (more changes)
+    components:
+      - 1030 # Revision des boutiques
+      #- 10   # Bonus des boucliers revus
+      - 17   # Weapon Changes
+      #- 11   # Le combat a deux armes differe selon le type d'arme, legere ou lourde
+      #- 20   # Attaque sournoise revue (avec et sans penalite) -> Toutes les armes de melee et a projectiles utilisables pour l'attaque sournoise
+      - 1200 # Evitement des coups critiques revu
+      - 1060 # Les Kensai peuvent porter des bracelets
+      - 1070 # Les Voleurs peuvent utiliser des baguettes
+  - name: forgotten-armament
+    components:
+      - 1 # Add New Forgotten Armament Items into the Game
+      - 8 # Replace Boots of Speed (Paws of the Cheetah)
+      #- 10 # Improved Spears
     location:
+      github_user:  Gibberlings3
+      repository: Forgotten-Armament
+      release: 0.5-beta
+      asset: lin-forgotten-armament-v0.5-beta.zip
   - name: cdlore
     components:
       - 10 # Books Provide Lore Bonuses
@@ -550,33 +449,17 @@ modules:
   #    repository: s9-kittomes
   #    branch: master
   - name: POISON_NO_BYPASS
-    components: ~
+    components:
+      - 3 # Limited Exclusions(Anti-magic, AoE, Gaze): Mirror Image or Stoneskin
     location:
       github_user: mleduque
       repository: kjeron_poison_no_bypass
-      branch: master
+      tag: v1.0
   - name: polyvorp
-    components: ~
+    components:
+      - 10 # Rebalanced Vorpal Weapons (affects enemies and players)
+      # - 20 # Make all Dragons immune to Vorpal hits (previously some were, with default rebalancing none are)
     location:
       github_user: mleduque
       repository: polytope_rebalanced_vorpal
-      branch: master
-  - name: scales_of_balance
-    components:
-      ##- 100 # IWO - Yet Another Revised Armor System
-      #- 102 # IWO - Functional Weapon Tweaks
-      #- 109 # IWO - All Potions Usable by Any Class
-      ##- 121 # WPO - Weapon Category Collapse
-      #- 125 # WPO - APR on Spec
-      #- 172 # STO - IWD Spell Evasion -> For Expanded Spell List
-      ##- 200 # SBO - Stat Bonus Overhaul
-      #- 201 # SBO - Stat-based Bonus Spells
-      #- 204 # SBO - Enable Concentration Checks
-      #- 224 # XPO - Choose SoD Starting XP -> 161,000
-      #- 229 # XPO - Choose SoA Starting XP -> 400,000
-    location:
-      github_user: mleduque
-      repository: Scales_of_Balance
-      tag: "5.38.1-fr"
-      patch:
-        relative: patches/scales-config.diff
+      tag: v1.00

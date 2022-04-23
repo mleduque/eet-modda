@@ -1,74 +1,82 @@
 --- scales_of_balance/ini/YARAS_default.ini
 +++ scales_of_balance/ini/YARAS_default.ini
-@@ -34,7 +34,7 @@
+@@ -45,8 +45,8 @@
  //
  //	CASTING SPEED PENALTY: 					// this is a static modifier
  //											// 	(**NOTE** the max value = 6)
--		SET leather_cast =		2
-+		SET leather_cast =		1
- 		SET studded_cast =		2
- 		SET chain_cast = 		3
- 		SET splint_cast = 		4
-@@ -81,17 +81,17 @@
+-		SET leather_speed =		2
+-		SET studded_speed =		2
++		SET leather_speed =		0
++		SET studded_speed =		1
+ 		SET chain_speed = 		3
+ 		SET splint_speed = 		4
+ 		SET plate_speed = 		5
+@@ -76,9 +76,9 @@
+ 		  SET leather_move = 	0
+ 		  SET studded_move = 	0
+ 		  SET chain_move = 		0
+-		  SET splint_move = 	0
+-		  SET plate_move = 		0
+-		  SET fullplate_move = 	0
++		  SET splint_move = 	1
++		  SET plate_move = 		1
++		  SET fullplate_move = 	1
+ 		END
+ 		PATCH_IF (%enchantment% >= 1) BEGIN
+ 		  SET leather_move = 	0
+@@ -92,14 +92,6 @@
  //	DEX PENALTIES: 							// 	Dex penalties are reduced for enchanted items.
  //											// 	If you don't want that, then...
  		PATCH_IF (%enchantment% = 0) BEGIN 	// 	...make the numbers in these two blocks identical.
 -		  SET leather_dex =		1
 -		  SET studded_dex =		2
 -		  SET chain_dex = 		3
-+		  SET leather_dex =		0
-+		  SET studded_dex =		1
-+		  SET chain_dex = 		2
- 		  SET splint_dex = 		4
- 		  SET plate_dex = 		5
- 		  SET fullplate_dex = 	5
- 		END
- 		PATCH_IF (%enchantment% >= 1) BEGIN
+-		  SET splint_dex = 		4
+-		  SET plate_dex = 		5
+-		  SET fullplate_dex = 	5
+-		END
+-		PATCH_IF (%enchantment% >= 1) BEGIN
  		  SET leather_dex =		0
--		  SET studded_dex =		1
--		  SET chain_dex = 		2
-+		  SET studded_dex =		0
-+		  SET chain_dex = 		1
- 		  SET splint_dex = 		3
+ 		  SET studded_dex =		1
+ 		  SET chain_dex = 		2
+@@ -107,6 +99,14 @@
  		  SET plate_dex = 		4
  		  SET fullplate_dex = 	4
-@@ -123,7 +123,7 @@
+ 		END
++		PATCH_IF (%enchantment% >= 1) BEGIN
++		  SET leather_dex =		0
++		  SET studded_dex =		0
++		  SET chain_dex = 		1
++		  SET splint_dex = 		2
++		  SET plate_dex = 		3
++		  SET fullplate_dex = 	3
++		END
+ //
+ //	THIEF SKILL PENALTIES:					// This affects heavy armors only; vanilla values
+ //											// for leather, hide, & elven chain are unchanged
+@@ -120,11 +120,11 @@
+ 
+ 		SET plate_stealth = 	75
+ 		SET plate_mech = 		50
+-		SET plate_detect = 		30
++		SET plate_detect = 		20
+ 
+ 		SET fullplate_stealth = 90
+ 		SET fullplate_mech = 	60
+-		SET fullplate_detect = 	40
++		SET fullplate_detect = 	20
+ //											// These armors have mixed characteristics,
+ //	HOW TO TREAT HIDE ARMOR:				// which you can define. E.g. hide armor: 
+ //											// good DR but poor AC, DEX, and casting speed.
+@@ -132,9 +132,9 @@
+ 		SET hide_dr = 		%chain_dr%
+ 		SET hide_speed =	%chain_speed%
  		SET hide_miscast =	%chain_miscast%
- 		SET hide_move =		%studded_move%
+-		SET hide_move =		%studded_move%
++		SET hide_move =		%chain_move%
  		SET hide_weap =		%studded_weap%
 -		SET hide_dex =		%chain_dex%
 +		SET hide_dex =		%studded_dex%
  //
  //	HOW TO TREAT ELVEN CHAIN:				// Elven chain is as light as leather.
  //											// Or you can just set these to 0 if you want.
-@@ -133,15 +133,15 @@
- 		SET elven_weap =	%leather_weap%
- 		SET elven_dex =		%leather_dex%
- //
--//	HOW TO TREAT (DRAGON-)SCALE ARMOR:		// Dragonscale is equivalent to plate for AC;
-+//	HOW TO TREAT (DRAGON-)SCALE ARMOR:		// Dragonscale is equivalent to fullplate_ac for AC;
- //											// but like splint or chain for DR, DEX, and casting
--		SET scale_ac = 		%plate_ac%
--		SET scale_dr = 		%splint_dr%
-+		SET scale_ac = 		%fullplate_ac%
-+		SET scale_dr = 		%plate_dr%
- 		SET scale_cast =	%chain_cast%
- 		SET scale_miscast =	%chain_miscast%
- 		SET scale_move =	%chain_move%
- 		SET scale_weap =	%chain_weap%
--		SET scale_dex =		%splint_dex%
-+		SET scale_dex =		(%splint_dex% - 1)
- 		SET scale_stealth =  %splint_stealth%
- 		SET scale_mech = 	%splint_mech%
- 		SET scale_detect = 	%splint_detect%
---- scales_of_balance/ini/styles.ini
-+++ scales_of_balance/ini/styles.ini
-@@ -7,7 +7,7 @@
- //__________________________________________________________________________________
- 
- 
--	OUTER_SET 2H_weap_apr = 0	//	change to 1 for +.5 APR with spec. in 2-hand weapon style
-+	OUTER_SET 2H_weap_apr = 1	//	change to 1 for +.5 APR with spec. in 2-hand weapon style
- 
- 
- //__________________________________________________________________________________
