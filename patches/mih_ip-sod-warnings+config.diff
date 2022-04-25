@@ -40,3 +40,30 @@
    END
  
    MAKE_PATCH
+   
+--- mih_ip/mih_ip.ini
++++ mih_ip/mih_ip.ini
+@@ -13,17 +13,17 @@ max_stack_ammo=0
+ max_stack_thrown=0
+ max_stack_potions=0
+ max_stack_jewels=0
+-update_itemexcl_2da=1
++update_itemexcl_2da=2
+ visible_ioun_stones=1
+-brokk_buying_markup=70
+-brokk_selling_markup=130
++brokk_buying_markup=80
++brokk_selling_markup=120
+ 
+ [better_items]
+-baldurans_cloak_magic_resistance=10
++baldurans_cloak_magic_resistance=20
+ 
+ [extra_healing_in_bg1]
+-extra_healing_minimum=2
+-extra_healing_maximum=5
++extra_healing_minimum=5
++extra_healing_maximum=8
+ extra_healing_shops=1
+ extra_healing_durlag=1
+ 

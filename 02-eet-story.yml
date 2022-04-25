@@ -39,8 +39,8 @@ modules:
     location:
       github_user: Gitjas
       repository: The_Boareskyr_Bridge_Scene
-      release: Alpha_220421
-      asset: the-boareskyr-bridge-scene-alpha_220421.iemod
+      release: Alpha_220425
+      asset: the-boareskyr-bridge-scene-alpha_220425.iemod
   - name: turnabout
     components:
       - 0 # Ascension: Turnabout
@@ -696,6 +696,8 @@ modules:
     location:
       github_user: SpellholdStudios
       repository: TheSlitheringMenace
+      release: v4.0.0
+      asset: the-slithering-menace-v4.0.0.iemod
   - name: SotSC
     description: Shades of the Sword Coast
     version: 6.6

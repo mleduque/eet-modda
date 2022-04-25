@@ -13,12 +13,13 @@ modules:
       asset: lin-A7-DlcMerger-v1.3.zip
     components:
       - 1 # Merge DLC into game -> Merge "Siege of Dragonspear"
-  - name: eefixpack
-    components:
-    location:
-      github_user: Gibberlings3
-      repository: EE_Fixpack
-      commit: f9906c2-update-it
+  # EET can't merge EEFixpack right
+  #- name: eefixpack
+  #  components:
+  #  location:
+  #    github_user: Gibberlings3
+  #    repository: EE_Fixpack
+  #    commit: 089f5297b4 # french branch
   - name: bg1ub
     description: BG1 Unfinished Business
     version:

@@ -7,15 +7,17 @@ global:
 modules:
   - name: eefixpack
     components:
+      - 0 # Correctifs essentiels: Beta 1
+      - 2 # Mises à jour du texte du jeu: Beta 1
     location:
       github_user: Gibberlings3
       repository: EE_Fixpack
-      commit: f9906c2-update-it
+      commit: 089f5297b4 # french branch
   - name: correctfrbg2ee
     components:
-      - 10
-      - 20
-      - 30
+      - 10 # Correction de la traduction de Baldur's Gate II : Enhanced Edition: 0.7
+      - 20 # Correction de la description des objets: 0.7
+      - 30 # Patch audio et video francais: 0.7
     location:
       github_user: r-e-d
       repository: correctfrBG2EE
@@ -53,7 +55,11 @@ modules:
   - name: LightingPack
     components:
       - 2 # Shader script files for lighting control -> Moderately increased contrast, brightness and gamma (recommended)
-    location: { github_user: Argent77, repository: A7-LightingPackEE, release: v3.1, asset: lin-A7-LightingPackEE-v3.1.zip }
+    location:
+      github_user: Argent77
+      repository: A7-LightingPackEE
+      release: v3.1
+      asset: lin-A7-LightingPackEE-v3.1.zip
   - name: EEUITweaks
     components:
       - 1000 # Mods Options
@@ -66,7 +72,7 @@ modules:
     location:
       github_user: r-e-d
       repository: EEUITweaks
-      release: "3.8.1"
+      release: v3.8.1
       asset: eeuitweaks-3.8.1.iemod
   - name: HiddenGameplayOptions
     version: v3.0
@@ -77,32 +83,22 @@ modules:
       repository: A7-HiddenGameplayOptions
       release: v3.0
       asset: A7-HiddenGameplayOptions-v3.0.iemod
-  - name: mih_fr
-    description: Made in Heaven - Fixes & Restoration; 'fixes' part only
-    components:
-      - 5  # BG1 fixpack
-      - 7  # SoDfixpack
-      - 6  # BG2 fixpack
-      ## components below are installed later
-      #- 2  # item restorations
-      #- 3  # spell restorations
-      #- 4  # Minor Encounter Restorations (BG2)
-      #- 12 # Artemis Entreri in Bodhi's Lair
-      #- 13 # Minor Dialog Restorations (BG2)
-      #- 10 # Allies are Better Prepared
-      ## this component will not be installed
-      #- 11 # Volume Adjustments -> change voice of a NPC, english only
-    location:
-      github_user: AngelGryph
-      repository: MadeInHeaven_FixesAndRestorations
-      commit: 054fcb7-fr
 
   #########
   # story
   #########
   - name: ascension
+    description: ascension - main component -> WARNs no effects added to SPPR403.spl | SPWI306.spl | spermel.itm
     components:
       - 0     # Rewritten Final Chapter of Throne of Bhaal
+    location:
+      github_user:  InfinityMods
+      repository: Ascension
+      release: "2.0.23"
+      asset: ascension-2.0.23.iemod
+  - name: ascension
+    description: ascension - the other components
+    components:
       - 10    # Balthazar can be redeemed
       - 20    # Improved Sarevok-Player Interactions
       - 30    # Improved Imoen-Player Interactions in Throne of Bhaal
@@ -117,32 +113,90 @@ modules:
       - 2200  # Extended Epilogues for additional Beamdog NPCs, by shawne
       - 2300  # Sharper portraits of Abazigal and Gromnir for the Enhanced Edition, by DavidW
       - 2400  # Slightly improved cutscenes, by DavidW
+  - name: arestorationp
+    description: Almateria's Restoration Project
+    components:
+      - 0 # Restauration de lieux: v8.4
+      - 1 # Restauration de personnages et de dialogues: v8.4
+      - 2 # Restauration de sons: v8.4
+      - 3 # Restauration d'objets: v8.4
+      - 4 # Restauration d'options de souhait: v8.4
+      - 5 # Restauration de table d'XP dans ToB: v8.4
+      - 6 # Liche Deril: v8.4
+      - 8 # Restaurations mineures: v8.4
+      - 11 # Restauration du reve de fin avec l'Ecorcheur: v8.4
+      - 12 # Transformation en Ecorcheur alternative: v8.4
+      - 13 # Restauration de la cinematique de la Promenade de Waukyne: v8.4
     location:
-      github_user:  InfinityMods
-      repository: Ascension
-      release: "2.0.23"
-      asset: ascension-2.0.23.iemod
+      path: /home/mick/Games/modda-cache/static/ARPv8-4.zip
+  - name: ub
+    description: Unfinished Business
+    components:
+      - 0 # The Kidnapping of Boo by Cliffette: v28
+      - 1 # The Suna Seni/Valygar Relationship: v28
+      - 2 # Kalah and What He Was Promised: v28
+      - 3 # "Cat and Mouse" (Bodhi hunts you in Spellhold) by Ghreyfain: v28
+      - 4 # Gorje Hilldark and the Extended Illithium Quest: v28
+      - 5 # The Pai'Na/Spider's Bane Quest: v28
+      - 6 # Restored Crooked Crane Inn: v28
+      - 7 # Restored Encounters: v28
+      - 8 # Artemis Entreri in Bodhi's Lair: v28
+      - 9 # Corrected "Xzar's Creations": v28
+      - 10 # Restored Hell Minions, by SimDing0: v28
+      - 12 # Item Restorations: v28
+      - 17 # Corrected Character Names and Biographies: v28
+      - 18 # Restored Minor Dialogs: v28
+      - 19 # Restored Bhaalspawn Powers, by David Gaider: v28
+      - 20 # Extended ToB Item Descriptions: v28
+      - 21 # Throne of Bhaal Minor Restorations: v28
+      - 22 # Justifier Kit: v28
+      - 23 # Feralan Kit: v28
+      - 24 # Sarevok's Remorse: v28
+      - 25 # The Murder of Acton Balthis, by Kulyok: v28
+    location:
+      github_user: Pocket-Plane-Group
+      repository: UnfinishedBusiness
+      release: v28
+      asset: lin-ub-v28.tar.gz
+  - name: mih_fr
+    description: Made in Heaven - Fixes & Restoration; 'fixes' part only
+    installation:
+      general: at least component 5must be after ub
+    components:
+      - 0 # BG1 Fixpack
+      - 1 # SoD Fixpack
+      - 2 # BG2 Fixpack
+      - 5  # Restaurations de rencontres pour BG2: v1
+      - 6  # Restaurations de dialogues BG2: v1
+      - 7  # Artemis Entreri dans l'antre de Bodhi: v1
+      - 8 # Allies are Better Prepared
+    location:
+      github_user: mleduque
+      repository: MadeInHeaven_FixesAndRestorations
+      commit: 054fcb7-fr
   - name: c#sodboabri
     description: The Boareskyr Bridge Scene
     link: https://github.com/Gitjas/The_Boareskyr_Bridge_Scene
-    installation: early story mod, before npc mods and before EET_end
+    installation:
+      general: early story mod
+      before: npc mods and before EET_end
     components:
       - 0 # Scene at Boareskyr Bridge will be Acknowledged: Add NPC Reactions
       - 1 # Add Description Text to Original Scene at Bridge
       - 2 # Bridge Scene has Different Choices
       - 3 # Add Stat Changes to Choices at Bridge
     location:
-      github_user: Gitjas
+      github_user: Gibberlings3
       repository: The_Boareskyr_Bridge_Scene
-      release: Alpha_220421
-      asset: the-boareskyr-bridge-scene-alpha_220421.iemod
+      release: Alpha_220425
+      asset: the-boareskyr-bridge-scene-alpha_220425.iemod
   - name: turnabout
     components:
       - 0 # Ascension: Turnabout
     location:
       github_user: Pocket-Plane-Group
       repository: Turnabout
-      release: v1.7
+      release: "1.7"
       asset: turnabout-v1.7.iemod
   - name: A7-TestYourMettle
     components:
@@ -172,42 +226,66 @@ modules:
       branch: devel
   - name: "c#endlessbg1"
     components:
-      #- 0
-      #- 1
-      #- 2
-      #- 3
-      #- 4
-      #- 5 # overwritten by transitions
-      #- 6 # overwritten by transitions
-      #- 7 # overwritten by transitions
-      #- 8
-      #- 10
-      #- 11
-      #- 12
-      # - 15 # overwritten by transitions
+      - 0 # Endless BG1 : Composant principal (requis): 10
+      - 1 # Plus de prestige pour le Heros de la Porte de Baldur (avec la residence du personnage principal dans le palais): 10
+      - 2 # Court hommage au Heros: 10
+      - 3 # Les objets uniques de Sarevok: 10
+      - 4 # L'épee de Sarevok: 10
+      # overwritten by transition
+      - 5 # Imoen et la duchesse Jannath (Imoen reside dans le palais): 10
+      # overwritten by transition
+      - 6 # Le duc Eltan se trouve au palais: 10
+      # overwritten by transition
+      - 7 # Le Poing Enflamme arrive apres la bataille finale: 10
+      - 8 # Elminster fait une apparition -> Version de Jastey: 10
+      #- 9 # Elminster fait une apparition -> Textes de BG1 restaures
+      - 10 # Arrivee des premiers refugies a la Porte de Baldur: 10
+      - 11 # Le tresorier Ophyllis se trouve dans le donjon du palais: 10
+      - 12 # Commentaires de Denkod dans la guilde des voleurs au sujet de la mort de Sarevok: 10
+      # 13 # Skip Thieves' Maze Once After Sarevok's Death
+      # incompatible with or overwritten by transition
+      # 14 # Korlasz' Dungeon is in BG1
+      # overwritten by transition
+      - 15 # Fenster le soigneur du palais se trouve dans le palais: 10
+      - 16 # Le Capitaine Corwin se trouve dans le palais: 10
     location:
       github_user: Gibberlings3
       repository: EndlessBG1
       release: v10
       asset: endless-bg1-mod-10.iemod
   - name: transitions
+    installation:
+      after: endlessbg1
+      before: bg1re & npc mods
     components:
-      #- 0   # Main component: Allow continued play after Sarevok and/or Irenicus is defeated
-      #- 10  # Use BGI ending movie as a dream and give new bhaal-spawn power at first rest
+      - 0 # Main component: Allow continued play after Sarevok and/or Irenicus is defeated: v2.4
+      - 10 # Use BGI ending movie as a dream and give new bhaal-spawn power at first rest: v2.4
+      # done in endlessbg1
       #- 20  # Give Sarevok his armor, helm, and sword -> Equipped
-      #- 32  # Clean-up Quests -> Option 1 and use gentler Tamoko quest
-      #- 200 # Close quests and rumors that can't be finished after Sarevok is defeated
-      #- 40  # Clean up the town folk chatter with regard to Sarevok
+      # below: WARNs (no idea why)
+      #- 32 # Clean-up Quests -> Option 1 and use gentler Tamoko quest: v2.4
+      - 200 # Close quests and rumors that can't be finished after Sarevok is defeated: v2.4
+      - 40 # Clean up the town folk chatter with regard to Sarevok: v2.4
+      - 50 # Clean up the wounded from the thieves' maze: v2.4
+      # done in endlessbg1
       #- 60  # Elminster makes an appearance outside of the Ducal Palace
-      #- 72  # Duke Eltan's reward option: Gray house in NW Beregost
+      - 72 # Duke Eltan's reward option: Gray house in NW Beregost: v2.4
+      #only one
       #- 73  # Duke Eltan's reward option: House across from Flaming Fist compound
-      #- 80  # Add Waves of Refugees to Baldur's Gate
-      #- 140 # Use Irenicus in hell movie to restore Bhaal-spawn powers after he is defeated
+      - 80 # Add Waves of Refugees to Baldur's Gate: v2.4
+      - 140 # Use Irenicus in hell movie to restore Bhaal-spawn powers after he is defeated: v2.4
     location:
       github_user: Gibberlings3
       repository: transitions
       release: v2.4
       asset: transitions-v2.4.iemod
+  - name: transitions
+    installation:
+      after: endlessbg1
+      before: bg1re & npc mods
+    components:
+      - 32 # Clean-up Quests -> Option 1 and use gentler Tamoko quest: v2.4
+    ignore_warnings: true
   - name: DSotSC
     description: Dark Side of the Sword Coast
     components:
@@ -228,9 +306,11 @@ modules:
       - 1 # Spawn less Monsters depending on Game Difficulty
       - 2 # Keelor the Dwarf
       - 3 # Llindellyn's Lucky Arrow
-      - 4 # Nim Furlwing's Hunting Hounds
+      #- 4 # Nim Furlwing's Hunting Hounds -> not installable with bg1ub
       - 5 # Pilar and Gheldehar
-      - 6 # Svlast's Torment
+      #- 6 # Svlast's Torment -> not installable with bg1ub
+      #- 7 # Will O'Hara NPC  ->  blank NPC, uninteresting
+      #- 8 # Will O'Hara Soundset subcomponent
       - 9 # Fighting Encounters
     location:
       github_user: SpellholdStudios
@@ -239,41 +319,41 @@ modules:
   - name: bgqe
     description: Baldur's Gate Mini Quests and Encounters
     components:
-    #- 0
-    #- 1
-    #- 2
-    #- 3
-    #- 4
-    #- 5
-    #- 6
-    #- 7
-    #- 8
-    #- 9
-    #- 10
-    #- 11
-    #- 12
-    #- 13
-    #- 14
-    #- 15
-    #- 16
+      - 0 # Installation de la quete de la vase...: v25.3
+      - 1 # Installation de la quete de famille a Beregost...: v25.3
+      - 2 # Installation de la quete de la garde d'enfants, y compris la rencontre au festival...: v25.3
+      - 3 # Installation de la quete du monstre de Nashkel...: v25.3
+      - 4 # Installation de la quete du paladin dechu...: v25.3
+      - 5 # Installation de la quete de l'amour eternel...: v25.3
+      - 6 # Installation de la rencontre de l'orque amoureux...: v25.3
+      - 7 # Installation de la quete une aide inattendue...: v25.3
+      - 8 # Installation de la quete du hamster...: v25.3
+      - 9 # Installation de la quete de l'ivrogne pres du temple de Beregost...: v25.3
+      - 10 # Installation de la quete un endroit douillet pour Noober...: v25.3
+      - 11 # Installation de la quete de l'epee de Brage...: v25.3
+      - 12 # Installation de la quete sources legales des cartes maritimes...: v25.3
+      - 13 # Installation de la quete additions a la Maison de la Dame et du Temple de la Reine Garce...: v25.3
+      - 14 # Installation de la quete un fermier inquiet...: v25.3
+      - 15 # Installation de la quete des corps pour une bonne cause...: v25.3
+      - 16 # Installation de la quete terminer la quete de Cordyr sans tuer Sil...: v25.3
     location:
       github_user: Gibberlings3
       repository: BG_Quests_And_Encounters
       release: v25.3
-      asset: baldurs-gate-mini-quests-and-encounters-modification-v25.2.iemod
+      asset: baldurs-gate-mini-quests-and-encounters-modification-v25.3.iemod
   - name: AC_QUEST
     description: Ascalon's Questpack
     components:
-      - 0 # A Job Well-Paid
-      - 1 # A Feast for the Gnolls
-      - 2 # Jumper
-      - 3 # The Lost Son
-      - 4 # Of Wolves and Men -> Quest uses hut near Thalantyr in High Hedge.
-      - 6 # The Great Carlini
-      - 7 # A Home for the Gibberlings
-      - 8 # Fangirls
-      - 9 # The Serpents of Abbathor
-      - 10 # A Halfling among the Eyeless
+      - 0 # Un travail bien paye: 4.2
+      - 1 # Un festin pour les gnolls: 4.2
+      - 2 # A la recherche de Ricochet: 4.2
+      - 3 # A la recherche de Perwell: 4.2
+      - 4 # Des loups et des hommes -> Quete qui utilise une hutte pres de Thalantyr a Haute Haie.: 4.2
+      - 6 # Le grand Carlini: 4.2
+      - 7 # Elevage de grouilleux: 4.2
+      - 8 # Les groupies: 4.2
+      - 9 # Les Serpents d'Abbathor: 4.2
+      - 10 # Un petit-homme parmi les sans-yeux: 4.2
     location:
       github_user: Gitjas
       repository: Ascalons_Questpack
@@ -282,101 +362,124 @@ modules:
   - name: BG_Travel
     description: New travel system between Baldur's Gate City areas
     comment: Original location http://athkatla.cob-bg.pl/download.php?id=1595 (BG_Travel_v2.1.rar)
-    components: [66] # New travel system between Baldur's Gate City areas -> Full version of component
+    components:
+      - 66 # New travel system between Baldur's Gate City areas -> Full version of component
     location:
       github_user: mleduque
       repository: BG_Travel
       tag: v2.1
   - name: c#sb_silber
     description: Adalon's blood
-    components: [0]
+    components:
+      - 0 # Adalon's Blood - Modification pour BGII par Gandalf the white: 14
     location:
       path: /home/mick/Games/modda-cache/static/AdalonsBlood_v14.zip
   - name: Eilistraee
     description: Eilistraee's Song
-    components: [0]
+    components:
+      - 0 # Eilistraee's Song -> Yes, but don't patch the existing save games: 7.1
     location:
       path: /home/mick/Games/modda-cache/static/Eilistraees Song v7.1.zip
   - name: TotDG
     description: "Colours of Infinity: Tales of the Deep Gardens"
-    components: [0]
+    components:
+      - 0 # Colours of Infinity: Tales of the Deep Gardens -> Yes, but don't patch the existing save games: 12.7
     location:
       path: /home/mick/Games/modda-cache/static/Tales of the Deep Gardens v12.7.zip
   - name: Innershade
     description: "Colours of Infinity: Innershade"
-    components: [0]
+    components:
+      - 0 # Colours of Infinity: Innershade -> Yes, but don't patch the existing save games: 11.0
     location:
       path: /home/mick/Games/modda-cache/static/Innershade v11.0.zip
   - name: WhiteQueen
     description: "Colours of Infinity: The White Queen"
-    components: [0]
+    components:
+      - 0 # Colours of Infinity - The White Queen -> Yes, but don't patch the existing save games: 6.9
     location:
       path: /home/mick/Games/modda-cache/static/The White Queen v6.9.zip
   - name: ISNF
     description: "Colours of Infinity: I Shall Never Forget"
-    components: [0]
+    components:
+      - 0 # Colours of Infinity: I Shall Never Forget: 6.0
     location:
       path: /home/mick/Games/modda-cache/static/I Shall Never Forget v6.0.zip
   - name: SouthernEdge
     description: "Athkatlan Grounds: Southern Edge"
-    components: [0]
+    components:
+      - 0 # Southern Edge: the new district of Athkatla -> Yes, but don't patch the existing save games: 3.4
     location:
       path: /home/mick/Games/modda-cache/static/SouthernEdge v3.4.zip
   - name: Ooze
     description: "Athkatlan Grounds: The Ooze’s Lounge"
-    components: ~
+    components:
+      - 0 # Le Salon des vases : une nouvelle zone sous les bas quartiers d'Athkatla: 2.92
     location:
       path: /home/mick/Games/modda-cache/static/Oozes Lounge v2.92.zip
   - name: BridgesBlock
     description: "Athkatlan Grounds: Bridge’s Block"
-    components: ~
+    components:
+      - 0 # Les terres d'Athkatlan : Le Bloc du Pont: 1.3
     location:
-      path: /home/mick/Games/modda-cache/static/BridgesBlock v1.13.zip
+      path: /home/mick/Games/modda-cache/static/BridgesBlock v1.3.zip
   - name: SirinesCall
     description: The Lure of the Sirine's Call
-    components: [0, 1]
+    components:
+      - 0 # Le Chant des Sirènes: v16.3
+      - 1 # Extended Lighthouse Area: v16.3
     location:
       github_user: Pocket-Plane-Group
       repository: Lure_Of_Sirines_Call
       release: v16.3
       asset: the-lure-of-the-sirines-call-v16.3.iemod
   - name: bg1re
+    description: Baldur's Gate Romantic Encounters
+    comment: did a "install all" this time
     components:
-     #- 100
-     #- 1
-     #- 2
-     #- 4
-     #- 5
-     #- 7
-     #- 8
-     #- 9
-     #- 10
-     #- 11
-     #- 14
-     #- 15
-     #- 16
-     #- 17
-     #- 18
-     #- 19
-     #- 20
-     #- 21
-     #- 22
-     #- 26
-     #- 28
-     #- 29
-     #- 30
-     #- 31
-     #- 32
-     #- 33
-     #- 34
-     #- 35
-     #- 36
-     #- 37
-     #- 40
-     #- 41
-     #- 42
-     #- 43
-     #- 44
+      - 1 # Le briefing de Bardolan, par berelinde: 9.0
+      - 2 # Du temps libre pour La Balafre, par jastey: 9.0
+      - 3 # L'obsession de Kim, par jastey (AVERTISSEMENT - consultez le fichier README !): 9.0
+      - 4 # Extension de la rencontre avec Bjornin (traitement medical personnalise), par jastey: 9.0
+      - 5 # Plus d'amidon dans mon mat: 9.0
+      - 6 # Une minute pour le duc Eltan, par jastey: 9.0
+      - 7 # L'entrainement tres special de Husam, par jastey: 9.0
+      - 8 # Laurel, apres la chasse, par jastey: 9.0
+      - 9 # La seduction de Bartus, par jastey: 9.0
+      - 10 # Le massage de Lina, par jastey: 9.0
+      - 11 # Premiere nuit avec Quentin, par Kulyok: 9.0
+      - 12 # Les jeux de Niklos, par Kulyok (contenu adulte. AVERTISSEMENT - consultez le fichier README !): 9.0
+      - 13 # Slythe et Krystin, par Kulyok (contenu adulte. AVERTISSEMENT - consultez le fichier README !): 9.0
+      - 14 # Sans regret, par Anonyme: 9.0
+      - 15 # Amour payant, par Thimblerig: 9.0
+      - 16 # Hull : le sens du devoir, par Lava: 9.0
+      - 17 # Fin de soiree avec Jaheira, par Kulyok: 9.0
+      - 18 # La benediction de Sil, par Lava: 9.0
+      - 19 # Melicamp : le garcon volaille, par Lava: 9.0
+      - 20 # Une lecture avec Rinnie, par Western Paladin: 9.0
+      - 21 # Molly cherche un mari, par Kulyok: 9.0
+      - 22 # Le deuil de Centeol, la dame araignee, par Lava: 9.0
+      - 23 # L'essentiel, par Lava (AVERTISSEMENT - consultez le fichier README !): 9.0
+      - 24 # Le repaire du Moissonneur, par Lava (contenu adulte): 9.0
+      - 25 # Le grand Zudini, par Kulyok (contenu adulte): 9.0
+      - 26 # Le messager, par Thimblerig: 9.0
+      - 27 # Ender Sai : la recompense du heros, par Thimblerig (AVERTISSEMENT - consultez le fichier README !): 9
+      - 28 # Les romanciers, par Thimblerig: 9.0
+      - 29 # Les honnetes mensonges des Deux Rives, par Lava: 9.0
+      - 30 # Le dilemme d'un necromancien, par jastey: 9.0
+      - 31 # Un diner avec Thalantyr, par jastey: 9.0
+      - 32 # Ceinture de changement de sexe et reactions, par Thimblerig, Kulyok, Domi, Lava, Lastknightleft, Twani, Jastey, Daisy Ninja Girl: 9.0
+      - 33 # Le reve du guerisseur, par Kulyok: 9.0
+      - 34 # Ce qu'etait Gauche, par Lava and Thimblerig: 9.0
+      - 35 # Un ami d'enfance, par Kulyok: 9.0
+      - 36 # Arlene la travailleuse, par Kulyok: 9.0
+      - 37 # Della May de Thay, par Kulyok: 9.0
+      - 38 # Un garde deprave a Chateau-Suif, par Kulyok (contenu adulte. AVERTISSEMENT - consultez le fichier README !): 9.0
+      - 39 # La flamme du phoenix, par Kulyok (contenu adulte): 9.0
+      - 40 # Mikala la moniale, par Twani: 9.0
+      - 41 # Le messager 2 : pluie, neige et noirceur de la nuit, par Thimblerig and tibicina: 9.0
+      - 42 # Camryn et Tamah, par tibicina: 9.0
+      - 43 # Petites indiscretions, par jastey: 9.0
+      - 44 # Les amoureux de Bois-Manteau, par tibicina: 9.0
     location:
       github_user: Gibberlings3
       repository: BG1_Romantic_Encounters
@@ -384,35 +487,36 @@ modules:
       asset: baldurs-gate-romantic-encounters-modification-bg1re-9.0.iemod
   - name: wheels
     description: Wheels Of Prophecy
-    components: [0]
+    components:
+      - 0 # Les Roues de la Prophetie (The Wheels of Prophecy): v8.5
     location:
       github_user: Gibberlings3
       repository: WheelsOfProphecy
       release: v8.5
       asset: lin-wheels-v8.5.tar.gz
   - name: fadingpromises
-    components: [0]
+    components: [0] # Fading Promises: v9
     location:
       github_user: SpellholdStudios
       repository: Fading_Promises
       release: v9
       asset: fading-promises-v9.iemod
   - name: Assassinations
-    components: [0]
+    components: [0] # Assassinations mod for Baldur's Gate II: v17
     location:
       github_user: Pocket-Plane-Group
       repository: Assassinations
       release: v17
       asset: assassinations-v17.iemod
   - name: BackBrynnlaw
-    components: [0]
+    components: [0] # Mod Retour Ã  Brynnlaw mod pour Baldur's Gate II: v9
     location:
       github_user: Pocket-Plane-Group
       repository: Back_to_Brynnlaw
       release: v9
       asset: back-to-brynnlaw-mod-for-baldurs-gate-ii-bgii-bgt-bgiiee-and-eet-v9.iemod
   - name: Sellswords
-    components: [0]
+    components: [0] # Mod Mercenaires pour Baldur's Gate II: v9.1
     location:
       github_user: Pocket-Plane-Group
       repository: Sellswords
@@ -420,7 +524,7 @@ modules:
       asset: the-sellswords-mod-for-baldurs-gate-ii-v9.1.iemod
   - name: lucy
     description: Lucy the Wyvern
-    components: [0]
+    components: [0] # Lucy la Wiverne: v5.0
     location:
       github_user: SpellholdStudios
       repository: Lucy_the_Wyvern
@@ -428,41 +532,52 @@ modules:
       asset: lucy-the-wyvern-v5.0.iemod
   - name: slandor
     description: The Minotaur and Lilacor
-    components: [0]
+    components: [0] # Le minotaure et Lilarcor: 2.0
     location:
       github_user: SpellholdStudios
       repository: The_Minotaur_and_Lilacor
       release: v2.0
       asset: the-minotaur-and-lilacor-2.0.iemod
   - name: reunion
-    components: [0]
+    components: [0] # Mod Reunion pour Baldur's Gate II: v7
     location:
       github_user: Pocket-Plane-Group
       repository: Reunion
       release: v7
       asset: the-reunion-v7.iemod
-  - name: arestorationp
-    description: Almateria's Restoration Project
-    components: [0, 1, 2, 3, 4, 5, 6, 8, 11, 12, 13]
+  - name: d0questpack
+    description: SimDing0's Quest Pack
+    installation:
+      before: alternatives
+    components: [0, 1, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+    original_location: http://mods.pocketplane.net/questpack-v35-win.zip
     location:
-      path: /home/mick/Games/modda-cache/static/ARPv8-4.zip
-  - name: ub
-    description: Unfinished Business
-    components: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 17, 18, 19, 20, 21, 22, 23, 24, 25]
-    location:
-      github_user: Pocket-Plane-Group
-      repository: UnfinishedBusiness
-      release: v28
-      asset: lin-ub-v28.tar.gz
-  - name: mih_fr
-    description: Made in Heaven - Fixes & Restoration; encouter restoration and tweaks
+      github_user: mleduque
+      repository: simding0_questpack
+      tag: v3.5
+      layout:
+        layout_type: multi_dir
+        dirs:
+          - questpack
+          - setup-d0questpack.tp2
+  - name: imoen_forever
     components:
-      - 4  # Minor Encounter Restorations (BG2)
-      - 12 # Artemis Entreri in Bodhi's Lair
-      - 13 # Minor Dialog Restorations (BG2)
-      - 10 # Allies are Better Prepared
+      - 0 # Imoen 4 Ever in BGII: Imoen Returns after Talking to Gaelan in Chapter 2: v9
+      - 1 # Imoen 4 Ever in BGII: Give Imoen Dialogue Content in SoA: v9
+      - 2 # Imoen 4 Ever in BGII: Yoshimo Comes to Brynnlaw: v9
+      - 11 # Imoen 4 Ever in SoD: Imoen Returns to PC in First Coalition Camp (bd1000): v9
+      - 12 # Imoen 4 Ever in SoD: Imoen Gives Better Reason to Stay Behind in Palace: v9
+      - 13 # Imoen 4 Ever in SoD: Play Cutscene With Imoen and Duke Jannath: v9
+      - 14 # Imoen 4 Ever in SoD: Give Imoen Dialogue Content in Chapters 8-12: v9
+      - 20 # Imoen's chest moves with the campaign, too: v9
+      - 9 # Imoen 4 Ever in BGII: Compatibility with Alternatives and Saerileth: v9
+    location:
+      github_user: Gibberlings3
+      repository: Imoen4Ever
+      release: v9
+      asset: imoen-4-ever-v9.iemod
   - name: alternatives
-    installation: s
+    installation:
       before: imoen4ever except imoen4ever compatibility (should be after alternative)
     components: [0]
     location:
@@ -472,24 +587,6 @@ modules:
       asset: Alternatives_v15.zip
   - name: imoen_forever
     components:
-    #- 0  # Imoen 4 Ever in BGII: Imoen returns at the beginning of chapter 2
-    #- 1  # BGII content: ~Give Imoen dialogue content in SoA~
-    #- 2  # BGII content: ~Yoshimo comes to Brynnlaw~
-    #- 3  # BGII content: ~Give Imoen protection spell in Chapters 2 & 3~
-    #- 9  # BGII content: ~Compatibility with Alternatives and Saerileth~
-    #- 10 # SoD component: ~Imoen remains in the Group in SoD~
-    #- 11 # second SoD part: Imoen returns to PC in first camp bd1000
-    #- 12 # third SoD part: Imoen gives be5th SoD part: Give Imoen dialogue content during chapters 8 to 12tter reason to stay behind in Palace
-    #- 13 # 4th SoD part: Play cutscene with Imoen an Duke Jannath
-    #- 14 # 5th SoD part: Give Imoen dialogue content during chapters 8 to 12
-    #- 15 # 6th SoD part: Imoen at the end of the game should be the one that was in party (SoD only)
-    location:
-      github_user: Gibberlings3
-      repository: Imoen4Ever
-      release: v9
-      asset: imoen-4-ever-v9.iemod
-  - name: imoen_forever
-    components:
     - 9  # BGII content: ~Compatibility with Alternatives and Saerileth~
   - name: c#anotherfinehell
     installation:
@@ -497,7 +594,10 @@ modules:
       after: Imoen4Ever
       before : Jastey's SoD Tweakpack
       incompatible: "any of the ending tweaks from Jastey's SoD Tweakpack component 8 SoD Ending: jastey's Tweaks"
-    components: ~
+    components:
+      - 0 # Another Fine Hell ( Un autre genre d'enfer ) - Fin optionnelle pour le Final de SoD et BGII : Alpha_220123
+      - 1 # Get the Hells Out( Mettre l'enfer a la porte ) - Option de quete et contenu etendu pour BGII: Alpha_220123
+      - 2 # Le coffre du PC et d'Imoen dans le Palais devraient garder leur contenu.: Alpha_220123
     location:
       github_user: Gitjas
       repository: Another_Fine_Hell
@@ -505,6 +605,11 @@ modules:
       asset: another-fine-hell-for-sod-alpha_220123.iemod
   - name: c#sodtweaks #[0, 1, 2, 5, 13]
     components:
+      - 3 # Ne manquez pas de dialogues entre NPC-PC -> Toujours activer tous les dialogues entre PNJ-PC: v8.1
+      - 5 # Plus de choix de dialogue et eviter les situations sans issue: v8.1
+      - 11 # Ajuster l'experience de depart du PC au debut de SoD, par Subtledoctor -> Regler l'experience de depart a 161,000: v8.1
+      - 20 # Fermer le portail depuis le Chateau Paldragon (Aun Argent survit toujours).: v8.1
+      - 21 # Hephernaan prend la cle de la crypte du Chateau Paldragon.: v8.1
       #- 1  # Ending Independent on PC Replies
       #- 3  # Do Not Miss NPC-PC Dialogues -> Activate All NPC-PC Dialogues Always
       #- 5  # More Dialogue Choices & Prevent Dead Ends:
@@ -527,27 +632,17 @@ modules:
       repository: DjinniCompanion
       release: v2.9
       asset: A7-DjinniCompanion-v2.9.iemod
-  - name: thecalling # install after stratagems or cdtweaks (even if quest mod)
+  - name: thecalling
     description: The calling
-    components: ~
+    components:
+      - 0 # The Calling (L'appel): v2
+      - 20 # Resolution pacifique a l'ile des loups-garous: v2
+      - 40 # Pack d'objets exotiques: v2
     location:
       github_user: Gibberlings3
       repository: The_Calling
       release: v2
       asset: lin-thecalling-v2.tar.gz
-  - name: d0questpack
-    description: SimDing0's Quest Pack
-    components: [0, 1, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
-    original_location: http://mods.pocketplane.net/questpack-v35-win.zip
-    location:
-      github_user: mleduque
-      repository: simding0_questpack
-      tag: v3.5
-      layout:
-        layout_type: multi_dir
-        dirs:
-          - questpack
-          - setup-d0questpack.tp2
   - name: bg1npc
     version: v27
     components:
@@ -586,6 +681,7 @@ modules:
       - 42 # Select Ajantis' Friendship Dialogues and Romance Speed: -> Speed: 30 minutes real time minimum between Dialogues
     location:
       path: /home/mick/Games/modda-cache/static/lin-ajantisbg2-v20.zip
+  - name: hiddenadventure
     components:
       - 0  # Lady Elgea's extended plot
       - 1  # Anomen's extended plot
@@ -804,6 +900,8 @@ modules:
     location:
       github_user: SpellholdStudios
       repository: TheSlitheringMenace
+      release: v4.0.0
+      asset: the-slithering-menace-v4.0.0.iemod
   - name: SotSC
     description: Shades of the Sword Coast
     version: 6.6
@@ -1118,7 +1216,7 @@ modules:
   - name: Bristlelick
     components: ~
     location:
-      pah: /home/mick/Games/modda-cache/static/Bristlelick v2.0.zip
+      path: /home/mick/Games/modda-cache/static/Bristlelick v2.0.zip
   - name: chattyimoen
     components:
       - 0 # Chatty Imoen : Repliques audio supplementaires
@@ -1338,13 +1436,7 @@ modules:
       patch:
         relative: patches/bg1npcsoa-nopdf.diff
         encoding: WIN1251
-  - name: TorturedSoulsLite
-    components:
-    location:
-      github_user: RealApxu
-      repository: TorturedSoulsLite
-      cmmit: 971c692527fa
-  -name: TS_sime
+  - name: TS_sime
     components:
     location:
       github_user: RealApxu
@@ -1497,45 +1589,7 @@ modules:
       repository: MadeInHeaven_ItemPack
       commit: bb41d18 # post v6
       patch:
-        relative: patches/mih_ip-sod-warnings.diff
-    add_conf: ????
-      file_name: mih_ip.ini
-      content: |
-        [general]
-        debug_variable=0
-        use_perl_natively=0
-        use_ee_half_damage=1
-
-        [item_pack]
-        max_stack_ammo=0
-        max_stack_thrown=0
-        max_stack_potions=0
-        max_stack_jewels=0
-        update_itemexcl_2da=1
-        visible_ioun_stones=1
-        brokk_buying_markup=80
-        brokk_selling_markup=120
-        phendra_buying_markup=70
-        phendra_selling_markup=130
-
-        charge_cap_wands=10
-        charge_cap_staves=16
-
-        [better_items]
-        baldurans_cloak_magic_resistance=25
-        baldurans_cloak_in_bg2=1
-
-        [extra_healing_in_bg1]
-        extra_healing_minimum=5
-        extra_healing_maximum=8
-        extra_healing_shops=1
-        extra_healing_durlag=1
-
-        [sensible_shops]
-        bg1_fix_large_shields=0
-        bg1_add_obscure_items=1
-        bg1_move_thieving_stuff=1
-        bg2_swap_hammers=1
+        relative: patches/mih_ip-sod-warnings+config.diff
   - name: msfm
     description: More Stuff For Mage - BG2 part
     components:
@@ -1729,17 +1783,20 @@ modules:
       repository: iiKeyNames
       branch: v2.1-fr
   - name: rr # rogue rebalancing
-    description: additional equipment & story  only
+    description: additional equipment only - component with WARNING
     components:
-      - index: 7     # Equipement supplementaire pour les voleurs et les bardes
-        ignore_warn: true # WARNING: no effects altered on MISC2P.ITM
-      - 8     # Equipement ameliorable
-      - 11    #  Rencontre avec les Elus de Cyric
-      - 12    #  Amelioration des Voleurs de l'Ombre
+      - 7     # Equipement supplementaire pour les voleurs et les bardes
+    ignore_warn: true # WARNING: no effects altered on MISC2P.ITM
     location:
       github_user: FredrikLindgren
       repository: rr
       branch: devel
+  - name: rr # rogue rebalancing
+    description: additional equipment upgrade  & story only
+    components:
+      - 8     # Equipement ameliorable
+      - 11    #  Rencontre avec les Elus de Cyric
+      - 12    #  Amelioration des Voleurs de l'Ombre
   - name: cdlore
     components:
       - 10 # Books Provide Lore Bonuses
@@ -2513,6 +2570,14 @@ modules:
       github_user: mleduque
       repository: s9-S9BGEENPCTWEAKS
       branch: master
+  - name: mih_tweaks
+    components:
+      #- ?? # Spell Level affects Saving Throws
+      #- ?? # Protection from Evil blocks Domination
+    location:
+      github_user: AngelGryph
+      repository: MadeInHeaven_Tweaks
+      commit:  ba35b10 # 2022-01-23
   - name : RelieveWizardSlayer
     components:
       - 0 # Relieve Wizard Slayer
