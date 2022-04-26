@@ -1,10 +1,9 @@
 --- Foundling/install.tph
 +++ Foundling/install.tph
-@@ -17,17 +17,7 @@ INCLUDE ~Foundling/lib/qd_multiclass.tpa~
- ////////////////////////////////FOUNDLING THE SHADOW ADEPT THIEF////////////////////////////////////
+@@ -24,16 +24,7 @@ END
  ////////////////////////////////////////////////////////////////////////////////////////////////////
  
--
+ 
 -PRINT ~~
 -PRINT @244 /* Foundling's class option:
 -Enter 1 to keep Foundling's original class (single-class mage: Shadow Adept)

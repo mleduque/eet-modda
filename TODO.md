@@ -1,5 +1,4 @@
 
-- Edit faith & power spheres to include mih_sp
 - Translate mih_sp
 - submit iwdification translation
 - traduire iiItems et iiKeyNames

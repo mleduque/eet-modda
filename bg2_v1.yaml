@@ -644,7 +644,6 @@ modules:
       release: v2
       asset: lin-thecalling-v2.tar.gz
   - name: bg1npc
-    version: v27
     components:
       - 0    # BG1 NPC Project : modifications necessaires
       - 10   # BG1 NPC Project : bavardages, quetes et interjections
@@ -665,7 +664,7 @@ modules:
     location:
       github_user: Gibberlings3
       repository: BG1NPC
-      commit: 2a1678c409
+      commit: 0e05ba2
   - name: garrick-tt
     components:
       - 0 # Garrick : les contes d'un troubadour
@@ -746,19 +745,22 @@ modules:
   - name: willowisp
     components: # 4 later
       - 0 # Will NPC, shaman stronghold and new shaman kit for BG2EE
-      - 1 # Change shaman .tlk string to remove "Ineligible for any stronghold" line
+      # would need translation
+      #- 1 # Change shaman .tlk string to remove "Ineligible for any stronghold" line
       - 2 # New items for shamans and undead NPCs
       - 3 # Optional: Drider and Dark Treant Enemies
       # 4 : crossmod banter later after installing other mods
-      - 6 # [CHEAT] Enable shaman stronghold for all classes
+      - 5 # [CHEAT] Enable shaman stronghold for all classes
     location:
       path: /home/mick/Games/modda-cache/static/Will of the Wisp v2.20.zip
   - name: paina
-    components: [0, 1]
+    components:
+      - 0 # Pai'Na NPC for BG:EE
+      - 1 # Alternate Portrait
     location:
       github_user: ArtemiusI
       repository: Pai-Na-NPC-mod-for-BG2-EE
-      branch: master
+      commit: 686fed9
   - name: Sirene_BG2
     components:
       - 0   # Sirene NPC for BG2:EE
@@ -769,21 +771,26 @@ modules:
       branch: no-prompt
     # prompt for portrait
   - name: bst
-    components: [0]
+    components:
+      - 0 # The BS Company presents Balduran's Seatower: vEAOB.6
     location:
       github_user: Gibberlings3
       repository: BS_Baldurans_Seatower
       tag: 1dcafad6f0bc # before vEAOB.8
       asset: bs-baldurans-seatower-veaob.6.iemod
   - name: "c#brage"
-    components: [0, 1]
+    components:
+      - 0 # Brage's Redemption - Brage Joinable NPC for Baldur's Gate: 7.2
+      - 1 # Assign the mod's portrait and soundset to the original Brage in game.: 7.2
     location:
       github_user: Gitjas
       repository: Brages_Redemption
       release: v7.2
       asset: brages-redemption-brage-npc-for-the-whole-baldurs-gate-epic-7.2.iemod
   - name: "c#solaufein"
-    components: ~
+    components:
+      - 0 # Solaufein's Rescue: Jastey's Solaufein NPC for BGII: 3.2
+      - 1 # Give Solaufein in Ust Natha the Mod's Portrait: 3.2
     location:
       github_user: Gitjas
       repository: Solaufeins_Rescue_NPC
@@ -791,33 +798,44 @@ modules:
       asset: solaufeins-rescue-jasteys-solaufein-npc-mod-for-bgii-3.2.iemod
   - name: "TangledIsle"
     description: "Athkatlan Grounds: The Tangled Oak Isle"
-    components: ~
+    components:
+      - 0 # L'ile du Chene Enchevetre : une nouvelle zone d'Athkatla -> Oui , mais ne pas patcher les sauvegardes existantes: v2.26
     location:
       path: /home/mick/Games/modda-cache/static/TangledIsle v2.6.zip
   - name: "g3anniversary"
-    components: [0] # The Gibberlings Three Anniversary Mod
+    components:
+      - 0 # The Gibberlings Three Anniversary Mod
     location:
       github_user: Gibberlings3
       repository: g3anniversary
       release: V12
       asset: lin-g3anniversary-v12.tar.gz
-  - name: "DC"
+  - name: DC
     description: Dungeon Crawl
-    components: [0]
+    components:
+      - 0 # Dungeon Crawl: v13.1
     location:
       github_user: Pocket-Plane-Group
       repository: Dungeon_Crawl
       release: v13.1
       asset: DungeonCrawl_v13-1.zip
-  - name: "ToA"
+  - name: ToA
     description: Tales of Anegh
-    components: [1, 10, 20, 30, 40, 50]
+    components:
+      - 1 # Tales of Anegh (Weidu): v2.6
+      - 10 # Creature Balancing: v2.6
+      - 20 # AREA Balancing: v2.6
+      - 30 # Dialog & Script Balancing: v2.6
+      - 40 # Stores Balancing: v2.6
+      - 50 # Item Balancing: v2.6
     location:
       github_user: Gitjas
       repository: ToA
       branch: master
   - name: FishingForTrouble
-    components: [0, 1]
+    components:
+      - 0 # Fishing for Trouble by Yovaneth: v3.2.8
+      - 1 # Fishing for Trouble - Major character portraits: v3.2.8
     location:
       github_user: InfinityMods
       repository: FishingForTrouble
@@ -825,18 +843,21 @@ modules:
       asset: fishing-for-trouble-v3.2.8.iemod
   - name: "tod"
     description: Tower O)f Deception
-    components: [0, 1, 2]
+    components:
+      - 0 # Mod Tower of Deception (necessite Throne of Bhaal): v4.0.5
+      - 1 # Gardien ameliore de l'Eclat Astral: v4.0.5
+      - 2 # Rencontre avec Ustrain: v4.0.5
     location:
       github_user: InfinityMods
       repository: TowerOfDeception
       release: v4.0.5
       asset: tower-of-deception-v4.0.5.iemod
-  - name: "SOS" # Shadows Over Soubar
+  - name: SOS # Shadows Over Soubar
     components: [0, 1]
     location:
       github_user: SpellholdStudios
       repository: Shadows_over_Soubar
-      tag: dca61c01378b862 # post v1.16
+      commit: dca61c01378b862 # post v1.16
   - name: "keldorn_rom"
     components: [0, 2, 8]
     location:
@@ -2173,7 +2194,7 @@ modules:
     location:
       github_user: mleduque
       repository: Faiths_and_Powers
-      branch: 0.83.5-fr
+      branch: 0.83.--fr
       layout:
           layout_type: multi_dir
           dirs:
