@@ -24,19 +24,22 @@
 +LOAD_TRA ~%MOD_FOLDER%/Tra/%LANGUAGE%/setup.tra~
 --- SkitiaNPCs/Lib/Vienxay_BG2.tpa
 +++ SkitiaNPCs/Lib/Vienxay_BG2.tpa
-@@ -368,14 +368,8 @@ COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3Vie25J.d~	 USING ~%MOD_FOLDER%/
+@@ -388,17 +388,7 @@ COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3Vie25J.d~	 USING ~%MOD_FOLDER%/
   // Contains Samir and X3Drow's dialogue. 
   
     // Portraits 
 -PRINT ~Choose a portrait for Vienxay (check mod folder for portraits):~
- 
+-
 -PRINT ~Please choose one of the following:
 -[1] Default by Crisshasart
 -[2] Alt by Aeries1986
 -[3] Old Version (NWN)~
 -
 -OUTER_SPRINT ~portrait~ ~placeholder_value~
-+OUTER_SPRINT ~portrait~ 1
- OUTER_WHILE (!(IS_AN_INT ~portrait~) OR (~portrait~ > 0x3) OR (~portrait~ < 0x1)) BEGIN
-   ACTION_READLN ~portrait~
- END
+-OUTER_WHILE (!(IS_AN_INT ~portrait~) OR (~portrait~ > 0x3) OR (~portrait~ < 0x1)) BEGIN
+-  ACTION_READLN ~portrait~
+-END
++   OUTER_SPRINT ~portrait~ 1
+       ACTION_IF ("portrait" = 1) THEN BEGIN
+ 		COPY ~%MOD_FOLDER%/Portraits/VienxayL.bmp~ ~override/X3VieL.bmp~
+ 		COPY ~%MOD_FOLDER%/Portraits/VienxayM.bmp~ ~override/X3VieM.bmp~

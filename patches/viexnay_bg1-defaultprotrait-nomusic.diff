@@ -4,32 +4,32 @@
  INCLUDE ~Vienxay/library/vien_sod.tpa~ 
  END
  
--PRINT ~Choose a portrait for Vienxay (check mod folder for portraits):~
+-PRINT @9
 -
--PRINT ~Please choose one of the following:
--[1] Default by Crisshasart
--[2] Alt by Aeries1986
--[3] Old Version (NWN)~
+-PRINT @10
 -
 -OUTER_SPRINT ~portrait~ ~placeholder_value~
+-OUTER_WHILE (!(IS_AN_INT ~portrait~) OR (~portrait~ > 0x3) OR (~portrait~ < 0x1)) BEGIN
+-  ACTION_READLN ~portrait~
+-END
 +OUTER_SPRINT ~portrait~ 1
- OUTER_WHILE (!(IS_AN_INT ~portrait~) OR (~portrait~ > 0x3) OR (~portrait~ < 0x1)) BEGIN
-   ACTION_READLN ~portrait~
- END
-@@ -90,15 +83,8 @@ END
-       PRINT ~Portrait: Old Version (NWN)~
+       ACTION_IF ("portrait" = 1) THEN BEGIN
+ 		COPY ~%MOD_FOLDER%/Portraits/VienxayL.bmp~ ~override/VienxayL.bmp~
+ 		COPY ~%MOD_FOLDER%/Portraits/VienxayM.bmp~ ~override/VienxayM.bmp~
+@@ -88,15 +81,7 @@ END
  	  END
  
--		
--PRINT ~Would you like to install Music for Vienxay? These will play during banters with the player.~
+ 		
+-PRINT @14
 -
--PRINT ~Please choose one of the following:
--[1] Yes
--[2] No
--~
- 
+-PRINT @15
+-
 -OUTER_SPRINT ~music~ ~placeholder_value~
-+OUTER_SPRINT ~music~ 2
- OUTER_WHILE (!(IS_AN_INT ~music~) OR (~music~ > 0x2) OR (~music~ < 0x1)) BEGIN
-   PRINT ~Please select 1 or 2 and press Enter.~
-   ACTION_READLN ~music~
+-OUTER_WHILE (!(IS_AN_INT ~music~) OR (~music~ > 0x2) OR (~music~ < 0x1)) BEGIN
+-  PRINT @16
+-  ACTION_READLN ~music~
+-END
++    OUTER_SPRINT ~music~ 1
+       ACTION_IF ("music" = 1) THEN BEGIN
+ 	COPY_EXISTING ~sw1h01.itm~ ~override/bg1npcmusic.g3~
+ 

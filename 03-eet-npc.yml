@@ -414,9 +414,6 @@ modules:
       repository: IEP_Extended_Banter
       release: v5.8
       asset: iep-extended-banters-v5.8.iemod
-  - name: willowisp # only banters
-    description: Will'o Wisp - banters
-    components: [4] # banters with Sirene, Pai'na, Foundling
   - name: crossmodbg2
     description: Crossmod Banter Pack
     components:

@@ -687,10 +687,8 @@ modules:
     location:
       github_user: Austin-BG
       repository: HTaM
-      release: v.4.2.3
+      release: v.4.2.4-nopdf
       asset: heroes-thieves-and-moneylenders-4.2.3.iemod
-      patch:
-        relative: patches/herthimoney-nopdf.diff
   - name: "snakes" # The slithering Menace
     components: [0]
     location:
