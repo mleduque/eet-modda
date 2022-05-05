@@ -42,16 +42,16 @@ modules:
     add_conf:
       file_name: bgee_dir.txt
       content: ../../bg1/game
-  - name: LeUI-SoD
+  - name: LeUI
     components:
       - 0 # lefreut's Enhanced UI (SoD skin) - Core component
       - 1 # lefreut's Enhanced UI (SoD skin) - BG2 vanilla bams for spells
       - 2 # lefreut's Enhanced UI (SoD skin) - BG2 vanilla fonts for descriptions
     location:
       github_user: r-e-d
-      repository: LeUI-SoD
-      release: v4.4.4
-      asset: lefreuts-enhanced-ui-sod-skin-4.4.4.iemod
+      repository: LeUI
+      release: v4.4.5
+      asset: lefreuts-enhanced-ui-bg2ee-skin-4.4.5.iemod
   - name: LightingPack
     components:
       - 2 # Shader script files for lighting control -> Moderately increased contrast, brightness and gamma (recommended)
@@ -1568,11 +1568,9 @@ modules:
     components:
       - 10 # Icewind Dale Casting Graphics (Andyr): Release Candidate 2
       - 60 # Two Handed Axe Item Pack: Release Candidate 2
-      - 90 # Expanded Polymorph Self: Release Candidate 2
       - 30 # IWD Arcane Spell Pack: Release Candidate 2
       - 40 # IWD Divine Spell Pack: Release Candidate 2
       - 50 # IWD Class Updates: Bard: Add IWD Bard Songs: Release Candidate 2
-      - 100 # IWD Class Updates: Paladin: IWD Abilities and Skills: Release Candidate 2
       - 120 # IWD Class Updates: Thief: Evasion: Release Candidate 2
       - 140 # Randomized Enemy Equipment -> Add High Quality Items: Release Candidate 2
       - 150 # IWD Class Updates: Bard: Use IWD Spell Progression: Release Candidate 2
@@ -1584,20 +1582,25 @@ modules:
       github_user: mleduque
       repository: iwdification
       branch: french-tra
+  - name: iwdification
+    description: iwdification -components with warnings
+    components:
+      - 90 # Expanded Polymorph Self: Release Candidate 2
+      - 100 # IWD Class Updates: Paladin: IWD Abilities and Skills: Release Candidate 2
   - name : Weasels!
     components:
       - 0
     location:
       github_user: mleduque
       repository: lava_weasels
-      branch: v3.3
+      tag: v3.3
   - name: Magic_Battles_Revised
     components:
       - 10 # Revised Magic Battles
     location:
       github_user: mleduque
       repository: magic_battles_revised
-      branch: 1.4-fr
+      branch: 1.4.1-fr
       patch:
         relative: patches/mbr_spell_thrust_lv2.diff
   - name: A7-TotLM-BG2EE
@@ -1615,11 +1618,12 @@ modules:
     components:
       - 30 # Reduire les points d'experience des monstres et des quetes. -> Reduction de 25 pour cent
   - name: Unofficial Item Pack
+    original_thread: https://forums.beamdog.com/discussion/56567/mod-bgii-ee-unofficial-item-pack
     components:
     location:
-      github_user: mleduque-not sod items
+      github_user: mleduque
       repository: edvin_unofficial_item_pack
-      tag: v2.7b-french
+      branch: v2.7b-french
   - name: item_rev
     description: Item revisions ; main component only
     components:
@@ -1627,54 +1631,31 @@ modules:
     location: # temporary, hope for maintenance and releases soon
       github_user: mleduque
       repository: ItemRevisions
-      branch: run/v4b10/2022-04-02
-    add_conf:
-      file_name: settings.ini
-      content: |
-        // Main Component
-        install_tobex                   = 0 // installs ToBEx; automatically skipped if ToBEx is already installed and up to date or it's not a non-EE ToB game
-        install_sensible_lore           = 1 // balances lore gains so classes other than bard have a better chance of identifying items
-        install_ioun_stone_animations   = 1 // new ioun stone animations by WoRm
-        install_item_reallocation       = 0 // removes two items from bonus merchant and equips them on enemies, matching SCS behaviour
-
-        // Store Revisions
-        install_masterwork_weapons      = 0 // +1 weapons are changed to masterwork; outdated - mostly functional, but not recommended (use SCS component instead)
-
-        // Revised Armor - Won't be used (component not installed) Prefer scale of balance version
-        armor_dexterity_penalty         = 1 // adds dexterity penalties to armor
-        armor_speed_factor_penalty      = 0 // ditto for attack speed factor
-        armor_physical_resistance       = 1 // adds physical resistance bonus
-        armor_ac_modifiers              = 1 // modifies AC bonuses vs different weapon types (slashing, piercing etc.)
-
-        // Spellcasting in Armor - Same
-        armor_casting_speed_clerics     = 0 // divine spellcasters will be affected as well ("Casting Speed Penalties for Arcane Casters" subcomponent only)
-        armor_free_casting              = 0 // cheat version, will override other options and enable unrestricted spellcasting in armor (either subcomponent)
-        bards_armor_spell_penalties	  = 0 // Bards get the normal penalties to casting when using any armor lighter than chain mail
-
-        // Weapon Changes
-        halberds_can_slash_too          = 1 // adds a slashing mode to halberds
-        flails_have_extended_range      = 1 // extends flails' range to 2
-        dnd_3e_scimitars                = 1 // sets scimitars' damage to 1d6 (from 1d8) and add +5% critical chance
-
-        // Revised Backstabbing
-        add_backstabbing_penalties 	  = 0 // gives backstab penalties to certain weapons, overridden by "Penalties with Thief-only Weapons" if chosen.
+      branch: run_v4b10_2022-04-02
   - name: mih_fr
     description: Made in Heaven - Fixes & Restorations ; items restorations only
     components:
       - 2  # item restorations
   - name: mih_ip
+    description: Made In Heaven Item Pack
     components:
-      #- 0  # Made in Heaven: Item Pack
-      #- 8  # Turn all Dragon Scale Armor into Scale Mail
-      #- 10 # Miscellaneous Item Improvements
-      #- 11 # Add Potions of Extra Healing in BG1
-      #- 13 # Sensible Shops (see readme)
+      # many ignored
+      - 0 # Made in Heaven: Item Pack: v7
+      - 2 # Planescape Torment items for Baldur's Gate 1 & 2: v7
+      - 8 # Change item type of Holy Symbols -> Holy Symbols are Belts: v7
+      - 10 # Turn all Dragon Scale Armor into Scale Mail: v7
+      - 13 # Add Potions of Extra Healing in BG1: v7
+      - 15 # Sensible Shops (see readme): v7
     location:
       github_user: AngelGryph
       repository: MadeInHeaven_ItemPack
       commit: bb41d18 # post v6
       patch:
         relative: patches/mih_ip-sod-warnings+config.diff
+  - name: mih_ip
+    description: Made In Heaven Item Pack - components with warning
+    components:
+      - 1 # Icewind Dale items for Baldur's Gate 1 & 2: v7
   - name: msfm
     description: More Stuff For Mage - BG2 part
     components:
@@ -1731,7 +1712,9 @@ modules:
       asset: ruad-rofhessa-item-upgrade-v29.4.0.iemod
   - name: rolles
     description: Rolles Safyer
-    components: [0, 10]
+    components:
+      - 0 # Rolles Safyer: v5.0.5
+      - 10 # Bag of Holding in Irenicus Dungeon: v5.0.5
     location:
       github_user: SpellholdStudios
       repository: Rolles
@@ -1746,7 +1729,12 @@ modules:
       release: v5.0
       asset: the-unusual-oddities-shop-5.0.iemod
   - name: hammers
-    components: [0, 15, 25, 35,50]
+    components:
+      - 0 # Thrown Hammers: v6.1.0
+      - 15 # Thrown Spiritual Hammers: v6.1.0
+      - 25 # Normal throwing hammers: v6.1.0
+      - 35 # +1 throwing weapons: v6.1.0
+      - 50 # Additional magic items: v6.1.0
     location:
       github_user: Sampsca
       repository: ThrownHammers
@@ -1829,26 +1817,31 @@ modules:
       repository: Saradas_Magic_for_BG2
       release: v2.0.0
       asset: saradas-magic-for-bg2-v2.0.0.iemod
-  - name: trovador
-    components: ~
-    location:
-      github_user: SpellholdStudios
-      repository: Trovador_REO
-      release: v2.5.0
-      asset: trovador-reo-v2.5.0.iemod
   - name: rttitempack
-    components: ~
+    components:
+      - 0
     location:
       path: /home/mick/Games/modda-cache/static/RTTItemPack_v1.3.zip
   - name: iwditempack
-    components: ~
+    components:
+      - 0 # Talisman du Loup Noir
+      - 1 # Chaine de Fureur de Drakkas
+      - 2 # Insigne de la Maison Despana
+      - 3 # Brise-Barriques du Shaengarne
+      - 4 # Harnois plain de Kresselack
+      - 5 # Manteau de la Tempete Prochaine
+      - 6 # Fleau aux Trois Cranes
+      - 7 # Epieu de Frene Blanc
+      - 8 # Douze Pas
+      - 9 # Torche eternelle de Belib
+      - 10 # Ceinture liante du Corbeau Noir
+      - 11 # Amulette du jeune Ned
     location:
       path: /home/mick/Games/modda-cache/static/IWD Item Pack.zip
   - name: Mystigan
     components:
     location:
-      http: https://akadis.baldursgateworld.fr/Mystigan/zip/Mystigan1.6.zip
-      rename: Mystigan1.6.zip
+      path: /home/mick/Games/modda-cache/static/Mystigan1.6.zip
   - name: OfHeirloomsAndClasses
     components: ~
     location:
@@ -2201,7 +2194,7 @@ modules:
     location:
       github_user: mleduque
       repository: TomeAndBlood
-      tag: "0.9.30-fr"
+      tag: "0.9.31-fr"
   - name: TomeAndBlood
     description: Tome And Blood (warning components)
     components:
@@ -2309,7 +2302,7 @@ modules:
     location:
       github_user: mleduque
       repository: Might_and_Guile
-      commit: 4.21-fr
+      commit: 4.21.1-fr
   - name: might_and_guile
     description: Might And Guile - Other components
     components:
@@ -3031,7 +3024,7 @@ modules:
     location:
       github_user: mleduque
       repository: kjeron_DUAL_TO_KIT
-      tag: V0.34
+      tag: v0.35
   - name: better_spell_visuals
     components: ~
     location:

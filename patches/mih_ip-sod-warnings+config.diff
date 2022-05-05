@@ -1,27 +1,6 @@
---- mih_ip/shared/summons/more_summons.tpa     2021-08-19 23:06:15.322120824 +0200
-+++ mih_ip/shared/summons/more_summons.tpa      2021-08-19 23:06:26.822483450 +0200
-@@ -1,6 +1,6 @@
- DEFINE_ACTION_FUNCTION more_summons
- BEGIN
--  ACTION_IF GAME_IS "bgee sod"
-+  ACTION_IF GAME_IS "bgee"
-   BEGIN
-     OUTER_TEXT_SPRINT game "BGEE"
-   END
---- mih_ip/lib/missing_files.tpa       2021-08-19 23:05:41.973069040 +0200
-+++ mih_ip/lib/missing_files.tpa        2021-08-19 23:05:50.245329969 +0200
-@@ -29,7 +29,7 @@
- 
- // Creature files used that are missing in some game versions.
- 
--ACTION_IF GAME_IS "bgee sod"
-+ACTION_IF GAME_IS "bgee"
- BEGIN
-   OUTER_TEXT_SPRINT game "BGEE"
- END
 --- mih_ip/lib/lib_ini.tpa        2021-08-20 09:43:06.927530954 +0200
 +++ mih_ip/lib/lib_ini.tpa        2021-08-20 09:43:19.475925300 +0200
-@@ -43,7 +43,7 @@
+@@ -43,7 +43,7 @@ BEGIN
          PATCH_IF !VARIABLE_IS_SET $SFO_reserved_ini_hash(~%ini%~) BEGIN
             SPRINT value 0
             PATCH_IF !silent BEGIN
@@ -30,20 +9,9 @@
  		   END
          END ELSE BEGIN
             SPRINT value $SFO_reserved_ini_hash(~%ini%~)
---- mih_ip/tweaks/item_improvements.tpa        2021-08-21 14:08:55.341802610 +0200
-+++ mih_ip/tweaks/item_improvements.tpa        2021-08-21 13:54:10.510081884 +0200
-@@ -132,6 +132,7 @@
-   LAUNCH_ACTION_FUNCTION externalise_item_ability
-     STR_VAR
-     item	= "potn11"
-+    spell	= "potn11"
-   END
- 
-   MAKE_PATCH
-   
 --- mih_ip/mih_ip.ini
 +++ mih_ip/mih_ip.ini
-@@ -13,17 +13,17 @@ max_stack_ammo=0
+@@ -13,17 +13,19 @@ max_stack_ammo=0
  max_stack_thrown=0
  max_stack_potions=0
  max_stack_jewels=0
@@ -54,16 +22,18 @@
 -brokk_selling_markup=130
 +brokk_buying_markup=80
 +brokk_selling_markup=120
++phendra_buying_markup=70
++phendra_selling_markup=130
  
  [better_items]
 -baldurans_cloak_magic_resistance=10
-+baldurans_cloak_magic_resistance=20
++baldurans_cloak_magic_resistance=25
  
  [extra_healing_in_bg1]
 -extra_healing_minimum=2
 -extra_healing_maximum=5
 +extra_healing_minimum=5
-+extra_healing_maximum=8
++extra_healing_maximum=10
  extra_healing_shops=1
  extra_healing_durlag=1
  

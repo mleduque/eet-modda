@@ -311,7 +311,7 @@ modules:
     location:
       github_user: mleduque
       repository: kjeron_DUAL_TO_KIT
-      tag: V0.34
+      tag: v0.35
   - name: ee_cosmetic_enhancements
     components: ~
     location:
