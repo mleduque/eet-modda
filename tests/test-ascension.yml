@@ -1,0 +1,23 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^english", "american english"]
+modules:
+  - name: eefixpack
+    components:
+      - 0 # Correctifs essentiels: Beta 1
+    location:
+      github_user: Gibberlings3
+      repository: EE_Fixpack
+      commit: f0547dd
+  - name: ascension
+    description: ascension
+    components:
+      - 50    # Improved Slayer Transformation
+    location:
+      github_user:  InfinityMods
+      repository: Ascension
+      release: "2.0.23"
+      asset: ascension-2.0.23.iemod

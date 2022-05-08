@@ -12,7 +12,7 @@ modules:
     location:
       github_user: Gibberlings3
       repository: EE_Fixpack
-      commit: 089f5297b4 # french branch
+      commit: b5c3cd43355 # french branch 22-05-07
   - name: correctfrbg2ee
     components:
       - 10 # Correction de la traduction de Baldur's Gate II : Enhanced Edition: 0.7
@@ -37,6 +37,8 @@ modules:
           dirs:
             - EET
             - EET_end
+      patch:
+        relative: patches/eet_location_and_denoise.diff
     components:
       - 0 # EET core (importation de ressource)
     add_conf:
@@ -96,6 +98,7 @@ modules:
       repository: Ascension
       release: "2.0.23"
       asset: ascension-2.0.23.iemod
+    ignore_warnings: true
   - name: ascension
     description: ascension - the other components
     components:
@@ -103,7 +106,8 @@ modules:
       - 20    # Improved Sarevok-Player Interactions
       - 30    # Improved Imoen-Player Interactions in Throne of Bhaal
       - 40    # Restored Bhaalspawn Powers
-      - 50    # Improved Slayer Transformation
+      # issue with eefixpack - 22-05-08
+      #- 50    # Improved Slayer Transformation
       - 60    # Expanded Epilogues for Bioware NPCs -> David Gaider's expanded epilogues for Bioware NPCs
       #- 1200  # Tougher Demogorgon
       #- 1300  # Tougher Gromnir
@@ -161,15 +165,15 @@ modules:
   - name: mih_fr
     description: Made in Heaven - Fixes & Restoration; 'fixes' part only
     installation:
-      general: at least component 5must be after ub
+      general: at least component 5 must be after ub
     components:
-      - 0 # BG1 Fixpack
-      - 1 # SoD Fixpack
+      #- 0 # BG1 Fixpack
+      #- 1 # SoD Fixpack
       - 2 # BG2 Fixpack
-      - 5  # Restaurations de rencontres pour BG2: v1
-      - 6  # Restaurations de dialogues BG2: v1
-      - 7  # Artemis Entreri dans l'antre de Bodhi: v1
-      - 8 # Allies are Better Prepared
+      - 5 # Restaurations de rencontres pour BG2: v1
+      - 6 # Restaurations de dialogues BG2: v1
+      - 7 # Artemis Entreri dans l'antre de Bodhi: v1
+      #- 8 # Allies are Better Prepared
     location:
       github_user: mleduque
       repository: MadeInHeaven_FixesAndRestorations
@@ -188,8 +192,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: The_Boareskyr_Bridge_Scene
-      release: Alpha_220425
-      asset: the-boareskyr-bridge-scene-alpha_220425.iemod
+      release: v1
+      asset: the-boareskyr-bridge-scene-v1.iemod
   - name: turnabout
     components:
       - 0 # Ascension: Turnabout
@@ -436,6 +440,7 @@ modules:
     description: Baldur's Gate Romantic Encounters
     comment: did a "install all" this time
     components:
+      - 103 # Composant principal : quantite de... hum... details croustillants, et style BG ou textes explicites ! (necessaire) -> Version "style BG"  [contenu adulte] et faire apparaitre/installer les composants avec avertissement.: 9.0
       - 1 # Le briefing de Bardolan, par berelinde: 9.0
       - 2 # Du temps libre pour La Balafre, par jastey: 9.0
       - 3 # L'obsession de Kim, par jastey (AVERTISSEMENT - consultez le fichier README !): 9.0
@@ -462,7 +467,7 @@ modules:
       - 24 # Le repaire du Moissonneur, par Lava (contenu adulte): 9.0
       - 25 # Le grand Zudini, par Kulyok (contenu adulte): 9.0
       - 26 # Le messager, par Thimblerig: 9.0
-      - 27 # Ender Sai : la recompense du heros, par Thimblerig (AVERTISSEMENT - consultez le fichier README !): 9
+      - 27 # Ender Sai : la recompense du heros, par Thimblerig (AVERTISSEMENT - consultez le fichier README !): 9.0
       - 28 # Les romanciers, par Thimblerig: 9.0
       - 29 # Les honnetes mensonges des Deux Rives, par Lava: 9.0
       - 30 # Le dilemme d'un necromancien, par jastey: 9.0
@@ -953,7 +958,7 @@ modules:
       - 1000 # The Beaurin Legacy for BG2:SoA & ToB & BGII:EE
       - 3010 # Minyae's Portrait -> Change Minyae's portrait to alternative by TamikaProud at DeviantArt
     location:
-      path: /home/mick/Games/modda-cache/static/lin-TheBeaurinLegacy-v4.0.tar.gz
+      path: /home/mick/Games/modda-cache/static/lin-TheBeaurinLegacy-v5.0.tar.gz
   - name: "voloquest" # IM10
     components: [0]
     location:
@@ -1471,13 +1476,13 @@ modules:
     components:
       - 0 # Water Gardens. New Athkatla's district & new quests: 13.5
       - 2 # Shar-Teel NPC in BG2. "Nightbringer of Shar" (SoA): 13.5
-      - 6 # Brave Sir Garrick NPC in BG2 (SoA): 13.5
-      - 11 # ToB-part for Shar-Teel or/and Yeslick, Garrick, Branwen, Skie, Eldoth: 13.5
+      # issues with multibards
+      #- 6 # Brave Sir Garrick NPC in BG2 (SoA): 13.5
       - 20 # Coran & Safana Chronicles (SoA & ToB): 13.5
       - 35 # Kagain's Corner (SoA & ToB) -> Store with Vanilla Items Only: 13.5
       - 40 # Faldorn's New Leaf (SoA & ToB): 13.5
       - 45 # Xzar and Monty Murder Mysteries (SoA & ToB): 13.5
-      - 83 # Make Garrick a Skald: 13.5
+      #- 83 # Make Garrick a Skald: 13.5
       - 85 # Make Safana a Swashbuckler: 13.5
       - 87 # Inter Component Banter Pack: 13.5
     location:
@@ -1488,6 +1493,7 @@ modules:
     description: BG1 NPCs in BG2 - components with warnings
     components:
       - 11 # ToB-part for Shar-Teel or/and Yeslick, Garrick, Branwen, Skie, Eldoth: 13.5
+    ignore_warnings: true
   - name: TS_sime
     components:
       - 0 # Vlad's Sime NPC: 0.8
@@ -1517,7 +1523,8 @@ modules:
   - name: SmilingImpCrossBanterMod
     components:
       - 0 # Shar-Teel Banters: 1.4
-      - 2 # Garrick Banters: 1.4
+      # Garrick not installed
+      #- 2 # Garrick Banters: 1.4
       - 16 # "Wilson Chonicles" Mod - Cross Banters: 1.4
     location:
       github_user: Austin-BG
@@ -1531,7 +1538,7 @@ modules:
   - name: mih_fr
     description: Made in Heaven - Fixes & Restorations ; spell restorations only
     components:
-      - 3  # spell restorations
+      - 4  # spell restorations
   - name: mih_sp
     components:
       - 3 # Restaurations d'objets: v1
@@ -1561,9 +1568,9 @@ modules:
       - 60  # Update Spellbooks of Joinable NPCs
       #- 65   # Revised Warrior HLAs
     location:
-      github_user: mleduque
+      github_user: Gibberlings3
       repository: SpellRevisions
-      branch: b19-update-fr
+      commit: 6aea10a
   - name: iwdification
     components:
       - 10 # Icewind Dale Casting Graphics (Andyr): Release Candidate 2
@@ -1635,7 +1642,7 @@ modules:
   - name: mih_fr
     description: Made in Heaven - Fixes & Restorations ; items restorations only
     components:
-      - 2  # item restorations
+      - 3  # item restorations
   - name: mih_ip
     description: Made In Heaven Item Pack
     components:
@@ -1840,26 +1847,22 @@ modules:
       path: /home/mick/Games/modda-cache/static/IWD Item Pack.zip
   - name: Mystigan
     components:
+      - 0 # Marchand Mystigan (ToB requis)
     location:
       path: /home/mick/Games/modda-cache/static/Mystigan1.6.zip
   - name: OfHeirloomsAndClasses
-    components: ~
+    components:
+      - 0 # Of Heirlooms and Classes - new artifacts forgeable by Cromwell: v1.11
     location:
       path: /home/mick/Games/modda-cache/static/OfHeirloomsAndClasses v1.11.zip
   - name: iiItemMod
-    components: ~
+    components:
+      - 1 # Items [version 5]: v5.2
     location:
       github_user: btigi
       repository: iiItem
       release: v5.2
       asset: iiitemmod-v5.2.iemod
-  - name: iiKeyNames
-    description: Renames the keys after use
-    components: ~
-    location:
-      github_user: mleduque
-      repository: iiKeyNames
-      branch: v2.1-fr
   - name: rr # rogue rebalancing
     description: additional equipment only - component with WARNING
     components:
@@ -1884,14 +1887,18 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Lore_From_Learning
-      commit: 979ba99 # post-v2, adds multi-bard support
+      release: v4
+      asset: lin-cdlore-v4.tar.gz
   - name: POISON_NO_BYPASS
     components:
       - 3 # Limited Exclusions(Anti-magic, AoE, Gaze): Mirror Image or Stoneskin
     location:
       github_user: mleduque
       repository: kjeron_poison_no_bypass
-      tag: v1.0
+      branch: workaround_greythedog
+      layout:
+        layout_type: single_dir_plus_tp2
+        tp2: Setup-POISON_NO_BYPASS.tp2
   - name: polyvorp
     components:
       - 10 # Rebalanced Vorpal Weapons (affects enemies and players)
@@ -1915,12 +1922,11 @@ modules:
     components:
       - 1 # Add New Forgotten Armament Items into the Game
       - 8 # Replace Boots of Speed (Paws of the Cheetah)
-      - 10 # Improved Spears -> prefer scales of balance version
+      #- 10 # Improved Spears -> prefer scales of balance version
     location:
-      github_user:  Gibberlings3
+      github_user:  mleduque
       repository: Forgotten-Armament
-      release: 0.5-beta
-      asset: lin-forgotten-armament-v0.5-beta.zip
+      branch: keep_some_boots
 
   #########
   # Kits
@@ -2043,65 +2049,70 @@ modules:
   - name: d5_random_tweaks
     description: SubtleDoctor's Random Tweaks
     components:
-      #- 2105 # Ajouter un effet d'aveuglement pour 1 round à Vapeur Colorée
-      #- 2108 # Changer Protection contre la Pétrification en 'Rétrovision'
-      #- 1151 # Réduire les dégâts mais améliorer la Cécité pour le Soleil Ardent de Spell Revisions
-      #- 1152 # Améliorer Lueur Féérique
-      #- 2212 # Déplacer Image Miroir au niveau 3
-      #- 2213 # Ajouter des effets persistants au Nuage Puant de Spell Revisions
-      #- 2215 # Modifier Toile d'Araignée pour ralentir au lieu d'immobiliser
-      #- 2217 # Changer Incinérateur d'Agannazar en Projectiles Ardents de Melf
-      #- 2224 # Améliorer Poussière Scintillante
-      #- 2251 # Ajouter un effet de Surdité au toucher à Baton Décuplé
-      #- 1202 # Modifier Peau d'écorce pour bloquer une attaque par round
-      #- 1207 # Modifier Baies magiques pour en faire une régénération hors combat
-      #- 1212 # Ajuster Ralentissement du Poison
-      #- 1251 # Améliorer les dégâts et modifier le type de dégâts pour Lance d'Alicorne
-      #- 2324 # Modifier Immobilisation des Morts-Vivants et Contrôle des Morts-Vivants pour ignorer la résistance à la magie
-      #- 1323 # Améliorer le temps d'incantation pour Exaltation et Clarté Spirituelle
-      #- 1351 # Ajouter des effets de Lueur Féérique et Lenteur au toucher de la Lame de Lune
-      #- 1451 # make smashing wave party-friendly WARNING: no effects altered on SPPR429.spl
-      #- 2209 # Modifier Chance pour affecter tout le groupe
-      #- 2413 # Autoriser la cible de Sphère Résistante d'Otiluke à utiliser son inventaire
-      #- 2418 # Rendre Bouclier de Feu et Gaine Acide de Mestil dissipable par Brêche
-      #- 2451 # Modifier les monstres de Convocation d'Ombre plus illusoires
-      #- 1404 # Remplacer Neutralisation du Poison en 'Suppression des Afflictions'
-      #- 2508 # Améliorer Vagues de Fatigue de Spell Revisions
-      #- 2518 # Changer le type de dégâts et l'école de Lame Fantomatique
-      #- 2523 # Remplacer Feu du Soleil par 'Tempête de Projectiles'
-      #- 1603 # Rendre BarriÃšre de Lames dissipable par Brêche
-      #- 1611 # Modifier Souvenir Merveilleux pour restaurer tous les sorts de niveau 1 et 2
-      #- 1613 # Modifier Miroir Physique pour bloquer une attaque toutes les 3 secondes
-      #- 1614 # Rendre Orbe Desséchant de Sol plus facile à lancer
-      #- 2708 # Remplacer Manteau par 'Peau de Fer'
-      #- 1710 # Ajouter un effet de Lenteur à Parole Sacrée
-      #- 2808 # Rendre Moment de Prescience dissipable par Brêche
-      #- 2811 # Déplacer Symbole, Terreur au niveau 7
-      #- 2916 # Déplacer Changement de Forme au niveau 8
-      #- 2915 # Déplacer Lame Noire du Désastre au niveau 8
-      #- 2914 # Ajouter un effet de mort instantanée à Absorption d'Énergie
-      #- 2923 # Remplacer Convocation de Planétaire en Convocation de Djinn Noble
-      #- 3000 # Donner aux armes créées par les sort 2 attaques par round (APR)
-      #- 3010 # Ajouter une immunité aux attaques sournoises à l'Anneau de Perception du danger
-      #- 3020 # Donner une vraie déviation des projectile aux Bracelets antiprojectiles
-      #- 3030 # Améliorer les armes avec effet de détonation
-      #- 3040 # Ajouter un effet de Peau d'Écorce 'révisé' à l'Armure de la Foi +3
-      #- 3050 # Rendre le Bâton d'Absorption d'Item Revisions réellement instantanné
-      #- 3060 # Modifier la Cape de Gargouille pour appliquer un effet de Peau de Pierre au lieu d'un bonus à la CA
-      #- 3070 # Rendre les marteaux de jet nains utilisables par les non-nains
-      #- 3080 # Améliorer la Harpe d'Azlaer et la Harpe de Methild
-      #- 3092 # Dégrader l'amulette d'Edwin -> Limiter les emplacements de sorts bonus aux sorts de niveau 7
-      #- 4010 # Ajouter un jet de sauvegarde pour les effets d'absorption de niveau
-      #- 4020 # Améliorer les valeurs de caractéristiques des monstres
-      #- 4031 # Augmenter les points de vie des dragons -> 50% de points de vie en plus
-      #- 5000 # Réviser les batailles magiques
-      #- 5010 # Modifier les sorts de soin et similaires pour ignorer les protections contre les sorts
-      #- 5031 # Modifier Perce-Bouclier -> Perce-Bouclier lance juste Brêche
-      #- 2305 # Modifer Rapidité et Lenteur pour qu'ils s'annulent l'un l'autre WARNING: no effects altered on potn14.spl
+      # last selection : "1.5.4.1"
+      - 5010 # Modifier les sorts de soin et similaires pour ignorer les protections contre les sorts: 1.5.4
+      - 2105 # Ajouter un effet d'aveuglement pour 1 round Ã  Vapeur colorÃ©e: 1.5.4
+      - 2108 # Changer Protection contre la pÃ©trification en 'RÃ©trovision': 1.5.4
+      - 2116 # Autoriser les cibles de Sommeil Ã  se rÃ©veiller quand elles sont frappÃ©es: 1.5.4
+      - 1151 # RÃ©duire les dÃ©gÃ¢ts mais amÃ©liorer la CÃ©citÃ© pour le Soleil ardent de Spell Revisions: 1.5.4
+      - 1152 # AmÃ©liorer Lueur fÃ©erique: 1.5.4
+      - 2201 # Ajouter un Ã©vitement des projectiles Ã  Flou: 1.5.4
+      - 2209 # Modifier Chance pour affecter tout le groupe: 1.5.4
+      - 2212 # DÃ©placer Image miroir au niveau 3: 1.5.4
+      - 2213 # Ajouter des effets persistants au Nuage puant de Spell Revisions: 1.5.4
+      - 2215 # Modifier Toile d'araignÃ©e pour ralentir au lieu d'immobiliser: 1.5.4
+      - 2217 # Changer IncinÃ©rateur d'Agannazar en Projectiles ardents de Melf: 1.5.4
+      - 2224 # AmÃ©liorer PoussiÃšre scintillante: 1.5.4
+      - 2251 # Ajouter un effet de SurditÃ© au toucher Ã  BÃ¢ton dÃ©cuplÃ©: 1.5.4
+      - 1207 # Modifier Baies magiques pour en faire une rÃ©gÃ©nÃ©ration hors combat: 1.5.4
+      - 1212 # Ajuster Ralentissement du Poison: 1.5.4
+      - 1251 # AmÃ©liorer les dÃ©gÃ¢ts et modifier le type de dÃ©gÃ¢ts pour Lance d'alicorne: 1.5.4
+      - 2321 # Permettre Ã  Annulation des protections de cibler les "acteurs": 1.5.4
+      - 2324 # Modifier Immobilisation des morts-vivants et ContrÃŽle des morts-vivants pour ignorer la rÃ©sistance Ã  la magie: 1.5.4
+      - 1323 # AmÃ©liorer le temps d'incantation pour Exaltation et ClartÃ© spirituelle: 1.5.4
+      - 1351 # Ajouter des effets de Lueur fÃ©erique et Lenteur au toucher de la Lame de lune: 1.5.4
+      - 1352 # Augmenter la portÃ©e de Lance de glace: 1.5.4
+      - 2413 # Autoriser la cible de SphÃšre rÃ©sistante d'Otiluke Ã  utiliser son inventaire: 1.5.4
+      - 2418 # Rendre Bouclier de feu et Gaine acide de Mestil dissipable par BrÃšche: 1.5.4
+      - 2451 # Modifier les monstres de Convocation d'ombre plus illusoires: 1.5.4
+      - 1404 # Remplacer Neutralisation du poison par Suppression des afflictions: 1.5.4
+      - 1451 # Modifier Vague destructrice pour ne pas affecter le groupe: 1.5.4
+      - 2508 # AmÃ©liorer Vagues de fatigue de Spell Revisions: 1.5.4
+      - 2518 # Changer le type de dÃ©gÃ¢ts et l'Ã©cole de Lame fantomatique: 1.5.4
+      - 2523 # Remplacer Feu du soleil par Â«Â TempÃªte de projectilesÂ Â»: 1.5.4
+      - 1505 # Modifier Vision VÃ©ritable pour affecter le groupe: 1.5.4
+      - 1603 # Rendre BarriÃšre de lames dissipable par BrÃšche: 1.5.4
+      - 1611 # Modifier Souvenir merveilleux pour restaurer tous les sorts de niveau 1 et 2: 1.5.4
+      - 1614 # Rendre Orbe dessÃ©chant de Sol plus facile Ã  lancer: 1.5.4
+      - 2711 # Ajuster les effets de Chaos: 1.5.4
+      - 1710 # Ajouter un effet de Lenteur Ã  Parole sacrÃ©e: 1.5.4
+      - 2808 # Rendre Moment de prescience dissipable par BrÃšche: 1.5.4
+      - 2811 # DÃ©placer Symbole, terreur au niveauÂ 7: 1.5.4
+      - 2916 # DÃ©placer Changement de forme au niveauÂ 8: 1.5.4
+      - 2915 # DÃ©placer Lame noire du dÃ©sastre au niveauÂ 8: 1.5.4
+      - 2914 # Ajouter un effet de mort instantanÃ©e Ã  Absorption d'Ã©nergie: 1.5.4
+      - 3000 # Donner aux armes crÃ©Ã©es par les sorts 2 attaques par round (APR): 1.5.4
+      - 3010 # Ajouter une immunitÃ© aux attaques sournoises Ã  l'Anneau de perception du danger: 1.5.4
+      - 3020 # Donner une vraie dÃ©viation des projectiles aux Bracelets antiprojectiles: 1.5.4
+      - 3030 # AmÃ©liorer les armes avec effet de dÃ©tonation: 1.5.4
+      - 3040 # Ajouter un effet de Peau d'Ã©corce 'rÃ©visÃ©' Ã  l'Armure de la foi +3: 1.5.4
+      - 3050 # Rendre le BÃ¢ton d'absorption d'Item Revisions rÃ©ellement instantanÃ©: 1.5.4
+      - 3060 # Modifier la Cape de gargouille pour appliquer un effet de Peau de pierre au lieu d'un bonus Ã  la classe d'armure: 1.5.4
+      - 3070 # Rendre les marteaux de jet nains utilisables par les non-nains: 1.5.4
+      - 3080 # AmÃ©liorer la Harpe d'Azlaer et la Harpe de Methild: 1.5.4
+      - 3100 # Remplacer la rÃ©sistance Ã  la magie par de la mÃ©tamagie pour la Robe de la toile: 1.5.4
+      - 4010 # Ajouter un jet de sauvegarde pour les effets d'absorption de niveau: 1.5.4
+      - 4020 # AmÃ©liorer les valeurs de caractÃ©ristiques des monstres: 1.5.4
     location:
-      github_user: mleduque
+      github_user: subtledoctor
       repository: d5_Random_Tweaks
-      branch: 1.5.3-fr
+      tag: "1.5.4"
+  - name: d5_random_tweaks
+    description: SubtleDoctor's Random Tweaks - components with warnings
+    components:
+      - 2305 # Modifier RapiditÃ© et Lenteur pour qu'ils s'annulent l'un l'autre: 1.5.4
+      - 1609 # Modifier Aube illusoire pour ignorer la rÃ©sistance Ã  la magie: 1.5.4
+      - 1707 # Modifier Rayon de soleil pour ignorer la rÃ©sistance Ã  la magie: 1.5.4
   - name: wsr # hla only
     description: Wizard Slayer Rebalancing - HLA
     components:
@@ -2160,7 +2171,14 @@ modules:
       asset: lin-song_and_silence-v16.tar.gz
   - name: spstuff
     description: Sorcerer's Place Collection
-    components: ~
+    components:
+      #- 0 # Kit de Mystique Sylvain, par Polar Bear <---- en erreur
+      - 1 # Kit de Maitre-Lame, par Drizzt1180: v12
+      - 2 # Kit du Chevalier de la Mort, par Drizzt1180: v12
+      - 3 # Kit du Ninja Wushi, par Drizzt1180: v12
+      - 4 # Pack d'Objets pour Baldur's Gate 2, par Creslyn: v12
+      - 5 # Archer de Sylvanus, par Drizzt1180: v12
+      - 6 # Poing des Arcanes, par Drizzt1180: v12
     location:
       github_user: Gibberlings3
       repository: SP_Collection
@@ -2194,7 +2212,7 @@ modules:
     location:
       github_user: mleduque
       repository: TomeAndBlood
-      tag: "0.9.31-fr"
+      branch: "0.9.32-fr"
   - name: TomeAndBlood
     description: Tome And Blood (warning components)
     components:
@@ -2229,29 +2247,29 @@ modules:
       - 200 # Modification des Druides: 8.1
       - 203 # Installer le kit de Druide de Maitre des Vases: 8.1
       - 403 # Installer le kit de Rodeur d'Archer Sylvain: 8.1
-      - 406 # Installer le kit de Rodeur Sauvage: 8.1
+      #- 406 # Installer le kit de Rodeur Sauvage: 8.1
       - 409 # Installer le kit de Rodeur de Coureur des Bois: 8.1
       - 412 # Installer le kit de Rodeur de Vengeur: 8.1
-      - 415 # Installer le kit de Rodeur de Coureur Sauvage: 8.1
+      #- 415 # Installer le kit de Rodeur de Coureur Sauvage: 8.1
     location:
       github_user: TotoR115
       repository: Divine_Remix
       commit: a443b16
   - name: Faiths_and_Powers
     components:
-      #- 21 # Créer un système de sphères -> FnP : le système de sphères original de Faiths & Powers: 0.81.2
-      #- 31 # Installer les kits de clerc: 0.81.2
-      #- 33 # Installer les kits de druide: 0.81.2
-      #- 35 # Installer les kts de paladin: 0.81.2
-      #- 37 # Installer les kits de rôdeur: 0.81.2
-      #- 75 # Modifier l'utilisabilité des armes et les compétences d'armes des prêtres: 0.81.2
-      #- 80 # Appliquer le système de sphères: 0.81.2
-      #- 85 # Appliquer les kits de FnP aux PNJ: 0.81.2
-    #ignore_warnings: true # all except 31 emit no effect changed/added
+      - 25 # Créer un système de sphères -> Nouveau FnP(nuFnP) : un nouveau système de sphères (moins de sphères, plus équilibré globalement, plus proche du PnP): 0.83.6
+      - 31 # Installer les kits de clerc: 0.83.6
+      - 33 # Installer les kits de druide: 0.83.6
+      - 35 # Installer les kits de paladin: 0.83.6
+      - 37 # Installer les kits de rôdeur: 0.83.6
+      - 75 # Modifier l'utilisabilité des armes et les compétences d'armes des prêtres: 0.83.6
+      - 80 # Appliquer le système de sphères (REQUIS pour que le système de sphères fonctionne): 0.83.6
+      - 85 # Appliquer les kits de FnP aux PNJ: 0.83.6
+    ignore_warnings: true # all except 31 emit no effect changed/added
     location:
       github_user: mleduque
       repository: Faiths_and_Powers
-      branch: 0.83.--fr
+      branch: 0.83.6-fr
       layout:
           layout_type: multi_dir
           dirs:
@@ -2262,8 +2280,9 @@ modules:
       after: Tome & Blood and Faiths & Powers
       before: Might & Guile and Faiths & Powers Multiclass.
     components:
-      #- 100 # Change All Casters to 5E System
-      #- 900 # Set Bonus Spell Slot Items to Work for 5E Casters
+      - 100 # Convertir tous les lanceurs de sorts au système 5E: 1.9.1
+      #- 900 # Objects accordant des emplacements de sorts bonus et lanceurs de sorts 5E -> Bonus à la foisauxsorts mémrorisables et aux emplacements de lancer de sorts: 1.9.1
+      - 902 # Objects accordant des emplacements de sorts bonus et lanceurs de sorts 5E -> Bonus seulement aux emplacements de lancer de sorts: 1.9.1
     ignore_warnings: true # no effect altered on... for each component
     location:
       github_user: mleduque
@@ -2287,13 +2306,22 @@ modules:
       - 33 # Installer le kit de guerrier : Chevalier Noir
     ignore_warnings: true # o effect altered on...
   - name: Will_to_Power
-    components: ~
+    description: Will to power - the first component warns
+    components:
+      - 200 # Ajouter le Psioniste, voleur/psion: 2.0
     location:
-      github_user: UnearthedArcana
+      github_user: mleduque
       repository: Will_to_Power
       branch: 2.0-fr
       patch:
         relative: patches/will_to_power_tweaks.diff
+  - name: Will_to_Power
+    description: Will to power - the rest
+    components:
+      - 300 # Ajouter le Guerrier Psychique, guerrier/psion: 2.0
+      - 400 # Ajouter le Psypher, rôdeur/psion: 2.0
+      - 500 # Ajouter le Cerebromant, mage/psion: 2.0
+      - 900 # Mode Dark Sun : Tout le monde est un talent natif: 2.0
   - name: might_and_guile
     description: Might And Guile - Main component (warns)
     components:
@@ -2465,6 +2493,13 @@ modules:
       github_user: OlvynChuru
       repository: Olvyn-Tweaks
       commit: 2603c3d
+  - name: BG2EE_AI_Denoised_Areas
+    components:
+      - 0
+    location:
+      github_user: WillScarlettOhara
+      repository: BG2EE_AI_Denoised_Areas
+      tag: v220506
   - name: DruidGroveMakeover
     components:
       - 0
@@ -2913,8 +2948,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Skills-and-Abilities
-      release: 0.6.3-alpha
-      asset: lin-skills-and-abilities-v0.6.3-alpha.zip
+      release: 0.6.4-alpha
+      asset: lin-skills-and-abilities-v0.6.4-alpha.zip
       patch:
         relative: patches/skills-and-abilities-prof-points.diff
   - name: tnt
@@ -3011,8 +3046,7 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Bardic_Appraisal
-      release: v2
-      asset: bardic-appraisal-v2.iemod
+      commit: 979ba99 # post-v2, adds multi-bard support
   - name: DUAL_TO_KIT
     description: "Kjeron's 'Dual to Kit'"
     original_thread: https://forums.beamdog.com/discussion/comment/985679#Comment_985679

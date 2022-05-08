@@ -1,0 +1,8 @@
+--- EET/tbl/compatibility.tbl
++++ EET/tbl/compatibility.tbl
+@@ -23,3 +23,5 @@ SOA 1                //The Stone of Askavar (BP-BGT Worldmap version)
+ KARATUR 1            //T'was a Slow Boat from Kara-Tur
+ VERRSZA 0            //Verr'Sza NPC
+ WHITE 0              //White NPC for BGT/Tutu/EE
++
++BGEE_AI_Denoised_Areas 0

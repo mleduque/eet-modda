@@ -76,3 +76,10 @@ modules:
       github_user: mleduque
       repository: Sirene-NPC
       branch: 2.8-noprompt
+  - name: BGEE_AI_Denoised_Areas
+    components:
+      - 0
+    location:
+      github_user: WillScarlettOhara
+      repository: BGEE_AI_Denoised_Areas
+      tag: v220506

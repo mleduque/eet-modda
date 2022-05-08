@@ -39,8 +39,8 @@ modules:
     location:
       github_user: Gitjas
       repository: The_Boareskyr_Bridge_Scene
-      release: Alpha_220425
-      asset: the-boareskyr-bridge-scene-alpha_220425.iemod
+      release: v1
+      asset: the-boareskyr-bridge-scene-v1.iemod
   - name: turnabout
     components:
       - 0 # Ascension: Turnabout
@@ -722,10 +722,10 @@ modules:
       asset: butchery-v5.0.0.iemod
   - name: "TheBeaurinLegacy"
     components:
-      - 1000 # The Beaurin Legacy for BG2:SoA & ToB & BGII:EE
-      - 3010 # Minyae's Portrait -> Change Minyae's portrait to alternative by TamikaProud at DeviantArt
+      #- 1000 # The Beaurin Legacy for BG2:SoA & ToB & BGII:EE
+      #- 3010 # Minyae's Portrait -> Change Minyae's portrait to alternative by TamikaProud at DeviantArt
     location:
-      path: /home/mick/Games/modda-cache/static/lin-TheBeaurinLegacy-v4.0.tar.gz
+      path: /home/mick/Games/modda-cache/static/lin-TheBeaurinLegacy-v5.0.tar.gz
   - name: "voloquest" # IM10
     components: [0]
     location:

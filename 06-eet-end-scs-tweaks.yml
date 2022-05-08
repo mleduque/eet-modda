@@ -186,8 +186,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Skills-and-Abilities
-      release: 0.6.3-alpha
-      asset: lin-skills-and-abilities-v0.6.3-alpha.zip
+      release: 0.6.4-alpha
+      asset: lin-skills-and-abilities-v0.6.4-alpha.zip
       patch:
         relative: patches/skills-and-abilities-prof-points.diff
   - name: tnt
@@ -298,8 +298,7 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Bardic_Appraisal
-      release: v2
-      asset: bardic-appraisal-v2.iemod
+      commit: 979ba99 # post-v2, adds multi-bard support
   - name: DUAL_TO_KIT
     description: "Kjeron's 'Dual to Kit'"
     original_thread: https://forums.beamdog.com/discussion/comment/985679#Comment_985679
