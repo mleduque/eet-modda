@@ -10,9 +10,9 @@ modules:
       - 0 # Correctifs essentiels: Beta 1
       - 2 # Mises à jour du texte du jeu: Beta 1
     location:
-      github_user: Gibberlings3
+      github_user: mleduque
       repository: EE_Fixpack
-      commit: b5c3cd43355 # french branch 22-05-07
+      commit: 72034d6 # french branch 2022-05-26
   - name: correctfrbg2ee
     components:
       - 10 # Correction de la traduction de Baldur's Gate II : Enhanced Edition: 0.7
@@ -52,8 +52,8 @@ modules:
     location:
       github_user: r-e-d
       repository: LeUI
-      release: v4.4.5
-      asset: lefreuts-enhanced-ui-bg2ee-skin-4.4.5.iemod
+      release: v4.4.6
+      asset: lefreuts-enhanced-ui-bg2ee-skin-4.4.6.iemod
   - name: LightingPack
     components:
       - 2 # Shader script files for lighting control -> Moderately increased contrast, brightness and gamma (recommended)
@@ -64,18 +64,20 @@ modules:
       asset: lin-A7-LightingPackEE-v3.1.zip
   - name: EEUITweaks
     components:
-      - 1000 # Mods Options
-      # - 1010 # Hidden Game Options -> defer to A7-Hidden
-      - 1050 # Adul's Unhide Chargen Options
-      - 1070 # Faydark's Abilities Auto-Roller/GrimLefourbe's BG2 UI
-      #- 1100 # Display max proficiency limits
-      - 3000 # Leveling Progress Bars Tweaks
-      - 3010 # Leveling Progress Bars Options
+      - 1000 # Mods Options: 3.9
+      - 1040 # Portrait Selectors -> Mr2150's Portrait Picker (Scaleable UI): 3.9
+      - 1042 # Mr2150's Backup M_BG.lua: 3.9
+      - 1044 # Mr2150's Update Portraits: 3.9
+      - 1050 # Adul's Unhide Chargen Options: 3.9
+      - 1070 # Faydark's Abilities Auto-Roller/GrimLefourbe's BG2 UI: 3.9
+      - 2000 # Transparent Sidebars: 3.9
+      - 2030 # Adul's Better Quick Loot: 3.9
+      - 3000 # Leveling Progress Bars Tweaks: 3.9
     location:
       github_user: r-e-d
       repository: EEUITweaks
-      release: v3.8.1
-      asset: eeuitweaks-3.8.1.iemod
+      release: v3.9
+      asset: eeuitweaks-3.9.iemod
   - name: HiddenGameplayOptions
     version: v3.0
     components:
@@ -389,43 +391,43 @@ modules:
     components:
       - 0 # Colours of Infinity: Tales of the Deep Gardens -> Yes, but don't patch the existing save games: 12.7
     location:
-      path: /home/mick/Games/modda-cache/static/Tales of the Deep Gardens v12.7.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Tales of the Deep Gardens v12.81.zip
   - name: Innershade
     description: "Colours of Infinity: Innershade"
     components:
       - 0 # Colours of Infinity: Innershade -> Yes, but don't patch the existing save games: 11.0
     location:
-      path: /home/mick/Games/modda-cache/static/Innershade v11.0.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Innershade v11.1.zip
   - name: WhiteQueen
     description: "Colours of Infinity: The White Queen"
     components:
       - 0 # Colours of Infinity - The White Queen -> Yes, but don't patch the existing save games: 6.9
     location:
-      path: /home/mick/Games/modda-cache/static/The White Queen v6.9.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/The White Queen v6.92.zip
   - name: ISNF
     description: "Colours of Infinity: I Shall Never Forget"
     components:
       - 0 # Colours of Infinity: I Shall Never Forget: 6.0
     location:
-      path: /home/mick/Games/modda-cache/static/I Shall Never Forget v6.0.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/I Shall Never Forget v6.1.zip
   - name: SouthernEdge
     description: "Athkatlan Grounds: Southern Edge"
     components:
       - 0 # Southern Edge: the new district of Athkatla -> Yes, but don't patch the existing save games: 3.4
     location:
-      path: /home/mick/Games/modda-cache/static/SouthernEdge v3.4.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/SouthernEdge v3.5.zip
   - name: Ooze
     description: "Athkatlan Grounds: The Ooze’s Lounge"
     components:
       - 0 # Le Salon des vases : une nouvelle zone sous les bas quartiers d'Athkatla: 2.92
     location:
-      path: /home/mick/Games/modda-cache/static/Oozes Lounge v2.92.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Oozes Lounge v2.93.zip
   - name: BridgesBlock
     description: "Athkatlan Grounds: Bridge’s Block"
     components:
       - 0 # Les terres d'Athkatlan : Le Bloc du Pont: 1.3
     location:
-      path: /home/mick/Games/modda-cache/static/BridgesBlock v1.3.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/BridgesBlock v1.4.zip
   - name: SirinesCall
     description: The Lure of the Sirine's Call
     components:
@@ -769,11 +771,11 @@ modules:
   - name: Sirene_BG2
     components:
       - 0   # Sirene NPC for BG2:EE
-      - 103 # Choose an portrait for Sirene (check mod folder for portraits) -> Alternate Light Armor portrait by Sirick
+      - 2 # Choose an portrait for Sirene (check mod folder for portraits) -> Alternate Light Armor portrait by Sirick
     location:
-      github_user: mleduque
+      github_user: ArtemiusI
       repository: Sirene-NPC-for-BG2-EE
-      branch: no-prompt
+      tag: v2.01
     # prompt for portrait
   - name: bst
     components:
@@ -806,7 +808,7 @@ modules:
     components:
       - 0 # L'ile du Chene Enchevetre : une nouvelle zone d'Athkatla -> Oui , mais ne pas patcher les sauvegardes existantes: v2.26
     location:
-      path: /home/mick/Games/modda-cache/static/TangledIsle v2.6.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Tangled Isle v3.0.zip
   - name: "g3anniversary"
     components:
       - 0 # The Gibberlings Three Anniversary Mod
@@ -918,7 +920,7 @@ modules:
     location:
       github_user: mleduque
       repository: HTaM
-      tag: v.4.2.4-nopdf
+      tag: v.4.2.6-nopdf
   - name: "snakes"
     description: The slithering Menace
     components: [0]
@@ -946,6 +948,7 @@ modules:
       - 20 # Rencontre avec Groumf et Bourrinos devant le donjon de Firkraag [a installer avant Stratagems]: v5.0.0
       - 21 # Rencontre avec Groumf et Bourrinos a Brynnlaw [a installer avant Stratagems]: v5.0.0
       - 22 # Rencontre avec Groumf et Bourrinos dans les Trefonds Obscurs [a installer avant Stratagems]: v5.0.0
+      - 30 # Revisited fight against Wraith Sarevok in the Abyss
       - 32 # Musiques de combat dans les zones sans musique [a installer avant ou apres Stratagems]: v5.0.0
       - 40 # Creatures de DrAzTiK [a installer avant Stratagems, composant indispensable pour les suivants !]: v5.0.0
     location:
@@ -958,7 +961,7 @@ modules:
       - 1000 # The Beaurin Legacy for BG2:SoA & ToB & BGII:EE
       - 3010 # Minyae's Portrait -> Change Minyae's portrait to alternative by TamikaProud at DeviantArt
     location:
-      path: /home/mick/Games/modda-cache/static/lin-TheBeaurinLegacy-v5.0.tar.gz
+      path: /home/mick/Games/modda-cache/static/lin-TheBeaurinLegacy-v5.1.tar.gz
   - name: "voloquest" # IM10
     components: [0]
     location:
@@ -1081,7 +1084,7 @@ modules:
     location:
       github_user: Skitia
       repository: Helga-BG1
-      commit: 1a333f3
+      commit: 53b399b
       patch:
         relative: patches/helga_bg1-defaultportrait-nomusic.diff
   - name: Kale
@@ -1089,7 +1092,7 @@ modules:
     location:
       github_user: Skitia
       repository: Kale-BG1
-      commit: 7e427fb
+      commit: 06a25be
       patch:
         relative: patches/kale_bg1-nomusic.diff
     #prompt for music (2. No)
@@ -1098,7 +1101,7 @@ modules:
     location:
       github_user: Skitia
       repository: Recorder-BG1
-      commit: d38ab73
+      commit: cde8d60
   - name: Vienxay
     components: [0]
     location:
@@ -1467,7 +1470,7 @@ modules:
     location:
       github_user: Gitjas
       repository: Road_To_Discovery_for_SoD
-      release: v0.4Beta
+      release: v0.6Beta
       asset: road-to-discovery-for-sod-0.4-.beta.iemod
   - name: BG1NPCSoA
     description: BG1 NPCs in BG2
@@ -1476,19 +1479,19 @@ modules:
     components:
       - 0 # Water Gardens. New Athkatla's district & new quests: 13.5
       - 2 # Shar-Teel NPC in BG2. "Nightbringer of Shar" (SoA): 13.5
-      # issues with multibards
-      #- 6 # Brave Sir Garrick NPC in BG2 (SoA): 13.5
+      ## issues with multibards
+      ##- 6 # Brave Sir Garrick NPC in BG2 (SoA): 13.5
       - 20 # Coran & Safana Chronicles (SoA & ToB): 13.5
       - 35 # Kagain's Corner (SoA & ToB) -> Store with Vanilla Items Only: 13.5
       - 40 # Faldorn's New Leaf (SoA & ToB): 13.5
       - 45 # Xzar and Monty Murder Mysteries (SoA & ToB): 13.5
-      #- 83 # Make Garrick a Skald: 13.5
-      - 85 # Make Safana a Swashbuckler: 13.5
+      ##- 83 # Make Garrick a Skald: 13.5
+      #- 85 # Make Safana a Swashbuckler: 13.5
       - 87 # Inter Component Banter Pack: 13.5
     location:
       github_user: mleduque
       repository: TBGCoM_BG1NPCSoA
-      tag: v13.5
+      tag: v13.6
   - name: BG1NPCSoA
     description: BG1 NPCs in BG2 - components with warnings
     components:
@@ -1570,7 +1573,7 @@ modules:
     location:
       github_user: Gibberlings3
       repository: SpellRevisions
-      commit: 6aea10a
+      commit: 404a56a
   - name: iwdification
     components:
       - 10 # Icewind Dale Casting Graphics (Andyr): Release Candidate 2
@@ -1588,12 +1591,13 @@ modules:
     location:
       github_user: mleduque
       repository: iwdification
-      branch: french-tra
+      branch: v4-fr
   - name: iwdification
     description: iwdification -components with warnings
     components:
       - 90 # Expanded Polymorph Self: Release Candidate 2
       - 100 # IWD Class Updates: Paladin: IWD Abilities and Skills: Release Candidate 2
+    ignore_warnings: true
   - name : Weasels!
     components:
       - 0
@@ -1627,6 +1631,12 @@ modules:
   - name: Unofficial Item Pack
     original_thread: https://forums.beamdog.com/discussion/56567/mod-bgii-ee-unofficial-item-pack
     components:
+      - 0 # Unofficial Item Pack
+      - 2 # Gourmet d'Outreterre
+      - 4 # Nouveaux objets
+      - 5 # Objets de SoD
+      - 6 # Meilleure boutique d'archerie
+      - 7 # RÃ©vision d'Action libre
     location:
       github_user: mleduque
       repository: edvin_unofficial_item_pack
@@ -1663,6 +1673,7 @@ modules:
     description: Made In Heaven Item Pack - components with warning
     components:
       - 1 # Icewind Dale items for Baldur's Gate 1 & 2: v7
+    ignore_warnings: true
   - name: msfm
     description: More Stuff For Mage - BG2 part
     components:
@@ -1751,8 +1762,8 @@ modules:
     location:
       github_user: Pocket-Plane-Group
       repository: Under-Respresented_Items
-      release: v8
-      asset: lin-underrep-v8.tar.gz
+      release: v9
+      asset: lin-underrep-v9.tar.gz
   - name: alchemy
     description: jan's alchemy
     components: [0]
@@ -1889,16 +1900,6 @@ modules:
       repository: Lore_From_Learning
       release: v4
       asset: lin-cdlore-v4.tar.gz
-  - name: POISON_NO_BYPASS
-    components:
-      - 3 # Limited Exclusions(Anti-magic, AoE, Gaze): Mirror Image or Stoneskin
-    location:
-      github_user: mleduque
-      repository: kjeron_poison_no_bypass
-      branch: workaround_greythedog
-      layout:
-        layout_type: single_dir_plus_tp2
-        tp2: Setup-POISON_NO_BYPASS.tp2
   - name: polyvorp
     components:
       - 10 # Rebalanced Vorpal Weapons (affects enemies and players)
@@ -1937,62 +1938,43 @@ modules:
       github_user: Raduziel
       repository: MilitiaOfficer-Kit
       tag: "1.8"
-  - name: Mercenary
-    components: [0]
-    location:
-      github_user: Raduziel
-      repository: Mercenary-Kit
-      tag: "3.1"
   - name: ArtisansKitpack
     components:
-      - 10 # Artisan's Kitpack: Arcane Archer Fighter Kit
-      - 11 # Install Arcane Archer/Mage multiclass kit
-      - 20 # Artisan's Kitpack: Vanguard Fighter Kit
-      #- 60 # Artisan's Kitpack: Dark Hunter Ranger Kit
-      - 70 # Artisan's Kitpack: Divine Champion Paladin Kit
-      - 80 # Artisan's Kitpack: Mystic Fire Paladin Kit
-      - 100 # Artisan's Kitpack: Elementalist Druid Kit
-      #- 110 # Artisan's Kitpack: Hivemaster Druid Kit
-      - 120 # Artisan's Kitpack: Rogue Archer Thief Kit
-      #- 130 # Artisan's Kitpack: Magekiller Thief Kit
-      - 140 # Artisan's Kitpack: Trickster Thief Kit
-      #- 160 # Artisan's Kitpack: Pale Master Sorcerer Kit
-      - 180 # Artisan's Kitpack: Warhorn Shaman Kit
+      - 1 # Artisan's Kitpack: Enable All Classes for All Races: 2.5
+      - 2 # Artisan's Kitpack: Enable Multi-Classes for -> All Races: 2.5
+      - 1000 # Artisan's Kitpack: Arcane Archer Fighter Kit: 2.5
+      - 1001 # Artisan's Kitpack: Arcane Archer (Fighter/Mage): 2.5
+      - 1103 # Artisan's Kitpack: (BG:EE) Make Skitia's Emily an -> Arcane Archer / Mage: 2.5
+      - 1105 # Artisan's Kitpack: (BG2:EE) Make Skitia's Emily an -> Arcane Archer / Mage: 2.5
+      - 1002 # Artisan's Kitpack: Vanguard Fighter Kit: 2.5
+      - 1101 # Artisan's Kitpack: Give Khalid the Vanguard Kit: 2.5
+      - 2001 # Artisan's Kitpack: Rashemi Berserker Ranger Kit for Minsc: 2.5
+      - 3000 # Artisan's Kitpack: Paladin Overhaul: 2.5
+      - 3005 # Artisan's Kitpack: Martyr Paladin Kit: 2.5
+      - 5001 # Artisan's Kitpack: Elementalist Druid Kit: 2.5
+      - 5101 # Artisan's Kitpack: Give Cernd the Elementalist Kit: 2.5
+      - 5003 # Artisan's Kitpack: Red Wizard Mage Kit for Edwin: 2.5
+      - 7001 # Artisan's Kitpack: Rogue Archer Thief Kit: 2.5
+      - 9001 # Artisan's Kitpack: Warhorn Shaman Kit: 2.5
+      - 10001 # Artisan's Kitpack: Monk Revisions: 2.5
+      - 20000 # Artisan's Kitpack: Eldritch Knight (Fighter / Mage Kit): 2.5
+      - 20001 # Artisan's Kitpack: Arcane Trickster (Mage / Thief Kit)
     location:
-      github_user: mleduque
+      github_user: ArtemiusI
       repository: The-Artisan-s-Kitpack
-      branch: no-prompt
-  - name: BearWalker
-    components: [0]
+      commit: 49a8096 # post 2.5
+      patch:
+        relative: patches/ArtisansKitPack-fix_2da.diff
+  - name: A7-ChaosSorcerer
+    components:
+      - 0 # Kit d'Ensorceleur du Chaos
+      - 30 # Ajouter des artefacts primordiaux
     location:
-      github_user: thisisulb
-      repository: BearWalkerKit
-      branch: master
-  - name: Dreamwalker
-    components: [0]
-    location:
-      github_user: thisisulb
-      repository: DreamWalkerShamanKit
-      branch: master
-  - name: SpiritHunter
-    components: [0]
-    location:
-      github_user: thisisulb
-      repository: SpiritHunterShamanKit
-      branch: master
-    ignore_warnings: true # WARNING: no effects altered on UB_SH00.ITM
-  - name: Spiritwalker
-    components: [0]
-    location:
-      github_user: thisisulb
-      repository: SpiritwalkerKit
-      branch: master
-  - name: StormCaller
-    components: [0]
-    location:
-      github_user: thisisulb
-      repository: StormCallerKit
-      branch: master
+      github_user: Argent77
+      repository: A7-ChaosSorcerer
+      branch: devel
+      patch:
+        relative: patches/A7-ChaosSorcerer-remove_str_con_malus.diff
   - name: wildmage
     components:
       - 0 # New Wild Magic Spells -> Ironman
@@ -2113,6 +2095,7 @@ modules:
       - 2305 # Modifier RapiditÃ© et Lenteur pour qu'ils s'annulent l'un l'autre: 1.5.4
       - 1609 # Modifier Aube illusoire pour ignorer la rÃ©sistance Ã  la magie: 1.5.4
       - 1707 # Modifier Rayon de soleil pour ignorer la rÃ©sistance Ã  la magie: 1.5.4
+    ignore_warnings: true
   - name: wsr # hla only
     description: Wizard Slayer Rebalancing - HLA
     components:
@@ -2128,8 +2111,7 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Tweaks-Anthology
-      release: v14
-      asset: lin-cdtweaks-v14.tar.gz
+      commit: 5daeb42e9645af3
     add_conf:
       file_name: cdtweaks.txt
       content: |
@@ -2161,7 +2143,7 @@ modules:
       ##- 4  # Installer le Chanteur Funebre (kit de barde)
       ##- 5  # Installer le Gitan (kit de barde)
       - 6  # Installer l'Aventurier (kit de voleur)
-      - 7  # Installer le Cambrioleur (kit de voleur)
+      #- 7  # Installer le Cambrioleur (kit de voleur)
       ##- 8  # Installer le Lamesprit (kit de voleur)
       - 9  # Installer le Tireur d'Elite (kit de voleur)
     location:
@@ -2175,10 +2157,10 @@ modules:
       #- 0 # Kit de Mystique Sylvain, par Polar Bear <---- en erreur
       - 1 # Kit de Maitre-Lame, par Drizzt1180: v12
       - 2 # Kit du Chevalier de la Mort, par Drizzt1180: v12
-      - 3 # Kit du Ninja Wushi, par Drizzt1180: v12
+      #- 3 # Kit du Ninja Wushi, par Drizzt1180: v12
       - 4 # Pack d'Objets pour Baldur's Gate 2, par Creslyn: v12
       - 5 # Archer de Sylvanus, par Drizzt1180: v12
-      - 6 # Poing des Arcanes, par Drizzt1180: v12
+      #- 6 # Poing des Arcanes, par Drizzt1180: v12
     location:
       github_user: Gibberlings3
       repository: SP_Collection
@@ -2195,8 +2177,8 @@ modules:
       - 25 # Kit d'ensorceleur : Magus: 0.9.27
       - 31 # Kit d'ensorceleur : Âme favorite: 0.9.27
       - 33 # Kit d'ensorceleur : Disciple sylvain: 0.9.27
-      - 35 # Kit d'ensorceleur : Disciple revenant: 0.9.27
-      - 37 # Kit d'ensorceleur : Disciple amorphe: 0.9.27
+      #- 35 # Kit d'ensorceleur : Disciple revenant: 0.9.27
+      #- 37 # Kit d'ensorceleur : Disciple amorphe: 0.9.27
       - 40 # Révision des spécialistes: 0.9.27
       #- 45 # ArcaneCarfting NOPE: deprecated
       - 48 # Lancer de sort en armure pour les bardes: 0.9.27
@@ -2212,7 +2194,7 @@ modules:
     location:
       github_user: mleduque
       repository: TomeAndBlood
-      branch: "0.9.32-fr"
+      branch: "0.9.33.1-fr"
   - name: TomeAndBlood
     description: Tome And Blood (warning components)
     components:
@@ -2238,23 +2220,24 @@ modules:
       - 106 # Installer le kit de clerc de Manteau de la Nuit de Shar: 8.1
       - 107 # Installer le kit de clerc de Stratege Divin de la Cavaliere Rouge: 8.1
       - 112 # Installer le kit de clerc de Noble Martyr d'Ilmater: 8.1
-      - 115 # Installer le kit de clerc d'Adepte des Flammes de Kossuth: 8.1
-      - 118 # Installer le kit de clerc de Tyran d'Iyachtu Xvim: 8.1
-      - 121 # Installer le kit de clerc de Gardien du Savoir d'Oghma: 8.1
+      #- 115 # Installer le kit de clerc d'Adepte des Flammes de Kossuth: 8.1
+      #- 118 # Installer le kit de clerc de Tyran d'Iyachtu Xvim: 8.1
+      #- 121 # Installer le kit de clerc de Gardien du Savoir d'Oghma: 8.1
       - 124 # Installer le kit de clerc de Garde du Coeur de Sunie: 8.1
       - 127 # Installer le kit de clerc de Protecteur Feerique de Corellon: 8.1
-      - 130 # Installer le kit de clerc de Maitre des Conflits de Cyric: 8.1
+      #- 130 # Installer le kit de clerc de Maitre des Conflits de Cyric: 8.1
       - 200 # Modification des Druides: 8.1
-      - 203 # Installer le kit de Druide de Maitre des Vases: 8.1
+      #- 203 # Installer le kit de Druide de Maitre des Vases: 8.1
       - 403 # Installer le kit de Rodeur d'Archer Sylvain: 8.1
       #- 406 # Installer le kit de Rodeur Sauvage: 8.1
-      - 409 # Installer le kit de Rodeur de Coureur des Bois: 8.1
-      - 412 # Installer le kit de Rodeur de Vengeur: 8.1
+      #- 409 # Installer le kit de Rodeur de Coureur des Bois: 8.1
+      #- 412 # Installer le kit de Rodeur de Vengeur: 8.1
       #- 415 # Installer le kit de Rodeur de Coureur Sauvage: 8.1
     location:
       github_user: TotoR115
       repository: Divine_Remix
       commit: a443b16
+  - name: stop
   - name: Faiths_and_Powers
     components:
       - 25 # Créer un système de sphères -> Nouveau FnP(nuFnP) : un nouveau système de sphères (moins de sphères, plus équilibré globalement, plus proche du PnP): 0.83.6
@@ -2269,12 +2252,14 @@ modules:
     location:
       github_user: mleduque
       repository: Faiths_and_Powers
-      branch: 0.83.6-fr
+      branch: 0.83.7-fr
       layout:
           layout_type: multi_dir
           dirs:
             - faiths_and_powers
             - FnP_Multiclass
+      patch:
+        relative: patches/fnp_configure.diff
   - name: 5E_spellcasting
     installation:
       after: Tome & Blood and Faiths & Powers
@@ -2287,28 +2272,29 @@ modules:
     location:
       github_user: mleduque
       repository: 5E_spellcasting
-      commit: 1.9.1-fr
+      branch: 1.9.3-fr
       patch:
         # configure "lose spell on interrupted" and "int bonus slots"
         relative: patches/spellcasting-5e-config.diff
   - name: sword_and_fist
     components:
-      - 30 # Installer le kit de guerrier : Champion Occultiste
+      #- 30 # Installer le kit de guerrier : Champion Occultiste
       - 31 # Installer le kit de guerrier : Duelliste
-      - 32 # Installer le kit de guerrier : Poing de l'Ordre
-      - 34 # Installer le kit de guerrier : Magelame (by ronin69hof, ronin69hof@gmail.com
+      #- 32 # Installer le kit de guerrier : Poing de l'Ordre
+      #- 34 # Installer le kit de guerrier : Magelame (by ronin69hof, ronin69hof@gmail.com
     location:
       github_user: mleduque
       repository: sword_and_fist
       branch: main
-  - name: sword_and_fist
-    components:
-      - 33 # Installer le kit de guerrier : Chevalier Noir
-    ignore_warnings: true # o effect altered on...
+  #- name: sword_and_fist
+  #  components:
+  #    #- 33 # Installer le kit de guerrier : Chevalier Noir
+  #  ignore_warnings: true # o effect altered on...
   - name: Will_to_Power
     description: Will to power - the first component warns
     components:
       - 200 # Ajouter le Psioniste, voleur/psion: 2.0
+    ignore_warnings: true
     location:
       github_user: mleduque
       repository: Will_to_Power
@@ -2320,33 +2306,31 @@ modules:
     components:
       - 300 # Ajouter le Guerrier Psychique, guerrier/psion: 2.0
       - 400 # Ajouter le Psypher, rôdeur/psion: 2.0
-      - 500 # Ajouter le Cerebromant, mage/psion: 2.0
+      #- 500 # Ajouter le Cerebromant, mage/psion: 2.0
       - 900 # Mode Dark Sun : Tout le monde est un talent natif: 2.0
   - name: might_and_guile
     description: Might And Guile - Main component (warns)
     components:
-      - 220 # Revised Multiclassing and Multiclass Kits
+      - 220 # Révision du multiclassage et kits multiclasses: 4.21.1
+      - 205 # Tir à l'arc révisé: 4.21.1
+      - 210 # Révision du Barde : bardes multiclasses: 4.21.1
     ignore_warnings: true
     location:
       github_user: mleduque
       repository: Might_and_Guile
-      commit: 4.21.1-fr
+      branch: 4.22-fr
+      patch:
+        relative: patches/mng-multibard-shools.diff
   - name: might_and_guile
     description: Might And Guile - Other components
     components:
-      #- 210 # Bard Overhaul: Multiclass Bards: 4.13
-      #- 240 # Improved Rangers: 4.13
-      #- 245 # Revised Movement Bonuses (Quickstride): 4.13
-      #- 250 # Revised Berserker and Rage: 4.13
-      #- 265 # Revised Monk Fists: 4.13
-      #- 310 # Add the Corsair (fighter kit): 4.13
-      #- 320 # Add the Marksman (fighter kit): 4.13
-      #- 322 # Add the Elven Archer (ranger kit): 4.13
-      #- 324 # Add the Halfling Slinger (fighter/thief kit): 4.13
-      #- 350 # Add the Mage Hunter (ranger kit): 4.13
-      #- 360 # Add the Barbarian Ranger (ranger kit): 4.13
-      #- 410 # Add the Sniper (thief kit): 4.13
-      #- 420 # Add the Scout (thief kit) and revise the Swashbuckler: 4.13
+      - 200 # Système de Dons: 4.21.1
+      - 210 # Révision du Barde : bardes multiclasses: 4.21.1
+      - 240 # Rôdeur améliorés: 4.21.1
+      - 245 # Bonus de mouvement révisés (Déplacement accru): 4.21.1
+      - 250 # Berserker révisé et rage: 4.21.1
+      - 265 # Poings du moine révisés: 4.21.1
+      - 310 # Ajoute le Corsaire (kit de guerrier): 4.21.1
   - name: refinements
     components:
       - 11  # Capacites de haut niveau (HLA) modifiees -> Choisir quelles classes obtiennent les HLA modifiees
@@ -2355,7 +2339,7 @@ modules:
       - 103 # HLAs de rodeur
       - 104 # HLAs de paladin
       - 107 # HLAs de moine
-      - 108 # HLAs de magicien
+      #- 108 # HLAs de magicien
       #- 109 # HLAs de barde
       #- 110 # HLAs de voleur - Prefer rr hlas
       - 40  # Robes de bas niveau universelles
@@ -2392,12 +2376,14 @@ modules:
           OUTER_SET hla_remove_swashbuckler_uai = 1
           OUTER_SET hla_remove_bountyhunter_uai = 1
           OUTER_SET hla_remove_assassin_uai = 1
+  - name: stop
   - name: FnP_Multiclass
     components:
       - 91 # Multiclass Druids
-      - 92 # Multiclass Shamans
+      #- 92 # Multiclass Shamans
       - 95 # Multiclass Cleric kits (install AFTER all other kit mods
     ignore_warnings: true # apparently intentional
+  - name: stop
   - name: EpicThieving
     components:
       - 0   # Epic Locks
@@ -2410,24 +2396,24 @@ modules:
       repository: Epic-Thieving
       commit: f76c317
   - name: HouseTweaks
-    description: House Rule TweakPack
+    description: The Artisan's Tweaks and Overhauls
     components:
-      - 0  # House Tweaks: Expanded Racial Enemies
-      #- 1  # House Tweaks: Expanded Shapeshifting  --> possible incompat with SCS
-      - 2  # House Tweaks: Expanded Racial Bonuses
-      #- 3  # House Tweaks: Rebalanced Weapon Styles
-      - 4  # House Tweaks: Monk Can Use Quarterstaves
+      - 0 # House Tweaks: Expanded Racial Enemies: 1.91
+      - 1 # House Tweaks: Expanded Shapeshifting: 1.91
+      - 2 # House Tweaks: Expanded Racial Bonuses: 1.91
+      - 4 # House Tweaks: Monk Can Use Quarterstaves: 1.91
       #- 5  # House Tweaks: Increased Constitution Bonuses
-      #- 6  # House Tweaks: Warrior HLAs
-      - 7  # House Tweaks: Improved Dialogues (BG:EE)
-      - 8  # House Tweaks: Not-So-Indestructible Rats
-      - 9  # House Tweaks: Good-Aligned Roleplay Rewards (BG2:EE)
-      - 10 # House Tweaks: Cloak of Dragomir only decreases stats in daylight
-      - 13 # House Tweaks: Faster Troll Unconsciousness
+      - 6 # House Tweaks: INT/WIS/CHA-based Bonus Spell Slots: 1.91
+      #- 7  # House Tweaks: Warrior HLAs
+      - 8 # House Tweaks: Improved Dialogues (BG:EE): 1.91
+      - 9 # House Tweaks: Not-So-Indestructible Rats: 1.91
+      - 10 # House Tweaks: Good-Aligned Roleplay Rewards (BG2:EE): 1.91
+      - 11 # House Tweaks: Cloak of Dragomir only decreases stats in daylight: 1.91
+      - 14 # House Tweaks: Faster Troll Unconsciousness: 1.91)
     location:
       github_user: ArtemiusI
       repository: House-Rule-Tweaks
-      tag: v1.91
+      tag: v2.01
   - name: klatu
     description: Klatu Tweaks
     components:
@@ -2459,14 +2445,137 @@ modules:
       - 1090 # RoT: Remove cutscenes from Chateau Irenicus
     ignore_warnings: true
   - name: cdtweaks
-    description: Tweaks Anthology - Main batch of tweaks p1
+    description: Tweaks Anthology - Main batch of tweaks
     components:
+      - 30 # Avatar de voleur pour Nalia: v14
+      - 40 # Peau bleue pour Viconia: v14
+      - 50 # Script de changement d'avatar: v14
+      - 60 # Animation des armes amelioree: v14
+      - 110 # Amelioration des icones des objets: v14
+      - 130 # Mode pause dans tous les dialogues: v14
+      - 140 # Correction du cri de Bouh: v14
+      - 160 # Rendre rougeoyants les boucliers magiques (plainab/grogerson): v14
+      - 170 # Icones uniques: v14
+      - 182 # Recipients uniques -> Recipients et noms uniques: v14
+      - 191 # Utiliser les couleurs du personnage plutot que les couleurs de l'objet -> Pour tous les boucliers et casques non magiques: v14
+      - 3151 # Retirer les effets visuels ennuyeux des objets equipes -> Retirer tout ce qui est mentionne ci-dessus: v14
+      - 2010 # Separer l'icone de resistance au feu/froid en icones distinctes (Angel): v14
+      - 1010 # Davantage d'interjections: v14
+      - 1020 # Modifier la valeur limite des points de vie pour les dialogues des PNJs blesses: v14
+      - 1035 # Rendre disponibles les zones de Bois-Manteau en avance -> Seulement la premiere zone: v14
+      - 1040 # Ameliorer les gardes d'Athkatla: v14
+      - 1050 # Transformation progressive des objets des Elfes Noirs en poussiere: v14
+      - 1060 # Casques, Boucliers et Armures de fer cassables: v14
+      - 1070 # Amelioration du dialogue d'ejection pour les PNJs multijoueurs: v14
+      - 1075 # Envoyer les PNJs de BioWare dans une auberge (DavidW/Zed Nocear): v14
+      - 1080 # Ajouter des sacs de contenance: v14
+      - 1101 # Ne pas explorer automatiquement les villes: v14
+      - 1120 # Plus de munitions dans les boutiques: v14
+      - 1160 # Forteresses pour toutes les classes -> Pas de restrictions (Baldurdash): v14
+      - 1180 # Portrait feminin pour Edwina: v14
+      - 1220 # Permettre a Cromwell d'ameliorer les objets de la Tour de Garde: v14
+      - 1225 # Ajuster le temps de forgeage de Cromwell -> Forgeage instantane (reglage BG2 original): v14
+      - 1230 # Permettre a Cespenar d'utiliser les recettes de Cromwell: v14
+      - 1251 # Deplacer les PNJ a des endroits plus accessibles : Deplacer Alora a Gullykin: v14
+      - 1252 # Deplacer les PNJ a des endroits plus accessibles : Deplacer Eldoth sur la Voie cotiere: v14
+      - 1253 # Deplacer les PNJ a des endroits plus accessibles : Deplacer Quayle au festival de Nashkel: v14
+      - 1256 # Deplacer les PNJ a des endroits plus accessibles : Deplacer Viconia sur la route au Sud de Beregost: v14
+      - 1270 # Changer le declencheur de fin de chapitre des mines de Bois-Manteau pour la methode sans TotSC (plainab): v14
+      - 2020 # Epees batardes a deux mains: v14
+      - 2030 # Katanas a deux mains: v14
+      - 2035 # Haches a deux mains: v14
+      - 2040 # Gourdins universels: v14
+      - 2060 # Styles de combat pour toutes les classes: v14
+      ## Needed for 2300
+      - 2090 # Changer la limite de points d'experience -> Retirer la limite: v14
+      - 2140 # Options de jumelage etendues: v14
+      - 2152 # Port de plusieurs objets de protection -> Autorise une armure plus un objet de protection (Angel): v14
+      - 2160 # Modifier le systeme des competences martiales -> Reequilibrage des competences martiales: v14
+      - 2200 # Grande maitrise pour les multi-classes (Weimer): v14
+      - 2210 # Modifier les bonus de grande maitrise -> Veritable grande maitrise (Baldurdash): v14
+      - 2220 # Donner un poids de 0 aux armes creees par magie: v14
+      - 2240 # Table debridee des TAC0: v14
+      - 2300 # Tables de capacites de haut niveau pour les triclasses: v14
+      - 2312 # Ajouter des penalites aux jets de sauvegarde des sorts des lanceurs de sorts de haut niveau -> Magie divine et des arcanes: v14
+      - 2320 # Suppression de la limite du nombre de pieges (Ardanis/GeN1e): v14
+      - 2330 # Suppression du delai pour les pieges magiques (Ardanis/GeN1e): v14
+      - 2339 # Suppression de la limite de convocation pour les creatures normales: v14
+      - 2340 # Suppression de la limite de convocation des creatures celestes (Ardanis/GeN1e): v14
+      ## WARNING: known to make the game freeze
+      - 2360 # Suppression des restrictions raciales pour les mono-classes: v14
+      - 2380 # Suppression des restrictions raciales pour les kits: v14
+      - 2371 # Alterer les restrictions de jumelage -> Autoriser les non-humains a se jumeler: v14
+      - 2358 # Alterer les restrictions des multi-classses -> Installer les options une et trois (tout le monde a acces aux multi-classes des classes accessibles): v14
+      - 2550 # Modifier les options de kit/multi-classe du gnome -> Conserve l'illusionniste pour les gnome multi-classes, autorise tous les kits pour les mono-classes: v14
+      - 2410 # Les druides utilisent les restrictions d'alignement de la 3eme edition: v14
+      - 2420 # Attenuer les restrictions d'equipement pour les clercs multi-classes: v14
+      - 2430 # Modifier les restrictions d'equipement pour les druides multi-classes -> Attenuer les restrictions d'equipement pour les druides multi-classes: v14
+      - 2440 # Tout le monde obtient le bonus d'attaque par round de specialisation: v14
+      - 2520 # Permettre aux mages d'utiliser une targe et les voleurs d'utiliser une rondache (Angel): v14
+      - 2530 # Les eclairs ne rebondissent pas (Angel): v14
+      - 2540 # Accelerer les quetes de forteresse du chateau de'Arnise: v14
+      - 2560 # Autorise le port du casque pour les moines: v14
+      - 2999 # Maximum de PV au niveau 1: v14
+      - 3031 # Apprentissage des sorts assoupli -> 100 % de chance d'apprendre un sort et nombre de sorts illimite: v14
+      - 3040 # Sacs de contenance sans fond: v14
+      - 3050 # Retirer l'effet de fatigue des sorts de restauration: v14
+      - 3083 # Augmenter la taille de la pile de munitions -> Piles de 120: v14
+      - 3092 # Augmenter la limite d'empilement des gemmes et des bijoux -> Piles de 80: v14
+      - 3102 # Augmenter la limite d'empilement des potions -> Piles de 80: v14
+      - 3112 # Augmenter la limite d'empilement des parchemins -> Piles de 80: v14
+      - 3121 # Patch du bonheur (les PNJs du groupe ne se plaignent pas de la reputation) -> Les PNJs peuvent etre en colere a propos de la reputation mais ne partent jamais (Salk): v14
+      #- 3123 # Les PNJs du groupe ne se battent pas: v14
+      - 3124 # Empecher le romance entre Aerie et Haer'Dalis des le commencement: v14
+      - 3125 # Rendre heureux les personnages neutres lorsque la reputation est moyenne: v14
+      - 3170 # Pas d'avatar d'elfe noir pour le groupe en Ombre-Terre: v14
+      - 3176 # Accelerer/ralentir les romances: v14
+      - 3183 # Triche sur les romances: v14
+      - 3190 # Repos possible partout (Japheth): v14
+      - 3197 # Alterer les interruptions du repos hostiles -> Doubler la frequence: v14
+      - 3200 # Batons, gourdins et frondes vendables (Icelus): v14
+      - 3210 # Minimum pour les stats (triche): v14
+      - 3230 # Taerum fabrique une armure d'Ankheg supplementaire (Icendoan/grogerson): v14
+      - 3265 # Munitions recuperables -> 50 % de chance de recuperer apres une attaque reussie, contre les ennemis seulement: v14
+      - 3275 # Armes de jet recuperables -> 50 % de chance de recuperer apres une attaque reussie, contre les ennemis seulement: v14
+      - 3280 # Accorder a chaque classe/kit quatre emplacements d'arme: v14
+      - 3294 # Personnaliser le nom des sauvegardes automatiques -> Employer la forme : 000000000-[Protagoniste]-Nom de sauvegarde: v14
+      - 3300 # Focus camera en cas de mort: v14
+      - 3330 # Rendre les membres du groupe moins susceptibles de mourir de facon permanente: v14
+      - 3344 # Augmenter la vitesse de deplacement et/ou la vitesse d'incantation des sorts du groupe en dehors des combats -> Vitesse de deplacement et d'incantation des sorts de 100 pour cent: v14
+      #- 3354 # Creer des sauvegardes periodiques -> Toutes les 15 minutes (cycle de quatre emplacements de sauvegarde): v14
+      - 3358 # Creer des sauvegardes periodiques -> Personnaliser
+      - 4000 # Ajuster le jet de reputation des PNJs mauvais recrutables: v14
+      - 4020 # PNJs style ToB: v14
+      - 4025 # Permettre de separer les couples de PNJ: v14
+      - 4031 # Caracteristiques coherentes : Edwin -> Valeurs de BG2: v14
+      - 4041 # Caracteristiques coherentes : Jaheira -> Valeurs de BG2: v14
+      - 4050 # Changer l'alignement de Jaheira en "Neutre Bon": v14
+      - 4061 # Caracteristiques coherentes : Minsc -> Valeurs de BG2: v14
+      - 4071 # Caracteristiques coherentes : Viconia -> Valeurs de BG2: v14
+      - 4080 # Transformer Khalid en Guerrier / Mage (Domi): v14
+      - 4090 # Transformer Montaron en Assassin (Andyr): v14
+      - 4100 # Changer l'alignement de Korgan en "Neutre Mauvais": v14
+      - 4110 # Donner a Kagain une valeur reglementaire de 19 en constitution: v14
+      - 4120 # Donner a Coran une valeur reglementaire de 19 en dexterite: v14
+      - 4130 # Transformer Xan en mage generaliste (Mike1072): v14
+      - 4150 # Deplacer Bouh dans le sac de Minsc: v14
+      - 4160 # Permettre a Yeslick d'utiliser les haches: v14
+      - 4170 # S'assurer que Shar-Teel ne meurt pas lors du defi originel: v14
+      - 4180 # Objets detachables des PNJ: v14
   - name: scales_of_balance
     components:
+      - 100 # IWO - Encore une autre revision du systeme d'armure (YARAS): v5.38.3
+      - 102 # IWO - Ajustements fonctionnels des armes: v5.38.3
+      - 109 # IWO - Toutes les potions sont utilisables par toutes les classes: v5.38.3
+      - 121 # WPO - Fusion des categories d'armes: v5.38.3
+      - 125 # WPO - APR bonus pour la specialisation: v5.38.3
+      - 200 # SBO - Revision des bonus de stats (Stat Bonus Overhaul): v5.38.3
+      - 201 # SBO - emplacements de sorts bonus dus aux stats: v5.38.3
+      - 2013 # SBO - sorts bonus lies aux stats pour les lanceurs 5E -> SBO - bonus seulement pour les emplacements de lancer: v5.38.3
     location:
       github_user: mleduque
       repository: Scales_of_Balance
-      tag: "5.38.2-fr"
+      tag: "5.38.3-fr"
       patch:
         relative: patches/scales-config.diff
   - name: METweaks
@@ -2500,6 +2609,8 @@ modules:
       github_user: WillScarlettOhara
       repository: BG2EE_AI_Denoised_Areas
       tag: v220506
+      patch:
+        relative: patches/bg2ee_ai_denoised_area_fix.diff
   - name: DruidGroveMakeover
     components:
       - 0
@@ -2535,63 +2646,90 @@ modules:
     installation:
       before: SCS
     components:
-      #- 0  # Revised Corporal Undead
-      #- 1  # Revised Dragons
-      #- 4  # Revised Lycanthropes
-      #- 5  # Revised Magical Beasts
-      #- 6  # Revised Monstrous Spiders
-      #- 7  # Revised Oozes, Slimes & Jellies
-      #- 10 # Enhanced Battles: Candlekeep Catacombs
-      #- 11 # Enhanced Battles: Mutamin's Garden
-      #- 12 # Enhanced Battles: Ramazith's Tower
-      #- 13 # Enhanced Battles: The Spider Plague
-      #- 14 # Enhanced Battles: Thieves' Maze & Undercity
-      #- 15 # Enhanced Battles: Ulcaster Ruins
-      #- 16 # Enhanced Battles: Xvart Village
-      #- 17 # Enhanced Battles: Zombie Farm
-      #- 18 # Enhanced Battles: Durlag's Tower
-      #- 19 # The Surgeon's Plight
-      #- 20 # Sarevok's Assassins
-      #- 22 # Minor Quest Tweaks (BG1)
-      #- 23 # Enhanced Battles: Bridgefort
-      #- 24 # Enhanced Battles: Cyric's Temple
-      #- 26 # Enhanced Battles: Korlasz' Tomb
-      #- 27 # Enhanced Battles: Vampire Encounters
-      #- 28 # Complete more/all Vision Quest encounters
-      #- 30 # Enhanced Battles: Athkatla Liches
-      #- 31 # Enhanced Battles: Firkraag's Lair
-      #- 32 # Enhanced Battles: Graveyard Catacombs
-      #- 33 # Enhanced Battles: Lower Reaches
-      #- 34 # Enhanced Battles: Slum Sewers
-      #- 36 # Enhanced Battles: Suldanessenar
-      #- 38 # Enhanced Battles: Trademeet
-      #- 41 # Enhanced Battles: Forest of Mir
-      #- 42 # Enhanced Battles: Pocket Plane
-      #- 43 # Enhanced Battles: Saradush
-      #- 44 # Enhanced Battles: Sendai's Enclave
-      #- 47 # Minor Quest Tweaks (ToB)
+      ##warns
+      #- 0 # Revision des morts-vivants corporels: v6
+      - 1 # Revision des dragons: v6
+      - 2 # Revision des Golems: v6
+      - 3 # Revision des liches: v6
+      - 5 # Revision des betes magiques: v6
+      - 6 # Revision des araignees monstrueuses: v6
+      - 7 # Revision des vases, des limons et des limons: v6
+      - 9 # Batailles ameliorees : Galeries d'Ankheg: v6
+      - 10 # Batailles ameliorees : catacombes de Chateau-Suif: v6
+      - 11 # Batailles ameliorees : Jardin de Mutamin: v6
+      - 12 # Batailles ameliorees : Tour de Ramazith: v6
+      - 13 # Batailles ameliorees : Invasion d'araignees: v6
+      - 14 # Batailles ameliorees : Labyrinthe des voleurs & Cite ensevelie: v6
+      - 15 # Batailles ameliorees : Ruines d'Ulcaster: v6
+      - 16 # Batailles ameliorees : Village xvart: v6
+      - 17 # Batailles ameliorees : Ferme des zombies: v6
+      - 18 # Batailles ameliorees : Tour de Durlag: v6
+      - 19 # La detresse du chirurgien: v6
+      - 20 # Assassins de Sarevok: v6
+      - 21 # Empeche la cinematique du chapitre 6 d'envoyer le groupe Ã  Chateau-Suif: v6
+      - 22 # Ajustement mineurs de quetes (BG1): v6
+      - 23 # Batailles ameliorees : Fort-du-Pont: v6
+      - 24 # Batailles ameliorees : Temple de Cyric: v6
+      - 25 # Batailles ameliorees : Site d'excavation nain: v6
+      - 26 # Batailles ameliorees : Tombe de Korlasz: v6
+      - 27 # Batailles ameliorees : Rencontre de vampires: v6
+      - 28 # Terminer plus de / toutes les rencontres de la Quete de la vision: v6
+      - 29 # Augmenter la taille du groupe d'ennemis: v6
+      - 30 # Batailles ameliorees : Liches d'Athkatla: v6
+      - 31 # Batailles ameliorees : Antre de Firkraag: v6
+      - 32 # Batailles ameliorees : Catacombes du cimetiere: v6
+      - 33 # Batailles ameliorees : Sous-sol des egouts: v6
+      - 34 # Batailles ameliorees : egouts des bas quartiers: v6
+      - 35 # Batailles ameliorees : L'Asile: v6
+      - 36 # Batailles ameliorees : Suldanessenar
+      - 37 # Batailles ameliorees : Ruines du Temple: v6
+      - 38 # Batailles ameliorees : Franc-Marche: v6
+      - 39 # Batailles ameliorees : Ombreterre: v6
+      - 40 # Ajustement mineurs de quetes (SoA): v6
+      - 41 # Batailles ameliorees : Amkethran: v6
+      - 42 # Batailles ameliorees : Forest de Mir: v6
+      - 43 # Batailles ameliorees : Demi-plan: v6
+      - 44 # Batailles ameliorees : Saradush: v6
+      - 45 # Batailles ameliorees : Enclave de Sendai: v6
+      - 46 # Batailles ameliorees : Tour de Garde: v6
+      - 48 # Ajustement mineurs de quetes (ToB): v6
     location:
       github_user: mleduque
       repository: MadeInHeaven_EncountersAndQuests
-      tag: french
+      branch: french
       patch:
         relative: patches/mih_eq_customize_ini.diff
+  - name: mih_eq
+    description: Made In Heaven Encounters and Quests - comp. with warnings
+    installation:
+      before: SCS
+    components:
+      ##warns
+      - 0 # Revision des morts-vivants corporels: v6
+    ignore_warnings: true
   - name: Trap_Overhaul
     description: Kjeron's Trap Overhaul
     original_thread: https://forums.beamdog.com/discussion/71763/trap-detection-recovery-evasion
     original_dl: https://us.v-cdn.net/5019558/uploads/editor/cq/pzpto4fbfcov.zip
     components:
-      #- 111 # Monk Trap Evasion, Fast Trap Detection, Trap Recovery - i.e. all at once
+      - 1111 # Trap Overhaul -> Monk Evasion, Fast Detection, Recovery, Anyone OpenLocks: 0.20
     location:
       github_user: mleduque
       repository: kjeron_Trap_Overhaul
       tag: v0.20
+      layout:
+        layout_type: multi_dir
+        dirs:
+          - setup-Trap_Overhaul.tp2
   - name: enchant
     description: "Dee's 'Enchant the Missile Launchers: A Small Ranged Weapon Tweak'"
     original_thread: https://forums.beamdog.com/discussion/58374/enchant-the-missile-launchers-ranged-weapon-tweak
     original_dl: https://us.v-cdn.net/5019558/uploads/editor/hc/n0q8dnnbhnsc.zip
     components:
-      #- 0  # Enchant the Missile Launchers
+      - 0 # Enchant the Missile Launchers
+      - 2 # Custom Ammunition: Eldoth (BG:EE)
+      - 3 # Custom Ammunition: Jan (BGII:EE)
+      - 4 # Fix Fuller's Quest Bolts (BG:EE)
     location:
       github_user: mleduque
       repository: dee_enchant
@@ -2685,12 +2823,12 @@ modules:
       branch: master
   - name: mih_tweaks
     components:
-      #- ?? # Spell Level affects Saving Throws
-      #- ?? # Protection from Evil blocks Domination
+      - 2 # Spell Level affects Saving Throws
+      - 3 # Protection from Evil blocks Domination
     location:
       github_user: AngelGryph
       repository: MadeInHeaven_Tweaks
-      commit:  ba35b10 # 2022-01-23
+      commit:  99b2a28 # 2022-05-27
   - name : RelieveWizardSlayer
     components:
       - 0 # Relieve Wizard Slayer
@@ -2734,9 +2872,9 @@ modules:
   - name: npc_ee
     components:
     location:
-      github_user: UnearthedArcana
+      github_user: mleduque
       repository: NPC_EE
-      tag: "5.1.4-fr"
+      tag: "5.2-fr"
   - name: cowledmenace
     components:
       - 1000 # Main Component - The Cowled Menace
@@ -2786,19 +2924,30 @@ modules:
       - 4215 # Retirer les objets exagerement opportuns de certaines regions
       - 5000 # IA du groupe plus simple
       - 5080 # Amelioration des cinematiques de chapitre de l'extension Tales of the Sword Coast
-      - 5900 # Initialise les composants de l'IA (requis pour les composants tactiques et d'IA)
     location:
       github_user: mleduque
       repository: SwordCoastStratagems
-      branch: run/34.3/2022-04-01
+      branch: run_34.3_2022-05-15
       patch:
         relative: patches/scs-item-nerf-config.diff
+  - name: stratagems
+    description: Sword Coast Stratagems - initialize IA (warns)
+    components:
+      - 5900 # Initialise les composants de l'IA (requis pour les composants tactiques et d'IA)
+    ignore_warnings: true
   - name: stratagems
     description: Sword Coast Stratagems - p2
     components:
       - 6000 # IA generale plus efficace
       - 6010 # Meilleurs appels a l'aide
+  - name: stratagems
+    description: Sword Coast Stratagems - smarter mages (warns)
+    components:
       - 6030 # Mages plus intelligents
+    ignore_warnings: true
+  - name: stratagems
+    description: Sword Coast Stratagems - p3
+    components:
       - 6040 # Pretres plus intelligents
       - 6200 # Araignees ameliorees
       - 6300 # Sirenes et dryades plus intelligentes
@@ -2808,7 +2957,7 @@ modules:
       - 6510 # Demons et celestes ameliores
       - 6520 # Genies plus intelligents
   - name: stratagems
-    description: Sword Coast Stratagems - p3
+    description: Sword Coast Stratagems - p4
     components:
       - 6540 # Dragons plus intelligents
       - 6550 # Spectateurs plus intelligents
@@ -2824,7 +2973,7 @@ modules:
       - 6850 # Donner aux demons les scripts et capacites d'Ascension
       - 7000 # Dopplegangers ameliores
   - name: stratagems
-    description: Sword Coast Stratagems - p4
+    description: Sword Coast Stratagems - p5
     components:
       - 7010 # Gardes des Griffes Noires et du Trone de Fer plus coriaces
       - 7020 # Deploiements des groupes d'assassins ameliores
@@ -2838,7 +2987,7 @@ modules:
       - 7130 # Mages Rouges ameliores
       - 7140 # Assassins d'Ombre-ville ameliore
   - name: stratagems
-    description: Sword Coast Stratagems - p5
+    description: Sword Coast Stratagems - p6
     components:
       - 7150 # Carsa and Kahrk
       - 7200 # Combat de fin du chapitre deux plus difficile
@@ -2848,14 +2997,21 @@ modules:
       - 7250 # Combat final ameliore
       - 7900 # Rencontres mineures ameliorees
       - 8000 # Rendre le debut du donjon d'Irenicus legerement plus difficile
+  - name: stratagems
+    description: Sword Coast Stratagems - demi-liches (warns)
+    components:
       - 8020 # Les demi-liches lancent des sortileges
+    ignore_warnings: true
+  - name: stratagems
+    description: Sword Coast Stratagems - p7
+    components:
       - 8040 # Ajuster la difficulte des regroupements de monstres en fonction du curseur de difficulte
       - 8050 # Rencontres aleatoires ameliorees
       - 8060 # Chateau de'Arnise ameliore (inspire du mod Tactics)
       - 8070 # Oeil aveugle ameliore
       - 8080 # Bodhi amelioree
   - name: stratagems
-    description: Sword Coast Stratagems - p6
+    description: Sword Coast Stratagems - p8
     components:
       - 8085 # La version Ascension de Bodhi utilise les capacites ameliorees de Bodhi
       - 8090 # Les objets des membres du groupe leur sont enleves a Spellhold
@@ -2866,7 +3022,8 @@ modules:
       - 8140 # Drows ameliores
       - 8150 # Tour de Garde amelioree
       - 8160 # Temple des geants de feu ameliore
-      - 8170 # Enclave de Sendai amelioree
+      # bug
+      #- 8170 # Enclave de Sendai amelioree
       - 8190 # Rencontres mineures ameliorees
   - name: stratagems
     description: Sword Coast Stratagems - potions (warns)
@@ -2879,13 +3036,18 @@ modules:
   #########
   - name: "butchery"
     components: #components installé avant SCS, deuxèmeliste pour après SCS
-      #- 10 #
-      #- 11 #
-      #- 12 #
-      #- 21 #
-      #- 22 #
-      #- 32 #
-      #- 40 #
+      - 1 # Boucherie de nains dans le donjon d'Irenicus [a installer apres Stratagems]: v5.0.0
+      - 4 # Boucherie de demons dans la Sphere planaire [a installer apres Stratagems]: v5.0.0
+      - 5 # 3 boucheries dans Spellhold (golems, vampires et trolls) [a installer apres Stratagems]: v5.0.0
+      - 6 # Boucherie de trolls a l'exterieur du Chateau de'Arnise [a installer apres Stratagems]: v5.0.0
+      - 7 # Boucherie d'orques dans les Collines de Lancevent [a installer apres Stratagems]: v5.0.0
+      - 8 # Boucherie de loups dans les Collines d'Umar [a installer apres Stratagems]: v5.0.0
+      - 9 # 2 boucheries d'animaux sauvages : Franc-Marche et Tour de Garde [a installer apres Stratagems]: v5.0.0
+      - 2 # Boucherie d'animaux/druides dans le Bosquet aux druides [a installer apres Stratagems]: v5.0.0
+      - 3 # Boucherie de fanatiques dans l'antre de l'Oeil aveugle [a installer apres Stratagems]: v5.0.0
+      - 6 # 2 boucheries de sahuagins (Cite sous-marine et campement githyanki dans la Tour de Garde) [a installer apres Stratagems]: v5.0.0
+      - 7 # 4 boucheries d'araignees : entree de l'antre de Pai'Na, Temple d'Amaunator (Oeil aveugle), 1er etage de la Tour de Garde et devant l'Enclave de Sendai [a installer apres Stratagems]: v5.0.0
+      - 8 # 6 boucheries de squelettes (catacombes d'Atkthtla, Ruine du Temple, Spellhold, Tour de Garde et 2 dans le temple de Nyalee) [a installer apres Stratagems]: v5.0.0
   - name: jimfix
     description: Fixes and convenience tweaks aimed at an Ascension + SCS v33 install
     components:
@@ -2945,45 +3107,64 @@ modules:
       - 41 # Crossmod with aTweaks "Allow Mages to scribe memorized spells onto scrolls" -> Integrate aTweak's scribe scroll ability into Brandock's original one
   - name: skills-and-abilities
     components:
+      - 70 # Ajouter des capacites speciales pour les moines: v0.7.2-alpha
+      - 80 # Ajouter des capacites speciales pour les Paladins: v0.7.2-alpha
+      - 90 # Ajouter des capacites de haut niveau pour toutes les classes et kits: v0.7.2-alpha
+      - 300 # Mises a Jour des styles de combat: v0.7.2-alpha
+      - 312 # Revision du Systeme de Competence - Ajout de nouvelles competences et de nouveaux styles de combat -> Progression acceleree des competences: v0
+      - 400 # Bonus de force supplementaire pour les armes a deux mains: v0.7.2-alpha
     location:
       github_user: Gibberlings3
       repository: Skills-and-Abilities
-      release: 0.6.4-alpha
-      asset: lin-skills-and-abilities-v0.6.4-alpha.zip
+      release: 0.7.2-alpha
+      asset: lin-skills-and-abilities-v0.7.2-alpha.zip
       patch:
         relative: patches/skills-and-abilities-prof-points.diff
+  - name: skills-and-abilities - components that warn
+    components:
+      - 40 # Mise a jour des Competences des Rodeurs: v0.7.2-alpha
+      - 100 # Permettre a l'Inquisiteur de lancer des sorts divins: v0.7.2-alpha
+    ignore_warnings: true
+  - name: POISON_NO_BYPASS
+    components:
+      - 3 # Limited Exclusions(Anti-magic, AoE, Gaze): Mirror Image or Stoneskin
+    location:
+      github_user: mleduque
+      repository: kjeron_poison_no_bypass
+      branch: workaround_greythedog
+      layout:
+        layout_type: single_dir_plus_tp2
+        tp2: Setup-POISON_NO_BYPASS.tp2
   - name: tnt
     description: Tweaks and Tricks mod for Baldur's Gate 2
     components: # avoid 34 (d5 random tweaks instead)
-      #- 0  # Smarter familiars
-      #- 1  # More resilient familiars
-      #- 2  # Improved trap detection: instant detection
-      #- 3  # Improved trap detection: increase trap sense range
-      #- 5  # Trap reminders -> generic
-      #- 6  # Trap intuition -> not in combat
-      #- 9  # Trap intuition: pause game -> all traps
-      #- 11 # Trap intuition: center screen -> on the character
-      #- 13 # Trap intuition: play "trap found" sound
-      #- 14 # Improved trap detection: core (REQUIRED for any of previous traps components to work
-      #- 24 # Hassle-free ammo
-      #- 27 # Throwing weapons damage type -> Both of the above options
-      #- 29 # Sensible Cloak of Mirroring
-      #- 33 # Potion of Really Mirrored Eyes
-      #- 34 # Unlimited goodberries stacking
-      #- 35 # Improved Shandalar's cloak
-      #- 37 # Improved Equalizer
-      #- 38 # Distinct color for Perdue's sword
-      #- 39 # Working protection from poison
-      #- 41 # Spider form ignores web
-      #- 44 # Cheesy Slayer: reputation -> reduced loss
-      #- 46 # Sensible Otiluke's Resilient Sphere
-      #- 47 # Greater Command AoE
-      #- 48 # Working Non-Detection
-      #- 52 # Sensible Blade spins
-      #- 65 # Improved strongholds
-      #- 67 # More map notes
-      #- 69 # Mod romance cheats
-      #- 74 # Starting bags -> Starting bags
+      - 0 # Smarter familiars: v8.19
+      - 1 # More resilient familiars: v8.19
+      - 3 # Improved trap detection: increase trap sense range: v8.19
+      - 4 # Trap reminders -> disclose trap type: v8.19
+      - 20 # Compliments and insults -> Reintroduce: v8.19
+      - 24 # Hassle-free ammo: v8.19
+      - 27 # Throwing weapons damage type -> Both of the above options: v8.19
+      - 29 # Sensible Cloak of Mirroring: v8.19
+      - 32 # Sensible wand of frost -> AoE: v8.19
+      - 33 # Potion of Really Mirrored Eyes: v8.19
+      - 35 # Improved Shandalar's cloak: v8.19
+      - 36 # Algernon's cloak: usable once per day: v8.19
+      - 37 # Improved Equalizer: v8.19
+      - 39 # Working protection from poison: v8.19
+      - 41 # Spider form ignores web: v8.19
+      - 44 # Cheesy Slayer: reputation -> reduced loss: v8.19
+      - 46 # Sensible Otiluke's Resilient Sphere: v8.19
+      - 47 # Greater Command AoE: v8.19
+      - 48 # Working Non-Detection: v8.19
+      - 52 # Sensible Blade spins: v8.19
+      - 56 # More ankheg armors by Taerom: v8.19
+      - 65 # Improved strongholds: v8.19
+      - 66 # Save Melicamp: v8.19
+      - 68 # More map notes: v8.19
+      - 70 # Mod romance cheats | POWER USER component, consult readme: v8.19
+      - 74 # Add BG1 tomes stats bonuses to new BG2 characters -> Each stat except Wisdom gets +1, Wisdom gets +3: v8.19
+      - 76 # Starting bags -> GSPA + holding: v8.19
     location:
       github_user: BGforgeNet
       repository: bg2-tweaks-and-tricks
@@ -2996,11 +3177,19 @@ modules:
       github_user: AngelGryph
       repository: MadeIn_Heaven_Meta-Mod
       branch: main
-  - name: polytweaks
-    components: ~ # exclude trolls
+  - name: polytweak
+    components:
+      - 50 # PnP mind flayer attacks: v2.00
+      - 70 # Improved Umberhulks: v2.00
+      - 80 # Improved Yuan-Ti: v2.00
+      - 83 # Improved Minotaurs: v2.00
+      - 100 # Anomen: v2.00
+      - 201 # Jaheira -> two handed weapons: v2.00
+      - 300 # Keldorn: v2.00
+      - 700 # Viconia: v2.00
     location:
       github_user: mleduque
-      repository: polytope_polytweaks
+      repository: polytope_polytweak
       tag: v2.0
   - name: zgtweaks
     components:
@@ -3012,13 +3201,33 @@ modules:
       #- 21 # one arcane scroll up to the level of the highest divine level memorized
       #- 22 # one arcane scroll on the level above 4 of the highest divine level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive level 2 scroll etc.)
       - 23 # one arcane scroll up to the level above 4 of the highest divine level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive up to level 2 scroll etc.)
+    ignore_warnings: true # warns when ADD_CRE_ITEM falls back on inventory slot
     location:
       github_user: GraionDilach
       repository: RandomGraionTweaks
       release: version-1.1
       asset: random-graion-tweaks-1.1.iemod
   - name: jtweaks
-    components: ~
+    components:
+      - 30 # Fix Black Pits oversights: 2.2
+      - 40 # Enchant Weapon works in contingencies: 2.2
+      - 50 # Joinable NPCs don't have null kits: 2.2
+      - 60 # NPCs don't go in inaccessible locations: 2.2
+      - 150 # Temple cures work better: 2.2
+      - 160 # Bala's Axe dispels reasonably well: 2.2
+      - 170 # Celestials cast all of their spells at high levels: 2.2
+      - 182 # Antimagic Ray and Spell Shield -> Spell Shield blocks one antimagic ray: 2.2
+      - 200 # Elemental protection spells increment resistances: 2.2
+      - 210 # Vorpal weapons don't chunk: 2.2
+      - 220 # Resurrection can heal the living: 2.2
+      - 230 # Loosen restrictions on what clones can do: 2.2
+      - 240 # Undead Hunters are better at Turn Undead: 2.2
+      - 250 # Loosen NPC item restrictions: 2.2
+      - 280 # Allies against Bodhi are better prepared for vampires: 2.2
+      - 300 # Slightly improved party AI: 2.2
+      - 310 # Map notes for BGEE quests: 2.2
+      - 320 # Standardize inn and tavern music: 2.2
+      - 350 # Bigger random spawns: 2.2
     location:
       github_user: mleduque
       repository: jmerry_jtweaks
@@ -3030,13 +3239,16 @@ modules:
       - 5  # House Tweaks: Increased Constitution Bonuses
   - name: tb#tweaks
     components:
-      ## probably
-      # Covenient Wish
-      # maybe faster romances?
-      # WSPATCK for all?
-      # stat training?
-      # 3e stats?
-      # Mages drop spellbooks -> nope, zgtweaksdrop scrolls
+      - 150 # Imprisonment Fix.: TB#Tweaks, V 2.99
+      - 300 # Drop Weapons in Panic Effect Removal.: TB#Tweaks, V 2.99
+      - 1200 # More cheating Wishes: -> Convenient Wish.: TB#Tweaks, V 2.99
+      - 2550 # Faster Romances: -> Medium.: TB#Tweaks, V 2.99
+      - 4000 # 3rd edition style Strength: TB#Tweaks, V 2.99
+      - 4500 # 3rd edition style Dexterity: TB#Tweaks, V 2.99
+      # using HouseRules version
+      #- 5000 # 3rd edition style Constitution: TB#Tweaks, V 2.99
+      - 7000 # Druids can wear metal items: TB#Tweaks, V 2.99
+      - 7600 # Gain stats as you level up -> 5 points for a full BGT game; everybody can advance over their racial maximum.: TB#Tweaks, V 2.99
     location:
       github_user: vbigiani
       repository: tb-tweaks
@@ -3060,7 +3272,8 @@ modules:
       repository: kjeron_DUAL_TO_KIT
       tag: v0.35
   - name: better_spell_visuals
-    components: ~
+    components:
+      - 10 # Better Visual Feedback from Spell and Combat Protections: 1
     location:
       github_user: Gibberlings3
       repository: Better-Spell-Visuals
@@ -3077,31 +3290,20 @@ modules:
       github_user: mleduque
       repository: ie-mods-35
       branch: main
-  - name: sorc_tweak
-    components:
-      - 2 # Augmente le nombre de sorts connus de un partout (sauf là où il est nul) mais poursuit un peu la progression
-    location:
-      github_user: mleduque
-      repository: sorc_tweak
-      commit: 6c54023ed64
-  - name: late_fixes
-    components:
-      - 10 # Maze Leaving Permanent Effects on Characters
-    location:
-      github_user: mleduque
-      repository: late_fixes
-      commit: c293d6f
 
 
   ## portraits
   - name: PortraitsFromIWD2
     components:
+      - 200 # Portraits from Icewind Dale II -> with zoomed-in side-bar portraits: 01
     location:
       github_user: Ineth2
       repository: PortraitsFromIWD2
       tag: v01
   - name: iwd_portrait_variations
     components:
+      - 100 # Zoomed-in side bar portraits: 1.3
+      - 200 # Photoshopped variations: 1.3
     location:
       github_user: Ineth2
       repository: iwd_portrait_variations

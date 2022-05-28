@@ -32,18 +32,16 @@
  
  //DUAL CLASS OPTIONS__________________________________________________________________
  //                 FT CL MA TH DR RA
-@@ -219,11 +219,11 @@ ACTION_IF GAME_IS ~bgee bg2ee eet iwdee~ THEN BEGIN
- 			briefdesc = RESOLVE_STR_REF (@203)
+@@ -220,10 +220,10 @@ ACTION_IF GAME_IS ~bgee bg2ee eet iwdee~ THEN BEGIN
  		STR_VAR
  			kit_name = D5_PSION_MENU
--			hpclass = ~HPWIZ~
+ 			hpclass = ~HPWIZ~
 -			backstab = ~1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2~
-+			hpclass = ~HPROG~
 +			backstab = ~1 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3~
  			clswpbon = ~0 0 3~
 -			thiefskl = ~30 15~
 -			thiefscl = ~0 100 100 100 100 100 0 0~
-+			thiefskl = ~30 20~
++			thiefskl = ~30 2à~
 +			thiefscl = ~100 100 100 100 100 100 0 0~
  			clsrcreq = ~1 1 1 1 1 1 1~
  	END
@@ -134,7 +132,7 @@
  END 	//	end define function
 --- Will_to_Power/language/french/setup.tra
 +++ Will_to_Power/language/french/setup.tra
-@@ -55,9 +55,8 @@ CAPACITÉS :
+@@ -56,9 +56,8 @@ CAPACITÉS :
  - Les psionistes commencent avec 25 points de force psionique (PFP). Ils gagnent 5 PFP supplémentaires chaque niveau jusqu'au niveau 20.
  
  Restrictions :
@@ -146,7 +144,7 @@
  ~
  @301  = ~guerrier psychique~
  @302  = ~Guerrier psychique~
-@@ -71,7 +70,6 @@ CAPACITÉS :
+@@ -72,7 +71,6 @@ CAPACITÉS :
  
  Restrictions :
  - Ne peut utiliser que des armures légères.
@@ -154,7 +152,7 @@
  ~
  @401  = ~psypher~
  @402  = ~Psypher~
-@@ -86,7 +84,6 @@ CAPACITÉS :
+@@ -87,7 +85,6 @@ CAPACITÉS :
  Restrictions :
  - Ne peut utiliser que des armures légères.
  - Ne peut lancer de sorts divins.
@@ -162,3 +160,11 @@
  ~
  @501  = ~cerebromant~
  @502  = ~Cerebromant~
+@@ -101,7 +98,6 @@ CAPACITÉS :
+ 
+ Restrictions :
+ - A les mêmes restrictions de sort et les mêmes caractéristiques pour l'apprentissage de sorts qu'un enchanteur.
+-- Ne peut être d'alignement chaotique.
+ ~
+ //
+ //@1001  = ~Télépathie~

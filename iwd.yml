@@ -184,12 +184,13 @@ modules:
       github_user: Gibberlings3
       repository: Bardic_Appraisal
       commit: 979ba99 # post-v2, adds multi-bard support
-  - name: House-Rule-Tweaks
-    components: # maybe hpconbon + NPC Soundsets for Icewind Dale
+  - name: HouseTweaks
+    description: The Artisan's Tweaks and Overhauls
+    components:
     location:
       github_user: ArtemiusI
       repository: House-Rule-Tweaks
-      branch: master
+      tag: v2.01
   ## portraits
   - name: PortraitsFromIWD2
     components:

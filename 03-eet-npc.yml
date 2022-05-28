@@ -434,7 +434,7 @@ modules:
     location:
       github_user: Gitjas
       repository: Road_To_Discovery_for_SoD
-      release: v0.4Beta
+      release: v0.6Beta
       asset: road-to-discovery-for-sod-0.4-.beta.iemod
   - name: BG1NPCSoA # install after other versions of same npcs
     description: BG1 NPCs in BG2
@@ -450,7 +450,7 @@ modules:
     location:
       github_user: mleduque
       repository: TBGCoM_BG1NPCSoA
-      tag: v13.5
+      tag: v13.6
       patch:
         relative: patches/bg1npcsoa-nopdf.diff
         encoding: WIN1251

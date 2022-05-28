@@ -204,37 +204,37 @@ modules:
     description: "Colours of Infinity: Tales of the Deep Gardens"
     components: [0]
     location:
-      path: /home/mick/Games/modda-cache/static/Tales of the Deep Gardens v12.7.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Tales of the Deep Gardens v12.81.zip
   - name: Innershade
     description: "Colours of Infinity: Innershade"
     components: [0]
     location:
-      path: /home/mick/Games/modda-cache/static/Innershade v11.0.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Innershade v11.1.zip
   - name: WhiteQueen
     description: "Colours of Infinity: The White Queen"
     components: [0]
     location:
-      path: /home/mick/Games/modda-cache/static/The White Queen v6.9.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/The White Queen v6.92.zip
   - name: ISNF
     description: "Colours of Infinity: I Shall Never Forget"
     components: [0]
     location:
-      path: /home/mick/Games/modda-cache/static/I Shall Never Forget v6.0.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/I Shall Never Forget v6.1.zip
   - name: SouthernEdge
     description: "Athkatlan Grounds: Southern Edge"
     components: [0]
     location:
-      path: /home/mick/Games/modda-cache/static/SouthernEdge v3.4.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/SouthernEdge v3.5.zip
   - name: Ooze
     description: "Athkatlan Grounds: The Ooze’s Lounge"
     components: ~
     location:
-      path: /home/mick/Games/modda-cache/static/Oozes Lounge v2.92.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Oozes Lounge v2.93.zip
   - name: BridgesBlock
     description: "Athkatlan Grounds: Bridge’s Block"
     components: ~
     location:
-      path: /home/mick/Games/modda-cache/static/BridgesBlock v1.3.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/BridgesBlock v1.4.zip
   - name: SirinesCall
     description: The Lure of the Sirine's Call
     components: [0, 1]
@@ -560,9 +560,9 @@ modules:
       - 0   # Sirene NPC for BG2:EE
       - 103 # Choose an portrait for Sirene (check mod folder for portraits) -> Alternate Light Armor portrait by Sirick
     location:
-      github_user: mleduque
+      github_user: ArtemiusI
       repository: Sirene-NPC-for-BG2-EE
-      branch: no-prompt
+      tag: v2.01
     # prompt for portrait
   - name: bst
     components: [0]
@@ -589,7 +589,7 @@ modules:
     description: "Athkatlan Grounds: The Tangled Oak Isle"
     components: ~
     location:
-      path: /home/mick/Games/modda-cache/static/TangledIsle v2.6.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Tangled Isle v3.0.zip
   - name: "g3anniversary"
     components: [0] # The Gibberlings Three Anniversary Mod
     location:
@@ -652,7 +652,8 @@ modules:
     location:
       github_user: lzenner
       repository: themed_tweaks
-      commit: aa91555c3 # committed on 2021-10-08
+      release: v0.2
+      asset: themed-tweaks-v2-v2-pre.iemod
   - name: framed
     components:
       - 0 # FFramed ou Piege: Propose plusieurs versions du chapitre 6 -> LUtilisez des voix personnalisees pour les films des nouveaux chapitres
@@ -687,7 +688,7 @@ modules:
     location:
       github_user: Austin-BG
       repository: HTaM
-      release: v.4.2.4-nopdf
+      release: v.4.2.6-nopdf
       asset: heroes-thieves-and-moneylenders-4.2.3.iemod
   - name: "snakes" # The slithering Menace
     components: [0]
@@ -725,7 +726,7 @@ modules:
       #- 1000 # The Beaurin Legacy for BG2:SoA & ToB & BGII:EE
       #- 3010 # Minyae's Portrait -> Change Minyae's portrait to alternative by TamikaProud at DeviantArt
     location:
-      path: /home/mick/Games/modda-cache/static/lin-TheBeaurinLegacy-v5.0.tar.gz
+      path: /home/mick/Games/modda-cache/static/lin-TheBeaurinLegacy-v5.1.tar.gz
   - name: "voloquest" # IM10
     components: [0]
     location:

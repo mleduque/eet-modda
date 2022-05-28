@@ -1,8 +1,8 @@
 --- klatu/setup-klatu.tp2
 +++ klatu/setup-klatu.tp2
-@@ -357,11 +357,28 @@ LANGUAGE ~German~
+@@ -357,11 +357,26 @@ LANGUAGE ~German~
  		END
-
+ 		
  		// ulcaster
 -		ACTION_IF (FILE_EXISTS_IN_GAME ~AR3901.bcs~) BEGIN
 -			EXTEND_TOP ~AR3901.bcs~ ~klatu/baf/ulcasterSpawn.baf~
@@ -10,16 +10,14 @@
 +			ACTION_IF (FILE_EXISTS_IN_GAME ~AR3901.bcs~) BEGIN
 +				EXTEND_TOP ~AR3901.bcs~ ~klatu/baf/ulcasterSpawn.baf~
 +			END
- 		END
--		ACTION_IF (FILE_EXISTS_IN_GAME ~AR9798.bcs~) BEGIN
--			EXTEND_TOP ~AR9798.bcs~ ~klatu/baf/ulcasterSpawn.baf~
-+
++		END
 +		ACTION_IF (GAME_IS ~tutu tutu_totsc~) BEGIN
 +			ACTION_IF (FILE_EXISTS_IN_GAME ~FW3901.bcs~) BEGIN
 +				EXTEND_TOP ~FW3901.bcs~ ~klatu/baf/ulcasterSpawn.baf~
 +			END
-+		END
-+
+ 		END
+-		ACTION_IF (FILE_EXISTS_IN_GAME ~AR9798.bcs~) BEGIN
+-			EXTEND_TOP ~AR9798.bcs~ ~klatu/baf/ulcasterSpawn.baf~
 +		ACTION_IF (GAME_IS ~bgt~) BEGIN
 +			ACTION_IF (FILE_EXISTS_IN_GAME ~AR9798.bcs~) BEGIN
 +				EXTEND_TOP ~AR9798.bcs~ ~klatu/baf/ulcasterSpawn.baf~
@@ -31,5 +29,5 @@
 +				EXTEND_TOP ~BG3901.bcs~ ~klatu/baf/ulcasterSpawn.baf~
 +			END
  		END
-
+ 		
  		// BGT transition

@@ -71,11 +71,11 @@ modules:
   - name: Sirene
     components:
       - 0   # Sirene NPC for Baldur's Gate: Enhanced Edition
-      - 103 # ~Choose an portrait for Sirene (check mod folder for portraits): Alternate Light Armor portrait by Sirick
+      - 2 # ~Choose an portrait for Sirene (check mod folder for portraits): Alternate Light Armor portrait by Sirick
     location:
-      github_user: mleduque
+      github_user: ArtemiusI
       repository: Sirene-NPC
-      branch: 2.8-noprompt
+      tag: v2.91
   - name: BGEE_AI_Denoised_Areas
     components:
       - 0

@@ -1,0 +1,16 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: cdtweaks
+    description: Tweaks Anthology - only spell progression tables
+    components:
+      - 2360 # Suppression des restrictions raciales pour les mono-classes: v14    location:
+    location:
+      github_user: Gibberlings3
+      repository: Tweaks-Anthology
+      release: v14
+      asset: lin-cdtweaks-v14.tar.gz

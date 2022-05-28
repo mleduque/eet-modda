@@ -9,7 +9,7 @@ modules:
     components:
         - 210 # Bard Overhaul: Multiclass Bards: 4.13
     location:
-      github_user:  UnearthedArcana
+      github_user:  mleduque
       repository: Might_and_Guile
       branch: 4.22-fr
       patch:

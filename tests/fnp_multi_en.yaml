@@ -10,9 +10,9 @@ modules:
       - 95 # Multiclass Cleric kits (install AFTER all other kit mods
     ignore_warnings: true # apparently intentional
     location:
-      github_user: mleduque
+      github_user: UnearthedArcana
       repository: Faiths_and_Powers
-      commit: e450c46
+      tag: "0.83.6"
       layout:
           layout_type: multi_dir
           dirs:

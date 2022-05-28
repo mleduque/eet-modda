@@ -1,0 +1,11 @@
+--- skills-and-abilities/2da/stylbonu.2da
++++ skills-and-abilities/2da/stylbonu.2da
+@@ -13,4 +13,7 @@ TWOHANDED-2      2                0                0                0
+ SINGLEWEAPON-2   2                0                -2               0                -2               0                0                2
+ SWORDANDSHIELD-2 0                0                0                0                -2               -2               0                0
+ TWOWEAPON-2      0                0                0                4                0                0                0                0
+-TWOWEAPON-3      0                0                0                2                0                0                0                0
++TWOWEAPON-3      0                0                0                0                0                0                0                0
++TWOHANDED-3      3                1                0                0                0                0                -4               1
++SINGLEWEAPON-3   2                0                -2               0                -2               -1               -2               2
++SWORDANDSHIELD-3 1                0                1                0                -3               -3               -1               0
