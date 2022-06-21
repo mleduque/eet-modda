@@ -39,7 +39,7 @@ modules:
     location:
       github_user: mleduque
       repository: iwdification
-      branch: v4-fr
+      branch: v5-fr
   - name : Weasels!
     components:
       - 0
@@ -388,14 +388,14 @@ modules:
       - 1070 # Les Voleurs peuvent utiliser des baguettes
   - name: forgotten-armament
     components:
-      - 1 # Add New Forgotten Armament Items into the Game
-      - 8 # Replace Boots of Speed (Paws of the Cheetah)
-      #- 10 # Improved Spears
+      #- 1 # Add New Forgotten Armament Items into the Game
+      #- 8 # Replace Boots of Speed (Paws of the Cheetah)
+      ##- 10 # Improved Spears
     location:
       github_user:  Gibberlings3
       repository: Forgotten-Armament
-      release: 0.5-beta
-      asset: lin-forgotten-armament-v0.5-beta.zip
+      release: 0.6.1-Beta
+      asset: lin-forgotten-armament-v0.6.1-beta.zip
   - name: cdlore
     components:
       - 10 # Books Provide Lore Bonuses

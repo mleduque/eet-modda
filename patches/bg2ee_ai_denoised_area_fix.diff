@@ -1,14 +1,10 @@
---- BG2EE_AI_Denoised_Areas.tp2
-+++ BG2EE_AI_Denoised_Areas.tp2
-@@ -8,9 +8,9 @@ VERSION ~220506~
-
+--- BG2EE_AI_Denoised_Areas/BG2EE_AI_Denoised_Areas.tp2
++++ BG2EE_AI_Denoised_Areas/BG2EE_AI_Denoised_Areas.tp2
+@@ -8,7 +8,6 @@ VERSION ~220506~
+ 
  BEGIN ~BG2EE_AI_Denoised_Areas~
-
+ 
 -REQUIRE_PREDICATE GAME_IS ~bg2ee~ @1003
-
+ 
  //**************************************************
  // Dump everything into the override
- //**************************************************
--COPY ~BG2EE_AI_Denoised_Areas/copy~ ~override~
-\ No newline at end of file
-+COPY ~BG2EE_AI_Denoised_Areas/copy~ ~override~

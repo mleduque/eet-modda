@@ -10,7 +10,8 @@ modules:
     location:
       github_user: Pocket-Plane-Group
       repository: Branwen_for_BGII
-      commit: 95381b1 # pst v7
+      release: v8
+      asset: branwen-v8pre.iemod
   - name: Aura_BG1
     components:
     location:
@@ -102,8 +103,8 @@ modules:
     location:
       github_user: Gitjas
       repository: Ascalons_Breagar
-      release: "11.4.0"
-      asset: ascalons-breagar-11.4.0.iemod
+      release: v12.0.0
+      asset: acbre-12.0.0.iemod
   - name: c#brandock
     description: Brandock the mage
     components: ~
@@ -434,8 +435,8 @@ modules:
     location:
       github_user: Gitjas
       repository: Road_To_Discovery_for_SoD
-      release: v0.6Beta
-      asset: road-to-discovery-for-sod-0.4-.beta.iemod
+      release: v0.7Beta
+      asset: sodrtd-0.7-.beta.iemod
   - name: BG1NPCSoA # install after other versions of same npcs
     description: BG1 NPCs in BG2
     components:

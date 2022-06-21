@@ -24,7 +24,7 @@ modules:
     description: The Rediscovery of Kuldahar
     components:
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Kuldahar v1.3.zip
+      path: /home/mick/Games/modda-cache/static-iwd/Kuldahar v2.0.zip
   - name: willowisp
     components:
     location:
@@ -171,6 +171,11 @@ modules:
       http: http://www.shsforums.net/files/getdownload/12410-a-frosty-journey-the-iwdee-kitpack/
   ## tweaks
   - name: cdtweaks
+    location:
+      github_user: Gibberlings3
+      repository: Tweaks-Anthology
+      release: v15
+      asset: lin-cdtweaks-v15.tar.gz
   - name: aTweaks
   - name: S9HouseRules
     components: ~

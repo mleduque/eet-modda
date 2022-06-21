@@ -186,8 +186,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Skills-and-Abilities
-      release: 0.7.2-Alpha
-      asset: lin-skills-and-abilities-v0.7.2-Alpha.zip
+      release: 0.7.6-Alpha
+      asset: lin-skills-and-abilities-v0.7.6-Alpha.zip
       patch:
         relative: patches/skills-and-abilities-prof-points.diff
   - name: tnt

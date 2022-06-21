@@ -39,8 +39,8 @@ modules:
     location:
       github_user: Gitjas
       repository: The_Boareskyr_Bridge_Scene
-      release: v1
-      asset: the-boareskyr-bridge-scene-v1.iemod
+      release: v2
+      asset: the-boareskyr-bridge-scene-v2.iemod
   - name: turnabout
     components:
       - 0 # Ascension: Turnabout
@@ -93,8 +93,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: EndlessBG1
-      release: v10
-      asset: endless-bg1-mod-10.iemod
+      release: v11
+      asset: endless-bg1-mod-11.iemod
   - name: transitions
     components:
       #- 0   # Main component: Allow continued play after Sarevok and/or Irenicus is defeated
@@ -180,8 +180,8 @@ modules:
     location:
       github_user: Gitjas
       repository: Ascalons_Questpack
-      release: v4.2
-      asset: ascalons-questpack-4.2.iemod
+      release: v4.3
+      asset: ascalons-questpack-4.3.iemod
   - name: BG_Travel
     description: New travel system between Baldur's Gate City areas
     comment: Original location http://athkatla.cob-bg.pl/download.php?id=1595 (BG_Travel_v2.1.rar)

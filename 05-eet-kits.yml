@@ -245,8 +245,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Tweaks-Anthology
-      release: v14
-      asset: lin-cdtweaks-v14.tar.gz
+      release: v15
+      asset: lin-cdtweaks-v15.tar.gz
     add_conf:
       file_name: cdtweaks.txt
       content: |
@@ -298,8 +298,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: SP_Collection
-      release: v12
-      asset: lin-spstuff-v12.tar.gz
+      release: v13
+      asset: lin-spstuff-v13.tar.gz
   - name: TomeAndBlood
     description: Tome And Blood - main
     components:
@@ -519,11 +519,6 @@ modules:
     description: The Artisan's Tweaks and Overhauls
     components:
       #- 0  # House Tweaks: Expanded Racial Enemies
-      #- 1  # House Tweaks: Expanded Shapeshifting
-      #- 2  # House Tweaks: Expanded Racial Bonuses
-      #- 3  # House Tweaks: Rebalanced Weapon Styles
-      #- 4  # House Tweaks: Monk Can Use Quarterstaves
-      #- 5  # House Tweaks: Increased Constitution Bonuses
       #- 6  # House Tweaks: Warrior HLAs
       #- 7  # House Tweaks: Improved Dialogues (BG:EE)
       #- 8  # House Tweaks: Not-So-Indestructible Rats
