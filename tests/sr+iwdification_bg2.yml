@@ -1,0 +1,50 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: CtB
+    description: Check the bodies
+    components:
+      - 0 # Check The Bodies : main component
+      #- 1 # Candlekeep Chores component
+      #- 2 # Candlekeep Chores Fast Forward
+      #- 3 # CtB other improvements
+    location:
+      github_user: SpellholdStudios
+      repository: Check_the_Bodies
+      release: v3.0
+      asset: check-the-bodies-3.0.iemod
+  - name: spell_rev
+    components:
+      - 0   # Spell Revisions
+      #- 10  # Deva and Planetar Animations
+      #- 20  # Mirror Image Fix
+      #- 30  # Dispel Magic Fix    <- must be before TotLM
+      #- 55  # Spell Deflection blocks AoE spells
+      #- 60  # Update Spellbooks of Joinable NPCs
+      #- 65   # Revised Warrior HLAs
+    location:
+      github_user: Gibberlings3
+      repository: SpellRevisions
+      commit: 6a9ca10
+  - name: iwdification
+    components:
+      #- 10 # Icewind Dale Casting Graphics (Andyr): Release Candidate 2
+      #- 60 # Two Handed Axe Item Pack: Release Candidate 2
+      - 30 # IWD Arcane Spell Pack: Release Candidate 2
+      #- 40 # IWD Divine Spell Pack: Release Candidate 2
+      #- 50 # IWD Class Updates: Bard: Add IWD Bard Songs: Release Candidate 2
+      #- 120 # IWD Class Updates: Thief: Evasion: Release Candidate 2
+      #- 140 # Randomized Enemy Equipment -> Add High Quality Items: Release Candidate 2
+      #- 150 # IWD Class Updates: Bard: Use IWD Spell Progression: Release Candidate 2
+      #- 70 # IWD Class Updates: Druid: Use IWD Shapeshifting and Ability Progression: Release Candidate 2
+      #- 71 # IWD Class Updates: Druid: Allow Elves to be Druids: Release Candidate 2
+      #- 160 # IWD Class Updates: Paladin: Use IWD Spell Progression: Release Candidate 2
+      #- 170 # IWD Class Updates: Ranger: Use IWD Spell Progression: Release Candidate 2
+    location:
+      github_user: mleduque
+      repository: iwdification
+      branch: v5-fr

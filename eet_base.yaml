@@ -62,10 +62,6 @@ modules:
       # issue with eefixpack - 22-05-08
       #- 50    # Improved Slayer Transformation
       - 60    # Expanded Epilogues for Bioware NPCs -> David Gaider's expanded epilogues for Bioware NPCs
-      #- 1200  # Tougher Demogorgon
-      #- 1300  # Tougher Gromnir
-      #- 1400  # Tougher Illasera
-      #- 1500  # Tougher Yaga-Shura
       - 2000  # Full-body portrait for Bodhi
       - 2200  # Extended Epilogues for additional Beamdog NPCs, by shawne
       - 2300  # Sharper portraits of Abazigal and Gromnir for the Enhanced Edition, by DavidW
@@ -259,16 +255,15 @@ modules:
   - name: ntotsc
     description: Northern Tales of the Sword Coast
     components:
-      #- 0 # Northern Tales of the Sword Coast (NTotSC) for BGT-Weidu, BG:EE, and EET
-      #- 1 # Spawn less Monsters depending on Game Difficulty
-      #- 2 # Keelor the Dwarf
-      #- 3 # Llindellyn's Lucky Arrow
-      ##- 4 # Nim Furlwing's Hunting Hounds -> not installable with bg1ub
-      #- 5 # Pilar and Gheldehar
-      ##- 6 # Svlast's Torment -> not installable with bg1ub
-      ##- 7 # Will O'Hara NPC  ->  blank NPC, uninteresting
-      ##- 8 # Will O'Hara Soundset subcomponent
-      #- 9 # Fighting Encounters
+      - 0 # Northern Tales of the Sword Coast (NTotSC) for BGT-Weidu, BG:EE, and EET: 5.0.0
+      - 1 # Spawn less Monsters depending on Game Difficulty: 5.0.0
+      - 2 # Keelor the Dwarf: 5.0.0
+      - 3 # Llindellyn's Lucky Arrow: 5.0.0
+      - 5 # Pilar and Gheldehar: 5.0.0
+      - 9 # Fighting Encounters: 5.0.0
+      - 10 # Improved Lesser Fiends: 5.0.0
+      - 11 # Improved Haeball: 5.0.0
+      - 12 # Improved Ghotal: 5.0.0
     location:
       github_user: SpellholdStudios
       repository: NTotSC
@@ -998,6 +993,18 @@ modules:
       github_user: RoxanneSHS
       repository: Magestronghold
       tag: V0.5
+  # v3: incompatible with iwdification
+  #- name: CtB
+  #  description: Check the bodies
+  #  components:
+  #    - 0 # Check The Bodies : main component
+  #    - 1 # Candlekeep Chores component
+  #    - 2 # Candlekeep Chores Fast Forward
+  #    - 3 # CtB other improvements
+  #  location:
+  #    github_user: SpellholdStudios
+  #    repository: Check_the_Bodies
+  #    commit: be5c6e0 # single fix over 3.0
 
   #########
   # NPC
@@ -1032,14 +1039,14 @@ modules:
     location:
       github_user: Skitia
       repository: Emily-BG1
-      commit: 9b516687a # 2002-06-11
+      commit: 5b9a580 # 2022-06-25
   - name: Helga
     components:
       - 0
     location:
       github_user: Skitia
       repository: Helga-BG1
-      commit: 53b399b
+      commit: ebbf7e1 # 2022-06-23
       patch:
         relative: patches/helga_bg1-defaultportrait-nomusic.diff
   - name: Kale
@@ -1047,7 +1054,7 @@ modules:
     location:
       github_user: Skitia
       repository: Kale-BG1
-      commit: 06a25be
+      commit: 75bf003 # 2022-06-25
       patch:
         relative: patches/kale_bg1-nomusic.diff
     #prompt for music (2. No)
@@ -1056,13 +1063,13 @@ modules:
     location:
       github_user: Skitia
       repository: Recorder-BG1
-      commit: cde8d60
+      commit: 3792c0f1f89a3 # 2022-06-23
   - name: Vienxay
     components: [0]
     location:
       github_user: Skitia
       repository: Vienxay-BG1
-      commit: 995de47618c6 # 2022-06-11
+      commit: 82f2c98 # 2022-06-23
       patch:
         relative: patches/viexnay_bg1-defaultprotrait-nomusic.diff
     #prompt for portrait (1. Default)
@@ -1073,7 +1080,7 @@ modules:
     location:
       github_user: Skitia
       repository: SkitiaNPCs
-      commit: 089c431 # 2022-06-12
+      commit: c354070 # 2022-06-23
       patch:
         relative: patches/skitia_npc_defaultportraits.diff
     #prompt for portrait (1. Default the 1. Default)
@@ -1234,38 +1241,109 @@ modules:
     location:
       path: /home/mick/Games/modda-cache/static/Bristlelick v2.0.zip
   - name: evandra
+    components:
+      - 0 #/ Evandra NPC: v2.2
+      - 1 # Crossmod Content: v2.2
     location:
       path: /home/mick/Games/modda-cache/static/lin-evandra-v2.2.zip
   - name: sarahtob
+    components:
+      - 0 # Mod Sarah NPC Romance pour BG2:ToB: 6
     location:
       github_user: Gibberlings3
       repository: Sarah
       release: v6
       asset: lin-sarahtob-v6.zip
   - name: aurenaseph
+    components:
+      - 0 # Auren Aseph pour BG2:ToB: v12
     location:
       github_user: Gibberlings3
       repository: AurenAseph
       release: v12
       asset: lin-aurenaseph-v12.zip
   - name: GlamNPCPack
+    components:
+      - 0 # Glam's NPC Pack for BG:EE, BGT and BG TUTU
     location:
       github_user: Gibberlings3
       repository: Glam-NPC-Pack
       release: v1
       asset: lin-GlamNPCPack-v1.zip
   - name: anishai
+    components:
+      - 0 # Anishai one-day NPC: v3
     location:
       github_user: Gibberlings3
       repository: Anishai
       release: v3
       asset: lin-anishai-v3.zip
   - name: tyrisflare
+    components:
+      - 0 # Tyris Flare NPC: v9
     location:
       path: /home/mick/Games/modda-cache/static/tyrisflare-v9.zip
   - name: navarra
+    components:
+      - 0 # Navarra for BG2
     location:
       path: /home/mick/Games/modda-cache/static/lin-navarra-v1.1.tar.gz
+      patch:
+        relative: patches/navarra-no-prompt.diff
+  - name: haiass
+    components:
+      - 0 # Haiass le Loup: v2.4
+      - 10 #  Haiass peut être ressuscité -> Pénalisation modérée (-4 Constitution temporairement): v2.4
+    location:
+      path: /home/mick/Games/modda-cache/static/haiass_v2_4.zip
+  - name: aurora
+    description: Aurora shoes and boots - non-joinable NPC
+    components:
+      - 0 # Aurora's Shoes and Boots: v5.3 (EE & EET)
+      - 20 # Petits portraits pour les PNJs -> Marchands uniquement: v5.3 (EE & EET)
+    location:
+      path: /home/mick/Games/modda-cache/static/Auroras-Shoes-and-Boots-5.3 (EE).zip
+  - name: luxleysoa
+    components:
+      - 0 # Luxley Family Mod for BGII:SoA: v2.0.0
+    location:
+      github_user: SpellholdStudios
+      repository: The_Luxley_Family
+      release: v2.0.0
+      asset: the-luxley-family-v2.0.0.iemod
+  - name: Fade
+    components:
+      - 0 # Fade: An NPC for Baldur's Gate II: SoA and ToB: 5.6
+      - 1 # Fade NPC: reactions to Romantic Encounters (RE may be installed before or after this component): 5.6
+    location:
+      github_user: SpellholdStudios
+      repository: Fade_NPC
+      release: v5.6
+      asset: Fade_v5-6.zip
+  - name: dace
+    components:
+      - 0 # Dace Linton NPC Mod for BG2:SoA & ToB: v5
+    location:
+      github_user: SpellholdStudios
+      repository: Dace_NPC
+      release: v5
+      asset: lin-dace-v5.zip
+  - name: hubelpot
+    components:
+      - 1 # Hubelpot Thistledown, the Vegetable Merchant NPC mod -> Hubelpot is a Village Druid (alternate kit): v2.1.0
+    location:
+      github_user: SpellholdStudios
+      repository: Hubelpot_the_Vegetable_Merchant_NPC
+      release: v2.1.0
+      asset: hubelpot-the-vegetable-merchant-npc-v2.1.0.iemod
+  - name: allison
+    components:
+      - 0 # Allison (One-Day NPC)
+    location:
+      github_user: SpellholdStudios
+      repository: Allison_One-Day_NPC
+      release: v1.8
+      asset: AllisonV15MacOSX.zip
   - name: chattyimoen
     components:
       - 0 # Chatty Imoen : Repliques audio supplementaires
@@ -1361,14 +1439,15 @@ modules:
       repository: deArnise_Romance
       release: v7
       asset: deArnise_v7.zip
-  - name: imoenRomance
-    components: [0, 1]
-    location:
-      # original location https://www.blindmonkey.org/imoen/files/Imoen%20Romance.zip
-      # started to give SSL errors
-      github_user: mleduque
-      repository: ImoenRomance
-      branch: main
+  # not compatible with imoen4ever
+  #- name: imoenRomance
+  #  components: [0, 1]
+  #  location:
+  #    # original location https://www.blindmonkey.org/imoen/files/Imoen%20Romance.zip
+  #    # started to give SSL errors
+  #    github_user: mleduque
+  #    repository: ImoenRomance
+  #    branch: main
   - name: viconia
     components: [0]
     location:
@@ -1420,7 +1499,7 @@ modules:
     location:
       github_user: Skitia
       repository: Wings
-      tag: v1.02
+      tag: v1.03
   - name: banterpack
     components:
       - 0 # Pack de Dialogues du Pocket Plane Group pour BG2 : SoA
@@ -1541,7 +1620,7 @@ modules:
     location:
       github_user: Gibberlings3
       repository: SpellRevisions
-      commit: 404a56a
+      commit: 6a9ca10
   - name: iwdification
     components:
       - 10 # Icewind Dale Casting Graphics (Andyr): Release Candidate 2
@@ -1671,6 +1750,15 @@ modules:
       repository: HaerDalis_Swords
       release: v3.1.0
       asset: improved-haerdalis-swords-v3.1.0.iemod
+  # - name: itemupgrade
+  #   components:
+  #     - 10
+  #     - 11
+  #   location:
+  #     github_user: Pocket-Plane-Group
+  #     repository: Item_Upgrade
+  #     release: v49
+  #     asset: lin-itemupgrade-v49.tar.gz
   - name: ruad
     description: Ruad Ro'fhessa Item Upgrade
     components: [0, 10]
@@ -1864,22 +1952,27 @@ modules:
     components:
       - 1030 # Revision des boutiques
       #- 10   # Bonus des boucliers revus
-      - 17   # Weapon Changes
+      #- 17   # Weapon Changes
       #- 11   # Le combat a deux armes differe selon le type d'arme, legere ou lourde
       #- 20   # Attaque sournoise revue (avec et sans penalite) -> Toutes les armes de melee et a projectiles utilisables pour l'attaque sournoise
       - 1200 # Evitement des coups critiques revu
       - 1060 # Les Kensai peuvent porter des bracelets
       - 1070 # Les Voleurs peuvent utiliser des baguettes
   - name: forgotten-armament
-    components: # except stat increase items
-      #- 1 # Add New Forgotten Armament Items into the Game
-      #- 8 # Replace Boots of Speed (Paws of the Cheetah)
-      ##- 10 # Improved Spears -> prefer scales of balance version
+    description: Forgotten armaments - comopnent that warns
+    components:
+      - 17 # Installer " Armes et Equipements oublies " -> Mise Ã  jour des objets existants et ajout des nouveaux objets: v0.7.1-beta
     location:
       github_user:  mleduque
       repository: Forgotten-Armament
-      branch: 0.6.1-keep_some_boots
-
+      branch: 0.7.1-keep-some-boots
+    ignore_warnings: true
+  - name: forgotten-armament
+    description: Forgotten armaments - components without warnings
+    components: # except stat increase items
+      - 11 # Ajouter le parchemin Breche au Bazar Magique de la Porte de Baldur: v0.7.1-beta
+      - 8 # Remplacer les Bottes de Rapidite (Les Pattes de Guepard): v0.7.1-beta
+      - 10 # Armes dans le style de NWN2: v0.7.1-beta
 
   #########
   # Early tweaks
@@ -2216,6 +2309,9 @@ modules:
       - 1020 # Prepared Wishes
       - 1030 # Romance Cheat: Isra will Romance Neutral Characters
       - 1050 # Appropriate XP Rewards for Cowled Enforcers
+      # removed ctb
+      #- 1070 # CtB: Remove Venereal Disease
+      #- 1080 # CtB: Fixed Harp of Myth Drannor
       - 2020 # No Item Deprecation
       - 2030 # Identify all store items
       - 2040 # Fix Wild Mage Items and Spells
@@ -2357,7 +2453,7 @@ modules:
   - name: scales_of_balance
     components:
       - 100 # IWO - Encore une autre revision du systeme d'armure (YARAS): v5.38.3
-      - 102 # IWO - Ajustements fonctionnels des armes: v5.38.3
+      #- 102 # IWO - Ajustements fonctionnels des armes: v5.38.3
       - 109 # IWO - Toutes les potions sont utilisables par toutes les classes: v5.38.3
       # 121 # WPO - Fusion des categories d'armes: v5.38.3
       #- 125 # WPO - APR bonus pour la specialisation: v5.38.3
@@ -2803,7 +2899,8 @@ modules:
   #########s
   - name: forgotten-armament
     description: forgotten-armament - stat increasing items
-    components: # except onlystat increase items
+    components: # only stat increase items
+      - 4 # Mise a jour des statistiques et scores de capacite des objets ameliores pour une meilleur integration: v0.7.1-beta
   - name: EEUITweaks
     components:
       - 1000 # Mods Options: 3.9
@@ -2893,7 +2990,7 @@ modules:
       # commit: 00c1388
       github_user: CamDawg # canonical version: FredrikLindgren/aTweaks
       repository: aTweaks
-      commit: fa70698
+      commit: 2469eb1
   - name: c#brandock
     description: Brandock the mage - atweak compat
     installation:
@@ -2903,21 +3000,20 @@ modules:
   - name: skills-and-abilities
     description: skills-and-abilities - components that warn
     components:
-      #- 40 # Mise a jour des Competences des Rodeurs: v0.7.2-alpha
-      #- 70 # Ajouter des capacites speciales pour les moines: v0.7.2-alpha
-      #- 80 # Ajouter des capacites speciales pour les Paladins: v0.7.2-alpha
-      #- 90 # Ajouter des capacites de haut niveau pour toutes les classes et kits: v0.7.2-alpha
-      #- 100 # Permettre a l'Inquisiteur de lancer des sorts divins: v0.7.2-alpha
-      #- 300 # Mises a Jour des styles de combat: v0.7.2-alpha
-      #- 312 # Revision du Systeme de Competence - Ajout de nouvelles competences et de nouveaux styles de combat -> Progression acceleree des competences: v0
-      #- 400 # Bonus de force supplementaire pour les armes a deux mains: v0.7.2-alpha
-    location:
-      github_user: Gibberlings3
-      repository: Skills-and-Abilities
-      release: 0.7.6-Alpha
-      asset: lin-skills-and-abilities-v0.7.6-Alpha.zip
-      patch:
-        relative: patches/skills-and-abilities-prof-points.diff
+      - 130 # Permettre au Maitre-lames de se specialiser dans les armes de melee: v0.8.1-alpha
+      - 150 # Add New Fighter Abilities: v0.8.1-alpha
+      - 143 # Permettre au guerrier multi-classÃ© de depasser la specialisation (2 points de compÃ©tence) pour les compÃ©tences d'armes -> Permettre au guerrier mu
+      - 70 # Ajouter des capacites speciales pour les moines: v0.8.1-alpha
+      - 40 # Mise a jour des Competences des Rodeurs: v0.8.1-alpha
+      - 100 # Permettre a l'Inquisiteur de lancer des sorts divins: v0.8.1-alpha
+      - 91 # Ajouter des capacites de haut niveau pour toutes les classes et kits -> Mise a jour des HLAs existantes et ajout des nouvelles HLAs: v0.8.1-alpha
+      - 312 # Revision du Systeme de Competence - Ajout de nouvelles competences et de nouveaux styles de combat -> Progression acceleree des competences: v0.8.1-a
+      - 400 # Bonus de force supplementaire pour les armes a deux mains: v0.8.1-alpha
+    github_user: Gibberlings3
+    repository: Skills-and-Abilities
+    commit: ea5477e # post 0.8
+    patch:
+      relative: patches/skills-and-abilities-prof-points.diff
   - name: POISON_NO_BYPASS
     components:
       - 3 # Limited Exclusions(Anti-magic, AoE, Gaze): Mirror Image or Stoneskin
@@ -2965,20 +3061,22 @@ modules:
       asset: tweaks-and-tricks-v8.19.iemod
   - name: zgtweaks
     components:
-      #- 10 # one arcane scroll on the level of the highest arcane level memorized
-      #- 11 # one arcane scroll up to the level of the highest arcane level memorized
-      #- 12 # one arcane scroll on the level above 4 of the highest arcane level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive level 2 scroll etc.)
-      #- 13 # one arcane scroll up to the level above 4 of the highest arcane level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive up to level 2 scroll etc.)
-      #- 20 # one arcane scroll on the level of the highest divine level memorized
-      ##- 21 # one arcane scroll up to the level of the highest divine level memorized
-      ##- 22 # one arcane scroll on the level above 4 of the highest divine level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive level 2 scroll etc.)
-      #- 23 # one arcane scroll up to the level above 4 of the highest divine level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive up to level 2 scroll etc.)
-    ignore_warnings: true # warns when ADD_CRE_ITEM falls back on inventory slot
+      - 10 # one arcane scroll on the level of the highest arcane level memorized
+      - 11 # one arcane scroll up to the level of the highest arcane level memorized
+      - 12 # one arcane scroll on the level above 4 of the highest arcane level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive level 2 scroll etc.)
+      - 13 # one arcane scroll up to the level above 4 of the highest arcane level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive up to level 2 scroll etc.)
+      - 20 # one arcane scroll on the level of the highest divine level memorized
+      #- 21 # one arcane scroll up to the level of the highest divine level memorized
+      - 22 # one arcane scroll on the level above 4 of the highest divine level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive level 2 scroll etc.)
+      - 23 # one arcane scroll up to the level above 4 of the highest divine level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive up to level 2 scroll etc.)
+      - 100 # Mixed PnP-BG wisdom-based bonus spells table
+      - 10000 #  Bag of Spilling
     location:
       github_user: GraionDilach
       repository: RandomGraionTweaks
-      release: version-1.31
-      asset: random-graion-tweaks-1.31.iemod
+      release: version-1.4
+      asset: random-graion-tweaks-1.4.iemod
+    ignore_warnings: true
   - name: jtweaks
     components:
       - 60 # NPCs don't go in inaccessible locations: 2.2

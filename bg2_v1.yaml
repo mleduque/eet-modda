@@ -2283,7 +2283,6 @@ modules:
     description: Might And Guile - Other components
     components:
       - 200 # Système de Dons: 4.21.1
-      - 210 # Révision du Barde : bardes multiclasses: 4.21.1
       - 240 # Rôdeur améliorés: 4.21.1
       - 245 # Bonus de mouvement révisés (Déplacement accru): 4.21.1
       - 250 # Berserker révisé et rage: 4.21.1

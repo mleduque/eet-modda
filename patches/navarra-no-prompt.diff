@@ -1,0 +1,11 @@
+--- navarra/setup-navarra.tp2
++++ navarra/setup-navarra.tp2
+@@ -155,7 +155,7 @@ PRINT ~Select Navarra's dialogue timer:
+ 
+ PRINT ~Please choose one of the following:~ 
+ 
+-OUTER_SPRINT ~Navartimer~ ~placeholder_value~
++OUTER_SPRINT ~Navartimer~ 4
+ OUTER_WHILE (!(IS_AN_INT ~Navartimer~) OR (~Navartimer~ > 0x6) OR (~Navartimer~ < 0x1)) BEGIN
+   PRINT ~Please select 1, 2, 3, 4, 5, or 6 and press enter. 
+ [1] 1 hour real time minimum between dialogues
