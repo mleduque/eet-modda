@@ -332,7 +332,7 @@ modules:
     components:
       - 0 # Eilistraee's Song -> Yes, but don't patch the existing save games: 7.1
     location:
-      path: /home/mick/Games/modda-cache/static/Eilistraees Song v7.1.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Eilistraees Song v7.1.zip
   - name: TotDG
     description: "Colours of Infinity: Tales of the Deep Gardens"
     components:
@@ -374,7 +374,7 @@ modules:
     components:
       - 0 # Les terres d'Athkatlan : Le Bloc du Pont: 1.3
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/BridgesBlock v1.4.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/BridgesBlock v1.5.zip
   - name: SirinesCall
     description: The Lure of the Sirine's Call
     components:
@@ -695,7 +695,7 @@ modules:
     components:
       - 0   # Foundling
     location:
-      path: /home/mick/Games/modda-cache/static/Foundling v5.3.zip # selectskit
+      path: /home/mick/Games/modda-cache/static/weaselmods/Foundling v5.3.zip # selectskit
       patch:
         relative: patches/foundling-class.diff
   - name: willowisp
@@ -708,7 +708,7 @@ modules:
       # 4 : crossmod banter later after installing other mods
       - 5 # [CHEAT] Enable shaman stronghold for all classes
     location:
-      path: /home/mick/Games/modda-cache/static/Will of the Wisp v2.20.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Will of the Wisp v2.20.zip
   - name: paina
     components:
       - 0 # Pai'Na NPC for BG:EE
@@ -882,7 +882,7 @@ modules:
     description: Shades of the Sword Coast
     version: 6.6
     location:
-      path: /home/mick/Games/modda-cache/static/SotSC v6.6.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/SotSC v6.6.zip
     components: [0]
   - name: "JanQuest"
     components: [0]
@@ -963,8 +963,8 @@ modules:
     location:
       github_user: GraionDilach
       repository: ExtraExpandedEnhancedEncounters
-      release: "3.1"
-      asset: extra-enhanced-expanded-encounters-3.1.iemod
+      release: "4.0"
+      asset: extra-enhanced-expanded-encounters-4.0.iemod
       patch:
         relative: patches/ExtraExpandedEnhancedEncouter-reducegnolls.diff
   - name: gbthfkp
@@ -1063,7 +1063,7 @@ modules:
     location:
       github_user: Skitia
       repository: Recorder-BG1
-      commit: 3792c0f1f89a3 # 2022-06-23
+      commit: e16545d # 2022-06-28
   - name: Vienxay
     components: [0]
     location:
@@ -1087,13 +1087,13 @@ modules:
   - name: Petsy
     components: [0, 1]
     location:
-      path: /home/mick/Games/modda-cache/static/Petsy v4.2.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Petsy v4.2.zip
   - name: Yvette
     description: "Colours of Infinity: Yvette Romance"
     components:
       - 0 # Yvette Romance - BG2 Romance Character
     location:
-      path: /home/mick/Games/modda-cache/static/Yvette Romance v5.00.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Yvette Romance v5.00.zip
       patch:
         relative: patches/yvette-noprompt.diff
   - name: c#greythedog
@@ -1184,17 +1184,17 @@ modules:
   - name: Walahnan
     components: [0]
     location:
-      path: /home/mick/Games/modda-cache/static/Walahnan v1.2.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Walahnan v1.2.zip
   - name: WalahnanBG2
     components:
       - 0 # Walahnan NPC for BG2EE: 0.92
     location:
-      path: /home/mick/Games/modda-cache/static/WalahnanBG2 v0.92.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/WalahnanBG2 v0.92.zip
   - name: WilsonChronicles
     components:
       - 0 # Wilson Chronicles - expansion for our favorite bear companion: 1.9
     location:
-      path: /home/mick/Games/modda-cache/static/Wilson Chronicles v1.9.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Wilson Chronicles v1.9.zip
   - name: gavin
     # will prompt for romance timer
     components:
@@ -1239,7 +1239,7 @@ modules:
     components:
       - 0 #  Bristlelick the gnoll companion for BGEE: 2.0
     location:
-      path: /home/mick/Games/modda-cache/static/Bristlelick v2.0.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Bristlelick v2.0.zip
   - name: evandra
     components:
       - 0 #/ Evandra NPC: v2.2
@@ -1490,7 +1490,7 @@ modules:
       - 4 # Skie: The Cost of One Girl's Soul - Add Player-Initiated Dialogue (PID) for Eddard: 4.01
       - 5 # Skie: The Cost of One Girl's Soul - Add brand new SoD-oriented items to BG2: 4.01
     location:
-      path: /home/mick/Games/modda-cache/static/Skie The Cost of One Girls Soul v4.01.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Skie The Cost of One Girls Soul v4.01.zip
   - name: Wings
     components:
       - 0 # Wings - Wings for BG2:EE
@@ -1904,7 +1904,7 @@ modules:
     components:
       - 0 # Of Heirlooms and Classes - new artifacts forgeable by Cromwell: v1.11
     location:
-      path: /home/mick/Games/modda-cache/static/OfHeirloomsAndClasses v1.11.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/OfHeirloomsAndClasses v1.2.zip
   - name: iiItemMod
     components:
       - 1 # Items [version 5]: v5.2
@@ -2115,7 +2115,7 @@ modules:
     location:
       github_user: ArtemiusI
       repository: The-Artisan-s-Kitpack
-      commit: 49a8096 # post 2.5
+      tag: v2.72
       patch:
         relative: patches/ArtisansKitPack-fix_2da.diff
   - name: A7-ChaosSorcerer
@@ -2292,6 +2292,46 @@ modules:
       github_user: mleduque
       repository: sword_and_fist
       branch: main
+  - name: Will_to_Power
+    description: Will to power - the first component warns
+    components:
+      - 200 # Ajouter le Psioniste, voleur/psion: 2.0
+    ignore_warnings: true
+    location:
+      github_user: mleduque
+      repository: Will_to_Power
+      branch: 2.0-fr
+      patch:
+        relative: patches/will_to_power_tweaks.diff
+  - name: Will_to_Power
+    description: Will to power - the rest
+    components:
+      - 300 # Ajouter le Guerrier Psychique, guerrier/psion: 2.0
+      - 400 # Ajouter le Psypher, rôdeur/psion: 2.0
+      #- 500 # Ajouter le Cerebromant, mage/psion: 2.0
+      - 900 # Mode Dark Sun : Tout le monde est un talent natif: 2.0
+  - name: might_and_guile
+    description: Might And Guile - Main component (warns)
+    components:
+      - 220 # Révision du multiclassage et kits multiclasses: 4.21.1
+      - 205 # Tir à l'arc révisé: 4.21.1
+      - 210 # Révision du Barde : bardes multiclasses: 4.21.1
+    ignore_warnings: true
+    location:
+      github_user: mleduque
+      repository: Might_and_Guile
+      branch: 4.22-fr
+      patch:
+        relative: patches/mng-multibard-shools.diff
+  - name: might_and_guile
+    description: Might And Guile - Other components
+    components:
+      - 200 # Système de Dons: 4.21.1
+      - 240 # Rôdeur améliorés: 4.21.1
+      - 245 # Bonus de mouvement révisés (Déplacement accru): 4.21.1
+      - 250 # Berserker révisé et rage: 4.21.1
+      - 265 # Poings du moine révisés: 4.21.1
+      - 310 # Ajoute le Corsaire (kit de guerrier): 4.21.1
   - name: HouseTweaks
     description: The Artisan's Tweaks and Overhauls
     components:
@@ -2756,8 +2796,6 @@ modules:
       repository: EET
       tag: v13.4
 
-  - name: stop
-
   - name: normalize_kit_table_cols
     description: SCS refusess to process some tables, normalize them before
     components:
@@ -2864,6 +2902,7 @@ modules:
     components:
       - 8020 # Les demi-liches lancent des sortileges
       - 8060 # Chateau de'Arnise ameliore (inspire du mod Tactics)
+      - 8140 # Drows ameliores
     ignore_warnings: true
   - name: stratagems
     description: Sword Coast Stratagems - p7
@@ -2881,7 +2920,6 @@ modules:
       - 8110 # Sahuagins ameliores
       - 8120 # Antre des spectateurs amelioree
       - 8130 # Reequilibrage de la regeneration des trolls
-      - 8140 # Drows ameliores
       - 8150 # Tour de Garde amelioree
       - 8160 # Temple des geants de feu ameliore
       # bug
@@ -2892,7 +2930,6 @@ modules:
     components:
       - 6100 # Potions pour PNJ
     ignore_warnings: true
-  - name: stop
 
   #########
   # Final Tweaks
@@ -3009,11 +3046,12 @@ modules:
       - 91 # Ajouter des capacites de haut niveau pour toutes les classes et kits -> Mise a jour des HLAs existantes et ajout des nouvelles HLAs: v0.8.1-alpha
       - 312 # Revision du Systeme de Competence - Ajout de nouvelles competences et de nouveaux styles de combat -> Progression acceleree des competences: v0.8.1-a
       - 400 # Bonus de force supplementaire pour les armes a deux mains: v0.8.1-alpha
-    github_user: Gibberlings3
-    repository: Skills-and-Abilities
-    commit: ea5477e # post 0.8
-    patch:
-      relative: patches/skills-and-abilities-prof-points.diff
+    location:
+      github_user: Gibberlings3
+      repository: Skills-and-Abilities
+      commit: ea5477e # post 0.8
+      patch:
+        relative: patches/skills-and-abilities-prof-points.diff
   - name: POISON_NO_BYPASS
     components:
       - 3 # Limited Exclusions(Anti-magic, AoE, Gaze): Mirror Image or Stoneskin
