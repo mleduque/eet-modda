@@ -1,0 +1,38 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: BG1NPCSoA
+    description: BG1 NPCs in BG2
+    installation:
+      after: other versions of same npcs
+    components:
+      #s- 0 # Water Gardens. New Athkatla's district & new quests: 13.5
+      #s- 2 # Shar-Teel NPC in BG2. "Nightbringer of Shar" (SoA): 13.5
+      #s## issues with multibards
+      #s##- 6 # Brave Sir Garrick NPC in BG2 (SoA): 13.5
+      #s- 20 # Coran & Safana Chronicles (SoA & ToB): 13.5
+      #s- 35 # Kagain's Corner (SoA & ToB) -> Store with Vanilla Items Only: 13.5
+      #s- 40 # Faldorn's New Leaf (SoA & ToB): 13.5
+      #s- 45 # Xzar and Monty Murder Mysteries (SoA & ToB): 13.5
+      #s##- 83 # Make Garrick a Skald: 13.5
+      #s#- 85 # Make Safana a Swashbuckler: 13.5
+      #s- 87 # Inter Component Banter Pack: 13.5
+    location:
+      github_user: mleduque
+      repository: TBGCoM_BG1NPCSoA
+      tag: v14
+  - name: might_and_guile
+    description: Might And Guile - Main component (warns)
+    components:
+      - 210 # Révision du Barde : bardes multiclasses: 4.21.1
+    ignore_warnings: true
+    location:
+      github_user: mleduque
+      repository: Might_and_Guile
+      branch: 4.23.1-fr
+      patch:
+        relative: patches/mng-multibard-shools.diff

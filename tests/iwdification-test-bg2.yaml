@@ -26,5 +26,4 @@ modules:
     location:
       github_user: mleduque
       repository: iwdification
-      commit: "72303f3"
-
+      commit: 2d2c47d

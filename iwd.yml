@@ -62,12 +62,12 @@ modules:
     description: male halfling blackguard + quest
     components:
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/dendjelion v1.2.zip
+      path: /home/mick/Games/modda-cache/static-iwd/dendjelion v1.3.zip
   - name: Dusky
     description: male half-orcish cleric/thief, chaotic neutral; m/m romance
     components:
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Dusky v2.3.2.zip
+      path: /home/mick/Games/modda-cache/static-iwd/Dusky v2.4.1.zip
   - name: Hommet
     description: necromancer, chaotic good + dialogues, items, spells
     components:
@@ -107,7 +107,7 @@ modules:
     description: urchin(creature) + area=night glade
     components:
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Urchin v2.1.zip
+      path: /home/mick/Games/modda-cache/static-iwd/Urchin v2.2.zip
   - name: Afaaq
   - name: TuraldNPC
     description: male dwarf figther/cleric, NG, dialogs, interjections, crossmod

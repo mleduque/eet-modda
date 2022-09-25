@@ -1,0 +1,15 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: stutterdebug
+    components:
+    ignore_warnings: true # no effect altered on... for each component
+    location:
+      github_user: SpellholdStudios
+      repository: Stutter_Debug_Tool
+      release: v4.0
+      asset: stutterdebug-4.0.iemod

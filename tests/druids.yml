@@ -1,0 +1,41 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: Faiths_and_Powers
+    components:
+      - 25 # Créer un système de sphères -> Nouveau FnP(nuFnP) : un nouveau système de sphères (moins de sphères, plus équilibré globalement, plus proche du PnP): 0.83.6
+      - 31 # Installer les kits de clerc: 0.83.6
+      - 33 # Installer les kits de druide: 0.83.6
+      - 35 # Installer les kits de paladin: 0.83.6
+      - 37 # Installer les kits de rôdeur: 0.83.6
+      - 75 # Modifier l'utilisabilité des armes et les compétences d'armes des prêtres: 0.83.6
+      - 80 # Appliquer le système de sphères (REQUIS pour que le système de sphères fonctionne): 0.83.6
+      - 85 # Appliquer les kits de FnP aux PNJ: 0.83.6
+    ignore_warnings: true # all except 31 emit no effect changed/added
+    location:
+      github_user: mleduque
+      repository: Faiths_and_Powers
+      branch: 0.83.13.1-fr
+      layout:
+          layout_type: multi_dir
+          dirs:
+            - faiths_and_powers
+            - FnP_Multiclass
+      patch:
+        relative: patches/fnp_configure.diff
+  - name: FnP_Multiclass
+    components:
+      - 91 # Multiclass Druids
+    ignore_warnings: true # apparently intentional
+  - name: npc_ee
+    components:
+      #- 1010 #/ Retirer l'indicateur de classe jumelee pour Imoen (attention, lire le fichier Readme): 5.2
+      - 2000 #/ Choix des classes/caracteristiques/kits des PNJ: 5.2
+    location:
+      github_user: mleduque
+      repository: NPC_EE
+      tag: "5.6-fr"

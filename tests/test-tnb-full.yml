@@ -1,0 +1,37 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: TomeAndBlood
+    description: Tome And Blood - main
+    components:
+      - 11
+      - 1201
+      - 13
+      - 14
+      - 16
+      - 20
+      - 25
+      - 31
+      - 33
+      - 35
+      - 37
+      - 40
+      - 48
+      - 51
+      - 63
+      - 66
+      - 67
+      - 68
+      - 71
+      - 80
+      - 82
+      - 85
+      - 92
+    location:
+      github_user: mleduque
+      repository: TomeAndBlood
+      branch: french

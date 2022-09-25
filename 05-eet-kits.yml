@@ -298,8 +298,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: SP_Collection
-      release: v13
-      asset: lin-spstuff-v13.tar.gz
+      release: v14
+      asset: lin-spstuff-v14.tar.gz
   - name: TomeAndBlood
     description: Tome And Blood - main
     components:
@@ -468,7 +468,7 @@ modules:
     location:
       github_user: mleduque
       repository: refinements
-      branch: configurable-changes
+      branch: 4.32.1-configurable-changes
       add_conf:
         file_name: d5_refinements_settings.ini
         content: |

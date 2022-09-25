@@ -214,8 +214,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: EndlessBG1
-      release: v11
-      asset: endless-bg1-mod-11.iemod
+      release: v12
+      asset: endless-bg1-mod-12.iemod
   - name: transitions
     installation:
       after: endlessbg1
@@ -628,7 +628,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: BG1NPC
-      commit: 0e05ba2
+      release: v30
+      asset: the-bg1npc-project-v30.iemod
   - name: garrick-tt
     components:
       - 0 # Garrick : les contes d'un troubadour
@@ -2123,8 +2124,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: SP_Collection
-      release: v13
-      asset: lin-spstuff-v13.tar.gz
+      release: v14
+      asset: lin-spstuff-v14.tar.gz
   - name: TomeAndBlood
     description: Tome And Blood - main
     components:
@@ -2303,7 +2304,7 @@ modules:
     location:
       github_user: mleduque
       repository: refinements
-      branch: configurable-changes
+      branch: 4.32.1-configurable-changes
       add_conf:
         file_name: d5_refinements_settings.ini
         content: |

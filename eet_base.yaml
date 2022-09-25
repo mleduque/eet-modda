@@ -22,9 +22,9 @@ modules:
   - name: EET  # needs EET/bgee_dir.txt with path to bg1 /game subdirectory inside
     version: v13.4
     location:
-      github_user: Gibberlings3
+      github_user: mleduque
       repository: EET
-      tag:  V13.4
+      branch: mled-all-in
       layout:
           layout_type: multi_dir
           dirs:
@@ -42,6 +42,14 @@ modules:
   #########
   # story
   #########
+  - name: BP_in_BG
+    description: Black Pits in BGEE
+    components:
+      - 0 # BP_in_BG: add access to the Black Pits in BGEE/EET
+    location:
+      github_user: UnearthedArcana
+      repository: BP_in_BG
+      tag: "0.6.1"
   - name: ascension
     description: ascension - main component -> WARNs no effects added to SPPR403.spl | SPWI306.spl | spermel.itm
     components:
@@ -204,8 +212,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: EndlessBG1
-      release: v11
-      asset: cendlessbg1-11.iemod
+      release: v13
+      asset: endless-bg1-mod-13.iemod
   - name: transitions
     installation:
       after: endlessbg1
@@ -292,8 +300,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: BG_Quests_And_Encounters
-      release: v25.4
-      asset: baldurs-gate-mini-quests-and-encounters-modification-v25.4.iemod
+      release: v25.5
+      asset: baldurs-gate-mini-quests-and-encounters-modification-v25.5.iemod
   - name: AC_QUEST
     description: Ascalon's Questpack
     components:
@@ -312,21 +320,24 @@ modules:
       repository: Ascalons_Questpack
       release: v4.3
       asset: ascalons-questpack-4.3.iemod
-  - name: BG_Travel
-    description: New travel system between Baldur's Gate City areas
-    comment: Original location http://athkatla.cob-bg.pl/download.php?id=1595 (BG_Travel_v2.1.rar)
-    components:
-      - 66 # New travel system between Baldur's Gate City areas -> Full version of component
-    location:
-      github_user: mleduque
-      repository: BG_Travel
-      tag: v2.1
+  #- name: BG_Travel
+  #  description: New travel system between Baldur's Gate City areas
+  #  comment: Original location http://athkatla.cob-bg.pl/download.php?id=1595 (BG_Travel_v2.1.rar)
+  #  components:
+  #    - 66 # New travel system between Baldur's Gate City areas -> Full version of component
+  #  location:
+  #    github_user: mleduque
+  #    repository: BG_Travel
+  #    tag: v2.1
   - name: c#sb_silber
     description: Adalon's blood
     components:
       - 0 # Adalon's Blood - Modification pour BGII par Gandalf the white: 14
     location:
-      path: /home/mick/Games/modda-cache/static/AdalonsBlood_v14.zip
+      github_user: Gitjas
+      repository: Adalons_Blood
+      release: "15"
+      asset: adalons-blood-15.iemod
   - name: Eilistraee
     description: Eilistraee's Song
     components:
@@ -362,7 +373,7 @@ modules:
     components:
       - 0 # Southern Edge: the new district of Athkatla -> Yes, but don't patch the existing save games: 3.4
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/SouthernEdge v3.5.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/SouthernEdge v4.0.zip
   - name: Ooze
     description: "Athkatlan Grounds: The Ooze’s Lounge"
     components:
@@ -555,8 +566,8 @@ modules:
     location:
       github_user: Gitjas
       repository: Another_Fine_Hell
-      release: vAlpha_220123
-      asset: another-fine-hell-for-sod-alpha_220123.iemod
+      release: vAlpha_220923
+      asset: another-fine-hell-for-sod-alpha_220923.iemod
   - name: c#sodtweaks #[0, 1, 2, 5, 13]
     components:
       - 3 # Ne manquez pas de dialogues entre NPC-PC -> Toujours activer tous les dialogues entre PNJ-PC: v8.1
@@ -619,8 +630,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: BG1NPC
-      release: v29
-      asset: the-bg1npc-project-v29.iemod
+      release: v30
+      asset: the-bg1npc-project-v30.iemod
   - name: garrick-tt
     components:
       - 0 # Garrick : les contes d'un troubadour
@@ -833,15 +844,16 @@ modules:
     location:
       github_user: lzenner
       repository: themed_tweaks
-      commit: aa91555c3 # committed on 2021-10-08
+      release: v.0.3
+      asset:  themed-tweaks-v0.3.iemod
   - name: framed
     components:
       - 0 # FFramed ou Piege: Propose plusieurs versions du chapitre 6 -> LUtilisez des voix personnalisees pour les films des nouveaux chapitres
     location:
       github_user:  Gibberlings3
       repository: framed
-      release: v1.12
-      asset: framed-v1.12.iemod
+      release: v1.13
+      asset: framed-v1.13.iemod
   - name: "RoT" # Region of Terror
     components: [0]
     location:
@@ -880,11 +892,10 @@ modules:
       asset: the-slithering-menace-v4.0.0.iemod
   - name: SotSC
     description: Shades of the Sword Coast
-    version: 6.6
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/SotSC v6.6.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/SotSC v7.3.zip
     components: [0]
-  - name: "JanQuest"
+  - name: JanQuest
     components: [0]
     location:
       http: http://akadis.baldursgateworld.fr/Jan/zip/JansQuest1.5.0.zip
@@ -993,6 +1004,11 @@ modules:
       github_user: RoxanneSHS
       repository: Magestronghold
       tag: V0.5
+  - name: Derats_Ogre
+    components:
+      - 0
+    location:
+      path: /home/mick/Games/modda-cache/static/Derats Ogre v3.zip
   # v3: incompatible with iwdification
   #- name: CtB
   #  description: Check the bodies
@@ -1005,6 +1021,19 @@ modules:
   #    github_user: SpellholdStudios
   #    repository: Check_the_Bodies
   #    commit: be5c6e0 # single fix over 3.0
+  - name: Tactics-Remix
+    components:
+    location:
+      github_user: morpheus562
+      repository: Tactics-Remix
+      branch: master
+  - name: gorgon
+    components:
+    location:
+      github_user: TotalMilk90
+      repository: gorgon
+      release: v3.1
+      asset: gorgon-v3.1.iemod
 
   #########
   # NPC
@@ -1054,7 +1083,7 @@ modules:
     location:
       github_user: Skitia
       repository: Kale-BG1
-      commit: 75bf003 # 2022-06-25
+      commit:  996dd40 # 2022-09-07
       patch:
         relative: patches/kale_bg1-nomusic.diff
     #prompt for music (2. No)
@@ -1069,7 +1098,7 @@ modules:
     location:
       github_user: Skitia
       repository: Vienxay-BG1
-      commit: 82f2c98 # 2022-06-23
+      commit: 0676b0e # 2022-09-07
       patch:
         relative: patches/viexnay_bg1-defaultprotrait-nomusic.diff
     #prompt for portrait (1. Default)
@@ -1080,7 +1109,7 @@ modules:
     location:
       github_user: Skitia
       repository: SkitiaNPCs
-      commit: c354070 # 2022-06-23
+      commit: 20fd72a # 2022-09-07
       patch:
         relative: patches/skitia_npc_defaultportraits.diff
     #prompt for portrait (1. Default the 1. Default)
@@ -1396,13 +1425,12 @@ modules:
       release: v1.3
       asset: minsc-friendship-v1.3.iemod
   - name: coranbgfriend # coran bg1 friendship
-    version: v5.1
     components: [0]
     location:
       github_user:  Gibberlings3
       repository: CoranBGFriend
-      release: v5.1
-      asset: corans-bg-extended-friendship-talks-v5.1.iemod
+      release: v5.2
+      asset: corans-bg-extended-friendship-talks-v5.2.iemod
   - name: haerdalis_friendship
     components: [0]
     location:
@@ -1490,7 +1518,7 @@ modules:
       - 4 # Skie: The Cost of One Girl's Soul - Add Player-Initiated Dialogue (PID) for Eddard: 4.01
       - 5 # Skie: The Cost of One Girl's Soul - Add brand new SoD-oriented items to BG2: 4.01
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Skie The Cost of One Girls Soul v4.01.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Skie The Cost of One Girls Soul v4.2.zip
   - name: Wings
     components:
       - 0 # Wings - Wings for BG2:EE
@@ -1500,6 +1528,12 @@ modules:
       github_user: Skitia
       repository: Wings
       tag: v1.03
+  - name: Fhaugy
+    components:
+      - 0 # Fhaugy - Baldur's Gate 2: EE NPC
+      - 1 # Fhaugy: Player-Initiated Dialogues (PIDs)
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/Fhaugy v0.8.zip
   - name: banterpack
     components:
       - 0 # Pack de Dialogues du Pocket Plane Group pour BG2 : SoA
@@ -1546,21 +1580,21 @@ modules:
     installation:
       after: other versions of same npcs
     components:
-      - 0 # Water Gardens. New Athkatla's district & new quests: 13.5
-      - 2 # Shar-Teel NPC in BG2. "Nightbringer of Shar" (SoA): 13.5
-      ## issues with multibards
-      ##- 6 # Brave Sir Garrick NPC in BG2 (SoA): 13.5
-      - 20 # Coran & Safana Chronicles (SoA & ToB): 13.5
-      - 35 # Kagain's Corner (SoA & ToB) -> Store with Vanilla Items Only: 13.5
-      - 40 # Faldorn's New Leaf (SoA & ToB): 13.5
-      - 45 # Xzar and Monty Murder Mysteries (SoA & ToB): 13.5
-      ##- 83 # Make Garrick a Skald: 13.5
-      #- 85 # Make Safana a Swashbuckler: 13.5
-      - 87 # Inter Component Banter Pack: 13.5
+      #s- 0 # Water Gardens. New Athkatla's district & new quests: 13.5
+      #s- 2 # Shar-Teel NPC in BG2. "Nightbringer of Shar" (SoA): 13.5
+      #s## issues with multibards
+      #s##- 6 # Brave Sir Garrick NPC in BG2 (SoA): 13.5
+      #s- 20 # Coran & Safana Chronicles (SoA & ToB): 13.5
+      #s- 35 # Kagain's Corner (SoA & ToB) -> Store with Vanilla Items Only: 13.5
+      #s- 40 # Faldorn's New Leaf (SoA & ToB): 13.5
+      #s- 45 # Xzar and Monty Murder Mysteries (SoA & ToB): 13.5
+      #s##- 83 # Make Garrick a Skald: 13.5
+      #s#- 85 # Make Safana a Swashbuckler: 13.5
+      #s- 87 # Inter Component Banter Pack: 13.5
     location:
       github_user: mleduque
       repository: TBGCoM_BG1NPCSoA
-      tag: v13.6
+      tag: v14
   - name: BG1NPCSoA
     description: BG1 NPCs in BG2 - components with warnings
     components:
@@ -1601,9 +1635,14 @@ modules:
     location:
       github_user: Austin-BG
       repository: SmilingImpCrossBanterMod
-      release: v.1.4
-      asset: smiling-imps-cross-banter-mod-1.4.iemod
-
+      release: v.1.5
+      asset: smiling-imps-cross-banter-mod-1.5.iemod
+  - name: FaldornBG2
+    components:
+      - 0 # Faldorn NPC for BG2EE
+      - 1 # Faldorn NPC for BG2EE: Player-Initiated Dialogues (PIDs)
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/FaldornBG2 v1.1.zip
 
   #########
   # Spells
@@ -1636,9 +1675,12 @@ modules:
       - 160 # IWD Class Updates: Paladin: Use IWD Spell Progression: Release Candidate 2
       - 170 # IWD Class Updates: Ranger: Use IWD Spell Progression: Release Candidate 2
     location:
-      github_user: mleduque
+      github_user: Gibberlings3
       repository: iwdification
-      branch: v5-fr
+      release: v5
+      asset: lin-iwdification-v5.tar.gz
+      patch:
+        relative: patches/iwdification-ini.diff
   - name: iwdification
     description: iwdification -components with warnings
     components:
@@ -1757,8 +1799,8 @@ modules:
   #   location:
   #     github_user: Pocket-Plane-Group
   #     repository: Item_Upgrade
-  #     release: v49
-  #     asset: lin-itemupgrade-v49.tar.gz
+  #     release: v50
+  #     asset: lin-itemupgrade-v50.tar.gz
   - name: ruad
     description: Ruad Ro'fhessa Item Upgrade
     components: [0, 10]
@@ -1801,8 +1843,8 @@ modules:
     location:
       github_user: Pocket-Plane-Group
       repository: Under-Respresented_Items
-      release: v9
-      asset: lin-underrep-v9.tar.gz
+      release: v11
+      asset: lin-underrep-v11.tar.gz
   - name: alchemy
     description: jan's alchemy
     components: [0]
@@ -1965,14 +2007,30 @@ modules:
     location:
       github_user:  mleduque
       repository: Forgotten-Armament
-      branch: 0.7.1-keep-some-boots
+      tag: 1.0-keep-some-boots
     ignore_warnings: true
+    #patch:
+    #  relative: patches/forgotten-armament-ini.diff
   - name: forgotten-armament
     description: Forgotten armaments - components without warnings
     components: # except stat increase items
       - 11 # Ajouter le parchemin Breche au Bazar Magique de la Porte de Baldur: v0.7.1-beta
       - 8 # Remplacer les Bottes de Rapidite (Les Pattes de Guepard): v0.7.1-beta
       - 10 # Armes dans le style de NWN2: v0.7.1-beta
+  - name: S3DisClubs
+    description: Distinguishable clubs
+    origin: https://forums.beamdog.com/discussion/34524/distinguishable-clubs-weidu-update-1-1
+    components:
+      - 0 # Distinguisable Clubs
+    location: /home/mick/Games/modda-cache/static/Disting_Clubs_Weidu_V1_1.zip
+  - name: Silver_Staff_of_Aule
+    components:
+      - 101 # Baton argent d'Aule
+    location:
+      github_user: mleduque
+      repository: Silver_Staff_of_Aule
+      branch: french
+
 
   #########
   # Early tweaks
@@ -2037,7 +2095,7 @@ modules:
     location:
       github_user: subtledoctor
       repository: d5_Random_Tweaks
-      tag: "1.5.4"
+      tag: "1.5.6"
   - name: d5_random_tweaks
     description: SubtleDoctor's Random Tweaks - components with warnings
     components:
@@ -2129,11 +2187,24 @@ modules:
       asset: A7-ChaosSorcerer-v2.7.iemod
       patch:
         relative: patches/A7-ChaosSorcerer-remove_str_con_malus.diff
+  - name: Px_Chantelame
+    components:
+      - 0
+    location:
+      path: /home/mick/Games/modda-cache/static/Chantelame v7.1.zip
+  - name: Derats_kits
+    components:
+    location:
+      path: /home/mick/Games/modda-cache/static/Derats Unused Kits Pack v17.6.zip
+      layout:
+        strip_leading: 1
+        layout_type: single_dir
   - name: wildmage
     components:
-      - 0 # New Wild Magic Spells -> Ironman
+      # Rhialto's death gives way too much XP
+      - 1 # New Wild Magic Spells -> Haughty pansy
       - 2 # Retain Rhialto's items
-      - 3 # Spellshaper Kit -> Original avatar
+      #- 3 # Spellshaper Kit -> Original avatar
       - 5 # Diverses Modifications de Sorts
     location:
       github_user: BGforgeNet
@@ -2201,7 +2272,7 @@ modules:
     location:
       github_user: mleduque
       repository: TomeAndBlood
-      branch: "0.9.33.1-fr"
+      branch: "0.9.38-fr"
   - name: TomeAndBlood
     description: Tome And Blood (warning components)
     components:
@@ -2258,7 +2329,7 @@ modules:
     location:
       github_user: mleduque
       repository: Faiths_and_Powers
-      branch: 0.83.8-fr
+      branch: 0.83.15-fr
       layout:
           layout_type: multi_dir
           dirs:
@@ -2278,7 +2349,7 @@ modules:
     location:
       github_user: mleduque
       repository: 5E_spellcasting
-      branch: 1.9.3-fr
+      branch: 1.9.7-fr
       patch:
         # configure "lose spell on interrupted" and "int bonus slots"
         relative: patches/spellcasting-5e-config.diff
@@ -2300,7 +2371,7 @@ modules:
     location:
       github_user: mleduque
       repository: Will_to_Power
-      branch: 2.0-fr
+      branch: 2.2.1 -fr
       patch:
         relative: patches/will_to_power_tweaks.diff
   - name: Will_to_Power
@@ -2320,7 +2391,7 @@ modules:
     location:
       github_user: mleduque
       repository: Might_and_Guile
-      branch: 4.22-fr
+      branch: 4.25-fr
       patch:
         relative: patches/mng-multibard-shools.diff
   - name: might_and_guile
@@ -2346,6 +2417,7 @@ modules:
     description: Klatu Tweaks
     components:
       - 1000 # The Gloves of Goodman Hayes
+      - 1010 # Themanual of war
       - 1020 # Prepared Wishes
       - 1030 # Romance Cheat: Isra will Romance Neutral Characters
       - 1050 # Appropriate XP Rewards for Cowled Enforcers
@@ -2503,7 +2575,7 @@ modules:
     location:
       github_user: mleduque
       repository: Scales_of_Balance
-      tag: "5.38.3-fr"
+      tag: "5.39.1-fr"
       patch:
         relative: patches/scales-config.diff
   - name: METweaks
@@ -2529,7 +2601,7 @@ modules:
     location:
       github_user: OlvynChuru
       repository: Olvyn-Tweaks
-      commit: 2603c3d
+      commit: 7b79db9
   - name: DruidGroveMakeover
     components:
       - 0
@@ -2618,6 +2690,21 @@ modules:
       - 45 # Batailles ameliorees : Enclave de Sendai: v6
       - 46 # Batailles ameliorees : Tour de Garde: v6
       - 48 # Ajustement mineurs de quetes (ToB): v6
+  - override_file:
+      name: ay_bgeespawn.ini
+      content: |
+        OUTER_SPRINT spawntimer ~-1~
+        OUTER_SPRINT spawnchance ~-1~
+        OUTER_SPRINT spawntype ~-1~
+        OUTER_SET disablevanillaspawns = ~0~
+  - name: bgeespawn
+    components:
+      - 0 # BGEE Leveling Spawns Mod
+    location:
+      github_user: GraionDilach
+      repository: BGEESpawn
+      version: "0.7"
+      asset: bgee-leveled-spawns-v0.7.iemod
   - name: Trap_Overhaul
     description: Kjeron's Trap Overhaul
     original_thread: https://forums.beamdog.com/discussion/71763/trap-detection-recovery-evasion
@@ -2771,7 +2858,7 @@ modules:
     location:
       github_user: mleduque
       repository: NPC_EE
-      tag: "5.2-fr"
+      tag: "5.7-fr"
   - name: cowledmenace
     components:
       - 1000 # Main Component - The Cowled Menace
@@ -2780,8 +2867,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: CowledMenace
-      release: "0.2.1"
-      asset: lin-cowledmenace-v0.2.1.BETA.zip
+      release: "1.0.0"
+      asset: lin-cowledmenace-v1.0.0.zip
 
 
 
@@ -2940,20 +3027,20 @@ modules:
       - 4 # Mise a jour des statistiques et scores de capacite des objets ameliores pour une meilleur integration: v0.7.1-beta
   - name: EEUITweaks
     components:
-      - 1000 # Mods Options: 3.9
-      - 1040 # Portrait Selectors -> Mr2150's Portrait Picker (Scaleable UI): 3.9
-      - 1042 # Mr2150's Backup M_BG.lua: 3.9
-      - 1044 # Mr2150's Update Portraits: 3.9
-      - 1050 # Adul's Unhide Chargen Options: 3.9
-      - 1070 # Faydark's Abilities Auto-Roller/GrimLefourbe's BG2 UI: 3.9
-      - 2000 # Transparent Sidebars: 3.9
-      - 2030 # Adul's Better Quick Loot: 3.9
-      - 3000 # Leveling Progress Bars Tweaks: 3.9
+      #- 1000 # Mods Options: 3.9
+      #- 1040 # Portrait Selectors -> Mr2150's Portrait Picker (Scaleable UI): 3.9
+      #- 1042 # Mr2150's Backup M_BG.lua: 3.9
+      #- 1044 # Mr2150's Update Portraits: 3.9
+      #- 1050 # Adul's Unhide Chargen Options: 3.9
+      #- 1070 # Faydark's Abilities Auto-Roller/GrimLefourbe's BG2 UI: 3.9
+      #- 2000 # Transparent Sidebars: 3.9
+      #- 2030 # Adul's Better Quick Loot: 3.9
+      #- 3000 # Leveling Progress Bars Tweaks: 3.9
     location:
       github_user: r-e-d
       repository: EEUITweaks
-      release: v3.9
-      asset: eeuitweaks-3.9.iemod
+      release: v4.0.2
+      asset: eeuitweaks-4.0.2.iemod
   - name: HiddenGameplayOptions
     version: v3.0
     components:
@@ -3049,7 +3136,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Skills-and-Abilities
-      commit: ea5477e # post 0.8
+      release: 0.9.1-alpha
+      asset: lin-skills-and-abilities-v0.9.0-alpha.zip
       patch:
         relative: patches/skills-and-abilities-prof-points.diff
   - name: POISON_NO_BYPASS
@@ -3191,6 +3279,13 @@ modules:
       github_user: mleduque
       repository: ie-mods-35
       branch: main
+  - name: fix_temple_restoration
+    description: Fix for missing spell file - may be fixes by jtweaks (or item_rev?)
+    components:
+    location:
+      github_user: subtledoctor
+      repository: SubtleD_hotfixes
+      tag: v20
 
 
   - name: LightingPack
@@ -3201,3 +3296,12 @@ modules:
       repository: A7-LightingPackEE
       release: v3.1
       asset: lin-A7-LightingPackEE-v3.1.zip
+
+  - name: generalized_biffing
+    components:
+      - 1
+    location:
+      github_user: SpellholdStudios
+      repository: generalized_biffing
+      release: v2.6
+      asset: generalized-biffing-v2.6.iemods

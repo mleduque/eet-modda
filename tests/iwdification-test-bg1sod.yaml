@@ -31,7 +31,8 @@ modules:
       - 170 # Mises a jour de classes IWD : Rodeur : Utiliser la progression de sorts d'IWD: Release Candidate 2
       - 120 # Mises a jour de classes IWD : Voleur : Evasion: Release Candidate 2
     location:
-      github_user: mleduque
+      github_user: Gibberlings3
       repository: iwdification
-      commit: "5d060e2"
+      release: v5
+      asset: lin-iwdification-v5.tar.gz
 
