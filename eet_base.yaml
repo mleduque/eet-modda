@@ -77,19 +77,23 @@ modules:
   - name: arestorationp
     description: Almateria's Restoration Project
     components:
-      - 0 # Restauration de lieux: v8.4
-      - 1 # Restauration de personnages et de dialogues: v8.4
-      - 2 # Restauration de sons: v8.4
-      - 3 # Restauration d'objets: v8.4
-      - 4 # Restauration d'options de souhait: v8.4
-      - 5 # Restauration de table d'XP dans ToB: v8.4
-      - 6 # Liche Deril: v8.4
-      - 8 # Restaurations mineures: v8.4
-      - 11 # Restauration du reve de fin avec l'Ecorcheur: v8.4
-      - 12 # Transformation en Ecorcheur alternative: v8.4
-      - 13 # Restauration de la cinematique de la Promenade de Waukyne: v8.4
+      # new version with components added
+      #- 0 # Restauration de lieux: v8.4
+      #- 1 # Restauration de personnages et de dialogues: v8.4
+      #- 2 # Restauration de sons: v8.4
+      #- 3 # Restauration d'objets: v8.4
+      #- 4 # Restauration d'options de souhait: v8.4
+      #- 5 # Restauration de table d'XP dans ToB: v8.4
+      #- 6 # Liche Deril: v8.4
+      #- 8 # Restaurations mineures: v8.4
+      #- 11 # Restauration du reve de fin avec l'Ecorcheur: v8.4
+      #- 12 # Transformation en Ecorcheur alternative: v8.4
+      #- 13 # Restauration de la cinematique de la Promenade de Waukyne: v8.4
     location:
-      path: /home/mick/Games/modda-cache/static/ARPv8-4.zip
+      github_user: SpellholdStudios
+      repository: Almaterias_Restoration_Project
+      release: v9
+      asset: almaterias-restoration-project-v9.iemod
   - name: ub
     description: Unfinished Business
     components:
@@ -1476,6 +1480,12 @@ modules:
   #    github_user: mleduque
   #    repository: ImoenRomance
   #    branch: main
+  - name: Nalia_at_Last
+    components:
+    location:
+      github_user: Skitia
+      repository: Nalia_At_Last
+      tag: Beta
   - name: viconia
     components: [0]
     location:
