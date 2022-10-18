@@ -18,8 +18,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: iwd_unfinished_business
-      release: v10
-      asset: lin-ub_iwd-v10.tar.gz
+      release: v11
+      asset: lin-ub_iwd-v11.tar.gz
   - name: Kuldahar
     description: The Rediscovery of Kuldahar
     components:

@@ -17,4 +17,4 @@ modules:
     location:
       github_user: mleduque
       repository: SpellRevisions
-      branch: b19-update-fr
+      branch: iwdee-wiz-shapechange-ability-name-fr

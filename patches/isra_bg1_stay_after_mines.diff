@@ -1,0 +1,12 @@
+--- isra/dialogue/rh#isra.d
++++ isra/dialogue/rh#isra.d
+@@ -63,8 +63,7 @@ END
+ 
+ IF ~~ j9
+  SAY @21 /* I see. I had not realized that the situation had finally been resolved, though I'm glad to hear otherwise. */
+- = @22 /* But I shan't keep you any longer, my <PRO_LADYLORD>. Good <DAYNIGHT>. */
+-IF ~~ DO ~EscapeArea()~ EXIT
++IF ~~ + j10
+ END
+ 
+ IF ~~ j10
