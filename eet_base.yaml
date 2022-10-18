@@ -760,6 +760,8 @@ modules:
       repository: Brages_Redemption
       release: v7.2
       asset: brages-redemption-brage-npc-for-the-whole-baldurs-gate-epic-7.2.iemod
+      patch:
+        relative: patches/brage_less_wait.diff
   - name: "c#solaufein"
     components:
       - 0 # Solaufein's Rescue: Jastey's Solaufein NPC for BGII: 3.2
