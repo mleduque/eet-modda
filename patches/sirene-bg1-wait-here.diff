@@ -1,0 +1,19 @@
+--- Sirene-NPC/dialogue/c0sirenp.d
++++ Sirene-NPC/dialogue/c0sirenp.d
+@@ -3,6 +3,7 @@ BEGIN C0SIRENP
+ IF ~Global("C0SireneJoined","LOCALS",1)~ p1
+  SAY ~Do you truly wish me to leave, <CHARNAME>?~
+  	++ ~Yes, for now.~ + p2
++	++ ~Just wait here for the moment.~ + p101
+  	++ ~No, I've changed my mind.~ + p3
+ END
+  
+@@ -31,3 +32,8 @@ IF ~~ p6
+  SAY ~I am disappointed to hear it.~
+ IF ~~ EXIT
+ END
++
++IF ~~ p101
++ SAY ~Aye, as you wish.~
++IF ~~ DO ~SetGlobal("C0SireneJoined","LOCALS",0) LeaveParty()~ EXIT
++END

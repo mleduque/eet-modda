@@ -1,0 +1,609 @@
+--- Aura_BG1/Setup-Aura_BG1.tp2
++++ Aura_BG1/Setup-Aura_BG1.tp2
+@@ -40,22 +40,9 @@ THEN BEGIN
+ INCLUDE ~%MOD_FOLDER%/lib/aura_sod.tpa~
+ END
+ 
+-PRINT ~Choose a portrait for Aura (check mod folder for portraits):~
+ 
+-PRINT ~Please choose one of the following:
+-[1] BG1 Default by Artemius_I/AionZ
+-[2] BG2 Default by Artemius_I/AionZ
+-[3] Alternate 1 by Omar Diaz
+-[4] Alternate 2 by Pantalion
+-[5] Alternate 3 (edited NWN)
+-[6] First BG1 Default by Lava Del'Vortel
+-[7] Second BG1 Default by Artemius_I/AionZ
+-[8] Original BG2 Default by Artemius_I/AionZ~
++OUTER_SPRINT ~portrait~ 2
+ 
+-OUTER_SPRINT ~portrait~ ~placeholder_value~
+-OUTER_WHILE (!(IS_AN_INT ~portrait~) OR (~portrait~ > 0x7) OR (~portrait~ < 0x1)) BEGIN
+-  ACTION_READLN ~portrait~
+-END
+       ACTION_IF ("portrait" = 8) THEN BEGIN
+ 		COPY ~%MOD_FOLDER%/alt-portrait/originalbg2/AuraL.bmp~ ~override/AuraL.bmp~
+ 		COPY ~%MOD_FOLDER%/alt-portrait/originalbg2/AuraM.bmp~ ~override/AuraM.bmp~
+--- Aura_BG1/lib/aura_kit.tpa
++++ Aura_BG1/lib/aura_kit.tpa
+@@ -2,18 +2,8 @@
+ //////////////////////////////////// KIT //////////////////////////////////////
+ ///////////////////////////////////////////////////////////////////////////////
+ 
+-PRINT ~Choose a class for Aura:~
++OUTER_SPRINT ~auraclass~ 1
+ 
+-PRINT ~Please choose one of the following:
+-[1] Artificer (Thief)
+-[2] Illusionist / Artificer (Mage / Thief)
+-[3] Priestess / Artificer (Cleric / Thief)~
+-
+-OUTER_SPRINT ~auraclass~ ~placeholder_value~
+-OUTER_WHILE (!(IS_AN_INT ~auraclass~) OR (~auraclass~ > 0x5) OR (~auraclass~ < 0x1)) BEGIN
+-  PRINT ~Please select 1, 2, or 3 and press Enter.~
+-  ACTION_READLN ~auraclass~
+-END
+       ACTION_IF ("auraclass" = 1) THEN BEGIN
+ ADD_KIT ~C0AURA~
+  // appended to CLASWEAP.2da
+--- Aura_BG1/dialogue/BGEE/c0auraj.d
++++ Aura_BG1/dialogue/BGEE/c0auraj.d
+@@ -5,8 +5,8 @@ BEGIN C0AURAJ
+ CHAIN IF ~Global("C0AuraTalk","GLOBAL",2)~ THEN C0AURAJ t1
+ ~Th-thank you for letting me join you, <CHARNAME>... I'm not sure what I'd be able to do all by myself. I, um... I won't let you down.~ [C0BLANK]
+ DO ~IncrementGlobal("C0AuraTalk","GLOBAL",1)
+-RealSetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",THIRTY_MINUTES)
+-SetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",THREE_DAYS)~
++RealSetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",TEN_MINUTES)
++SetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",TWO_DAYS)~
+ END
+ ++ ~You sound nervous. Is this your first time travelling like this?~ + t1.1
+ ++ ~Don't worry. I'm as new to the adventuring life as you.~ + t1.2
+@@ -84,8 +84,8 @@ EXIT
+ CHAIN IF ~Global("C0AuraTalk","GLOBAL",4)~ THEN C0AURAJ t2
+ ~Hey, you! where do you think you're trying to hide this time?~ [C0BLANK]
+ DO ~IncrementGlobal("C0AuraTalk","GLOBAL",1)
+-RealSetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",THIRTY_MINUTES)
+-SetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",THREE_DAYS)~
++RealSetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",TEN_MINUTES)
++SetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",TWO_DAYS)~
+ END
+ ++ ~Me? I'm not hiding anywhere.~ + t2.1
+ ++ ~Who are you talking to, Aura?~ + t2.2
+@@ -159,8 +159,8 @@ EXIT
+ CHAIN IF ~Global("C0AuraTalk","GLOBAL",6)~ THEN C0AURAJ t3
+ ~<CHARNAME>, you mentioned you grew up in Candlekeep, right? The great library?~ [C0BLANK]
+ DO ~IncrementGlobal("C0AuraTalk","GLOBAL",1)
+-RealSetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",THIRTY_MINUTES)
+-SetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",THREE_DAYS)~
++RealSetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",TEN_MINUTES)
++SetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",TWO_DAYS)~
+ END
+ ++ ~That's right. What of it?~ + t3.1
+ ++ ~Don't remind me of that terrible place. I'm happy without the memories.~ + t3.a
+@@ -219,8 +219,8 @@ EXIT
+ CHAIN IF ~Global("C0AuraTalk","GLOBAL",8)~ THEN C0AURAJ t4
+ ~A bit of ink there, I think... no, no... that's too much. Muffy? Where's my thinner brush? There, that's better... hmm? Is something wrong, <CHARNAME>?~ [C0BLANK]
+ DO ~IncrementGlobal("C0AuraTalk","GLOBAL",1)
+-RealSetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",THIRTY_MINUTES)
+-SetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",THREE_DAYS)~
++RealSetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",TEN_MINUTES)
++SetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",TWO_DAYS)~
+ END
+ ++ ~What are you painting, Aura?~ + t4.1
+ ++ ~I was just watching. Carry on by all means.~ + t4.1
+@@ -304,8 +304,8 @@ EXIT
+ CHAIN IF ~Global("C0AuraTalk","GLOBAL",10)~ THEN C0AURAJ t5
+ ~<CHARNAME>, I... umm, I finished my painting from the last time we stopped to talk. Would you like to see it?~ [C0BLANK]
+ DO ~IncrementGlobal("C0AuraTalk","GLOBAL",1)
+-RealSetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",THIRTY_MINUTES)
+-SetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",THREE_DAYS)~
++RealSetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",TEN_MINUTES)
++SetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",TWO_DAYS)~
+ END
+ ++ ~I'd love to see it.~ + t5.1
+ ++ ~I don't have the time right now, Aura.~ + t5.0
+@@ -378,8 +378,8 @@ EXIT
+ CHAIN IF ~Global("C0AuraTalk","GLOBAL",12)~ THEN C0AURAJ t6
+ ~Whew, I think I've been through more adventures in the short time I've known you than for the rest of my life, <CHARNAME>.~ [C0BLANK]
+ DO ~IncrementGlobal("C0AuraTalk","GLOBAL",1)
+-RealSetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",THIRTY_MINUTES)
+-SetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",THREE_DAYS)~
++RealSetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",TEN_MINUTES)
++SetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",TWO_DAYS)~
+ = ~Not that it's a bad thing, mind you! I've learned a lot here that I wouldn't have otherwise. I'm just saying, you've lived a rather blessed life.~
+ END
+ ++ ~Come to think of it, how old are you exactly, Aura? You've never mentioned it.~ + t6.1
+@@ -439,8 +439,8 @@ CHAIN IF ~Global("C0AuraTalk","GLOBAL",14)
+ Global("C0AuraRestTalk","GLOBAL",1)~ THEN C0AURAJ t7
+ ~Oh, finally, a chance to relax and put our feet up. Muffy! Where are those tea biscuits? Oh, thank you. The tea's nearly ready as well.~ [C0BLANK]
+ DO ~IncrementGlobal("C0AuraTalk","GLOBAL",1)
+-RealSetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",THIRTY_MINUTES)
+-SetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",THREE_DAYS)~
++RealSetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",TEN_MINUTES)
++SetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",TWO_DAYS)~
+ END
+ ++ ~Looks like you're enjoying yourself.~ + t7.1
+ ++ ~Tea and biscuits? Are we adventuring or having a picnic?~ + t7.2
+@@ -546,8 +546,8 @@ DO ~RestParty()~ EXIT
+ CHAIN IF ~Global("C0AuraTalk","GLOBAL",16)~ THEN C0AURAJ t8
+ ~I... I guess we're in trouble now, right? I mean... even more than we already were?~ [C0BLANK]
+ DO ~IncrementGlobal("C0AuraTalk","GLOBAL",1)
+-RealSetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",THIRTY_MINUTES)
+-SetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",THREE_DAYS)~
++RealSetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",TEN_MINUTES)
++SetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",TWO_DAYS)~
+ END
+ ++ ~Are you afraid, Aura?~ + t8.1
+ ++ ~We'll be fine. I'm not letting anything stop me, not now.~ + t8.2
+@@ -600,8 +600,8 @@ CHAIN IF ~Global("C0AuraTalk","GLOBAL",18)~ THEN C0AURAJ t9
+ ~Here, <CHARNAME>. I made this for you!~ [C0BLANK]
+ DO ~GiveItemCreate("c0amaga2",Player1,1,0,0)
+ IncrementGlobal("C0AuraTalk","GLOBAL",1)
+-RealSetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",THIRTY_MINUTES)
+-SetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",THREE_DAYS)~
++RealSetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",TEN_MINUTES)
++SetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",TWO_DAYS)~
+ END
+ ++ ~It's... a necklace? Looks just like the one you wear.~ + t9.1
+ ++ ~Thanks, Aura.~ + t9.2
+@@ -640,8 +640,8 @@ DO ~IncrementGlobal("C0AuraInsulted","GLOBAL",1) SetGlobal("C0AuraTalkStopped","
+ CHAIN IF ~Global("C0AuraTalk","GLOBAL",20) Global("C0AuraRestTalk","GLOBAL",2)~ THEN C0AURAJ t10
+ ~Heya. Come sit next to me for a bit, <CHARNAME>! It's nice and warm by the fire.~ [C0BLANK]
+ DO ~IncrementGlobal("C0AuraTalk","GLOBAL",1)
+-RealSetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",THIRTY_MINUTES)
+-SetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",THREE_DAYS)~
++RealSetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",TEN_MINUTES)
++SetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",TWO_DAYS)~
+ END
+ ++ ~No tea or biscuits this time?~ + t10.1
+ ++ ~Sure. I enjoy your company.~ + t10.2
+@@ -2557,7 +2557,7 @@ END
+ 
+ IF ~~ ragesword3
+ SAY ~You got it right. I can't say it'll be safe... or cheap, for that matter. But it'd be more controllable this way.~
+-++ ~Let's do it. How long will it take?~ DO ~SetGlobal("C0AuraAtWork","GLOBAL",1) SetGlobalTimer("C0AuraCraftTimer","GLOBAL",ONE_WEEK) TakePartyItem("sw2h03") DestroyItem("sw2h03")~ + ragesword4
++++ ~Let's do it. How long will it take?~ DO ~SetGlobal("C0AuraAtWork","GLOBAL",1) SetGlobalTimer("C0AuraCraftTimer","GLOBAL",FIVE_DAYS) TakePartyItem("sw2h03") DestroyItem("sw2h03")~ + ragesword4
+ ++ ~I don't think so. Let's leave it as it is.~ + ragesword0
+ END
+ 
+@@ -2609,7 +2609,7 @@ END
+ IF ~~ idol
+ SAY ~The idol of Kozah? Oh, yep. I can't help but think that there's more to it than just a unique carving. There's definitely some magic in it somewhere, it just needs to be awakened.~
+ = ~Dangerous, though. It could cause thunderbolts to rain down on us if I mess with it too much. Still, I think I could at least squeeze a bit of power out of it.~
+-++ ~It could be worth it. How long do you think it'll take?~ DO ~SetGlobal("C0AuraAtWork","GLOBAL",4) SetGlobalTimer("C0AuraCraftTimer","GLOBAL",ONE_WEEK) TakePartyItem("misc48") DestroyItem("misc48")~ + idol1
++++ ~It could be worth it. How long do you think it'll take?~ DO ~SetGlobal("C0AuraAtWork","GLOBAL",4) SetGlobalTimer("C0AuraCraftTimer","GLOBAL",FIVE_DAYS) TakePartyItem("misc48") DestroyItem("misc48")~ + idol1
+ ++ ~Sounds dangerous. Best leave it for now.~ + idol0
+ END
+ 
+--- Aura_BG1/dialogue/SoD/c02auraj.d
++++ Aura_BG1/dialogue/SoD/c02auraj.d
+@@ -1894,7 +1894,7 @@ IF ~GlobalGT("bd_plot","global",0)
+ !AreaCheck("BD0130")
+ IsGabber(Player1) CombatCounter(0) !Detect([ENEMY])~ THEN BEGIN pid
+  SAY ~How's it going?~ [C0BLANK]
+- + ~Global("C02AuraTalk","GLOBAL",9) PartyHasItem("c02asunf")~ + ~I got you the sunflowers you wanted.~ DO ~SetGlobal("C02AuraTalk","GLOBAL",10) RealSetGlobalTimer("C02AuraTalkTimer","GLOBAL",THIRTY_MINUTES)~ + sunflowers
++ + ~Global("C02AuraTalk","GLOBAL",9) PartyHasItem("c02asunf")~ + ~I got you the sunflowers you wanted.~ DO ~SetGlobal("C02AuraTalk","GLOBAL",10) RealSetGlobalTimer("C02AuraTalkTimer","GLOBAL",TEN_MINUTES)~ + sunflowers
+  + ~OR(2)
+  Global("C02AuraRomanceActive","GLOBAL",1)
+  Global("C02AuraRomanceActive","GLOBAL",2)~ + ~(Flirt)~ + flirt
+@@ -1913,7 +1913,7 @@ END
+ 
+ IF ~~ pid.2
+  SAY ~Okay. What else?~
+- + ~Global("C02AuraTalk","GLOBAL",9) PartyHasItem("c02asunf")~ + ~I got you the sunflowers you wanted.~ DO ~SetGlobal("C02AuraTalk","GLOBAL",10) RealSetGlobalTimer("C02AuraTalkTimer","GLOBAL",THIRTY_MINUTES)~ + sunflowers
++ + ~Global("C02AuraTalk","GLOBAL",9) PartyHasItem("c02asunf")~ + ~I got you the sunflowers you wanted.~ DO ~SetGlobal("C02AuraTalk","GLOBAL",10) RealSetGlobalTimer("C02AuraTalkTimer","GLOBAL",TEN_MINUTES)~ + sunflowers
+  + ~OR(2)
+  Global("C02AuraRomanceActive","GLOBAL",1)
+  Global("C02AuraRomanceActive","GLOBAL",2)~ + ~(Flirt)~ + flirt
+--- Aura_BG1/scripts/BGEE/c0aura.baf
++++ Aura_BG1/scripts/BGEE/c0aura.baf
+@@ -132,8 +132,8 @@ IF
+     Global("C0AuraTalk","GLOBAL",0)
+ THEN
+   RESPONSE #100
+-    RealSetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",THREE_HOURS)
+-    SetGlobalTimer("C0AuraTalkTimer","GLOBAL",TWENTY_MINUTES)
++    RealSetGlobalTimer("C0AuraTalkRealTimer","GLOBAL",THIRTY_MINUTES)
++    SetGlobalTimer("C0AuraTalkTimer","GLOBAL",EIGHT_MINUTES)
+     SetGlobal("C0AuraTalk","GLOBAL",1)
+ END
+ 
+--- Aura_BG1/scripts/SoD/c02aura.baf
++++ Aura_BG1/scripts/SoD/c02aura.baf
+@@ -245,7 +245,7 @@ IF
+ THEN
+   RESPONSE #100
+ 	IncrementGlobal("C02AuraTalk","GLOBAL",1)
+-	RealSetGlobalTimer("C02AuraTalkTimer","GLOBAL",ONE_HOUR)
++	RealSetGlobalTimer("C02AuraTalkTimer","GLOBAL",FIFTEEN_MINUTES)
+ END
+ 
+ IF
+@@ -266,22 +266,22 @@ IF
+ THEN
+   RESPONSE #1
+ 	IncrementGlobal("C02AuraTalk","GLOBAL",1)
+-	RealSetGlobalTimer("C02AuraTalkTimer","GLOBAL",ONE_HOUR)
++	RealSetGlobalTimer("C02AuraTalkTimer","GLOBAL",FIFTEEN_MINUTES)
+ 	SetGlobalTimer("C02AuraTalkTimer2","GLOBAL",ONE_DAY)
+ 	StartDialogueNoSet(Player1)
+   RESPONSE #5
+ 	IncrementGlobal("C02AuraTalk","GLOBAL",1)
+-	RealSetGlobalTimer("C02AuraTalkTimer","GLOBAL",ONE_HOUR)
++	RealSetGlobalTimer("C02AuraTalkTimer","GLOBAL",FIFTEEN_MINUTES)
+ 	SetGlobalTimer("C02AuraTalkTimer2","GLOBAL",THREE_DAYS)
+ 	StartDialogueNoSet(Player1)
+   RESPONSE #7
+ 	IncrementGlobal("C02AuraTalk","GLOBAL",1)
+-	RealSetGlobalTimer("C02AuraTalkTimer","GLOBAL",ONE_HOUR)
++	RealSetGlobalTimer("C02AuraTalkTimer","GLOBAL",FIFTEEN_MINUTES)
+ 	SetGlobalTimer("C02AuraTalkTimer2","GLOBAL",THREE_DAYS)
+ 	StartDialogueNoSet(Player1)
+   RESPONSE #11
+ 	IncrementGlobal("C02AuraTalk","GLOBAL",1)
+-	RealSetGlobalTimer("C02AuraTalkTimer","GLOBAL",ONE_HOUR)
++	RealSetGlobalTimer("C02AuraTalkTimer","GLOBAL",FIFTEEN_MINUTES)
+ 	SetGlobalTimer("C02AuraTalkTimer2","GLOBAL",THREE_DAYS)
+ 	StartDialogueNoSet(Player1)
+   RESPONSE #13
+@@ -304,7 +304,7 @@ IF
+ 	AreaType(DUNGEON)
+ THEN
+   RESPONSE #100
+-	RealSetGlobalTimer("C02AuraTalkTimer","GLOBAL",ONE_HOUR)
++	RealSetGlobalTimer("C02AuraTalkTimer","GLOBAL",FIFTEEN_MINUTES)
+ 	SetGlobalTimer("C02AuraTalkTimer2","GLOBAL",THREE_DAYS)
+ 	IncrementGlobal("C02AuraTalk","GLOBAL",1)
+ 	StartDialogueNoSet(Player1)
+@@ -374,7 +374,7 @@ IF
+ THEN
+   RESPONSE #100
+ 	SetGlobal("C0AuraKittyTime","LOCALS",1)
+-	RealSetGlobalTimer("KittyThirtyMinutes","LOCALS",ONE_HOUR)
++	RealSetGlobalTimer("KittyThirtyMinutes","LOCALS",TEN_MINUTES)
+ END
+ 	
+ IF
+@@ -386,34 +386,34 @@ IF
+ THEN
+   RESPONSE #10
+ 	DisplayStringHead(Myself,~Who's a pretty kitty-witty...?~ [CAT01])
+-	RealSetGlobalTimer("KittyThirtyMinutes","LOCALS",ONE_HOUR)
++	RealSetGlobalTimer("KittyThirtyMinutes","LOCALS",TEN_MINUTES)
+   RESPONSE #10
+ 	DisplayStringHead(Myself,~Ow! I really need to trim your claws...~ [CAT01])
+-	RealSetGlobalTimer("KittyThirtyMinutes","LOCALS",ONE_HOUR)
++	RealSetGlobalTimer("KittyThirtyMinutes","LOCALS",TEN_MINUTES)
+   RESPONSE #10
+ 	DisplayStringHead(Myself,~Want a treat, Koko-chan? Aww, here you go!~ [CAT01])
+-	RealSetGlobalTimer("KittyThirtyMinutes","LOCALS",ONE_HOUR)
++	RealSetGlobalTimer("KittyThirtyMinutes","LOCALS",TEN_MINUTES)
+   RESPONSE #10
+ 	DisplayStringHead(Myself,~Hey! HEY! Muffy, Koko-chan, stop fighting right now!~ [CAT01])
+-	RealSetGlobalTimer("KittyThirtyMinutes","LOCALS",ONE_HOUR)
++	RealSetGlobalTimer("KittyThirtyMinutes","LOCALS",TEN_MINUTES)
+   RESPONSE #10
+ 	DisplayStringHead(Myself,~Eww, cat fur on the magnifying glass...~ [CAT01])
+-	RealSetGlobalTimer("KittyThirtyMinutes","LOCALS",ONE_HOUR)
++	RealSetGlobalTimer("KittyThirtyMinutes","LOCALS",TEN_MINUTES)
+   RESPONSE #10
+ 	DisplayStringHead(Myself,~Look at your wittle paws! Hee hee!~ [CAT01])
+-	RealSetGlobalTimer("KittyThirtyMinutes","LOCALS",ONE_HOUR)
++	RealSetGlobalTimer("KittyThirtyMinutes","LOCALS",TEN_MINUTES)
+   RESPONSE #10
+ 	DisplayStringHead(Myself,~You want to get out for a bit, Koko-chan? Sorry, not while we're marching...~ [CAT01])
+-	RealSetGlobalTimer("KittyThirtyMinutes","LOCALS",ONE_HOUR)
++	RealSetGlobalTimer("KittyThirtyMinutes","LOCALS",TEN_MINUTES)
+   RESPONSE #10
+ 	DisplayStringHead(Myself,~Hey, stop scratching my yukata!~ [CAT01])
+-	RealSetGlobalTimer("KittyThirtyMinutes","LOCALS",ONE_HOUR)
++	RealSetGlobalTimer("KittyThirtyMinutes","LOCALS",TEN_MINUTES)
+   RESPONSE #10
+ 	DisplayStringHead(Myself,~Are you bored, Koko-chan? Yeah, me too...~ [CAT01])
+-	RealSetGlobalTimer("KittyThirtyMinutes","LOCALS",ONE_HOUR)
++	RealSetGlobalTimer("KittyThirtyMinutes","LOCALS",TEN_MINUTES)
+   RESPONSE #10
+ 	DisplayStringHead(Myself,~I think you'll like Lantan, Koko-chan, just wait...~ [CAT01])
+-	RealSetGlobalTimer("KittyThirtyMinutes","LOCALS",ONE_HOUR)
++	RealSetGlobalTimer("KittyThirtyMinutes","LOCALS",TEN_MINUTES)
+ END
+ 
+ IF
+@@ -905,7 +905,7 @@ IF
+ 	Global("C02AuraBaeloth","LOCALS",0)
+ THEN
+ 	RESPONSE #100
+-		SetGlobalTimerRandom("C02AuraBaelothTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraBaelothTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraBaeloth","LOCALS",1)
+ END
+ 
+@@ -950,7 +950,7 @@ IF
+ 	Global("C02AuraCorwin","LOCALS",0)
+ THEN
+ 	RESPONSE #100
+-		SetGlobalTimerRandom("C02AuraCorwinTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraCorwinTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraCorwin","LOCALS",1)
+ END
+ 
+@@ -981,7 +981,7 @@ THEN
+ 	RESPONSE #100
+ 		BanterBlockTime(450)
+ 		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+-		SetGlobalTimerRandom("C02AuraCorwinTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraCorwinTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraCorwin","LOCALS",2)
+ 	    SetGlobal("C02AuraCorwin1","MYAREA",1)
+ 		SetAreaScript("C02ABANT",GENERAL)
+@@ -1018,7 +1018,7 @@ IF
+ 	Global("C02AuraDorn","LOCALS",0)
+ THEN
+ 	RESPONSE #100
+-		SetGlobalTimerRandom("C02AuraDornTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraDornTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraDorn","LOCALS",1)
+ END
+ 
+@@ -1071,7 +1071,7 @@ THEN
+ 	RESPONSE #100
+ 		BanterBlockTime(450)
+ 		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+-		SetGlobalTimerRandom("C02AuraDornTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraDornTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraDorn","LOCALS",3)
+ 	    SetGlobal("C02AuraDorn2","MYAREA",1)
+ 		SetAreaScript("C02ABANT",GENERAL)
+@@ -1086,7 +1086,7 @@ IF
+ 	Global("C02AuraDynaheir","LOCALS",0)
+ THEN
+ 	RESPONSE #100
+-		SetGlobalTimerRandom("C02AuraDynaheirTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraDynaheirTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraDynaheir","LOCALS",1)
+ END
+ 
+@@ -1139,7 +1139,7 @@ THEN
+ 	RESPONSE #100
+ 		BanterBlockTime(450)
+ 		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+-		SetGlobalTimerRandom("C02AuraDynaheirTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraDynaheirTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraDynaheir","LOCALS",3)
+ 	    SetGlobal("C02AuraDynaheir2","MYAREA",1)
+ 		SetAreaScript("C02ABANT",GENERAL)
+@@ -1154,7 +1154,7 @@ IF
+ 	Global("C02AuraEdwin","LOCALS",0)
+ THEN
+ 	RESPONSE #100
+-		SetGlobalTimerRandom("C02AuraEdwinTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraEdwinTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraEdwin","LOCALS",1)
+ END
+ 
+@@ -1207,7 +1207,7 @@ THEN
+ 	RESPONSE #100
+ 		BanterBlockTime(450)
+ 		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+-		SetGlobalTimerRandom("C02AuraEdwinTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraEdwinTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraEdwin","LOCALS",3)
+ 	    SetGlobal("C02AuraEdwin2","MYAREA",1)
+ 		SetAreaScript("C02ABANT",GENERAL)
+@@ -1222,7 +1222,7 @@ IF
+ 	Global("C02AuraGlint","LOCALS",0)
+ THEN
+ 	RESPONSE #100
+-		SetGlobalTimerRandom("C02AuraGlintTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraGlintTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraGlint","LOCALS",1)
+ END
+ 
+@@ -1275,7 +1275,7 @@ THEN
+ 	RESPONSE #100
+ 		BanterBlockTime(450)
+ 		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+-		SetGlobalTimerRandom("C02AuraGlintTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraGlintTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraGlint","LOCALS",3)
+ 	    SetGlobal("C02AuraGlint2","MYAREA",1)
+ 		SetAreaScript("C02ABANT",GENERAL)
+@@ -1298,7 +1298,7 @@ THEN
+ 	RESPONSE #100
+ 		BanterBlockTime(450)
+ 		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+-		SetGlobalTimerRandom("C02AuraGlintTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraGlintTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraGlint","LOCALS",4)
+ 	    SetGlobal("C02AuraGlint3","MYAREA",1)
+ 		SetAreaScript("C02ABANT",GENERAL)
+@@ -1313,7 +1313,7 @@ IF
+ 	Global("C02AuraJaheira","LOCALS",0)
+ THEN
+ 	RESPONSE #100
+-		SetGlobalTimerRandom("C02AuraJaheiraTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraJaheiraTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraJaheira","LOCALS",1)
+ END
+ 
+@@ -1366,7 +1366,7 @@ THEN
+ 	RESPONSE #100
+ 		BanterBlockTime(450)
+ 		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+-		SetGlobalTimerRandom("C02AuraJaheiraTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraJaheiraTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraJaheira","LOCALS",3)
+ 	    SetGlobal("C02AuraJaheira2","MYAREA",1)
+ 		SetAreaScript("C02ABANT",GENERAL)
+@@ -1381,7 +1381,7 @@ IF
+ 	Global("C02AuraKhalid","LOCALS",0)
+ THEN
+ 	RESPONSE #100
+-		SetGlobalTimerRandom("C02AuraKhalidTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraKhalidTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraKhalid","LOCALS",1)
+ END
+ 
+@@ -1434,7 +1434,7 @@ THEN
+ 	RESPONSE #100
+ 		BanterBlockTime(450)
+ 		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+-		SetGlobalTimerRandom("C02AuraKhalidTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraKhalidTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraKhalid","LOCALS",3)
+ 	    SetGlobal("C02AuraKhalid2","MYAREA",1)
+ 		SetAreaScript("C02ABANT",GENERAL)
+@@ -1449,7 +1449,7 @@ IF
+ 	Global("C02AuraMkhiin","LOCALS",0)
+ THEN
+ 	RESPONSE #100
+-		SetGlobalTimerRandom("C02AuraMkhiinTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraMkhiinTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraMkhiin","LOCALS",1)
+ END
+ 
+@@ -1502,7 +1502,7 @@ THEN
+ 	RESPONSE #100
+ 		BanterBlockTime(450)
+ 		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+-		SetGlobalTimerRandom("C02AuraMkhiinTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraMkhiinTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraMkhiin","LOCALS",3)
+ 	    SetGlobal("C02AuraMkhiin2","MYAREA",1)
+ 		SetAreaScript("C02ABANT",GENERAL)
+@@ -1517,7 +1517,7 @@ IF
+ 	Global("C02AuraMinsc","LOCALS",0)
+ THEN
+ 	RESPONSE #100
+-		SetGlobalTimerRandom("C02AuraMinscTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraMinscTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraMinsc","LOCALS",1)
+ END
+ 
+@@ -1570,7 +1570,7 @@ THEN
+ 	RESPONSE #100
+ 		BanterBlockTime(450)
+ 		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+-		SetGlobalTimerRandom("C02AuraMinscTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraMinscTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraMinsc","LOCALS",3)
+ 	    SetGlobal("C02AuraMinsc2","MYAREA",1)
+ 		SetAreaScript("C02ABANT",GENERAL)
+@@ -1585,7 +1585,7 @@ IF
+ 	Global("C02AuraNeera","LOCALS",0)
+ THEN
+ 	RESPONSE #100
+-		SetGlobalTimerRandom("C02AuraNeeraTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraNeeraTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraNeera","LOCALS",1)
+ END
+ 
+@@ -1638,7 +1638,7 @@ THEN
+ 	RESPONSE #100
+ 		BanterBlockTime(450)
+ 		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+-		SetGlobalTimerRandom("C02AuraNeeraTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraNeeraTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraNeera","LOCALS",3)
+ 	    SetGlobal("C02AuraNeera2","MYAREA",1)
+ 		SetAreaScript("C02ABANT",GENERAL)
+@@ -1653,7 +1653,7 @@ IF
+ 	Global("C02AuraRasaad","LOCALS",0)
+ THEN
+ 	RESPONSE #100
+-		SetGlobalTimerRandom("C02AuraRasaadTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraRasaadTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraRasaad","LOCALS",1)
+ END
+ 
+@@ -1706,7 +1706,7 @@ THEN
+ 	RESPONSE #100
+ 		BanterBlockTime(450)
+ 		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+-		SetGlobalTimerRandom("C02AuraRasaadTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraRasaadTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraRasaad","LOCALS",3)
+ 	    SetGlobal("C02AuraRasaad2","MYAREA",1)
+ 		SetAreaScript("C02ABANT",GENERAL)
+@@ -1721,7 +1721,7 @@ IF
+ 	Global("C02AuraSafana","LOCALS",0)
+ THEN
+ 	RESPONSE #100
+-		SetGlobalTimerRandom("C02AuraSafanaTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraSafanaTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraSafana","LOCALS",1)
+ END
+ 
+@@ -1774,7 +1774,7 @@ THEN
+ 	RESPONSE #100
+ 		BanterBlockTime(450)
+ 		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+-		SetGlobalTimerRandom("C02AuraSafanaTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraSafanaTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraSafana","LOCALS",3)
+ 	    SetGlobal("C02AuraSafana2","MYAREA",1)
+ 		SetAreaScript("C02ABANT",GENERAL)
+@@ -1789,7 +1789,7 @@ IF
+ 	Global("C02AuraViconia","LOCALS",0)
+ THEN
+ 	RESPONSE #100
+-		SetGlobalTimerRandom("C02AuraViconiaTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraViconiaTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraViconia","LOCALS",1)
+ END
+ 
+@@ -1842,7 +1842,7 @@ THEN
+ 	RESPONSE #100
+ 		BanterBlockTime(450)
+ 		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+-		SetGlobalTimerRandom("C02AuraViconiaTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraViconiaTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraViconia","LOCALS",3)
+ 	    SetGlobal("C02AuraViconia2","MYAREA",1)
+ 		SetAreaScript("C02ABANT",GENERAL)
+@@ -1857,7 +1857,7 @@ IF
+ 	Global("C02AuraVoghiln","LOCALS",0)
+ THEN
+ 	RESPONSE #100
+-		SetGlobalTimerRandom("C02AuraVoghilnTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraVoghilnTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraVoghiln","LOCALS",1)
+ END
+ 
+@@ -1902,7 +1902,7 @@ IF
+ 	Global("C02AuraSirene","LOCALS",0)
+ THEN
+ 	RESPONSE #100
+-		SetGlobalTimerRandom("C02AuraSireneTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraSireneTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraSirene","LOCALS",1)
+ END
+ 
+@@ -1955,7 +1955,7 @@ THEN
+ 	RESPONSE #100
+ 		BanterBlockTime(450)
+ 		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+-		SetGlobalTimerRandom("C02AuraSireneTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraSireneTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraSirene","LOCALS",3)
+ 	    SetGlobal("C02AuraSirene2","MYAREA",1)
+ 		SetAreaScript("C02ABANT",GENERAL)
+@@ -1970,7 +1970,7 @@ IF
+ 	Global("C02AuraDrake","LOCALS",0)
+ THEN
+ 	RESPONSE #100
+-		SetGlobalTimerRandom("C02AuraDrakeTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraDrakeTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraDrake","LOCALS",1)
+ END
+ 
+@@ -2023,7 +2023,7 @@ THEN
+ 	RESPONSE #100
+ 		BanterBlockTime(450)
+ 		SetGlobalTimer("BD_NPC_BANTER","GLOBAL",FOUR_HOURS)
+-		SetGlobalTimerRandom("C02AuraDrakeTalk","LOCALS",ONE_DAY,FOURTEEN_DAYS)
++		SetGlobalTimerRandom("C02AuraDrakeTalk","LOCALS",ONE_DAY,ONE_WEEK)
+ 		SetGlobal("C02AuraDrake","LOCALS",3)
+ 	    SetGlobal("C02AuraDrake2","MYAREA",1)
+ 		SetAreaScript("C02ABANT",GENERAL)

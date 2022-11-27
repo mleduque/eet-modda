@@ -24,7 +24,7 @@ modules:
     description: BG1 Unfinished Business
     version:
     location:
-      github_user: Pocket-Plane-Group
+      github_user: Pocket-Plane-Group - post eet?
       repository: bg1ub
       release: v16.4
       asset: bg1-unfinished-business-v16.4.zip
@@ -60,7 +60,7 @@ modules:
       - 0 # The Drizzt Saga pour BGEE/Tutu/BGT -> Version par defaut : zones connectees par des declencheurs de voyage
       - 3  # Debut repousse : Drizzt revient apres la Tour de Durlag
     location:
-      github_user: MattyGroove
+      github_user: ??
       repository: DrizztSaga
       tag: V3.03
   - name: soa # The Stone of Askavar
@@ -78,6 +78,8 @@ modules:
       github_user: ArtemiusI
       repository: Sirene-NPC
       tag: v2.91
+      patch:
+        relative: patches/sirene-bg1-wait-here.diff
 #  - name: BGEE_AI_Denoised_Areas
 #    components:
 #      - 0
