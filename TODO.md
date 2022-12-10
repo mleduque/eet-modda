@@ -7,3 +7,6 @@
 - adapt prof.2da
 
  - eefixpack / ascension incompat?
+
+
+Pnp_celestials ? https://github.com/Gibberlings3/PnP_Celestials

@@ -783,14 +783,18 @@ modules:
       - 0 # L'ile du Chene Enchevetre : une nouvelle zone d'Athkatla -> Oui , mais ne pas patcher les sauvegardes existantes: v2.26
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/Tangled Isle v3.0.zip
+  - name: TheVanishingOfSkieSilvershield
+    components:
+    location:
+    path: /home/mick/Games/modda-cache/static/weaselmods/TheVanishingOfSkieSilvershield v2.2.zip
   - name: "g3anniversary"
     components:
       - 0 # The Gibberlings Three Anniversary Mod
     location:
       github_user: Gibberlings3
       repository: g3anniversary
-      release: V12
-      asset: lin-g3anniversary-v12.tar.gz
+      release: V13
+      asset: lin-g3anniversary-v13.tar.gz
   - name: DC
     description: Dungeon Crawl
     components:
@@ -823,7 +827,7 @@ modules:
       release: v3.2.8
       asset: fishing-for-trouble-v3.2.8.iemod
   - name: "tod"
-    description: Tower O)f Deception
+    description: Tower Of Deception
     components:
       - 0 # Mod Tower of Deception (necessite Throne of Bhaal): v4.0.5
       - 1 # Gardien ameliore de l'Eclat Astral: v4.0.5
@@ -838,7 +842,7 @@ modules:
     location:
       github_user: SpellholdStudios
       repository: Shadows_over_Soubar
-      commit: dca61c01378b862 # post v1.16
+      commit: ba6514f3b0 # post v1.16 2022-12-10
   - name: "keldorn_rom"
     components: [0, 2, 8]
     location:
@@ -873,9 +877,35 @@ modules:
     location:
       github_user: SpellholdStudios
       repository: Region_of_Terror
-      commit: 6526d0a # post 4.0
+      commit: 7fec880  # post 4.0, PR https://github.com/SpellholdStudios/Region_of_Terror/pull/34
       patch:
         relative: patches/rot-taming-drizzt.diff
+  - name: TDD
+    components: none
+    description: The Darkest Days
+    installation: DO NOT install aly component, TDDz needs its mod files but does the installation
+    location:
+      http: http://www.shsforums.net/files/download/323-the-darkest-day-v114/
+  - name: TDDz
+    description: TDDz is not a mod, it is just an way to install TDD for BG2EE with Worldmap and Extended Animation.
+    components:
+    location:
+      github_user: InfinityMods
+      repository: TDDz
+      tag: v1.3.1
+  - name: AjocMod
+    description: Ajoc's minimod - actually a composite of original v1.6.5 + BWP patchess + EET patch
+    sources:
+      original: http://www.shsforums.net/files/download/119-ajocs-minimod/
+      bwp_patches: https://github.com/BigWorldSetup/BigWorldSetup-Fixpack/tree/master/Big%20World%20Fixpack/AjocMod
+      eet_patch: http://www.shsforums.net/index.php?app=core&module=attach&section=attach&attach_id=29207
+    installation: needs TDD installed
+    components:
+    installation: do not install components
+    location:
+      github_user: mleduque
+      repository: AjocMod
+      tag: v1.6.5-mle
   - name: RE
     description: BG2 romantic Encounters
     components: [0, 1, 2, 3, 4, 6, 7, 8, 9, 11, 13, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 38, 39, 41, 42, 43, 45, 46, 47, 50, 52, 53, 54]
@@ -1053,6 +1083,8 @@ modules:
       - 3 # Mule de bat (bgee) -> Fontes sans fond
     location:
       path: /home/mick/Games/modda-cache/static/w_packmule-v1.4b.zip
+  - name: TDD
+    description: the darkest day
 
   #########
   # NPC
@@ -1287,6 +1319,20 @@ modules:
       repository: Arath_NPC
       release: v6
       asset: arath-npc-mod-for-baldurs-gate-2-soa-tob-v6.iemod
+  - name: adrian
+    components:
+      - 0 # Adrian is a Sorcerer
+      # - 1 #Change Adrian's class to Cleric/Mage
+      # - 2 # Change Adrian's class to Mage/Thief
+      - 10 # Install optional soundset for Adrian - Phaelin's soundset
+      # - 11 # Install optional soundset for Adrian - Tatterdemalion's soundset
+      - 30 # Adrian Tolerates High Reputation - Always
+      # - 31 # Adrian Tolerates High Reputation - For Active Romance or Friendship
+    location:
+      github_user: SpellholdStudios
+      repository: Adrian_NPC
+      release: v6.0
+      asset: adrian-npc-for-bgii-v6.iemod
   - name: valerie
     components: [0]
     location:
@@ -1495,7 +1541,7 @@ modules:
     components:
       - 0
     location:
-      path: /home/mick/Games/modda-cache/static/HexxatFriendship v1.0.zip
+      path: /home/mick/Games/modda-cache/static/HexxatFriendship v1.1.zip
   - name: deArnise
     components: [0]
     location:
@@ -1537,8 +1583,8 @@ modules:
     location:
       github_user: SpellholdStudios
       repository: SarevokFriendship
-      release: v2.6
-      asset: sarevok-friendship-v2.6.iemod
+      release: v2.7
+      asset: sarevok-friendship-v2.7.iemod
   - name: YoshimosRemorse
     components: [0]
     location:
@@ -1664,6 +1710,10 @@ modules:
       repository: Crossmod_Banter_Pack_for_Baldurs_Gate_II
       release: v21
       asset: crossmod-banter-pack-for-baldurs-gate-ii-v21.iemod # tgz truncates some file names
+  - name: adrian
+    description: Adrian crossmod
+    components:
+      - 20 # Adrian NPC - Crossmod content
   - name: c#brandock
     description: Brandock the mage - crossmod
     components:
@@ -2144,7 +2194,7 @@ modules:
     location:
       github_user: subtledoctor
       repository: d5_Random_Tweaks
-      tag: "1.5.6"
+      tag: "1.5.7"
   - name: d5_random_tweaks
     description: SubtleDoctor's Random Tweaks - components with warnings
     components:
@@ -2271,14 +2321,13 @@ modules:
       branch: master
       patch:
         relative: patches/shadowmagic-condrain.diff
-  # These kits are abit random
-  #- name: d2-workshopkits
-  #  components:
-  #  location:
-  #    github_user:  D2-mods
-  #    repository: The-Workshop-Kitpack
-  #    release: "1.0"
-  #    asset:  the-workshop-kitpack-1.0.iemod
+  - name: d2-workshopkits
+    components:
+    location:
+      github_user:  D2-mods
+      repository: The-Workshop-Kitpack
+      release: "2.5"
+      asset:  the-workshop-kitpack-2.5.iemod
   - name: shadowadept
     description: shadowadept - components without warningq
     components:
@@ -2306,7 +2355,7 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Morpheus562-s-Kitpack
-      branch: master_what_no!
+      release: "1.1"
       patch:
         relative: patches/morpheus562-s-kitpack.diff
   - name: TomeAndBlood
@@ -2337,7 +2386,7 @@ modules:
     location:
       github_user: mleduque
       repository: TomeAndBlood
-      branch: "0.9.40-fr"
+      branch: "0.9.43-fr"
   - name: TomeAndBlood
     description: Tome And Blood (warning components)
     components:
@@ -2395,7 +2444,7 @@ modules:
     location:
       github_user: mleduque
       repository: Faiths_and_Powers
-      branch: 85sd4-fr
+      branch: 85sd11-fr
       layout:
           layout_type: multi_dir
           dirs:
@@ -2464,7 +2513,7 @@ modules:
     location:
       github_user: mleduque
       repository: Might_and_Guile
-      branch: 5alpha8-fr
+      branch: 8714c8c-fr
       patch:
         relative: patches/mng-multibard-shools.diff
   - name: might_and_guile
@@ -2916,8 +2965,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: CowledMenace
-      release: "1.0.0"
-      asset: lin-cowledmenace-v1.0.0.zip
+      release: "1.0.1"
+      asset: lin-cowledmenace-v1.0.1.zip
 
 
 
@@ -3086,7 +3135,7 @@ modules:
     location:
       github_user: mleduque
       repository: Scales_of_Balance
-      tag: "6.2.8-fr"
+      tag: "6.3.3-fr"
       patch:
         relative: patches/scales-config.diff
   - name: forgotten-armament
@@ -3196,6 +3245,8 @@ modules:
       - 41 # Crossmod with aTweaks "Allow Mages to scribe memorized spells onto scrolls" -> Integrate aTweak's scribe scroll ability into Brandock's original one
   - name: skills-and-abilities
     description: skills-and-abilities - components that warn
+    installation:
+      general: "Skills and Abilities Proficiency Overhaul should be installed AFTER SCS just for the reason you specified. No harm in installing after. - morpheus562"
     components:
       #- 130 # Permettre au Maitre-lames de se specialiser dans les armes de melee: v0.8.1-alpha
       #- 150 # Add New Fighter Abilities: v0.8.1-alpha
@@ -3223,7 +3274,7 @@ modules:
     location:
       github_user: mleduque
       repository: NPC_EE
-      tag: "5.9.1-fr"
+      commit: "411b121-fr"
   - name: POISON_NO_BYPASS
     components:
       - 3 # Limited Exclusions(Anti-magic, AoE, Gaze): Mirror Image or Stoneskin
