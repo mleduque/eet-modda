@@ -4,7 +4,7 @@
  
  IF ~~ THEN BEGIN 1 // from: 0.1
    SAY @3
--  IF ~~ THEN DO ~SetGlobal("DrizztKickedOut","GLOBAL",1)
+   IF ~~ THEN DO ~SetGlobal("DrizztKickedOut","GLOBAL",1)
 -EscapeArea()~ EXIT
 +  IF ~~ THEN DO ~EscapeAreaMove("AR1300",708,3200,SE)~ EXIT
  END
@@ -12,7 +12,7 @@
  IF ~Global("KickedOut","LOCALS",0)
  HappinessLT(Myself,-290)~ THEN BEGIN 2
    SAY @4
--  IF ~~ THEN DO ~SetGlobal("DrizztKickedOut","GLOBAL",1)
+   IF ~~ THEN DO ~SetGlobal("DrizztKickedOut","GLOBAL",1)
 -LeaveParty()
 -EscapeArea()~ EXIT
 +  IF ~~ THEN DO ~LeaveParty()

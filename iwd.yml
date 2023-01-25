@@ -20,6 +20,7 @@ modules:
       repository: iwd_unfinished_business
       release: v11
       asset: lin-ub_iwd-v11.tar.gz
+  - name: LEUI-IWDEE # or some other UI mod
   - name: Kuldahar
     description: The Rediscovery of Kuldahar
     components:
@@ -130,12 +131,14 @@ modules:
   - name: iwdcrossmodpack
     components: ~
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/lin-IWDCrossmodPack-v1.4.tar.gz
+      path: http://america.iegmc.net/g3//lin-IWDCrossmodPack-v1.4.tar.gz
+      patch: path/iwdcrossmodpack_readln.diff
   - name: MinorNPCPortraitsforIWDEE
     components: ~
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Setup-MinorNPCPortraitsforIWDEEv1.04.zip
-  ## items- name: FindIt-IWD
+  ## items-
+  - name: FindIt-IWD
     description: new items
     components:
     location:
@@ -200,6 +203,7 @@ modules:
       github_user: ArtemiusI
       repository: House-Rule-Tweaks
       tag: v2.01
+  -name: iwd_compat
   ## portraits
   - name: PortraitsFromIWD2
     components:

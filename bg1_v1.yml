@@ -20,6 +20,10 @@ modules:
   #    github_user: Gibberlings3
   #    repository: EE_Fixpack
   #    commit: 089f5297b4 # french branch
+  - name: correctfrbg1ee
+      github_user: r-e-d
+      repository: correctfrBG1EE
+      branch: master
   - name: bg1ub
     description: BG1 Unfinished Business
     version:
@@ -70,6 +74,12 @@ modules:
       github_user: mleduque
       repository: redcarnelian_stone_of_askavar
       tag: v2.2
+  - name: DarkHorizonsBGee
+    components:
+    location:
+      github_user: 11jo
+      repository: DarkHorizonsBGee
+      tag: V.215
   - name: Sirene
     components:
       - 0   # Sirene NPC for Baldur's Gate: Enhanced Edition
@@ -77,7 +87,7 @@ modules:
     location:
       github_user: ArtemiusI
       repository: Sirene-NPC
-      tag: v2.91
+      tag: v3.0a
       patch:
         relative: patches/sirene-bg1-wait-here.diff
 #  - name: BGEE_AI_Denoised_Areas

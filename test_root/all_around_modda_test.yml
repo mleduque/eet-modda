@@ -1,0 +1,94 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+  local_mods: static
+modules:
+  # One http mod
+  - name: "xulaye"
+    components:
+      - 0 # Xulaye NPC Mod for BG2:SoA
+      - 1 # Xulaye's Player Initiated Dialogues
+      - 2 # Korgan Fights at the Pits
+    location:
+      http: http://www.shsforums.net/files/download/710-xulaye/
+      rename: Xulaye_v2.0.zip
+  # One local mod
+  - name: "voloquest" # IM10
+    components: [0]
+    location:
+      local: im10_voloquest.zip
+  # One absolute mod
+  - name: "emad"
+    description: every mod and dog
+    components:
+      - 0 # Une aventure classée Z - Une non-entrée pour l'IM4
+      - 1 # La promesse d'un troll
+      - 2 # Le meilleur ami de l'enfant de Bhaal
+      - 3 # Sous son charme
+      - 5 # Pot-pourri de personnages
+    location:
+      path: /home/mick/Games/modda-cache/static/emad_v11.zip
+  # One github branch mod
+  - name: spell_rev
+    components:
+      - 0   # Spell Revisions
+    location:
+      github_user: Gibberlings3
+      repository: SpellRevisions
+      branch: master
+    ignore_warnings: true
+  # One release github mod
+  - name: iwdification
+    components:
+      - 30 # IWD Arcane Spell Pack: Release Candidate 2
+      - 40 # IWD Divine Spell Pack: Release Candidate 2
+    location:
+      github_user: Gibberlings3
+      repository: iwdification
+      release: v5
+      asset:  iwdification-v5.iemod
+  # One tag github mod
+  # with patch
+  - name: Magic_Battles_Revised
+    components:
+      - 10 # Revised Magic Battles
+    location:
+      github_user: UnearthedArcana
+      repository: magic_battles_revised
+      tag: "1.5"
+      patch:
+        relative: patches/mbr_spell_thrust_lv2.diff
+  # github commit
+  # with replace
+  - name: "c#brage"
+    components:
+      - 0 # Brage's Redemption - Brage Joinable NPC for Baldur's Gate: 7.2
+      - 1 # Assign the mod's portrait and soundset to the original Brage in game.: 7.2
+    location:
+      github_user: Gitjas
+      repository: Brages_Redemption
+      commit: 36d18b8
+      replace:
+        # 800
+        - file_globs: [baf/C#BrageD.baf, baf/c#brage1.baf, baf/c#brage2, dialogue/bg1.d, dialogue/joining*.d]
+          replace: RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",800)
+          with: RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",240)
+          comment: Reduce 800s/13min20s _real-time_ talks timers to 240s/4min real-time
+        # 3200
+        - file_globs: [baf/C#BrageD.baf, baf/c#brage1.baf, baf/c#brage2, dialogue/bg1.d, dialogue/joining*.d]
+          replace: RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",3200)
+          with: RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",480)
+          comment: Reduce 3200s/53min20s _real-time_ talks timers to 480s/8min real-time
+        # 3600
+        - file_globs: [baf/C#BrageD.baf, baf/c#brage1.baf, baf/c#brage2, dialogue/bg1.d, dialogue/joining*.d]
+          replace: RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",3600)
+          with: RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",480)
+          comment: Reduce 3600s/1h _real-time_ talks timers to 480s/8min real-time
+        # 1600
+        - file_globs: [baf/C#BrageD.baf, baf/c#brage1.baf, baf/c#brage2, dialogue/bg1.d, dialogue/joining*.d]
+          replace: RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",1600)
+          with: RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",320)
+          comment: Reduce 3600s/26min40s _real-time_ talks timers to 320s/6min real-time

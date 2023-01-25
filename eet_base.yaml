@@ -31,7 +31,7 @@ modules:
             - EET
             - EET_end
       patch:
-        relative: patches/eet_location_and_denoise.diff
+        relative: patches/eet_allowlist.diff
     components:
       - 0 # EET core (importation de ressource)
     add_conf:
@@ -44,12 +44,15 @@ modules:
   #########
   - name: BP_in_BG
     description: Black Pits in BGEE
+    installation:
+      general: VERY early since it overwrites several dialogue files
+      after: EET
     components:
       - 0 # BP_in_BG: add access to the Black Pits in BGEE/EET
     location:
       github_user: UnearthedArcana
       repository: BP_in_BG
-      tag: "0.6.1"
+      tag: "0.9"
   - name: ascension
     description: ascension - main component -> WARNs no effects added to SPPR403.spl | SPWI306.spl | spermel.itm
     components:
@@ -92,8 +95,8 @@ modules:
     location:
       github_user: SpellholdStudios
       repository: Almaterias_Restoration_Project
-      release: v9
-      asset: almaterias-restoration-project-v9.iemod
+      release: v10.0
+      asset: almaterias-restoration-project-v10.0.iemod
   - name: ub
     description: Unfinished Business
     components:
@@ -216,8 +219,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: EndlessBG1
-      release: v13
-      asset: endless-bg1-mod-13.iemod
+      release: v14
+      asset: endless-bg1-mod-14.iemod
   - name: transitions
     installation:
       after: endlessbg1
@@ -251,6 +254,52 @@ modules:
     components:
       - 32 # Clean-up Quests -> Option 1 and use gentler Tamoko quest: v2.4
     ignore_warnings: true
+  - name: iwdification
+    description: spell packs of iwdification
+    installation:
+      general: just the spell packs part early, before some stroy mods (TDD, Totlm, dsotsc)
+    components:
+      - 30 # IWD Arcane Spell Pack: Release Candidate 2
+      - 40 # IWD Divine Spell Pack: Release Candidate 2
+    location:
+      github_user: Gibberlings3
+      repository: iwdification
+      release: v5
+      asset: lin-iwdification-v5.tar.gz
+      patch:
+        relative: patches/iwdification-ini.diff
+  - name: HOW_EET
+    installation:
+      after: EET
+      before: A7-TotLM-BG2EE
+    components:
+    location:
+      github_user: 11jo
+      repository: HoW_EET
+      branch: master
+  - name: d5_move_hjollder_eet
+    installation:
+      after: HOW_EET
+    comment: add Hjollder to Bridge District
+    components:
+    location:
+      github_user: subtledoctor
+      repository: SubtleD_hotfixes
+      tag: v26
+  - name: A7-TotLM-BG2EE
+    description: Trial of the Luremaster - Main component (warns)
+    components:
+      - 0  # Trials of the Luremaster for Baldur's Gate
+    ignore_warnings: true
+    location:
+      github_user: Argent77
+      repository: A7-TotLM-BG2EE
+      release: v3.0
+      asset: A7-TotLM-BG2EE-v3.0.iemod
+  - name: A7-TotLM-BG2EE
+    description: Trial of the Luremaster - XP reduction
+    components:
+      - 30 # Reduire les points d'experience des monstres et des quetes. -> Reduction de 25 pour cent
   - name: DSotSC
     description: Dark Side of the Sword Coast
     components:
@@ -262,8 +311,8 @@ modules:
     location:
       github_user: SpellholdStudios
       repository: DSotSC
-      release: v4.1
-      asset: dark-side-of-the-sword-coast-v4.1.iemod
+      release: v4.2
+      asset: dark-side-of-the-sword-coast-v4.2.iemod
   - name: ntotsc
     description: Northern Tales of the Sword Coast
     components:
@@ -304,7 +353,7 @@ modules:
     location:
       github_user: Gibberlings3
       repository: BG_Quests_And_Encounters
-      release: v25.5
+      release: v25.6
       asset: baldurs-gate-mini-quests-and-encounters-modification-v25.5.iemod
   - name: AC_QUEST
     description: Ascalon's Questpack
@@ -389,13 +438,21 @@ modules:
     components:
       - 0 # Les terres d'Athkatlan : Le Bloc du Pont: 1.3
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/BridgesBlock v1.5.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/BridgesBlock v1.6.zip
   - name: AlabasterSands
     description: "Athkatlan Grounds: Alabaster Sands"
     components:
       - 0 # Alabaster Sands: the new area of Athkatla -> Yes, but don't patch existing save games: v1.0
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/AlabasterSands v1.0.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/AlabasterSands v1.1.zip
+  - name: FurzeHill
+    description: "The Journey to the Furze Hill"
+    components:
+      - 0 # The Journey to the Furze Hill - a Baldur's Gate 2: EE quest -> Yes, but don't patch existing save games
+      - 2 # The Journey to the Furze Hill: add the optional minor joinable companion - Afu-Zuuvi
+      - 3 # The Journey to the Furze Hill: Player-Initiated Dialogues for the optional companion - Afu-Zuuvi
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/FurzeHill v1.0.zip
   - name: SirinesCall
     description: The Lure of the Sirine's Call
     components:
@@ -535,6 +592,14 @@ modules:
         dirs:
           - questpack
           - setup-d0questpack.tp2
+  - name: Saerileth
+    components:
+    location:
+      github_user: PaulaMigrate
+      repository: Saerileth
+      tag: V22
+      patch:
+        relative: saerileth-unobnoxiousify.diff
   - name: imoen_forever
     components:
       - 0 # Imoen 4 Ever in BGII: Imoen Returns after Talking to Gaelan in Chapter 2: v9
@@ -739,15 +804,15 @@ modules:
     location:
       github_user: ArtemiusI
       repository: Pai-Na-NPC-mod-for-BG2-EE
-      commit: 686fed9
+      tag: v1.08a
   - name: Sirene_BG2
     components:
-      - 0   # Sirene NPC for BG2:EE
-      - 2 # Choose an portrait for Sirene (check mod folder for portraits) -> Alternate Light Armor portrait by Sirick
+      #- 0   # Sirene NPC for BG2:EE
+      #- 2 # Choose an portrait for Sirene (check mod folder for portraits) -> Alternate Light Armor portrait by Sirick
     location:
       github_user: ArtemiusI
       repository: Sirene-NPC-for-BG2-EE
-      tag: v2.01
+      tag: v2.02
     # prompt for portrait
   - name: bst
     components:
@@ -775,8 +840,8 @@ modules:
     location:
       github_user: Gitjas
       repository: Solaufeins_Rescue_NPC
-      release: v3.2
-      asset: solaufeins-rescue-jasteys-solaufein-npc-mod-for-bgii-3.2.iemod
+      release: v4-0
+      asset: solaufeins-rescue-jasteys-solaufein-npc-mod-for-bgii-4.0.iemod
   - name: "TangledIsle"
     description: "Athkatlan Grounds: The Tangled Oak Isle"
     components:
@@ -848,8 +913,21 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Keldorn_Romance
-      release: v8
-      asset: berelindes-keldorn-romance-8.iemod
+      release: v8.1
+      asset: berelindes-keldorn-romance-8.1.iemod
+  - name: edwin
+    description: Edwin romance
+    components:
+      - 0 # Edwin Romance
+      - 2 # Edwin flirts
+      - 3 # New ending for Viconia Romance by Laufey
+      # cdtweaks has one too
+      - 4 # Give Edwina a Portrait
+    location:
+      github_user: SpellholdStudios
+      repository: Edwin_Romance
+      release: v3.1
+      asset: edwinromance-v3.1.zip
   - name: themed_tweaks
     components:
       - 60  # SoD - Give Imoen a special wand for palace attack scene
@@ -862,8 +940,8 @@ modules:
     location:
       github_user: lzenner
       repository: themed_tweaks
-      release: v.0.3
-      asset:  themed-tweaks-v0.3.iemod
+      release: v.0.4
+      asset:  themed-tweaks-v0.4.iemod
   - name: framed
     components:
       - 0 # FFramed ou Piege: Propose plusieurs versions du chapitre 6 -> LUtilisez des voix personnalisees pour les films des nouveaux chapitres
@@ -875,11 +953,9 @@ modules:
   - name: "RoT" # Region of Terror
     components: [0]
     location:
-      github_user: SpellholdStudios
+      github_user: mleduque
       repository: Region_of_Terror
-      commit: 7fec880  # post 4.0, PR https://github.com/SpellholdStudios/Region_of_Terror/pull/34
-      patch:
-        relative: patches/rot-taming-drizzt.diff
+      branch: taming-drizzt
   - name: TDD
     components: none
     description: The Darkest Days
@@ -1068,7 +1144,7 @@ modules:
   - name: Tactics-Remix
     components:
     location:
-      github_user: morpheus562
+      github_user: Gibberlings3
       repository: Tactics-Remix
       branch: master
   - name: gorgon
@@ -1085,6 +1161,12 @@ modules:
       path: /home/mick/Games/modda-cache/static/w_packmule-v1.4b.zip
   - name: TDD
     description: the darkest day
+  - name: Blackhearts EET
+    components: ask
+    location:
+      github_ruser: A-Wizard-Did-It
+      repository: Black-Hearts-EET
+      tag: v1.01
 
   #########
   # NPC
@@ -1102,11 +1184,11 @@ modules:
       path: /home/mick/Games/modda-cache/static/weaselmods/ViconiaRevamped v7.2.zip
   - name: Aura_BG1
     components:
-      - 0 # Aura NPC for Baldur's Gate: Enhanced Edition: 3.3
+      #- 0 # Aura NPC for Baldur's Gate: Enhanced Edition: 3.3
     location:
       github_user: ArtemiusI
       repository: Aura_BG1
-      tag: v3.4c
+      tag: v3.6
       patch:
         relative: patches/aura_bg1-select-artificer_and_timers.diff
     #prompt for class (1. Artificer)
@@ -1274,12 +1356,12 @@ modules:
   - name: Walahnan
     components: [0]
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Walahnan v1.2.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Walahnan v2.00.zip
   - name: WalahnanBG2
     components:
       - 0 # Walahnan NPC for BG2EE: 0.92
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/WalahnanBG2 v0.92.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/WalahnanBG2 v1.00.zip
   - name: WilsonChronicles
     components:
       - 0 # Wilson Chronicles - expansion for our favorite bear companion: 1.9
@@ -1344,7 +1426,7 @@ modules:
     components:
       - 0 #  Bristlelick the gnoll companion for BGEE: 2.0
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Bristlelick v2.0.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Bristlelick v2.2.zip
   - name: evandra
     components:
       - 0 #/ Evandra NPC: v2.2
@@ -1501,6 +1583,14 @@ modules:
       repository: MinscFriendship
       release: v1.3
       asset: minsc-friendship-v1.3.iemod
+  - name: Coran
+    description: Coran for bg2
+    components: ask
+    location:
+      github_repo: Pocket-Plane-Group
+      repository: Coran_for_BGII
+      release: v9
+      asset: coran-npc-mod-for-baldurs-gate-ii-v9.iemod
   - name: coranbgfriend # coran bg1 friendship
     components: [0]
     location:
@@ -1563,7 +1653,7 @@ modules:
     location:
       github_user: Skitia
       repository: Nalia_At_Last
-      tag: v1.00
+      tag: v1.06
   - name: viconia
     components: [0]
     location:
@@ -1615,7 +1705,7 @@ modules:
     location:
       github_user: Skitia
       repository: Wings
-      tag: v1.03
+      tag: v1.05
   - name: Fhaugy
     components:
       - 0 # Fhaugy - Baldur's Gate 2: EE NPC
@@ -1661,8 +1751,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Road_To_Discovery_for_SoD
-      release: v0.7Beta
-      asset: sodrtd-0.7-.beta.iemod
+      release: v0.8Beta
+      asset: sodrtd-0.8-.beta.iemod
   - name: BG1NPCSoA
     description: BG1 NPCs in BG2
     installation:
@@ -1680,8 +1770,8 @@ modules:
       #s#- 85 # Make Safana a Swashbuckler: 13.5
       #s- 87 # Inter Component Banter Pack: 13.5
     location:
-      github_user: mleduque
-      repository: TBGCoM_BG1NPCSoA
+      github_user: SpellholdStudios
+      repository: BG1_NPCs_for_SoA_-_ToB
       tag: v14
   - name: BG1NPCSoA
     description: BG1 NPCs in BG2 - components with warnings
@@ -1699,6 +1789,11 @@ modules:
       github_user: RealApxu
       repository: TS_Sime
       tag: "0.8"
+  - name: Kelsey
+  - name: Keto
+    installation:
+      after: kelsey
+    components: not the accelerator (banterpack)
   - name: crossmodbg2
     description: Crossmod Banter Pack
     components:
@@ -1725,10 +1820,10 @@ modules:
       #- 2 # Garrick Banters: 1.4
       - 16 # "Wilson Chonicles" Mod - Cross Banters: 1.4
     location:
-      github_user: Austin-BG
+      github_user: SpellholdStudios
       repository: SmilingImpCrossBanterMod
-      release: v.1.5
-      asset: smiling-imps-cross-banter-mod-1.5.iemod
+      release: v.1.6
+      asset: smiling-imps-cross-banter-mod-1.6.iemod
   - name: FaldornBG2
     components:
       - 0 # Faldorn NPC for BG2EE
@@ -1756,8 +1851,6 @@ modules:
     components:
       - 10 # Icewind Dale Casting Graphics (Andyr): Release Candidate 2
       - 60 # Two Handed Axe Item Pack: Release Candidate 2
-      - 30 # IWD Arcane Spell Pack: Release Candidate 2
-      - 40 # IWD Divine Spell Pack: Release Candidate 2
       - 50 # IWD Class Updates: Bard: Add IWD Bard Songs: Release Candidate 2
       - 120 # IWD Class Updates: Thief: Evasion: Release Candidate 2
       - 140 # Randomized Enemy Equipment -> Add High Quality Items: Release Candidate 2
@@ -1783,47 +1876,32 @@ modules:
     components:
       - 0
     location:
-      github_user: mleduque
-      repository: lava_weasels
-      tag: v3.3
+      path: wherever...
   - name: Magic_Battles_Revised
     components:
-      - 10 # Revised Magic Battles
+      #- 10 # Revised Magic Battles
     location:
       github_user: mleduque
       repository: magic_battles_revised
-      branch: 1.4.1-fr
+      branch: 1.6.0-fr
       patch:
         relative: patches/mbr_spell_thrust_lv2.diff
-  - name: A7-TotLM-BG2EE
-    description: Trial of the Luremaster - Main component (warns)
-    components:
-      - 0  # Trials of the Luremaster for Baldur's Gate
-    ignore_warnings: true
-    location:
-      github_user: Argent77
-      repository: A7-TotLM-BG2EE
-      release: v3.0
-      asset: A7-TotLM-BG2EE-v3.0.iemod
-  - name: A7-TotLM-BG2EE
-    description: Trial of the Luremaster - XP reduction
-    components:
-      - 30 # Reduire les points d'experience des monstres et des quetes. -> Reduction de 25 pour cent
-  - name: Unofficial Item Pack
-    original_thread: https://forums.beamdog.com/discussion/56567/mod-bgii-ee-unofficial-item-pack
-    components:
-      - 0 # Unofficial Item Pack
-      - 2 # Gourmet d'Outreterre
-      - 4 # Nouveaux objets
-      - 5 # Objets de SoD
-      - 6 # Meilleure boutique d'archerie
-      - 7 # RÃ©vision d'Action libre
-    location:
-      github_user: mleduque
-      repository: edvin_unofficial_item_pack
-      branch: v2.7b-french
-      patch:
-        relative: https://www.gibberlings3.net/forums/topic/35873-incompatibility-with-bgiiee-unofficial-item-pack/
+  # #######   compat issues with cowled menace
+  #- name: Unofficial Item Pack
+  #  original_thread: https://forums.beamdog.com/discussion/56567/mod-bgii-ee-unofficial-item-pack
+  #  components:
+  #    - 0 # Unofficial Item Pack
+  #    - 2 # Gourmet d'Outreterre
+  #    - 4 # Nouveaux objets
+  #    - 5 # Objets de SoD
+  #    - 6 # Meilleure boutique d'archerie
+  #    - 7 # RÃ©vision d'Action libre
+  #  location:
+  #    github_user: mleduque
+  #    repository: edvin_unofficial_item_pack
+  #    branch: v2.7b-french
+  #    patch:
+  #      relative: https://www.gibberlings3.net/forums/topic/35873-incompatibility-with-bgiiee-unofficial-item-pack/
   - name: item_rev
     description: Item revisions ; main component only
     components:
@@ -1831,11 +1909,12 @@ modules:
     location: # temporary, hope for maintenance and releases soon
       github_user: mleduque
       repository: ItemRevisions
-      branch: run_v4b10sd16_2022-04-02
+      branch: run_v4b10sd17_2022-04-02
   - name: mih_fr
     description: Made in Heaven - Fixes & Restorations ; items restorations only
     components:
       - 3  # item restorations
+  - name: mih_sp
   - name: mih_ip
     description: Made In Heaven Item Pack
     components:
@@ -1849,7 +1928,7 @@ modules:
     location:
       github_user: AngelGryph
       repository: MadeInHeaven_ItemPack
-      commit: bb41d18 # post v6
+      releaqz: v7
       patch:
         relative: patches/mih_ip-sod-warnings+config.diff
   - name: mih_ip
@@ -1986,11 +2065,11 @@ modules:
       asset:  heart-of-the-wood-7.0.0.iemod
   - name: BardicWonders
     components:
-      - 5 # ~Bardic Wonders: Items
+      #- 5 # ~Bardic Wonders: Items
     location:
       github_user: ArtemiusI
       repository: Bardic-Wonders
-      tag: v1.3
+      tag: v2.4
   - name: A7#ImprovedArcher
     components:
       - 0   # Profil d'Archer ameliore
@@ -2040,7 +2119,7 @@ modules:
     components:
       - 0 # Of Heirlooms and Classes - new artifacts forgeable by Cromwell: v1.11
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/OfHeirloomsAndClasses v1.2.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/OfHeirloomsAndClasses v1.3.zip
   - name: iiItemMod
     components:
       - 1 # Items [version 5]: v5.2
@@ -2106,7 +2185,7 @@ modules:
     location:
       github_user:  mleduque
       repository: Forgotten-Armament
-      tag: 1.3-keep-some-boots
+      tag: 2.0-keep-some-boots
     ignore_warnings: true
     #patch:
     #  relative: patches/forgotten-armament-ini.diff
@@ -2138,63 +2217,63 @@ modules:
     description: SubtleDoctor's Random Tweaks
     components:
       # last selection : "1.5.4.1"
-      - 5010 # Modifier les sorts de soin et similaires pour ignorer les protections contre les sorts: 1.5.4
-      - 2105 # Ajouter un effet d'aveuglement pour 1 round Ã  Vapeur colorÃ©e: 1.5.4
-      - 2108 # Changer Protection contre la pÃ©trification en 'RÃ©trovision': 1.5.4
-      - 2116 # Autoriser les cibles de Sommeil Ã  se rÃ©veiller quand elles sont frappÃ©es: 1.5.4
-      - 1151 # RÃ©duire les dÃ©gÃ¢ts mais amÃ©liorer la CÃ©citÃ© pour le Soleil ardent de Spell Revisions: 1.5.4
-      - 1152 # AmÃ©liorer Lueur fÃ©erique: 1.5.4
-      - 2201 # Ajouter un Ã©vitement des projectiles Ã  Flou: 1.5.4
-      - 2209 # Modifier Chance pour affecter tout le groupe: 1.5.4
-      - 2212 # DÃ©placer Image miroir au niveau 3: 1.5.4
-      - 2213 # Ajouter des effets persistants au Nuage puant de Spell Revisions: 1.5.4
-      - 2215 # Modifier Toile d'araignÃ©e pour ralentir au lieu d'immobiliser: 1.5.4
-      - 2217 # Changer IncinÃ©rateur d'Agannazar en Projectiles ardents de Melf: 1.5.4
-      - 2224 # AmÃ©liorer PoussiÃšre scintillante: 1.5.4
-      - 2251 # Ajouter un effet de SurditÃ© au toucher Ã  BÃ¢ton dÃ©cuplÃ©: 1.5.4
-      - 1207 # Modifier Baies magiques pour en faire une rÃ©gÃ©nÃ©ration hors combat: 1.5.4
-      - 1212 # Ajuster Ralentissement du Poison: 1.5.4
-      - 1251 # AmÃ©liorer les dÃ©gÃ¢ts et modifier le type de dÃ©gÃ¢ts pour Lance d'alicorne: 1.5.4
-      - 2321 # Permettre Ã  Annulation des protections de cibler les "acteurs": 1.5.4
-      - 2324 # Modifier Immobilisation des morts-vivants et ContrÃŽle des morts-vivants pour ignorer la rÃ©sistance Ã  la magie: 1.5.4
-      - 1323 # AmÃ©liorer le temps d'incantation pour Exaltation et ClartÃ© spirituelle: 1.5.4
-      - 1351 # Ajouter des effets de Lueur fÃ©erique et Lenteur au toucher de la Lame de lune: 1.5.4
-      - 1352 # Augmenter la portÃ©e de Lance de glace: 1.5.4
-      - 2413 # Autoriser la cible de SphÃšre rÃ©sistante d'Otiluke Ã  utiliser son inventaire: 1.5.4
-      - 2418 # Rendre Bouclier de feu et Gaine acide de Mestil dissipable par BrÃšche: 1.5.4
-      - 2451 # Modifier les monstres de Convocation d'ombre plus illusoires: 1.5.4
-      - 1404 # Remplacer Neutralisation du poison par Suppression des afflictions: 1.5.4
-      - 1451 # Modifier Vague destructrice pour ne pas affecter le groupe: 1.5.4
-      - 2508 # AmÃ©liorer Vagues de fatigue de Spell Revisions: 1.5.4
-      - 2518 # Changer le type de dÃ©gÃ¢ts et l'Ã©cole de Lame fantomatique: 1.5.4
-      - 2523 # Remplacer Feu du soleil par Â«Â TempÃªte de projectilesÂ Â»: 1.5.4
-      - 1505 # Modifier Vision VÃ©ritable pour affecter le groupe: 1.5.4
-      - 1603 # Rendre BarriÃšre de lames dissipable par BrÃšche: 1.5.4
-      - 1611 # Modifier Souvenir merveilleux pour restaurer tous les sorts de niveau 1 et 2: 1.5.4
-      - 1614 # Rendre Orbe dessÃ©chant de Sol plus facile Ã  lancer: 1.5.4
-      - 2711 # Ajuster les effets de Chaos: 1.5.4
-      - 1710 # Ajouter un effet de Lenteur Ã  Parole sacrÃ©e: 1.5.4
-      - 2808 # Rendre Moment de prescience dissipable par BrÃšche: 1.5.4
-      - 2811 # DÃ©placer Symbole, terreur au niveauÂ 7: 1.5.4
-      - 2916 # DÃ©placer Changement de forme au niveauÂ 8: 1.5.4
-      - 2915 # DÃ©placer Lame noire du dÃ©sastre au niveauÂ 8: 1.5.4
-      - 2914 # Ajouter un effet de mort instantanÃ©e Ã  Absorption d'Ã©nergie: 1.5.4
-      - 3000 # Donner aux armes crÃ©Ã©es par les sorts 2 attaques par round (APR): 1.5.4
-      - 3010 # Ajouter une immunitÃ© aux attaques sournoises Ã  l'Anneau de perception du danger: 1.5.4
-      - 3020 # Donner une vraie dÃ©viation des projectiles aux Bracelets antiprojectiles: 1.5.4
-      - 3030 # AmÃ©liorer les armes avec effet de dÃ©tonation: 1.5.4
-      - 3040 # Ajouter un effet de Peau d'Ã©corce 'rÃ©visÃ©' Ã  l'Armure de la foi +3: 1.5.4
-      - 3050 # Rendre le BÃ¢ton d'absorption d'Item Revisions rÃ©ellement instantanÃ©: 1.5.4
-      - 3060 # Modifier la Cape de gargouille pour appliquer un effet de Peau de pierre au lieu d'un bonus Ã  la classe d'armure: 1.5.4
-      - 3070 # Rendre les marteaux de jet nains utilisables par les non-nains: 1.5.4
-      - 3080 # AmÃ©liorer la Harpe d'Azlaer et la Harpe de Methild: 1.5.4
-      - 3100 # Remplacer la rÃ©sistance Ã  la magie par de la mÃ©tamagie pour la Robe de la toile: 1.5.4
-      - 4010 # Ajouter un jet de sauvegarde pour les effets d'absorption de niveau: 1.5.4
-      - 4020 # AmÃ©liorer les valeurs de caractÃ©ristiques des monstres: 1.5.4
+      #- 5010 # Modifier les sorts de soin et similaires pour ignorer les protections contre les sorts: 1.5.4
+      #- 2105 # Ajouter un effet d'aveuglement pour 1 round Ã  Vapeur colorÃ©e: 1.5.4
+      #- 2108 # Changer Protection contre la pÃ©trification en 'RÃ©trovision': 1.5.4
+      #- 2116 # Autoriser les cibles de Sommeil Ã  se rÃ©veiller quand elles sont frappÃ©es: 1.5.4
+      #- 1151 # RÃ©duire les dÃ©gÃ¢ts mais amÃ©liorer la CÃ©citÃ© pour le Soleil ardent de Spell Revisions: 1.5.4
+      #- 1152 # AmÃ©liorer Lueur fÃ©erique: 1.5.4
+      #- 2201 # Ajouter un Ã©vitement des projectiles Ã  Flou: 1.5.4
+      #- 2209 # Modifier Chance pour affecter tout le groupe: 1.5.4
+      #- 2212 # DÃ©placer Image miroir au niveau 3: 1.5.4
+      #- 2213 # Ajouter des effets persistants au Nuage puant de Spell Revisions: 1.5.4
+      #- 2215 # Modifier Toile d'araignÃ©e pour ralentir au lieu d'immobiliser: 1.5.4
+      #- 2217 # Changer IncinÃ©rateur d'Agannazar en Projectiles ardents de Melf: 1.5.4
+      #- 2224 # AmÃ©liorer PoussiÃšre scintillante: 1.5.4
+      #- 2251 # Ajouter un effet de SurditÃ© au toucher Ã  BÃ¢ton dÃ©cuplÃ©: 1.5.4
+      #- 1207 # Modifier Baies magiques pour en faire une rÃ©gÃ©nÃ©ration hors combat: 1.5.4
+      #- 1212 # Ajuster Ralentissement du Poison: 1.5.4
+      #- 1251 # AmÃ©liorer les dÃ©gÃ¢ts et modifier le type de dÃ©gÃ¢ts pour Lance d'alicorne: 1.5.4
+      #- 2321 # Permettre Ã  Annulation des protections de cibler les "acteurs": 1.5.4
+      #- 2324 # Modifier Immobilisation des morts-vivants et ContrÃŽle des morts-vivants pour ignorer la rÃ©sistance Ã  la magie: 1.5.4
+      #- 1323 # AmÃ©liorer le temps d'incantation pour Exaltation et ClartÃ© spirituelle: 1.5.4
+      #- 1351 # Ajouter des effets de Lueur fÃ©erique et Lenteur au toucher de la Lame de lune: 1.5.4
+      #- 1352 # Augmenter la portÃ©e de Lance de glace: 1.5.4
+      #- 2413 # Autoriser la cible de SphÃšre rÃ©sistante d'Otiluke Ã  utiliser son inventaire: 1.5.4
+      #- 2418 # Rendre Bouclier de feu et Gaine acide de Mestil dissipable par BrÃšche: 1.5.4
+      #- 2451 # Modifier les monstres de Convocation d'ombre plus illusoires: 1.5.4
+      #- 1404 # Remplacer Neutralisation du poison par Suppression des afflictions: 1.5.4
+      #- 1451 # Modifier Vague destructrice pour ne pas affecter le groupe: 1.5.4
+      #- 2508 # AmÃ©liorer Vagues de fatigue de Spell Revisions: 1.5.4
+      #- 2518 # Changer le type de dÃ©gÃ¢ts et l'Ã©cole de Lame fantomatique: 1.5.4
+      #- 2523 # Remplacer Feu du soleil par Â«Â TempÃªte de projectilesÂ Â»: 1.5.4
+      #- 1505 # Modifier Vision VÃ©ritable pour affecter le groupe: 1.5.4
+      #- 1603 # Rendre BarriÃšre de lames dissipable par BrÃšche: 1.5.4
+      #- 1611 # Modifier Souvenir merveilleux pour restaurer tous les sorts de niveau 1 et 2: 1.5.4
+      #- 1614 # Rendre Orbe dessÃ©chant de Sol plus facile Ã  lancer: 1.5.4
+      #- 2711 # Ajuster les effets de Chaos: 1.5.4
+      #- 1710 # Ajouter un effet de Lenteur Ã  Parole sacrÃ©e: 1.5.4
+      #- 2808 # Rendre Moment de prescience dissipable par BrÃšche: 1.5.4
+      #- 2811 # DÃ©placer Symbole, terreur au niveauÂ 7: 1.5.4
+      #- 2916 # DÃ©placer Changement de forme au niveauÂ 8: 1.5.4
+      #- 2915 # DÃ©placer Lame noire du dÃ©sastre au niveauÂ 8: 1.5.4
+      #- 2914 # Ajouter un effet de mort instantanÃ©e Ã  Absorption d'Ã©nergie: 1.5.4
+      #- 3000 # Donner aux armes crÃ©Ã©es par les sorts 2 attaques par round (APR): 1.5.4
+      #- 3010 # Ajouter une immunitÃ© aux attaques sournoises Ã  l'Anneau de perception du danger: 1.5.4
+      #- 3020 # Donner une vraie dÃ©viation des projectiles aux Bracelets antiprojectiles: 1.5.4
+      #- 3030 # AmÃ©liorer les armes avec effet de dÃ©tonation: 1.5.4
+      #- 3040 # Ajouter un effet de Peau d'Ã©corce 'rÃ©visÃ©' Ã  l'Armure de la foi +3: 1.5.4
+      #- 3050 # Rendre le BÃ¢ton d'absorption d'Item Revisions rÃ©ellement instantanÃ©: 1.5.4
+      #- 3060 # Modifier la Cape de gargouille pour appliquer un effet de Peau de pierre au lieu d'un bonus Ã  la classe d'armure: 1.5.4
+      #- 3070 # Rendre les marteaux de jet nains utilisables par les non-nains: 1.5.4
+      #- 3080 # AmÃ©liorer la Harpe d'Azlaer et la Harpe de Methild: 1.5.4
+      #- 3100 # Remplacer la rÃ©sistance Ã  la magie par de la mÃ©tamagie pour la Robe de la toile: 1.5.4
+      #- 4010 # Ajouter un jet de sauvegarde pour les effets d'absorption de niveau: 1.5.4
+      #- 4020 # AmÃ©liorer les valeurs de caractÃ©ristiques des monstres: 1.5.4
     location:
       github_user: subtledoctor
       repository: d5_Random_Tweaks
-      tag: "1.5.7"
+      tag: "1.6.0"
   - name: d5_random_tweaks
     description: SubtleDoctor's Random Tweaks - components with warnings
     components:
@@ -2250,29 +2329,29 @@ modules:
       tag: "1.8"
   - name: ArtisansKitpack
     components:
-      - 1 # Artisan's Kitpack: Enable All Classes for All Races: 2.5
-      - 2 # Artisan's Kitpack: Enable Multi-Classes for -> All Races: 2.5
-      - 1000 # Artisan's Kitpack: Arcane Archer Fighter Kit: 2.5
-      - 1001 # Artisan's Kitpack: Arcane Archer (Fighter/Mage): 2.5
-      - 1103 # Artisan's Kitpack: (BG:EE) Make Skitia's Emily an -> Arcane Archer / Mage: 2.5
-      - 1105 # Artisan's Kitpack: (BG2:EE) Make Skitia's Emily an -> Arcane Archer / Mage: 2.5
-      - 1002 # Artisan's Kitpack: Vanguard Fighter Kit: 2.5
-      - 1101 # Artisan's Kitpack: Give Khalid the Vanguard Kit: 2.5
-      - 2001 # Artisan's Kitpack: Rashemi Berserker Ranger Kit for Minsc: 2.5
-      - 3000 # Artisan's Kitpack: Paladin Overhaul: 2.5
-      - 3005 # Artisan's Kitpack: Martyr Paladin Kit: 2.5
-      - 5001 # Artisan's Kitpack: Elementalist Druid Kit: 2.5
-      - 5101 # Artisan's Kitpack: Give Cernd the Elementalist Kit: 2.5
-      - 5003 # Artisan's Kitpack: Red Wizard Mage Kit for Edwin: 2.5
-      - 7001 # Artisan's Kitpack: Rogue Archer Thief Kit: 2.5
-      - 9001 # Artisan's Kitpack: Warhorn Shaman Kit: 2.5
-      - 10001 # Artisan's Kitpack: Monk Revisions: 2.5
-      - 20000 # Artisan's Kitpack: Eldritch Knight (Fighter / Mage Kit): 2.5
-      - 20001 # Artisan's Kitpack: Arcane Trickster (Mage / Thief Kit)
+      #- 1 # Artisan's Kitpack: Enable All Classes for All Races: 2.5
+      #- 2 # Artisan's Kitpack: Enable Multi-Classes for -> All Races: 2.5
+      #- 1000 # Artisan's Kitpack: Arcane Archer Fighter Kit: 2.5
+      #- 1001 # Artisan's Kitpack: Arcane Archer (Fighter/Mage): 2.5
+      #- 1103 # Artisan's Kitpack: (BG:EE) Make Skitia's Emily an -> Arcane Archer / Mage: 2.5
+      #- 1105 # Artisan's Kitpack: (BG2:EE) Make Skitia's Emily an -> Arcane Archer / Mage: 2.5
+      #- 1002 # Artisan's Kitpack: Vanguard Fighter Kit: 2.5
+      #- 1101 # Artisan's Kitpack: Give Khalid the Vanguard Kit: 2.5
+      #- 2001 # Artisan's Kitpack: Rashemi Berserker Ranger Kit for Minsc: 2.5
+      #- 3000 # Artisan's Kitpack: Paladin Overhaul: 2.5
+      #- 3005 # Artisan's Kitpack: Martyr Paladin Kit: 2.5
+      #- 5001 # Artisan's Kitpack: Elementalist Druid Kit: 2.5
+      #- 5101 # Artisan's Kitpack: Give Cernd the Elementalist Kit: 2.5
+      #- 5003 # Artisan's Kitpack: Red Wizard Mage Kit for Edwin: 2.5
+      #- 7001 # Artisan's Kitpack: Rogue Archer Thief Kit: 2.5
+      #- 9001 # Artisan's Kitpack: Warhorn Shaman Kit: 2.5
+      #- 10001 # Artisan's Kitpack: Monk Revisions: 2.5
+      #- 20000 # Artisan's Kitpack: Eldritch Knight (Fighter / Mage Kit): 2.5
+      #- 20001 # Artisan's Kitpack: Arcane Trickster (Mage / Thief Kit)
     location:
       github_user: ArtemiusI
       repository: The-Artisan-s-Kitpack
-      tag: v2.72
+      tag: v3.4a
       patch:
         relative: patches/ArtisansKitPack-fix_2da.diff
   - name: A7-ChaosSorcerer
@@ -2326,8 +2405,8 @@ modules:
     location:
       github_user:  D2-mods
       repository: The-Workshop-Kitpack
-      release: "2.5"
-      asset:  the-workshop-kitpack-2.5.iemod
+      release: "2.7"
+      asset:  the-workshop-kitpack-2.7.iemod
   - name: shadowadept
     description: shadowadept - components without warningq
     components:
@@ -2355,7 +2434,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Morpheus562-s-Kitpack
-      release: "1.1"
+      release: "2.0"
+      asset: morpheus562s-kitpack-v2.0.iemod
       patch:
         relative: patches/morpheus562-s-kitpack.diff
   - name: TomeAndBlood
@@ -2386,7 +2466,7 @@ modules:
     location:
       github_user: mleduque
       repository: TomeAndBlood
-      branch: "0.9.43-fr"
+      branch: "0.9.45-fr"
   - name: TomeAndBlood
     description: Tome And Blood (warning components)
     components:
@@ -2444,7 +2524,7 @@ modules:
     location:
       github_user: mleduque
       repository: Faiths_and_Powers
-      branch: 85sd11-fr
+      branch: 85sd16-fr
       layout:
           layout_type: multi_dir
           dirs:
@@ -2464,14 +2544,14 @@ modules:
         3rd means you really should not change the spell table after installing ability score-based bonuses.
         Memorization slots will naturally adjust, but the stat-based bonuses may get (slightly) out of whack.
     components:
-      - 100 # Convertir tous les lanceurs de sorts au système 5E: 1.9.1
-      #- 900 # Objects accordant des emplacements de sorts bonus et lanceurs de sorts 5E -> Bonus à la foisauxsorts mémrorisables et aux emplacements de lancer de sorts: 1.9.1
-      - 902 # Objects accordant des emplacements de sorts bonus et lanceurs de sorts 5E -> Bonus seulement aux emplacements de lancer de sorts: 1.9.1
+      #- 100 # Convertir tous les lanceurs de sorts au système 5E: 1.9.1
+      ##- 900 # Objects accordant des emplacements de sorts bonus et lanceurs de sorts 5E -> Bonus à la foisauxsorts mémrorisables et aux emplacements de lancer de sorts: 1.9.1
+      #- 902 # Objects accordant des emplacements de sorts bonus et lanceurs de sorts 5E -> Bonus seulement aux emplacements de lancer de sorts: 1.9.1
     ignore_warnings: true # no effect altered on... for each component
     location:
       github_user: mleduque
       repository: 5E_spellcasting
-      branch: 1.9.7-fr
+      branch: 1.15-fr
       patch:
         # configure "lose spell on interrupted" and "int bonus slots"
         relative: patches/spellcasting-5e-config.diff
@@ -2493,7 +2573,7 @@ modules:
     location:
       github_user: mleduque
       repository: Will_to_Power
-      branch: 2.3.1-fr
+      branch: 2.3.2.1-fr
       patch:
         relative: patches/will_to_power_tweaks.diff
   - name: Will_to_Power
@@ -2513,7 +2593,7 @@ modules:
     location:
       github_user: mleduque
       repository: Might_and_Guile
-      branch: 8714c8c-fr
+      branch: 5a13-fr
       patch:
         relative: patches/mng-multibard-shools.diff
   - name: might_and_guile
@@ -2528,13 +2608,14 @@ modules:
   - name: HouseTweaks
     description: The Artisan's Tweaks and Overhauls
     components:
-      - 9 # House Tweaks: Not-So-Indestructible Rats: 1.91
-      - 10 # House Tweaks: Good-Aligned Roleplay Rewards (BG2:EE): 1.91
-      - 11 # House Tweaks: Cloak of Dragomir only decreases stats in daylight: 1.91
+      # TWO PARTS!
+      #- 9 # House Tweaks: Not-So-Indestructible Rats: 1.91
+      #- 10 # House Tweaks: Good-Aligned Roleplay Rewards (BG2:EE): 1.91
+      #- 11 # House Tweaks: Cloak of Dragomir only decreases stats in daylight: 1.91
     location:
       github_user: ArtemiusI
       repository: House-Rule-Tweaks
-      tag: v2.01
+      tag: v2.1a
   - name: klatu
     description: Klatu Tweaks
     components:
@@ -3121,7 +3202,13 @@ modules:
   #########
   - name: scales_of_balance
     installation:
-      general: proficiency part should go after SCS - Actually all can go after SCS
+      general: -|
+      proficiency part should go after SCS - Actually all can go after SCS
+      .
+      cdtweaks:2520;cdtweaks - Allow Mages to Use Bucklers and Thieves to Use Small Shields (Angel)
+      SkillsAndAbilitiesNewProf3;Skills and Abilities - NWN2 Style Proficiency Progression
+      scales_of_balance:124;Scales of Balance - WPO - Fighting Style Changes
+      cdtweaks:2060;cdtweaks - Weapon Styles for All
     components:
       - 9876543210
       #- 100 # IWO - Encore une autre revision du systeme d'armure (YARAS): v5.38.3
@@ -3135,7 +3222,7 @@ modules:
     location:
       github_user: mleduque
       repository: Scales_of_Balance
-      tag: "6.3.3-fr"
+      tag: "6.3.4-fr"
       patch:
         relative: patches/scales-config.diff
   - name: forgotten-armament
@@ -3260,8 +3347,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Skills-and-Abilities
-      release: 0.9.1-alpha
-      asset: lin-skills-and-abilities-v0.9.0-alpha.zip
+      release: 1.0-beta
+      asset: skills-and-abilities-v1.0-beta.iemod
       patch:
         relative: patches/skills-and-abilities-prof-points.diff
   - name: npc_ee
@@ -3274,7 +3361,7 @@ modules:
     location:
       github_user: mleduque
       repository: NPC_EE
-      commit: "411b121-fr"
+      commit: "5.9.1-fr"
   - name: POISON_NO_BYPASS
     components:
       - 3 # Limited Exclusions(Anti-magic, AoE, Gaze): Mirror Image or Stoneskin
@@ -3335,39 +3422,36 @@ modules:
     location:
       github_user: GraionDilach
       repository: RandomGraionTweaks
-      release: version-1.6
-      asset: random-graion-tweaks-1.6.iemod
+      release: version-1.8
+      asset: random-graion-tweaks-1.8.iemod
     ignore_warnings: true
   - name: jtweaks
     components:
-      - 60 # NPCs don't go in inaccessible locations: 2.2
-      - 150 # Temple cures work better: 2.2
-      - 160 # Bala's Axe dispels reasonably well: 2.2
-      - 170 # Celestials cast all of their spells at high levels: 2.2
-      - 182 # Antimagic Ray and Spell Shield -> Spell Shield blocks one antimagic ray: 2.2
-      - 200 # Elemental protection spells increment resistances: 2.2
-      - 210 # Vorpal weapons don't chunk: 2.2
-      - 230 # Loosen restrictions on what clones can do: 2.2
-      - 240 # Undead Hunters are better at Turn Undead: 2.2
-      - 250 # Loosen NPC item restrictions: 2.2
-      - 280 # Allies against Bodhi are better prepared for vampires: 2.2
-      - 300 # Slightly improved party AI: 2.2
-      - 310 # Map notes for BGEE quests: 2.2
-      - 320 # Standardize inn and tavern music: 2.2
-      - 350 # Bigger random spawns: 2.2
+      #- 60 # NPCs don't go in inaccessible locations: 2.2
+      #- 150 # Temple cures work better: 2.2
+      #- 160 # Bala's Axe dispels reasonably well: 2.2
+      #- 170 # Celestials cast all of their spells at high levels: 2.2
+      #- 182 # Antimagic Ray and Spell Shield -> Spell Shield blocks one antimagic ray: 2.2
+      #- 200 # Elemental protection spells increment resistances: 2.2
+      #- 210 # Vorpal weapons don't chunk: 2.2
+      # - 220
+      #- 230 # Loosen restrictions on what clones can do: 2.2
+      #- 240 # Undead Hunters are better at Turn Undead: 2.2
+      #- 250 # Loosen NPC item restrictions: 2.2
+      #- 280 # Allies against Bodhi are better prepared for vampires: 2.2
+      #- 300 # Slightly improved party AI: 2.2
+      #- 310 # Map notes for BGEE quests: 2.2
+      #- 320 # Standardize inn and tavern music: 2.2
+      #- 350 # Bigger random spawns: 2.2
     location:
       github_user: mleduque
       repository: jmerry_jtweaks
-      tag: v2.2
-  - name: jtweaks
-    components:
-      - 220 # Resurrection can heal the living: 2.2
-    ignore_warnings: true
+      tag: v3.0
   - name: HouseTweaks
     description: House Rule TweakPack
     comment: put before tb_tweaks cCON component so regen is changed (house) and the rest comes from tb_tweaks
     components:
-      - 5  # House Tweaks: Increased Constitution Bonuses
+      #- 5  # House Tweaks: Increased Constitution Bonuses
   - name: tb#tweaks
     components:
       - 150 # Imprisonment Fix.: TB#Tweaks, V 2.99
