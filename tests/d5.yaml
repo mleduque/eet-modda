@@ -1,0 +1,13 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: d5_random_tweaks
+    components: ask
+    location:
+      github_user: mleduque
+      repository: d5_Random_Tweaks
+      branch: fr-updates-1.6

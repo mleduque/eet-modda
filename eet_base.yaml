@@ -444,7 +444,7 @@ modules:
     components:
       - 0 # Alabaster Sands: the new area of Athkatla -> Yes, but don't patch existing save games: v1.0
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/AlabasterSands v1.1.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/AlabasterSands v1.2.zip
   - name: FurzeHill
     description: "The Journey to the Furze Hill"
     components:
@@ -1166,7 +1166,7 @@ modules:
     location:
       github_ruser: A-Wizard-Did-It
       repository: Black-Hearts-EET
-      tag: v1.01
+      tag: v1.03
 
   #########
   # NPC
@@ -1751,8 +1751,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Road_To_Discovery_for_SoD
-      release: v0.8Beta
-      asset: sodrtd-0.8-.beta.iemod
+      release: v1.0
+      asset: road-to-discovery-for-sod-1.0.iemod
   - name: BG1NPCSoA
     description: BG1 NPCs in BG2
     installation:
@@ -2119,7 +2119,7 @@ modules:
     components:
       - 0 # Of Heirlooms and Classes - new artifacts forgeable by Cromwell: v1.11
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/OfHeirloomsAndClasses v1.3.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/OfHeirloomsAndClasses v2.0.zip
   - name: iiItemMod
     components:
       - 1 # Items [version 5]: v5.2
@@ -3205,6 +3205,8 @@ modules:
       general: -|
       proficiency part should go after SCS - Actually all can go after SCS
       .
+      https://www.gibberlings3.net/forums/topic/26838-unearthed-arcana-presents-scales-of-balance-a-post-hac-tweak-pack/?do=findComment&comment=319930
+      .
       cdtweaks:2520;cdtweaks - Allow Mages to Use Bucklers and Thieves to Use Small Shields (Angel)
       SkillsAndAbilitiesNewProf3;Skills and Abilities - NWN2 Style Proficiency Progression
       scales_of_balance:124;Scales of Balance - WPO - Fighting Style Changes
@@ -3222,7 +3224,7 @@ modules:
     location:
       github_user: mleduque
       repository: Scales_of_Balance
-      tag: "6.3.4-fr"
+      tag: "6.4-fr"
       patch:
         relative: patches/scales-config.diff
   - name: forgotten-armament
@@ -3347,8 +3349,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Skills-and-Abilities
-      release: 1.0-beta
-      asset: skills-and-abilities-v1.0-beta.iemod
+      release:  1.1-Beta
+      asset: skills-and-abilities-v 1.1-Beta.iemod
       patch:
         relative: patches/skills-and-abilities-prof-points.diff
   - name: npc_ee
