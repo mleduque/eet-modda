@@ -25,11 +25,11 @@ modules:
     description: The Rediscovery of Kuldahar
     components:
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Kuldahar v2.0.zip
+      path: /home/mick/Games/modda-cache/static-iwd/Kuldahar v2.1.zip
   - name: Snowytoes
     components:
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Snowytoes v1.0.zip
+      path: /home/mick/Games/modda-cache/static-iwd/Snowytoes v1.1.zip
   - name: willowisp
     components:
     location:

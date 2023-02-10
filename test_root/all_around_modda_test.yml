@@ -5,6 +5,7 @@ global:
   lang_dir: "fr_FR"
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
   local_mods: static
+  local_files: static_files
 modules:
   # One http mod
   - name: "xulaye"
@@ -92,3 +93,15 @@ modules:
           replace: RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",1600)
           with: RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",320)
           comment: Reduce 3600s/26min40s _real-time_ talks timers to 320s/6min real-time
+  - gen_mod: generated_01
+    files:
+      local: generated_01_source/*
+    component:
+      index: 10
+      name: whatever
+  - gen_mod: generated_02
+    files:
+      local: generated_02_source/sample02.txt
+    component:
+      index: 20
+      name: whatever_02

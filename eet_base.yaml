@@ -1772,7 +1772,8 @@ modules:
     location:
       github_user: SpellholdStudios
       repository: BG1_NPCs_for_SoA_-_ToB
-      tag: v14
+      release: v14.2
+      asset:  bg1-npc-in-soatob-14.2.iemod
   - name: BG1NPCSoA
     description: BG1 NPCs in BG2 - components with warnings
     components:
@@ -2405,8 +2406,8 @@ modules:
     location:
       github_user:  D2-mods
       repository: The-Workshop-Kitpack
-      release: "2.7"
-      asset:  the-workshop-kitpack-2.7.iemod
+      release: "2.8"
+      asset:  the-workshop-kitpack-2.8.iemod
   - name: shadowadept
     description: shadowadept - components without warningq
     components:
