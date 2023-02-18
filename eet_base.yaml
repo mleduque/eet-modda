@@ -20,11 +20,10 @@ modules:
         args: [ "-c", "node dist/index.js" ]
 
   - name: EET  # needs EET/bgee_dir.txt with path to bg1 /game subdirectory inside
-    version: v13.4
     location:
       github_user: mleduque
       repository: EET
-      branch: mled-all-in
+      commit: 114b9bb
       layout:
           layout_type: multi_dir
           dirs:
@@ -315,8 +314,7 @@ modules:
     location:
       github_user: SpellholdStudios
       repository: DSotSC
-      release: v4.2
-      asset: dark-side-of-the-sword-coast-v4.2.iemod
+      commit: d6b1f27 # with french, 2023-02-14
   - name: ntotsc
     description: Northern Tales of the Sword Coast
     components:
@@ -1150,7 +1148,7 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Tactics-Remix
-      branch: master
+      commit: 32a6ef9-update-it
   - name: gorgon
     components:
     location:
@@ -1170,7 +1168,7 @@ modules:
     location:
       github_ruser: A-Wizard-Did-It
       repository: Black-Hearts-EET
-      tag: v1.03
+      tag: v1.04
 
   #########
   # NPC
@@ -1209,14 +1207,14 @@ modules:
     location:
       github_user: Skitia
       repository: Emily-BG1
-      commit: 5b9a580 # 2022-06-25
+      commit: ddcbbaf # 2023-02-18
   - name: Helga
     components:
       - 0
     location:
       github_user: Skitia
       repository: Helga-BG1
-      commit: ebbf7e1 # 2022-06-23
+      commit: 17fc230 # 2023-02-18
       patch:
         relative: patches/helga_bg1-defaultportrait-nomusic.diff
   - name: Kale
@@ -1233,7 +1231,7 @@ modules:
     location:
       github_user: Skitia
       repository: Recorder-BG1
-      commit: e16545d # 2022-06-28
+      commit: ef1b8c0 # 2023-02-18
       patch:
         relative: patch to have her wait somewhere else
   - name: Vienxay
@@ -1241,7 +1239,7 @@ modules:
     location:
       github_user: Skitia
       repository: Vienxay-BG1
-      commit: 0676b0e # 2022-09-07
+      commit: 49aa8e0 # 2023-02-18
       patch:
         relative: patches/viexnay_bg1-defaultprotrait-nomusic.diff
     #prompt for portrait (1. Default)
@@ -1252,7 +1250,7 @@ modules:
     location:
       github_user: Skitia
       repository: SkitiaNPCs
-      commit: 20fd72a # 2022-09-07
+      commit: 64a502d # 2023-02-18
       patch:
         relative: patches/skitia_npc_defaultportraits.diff
     #prompt for portrait (1. Default the 1. Default)
@@ -1657,7 +1655,7 @@ modules:
     location:
       github_user: Skitia
       repository: Nalia_At_Last
-      tag: v1.06
+      tag: v1.10
   - name: viconia
     components: [0]
     location:
@@ -1827,8 +1825,8 @@ modules:
     location:
       github_user: SpellholdStudios
       repository: SmilingImpCrossBanterMod
-      release: v.1.6
-      asset: smiling-imps-cross-banter-mod-1.6.iemod
+      release: v.1.7
+      asset: smiling-imps-cross-banter-mod-1.7.iemod
   - name: FaldornBG2
     components:
       - 0 # Faldorn NPC for BG2EE
