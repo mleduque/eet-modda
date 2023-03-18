@@ -10,3 +10,13 @@
 
 
 Pnp_celestials ? https://github.com/Gibberlings3/PnP_Celestials
+
+
+     Random Tweaks
+    TnB
+    WtP
+    MnG v5
+    FnP v0.85
+    5E Casting
+    SoB v6
+    MBR

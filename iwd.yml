@@ -25,11 +25,11 @@ modules:
     description: The Rediscovery of Kuldahar
     components:
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Kuldahar v2.1.zip
+      path: /home/mick/Games/modda-cache/static-iwd/Kuldahar v2.2.zip
   - name: Snowytoes
     components:
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Snowytoes v1.1.zip
+      path: /home/mick/Games/modda-cache/static-iwd/Snowytoes v1.3.zip
   - name: willowisp
     components:
     location:
@@ -37,21 +37,21 @@ modules:
   - name: BlinkingDead
     components:
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/BlinkingDead v2.2.zip
+      path: /home/mick/Games/modda-cache/static-iwd/BlinkingDead v3.0.zip
   - name: OurLady
     description: Tale of Our Lady Dreamless
     components:
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Tale of Our Lady Dreamless v2.4.zip
+      path: /home/mick/Games/modda-cache/static-iwd/Tale of Our Lady Dreamless v2.6.zip
   - name: InnBB
     description: Below & Below Inn
     components:
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/InnBB v2.1.zip
+      path: /home/mick/Games/modda-cache/static-iwd/InnBB v2.3.zip
   - name: Skineater
     components:
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Skineater v2.1.zip
+      path: /home/mick/Games/modda-cache/static-iwd/Skineater v2.3.zip
   ## npc
   - name: iwdnpc
     description: 5 npcs with banter, friendship, interjections, romance
@@ -131,17 +131,27 @@ modules:
   - name: iwdcrossmodpack
     components: ~
     location:
-      path: http://america.iegmc.net/g3//lin-IWDCrossmodPack-v1.4.tar.gz
+      http: http://america.iegmc.net/g3//lin-IWDCrossmodPack-v1.4.tar.gz
       patch: path/iwdcrossmodpack_readln.diff
-  - name: MinorNPCPortraitsforIWDEE
-    components: ~
+  # Use PPE instead
+  #- name: MinorNPCPortraitsforIWDEE
+  #  components: ~
+  #  location:
+  #    path: /home/mick/Games/modda-cache/static-iwd/Setup-MinorNPCPortraitsforIWDEEv1.04.zip
+  - name: PPE
+    description: Portraits, Portraits Everywhere
+    components: ask
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Setup-MinorNPCPortraitsforIWDEEv1.04.zip
+      #github_user: DaftHunk # canonical:smeagolheart
+      github_user: mleduque
+      repository: Portraits-Portraits-Everywhere
+      branch: check which one
   ## items-
   - name: FindIt-IWD
     description: new items
     components:
     location:
+      path: /home/mick/Games/modda-cache/static-iwd/FindIt-IWD v2.6.zip
   - name: iu_iwd-IWD
     description: Item Upgrade for Icewind Dale
     components:
@@ -154,7 +164,7 @@ modules:
     description: new items to create
     components:
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/ForgeIt-IWD v1.7.zip
+      path: /home/mick/Games/modda-cache/static-iwd/ForgeIt-IWD v1.8.zip
   - name: msfm
   ## spells
   - name: Weasels!

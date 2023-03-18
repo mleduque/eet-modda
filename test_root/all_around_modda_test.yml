@@ -64,44 +64,56 @@ modules:
         relative: patches/mbr_spell_thrust_lv2.diff
   # github commit
   # with replace
-  - name: "c#brage"
+  - name: c#brandock
+    description: Brandock the mage
     components:
-      - 0 # Brage's Redemption - Brage Joinable NPC for Baldur's Gate: 7.2
-      - 1 # Assign the mod's portrait and soundset to the original Brage in game.: 7.2
+      - 0  # Brandock the Mage, NPC for BG:EE, BGII:EE, EET, and BGT
+      - 23 # Default Portrait: Insecure, by Acifer (is included in the main component)
+      #- 50 # Make Cutscene in Thalantyr's Abode Short
     location:
       github_user: Gitjas
-      repository: Brages_Redemption
-      commit: 36d18b8
+      repository: Brandock_the_Mage
+      release: vBeta-16
+      asset: brandock-the-mage-beta_16.iemod
       replace:
-        # 800
-        - file_globs: [baf/C#BrageD.baf, baf/c#brage1.baf, baf/c#brage2, dialogue/bg1.d, dialogue/joining*.d]
-          replace: RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",800)
-          with: RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",240)
-          comment: Reduce 800s/13min20s _real-time_ talks timers to 240s/4min real-time
-        # 3200
-        - file_globs: [baf/C#BrageD.baf, baf/c#brage1.baf, baf/c#brage2, dialogue/bg1.d, dialogue/joining*.d]
-          replace: RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",3200)
-          with: RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",480)
-          comment: Reduce 3200s/53min20s _real-time_ talks timers to 480s/8min real-time
-        # 3600
-        - file_globs: [baf/C#BrageD.baf, baf/c#brage1.baf, baf/c#brage2, dialogue/bg1.d, dialogue/joining*.d]
-          replace: RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",3600)
-          with: RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",480)
-          comment: Reduce 3600s/1h _real-time_ talks timers to 480s/8min real-time
-        # 1600
-        - file_globs: [baf/C#BrageD.baf, baf/c#brage1.baf, baf/c#brage2, dialogue/bg1.d, dialogue/joining*.d]
-          replace: RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",1600)
-          with: RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",320)
-          comment: Reduce 3600s/26min40s _real-time_ talks timers to 320s/6min real-time
+        # BrandockNPCBanterTimer3600
+        - file_globs: ["crossmod/bg1npc.baf", "crossmod/brando_crossmod_bg1npc_BG1.d", "dialogue/brandock_sod.d", "dialogue/c#brando.d"]
+          replace: 'RealSetGlobalTimer("C#BrandockNPCBanterTimer","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("C#BrandockNPCBanterTimer","GLOBAL",1800)'
+          comment: Reduce 3600s/1h _real-time_ talks timers to 1800s/30min real-time
+        # 1200
+        - file_globs: ["dialogue/brandock_sod.d"]
+          replace: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",1200)'
+          with: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",600)'
+        # 600
+        - file_globs: ["dialogue/brandock_sod.d", "scripts/c#brando_bg2.baf"]
+          replace: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",600)'
+          with: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",300)'
+        # 1800
+        - file_globs: ["scripts/c#brando_sod.baf"]
+          replace: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",1800)'
+          with: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",900)'
+        # timer constants
+        - file_globs: ["c#brandock.tp2"]
+          replace: 'APPEND ~gtimes.ids~ ~3600 C#BRANDOCK_TIMERLONG~ UNLESS ~C#BRANDOCK_TIMERLONG~'
+          with: 'APPEND ~gtimes.ids~ ~1800 C#BRANDOCK_TIMERLONG~ UNLESS ~C#BRANDOCK_TIMERLONG~'
+        - file_globs: ["c#brandock.tp2"]
+          replace: 'APPEND ~gtimes.ids~ ~1800 C#BRANDOCK_TIMERSHORT~ UNLESS ~C#BRANDOCK_TIMERSHORT~'
+          with: 'APPEND ~gtimes.ids~ ~900 C#BRANDOCK_TIMERSHORT~ UNLESS ~C#BRANDOCK_TIMERSHORT~'
   - gen_mod: generated_01
     files:
-      local: generated_01_source/*
+      - local: "generated_01_source"
     component:
       index: 10
       name: whatever
   - gen_mod: generated_02
     files:
-      local: generated_02_source/sample02.txt
+      - local: generated_02_source
+        glob: "*.txt"
     component:
       index: 20
       name: whatever_02
+  - file_mod: single_file_mod
+    from:
+      local: single_file_mod/some_file.txt
+    to: override
