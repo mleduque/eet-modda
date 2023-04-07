@@ -37,7 +37,12 @@ modules:
       file_name: bgee_dir.txt
       content: ../../bg1/game
 
-
+  - name: bggoEET
+    components: ask
+    location:
+      github_user: SpellholdStudios
+      repository: BGGOEET
+      branch: master
   #########
   # story
   #########
@@ -315,7 +320,7 @@ modules:
     location:
       github_user: SpellholdStudios
       repository: DSotSC
-      commit: d6b1f27 # with french, 2023-02-14
+      commit: 3a247522a # with french, 2023-04-05
   - name: ntotsc
     description: Northern Tales of the Sword Coast
     components:
@@ -576,8 +581,8 @@ modules:
     location:
       github_user: SpellholdStudios
       repository: The_Minotaur_and_Lilacor
-      release: v2.0
-      asset: the-minotaur-and-lilacor-2.0.iemod
+      release: v2.1
+      asset: the-minotaur-and-lilacor-2.1.iemod
   - name: reunion
     components: [0] # Mod Reunion pour Baldur's Gate II: v7
     location:
@@ -663,6 +668,8 @@ modules:
       #- 5  # More Dialogue Choices & Prevent Dead Ends:
       #- 6  # Use Imoen's SoD Portrait for BGII in EET & BGT
       #- 9  # Adjust PC's Starting XP at Beginning of SoD, by subtledoctor -> Set Starting XP to 90,000
+      ##   it's either one of the soD Tweakpack new/revised SoD endings OR Another fine Hell. - jastey
+      ##   https://www.gibberlings3.net/forums/topic/36469-eet-end-error/?do=findComment&comment=321536
       #- 12 # SoD Ending: jastey's Tweaks -> Revised Full Version # overwrittern by afh if installed
     location:
       github_user: Gibberlings3
@@ -896,8 +903,9 @@ modules:
     location:
       github_user: InfinityMods
       repository: FishingForTrouble
-      release: v3.2.8
-      asset: fishing-for-trouble-v3.2.8.iemod
+      commit: d062749 # 2023-04-06
+      #release: v3.2.8
+      #asset: fishing-for-trouble-v3.2.8.iemod
   - name: "tod"
     description: Tower Of Deception
     components:
@@ -910,11 +918,11 @@ modules:
       release: v4.0.5
       asset: tower-of-deception-v4.0.5.iemod
   - name: SOS # Shadows Over Soubar
-    components: [0, 1]
+    components: ask
     location:
       github_user: SpellholdStudios
       repository: Shadows_over_Soubar
-      commit: ba6514f3b0 # post v1.16 2022-12-10
+      commit: ba6514f3b0 # post v1.16 20223-04-05
   - name: "keldorn_rom"
     components: [0, 2, 8]
     location:
@@ -960,7 +968,7 @@ modules:
   - name: "RoT" # Region of Terror
     components: [0]
     location:
-      github_user: mleduque
+      github_user: SpellholdStudio
       repository: Region_of_Terror
       branch: taming-drizzt
   - name: TDD
@@ -1163,7 +1171,7 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Tactics-Remix
-      commit: 377253c-update-it # 2023-02-23
+      tag: 0.2.1-alpha # 2023-04-06
   - name: gorgon
     components:
     location:
@@ -1184,6 +1192,10 @@ modules:
       github_ruser: A-Wizard-Did-It
       repository: Black-Hearts-EET
       tag: v1.04
+  - name: TheUndying
+    components: ask
+    location:
+      http: http://downloads.chosenofmystra.net/bg2/TheUndying2_53.rar
 
   #########
   # NPC
@@ -1229,7 +1241,7 @@ modules:
     location:
       github_user: Skitia
       repository: Helga-BG1
-      commit: 17fc230 # 2023-02-18
+      commit: a9c3c53 # 2023-03-22
       patch:
         relative: patches/helga_bg1-defaultportrait-nomusic.diff
   - name: Kale
@@ -1383,7 +1395,7 @@ modules:
     components:
       - 0 # Wilson Chronicles - expansion for our favorite bear companion: 1.9
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Wilson Chronicles v1.9.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Wilson Chronicles v2.01.zip
   - name: gavin
     # will prompt for romance timer
     components:
@@ -1420,9 +1432,9 @@ modules:
       asset: arath-npc-mod-for-baldurs-gate-2-soa-tob-v6.iemod
   - name: adrian
     components:
-      - 0 # Adrian is a Sorcerer
+      # - 0 # Adrian is a Sorcerer
       # - 1 #Change Adrian's class to Cleric/Mage
-      # - 2 # Change Adrian's class to Mage/Thief
+      - 2 # Change Adrian's class to Mage/Thief
       - 10 # Install optional soundset for Adrian - Phaelin's soundset
       # - 11 # Install optional soundset for Adrian - Tatterdemalion's soundset
       - 30 # Adrian Tolerates High Reputation - Always
@@ -1432,6 +1444,48 @@ modules:
       repository: Adrian_NPC
       release: v6.0
       asset: adrian-npc-for-bgii-v6.iemod
+      replace:
+        # faster mini-quest start
+        - file_globs: ["adrian/dialogue/rh#adrj.d"]
+          replace: 'RealSetGlobalTimer("rh#AdrianDamarovTimer","GLOBAL",2700)'
+          with: 'RealSetGlobalTimer("rh#AdrianDamarovTimer","GLOBAL",1200)'
+          comment: Reduce 2700s/45min _real-time_ talks timers to 1200s/20min real-time
+        # gavin
+        - file_globs: ["adrian/crossmod/gavin.d"]
+          replace: 'RealSetGlobalTimer("rh#AdrianGavinTalkTimer","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("rh#AdrianGavinTalkTimer","GLOBAL",900)'
+        # kivan
+        - file_globs: ["adrian/crossmod/kivan.d"]
+          replace: 'RealSetGlobalTimer("rh#AdrianKivanTalkTimer","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("rh#AdrianKivanTalkTimer","GLOBAL",900)'
+        # TOB banters
+        - file_globs: ["adrian/dialogue/brh#ad25.d"]
+          replace: '"GLOBAL",3600)'
+          with: '"GLOBAL",1200)'
+        # banters
+        - file_globs: ["adrian/dialogue/brh#adr.d"]
+          replace: '"GLOBAL",3600)'
+          with: '"GLOBAL",1200)'
+        # banters
+        - file_globs: ["adrian/dialogue/brh#adr.d"]
+          replace: '"GLOBAL",7200)'
+          with: '"GLOBAL",2400)'
+        # TOB talks
+        - file_globs: ["adrian/dialogue/rh#ad25j.d"]
+          replace: 'RealSetGlobalTimer("rh#AdrianTalksTOBTimer","GLOBAL",2700)'
+          with: 'RealSetGlobalTimer("rh#AdrianTalksTOBTimer","GLOBAL",1200)'
+        # talks
+        - file_globs: ["adrian/dialogue/rh#adrj.d"]
+          replace: 'RealSetGlobalTimer("rh#AdrianTalksTimer","GLOBAL",2700)'
+          with: 'RealSetGlobalTimer("rh#AdrianTalksTimer","GLOBAL",1200)'
+        # talks
+        - file_globs: ["adrian/dialogue/rh#adrj.d"]
+          replace: 'RealSetGlobalTimer("rh#AdrianSpawnTimer","GLOBAL",2700)'
+          with: 'RealSetGlobalTimer("rh#AdrianSpawnTimer","GLOBAL",1200)'
+        # quest
+        - file_globs: ["adrian/dialogue/rh#quest.d"]
+          replace: 'SetGlobalTimer("rh#DamarovReturnsTimer","GLOBAL",TEN_DAYS) RealSetGlobalTimer("rh#AdrianTalksTimer","GLOBAL",5)'
+          with: 'SetGlobalTimer("rh#DamarovReturnsTimer","GLOBAL",FIVE_DAYS) RealSetGlobalTimer("rh#AdrianTalksTimer","GLOBAL",5)'
   - name: valerie
     components: [0]
     location:
@@ -1567,8 +1621,8 @@ modules:
     location:
       github_user: SpellholdStudios
       repository: Neera_Expansion
-      release: v1.3.0
-      asset: neera-expansion-v1.3.0.iemod
+      release: v1.3.1
+      asset: neera-expansion-v1.3.1.iemod
   - name: neerabanters
     components:
       - 10 # Neera Banters: Dialogue Banters and Interjections
@@ -1848,6 +1902,13 @@ modules:
       - 1 # Faldorn NPC for BG2EE: Player-Initiated Dialogues (PIDs)
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/FaldornBG2 v1.1.zip
+  - name: rose
+  - name: SkitiaRomanceTweak
+  components: [0]
+  location:
+    github_user: Skitia
+    repository: SkitiaBG2RomanceTweaks
+    branch: master
 
   #########
   # Spells
@@ -2416,8 +2477,8 @@ modules:
     location:
       github_user:  D2-mods
       repository: The-Workshop-Kitpack
-      release: "3.0"
-      asset:  the-workshop-kitpack-3.0.iemod
+      release: "3.1"
+      asset:  the-workshop-kitpack-3.1.iemod
   - name: shadowadept
     description: shadowadept - components without warningq
     components:
@@ -2645,7 +2706,11 @@ modules:
       - 2050 # Prevent Wish Spells from Interrupting Caster
       - 2060 # Standardize Poison Immunity
       - 2070 # Free Action does not prevent Haste or Movement Rate Bonus
-      # apparently already in SR
+      #     This is a PSA: if you use Spell Revisions, then you should NOT install Klatus
+      #     Drop Equipment On Disintegration/Petrification/Freezing components.
+      #     Spell Revisions already includes that functionality; installing it from Klatus
+      #     in such a case will not help you and could cause problems.
+      #     http://www.shsforums.net/topic/57873-mod-klatu-tweaks-and-fixes/page-3#entry612667
       #- 2080 # Drop Equipment on Disintegration
       #- 2090 # Drop Equipment on Petrification
       #- 2100 # Drop Equipment on Imprisonment
@@ -3105,7 +3170,7 @@ modules:
     location:
       github_user: mleduque
       repository: SwordCoastStratagems
-      branch: run_34.3_2022-05-15
+      branch: run/34.3/2023-04-07
       patch:
         relative: patches/scs-item-nerf-config.diff
   - name: stratagems
@@ -3271,8 +3336,8 @@ modules:
     location:
       github_user: Argent77
       repository: A7-HiddenGameplayOptions
-      release: v4.0
-      asset: A7-HiddenGameplayOptions-v4.0.iemod
+      release: v4.1
+      asset: A7-HiddenGameplayOptions-v4.1.iemod
   - name: "butchery"
     components: #components installé avant SCS, deuxèmeliste pour après SCS
       - 41 # Boucherie de nains dans le donjon d'Irenicus [a installer apres Stratagems]: v5.0.0
@@ -3388,39 +3453,39 @@ modules:
         tp2: Setup-POISON_NO_BYPASS.tp2
   - name: tnt
     description: Tweaks and Tricks mod for Baldur's Gate 2
-    components: # avoid 34 (d5 random tweaks instead)
-      - 0 # Smarter familiars: v8.19
-      - 1 # More resilient familiars: v8.19
-      - 3 # Improved trap detection: increase trap sense range: v8.19
-      - 4 # Trap reminders -> disclose trap type: v8.19
-      - 20 # Compliments and insults -> Reintroduce: v8.19
-      - 24 # Hassle-free ammo: v8.19
-      - 27 # Throwing weapons damage type -> Both of the above options: v8.19
-      - 29 # Sensible Cloak of Mirroring: v8.19
-      - 32 # Sensible wand of frost -> AoE: v8.19
-      - 33 # Potion of Really Mirrored Eyes: v8.19
-      - 35 # Improved Shandalar's cloak: v8.19
-      - 36 # Algernon's cloak: usable once per day: v8.19
-      - 37 # Improved Equalizer: v8.19
-      - 39 # Working protection from poison: v8.19
-      - 41 # Spider form ignores web: v8.19
-      - 44 # Cheesy Slayer: reputation -> reduced loss: v8.19
-      - 46 # Sensible Otiluke's Resilient Sphere: v8.19
-      - 47 # Greater Command AoE: v8.19
-      - 48 # Working Non-Detection: v8.19
-      - 52 # Sensible Blade spins: v8.19
-      - 56 # More ankheg armors by Taerom: v8.19
-      - 65 # Improved strongholds: v8.19
-      - 66 # Save Melicamp: v8.19
-      - 68 # More map notes: v8.19
-      - 70 # Mod romance cheats | POWER USER component, consult readme: v8.19
-      - 74 # Add BG1 tomes stats bonuses to new BG2 characters -> Each stat except Wisdom gets +1, Wisdom gets +3: v8.19
-      - 76 # Starting bags -> GSPA + holding: v8.19
+    components: ask # avoid 34 (d5 random tweaks instead)
+      #- 0 # Smarter familiars: v8.19
+      #- 1 # More resilient familiars: v8.19
+      #- 3 # Improved trap detection: increase trap sense range: v8.19
+      #- 4 # Trap reminders -> disclose trap type: v8.19
+      #- 20 # Compliments and insults -> Reintroduce: v8.19
+      #- 24 # Hassle-free ammo: v8.19
+      #- 27 # Throwing weapons damage type -> Both of the above options: v8.19
+      #- 29 # Sensible Cloak of Mirroring: v8.19
+      #- 32 # Sensible wand of frost -> AoE: v8.19
+      #- 33 # Potion of Really Mirrored Eyes: v8.19
+      #- 35 # Improved Shandalar's cloak: v8.19
+      #- 36 # Algernon's cloak: usable once per day: v8.19
+      #- 37 # Improved Equalizer: v8.19
+      #- 39 # Working protection from poison: v8.19
+      #- 41 # Spider form ignores web: v8.19
+      #- 44 # Cheesy Slayer: reputation -> reduced loss: v8.19
+      #- 46 # Sensible Otiluke's Resilient Sphere: v8.19
+      #- 47 # Greater Command AoE: v8.19
+      #- 48 # Working Non-Detection: v8.19
+      #- 52 # Sensible Blade spins: v8.19
+      #- 56 # More ankheg armors by Taerom: v8.19
+      #- 65 # Improved strongholds: v8.19
+      #- 66 # Save Melicamp: v8.19
+      #- 68 # More map notes: v8.19
+      #- 70 # Mod romance cheats | POWER USER component, consult readme: v8.19
+      #- 74 # Add BG1 tomes stats bonuses to new BG2 characters -> Each stat except Wisdom gets +1, Wisdom gets +3: v8.19
+      #- 76 # Starting bags -> GSPA + holding: v8.19
     location:
       github_user: BGforgeNet
       repository: bg2-tweaks-and-tricks
-      release: v8.19
-      asset: tweaks-and-tricks-v8.19.iemod
+      release: v8.26
+      asset: tweaks-and-tricks-v8.26.iemod
   - name: zgtweaks
     components:
       #- 10 # one arcane scroll on the level of the highest arcane level memorized
@@ -3505,8 +3570,8 @@ modules:
     location:
     github_user: D2-mods
     repository: Better-IWD-Pregen
-    release: "4.5"
-    asset:  better-iwd-pregen-4.5.iemod
+    release: v7.1
+    asset: better-iwd-pregen-7.1.iemod
   - name: 35thac0
     components: [0]
     location:

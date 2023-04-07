@@ -17,7 +17,7 @@
  END
 --- SkitiaNPCs/Lib/Vienxay_BG2.tpa
 +++ SkitiaNPCs/Lib/Vienxay_BG2.tpa
-@@ -385,14 +385,9 @@ COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3Vie25J.d~	 USING ~%MOD_FOLDER%/
+@@ -406,14 +406,8 @@ COMPILE	EVALUATE_BUFFER ~%MOD_FOLDER%/Dialogue/X3Vie25J.d~	 USING ~%MOD_FOLDER%/
   // Contains Samir and X3Drow's dialogue. 
   
     // Portraits 
@@ -27,7 +27,7 @@
 -[1] Default by Crisshasart
 -[2] Alt by Aeries1986
 -[3] Old Version (NWN)~
- 
+-
 -OUTER_SPRINT ~portrait~ ~placeholder_value~
 +OUTER_SPRINT ~portrait~ 1
  OUTER_WHILE (!(IS_AN_INT ~portrait~) OR (~portrait~ > 0x3) OR (~portrait~ < 0x1)) BEGIN

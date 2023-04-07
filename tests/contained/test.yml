@@ -6,6 +6,7 @@ global:
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
   local_mods: mods
   local_patches: patches
+  local_files: files
 modules:
   - name: ub
     description: Unfinished Business
@@ -144,10 +145,10 @@ modules:
       - 30 #// Pack de sortileges profanes d'IWD: v1
       - 40 #// Pack de sortileges divins d'IWD: v1
     location:
-      github_user: Gibberlngs3
+      github_user: Gibberlings3
       repository: iwdification
       release: v5
-      asset:  iwdification-v5.iemod
+      asset: lin-iwdification-v5.tar.gz
   - name: spell_rev
     components:
       - 0   # Spell Revisions
@@ -174,7 +175,7 @@ modules:
       github_user: Gibberlings3
       repository: Tweaks-Anthology
       release: v16
-      asset: lin-cdtweaks-v16.tar.gz
+      asset: the-tweaks-anthology-v16.iemod
     add_conf:
       file_name: cdtweaks.txt
       content: |
@@ -243,9 +244,7 @@ modules:
       - 200 # Modification des Druides: 8.1
       - 203 # Installer le kit de Druide de Maitre des Vases: 8.1
       - 403 # Installer le kit de Rodeur d'Archer Sylvain: 8.1
-      - 406 # Installer le kit de Rodeur Sauvage: 8.1
       - 409 # Installer le kit de Rodeur de Coureur des Bois: 8.1
-      - 412 # Installer le kit de Rodeur de Vengeur: 8.1
       - 415 # Installer le kit de Rodeur de Coureur Sauvage: 8.1
     location:
       github_user: Gibberlings3
@@ -265,10 +264,6 @@ modules:
       github_user: subtledoctor
       repository: Faiths_and_Powers
       tag: 0.85sd19
-      layout:
-          layout_type: multi_dir
-          dirs:
-            - faiths_and_powers
   - name: 5E_spellcasting
     comment: It should be installed after Tome & Blood and Faiths & Powers; but before Might & Guile and Faiths & Powers Multiclass.
     components:
@@ -290,12 +285,6 @@ modules:
       repository: Will_to_Power
       tag: "2.3.3"
     ignore_warnings: true # no effects altered on ohbantim.spl
-  - name: FnP_Multiclass
-    components:
-      - 91 # Multiclass Druids
-      - 92 # Multiclass Shamans
-      - 95 # Multiclass Cleric kits (install AFTER all other kit mods
-    ignore_warnings: true # apparently intentional
   - name: cdtweaks
     description: Tweaks Anthology - only spell progression tables
     components:

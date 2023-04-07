@@ -6,30 +6,10 @@ global:
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
 modules:
   - name: Faiths_and_Powers
-    components:
+    components: ask
     #ignore_warnings: true # all except 31 emit no effect changed/added
     location:
-      github_user: mleduque
+      github_user: subtledoctor
       repository: Faiths_and_Powers
-      branch: 0.83.4-fr
-      layout:
-          layout_type: multi_dir
-          dirs:
-            - faiths_and_powers
-            - FnP_Multiclass
-  - name: FnP_Multiclass
-    components:
-      - 91 # Multiclass Druids
-      - 92 # Multiclass Shamans
-      - 95 # Multiclass Cleric kits (install AFTER all other kit mods
-    ignore_warnings: true # apparently intentional
-  - name: cdtweaks
-    description: Tweaks Anthology - only spell progression tables
-    components:
-      - 2090 # Changer la limite de points d'experience -> Retirer la limite
-    location:
-      github_user: Gibberlings3
-      repository: Tweaks-Anthology
-      release: v10
-      asset: lin-cdtweaks-v10.tar.gz
+      tag: 0.85sd19
 

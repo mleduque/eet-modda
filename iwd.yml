@@ -194,8 +194,15 @@ modules:
       release: v15
       asset: lin-cdtweaks-v15.tar.gz
   - name: aTweaks
+    components: ask
+    location:
+    # github_user: TotoR115
+    # commit: 00c1388
+    github_user: CamDawg # canonical version: FredrikLindgren/aTweaks
+    repository: aTweaks
+    commit: 2469eb1
   - name: S9HouseRules
-    components: ~
+    components: ask
     location:
       github_user: mleduque
       repository: S9HouseRules
@@ -208,12 +215,18 @@ modules:
       commit: 979ba99 # post-v2, adds multi-bard support
   - name: HouseTweaks
     description: The Artisan's Tweaks and Overhauls
-    components:
+    components: ask
     location:
       github_user: ArtemiusI
       repository: House-Rule-Tweaks
       tag: v2.01
-  -name: iwd_compat
+  - name: iwd_compat
+    components: ask
+    location:
+      github_user: D2-mods
+      repository: IWDEE-compatibility-fixer
+      release: v0.7
+      asset: iwdee-compatibility-fixer-0.7.iemod
   ## portraits
   - name: PortraitsFromIWD2
     components:
