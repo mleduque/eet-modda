@@ -160,8 +160,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: The_Boareskyr_Bridge_Scene
-      release: v2
-      asset: the-boareskyr-bridge-scene-v2.iemod
+      release: v3
+      asset: the-boareskyr-bridge-scene-v3.iemod
   - name: turnabout
     components:
       - 0 # Ascension: Turnabout
@@ -223,8 +223,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: EndlessBG1
-      release: v15
-      asset: endless-bg1-mod-15.iemod
+      release: v16
+      asset: EndlessBG1_v16.zip
   - name: transitions
     installation:
       after: endlessbg1
@@ -277,24 +277,41 @@ modules:
       patch:
         relative: patches/iwdification-ini.diff
   - name: IWD1_EET
-  - name: HOW_EET
     installation:
       after: EET
       before: A7-TotLM-BG2EE
     components:
     location:
       github_user: 11jo
-      repository: HoW_EET
+      repository: IWD1_EET
+      branch: master
+  - name: IWD2_EET
+    installation:
+      after: EET
+      before: A7-TotLM-BG2EE
+    components:
+    location:
+      github_user: 11jo
+      repository: IWD2_EET
+      branch: master
+  - name: Icewind_EET
+    installation:
+      after: EET
+      before: A7-TotLM-BG2EE
+    components:
+    location:
+      github_user: 11jo
+      repository: Icewind_EET
       branch: master
   - name: d5_iwd_eet_integration
     installation:
       after: HOW_EET
     comment: add Hjollder to Bridge District
-    components:
+    components: ask
     location:
       github_user: subtledoctor
       repository:  IWD_EET_Integration
-      tag: "0.7"
+      tag: "0.9"
   - name: A7-TotLM-BG2EE
     description: Trial of the Luremaster - Main component (warns)
     components:
@@ -361,8 +378,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: BG_Quests_And_Encounters
-      release: v25.6
-      asset: baldurs-gate-mini-quests-and-encounters-modification-v25.5.iemod
+      release: v25.7
+      asset: baldurs-gate-mini-quests-and-encounters-modification-v25.7.iemod
   - name: AC_QUEST
     description: Ascalon's Questpack
     components:
@@ -379,8 +396,8 @@ modules:
     location:
       github_user: Gitjas
       repository: Ascalons_Questpack
-      release: v4.3
-      asset: ascalons-questpack-4.3.iemod
+      release: v4.5
+      asset: ascalons-questpack-4.5.iemod
   #- name: BG_Travel
   #  description: New travel system between Baldur's Gate City areas
   #  comment: Original location http://athkatla.cob-bg.pl/download.php?id=1595 (BG_Travel_v2.1.rar)
@@ -528,8 +545,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: BG1_Romantic_Encounters
-      release: v9
-      asset: baldurs-gate-romantic-encounters-modification-bg1re-9.0.iemod
+      release: v10.1
+      asset:  baldurs-gate-romantic-encounters-modification-bg1re-10.1.iemod
   - name: wheels
     description: Wheels Of Prophecy
     components:
@@ -597,6 +614,7 @@ modules:
     components: [0, 1, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
     original_location: http://mods.pocketplane.net/questpack-v35-win.zip
     location:
+    # alternative: http://america.iegmc.net/ppg/questpack-v35-win.zip
       github_user: mleduque
       repository: simding0_questpack
       tag: v3.5
@@ -614,21 +632,23 @@ modules:
       patch:
         relative: saerileth-unobnoxiousify.diff
   - name: imoen_forever
-    components:
-      - 0 # Imoen 4 Ever in BGII: Imoen Returns after Talking to Gaelan in Chapter 2: v9
-      - 1 # Imoen 4 Ever in BGII: Give Imoen Dialogue Content in SoA: v9
-      - 2 # Imoen 4 Ever in BGII: Yoshimo Comes to Brynnlaw: v9
-      - 11 # Imoen 4 Ever in SoD: Imoen Returns to PC in First Coalition Camp (bd1000): v9
-      - 12 # Imoen 4 Ever in SoD: Imoen Gives Better Reason to Stay Behind in Palace: v9
-      - 13 # Imoen 4 Ever in SoD: Play Cutscene With Imoen and Duke Jannath: v9
-      - 14 # Imoen 4 Ever in SoD: Give Imoen Dialogue Content in Chapters 8-12: v9
-      - 20 # Imoen's chest moves with the campaign, too: v9
-      - 9 # Imoen 4 Ever in BGII: Compatibility with Alternatives and Saerileth: v9
+    installation:
+      after: { name: imoen_forever , component: 0 }
+    components: ask
+      #- 0 # Imoen 4 Ever in BGII: Imoen Returns after Talking to Gaelan in Chapter 2: v9
+      #- 1 # Imoen 4 Ever in BGII: Give Imoen Dialogue Content in SoA: v9
+      #- 2 # Imoen 4 Ever in BGII: Yoshimo Comes to Brynnlaw: v9
+      #- 11 # Imoen 4 Ever in SoD: Imoen Returns to PC in First Coalition Camp (bd1000): v9
+      #- 12 # Imoen 4 Ever in SoD: Imoen Gives Better Reason to Stay Behind in Palace: v9
+      #- 13 # Imoen 4 Ever in SoD: Play Cutscene With Imoen and Duke Jannath: v9
+      #- 14 # Imoen 4 Ever in SoD: Give Imoen Dialogue Content in Chapters 8-12: v9
+      #- 20 # Imoen's chest moves with the campaign, too: v9
+      ##- 9 # Imoen 4 Ever in BGII: Compatibility with Alternatives and Saerileth: v9
     location:
       github_user: Gibberlings3
       repository: Imoen4Ever
-      release: v9
-      asset: imoen-4-ever-v9.iemod
+      release: v11.1,
+      asset: imoen-4-ever-v11.1,iemod
   - name: alternatives
     installation:
       before: imoen4ever except imoen4ever compatibility (should be after alternative)
@@ -654,28 +674,63 @@ modules:
     location:
       github_user: Gitjas
       repository: Another_Fine_Hell
-      release: vAlpha_220923
-      asset: another-fine-hell-for-sod-alpha_220923.iemod
+      release: vAlpha_230415
+      asset: another-fine-hell-for-sod-alpha_230415.iemod
   - name: c#sodtweaks #[0, 1, 2, 5, 13]
     components:
+      #- 1  # Ending Independent on PC Replies
+      # - 2 # Ne manquez pas de dialogues entre NPC-PC -> For NPCs in Party Only
       - 3 # Ne manquez pas de dialogues entre NPC-PC -> Toujours activer tous les dialogues entre PNJ-PC: v8.1
+      # - 4 # Skip Korlasz's Dungeon
       - 5 # Plus de choix de dialogue et eviter les situations sans issue: v8.1
+      #- 6  # Use Imoen's SoD Portrait for BGII in EET & BGT
+      # - 7 # restore scripted abductino scene fight - This component is only compatible with SoD, as EET already restores this scene by default.
+      #- 8  # Adjust PC's Starting XP at Beginning of SoD, by subtledoctor -> Set Starting XP to 65,000
+      #- 9  # Adjust PC's Starting XP at Beginning of SoD, by subtledoctor -> Set Starting XP to 90,000
+      #- 10  # Adjust PC's Starting XP at Beginning of SoD, by subtledoctor -> Set Starting XP to 125,000
       - 11 # Ajuster l'experience de depart du PC au debut de SoD, par Subtledoctor -> Regler l'experience de depart a 161,000: v8.1
       - 20 # Fermer le portail depuis le Chateau Paldragon (Aun Argent survit toujours).: v8.1
       - 21 # Hephernaan prend la cle de la crypte du Chateau Paldragon.: v8.1
-      #- 1  # Ending Independent on PC Replies
-      #- 3  # Do Not Miss NPC-PC Dialogues -> Activate All NPC-PC Dialogues Always
-      #- 5  # More Dialogue Choices & Prevent Dead Ends:
-      #- 6  # Use Imoen's SoD Portrait for BGII in EET & BGT
-      #- 9  # Adjust PC's Starting XP at Beginning of SoD, by subtledoctor -> Set Starting XP to 90,000
-      ##   it's either one of the soD Tweakpack new/revised SoD endings OR Another fine Hell. - jastey
-      ##   https://www.gibberlings3.net/forums/topic/36469-eet-end-error/?do=findComment&comment=321536
-      #- 12 # SoD Ending: jastey's Tweaks -> Revised Full Version # overwrittern by afh if installed
+              ##   it's either one of the soD Tweakpack new/revised SoD endings OR Another fine Hell. - jastey
+              ##   https://www.gibberlings3.net/forums/topic/36469-eet-end-error/?do=findComment&comment=321536
+      #- 12, 13, 14, 15 # SoD Ending: jastey's Tweaks -> Revised Full Version # overwrittern by afh if installed
     location:
       github_user: Gibberlings3
       repository: Jasteys_SoD_Tweakpack
-      release: v9.2
-      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v9.2.iemod
+      release: v10
+      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v10.iemod
+  - name: themed_tweaks
+    components:
+      - 60  # SoD - Give Imoen a special wand for palace attack scene
+      - 70  # SoD - Allow PC to give aid to Imoen after attack in palace
+      - 80  # SoD - Stat-based observations and quest options
+      - 90  # SoD - Ditch Tour-Guide Corwin Schael
+      - 100 # SoD - Quest: Scouting the Coast Way Crossing
+      - 140 # SoD/BG2EE - Add a little snark to dialogues
+      - 180 # BG2EE - Give Imoen innnate Magic Missiles for attack scene
+    location:
+      github_user: lzenner
+      repository: themed_tweaks
+      release: v.0.4
+      asset:  themed-tweaks-v0.4.iemod
+  - name: sodrtd
+    description: Road To Discovery
+    installation:
+      general: after any mod that adds reply options or transactions to SoD, like NPC mods or story tweak mods.
+      after: [ themed_tweaks, c#sodtweaks]
+    components:
+      #- 0 # Composant principal : Systeme de Pistage: 0.4 (Beta)
+      #- 10 # Changements dans les dialogues du jeu pour plus de coherence.: 0.4 (Beta)
+      #- 20 # Les officiers sont plus attentifs: 0.4 (Beta)
+      #- 30 # Donnez au PC des options de reponse avisee: 0.4 (Beta)
+      ## bug, won't install ATM
+      ##-40 # PC Can Tell the Officers
+      #- 60 #Points d'information supplementaires: 0.4 (Beta)
+    location:
+      github_user: Gibberlings3
+      repository: Road_To_Discovery_for_SoD
+      release: v1.2
+      asset: road-to-discovery-for-sod-1.2.iemod
   - name: DjinniCompanion
     description: Afaaq, the Djinni Companion v2.9
     components:
@@ -837,14 +892,18 @@ modules:
       repository: BS_Baldurans_Seatower
       tag: 1dcafad6f0bc # before vEAOB.8
   - name: "c#brage"
+    installation:
+      general: for crossmod content
+      after: [AC_QUEST, bg1re, bg1ub, bgqe, bst, endlessbg1, finch, ntotsc, thalantyr, transitions, ajantisbg1, c#sodboabri, imoen4ever]
     components:
-      - 0 # Brage's Redemption - Brage Joinable NPC for Baldur's Gate: 7.2
-      - 1 # Assign the mod's portrait and soundset to the original Brage in game.: 7.2
+      - 0 # Brage's Redemption - Brage Joinable NPC for Baldur's Gate Saga: 8.0
+      - 1 # Assign the mod's portrait and soundset to the original Brage in game: 8.0
+      - 10 # Brage's Redemption: Crossmod Content
     location:
       github_user: Gitjas
       repository: Brages_Redemption
-      release: v7.2
-      asset: brages-redemption-brage-npc-for-the-whole-baldurs-gate-epic-7.2.iemod
+      release: v8.0
+      asset: brages-redemption-brage-npc-for-the-whole-baldurs-gate-epic-8.0.iemod
       patch:
         relative: patches/brage_less_wait.diff
   - name: "c#solaufein"
@@ -854,9 +913,9 @@ modules:
     location:
       github_user: Gitjas
       repository: Solaufeins_Rescue_NPC
-      release: v4-0
-      asset: solaufeins-rescue-jasteys-solaufein-npc-mod-for-bgii-4.0.iemod
-  - name: "TangledIsle"
+      release: v4.1
+      asset:  solaufeins-rescue-jasteys-solaufein-npc-mod-for-bgii-4.1.iemod
+  - name: TangledIsle
     description: "Athkatlan Grounds: The Tangled Oak Isle"
     components:
       - 0 # L'ile du Chene Enchevetre : une nouvelle zone d'Athkatla -> Oui , mais ne pas patcher les sauvegardes existantes: v2.26
@@ -906,7 +965,7 @@ modules:
       commit: d062749 # 2023-04-06
       #release: v3.2.8
       #asset: fishing-for-trouble-v3.2.8.iemod
-  - name: "tod"
+  - name: tod
     description: Tower Of Deception
     components:
       - 0 # Mod Tower of Deception (necessite Throne of Bhaal): v4.0.5
@@ -943,20 +1002,6 @@ modules:
       repository: Edwin_Romance
       release: v3.1
       asset: edwinromance-v3.1.zip
-  - name: themed_tweaks
-    components:
-      - 60  # SoD - Give Imoen a special wand for palace attack scene
-      - 70  # SoD - Allow PC to give aid to Imoen after attack in palace
-      - 80  # SoD - Stat-based observations and quest options
-      - 90  # SoD - Ditch Tour-Guide Corwin Schael
-      - 100 # SoD - Quest: Scouting the Coast Way Crossing
-      - 140 # SoD/BG2EE - Add a little snark to dialogues
-      - 180 # BG2EE - Give Imoen innnate Magic Missiles for attack scene
-    location:
-      github_user: lzenner
-      repository: themed_tweaks
-      release: v.0.4
-      asset:  themed-tweaks-v0.4.iemod
   - name: framed
     components:
       - 0 # FFramed ou Piege: Propose plusieurs versions du chapitre 6 -> LUtilisez des voix personnalisees pour les films des nouveaux chapitres
@@ -1293,22 +1338,34 @@ modules:
       path: /home/mick/Games/modda-cache/static/weaselmods/Yvette Romance v5.00.zip
       patch:
         relative: patches/yvette-noprompt.diff
-  - name: c#greythedog
-    description: Grey the dog
-    components: [0]
-    location:
-      github_user: Gibberlings3
-      repository: Grey_The_Dog
-      release: v8
-      asset: grey-the-dog-npc-8.iemod
   - name: ACBre
     description: Ascalon's Breagar
-    components: [0]
+    installation:
+      general: for crossmod
+      after:
+        - DSotSC
+        - Amber
+        - aurenaseph
+        - toBR # what?
+        - bgqe
+        - tod # tower of deception
+        - ac_quest
+        - alternatives
+        - imoen4ever
+        - transitions
+        - bst
+        - c#anotherfinehell
+        - endlessbg1
+    components:
+      - 0 # Breagar: Contents
+      - 2 # Breagar: Crossmods and PID
+      - 12 # Change Breagar's dialog timer? (Default is 30 minutes between dialogues.) - 15 minutes real time between talks
+      # - 20 # Install Alternative Portrait from v4.X? (Default is Original Art by Nix)
     location:
       github_user: Gitjas
       repository: Ascalons_Breagar
-      release: v12.0.0
-      asset: acbre-12.0.0.iemod
+      release: v12.1.0
+      asset: ascalons-breagar-12.1.0.iemod
       patch:
         relative: breagar-wait-here.diff
   - name: c#brandock
@@ -1319,23 +1376,35 @@ modules:
         (atweaks compatibility component) after atweaks
       before: (main component)Grey the Dog
     components:
-      - 0  # Brandock the Mage, NPC for BG:EE, BGII:EE, EET, and BGT
-      - 23 # Default Portrait: Insecure, by Acifer (is included in the main component)
-      - 30 # Use Dialogue Style for SoD Banter
+      #- 0  # Brandock the Mage, NPC for BG:EE, BGII:EE, EET, and BGT
+      #- 23 # Default Portrait: Insecure, by Acifer (is included in the main component)
+      #- 30 # Use Dialogue Style for SoD Banter
       #- 50 # Make Cutscene in Thalantyr's Abode Short
     location:
       github_user: Gitjas
       repository: Brandock_the_Mage
-      release: vBeta-16
-      asset: brandock-the-mage-beta_16.iemod
+      release: v1
+      asset: brandock-the-mage-v1.iemod
+  - name: c#husam
+    components: ask
+    location:
+      github_user: Gitjas
+      repository: Husam_NPC
+      release: vBeta_230411
+      asset: husam-npc-for-bgt-bgsod-bgiiee-and-eet-beta_230411.iemod
   - name: c#greythedog
     description: Grey the dog
-    components: [0]
+    installation:
+      after: [ACBre, ajantisbg1, ajantisbg2, bg1npc, bg2fixpack, bst, c#brage, c#brandock, c#husam, c#sodboabri, EET, JA#BGT_AdvPack, imoen_forever ]
+    components:
+      - 0 # Grey The Dog NPC
+      - 10 # Grey the Dog: Crossmod Content
+      - 22 # portrait or 20/21
     location:
       github_user: Gibberlings3
       repository: Grey_The_Dog
-      release: v8
-      asset: grey-the-dog-npc-8.iemod
+      release: v9
+      asset: grey-the-dog-npc-9.iemod
   - name: btl
     description: Beyond the Law
     detailed_description: 2 NPCs, Kova (CG half-elf mage/thief) & Kiyone (LG half-elf archer) + quest
@@ -1751,12 +1820,14 @@ modules:
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/lin-YoshimosRemorse-v3.1.1.tar.gz
   - name: ajantisbg1
-    components: [0]
+    components:
+      - 0 # Installs Ajantis BG1 Expansion Modification
+      - 30 # Ajantis SoD NPC: Crossmod Content
     location:
       github_user: Gibberlings3
       repository: Ajantis_BG1_Expansion
-      release: v18.3
-      asset: ajantis-bg1-expansion-modification-18.3.iemod
+      release: v19.1
+      asset: ajantis-bg1-expansion-modification-19.1.iemod
   - name: SkieCost # install late because adds crossmod banters with Yvette & Foundling
     description: "Skie: The Cost of One Girl’s Soul"
     components:
@@ -1809,21 +1880,6 @@ modules:
       repository: IEP_Extended_Banter
       release: v5.9
       asset: iep-extended-banters-v5.9.iemod
-  - name: sodrtd
-    description: Road To Discovery
-    components:
-      - 0 # Composant principal : Systeme de Pistage: 0.4 (Beta)
-      - 10 # Changements dans les dialogues du jeu pour plus de coherence.: 0.4 (Beta)
-      - 20 # Les officiers sont plus attentifs: 0.4 (Beta)
-      - 30 # Donnez au PC des options de reponse avisee: 0.4 (Beta)
-      # bug, )won't install ATM
-      #-40 # PC Can Tell the Officers
-      - 60 #Points d'information supplementaires: 0.4 (Beta)
-    location:
-      github_user: Gibberlings3
-      repository: Road_To_Discovery_for_SoD
-      release: v1.0
-      asset: road-to-discovery-for-sod-1.0.iemod
   - name: BG1NPCSoA
     description: BG1 NPCs in BG2
     installation:
@@ -1909,6 +1965,12 @@ modules:
     github_user: Skitia
     repository: SkitiaBG2RomanceTweaks
     branch: master
+  - name: Dusk
+    components: ask
+    location:
+    github_user: RamosPabloA
+    repository: NPC_Dusk_MOD
+    tag: v0.9.1
 
   #########
   # Spells
@@ -2666,7 +2728,7 @@ modules:
     location:
       github_user: mleduque
       repository: Might_and_Guile
-      branch: 5.2a6-fr
+      branch: 5.3-fr
       patch:
         relative: patches/mng-multibard-shools.diff
   - name: might_and_guile
@@ -3302,7 +3364,7 @@ modules:
     location:
       github_user: mleduque
       repository: Scales_of_Balance
-      tag: "6.5a7-fr"
+      tag: "6.5a11-fr"
       patch:
         relative: patches/scales-config.diff
   - name: forgotten-armament
@@ -3426,8 +3488,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Skills-and-Abilities
-      release:  1.2.3-beta
-      asset: lin-skills-and-abilities-v1.2.3-beta.zip
+      release:  1.3-beta
+      asset: lin-skills-and-abilities-v1.3-beta.zip
       patch:
         relative: patches/skills-and-abilities-prof-points.diff
   - name: npc_ee

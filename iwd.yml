@@ -83,7 +83,7 @@ modules:
     description: elven paladin, quest, talks, romance
     components:
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Lanna v1.3.0.zip
+      path: /home/mick/Games/modda-cache/static-iwd/Lanna v1.6.zip
   - name: OakMaw
     description: dark fey hunter
     components:
