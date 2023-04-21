@@ -160,8 +160,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: The_Boareskyr_Bridge_Scene
-      release: v3
-      asset: the-boareskyr-bridge-scene-v3.iemod
+      release: v4
+      asset: the-boareskyr-bridge-scene-v4.iemod
   - name: turnabout
     components:
       - 0 # Ascension: Turnabout
@@ -311,7 +311,7 @@ modules:
     location:
       github_user: subtledoctor
       repository:  IWD_EET_Integration
-      tag: "0.9"
+      tag: "0.9.1"
   - name: A7-TotLM-BG2EE
     description: Trial of the Luremaster - Main component (warns)
     components:
@@ -483,6 +483,11 @@ modules:
     components:
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/Dvaradime v1.01.zip
+  - name: InLoveUndeath
+    description: BG2 npc - Xzelë Melaenitt, the paladin of Evening Glory (beauty in undeath)
+    components:
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/InLoveUndeath v1.0.zip
   - name: SirinesCall
     description: The Lure of the Sirine's Call
     components:
@@ -2251,9 +2256,9 @@ modules:
       path: /home/mick/Games/modda-cache/static/Mystigan1.6.zip
   - name: OfHeirloomsAndClasses
     components:
-      - 0 # Of Heirlooms and Classes - new artifacts forgeable by Cromwell: v1.11
+      - 0 # Of Heirlooms and Classes - new artifacts forgeable by Cromwell: v2.1
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/OfHeirloomsAndClasses v2.0.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/OfHeirloomsAndClasses v2.1.zip
   - name: iiItemMod
     components:
       - 1 # Items [version 5]: v5.2
@@ -3364,7 +3369,7 @@ modules:
     location:
       github_user: mleduque
       repository: Scales_of_Balance
-      tag: "6.5a11-fr"
+      tag: "6.5a12-fr"
       patch:
         relative: patches/scales-config.diff
   - name: forgotten-armament
@@ -3677,6 +3682,12 @@ modules:
     location:
       path: /home/mick/Games/modda-cache/static/SentrizealAvatarPack.zip
 
+  - name: InfinitySounds
+    installation:
+      general: |
+        If possible, try to install this mod dead last before biffing
+        In any case, avoid installing Infinity Sounds before mods which overwrite, add, or modify: spells, items, and/or creatures
+        Component Restored & Tweaked Creature Soundsets [...] has to be installed after any other mods which patch creature weapons.
   - name: generalized_biffing
     components:
       - 1
