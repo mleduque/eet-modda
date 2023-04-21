@@ -895,7 +895,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: BS_Baldurans_Seatower
-      tag: 1dcafad6f0bc # before vEAOB.8
+      release: vEAOB.8
+      asset: bs-baldurans-seatower-veaob.8.iemod
   - name: "c#brage"
     installation:
       general: for crossmod content
