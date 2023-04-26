@@ -160,7 +160,7 @@ modules:
     location:
       github_user: Gibberlings3
       repository: The_Boareskyr_Bridge_Scene
-      release: v4
+      release: v4.0
       asset: the-boareskyr-bridge-scene-v4.iemod
   - name: turnabout
     components:
@@ -168,8 +168,8 @@ modules:
     location:
       github_user: Pocket-Plane-Group
       repository: Turnabout
-      release: "1.7"
-      asset: turnabout-v1.7.iemod
+      release: "1.8"
+      asset: turnabout-v1.8.iemod
   - name: A7-TestYourMettle
     components:
       - 0   # Test Your Mettle!
@@ -314,18 +314,18 @@ modules:
       tag: "0.9.1"
   - name: A7-TotLM-BG2EE
     description: Trial of the Luremaster - Main component (warns)
-    components:
+    components: ask
       - 0  # Trials of the Luremaster for Baldur's Gate
     ignore_warnings: true
     location:
       github_user: Argent77
       repository: A7-TotLM-BG2EE
-      release: v3.0
-      asset: A7-TotLM-BG2EE-v3.0.iemod
+      release: v3.1
+      asset: A7-TotLM-BG2EE-v3.1.iemod
   - name: A7-TotLM-BG2EE
     description: Trial of the Luremaster - XP reduction
-    components:
-      - 30 # Reduire les points d'experience des monstres et des quetes. -> Reduction de 25 pour cent
+    components: ask
+      #- 30 # Reduire les points d'experience des monstres et des quetes. -> Reduction de 25 pour cent
   - name: DSotSC
     description: Dark Side of the Sword Coast
     components:
@@ -622,7 +622,7 @@ modules:
     # alternative: http://america.iegmc.net/ppg/questpack-v35-win.zip
       github_user: mleduque
       repository: simding0_questpack
-      tag: v3.5
+      tag: v3.5-lean
       layout:
         layout_type: multi_dir
         dirs:
@@ -652,8 +652,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Imoen4Ever
-      release: v11.1,
-      asset: imoen-4-ever-v11.1,iemod
+      release: v11.1
+      asset: imoen-4-ever-v11.1.iemod
   - name: alternatives
     installation:
       before: imoen4ever except imoen4ever compatibility (should be after alternative)
@@ -889,6 +889,13 @@ modules:
       repository: Sirene-NPC-for-BG2-EE
       tag: v2.02
     # prompt for portrait
+  - name: quieter_sirene
+    component:
+      - 0
+    location:
+      github_user: mleduque
+      repository: quieter_sirene
+      tag: v0.9
   - name: bst
     components:
       - 0 # The BS Company presents Balduran's Seatower: vEAOB.6
@@ -1075,9 +1082,10 @@ modules:
       - 30 # Component 4. The Missing Troll Case (by Alisia & Austin): 4.2.3
       - 40 # Component 5. Unlocked original dialogs of all NPC (by Tipun & Austin): 4.2.3
     location:
-      github_user: mleduque
+      github_user: Austin-BG
       repository: HTaM
-      tag: v.4.3-nopdf
+      release: v.4.3
+      asset: heroes-thieves-and-moneylenders-4.3.iemod
   - name: "snakes"
     description: The slithering Menace
     components: [0]
@@ -1222,7 +1230,7 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Tactics-Remix
-      tag: 0.2.1-alpha # 2023-04-06
+      commit: b0b9579 # 2023-04-21
   - name: gorgon
     components:
     location:
@@ -1251,6 +1259,15 @@ modules:
   #########
   # NPC
   #########
+  - name: npc_tweak
+    comments: also adds an heirloom to anomen
+    components:
+    - 0 # Anomen: v6
+    location:
+      github_user: Gibberlings3
+      repository: NPCTweak
+      release: v7
+      asset: lin-npc_tweak-v7.tar.gz
   - name: Branwen
     components: [0]
     location:
@@ -1389,8 +1406,8 @@ modules:
     location:
       github_user: Gitjas
       repository: Brandock_the_Mage
-      release: v1
-      asset: brandock-the-mage-v1.iemod
+      release: v1.1
+      asset: brandock-the-mage-v1.1.iemod
   - name: c#husam
     components: ask
     location:
@@ -1470,7 +1487,7 @@ modules:
     components:
       - 0 # Wilson Chronicles - expansion for our favorite bear companion: 1.9
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Wilson Chronicles v2.01.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Wilson Chronicles v2.1.zip
   - name: gavin
     # will prompt for romance timer
     components:
@@ -1976,7 +1993,7 @@ modules:
     location:
     github_user: RamosPabloA
     repository: NPC_Dusk_MOD
-    tag: v0.9.1
+    tag: v0.9.2
 
   #########
   # Spells
@@ -2209,7 +2226,7 @@ modules:
     location:
       github_user: ArtemiusI
       repository: Bardic-Wonders
-      tag: v2.4
+      tag: v2.5
   - name: A7#ImprovedArcher
     components:
       - 0   # Profil d'Archer ameliore
@@ -2413,7 +2430,7 @@ modules:
     location:
       github_user: subtledoctor
       repository: d5_Random_Tweaks
-      tag: "1.6.0"
+      tag: "1.6"
   - name: d5_random_tweaks
     description: SubtleDoctor's Random Tweaks - components with warnings
     components:
@@ -2433,7 +2450,7 @@ modules:
       github_user: Gibberlings3
       repository: Tweaks-Anthology
       release: v16
-      asset: lin-cdtweaks-v16.tar.gz
+      asset: lin-cdtweaks-v16.zip
     add_conf:
       file_name: cdtweaks.txt
       content: |
@@ -2491,7 +2508,7 @@ modules:
     location:
       github_user: ArtemiusI
       repository: The-Artisan-s-Kitpack
-      tag: v3.4a
+      tag: v3.6a
       patch:
         relative: patches/ArtisansKitPack-fix_2da.diff
   - name: A7-ChaosSorcerer
@@ -3182,7 +3199,7 @@ modules:
       #- 1417 # Give Nalia a Mage Kit -> transmuter
       - 2800 # Give Sarevok a Proper Deathbringer Kit
     location:
-      path: /home/mick/Games/modda-cache/static/lin-npckit-v5.tar.gz
+      http: http://america.iegmc.net/g3/lin-npckit-v5.tar.gz
   - name: cowledmenace
     components:
       - 1000 # Main Component - The Cowled Menace
@@ -3660,7 +3677,6 @@ modules:
       repository: SubtleD_hotfixes
       tag: v20
   - name: fix_cre_script_names
-  - name: fix_temple_restoration
     description: Some mod out there is altering various creatures' script names to "cre_strref." This hotfix changes the script name of all such creatures from "cre_strref" to their filename.
     components:
     location:

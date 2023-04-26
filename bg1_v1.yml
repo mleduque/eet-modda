@@ -90,6 +90,14 @@ modules:
       tag: v3.0a
       patch:
         relative: patches/sirene-bg1-wait-here.diff
+  - name: Drake
+    components: ask
+    location:
+      github_user: ArtemiusI
+      repository: Drake
+      tag: v1.7a
+      patch:
+        relative: patches/something-will-probably-need-patching.diff
 #  - name: BGEE_AI_Denoised_Areas
 #    components:
 #      - 0

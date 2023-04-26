@@ -1,0 +1,926 @@
+version: '1'
+global:
+  lang_dir: en_US
+  lang_preferences:
+  - english
+  - american english
+  local_patches: patches
+modules:
+- name: ascension
+  components:
+  - 0 # Rewritten Final Chapter of Throne of Bhaal: 2.0.23
+  - 10 # Balthazar can be redeemed: 2.0.23
+  - 20 # Improved Sarevok-Player Interactions: 2.0.23
+  - 30 # Improved Imoen-Player Interactions in Throne of Bhaal: 2.0.23
+  - 40 # Restored Bhaalspawn Powers: 2.0.23
+  - 50 # Improved Slayer Transformation: 2.0.23
+  - 61 # Expanded Epilogues for Bioware NPCs -> Alternate epilogues by Shawne: 2.0.23
+  - 1000 # Tougher Abazigal: 2.0.23
+  - 1100 # Tougher Balthazar: 2.0.23
+  - 1200 # Tougher Demogorgon: 2.0.23
+  - 1300 # Tougher Gromnir: 2.0.23
+  - 1400 # Tougher Illasera: 2.0.23
+  - 1500 # Tougher Yaga-Shura: 2.0.23
+  - 2000 # Full-body portrait for Bodhi: 2.0.23
+  - 2200 # Extended Epilogues for additional Beamdog NPCs, by shawne: 2.0.23
+  - 2300 # Sharper portraits of Abazigal and Gromnir for the Enhanced Edition, by DavidW: 2.0.23
+  - 2400 # Slightly improved cutscenes, by DavidW: 2.0.23
+  location:
+    github_user:  InfinityMods
+    repository: Ascension
+    release: "2.0.23"
+    asset: ascension-2.0.23.iemod
+  ignore_warnings: true
+- name: iwdification
+  components:
+  - 30 # IWD Arcane Spell Pack: v5
+  - 40 # IWD Divine Spell Pack: v5
+  location:
+    github_user: Gibberlings3
+    repository: iwdification
+    release: v5
+    asset: lin-iwdification-v5.tar.gz
+- name: a7-totlm-bg2ee
+  components:
+  - 0 # Trials of the Luremaster for Baldur''s Gate: 3.0
+  location:
+      github_user: Argent77
+      repository: A7-TotLM-BG2EE
+      release: v3.0
+      asset: A7-TotLM-BG2EE-v3.0.iemod
+  ignore_warnings: true
+- name: itemupgrade
+  components:
+  - 10 # Shadows Of Amn Item Upgrades -> Revised Version (new upgrades presented in the same style as existing upgrades): v45
+  - 11 # Throne Of Bhaal Item Upgrades -> Revised Version (new upgrades presented in the same style as existing upgrades): v45
+  location:
+    github_user: Pocket-Plane-Group
+    repository: Item_Upgrade
+    release: v50
+    asset: lin-itemupgrade-v50.tar.gz
+- name: thalan
+  components:
+  - 0 # Thalantyr - Item Upgrade: v4.2.5
+  location:
+    github_user: CrevsDaak
+    repository: thalan
+    tag: v4.2.5
+- name: thecalling
+  components:
+  - 20 # Peaceful Werewolf Isle Resolution: v3
+  - 40 # Exotic Item Pack: v3
+  location:
+    github_user: Gibberlings3
+    repository: The_Calling
+    release: v3
+    asset: lin-thecalling-v3.tar.gz
+- name: arestorationp
+  components:
+  - 0 # Restored Locations: v10.0
+  - 1 # Restored Characters and Dialogs: v10.0
+  - 2 # Restored Sounds: v10.0
+  - 3 # Restored Items: v10.0
+  - 4 # Restored Wish Options: v10.0
+  - 5 # Restored XP for Minor Things: v10.0
+  - 6 # Lich Deril: v10.0
+  - 7 # Restored Random Encounters: v10.0
+  - 8 # Minor Restorations: v10.0
+  - 11 # Restored Final Slayer Dream: v10.0
+  - 13 # Restored Waukeen''s Promenade Cutscene: v10.0
+  location:
+    github_user: SpellholdStudios
+    repository: Almaterias_Restoration_Project
+    release: v10.0
+    asset: almaterias-restoration-project-v10.0.iemod
+- name: bgqe
+  components:
+  - 0 # Slime Quest: v25.6
+  - 1 # Beregost Family Quest: v25.6
+  - 2 # Babysitting Quest, including the Carnival Encounter...: v25.6
+  - 3 # Nashkel Monster Quest: v25.6
+  - 4 # Fallen Paladin Quest: v25.6
+  - 5 # Undying Love Quest: v25.6
+  - 6 # Lovesick Half-Orc: v25.6
+  - 7 # Unexpected Help Quest: v25.6
+  - 9 # Drunk near Beregost Temple: v25.6
+  - 12 # Legal Sea Charts Sources: v25.6
+  - 13 # Additions to the Lady''s Hall and the Bitch Queen''s Temple: v25.6
+  - 14 # A Worried Farmer: v25.6
+  - 15 # Bodies for a Good Cause: v25.6
+  - 16 # Finish Cordyr''s Quest without killing Sil: v25.6
+  location:
+    github_user: Gibberlings3
+    repository: BG_Quests_And_Encounters
+    release: v25.7
+    asset: baldurs-gate-mini-quests-and-encounters-modification-v25.7.iemod
+- name: ub
+  components:
+  - 0 # The Kidnapping of Boo by Cliffette: v28
+  - 1 # The Suna Seni/Valygar Relationship: v28
+  - 2 # Kalah and What He Was Promised: v28
+  - 3 # "Cat and Mouse" (Bodhi hunts you in Spellhold) by Ghreyfain: v28
+  - 4 # Gorje Hilldark and the Extended Illithium Quest: v28
+  - 5 # The Pai''Na/Spider''s Bane Quest: v28
+  - 6 # Restored Crooked Crane Inn: v28
+  - 7 # Restored Encounters: v28
+  - 8 # Artemis Entreri in Bodhi''s Lair: v28
+  - 9 # Corrected "Xzar''s Creations": v28
+  - 10 # Restored Hell Minions, by SimDing0: v28
+  - 12 # Item Restorations: v28
+  - 15 # NPC Portrait Restorations: v28
+  - 17 # Corrected Character Names and Biographies: v28
+  - 18 # Restored Minor Dialogs: v28
+  - 20 # Extended ToB Item Descriptions: v28
+  - 21 # Throne of Bhaal Minor Restorations: v28
+  - 25 # The Murder of Acton Balthis, by Kulyok: v28
+  location:
+    github_user: Pocket-Plane-Group
+    repository: UnfinishedBusiness
+    release: v28
+    asset: lin-ub-v28.tar.gz
+- name: alternatives
+  components:
+  - 0 # Alternatives: v15
+  location:
+    github_user: Gibberlings3
+    repository: Alternatives
+    release: v15
+    asset: Alternatives_v15.zip
+- name: c#endlessbg1
+  components:
+  - 0 # Endless BG1: Main Component (Required): 15
+  - 1 # More Flavor to Hero of Baldur''s Gate (Includes PC''s Residence Inside Palace): 15
+  - 2 # Short Public Hero Tribute: 15
+  - 5 # Imoen and Duke Jannath (Imoen Gets Residence Inside Palace): 15
+  - 7 # Flaming Fist After Final Fight: 15
+  - 11 # Ophyllis the Treasurer is Inside Palace Dungeon: 15
+  location:
+    github_user: Gibberlings3
+    repository: EndlessBG1
+    release: v16
+    asset: EndlessBG1_v16.zip
+- name: transitions
+  components:
+  - 0 # Main component: Allow continued play after Sarevok and/or Irenicus is defeated: v2.4
+  - 10 # Use BGI ending movie as a dream and give new bhaal-spawn power at first rest: v2.4
+  - 20 # Give Sarevok his armor, helm, and sword -> Equipped: v2.4
+  - 30 # Clean-up Quests -> Those supporters that are still alive when Sarevok dies immediately flee the area (to give more clean-up quests): v2.4
+  - 200 # Close quests and rumors that can''t be finished after Sarevok is defeated: v2.4
+  - 40 # Clean up the town folk chatter with regard to Sarevok: v2.4
+  - 50 # Clean up the wounded from the thieves'' maze: v2.4
+  - 60 # Elminster makes an appearance outside of the Ducal Palace: v2.4
+  - 70 # Duke Eltan''s reward option: House near Ducal Palace: v2.4
+  - 71 # Duke Eltan''s reward option: Cabin in High Hedge: v2.4
+  - 72 # Duke Eltan''s reward option: Gray house in NW Beregost: v2.4
+  - 73 # Duke Eltan''s reward option: House across from Flaming Fist compound: v2.4
+  - 80 # Add Waves of Refugees to Baldur''s Gate: v2.4
+  - 140 # Use Irenicus in hell movie to restore Bhaal-spawn powers after he is defeated: v2.4
+  location:
+    github_user: Gibberlings3
+    repository: transitions
+    release: v2.4
+    asset: transitions-v2.4.iemod
+- name: c#sodtweaks
+  components:
+  - 2 # Do Not Miss NPC-PC Dialogues -> For NPCs in Party Only: v9.2
+  - 5 # More Dialogue Choices & Prevent Dead Ends: v9.2
+  - 20 # Make Portal Close from Dragonspear Castle (Aun Argent survives always): v9.2
+  - 21 # Hephernaan takes Dragonspear Vault Key: v9.2
+  location:
+    github_user: Gibberlings3
+    repository: Jasteys_SoD_Tweakpack
+    release: v10
+    asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v10.iemod
+- name: c#sodboabri
+  components:
+  - 0 # Scene at Boareskyr Bridge will be Acknowledged: Add NPC Reactions: v2
+  - 1 # Add Description Text to Original Scene at Bridge: v2
+  - 2 # Bridge Scene has Different Choices: v2
+  - 3 # Add Stat Changes to Choices at Bridge: v2
+  location:
+    github_user: Gibberlings3
+    repository: The_Boareskyr_Bridge_Scene
+    release: v4.0
+    asset: the-boareskyr-bridge-scene-v4.iemod
+- name: imoen_forever
+  components:
+  - 10 # Imoen 4 Ever in SoD: Imoen Remains in Group in Korlasz'' Dungeon: v10
+  - 11 # Imoen 4 Ever in SoD: Imoen Returns to PC in First Coalition Camp (bd1000): v10
+  - 12 # Imoen 4 Ever in SoD: Imoen Gives Better Reason to Stay Behind in Palace: v10
+  - 13 # Imoen 4 Ever in SoD: Play Cutscene With Imoen and Duke Jannath: v10
+  - 14 # Imoen 4 Ever in SoD: Give Imoen Dialogue Content in Chapters 8-12: v10
+  - 20 # Imoen''s chest moves with the campaign, too: v10
+  location:
+    github_user: Gibberlings3
+    repository: Imoen4Ever
+    release: v11.1
+    asset: imoen-4-ever-v11.1.iemod
+- name: bg1npc
+  components:
+  - 0 # The BG1 NPC Project: Required Modifications: v30
+  - 10 # The BG1 NPC Project: Banters, Quests, and Interjections: v30
+  - 110 # BGEE Banter Timing Tweak -> Banter Timing: Normal (about 27 minutes between banter dialogs): v30
+  - 120 # The BG1 NPC Project: Bardic Reputation Adjustment: v30
+  - 130 # The BG1 NPC Project: Sarevok''s Diary Adjustments -> SixofSpades Extended Sarevok''s Diary: v30
+  - 160 # The BG1 NPC Project: Add Non-Joinable NPC portraits to quests and dialogues: v30
+  - 200 # The BG1 NPC Project: Player-Initiated Dialogues: v30
+  location:
+    github_user: Gibberlings3
+    repository: BG1NPC
+    release: v30
+    asset: the-bg1npc-project-v30.iemod
+- name: bg1npcmusic
+  components:
+  - 1 # The BG1 NPC Project Music Pack -> Install Regular Audio Only: v6
+  location:
+    github_user: Gibberlings3
+    repository: bg1npcmusic
+    release: v6-rc1
+    asset: lin-bg1npcmusic-v6.tar.gz
+- name: banterpack
+  components:
+  - 0 # Pocket Plane Banter Pack for BG2: Shadows of Amn: v18
+  - 2 # Pocket Plane Banter Pack for BG2: Throne of Bhaal: v18
+  location:
+    github_user:  Pocket-Plane-Group
+    repository: Banter_Pack
+    release: v18
+    asset: banter-packs-v18.iemod
+- name: themed_tweaks
+  components:
+  - 70 # SoD - Allow PC to give aid to Imoen after attack in palace: v0.4
+  - 80 # SoD - Stat-based observations and quest options: v0.4
+  - 90 # SoD - Ditch Tour-Guide Corwin Schael: v0.4
+  - 100 # SoD - Quest: Scouting the Coast Way Crossing: v0.4
+  - 140 # SoD/BG2EE - Add a little snark to dialogues: v0.4
+  location:
+    github_user: lzenner
+    repository: themed_tweaks
+    release: v0.4
+    asset:  themed-tweaks-v0.4.iemod
+- name: c#sb_silber
+  components:
+  - 0 # Adalon''s Blood - Modification for BGII by Gandalf the white: 15
+  location:
+    github_user: Gitjas
+    repository: Adalons_Blood
+    release: "15"
+    asset: adalons-blood-15.iemod
+- name: assassinations
+  components:
+  - 0 # Assassinations mod for Baldur''s Gate II: v17
+  location:
+    github_user: Pocket-Plane-Group
+    repository: Assassinations
+    release: v17
+    asset: assassinations-v17.iemod
+- name: backbrynnlaw
+  components:
+  - 0 # Back to Brynnlaw mod for Baldur''s Gate II: v9
+  location:
+    github_user: Pocket-Plane-Group
+    repository: Back_to_Brynnlaw
+    release: v9
+    asset: back-to-brynnlaw-mod-for-baldurs-gate-ii-bgii-bgt-bgiiee-and-eet-v9.iemod
+- name: bst
+  components:
+  - 0 # The BS Company presents Balduran''s Seatower: vEAOB.8
+  location:
+    github_user: Gibberlings3
+    repository: BS_Baldurans_Seatower
+    release: vEAOB.8
+    asset: bs-baldurans-seatower-veaob.8.iemod
+- name: herthimoney
+  components:
+  - 0 # Component 1. Interjections & Mini-quests (by Austin & Arcanecoast Team): 4.3
+  - 10 # Component 2. First Calimport Bank Pack (by Scheele & Austin & Arcanecoast Team): 4.3
+  - 30 # Component 4. The Missing Troll Case (by Alisia & Austin): 4.3
+  - 40 # Component 5. Unlocked original dialogs of all NPC (by Tipun & Austin): 4.3
+  location:
+    github_user: Austin-BG
+    repository: HTaM
+    release: v.4.3
+    asset: heroes-thieves-and-moneylenders-4.3.iemod
+- name: reunion
+  components:
+  - 0 # The Reunion mod for Baldur''s Gate II: v7
+  location:
+    github_user: Pocket-Plane-Group
+    repository: Reunion
+    release: v7
+    asset: the-reunion-v7.iemod
+- name: sellswords
+  components:
+  - 0 # The Sellswords mod for Baldur''s Gate II: v9.1
+  location:
+    github_user: Pocket-Plane-Group
+    repository: Sellswords
+    release: v9.1
+    asset: the-sellswords-mod-for-baldurs-gate-ii-v9.1.iemod
+- name: turnabout
+  components:
+  - 0 # Ascension: Turnabout: v1.8
+  - 1 # Balthazar Epilogue Portrait, by Cliffette: v1.8
+  location:
+    github_user: Pocket-Plane-Group
+    repository: Turnabout
+    release: v1.8
+    asset: lin-turnabout-v1.8.zip
+- name: cowledmenace
+  components:
+  - 1000 # Main Component: 1.0.1
+  - 2100 # Appropriate Items for High-Level Spellcasters: 1.0.1
+  - 3000 # Mages cast Gate far from themselves: 1.0.1
+  - 3010 # Use pre-EE Spell Deflection Globe (EE only) -> Only for Spell Trap: 1.0.1
+  location:
+    github_user: Gibberlings3
+    repository: CowledMenace
+    release: "1.0.1"
+    asset: lin-cowledmenace-v1.0.1.zip
+- name: d0questpack
+  components:
+  - 0 # General AI Improvements: v3.5
+  - 1 # Creature & Area Improvements -> All Creature & Area Improvements: v3.5
+  - 4 # Miscellaneous Enhancements -> With Additional Random Encounters: v3.5
+  - 5 # Additional Shadow Thieves Content: v3.5
+  - 6 # Alternative Harper/Xzar Plot: v3.5
+  - 7 # Extended Reynald Sequence: v3.5
+  - 8 # Intrigue In The Copper Coronet: v3.5
+  - 9 # Rahul Kanakia''s Potion Quest: v3.5
+  - 10 # Revised Hell Trials: v3.5
+  - 11 # Improved Oasis II -> IO2 Dialogue & Combat Enhancement: v3.5
+  - 13 # Saving Sanik In Brynnlaw: v3.5
+  - 14 # Burglary Of The Bookkeeper: v3.5
+  - 15 # New Fate For The Dryads'' Acorns: v3.5
+  - 16 # The Tragedy Of Besamen: v3.5
+  - 17 # Further Slaver Involvement: v3.5
+  - 18 # Sending The Solamnic Knights Home: v3.5
+  - 19 # Nazariel The Lich: v3.5
+  - 20 # Reward Negotiation: v3.5
+  - 21 # Infernal Thievery: v3.5
+  location:
+  # alternative: http://america.iegmc.net/ppg/questpack-v35-win.zip
+    github_user: mleduque
+    repository: simding0_questpack
+    tag: v3.5-lean
+    layout:
+      layout_type: multi_dir
+      dirs:
+        - questpack
+        - setup-d0questpack.tp2
+- name: longerroad
+  components:
+  - 0 # Longer Road: 2.0.6
+  - 1 # Restore Irenicus''s original portrait from SoA.: 2.0.6
+  location:
+    github_user: InfinityMods
+    repository: LongerRoadEE
+    release: 2.0.6
+    asset: the-longer-road-2.0.6.iemod
+- name: hiddenadventure
+  components:
+  - 2 # Jerlia''s Ore Shop: Beta_7
+  - 3 # Elven holy water in the Temple of Lathander: Beta_7
+  - 4 # Wave Blade in Treasury: Beta_7
+  - 6 # Bards can spend the night at their stronghold (Five Flagons): Beta_7
+  - 8 # Silver Sword: Beta_7
+  - 9 # A Tunnel for Saradush: Beta_7
+  - 10 # Temple of Mask in Docks District: Beta_7
+  location:
+    github_user: Gitjas
+    repository: hiddenadventure
+    release: vBeta_7
+    asset: hidden-adventures-beta_7.iemod
+- name: npc_tweak
+  components:
+  - 0 # Anomen: v6
+  location:
+    github_user: Gibberlings3
+    repository: NPCTweak
+    release: v7
+    asset: lin-npc_tweak-v7.tar.gz
+- name: npckit
+  components:
+  - 30 # Improved Specialist Mage Descriptions: v5
+  - 31 # Replace Berserker Kit with Battlerager for Dwarves: v5
+  - 400 # Anomen Gains Helm Kit on Passing Knighthood Test: v5
+  - 410 # Anomen Gains Berserker Kit on Failing Knighthood Test: v5
+  - 420 # Prevent CN Anomen Gaining a Holy Symbol: v5
+  - 900 # Add Red Wizard to Edwin''s Kit Description: v5
+  - 2100 # Change Korgan''s Kit to Battlerager: v5
+  - 2200 # Give Mazzy a Proper Truesword of Arvoreen Kit: v5
+  - 2300 # Change Minsc''s Title to Rashemaar Ranger: v5
+  - 2500 # Give Nalia Adventurer Kit: v5
+  location:
+    http: http://america.iegmc.net/g3/lin-npckit-v5.tar.gz
+- name: totemiccernd
+  components:
+  - 0 # Totemic Cernd: v3
+  location:
+    github_user: Gibberlings3
+    repository: Totemic_Cernd
+    release: v3
+    asset: lin-totemiccernd-v3.tar.gz
+- name: viconiarevamped
+  components:
+  - 12 # Viconia Revamped -> Multi-class: Shadowdancer/Cleric: v7.2
+  - 60 # Add special ability: Embrace of Shar: v7.2
+  location:
+    path: /home/mick/Games/modda-cache/static/weaselmods/ViconiaRevamped v7.2.zip
+- name: a7-convenienteenpcs
+  components:
+  - 3 # Modify Enhanced Edition NPCs -> Decide for each NPC individually: v4.3
+  - 203 # Modify individually: Hexxat -> Make Hexxat passive: v4.3
+  - 204 # Modify individually: Neera -> Make Neera passive: v4.3
+  - 205 # Modify individually: Rasaad -> Make Rasaad passive: v4.3
+  - 500 # Change class/kit: Baeloth -> Reset level only: v4.3
+  - 669 # Change class/kit: Hexxat -> Fighter/Shadowdancer: v4.3
+  location:
+    github_user: Argent77
+    repository: A7-NoEENPCs
+    release: v4.3
+    asset: A7-ConvenientEENPCs-v4.3.iemod
+- name: sodrtd
+  components:
+  - 0 # Main Component: Tracking System: 1.0
+  - 10 # Consistency Changes to Game Dialogues: 1.0
+  - 20 # Officers Are Aware: 1.0
+  - 30 # Give PC Informed Reply Options: 1.0
+  - 40 # PC Can Tell the Officers: 1.0
+  - 50 # Add Officers Reactions: 1.0
+  - 60 # Additional Info Points: 1.0
+  location:
+    github_user: Gibberlings3
+    repository: Road_To_Discovery_for_SoD
+    release: v1.2
+    asset: road-to-discovery-for-sod-1.2.iemod
+- name: klatu
+  components:
+  - 1000 # The Gloves of Goodman Hayes: 1.7
+  - 1010 # The Manual of War: 1.7
+  - 1050 # Appropriate XP Rewards for Cowled Enforcers: 1.7
+  location:
+    http: http://america.iegmc.net/klatu/klatu_Tweaks_and_Fixes_1.7.7z
+- name: d5_random_tweaks
+  components:
+  - 5010 # Cure and Similar Spells Bypass Spell Protections: 1.6
+  - 2105 # Add 1-Round Blindness Effect to Color Spray: 1.6
+  - 2108 # Change Protection from Petrification into ''Mirrored Eyes'': 1.6
+  - 1152 # Improve Faerie Fire: 1.6
+  - 2201 # Add Missile Avoidance to Blur: 1.6
+  - 2209 # Make Luck Affect Whole Party: 1.6
+  - 2217 # Change Agannazar''s Scorcher to Melf''s Fiery Missiles: 1.6
+  - 2224 # Improve Glitterdust: 1.6
+  - 2251 # Add Deafening Effect On Hit to Decastave: 1.6
+  - 1202 # Make Barkskin Block One Attack Each Round: 1.6
+  - 1207 # Make Goodberry an Out-of-Combat Mass Regeneration: 1.6
+  - 1251 # Improve Damage and Damage Type of Alicorn Lance: 1.6
+  - 2324 # Make Hold Undead and Control Undead Bypass MR: 1.6
+  - 1323 # Improve Casting Time of Exaltation and Spiritual Clarity: 1.6
+  - 1351 # Add Faerie Fire and Slow On Hit to Moonblade: 1.6
+  - 1352 # Increase Range of Icelance: 1.6
+  - 2413 # Allow Target of Otiluke''s Sphere to Use Inventory Screen: 1.6
+  - 2451 # Make Shadow Monster Summons More Illusionary: 1.6
+  - 1404 # Change Neutralize Poison into ''Remove Afflictions'': 1.6
+  - 1451 # Make Smashing Wave Party-Friendly: 1.6
+  - 25231 # Change Sunfire -> Change Sunfire into ''Missile Storm'': 1.6
+  - 1614 # Make Sol''s Searing Orb Easier to Throw: 1.6
+  - 1707 # Make Sunray Bypass Magic Resistance: 1.6
+  - 2708 # Change Mantle into ''Iron Skin'': 1.6
+  - 1710 # Add Slow Effect to Holy Word: 1.6
+  - 2811 # Move Symbol: Fear to 7th Level: 1.6
+  - 2916 # Move Shapechange to 8th Level: 1.6
+  - 2915 # Move Black Blade of Disaster to 8th level: 1.6
+  - 2914 # Add Instant Death Effect to Energy Drain: 1.6
+  - 3000 # Set Spell Weapon APR to 2: 1.6
+  - 3020 # Proper Missile Deflection for the Gloves of Missile Snaring: 1.6
+  - 3030 # Improve Detonating Weapons: 1.6
+  - 3040 # Add Revised Barkskin to ''Skin of the Forest'' Armor: 1.6
+  - 3060 # Make the Gargoyle Cloak Apply Stoneskin Instead of an AC Bonus: 1.6
+  - 3080 # Improve Azlaer''s Harp and Methild''s Harp: 1.6
+  - 3113 # Replace Evermemory with a Ring of Acuity: 1.6
+  - 4010 # Add a Saving Throw Against Level Drain Effects: 1.6
+  - 4020 # Improve Monster Ability Scores: 1.6
+  location:
+    github_user: subtledoctor
+    repository: d5_Random_Tweaks
+    tag: "1.6"
+- name: d5_random_tweaks
+  components:
+  - 1609 # Make False Dawn Bypass Magic Resistance: 1.6
+  ignore_warnings: true
+- name: rr
+  components:
+  - 1 # Thief kit revisions: v4.92
+  - 2 # Thief High Level Ability revisions: v4.92
+  - 3 # Proper racial adjustments for thieving skills: v4.92
+  - 4 # Bard kit revisions: v4.92
+  - 5 # Bard High Level Ability revisions: v4.92
+  - 8 # Upgradeable Equipment: v4.92
+  - 9 # Revised Thievery -> Use PnP thievery potions and prevent their effects from stacking: v4.92
+  - 11 # Chosen of Cyric encounter: v4.92
+  - 12 # Shadow Thief Improvements: v4.92
+  - 999 # BG2-style icons for RR content: v4.92
+  location:
+    github_user: FredrikLindgren
+    repository: rr
+    tag: v4.92
+- name: rr
+  components:
+  - 7 # Additional equipment for Thieves and Bards: v4.92
+  ignore_warnings: true
+- name: wsr
+  components:
+  - 100 # Wizard Slayer kit revision: v1.14
+  - 200 # Wizard Slayer High Level Ability revision: v1.14
+  - 302 # Revised Wizard Slayer item restrictions -> Moderate changes: v1.14
+  - 999 # BG2-style icons for WSR content: v1.14
+  location:
+    github_user: mleduque
+    repository: Wizard-Slayer-Rebalancing
+    branch: mle
+- name: cdtweaks
+  components:
+  - 1070 # Improved Multi-Player Kick-Out Dialogues: v16
+  - 1075 # Send BioWare NPCs to an Inn [DavidW/Zed Nocear]: v16
+  - 1080 # Add Bags of Holding: v16
+  - 1180 # Female Edwina [Davide Carte, Wendy Yung, Weimer]: v16
+  - 1251 # Move NPCs to Convenient Locations: Move Alora to Gullykin: v16
+  - 1252 # Move NPCs to Convenient Locations: Move Eldoth to the Coast Way: v16
+  - 1253 # Move NPCs to Convenient Locations: Move Quayle to the Nashkel Carnival: v16
+  - 1254 # Move NPCs to Convenient Locations: Move Shar-Teel to North Nashkel Road: v16
+  - 1255 # Move NPCs to Convenient Locations: Move Tiax to Beregost: v16
+  - 1256 # Move NPCs to Convenient Locations: Move Viconia to South Beregost Road: v16
+  - 2250 # Un-Nerfed Sorcerer Spell Progression Table: v16
+  - 2260 # Alter Mage Spell Progression Table -> Un-nerfed table [Blucher]: v16
+  - 2270 # Alter Bard Spell Progression Table -> Un-nerfed table [Blucher]: v16
+  - 2280 # Alter Cleric Spell Progression Table -> Un-nerfed table [Blucher]: v16
+  - 2293 # Alter Druid Spell and Level Progression Tables -> Use cleric level progression changes with un-nerfed druid spell table [Blucher]: v16
+  - 2580 # Alter Wisdom-Based Divine Bonus Spell Table -> Use PnP/PsT Table: v16
+  - 2550 # Alter Gnome Mage Kit/Multi-Class Options -> Keep gnome illusionist multi-class, enable all kits for single-class: v16
+  - 2390 # Alter Paladin Spell Progression Table -> Paladins Use Icewind Dale-Heart of Winter Spell Tables [grogerson]: v16
+  - 2400 # Alter Ranger Spell Progression Table -> Rangers Use Icewind Dale-Heart of Winter Spell Tables [grogerson]: v16
+  - 2410 # Druids Use 3E Alignment Restrictions: v16
+  - 3031 # Easy Spell Learning -> 100% learn spells and no maximum cap: v16
+  - 3294 # Personalize Automatic Save Names -> Use scheme: 000000000-[Protagonist]-Save-Name: v16
+  - 3355 # Create Interval Saves [argent77] -> Every 30 minutes (cycle through four saves): v16
+  - 4000 # Adjust Evil Joinable NPC Reaction Rolls: v16
+  - 4025 # Allow NPC Pairs to Separate: v16
+  - 4031 # Consistent Stats: Edwin -> Use BG2 values: v16
+  - 4041 # Consistent Stats: Jaheira -> Use BG2 values: v16
+  - 4050 # Change Jaheira to Neutral Good Alignment: v16
+  - 4061 # Consistent Stats: Minsc -> Use BG2 values: v16
+  - 4071 # Consistent Stats: Viconia -> Use BG2 values: v16
+  - 4090 # Make Montaron an Assassin [Andyr]: v16
+  - 4150 # Move Boo Into Minsc''s Pack: v16
+  - 4170 # Ensure Shar-Teel Doesn''t Die in the Original Challenge: v16
+  location:
+    github_user: Gibberlings3
+    repository: Tweaks-Anthology
+    release: v16
+    asset: the-tweaks-anthology-v16.iemod
+  add_conf:
+    file_name: cdtweaks.txt
+    content: |
+      OUTER_SET romance_speed_use_config_values = 1
+      OUTER_SET romance_speed_factor = 99
+
+      OUTER_SET romance_use_config_values = 1
+      OUTER_SET remove_romance_racial_requirements = 1
+      OUTER_SET remove_romance_gender_requirements = 1
+      OUTER_SET romance_multiple = 1
+      OUTER_SET romance_nothing_kills = 1
+      OUTER_SET romance_starts_in_ToB = 1
+- name: forgotten-armament
+  components:
+  - 11 # Add Breach Scrolls to Sorcerous Sundries: v2.1
+  - 4 # Update Items Setting an Ability Score to Increment the Increase: v2.1
+  location:
+    github_user:  Gibberlings3
+    repository: Forgotten-Armament
+    release: "2.1"
+    asset: forgotten-armament-v2.1.iemod
+- name: eet_tweaks
+  components:
+  - 1001 # Edwin appearance -> BG2: 1.12
+  - 1011 # Imoen appearance -> BG2: 1.12
+  - 1021 # Jaheira appearance -> BG2: 1.12
+  - 1031 # Minsc appearance -> BG2: 1.12
+  - 1041 # Viconia appearance -> BG2: 1.12
+  - 1050 # Cameo NPCs appearance: 1.12
+  - 2002 # Total XP CAP -> Disabled: 1.12
+  - 3000 # Disable hostile reaction after charm: 1.12
+  - 3020 # Familiar death consequences -> Constitution loss & blocked summoning for 1 week: 1.12
+  - 4020 # Higher framerates support: 1.12
+  - 4040 # Import party items to SoA: 1.12
+  - 4050 # Books/Scrolls categorization: 1.12
+  - 4060 # Wand Case: 1.12
+  - 4070 # Key Ring: 1.12
+  - 4080 # Replace classic BG1 movies with BG:EE ones -> Replace movies: 1.12
+  location:
+    github_user: K4thos
+    repository: EET_Tweaks
+    tag: v1.12
+- name: atweaks
+  components:
+  - 100 # Restore innate infravision to Half-Orc characters: v4.53
+  - 101 # Prevent skeletal and incorporeal undead from being affected by Illithids'' Devour Brain attack: v4.53
+  - 102 # Change Spiritual Hammer into a ranged force weapon: v4.53
+  - 103 # Allow Dispel/Remove Magic to take down Globes of Invulnerability: v4.53
+  - 110 # Magical arrows and bolts deal bonus damage equal to their enchantment level: v4.53
+  - 115 # Allow Mages to scribe memorized spells onto scrolls -> Scrolls can be scribed everywhere: v4.53
+  - 120 # Restore innate disease immunity to Paladins: v4.53
+  - 125 # Rangers'' Animal Empathy improves with experience: v4.53
+  - 130 # Additional racial traits for Dwarves: v4.53
+  - 140 # Additional racial traits for Gnomes: v4.53
+  - 200 # Allow Breach to take down Stoneskin effects applied by items: v4.53
+  - 201 # Instant casting for warrior innates: v4.53
+  - 202 # Revised Bhaalpowers -> Enhance the Bhaalpowers and standardize their casting time: v4.53
+  - 203 # Make druidic shapeshifting uninterruptable: v4.53
+  - 211 # Make Death Ward protect against Vorpal Hits: v4.53
+  - 210 # Restore the Dispel Magic vulnerability to Nishruu and Hakeashars: v4.53
+  - 212 # Make alignment detection spells more accurate: v4.53
+  - 213 # Expanded saving throw bonus tables for Dwarves, Gnomes and Halflings: v4.53
+  - 216 # Bard songs break invisibility -> Only the Jester song breaks invisibility: v4.53
+  - 261 # Altered XP rewards from locks, traps and scrolls -> Improved (lowered) XP rewards from locks, traps and scrolls: v4.53
+  - 270 # Unbiased quest rewards: v4.53
+  - 324 # Use Icewind Dale''s Dimension Door animation -> Fast animation speed, shorter delay between animation start and creature appearance/disappearance: v4.53
+  - 301 # Change the appearance of Valygar''s armor: v4.53
+  - 302 # Change the appearance of the Robe of Vecna: v4.53
+  - 310 # Distinctive creature coloring: v4.53
+  - 315 # Distinctive creature soundsets: v4.53
+  - 510 # Expanded temple services: v4.53
+  - 999 # BG2-style icons for aTweaks content: v4.53
+  location:
+    http: http://america.iegmc.net/atweaks/atweaks-v453.zip
+- name: cdtweaks
+  components:
+  - 40 # Change Viconia''s Skin Color to Dark Blue: v16
+  - 60 # Weapon Animation Tweaks: v16
+  - 110 # Icon Improvements: v16
+  - 130 # Force All Dialogue to Pause Game: v16
+  - 171 # Unique Icons [Lava] -> Replace all icons: v16
+  - 181 # Unique Containers [Miloch] -> Unique icons only: v16
+  - 190 # Use Character Colors Instead of Item Colors -> For all shields and helmets: v16
+  - 200 # Remove Annoying Visual Effects from Equipped Items -> Remove blur effect: v16
+  - 2010 # Separate Resist Fire/Cold Icon into Separate Icons [Angel]: v16
+  - 1010 # More Interjections: v16
+  - 1020 # Alter HP Triggers for NPC Wounded Dialogues: v16
+  - 1035 # Make Cloakwood Areas Available Before Completing the Bandit Camp -> First area only: v16
+  - 1040 # Improved Athkatlan City Guard: v16
+  - 1060 # Breakable Iron Non-Magical Shields, Helms, and Armor: v16
+  - 1101 # Do Not Reveal City Maps When Entering Area: v16
+  - 1120 # Stores Sell Higher Stacks of Items: v16
+  - 1160 # Multiple Strongholds [Sabre, Baldurdash, Weimer] -> No restrictions: v16
+  - 1220 # Allow Cromwell to Upgrade Watcher''s Keep Items: v16
+  - 1227 # Adjust Cromwell''s Forging Time -> Full 24 hours (BG2EE default, includes sleep): v16
+  - 1230 # Allow Cespenar to Use Cromwell Recipes: v16
+  - 1270 # Change Cloakwood Mine Chapter End Change Trigger to Non-TotSC Behavior [plainab]: v16
+  - 2140 # Expanded Dual-Class Options: v16
+  - 2330 # Remove Delay for Magical Traps [Ardanis/GeN1e]: v16
+  - 2540 # Speed Up de''Arnise Keep Stronghold Quests: v16
+  - 2620 # Make Certain Creatures Immune to Backstab/Sneak Attack [Luke]: v16
+  - 2999 # Max HP at Level One: v16
+  - 3010 # Maximum HP Creatures [the bigg] -> For all creatures in game: v16
+  - 3050 # Remove Fatigue from Restoration Spells: v16
+  - 3121 # Happy Patch - Alter How Party NPCs Complain About Reputation -> NPCs can be angry about reputation but never leave [Salk]: v16
+  - 3125 # Neutral Characters Make Happy Comments at Mid-Range Reputation [Luiz]: v16
+  - 3160 # Keep Drizzt''s Loot, Disable Malchor Harpell [Weimer]: v16
+  - 3183 # Romance Cheats [Sabre, Richardson, Weimer]: v16
+  - 3200 # Sellable Items [icelus]: v16
+  - 3205 # Stores Purchase All Item Types: v16
+  - 3230 # Taerom Makes Additional Ankheg Armor [Icendoan/grogerson]: v16
+  - 3300 # Death Cam: v16
+  - 3310 # Start New Games with Party AI Turned Off: v16
+  - 3320 # No Depreciation in Stores: v16
+- name: stratagems
+  components:
+  - 3505 # Wider selection of random scrolls: 34.3
+  - 3552 # Increase the power of Cure Wounds and Cause Wounds spells to the level found in 3rd Edition D&D -> Spells heal or inflict about the average amount of damage in this range: 34.3
+  - 3580 # Restoration and Lesser Restoration spells heal ability-score damage: 34.3
+  - 4115 # Thieves assign skill points in multiples of five: 34.3
+  - 4145 # Skip the Candlekeep tutorial sections -> Remove the tutorial NPCs from Candlekeep: 34.3
+  - 4150 # Allow the Cowled Wizards to detect spellcasting in most indoor, above-ground areas in Athkatla: 34.3
+  - 4160 # Increase the price of a license to practise magic in Athkatla -> License costs 10,000 gp: 34.3
+  - 4170 # Increase the price asked by Gaelan Bayle -> Gaelan wants 40,000 gold pieces: 34.3
+  - 5080 # Improved textscreens in Tales of the Sword Coast: 34.3
+  location:
+    github_user: Gibberlings3
+    repository: SwordCoastStratagems
+    release: v34.3
+    asset: lin-stratagems-34.3.zip
+  ignore_warnings: true
+- name: jtweaks
+  components:
+  - 10 # Wilson''s strength doesn''t stack indefinitely: 3.0
+  - 20 # Vernus can be raised: 3.0
+  - 30 # Fix Black Pits oversights: 3.0
+  - 40 # Enchant Weapon works in contingencies: 3.0
+  - 50 # Joinable NPCs don''t have null kits: 3.0
+  - 60 # NPCs don''t go in inaccessible locations: 3.0
+  - 70 # Close polymorph immunity loopholes: 3.0
+  - 90 # Wish Hardiness doesn''t stack with itself: 3.0
+  - 100 # Hold Person doesn''t display multiple strings: 3.0
+  - 120 # Dueling fireshields don''t go infinite: 3.0
+  - 130 # Standardize Wand of Missiles: 3.0
+  - 140 # Inquisitor True Sight is consistent with other versions of the spell: 3.0
+  - 160 # Bala''s Axe dispels reasonably well: 3.0
+  - 170 # Celestials cast all of their spells at high levels: 3.0
+  - 182 # Antimagic Ray and Spell Shield -> Spell Shield blocks one antimagic ray: 3.0
+  - 190 # Death Ward protects against Aec''Letec''s Death Gaze: 3.0
+  - 200 # Elemental protection spells increment resistances: 3.0
+  - 230 # Loosen restrictions on what clones can do: 3.0
+  - 240 # Undead Hunters are better at Turn Undead: 3.0
+  - 250 # Loosen NPC item restrictions: 3.0
+  - 260 # Green Slime poison can be cured: 3.0
+  - 270 # Barrityl''s Bigger and Better Burden: 3.0
+  - 280 # Allies against Bodhi are better prepared for vampires: 3.0
+  - 310 # Map notes for BGEE quests: 3.0
+  - 320 # Standardize inn and tavern music: 3.0
+  - 350 # Bigger random spawns: 3.0
+  - 360 # Nature''s Beauty blindness can be cured: 3.0
+  - 370 # Fix Imoen''s script in BGEE/SoD: 3.0
+  - 380 # Prevent characters from acting uncontrollably when under Project Image: 3.0
+  - 390 # Some merchants ignore reputation: 3.0
+  - 402 # Alternate targeting for Potions of Fire Breath -> Potions of Fire Breath use Breath Weapon targeting: 3.0
+  - 410 # Imoen always joins at level 1 outside Candlekeep: 3.0
+  - 422 # Less reputation loss for killing Phandalyn -> Lose 3 rep or innocent penalty, whichever is less: 3.0
+  - 430 # Kondar works against more kinds of shapeshifters: 3.0
+  - 460 # Candlekeep XP boost: 3.0
+  - 480 # Alternate Adoy''s Belt: 3.0
+  - 490 # Liia knows how to cast her spells: 3.0
+  - 500 # Allow clones of party members to use Advanced AI: 3.0
+  location:
+    http: https://forums.beamdog.com/uploads/editor/vc/n9839to3mswh.zip
+    rename: jmerry's Tweak Collection 3.0.zip
+    layout:
+      strip_leading: 1
+      layout_type: single_dir
+- name: jtweaks
+  components:
+  - 81 # Shapeshift corrections -> All transformations: 3.0
+  - 220 # Resurrection can heal the living: 3.0
+  ignore_warnings: true
+- name: klatu
+  components:
+  - 2030 # Identify all store items: 1.7
+  - 2040 # Fix Wild Mage Items and Spells: 1.7
+  - 2050 # Prevent Wish Spells from Interrupting Caster: 1.7
+  - 2060 # Standardize Poison Immunity: 1.7
+  - 2070 # Free Action does not prevent Haste or Movement Rate Bonus: 1.7
+  - 2080 # Drop Equipment on Disintegration: 1.7
+  - 2090 # Drop Equipment on Petrification: 1.7
+  - 2100 # Drop Equipment on Imprisonment: 1.7
+  - 2110 # Treat all Innate Abilities as Non-Magical (Unaffected by Wild/Dead Magic and Silence): 1.7
+  - 2120 # Treat all Psionic Abilities as Non-Magical (Unaffected by Wild/Dead Magic and Silence): 1.7
+  - 2130 # Treat all Bardsong Effects as Non-Magical (Unaffected by Wild/Dead Magic): 1.7
+  - 3070 # Remove Chaos Shield icons from all items: 1.7
+- name: housetweaks
+  components:
+  - 12 # House Tweaks: Improved Dialogues (BG:EE): 1.91
+  - 13 # House Tweaks: Not-So-Indestructible Rats: 1.91
+  - 14 # House Tweaks: Good-Aligned Roleplay Rewards (BG2:EE): 1.91
+  - 15 # House Tweaks: Cloak of Dragomir only decreases stats in daylight: 1.91
+  - 16 # House Tweaks: Give Stat Bonuses to EENPCs in BG2 (except Hexxat): 1.91
+  - 17 # House Tweaks: Useful Plot Items: 1.91
+  - 18 # House Tweaks: Faster Troll Unconsciousness: 1.91
+  - 19 # House Tweaks: Restore Reputation Increase Sound Effect for BG2: 1.91
+  - 20 # House Tweaks: Race Text Patch: 1.91
+  location:
+    github_user: ArtemiusI
+    repository: House-Rule-Tweaks
+    tag: v2.1a
+    patch:
+      relative: patches/housetweaks-readln.diff
+- name: mih_tweaks
+  components:
+  - 3 # Protection from Evil blocks Domination: v2
+  location:
+    github_user: AngelGryph
+    repository: MadeInHeaven_Tweaks
+    tag: v2
+- name: SareveffFix
+  components:
+  - index: 0
+    component_name: Fix Deathbringer
+  location:
+    http: https://forums.beamdog.com/uploads/FileUpload/67/d447022674f469900306ad1db69d2d.zip
+    rename: setup-SareveffFix.zip
+    layout:
+      layout_type: tp2
+- name: eet_end
+  components:
+  - index: 0
+    component_name: EET end (last mod in install order) -> Standard installation
+- name: cdtweaks
+  components:
+  - 10 # Remove Helmet Animations: v16
+  - 2040 # Universal Clubs: v16
+  - 2060 # Weapon Styles for All: v16
+  - 2100 # Allow Thieving and Stealth in Heavy Armor per PnP: v16
+  - 2120 # Allow Arcane Spellcasting in Heavy Armor: v16
+  - 2152 # Wear Multiple Protection Items -> Allow armor plus one protection item [Angel]: v16
+  - 2163 # Alter Weapon Proficiency System -> IWD-style proficiencies with weapon styles: v16
+  - 2170 # Cast Spells from Scrolls (and Other Items) at Character Level: v16
+  - 2210 # Change Grandmastery Bonuses -> True grandmastery [Baldurdash]: v16
+  - 2431 # Change Equipment Restrictions for Druid Multi- and Dual-Classes -> Tighten equipment restrictions for druid multi- and dual-classes [Angel]: v16
+  - 2440 # Everyone Gets Bonus APR from Specialization [subtledoctor]: v16
+  - 2450 # Enforce PnP Proficiency Rules on Dual-Classed Characters [subtledoctor]: v16
+  - 2520 # Allow Mages to Use Bucklers and Thieves to Use Small Shields [Angel]: v16
+  - 2590 # Thieves Can Backstab With More Weapons With "Use Any Item" or as Dual- and Multi-Classes: v16
+  - 4180 # Removable NPC Items: v16
+- name: jtweaks
+  components:
+  - 150 # Temple cures work better: 3.0
+  - 300 # Slightly improved party AI: 3.0
+  - 340 # Potion effects don''t stack with themselves: 3.0
+- name: stratagems
+  components:
+  - 5900 # Initialise AI components (required for all tactical and AI components): 34.3
+  - 7000 # Improved doppelgangers: 34.3
+  - 7010 # Tougher Black Talons and Iron Throne guards: 34.3
+  - 7040 # Relocated bounty hunters: 34.3
+  - 7050 # Improved Ulcaster: 34.3
+  - 7060 # Improved Balduran''s Isle: 34.3
+  - 7100 # Improved Bassilus: 34.3
+  - 7110 # Improved Drasus party: 34.3
+  - 7140 # Improved Undercity assassins: 34.3
+  - 7150 # Improved Carsa/Kahrk interaction: 34.3
+  - 7200 # Tougher chapter-two end battle: 34.3
+  - 7210 # Tougher chapter-three end battle: 34.3
+  - 7220 # Tougher chapter-four end battle: 34.3
+  - 7230 # Tougher chapter-five end battle: 34.3
+  - 7900 # Improved minor encounters: 34.3
+  - 8000 # Make the starting dungeon slightly harder: 34.3
+  - 8010 # Improved Shade Lord: 34.3
+  - 8060 # Improved de''Arnise Keep ("Tactics Remix"): 34.3
+  - 8110 # Improved Sahuagin: 34.3
+  - 8140 # Improved Drow: 34.3
+  - 8150 # Improved Watcher''s Keep: 34.3
+  - 8170 # Improved Sendai''s Enclave: 34.3
+# issue https://www.gibberlings3.net/forums/topic/36596-bug-alter-hostile-rest-spawns-chokes-on-bgee-ar0608are/?do=findComment&comment=322817
+#- name: jtweaks
+#  components:
+#  - 440 # Random spawns scale with difficulty: 3.0
+- name: d5_random_tweaks
+  components:
+  - 3010 # Add Backstab Immunity to the Ring of Danger Sense: 1.6
+  - 4033 # Increase Dragons'' Hit Points -> 200% More Hit Points: 1.6
+- name: cdtweaks
+  components:
+  - 3080 # Increase Ammo Stack Size -> Unlimited ammo stacking: v16
+  - 3090 # Increase Jewelry, Gem, and Miscellaneous Item Stacks -> Unlimited jewelry, gem, and miscellaneous item stacking: v16
+  - 3100 # Increase Potion Stacking -> Unlimited potion stacking: v16
+  - 3110 # Increase Scroll Stacking -> Unlimited scroll stacking: v16
+  - 4020 # ToB-Style NPCs: v16
+- name: atweaks
+  components:
+  - 500 # Slightly expanded storage capacity for containers -> Use the recommended storage capacity value (999): v4.53
+- name: might_and_guile
+  components:
+  - 240 # Improved Rangers: 4.28
+  ignore_warnings: true
+  location:
+    github_user: UnearthedArcana
+    repository: Might_and_Guile
+    tag: '4.28'
+- name: skills-and-abilities
+  components:
+  - 710 # Add New HLAs for ALL Classes and Kits: v1.2.3-beta
+  - 720 # Update Existing HLAs: v1.2.3-beta
+  - 70 # Add New Monk Abilities: v1.2.3-beta
+  - 80 # Add New Paladin Abilities: v1.2.3-beta
+  - 170 # Update Archer to provide to hit and damage bonuses per the kit description: v1.2.3-beta
+  - 300 # Update Weapon Fighting Styles: v1.2.3-beta
+  - 400 # 2H Weapon Additional Strength Bonus: v1.2.3-beta
+  location:
+    github_user: Gibberlings3
+    repository: Skills-and-Abilities
+    release:  1.3-beta
+    asset: lin-skills-and-abilities-v1.3-beta.zip
+- name: housetweaks
+  components:
+  - 1 # House Tweaks: Expanded Shapeshifting: 1.91
+  - 7 # House Tweaks: Increased Constitution Bonuses -> Constitution Bonuses for All Classes + Regeneration Changes: 1.91
+- name: scales_of_balance
+  components:
+  - 201 # SBO - Stat-based Bonus Spell Slots: v5.40
+  location:
+    github_user: UnearthedArcana
+    repository: Scales_of_Balance
+    tag: "5.40"
+- name: npc_ee
+  components:
+  - 2000 # NPC class/stat/kit choices: 5.9.9
+  location:
+    github_user: UnearthedArcana
+    repository: NPC_EE
+    tag: "5.9.9"
+- name: generalized_biffing
+  components:
+  - 1 # Generalized Biffing -> Biff all files (recommended by the Big World Dudes): v2.6
+  location:
+    github_user: SpellholdStudios
+    repository: generalized_biffing
+    release: v2.6
+    asset: generalized-biffing-v2.6.iemod

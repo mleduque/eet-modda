@@ -1,0 +1,34 @@
+version: '1'
+global:
+  lang_dir: en_US
+  lang_preferences:
+  - english
+  - american english
+modules:
+- name: eet
+  components:
+  - index: 0
+    component_name: 'EET core (resource importation): V13.4'
+  location:
+    github_user: mleduque
+    repository: EET
+    commit: 114b9bb
+    layout:
+        layout_type: multi_dir
+        dirs:
+          - EET
+          - EET_end
+  add_conf:
+    file_name: bgee_dir.txt
+    content: ../../bg1/game
+
+- name: hq_soundclips_bg2ee
+  components:
+  - index: 0
+    component_name: 'Install high quality soundclips for new BG2EE content: 1.2'
+  location:
+    github_user: Argent77
+    repository: HQ-SoundClips-BG2EE
+    release: v1.2
+    asset: lin-HQ-SoundClips-BG2EE-v1.2.zip
+

@@ -20,3 +20,23 @@ Pnp_celestials ? https://github.com/Gibberlings3/PnP_Celestials
     5E Casting
     SoB v6
     MBR
+
+
+
+     EET
+    buncha quests
+    buncha NPCs
+    buncha items
+    SR
+    IR
+    IWDification
+    IWD1_EET
+    IWD2_EET
+    Icewind_EET
+    TotLM-in-BG2EE
+    IWD_EET_Integration
+    buncha kits
+    buncha tweaks
+    EET_End
+    SCS
+    post-SCS stuff
