@@ -23,7 +23,7 @@ modules:
     location:
       github_user: mleduque
       repository: EET
-      commit: 114b9bb
+      commit: c135086 # 2023-04-27
       layout:
           layout_type: multi_dir
           dirs:
@@ -3586,8 +3586,8 @@ modules:
     location:
       github_user: GraionDilach
       repository: RandomGraionTweaks
-      release: version-1.8
-      asset: random-graion-tweaks-1.8.iemod
+      release: version-1.10
+      asset: random-graion-tweaks-1.10.iemod
     ignore_warnings: true
   - name: jtweaks
     components:

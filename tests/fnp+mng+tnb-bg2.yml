@@ -1,0 +1,80 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: TomeAndBlood
+    components:
+      - 11 # Re-equilibrage des ecoles de magie: 0.9.48
+      - 1201 # Re-equilibrage des ecoles profanes opposees -> Pas d'ecoles opposees: 0.9.48
+      - 13 # Revision des clones illusoires: 0.9.48
+      - 16 # Sort Identification ameliore (utilisable par les Arcanistes et les Ensorceleurs multiclasses): 0.9.48
+      - 20 # Revision des Disciples du Dragon: 0.9.48
+      - 25 # Kit d'ensorceleur : Magus: 0.9.48
+      - 31 # Kit d'ensorceleur : Ame favorite: 0.9.48
+      - 33 # Kit d'ensorceleur : Disciple sylvain: 0.9.48
+      - 35 # Kit d'ensorceleur : Disciple revenant: 0.9.48
+      - 37 # Kit d'ensorceleur : Disciple amorphe: 0.9.48
+      - 40 # Revision des specialistes: 0.9.48
+      - 48 # Lancer de sort en armure pour les bardes: 0.9.48
+      - 51 # Revision de la  Metamagie -> Metamagie innee, apprise automatiquement par tout le monde: 0.9.48
+      - 63 # Tours de magie -> Baguette de tour de magie: 0.9.48
+      - 66 # Sort de Familier inne: 0.9.48
+      - 67 # Choisir son familier: 0.9.48
+      - 71 # Changement de sorts pour les ensorceleurs -> Changer les sorts a tous les niveaux: 0.9.48
+      - 80 # Ensorceleurs multiclasses: 0.9.48
+      - 85 # Kit d'ensorceleur : ensorceleur a mana: 0.9.48
+      - 93 # Rendre les objets a emplacement de sorts bonus compatibles avec les ensorceleurs multi et les arcanistes -> Bonus seulement pour les emplacements de preparation: 0.9.48
+    location:
+      github_user: mleduque
+      repository: TomeAndBlood
+      tag: "0.9.48-fr"
+  - name: TomeAndBlood
+    ignore_warnings: true
+    components:
+      - 14 # Revision d'Invisibilite et de Vision veritable: 0.9.48
+      - 68 # Le mod de Pooky : Infuser les familiers: 0.9.48
+  - name: might_and_guile
+    description: Might And Guile - Main component (warns)
+    components:
+      - 50 # Deplacer le kit de Cavalier vers la classe de guerrier: 5.2alpha7
+      - 55 # Ajouter le Corsaire (kit de guerrier): 5.2alpha7
+      - 60 # Ajouter le Maitre d'arme (kit de guerrier): 5.2alpha7
+      - 80 # Ajouter le Pilleur de tombes (kit de guerrier/voleur): 5.2alpha7
+      - 85 # Ajouter la Brute (kit de guerrier/voleur): 5.2alpha7
+      - 90 # Ajouter le Libertin (kit de voleur) et reviser le Bretteur: 5.2alpha7
+      - 96 # Ajouter le Ninja (kit de voleur): 5.2alpha7
+      - 97 # Ajouter le Ninja (kit de guerrier/voleur): 5.2alpha7
+      - 105 # Ajouter le voleur de sorts (kit de mage/voleur): 5.2alpha7
+      - 110 # Ajouter le Rhapsode (kit de mage/voleur): 5.2alpha7
+      - 120 # Ajouter les kits régionaux de rodeur: 5.2alpha7
+      - 125 # Ajouter le Chasseur de magiciens (kit de rodeur): 5.2alpha7
+      - 130 # Ajouter le Rodeur barbare (kit de rodeur): 5.2alpha7
+      - 151 # Deplacer l'Archer vers la classe de guerrier: 5.2alpha7
+      - 155 # Ajouter l'Archer elfe (kit de rôdeur): 5.2alpha7
+      - 160 # Ajouter le Frondeur petite-personne (kit de guerrier/voleur): 5.2alpha7
+      - 165 # Ajouter le Tireur d'elite (kit de voleur): 5.2alpha7
+      - 200 # Dons (mais stop ! Essayez peut-etre plutot les Dons de combat de Scales Of Balance !: 5.2alpha7
+      - 205 # Tir a l'arc revise: 5.2alpha7
+      - 220 # Elargissement du multiclassage: 5.2alpha7
+      - 225 # Revision de la table de sorts de rodeurs: 5.2alpha7
+      - 235 # Belluaire revise: 5.2alpha7
+      - 240 # Rodeurs ameliores: 5.2alpha7
+      - 245 # Bonus de mouvement revises (Deplacement accru): 5.2alpha7
+      - 250 # Berserker revise et rage: 5.2alpha7
+      - 265 # Poings du moine revises: 5.2alpha7
+      - 280 # Revision de l'Attaque sournoise: 5.2alpha7
+      - 290 # Revision de la progression du TAC0: 5.2alpha7
+      - 400 # Remaniement des Bardes : Bardes multiclasses: 5.2alpha7
+    location:
+      github_user: mleduque
+      repository: Might_and_Guile
+      tag: 5.3-fr
+  - name: Faiths_and_Powers
+    components: ask
+    location:
+      github_user: mleduque
+      repository: Faiths_and_Powers
+      commit: 1aef3127b32
