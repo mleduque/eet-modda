@@ -1,5 +1,14 @@
---- scales_of_balance/ini/YARAS_default.ini
-+++ scales_of_balance/ini/YARAS_default.ini
+
+patch scales_of_balance/csp/d5csdlg.2da
+per-class skills and feats
+BACKSTAB.2DA
+CRIPPSTR.2DA ?
+patch scales_of_balance/ini/stats.ini ?
+patch scales_of_balance/ini/styles.ini ?
+abracead.2da
+
+--- scales_of_balance/ini/d5_YARAS_default.ini
++++ scales_of_balance/ini/d5_YARAS_default.ini
 @@ -45,8 +45,8 @@
  //
  //	CASTING SPEED PENALTY: 					// this is a static modifier

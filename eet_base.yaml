@@ -652,8 +652,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Imoen4Ever
-      release: v11.1
-      asset: imoen-4-ever-v11.1.iemod
+      release: v11.2
+      asset: imoen-4-ever-v11.2.iemod
   - name: alternatives
     installation:
       before: imoen4ever except imoen4ever compatibility (should be after alternative)
@@ -702,8 +702,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Jasteys_SoD_Tweakpack
-      release: v10
-      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v10.iemod
+      release: v10.2
+      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v10.2.iemod
   - name: themed_tweaks
     components:
       - 60  # SoD - Give Imoen a special wand for palace attack scene
@@ -1015,6 +1015,7 @@ modules:
       repository: Edwin_Romance
       release: v3.1
       asset: edwinromance-v3.1.zip
+      patch: edwin_multi_romance.diff
   - name: framed
     components:
       - 0 # FFramed ou Piege: Propose plusieurs versions du chapitre 6 -> LUtilisez des voix personnalisees pour les films des nouveaux chapitres
@@ -1023,12 +1024,13 @@ modules:
       repository: framed
       release: v1.13
       asset: framed-v1.13.iemod
-  - name: "RoT" # Region of Terror
+  - name: RoT # Region of Terror
     components: [0]
     location:
       github_user: SpellholdStudio
       repository: Region_of_Terror
-      branch: taming-drizzt
+      commit: e819f0a
+      patch: rot-taming-drizzt.diff
   - name: TDD
     components: none
     description: The Darkest Days
@@ -1653,7 +1655,9 @@ modules:
       - 0 # Aurora's Shoes and Boots: v5.3 (EE & EET)
       - 20 # Petits portraits pour les PNJs -> Marchands uniquement: v5.3 (EE & EET)
     location:
-      path: /home/mick/Games/modda-cache/static/Auroras-Shoes-and-Boots-5.3 (EE).zip
+      github_user: mleduque
+      repository: Bookwyrme_Aurora_s_shoes
+      tag: "???"
   - name: luxleysoa
     components:
       - 0 # Luxley Family Mod for BGII:SoA: v2.0.0
@@ -1983,17 +1987,23 @@ modules:
       path: /home/mick/Games/modda-cache/static/weaselmods/FaldornBG2 v1.1.zip
   - name: rose
   - name: SkitiaRomanceTweak
-  components: [0]
-  location:
-    github_user: Skitia
-    repository: SkitiaBG2RomanceTweaks
-    branch: master
+    components: [0]
+    location:
+      github_user: Skitia
+      repository: SkitiaBG2RomanceTweaks
+      branch: master
   - name: Dusk
     components: ask
     location:
     github_user: RamosPabloA
     repository: NPC_Dusk_MOD
     tag: v0.9.2
+  - name: MTS_Crappack
+    installation:
+      after: Soubar
+    components:
+      - 22 # Install Charlotte sans Menagerie by Sir BillyBob
+      - 23 # Install All Items Identified in Selence's Shop
 
   #########
   # Spells
@@ -2238,6 +2248,12 @@ modules:
       github_user: Argent77
       repository: A7-ImprovedArcher
       commit: 7b291cd
+  - name: saradas_magic
+    components: ask
+    location:
+      github_user: 11jo
+      repository: Saradas_Magic_for_BGEE
+      commit: 80a2479 # 2023-05-05
   - name: saradas_magic_2
     components:
       - 1 # Saradas Magic NPC Mod for BGII -> Saradas has a mage sprite (optional)
@@ -2365,6 +2381,9 @@ modules:
       github_user: mleduque
       repository: Silver_Staff_of_Aule
       branch: french
+  - name: MTS_Crappack
+    components:
+      - 15 # Add a simple pipe to the game
 
 
   #########
@@ -2591,8 +2610,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Morpheus562-s-Kitpack
-      release: "3.0"
-      asset: morpheus562s-kitpack-v3.0.iemod
+      release: "3.1"
+      asset: morpheus562s-kitpack-v3.1.iemod
       patch:
         relative: patches/morpheus562-s-kitpack.diff
   - name: TomeAndBlood
@@ -3063,11 +3082,8 @@ modules:
     location:
       github_user: mleduque
       repository: kjeron_Trap_Overhaul
-      tag: v0.20
-      layout:
-        layout_type: multi_dir
-        dirs:
-          - setup-Trap_Overhaul.tp2
+      tag: v0.20-french
+      patch: trap_overhaul-bonus.diff
   - name: enchant
     description: "Dee's 'Enchant the Missile Launchers: A Small Ranged Weapon Tweak'"
     original_thread: https://forums.beamdog.com/discussion/58374/enchant-the-missile-launchers-ranged-weapon-tweak
@@ -3421,8 +3437,8 @@ modules:
     location:
       github_user: Argent77
       repository: A7-HiddenGameplayOptions
-      release: v4.1
-      asset: A7-HiddenGameplayOptions-v4.1.iemod
+      release: v4.2
+      asset: A7-HiddenGameplayOptions-v4.2.iemod
   - name: "butchery"
     components: #components installé avant SCS, deuxèmeliste pour après SCS
       - 41 # Boucherie de nains dans le donjon d'Irenicus [a installer apres Stratagems]: v5.0.0

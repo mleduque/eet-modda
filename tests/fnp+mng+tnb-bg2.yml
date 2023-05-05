@@ -5,6 +5,14 @@ global:
   lang_dir: "fr_FR"
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
 modules:
+  - name: DlcMerger
+    location:
+      github_user: Argent77
+      repository: A7-DlcMerger
+      release: v1.3
+      asset: lin-A7-DlcMerger-v1.3.zip
+    components:
+      - 1 # Merge DLC into game -> Merge "Siege of Dragonspear"
   - name: TomeAndBlood
     components:
       - 11 # Re-equilibrage des ecoles de magie: 0.9.48
@@ -20,6 +28,8 @@ modules:
       - 40 # Revision des specialistes: 0.9.48
       - 48 # Lancer de sort en armure pour les bardes: 0.9.48
       - 51 # Revision de la  Metamagie -> Metamagie innee, apprise automatiquement par tout le monde: 0.9.48
+      # -61 # Tours de magie -> Tours de magie innés
+      #- 62 # Tours de magie -> Tours de magie de niveau 1
       - 63 # Tours de magie -> Baguette de tour de magie: 0.9.48
       - 66 # Sort de Familier inne: 0.9.48
       - 67 # Choisir son familier: 0.9.48
@@ -30,14 +40,29 @@ modules:
     location:
       github_user: mleduque
       repository: TomeAndBlood
-      tag: "0.9.48-fr"
+      commit: "e6ccc22"
+      #branch: "0.9.48-fr"
   - name: TomeAndBlood
     ignore_warnings: true
     components:
       - 14 # Revision d'Invisibilite et de Vision veritable: 0.9.48
       - 68 # Le mod de Pooky : Infuser les familiers: 0.9.48
+  - name: Will_to_Power
+    components:
+      - 200 # Ajouter le Psioniste, voleur/psion: 2.3.2
+    ignore_warnings: true
+    location:
+      github_user: mleduque
+      repository: Will_to_Power
+      branch: 2.3.3-fr
+  - name: Will_to_Power
+    components:
+      - 300 # Ajouter le Guerrier Psychique, guerrier/psion: 2.3.2
+      - 400 # Ajouter le Psypher, rodeur/psion: 2.3.2
+      - 500 # Ajouter le Cerebromant, mage/psion: 2.3.2
+      - 900 # Mode Dark Sun : Tout le monde est un talent natif: 2.3.2
+      - 950 # Permettre aux clercs multiclasses d'utiliser plus d'armes: 2.3.2
   - name: might_and_guile
-    description: Might And Guile - Main component (warns)
     components:
       - 50 # Deplacer le kit de Cavalier vers la classe de guerrier: 5.2alpha7
       - 55 # Ajouter le Corsaire (kit de guerrier): 5.2alpha7
@@ -67,14 +92,34 @@ modules:
       - 265 # Poings du moine revises: 5.2alpha7
       - 280 # Revision de l'Attaque sournoise: 5.2alpha7
       - 290 # Revision de la progression du TAC0: 5.2alpha7
-      - 400 # Remaniement des Bardes : Bardes multiclasses: 5.2alpha7
     location:
       github_user: mleduque
       repository: Might_and_Guile
       tag: 5.3-fr
+  - name: might_and_guile
+    components:
+      - 400 # Remaniement des Bardes : Bardes multiclasses: 5.2alpha7
+    ignore_warnings: true
   - name: Faiths_and_Powers
-    components: ask
+    components:
+      - 25 # Choisir un systeme de spheres -> nuFnp (Nouveau FnP) : un nouveau système de spheres (moins de spheres, plus equilibre globalement, plus proche du PnP): 0.85sd19
+    ignore_warnings: true
     location:
       github_user: mleduque
       repository: Faiths_and_Powers
-      commit: 1aef3127b32
+      commit: bdfe149339575
+  - name: Faiths_and_Powers
+    components:
+      - 31 # Installer les kits de clerc: 0.85sd19
+      - 33 # Installer les kits de druide: 0.85sd19
+      - 36 # Installer les kits de paladin -> ...pour ceux ci-dessus, PLUS les divinites Neutres/Mauvaises/demi-humaines: 0.85sd19
+      - 45 # Revision de la table de sorts des paladins: 0.85sd19
+      - 75 # Modifier l'utilisabilite des armes et armures pour les pretres: 0.85sd19
+      - 80 # Appliquer le systeme de spheres (REQUIS pour que le systeme de spheres fonctionne): 0.85sd19
+      - 91 # Druides multiclasses: 0.85sd19
+  - name: Faiths_and_Powers
+    components:
+      - 92 # Chamans multiclasses: 0.85sd19
+      - 95 # Kits de clerc multiclasses (installer apres les autres mods de kits !!): 0.85sd19
+      - 99 # Appliquer les kits multiclasses de FnP aux PNJ: 0.85sd19
+    ignore_warnings: true
