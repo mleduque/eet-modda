@@ -978,6 +978,10 @@ modules:
       repository: TowerOfDeception
       release: v4.0.5
       asset: tower-of-deception-v4.0.5.iemod
+  - name: Tidings
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/Dark_Tidings.rar
   - name: SOS # Shadows Over Soubar
     components: ask
     location:
