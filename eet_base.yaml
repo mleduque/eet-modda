@@ -37,6 +37,13 @@ modules:
       file_name: bgee_dir.txt
       content: ../../bg1/game
 
+  - name: infinity_ui
+    components: ask
+    location:
+      github_user: Renegade0
+      repository: InfinityUI
+      tag: v0.42
+
   - name: bggoEET
     components: ask
     location:
@@ -294,24 +301,6 @@ modules:
       github_user: 11jo
       repository: IWD2_EET
       branch: master
-  - name: Icewind_EET
-    installation:
-      after: EET
-      before: A7-TotLM-BG2EE
-    components:
-    location:
-      github_user: 11jo
-      repository: Icewind_EET
-      branch: master
-  - name: d5_iwd_eet_integration
-    installation:
-      after: HOW_EET
-    comment: add Hjollder to Bridge District
-    components: ask
-    location:
-      github_user: subtledoctor
-      repository:  IWD_EET_Integration
-      tag: "0.9.1"
   - name: A7-TotLM-BG2EE
     description: Trial of the Luremaster - Main component (warns)
     components: ask
@@ -926,8 +915,8 @@ modules:
     location:
       github_user: Gitjas
       repository: Solaufeins_Rescue_NPC
-      release: v4.1
-      asset:  solaufeins-rescue-jasteys-solaufein-npc-mod-for-bgii-4.1.iemod
+      release: v4.2
+      asset:  solaufeins-rescue-jasteys-solaufein-npc-mod-for-bgii-4.2.iemod
   - name: TangledIsle
     description: "Athkatlan Grounds: The Tangled Oak Isle"
     components:
@@ -995,6 +984,13 @@ modules:
       github_user: SpellholdStudios
       repository: Shadows_over_Soubar
       commit: ba6514f3b0 # post v1.16 20223-04-05
+  - name: MTS_Crappack
+    description: soubar fixes
+    installation:
+      after: Soubar
+    components:
+      - 22 # Install Charlotte sans Menagerie by Sir BillyBob
+      - 23 # Install All Items Identified in Selence's Shop
   - name: "keldorn_rom"
     components: [0, 2, 8]
     location:
@@ -1034,10 +1030,10 @@ modules:
   - name: TDD
     components: none
     description: The Darkest Days
-    installation: DO NOT install any component, TDDz needs its mod files but does the installation
+    installation:
+      general: DO NOT install any component, TDDz needs its mod files but does the installation
     location:
-      http: http://www.shsforums.net/files/download/323-the-darkest-day-v114/
-      rename: the-darkest-day-v114.rar
+      http: http://europe.iegmc.net/tdd-weidu/TDDv1.14.rar
       layout:
         layout_type: single_dir_plus_tp2
   - name: TDDz
@@ -1062,11 +1058,10 @@ modules:
       eet_patch: http://www.shsforums.net/index.php?app=core&module=attach&section=attach&attach_id=29207
     installation: needs TDD installed
     components:
-    installation: do not install components
     location:
       github_user: mleduque
       repository: AjocMod
-      tag: v1.6.5-mle
+      tag: v1.6.5-mle # this version has BWS patches applied + ikki EET compat patch
   - name: RE
     description: BG2 romantic Encounters
     components: [0, 1, 2, 3, 4, 6, 7, 8, 9, 11, 13, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 38, 39, 41, 42, 43, 45, 46, 47, 50, 52, 53, 54]
@@ -1155,7 +1150,7 @@ modules:
       - 1 # Xulaye's Player Initiated Dialogues
       - 2 # Korgan Fights at the Pits
     location:
-      http: http://www.shsforums.net/files/download/710-xulaye/
+      http: http://europe.iegmc.net/xulaye/Xulaye%20v2.0.zip
       rename: Xulaye_v2.0.zip
   - name: TGC1e
     description: the grey clan candelight(part 1)
@@ -1164,7 +1159,7 @@ modules:
     location:
       github_user: K4thos
       repository: TGC1e
-      commit: 2159a26
+      commit: 02c034d
       layout:
         layout_type: single_dir_plus_tp2
         tp2: Setup-TGC1E.tp2
@@ -1997,13 +1992,7 @@ modules:
     location:
     github_user: RamosPabloA
     repository: NPC_Dusk_MOD
-    tag: v0.9.2
-  - name: MTS_Crappack
-    installation:
-      after: Soubar
-    components:
-      - 22 # Install Charlotte sans Menagerie by Sir BillyBob
-      - 23 # Install All Items Identified in Selence's Shop
+    tag: v0.9.3
 
   #########
   # Spells
@@ -2384,6 +2373,11 @@ modules:
   - name: MTS_Crappack
     components:
       - 15 # Add a simple pipe to the game
+  - name: customs
+    components: ask
+    location:
+      github_user: cgordon
+      repository: customs
 
 
   #########
@@ -2969,7 +2963,7 @@ modules:
     location:
       github_user: OlvynChuru
       repository: Olvyn-Tweaks
-      commit: 7b79db9
+      commit: 1f59527c14 # EET compat fix by Selphira
   - name: DruidGroveMakeover
     components:
       - 0
@@ -3228,6 +3222,29 @@ modules:
       asset: lin-cowledmenace-v1.0.1.zip
 
 
+
+  #########
+  # just before EET_end
+  #########
+  - name: Icewind_EET
+    installation:
+      general: as late as possible in your installation, especially after mods that add NPCs, otherwise there may be problems with quests, dialogs, etc.
+      before: EET_end
+    components:
+    location:
+      github_user: 11jo
+      repository: Icewind_EET
+      branch: master
+  - name: d5_iwd_eet_integration
+    installation:
+      after: Icewind_EET
+      before: EET_end
+    comment: add Hjollder to Bridge District
+    components: ask
+    location:
+      github_user: subtledoctor
+      repository:  IWD_EET_Integration
+      tag: "0.9.1"
 
   #########
   # EET_end

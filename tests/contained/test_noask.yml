@@ -65,7 +65,9 @@ modules:
   # test: ask mode
   - name: Coran
     description: Coran for bg2
-    components: ask
+    components:
+      - 0 # 'Coran NPC MOD for Baldur''s Gate II: v9'
+      - 1 # 'Delete old Coran from the Forest of Tethyr (RECOMMENDED): v9'
     location:
       github_user: Pocket-Plane-Group
       repository: Coran_for_BGII
@@ -257,7 +259,18 @@ modules:
       index: 10
       name: Configure Faiths & Powers
   - name: Faiths_and_Powers
-    components: ask
+    components:
+    - 25 # 'Choosee a Sphere System -> nuFnP: a new sphere system (fewer spheres, more balanced, closer to PnP): 0.85sd19'
+    - 31 # 'Install Cleric kits: 0.85sd19'
+    - 33 # 'Install Druid kits: 0.85sd19'
+    - 36 # 'Install Paladin kits -> ...for all those, PLUS Neutral/Evil/demihuman deities: 0.85sd19'
+    - 45 # 'Revised Paladin Spell Table: 0.85sd19'
+    - 75 # 'Alter Priests'' Weapon/Armor Usability: 0.85sd19'
+    - 80 # 'Apply Sphere System (REQUIRED for the sphere system to work): 0.85sd19'
+    - 91 # 'Multiclass Druids: 0.85sd19'
+    - 92 # 'Multiclass Shamans: 0.85sd19'
+    - 95 # 'Multiclass Cleric kits (install AFTER all other kit mods!!): 0.85sd19'
+    - 99 # 'Apply FnP Multiclass Kits to NPCs: 0.85sd19'
     ignore_warnings: true # no affect added/altered
     location:
       github_user: subtledoctor

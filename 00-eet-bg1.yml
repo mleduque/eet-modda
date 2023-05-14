@@ -19,6 +19,11 @@ modules:
       github_user: Gibberlings3
       repository: EE_Fixpack
       commit: f9906c2-update-it
+  - name: correctFrBG1EE
+    components: ask
+    location:
+      github_user: r-e-d
+      repository: correctfrBG1EE
   - name: bg1ub
     description: BG1 Unfinished Business
     version:

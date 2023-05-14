@@ -14,7 +14,7 @@ modules:
       - 1 # Xulaye's Player Initiated Dialogues
       - 2 # Korgan Fights at the Pits
     location:
-      http: http://www.shsforums.net/files/download/710-xulaye/
+      http: http://europe.iegmc.net/xulaye/Xulaye%20v2.0.zip
       rename: Xulaye_v2.0.zip
   # One local mod
   - name: "voloquest" # IM10
@@ -113,7 +113,3 @@ modules:
     component:
       index: 20
       name: whatever_02
-  - file_mod: single_file_mod
-    from:
-      local: single_file_mod/some_file.txt
-    to: override

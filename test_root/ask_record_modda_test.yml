@@ -1,0 +1,82 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+  local_mods: static
+  local_files: static_files
+modules:
+  # One http mod
+  - name: "xulaye"
+    components: ask
+    location:
+      http: http://europe.iegmc.net/xulaye/Xulaye%20v2.0.zip
+      rename: Xulaye_v2.0.zip
+  # One local mod
+  - name: "voloquest" # IM10
+    components: ask
+    location:
+      local: im10_voloquest.zip
+  # One absolute mod
+  - name: "emad"
+    description: every mod and dog
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/emad_v11.zip
+  # One github branch mod
+  - name: spell_rev
+    components:
+      - 0   # Spell Revisions
+    location:
+      github_user: Gibberlings3
+      repository: SpellRevisions
+      branch: master
+    ignore_warnings: true
+  # One release github mod
+  - name: iwdification
+    components: ask
+    location:
+      github_user: Gibberlings3
+      repository: iwdification
+      release: v5
+      asset:  iwdification-v5.iemod
+  # One tag github mod
+  # with patch
+  - name: Magic_Battles_Revised
+    components: ask
+    location:
+      github_user: UnearthedArcana
+      repository: magic_battles_revised
+      tag: "1.5"
+      patch:
+        relative: patches/mbr_spell_thrust_lv2.diff
+  - name: TDD
+    components: none
+    description: The Darkest Days
+    installation:
+      general: DO NOT install any component, TDDz needs its mod files but does the installation
+    location:
+      http: http://europe.iegmc.net/tdd-weidu/TDDv1.14.rar
+      layout:
+        layout_type: single_dir_plus_tp2
+  - name: TDDz
+    description: TDDz is not a mod, it is just an way to install TDD for BG2EE with Worldmap and Extended Animation.
+    components: ask
+    location:
+      github_user: InfinityMods
+      repository: TDDz
+      tag: v1.3.1
+  - gen_mod: generated_01
+    files:
+      - local: "generated_01_source"
+    component:
+      index: 10
+      name: whatever
+  - gen_mod: generated_02
+    files:
+      - local: generated_02_source
+        glob: "*.txt"
+    component:
+      index: 20
+      name: whatever_02
