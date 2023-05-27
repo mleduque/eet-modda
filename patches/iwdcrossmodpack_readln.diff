@@ -1,0 +1,15 @@
+--- iwdcrossmodpack/iwdcrossmodpack.tp2
++++ iwdcrossmodpack/iwdcrossmodpack.tp2
+@@ -868,11 +868,7 @@ PRINT ~Please choose one of the following:
+ [1] Yes
+ [2] No~
+ 
+-OUTER_SPRINT ~romance~ ~placeholder_value~
+-OUTER_WHILE (!(IS_AN_INT ~romance~) OR (~romance~ > 0x2) OR (~romance~ < 0x1)) BEGIN
+-  PRINT ~Please select 1 or 2 and press Enter.~
+-  ACTION_READLN ~romance~
+-END
++OUTER_SPRINT ~romance~ ~2~
+       ACTION_IF ("romance" = 1) THEN BEGIN
+ 	  
+ 	EXTEND_TOP ~BALDUR.BCS~ ~%MOD_FOLDER%/romanceconflict/baf/baldur.baf~

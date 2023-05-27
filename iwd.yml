@@ -132,7 +132,7 @@ modules:
     components: ~
     location:
       http: http://america.iegmc.net/g3//lin-IWDCrossmodPack-v1.4.tar.gz
-      patch: path/iwdcrossmodpack_readln.diff
+      patch: patch/iwdcrossmodpack_readln.diff
   # Use PPE instead
   #- name: MinorNPCPortraitsforIWDEE
   #  components: ~
