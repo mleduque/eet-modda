@@ -18,17 +18,20 @@ modules:
     location:
       github_user: Gibberlings3
       repository: EE_Fixpack
-      commit: f9906c2-update-it
+      commit: a828d45-update-it
   - name: correctFrBG1EE
     components: ask
     location:
       github_user: r-e-d
       repository: correctfrBG1EE
+      commit: 9d1fa51-update-it
   - name: bg1ub
     description: BG1 Unfinished Business
     version:
-    location: { github_user: Pocket-Plane-Group, repository: bg1ub, release: v16.4,
-                asset: bg1-unfinished-business-v16.4.zip }
+    location:
+      github_user: Pocket-Plane-Group
+      repository: bg1ub
+      commit: bcb1651
     components:
       - 0  # Ice Island Level Two Restoration
       - 11 # Scar and the Sashenstar's Daughter
@@ -47,23 +50,20 @@ modules:
       - 33 # Mal-Kalen, the Ulcaster Ghost
       - 34  # Chapter 6 Dialogue Restorations
   - name: BG1Aerie
-    version: 1.1-fr
     components:
       - 0 # Aerie for BG:EE
     location:
-      github_user: mleduque
-      repository: aerie-bg1
-      branch: french
-      layout:
-        layout_type: single_dir_plus_tp2
+      github_user: The-Gate-Project
+      repository: AerieBG1
+      commit: c036b5f-updateit
   - name: drizztsaga
     components:
       - 0 # The Drizzt Saga pour BGEE/Tutu/BGT -> Version par defaut : zones connectees par des declencheurs de voyage
       - 3  # Debut repousse : Drizzt revient apres la Tour de Durlag
     location:
-      github_user: MattyGroove
-      repository: DrizztSaga
-      tag: V3.02
+      github_user: Black-Wyrm-Lair
+      repository: Drizzt-Saga
+      commit: 14fc2ac-updateit
   - name: soa # The Stone of Askavar
     components: [0]
     version: "2.2"
@@ -71,12 +71,19 @@ modules:
       github_user: mleduque
       repository: redcarnelian_stone_of_askavar
       tag: v2.2
+  - name: DarkHorizonsBGee
+    components: ask
+    location:
+      github_user: The-Gate-Project
+      repository: DarkHorizons
+      commit: 205e256-updateit
   - name: saradas_magic
     components:
       - 0 # Saradas magic
     location:
-      http: https://download1325.mediafire.com/9oh1se9asuug/rg5cyypji1om22o/Saradas%2520Magic%2520ENG%2520V_1.1.zip
-      rename: Saradas_Magic_ENG_V_1.1.zip
+      github_user: The-Gate-Project
+      repository: Saradas_Magic_for_BGEE
+      commit: f770f7f-updateit
   - name: Sirene
     components:
       - 0   # Sirene NPC for Baldur's Gate: Enhanced Edition
@@ -84,4 +91,4 @@ modules:
     location:
       github_user: ArtemiusI
       repository: Sirene-NPC
-      tag: v2.91
+      tag: v3.0a

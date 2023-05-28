@@ -23,7 +23,7 @@ modules:
     location:
       github_user: mleduque
       repository: EET
-      commit: c135086 # 2023-04-27
+      commit: c135086-updateit # 2023-045-27
       layout:
           layout_type: multi_dir
           dirs:
@@ -37,12 +37,12 @@ modules:
       file_name: bgee_dir.txt
       content: ../../bg1/game
 
-  - name: infinity_ui
+  - name: infinity_ui #orm aybe dragonspear-ui++
     components: ask
     location:
       github_user: Renegade0
       repository: InfinityUI
-      tag: v0.42
+      tag: v0.42-updateit
 
   - name: bggoEET
     components: ask
@@ -50,6 +50,7 @@ modules:
       github_user: SpellholdStudios
       repository: BGGOEET
       branch: master
+
   #########
   # story
   #########
@@ -135,8 +136,11 @@ modules:
     location:
       github_user: Pocket-Plane-Group
       repository: UnfinishedBusiness
-      release: v28
-      asset: lin-ub-v28.tar.gz
+      commit: 9cceb75
+      replace:
+        file_glob: ["*.tp2"]
+        replace: "^ASK_EVERY_COMPONENT$"
+        with: ""
   - name: mih_fr
     description: Made in Heaven - Fixes & Restoration; 'fixes' part only
     installation:
@@ -385,8 +389,7 @@ modules:
     location:
       github_user: Gitjas
       repository: Ascalons_Questpack
-      release: v4.5
-      asset: ascalons-questpack-4.5.iemod
+      commit: c2b5139
   #- name: BG_Travel
   #  description: New travel system between Baldur's Gate City areas
   #  comment: Original location http://athkatla.cob-bg.pl/download.php?id=1595 (BG_Travel_v2.1.rar)
@@ -904,8 +907,8 @@ modules:
     location:
       github_user: Gitjas
       repository: Brages_Redemption
-      release: v8.0
-      asset: brages-redemption-brage-npc-for-the-whole-baldurs-gate-epic-8.0.iemod
+      release: v8.1
+      asset:  brages-redemption-brage-npc-8.2.iemod
       patch:
         relative: patches/brage_less_wait.diff
   - name: "c#solaufein"
@@ -981,13 +984,14 @@ modules:
   - name: Tidings
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/static/Dark_Tidings.rar
+      http: https://baldurs-gate.de/index.php?resources/dark-tidings.65/download
+      rename: DarkTidings.rar
   - name: SOS # Shadows Over Soubar
     components: ask
     location:
       github_user: SpellholdStudios
       repository: Shadows_over_Soubar
-      commit: ba6514f3b0 # post v1.16 20223-04-05
+      commit: 5377c4c # post v1.16 2023-05-27
   - name: MTS_Crappack
     description: soubar fixes
     installation:
@@ -1388,8 +1392,8 @@ modules:
     location:
       github_user: Gitjas
       repository: Ascalons_Breagar
-      release: v12.1.0
-      asset: ascalons-breagar-12.1.0.iemod
+      release: v12.2.0
+      asset: ascalons-breagar-12.2.0.iemod
       patch:
         relative: breagar-wait-here.diff
   - name: c#brandock
@@ -1985,6 +1989,10 @@ modules:
       - 1 # Faldorn NPC for BG2EE: Player-Initiated Dialogues (PIDs)
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/FaldornBG2 v1.1.zip
+  - name: Lhannd
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/Lhannd v1.0.zip
   - name: rose
   - name: SkitiaRomanceTweak
     components: [0]
@@ -2257,10 +2265,13 @@ modules:
       release: v2.0.0
       asset: saradas-magic-for-bg2-v2.0.0.iemod
   - name: rttitempack
+    description: Deratiseur's item pack (Ribald)
     components:
       - 0
     location:
-      path: /home/mick/Games/modda-cache/static/RTTItemPack_v1.3.zip
+      github_user: 11jo
+      repository: RTT-ItemPack
+      tag: v.1.4
   - name: iwditempack
     components:
       - 0 # Talisman du Loup Noir
@@ -2701,17 +2712,12 @@ modules:
       github_user: mleduque
       repository: Faiths_and_Powers
       tag: 0.85sd19-fr
-      layout:
-          layout_type: multi_dir
-          dirs:
-            - faiths_and_powers
-            - fnp_multiclass
       patch:
         relative: patches/fnp_configure.diff
   - name: 5E_spellcasting
     installation:
       after: Tome & Blood and Faiths & Powers
-      before: Might & Guile and Faiths & Powers Multiclass.
+      before: Might & Guile
       general: >
         1. Casting slots are determined at install time
         2. Memorization slots are determined at runtime

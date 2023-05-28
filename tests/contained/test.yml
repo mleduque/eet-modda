@@ -35,8 +35,11 @@ modules:
     location:
       github_user: Pocket-Plane-Group
       repository: UnfinishedBusiness
-      release: v28
-      asset: lin-ub-v28.tar.gz
+      commit: 9cceb75
+      replace:
+        file_globs: ["*.tp2"]
+        replace: "^ASK_EVERY_COMPONENT$"
+        with: ""
   # test: none (components) mode
   # test: http download
   - name: TDD
@@ -264,7 +267,7 @@ modules:
       repository: Faiths_and_Powers
       tag: 0.85sd19
   - name: 5E_spellcasting
-    comment: It should be installed after Tome & Blood and Faiths & Powers; but before Might & Guile and Faiths & Powers Multiclass.
+    comment: It should be installed after Tome & Blood and Faiths & Powers; but before Might & Guile
     components:
       - 100 # Change All Casters to 5E System
       - 901 # Set Bonus Spell Slot Items to Work for 5E Casters
