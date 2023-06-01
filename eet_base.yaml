@@ -1412,7 +1412,7 @@ modules:
         (crossmod component) Alternatives, BGQE, BG1NPC, Brage's Redemption, EndlessBG1, EET, Gavin BG1, Imoen4Ever, NPC Strongholds, Solaufein's Rescue, The Calling, The Lure of Sirine's Call, Transitions, Valerie NPC
         (atweaks compatibility component) after atweaks
       before: (main component)Grey the Dog
-    components:
+    components: ask
       #- 0  # Brandock the Mage, NPC for BG:EE, BGII:EE, EET, and BGT
       #- 23 # Default Portrait: Insecure, by Acifer (is included in the main component)
       #- 30 # Use Dialogue Style for SoD Banter
@@ -1420,8 +1420,8 @@ modules:
     location:
       github_user: Gitjas
       repository: Brandock_the_Mage
-      release: v1.1
-      asset: brandock-the-mage-v1.1.iemod
+      release: v1.3
+      asset: brandock-the-mage-v1.3.iemod
   - name: c#husam
     components: ask
     location:
