@@ -49,13 +49,6 @@ modules:
       - 32 # Svlast, the Fallen Paladin Encounter
       - 33 # Mal-Kalen, the Ulcaster Ghost
       - 34  # Chapter 6 Dialogue Restorations
-  - name: BG1Aerie
-    components:
-      - 0 # Aerie for BG:EE
-    location:
-      github_user: The-Gate-Project
-      repository: AerieBG1
-      commit: c036b5f-updateit
   - name: drizztsaga
     components:
       - 0 # The Drizzt Saga pour BGEE/Tutu/BGT -> Version par defaut : zones connectees par des declencheurs de voyage
@@ -71,6 +64,13 @@ modules:
       github_user: mleduque
       repository: redcarnelian_stone_of_askavar
       tag: v2.2
+  - name: Margarita
+    components:
+      - 0 # Margarita for Baldur's Gate: Enhanced Edition
+    location:
+      github_user: mleduque
+      repository: Xavioria_Margarita
+      tag: v1.0
   - name: DarkHorizonsBGee
     components: ask
     location:

@@ -72,8 +72,8 @@ modules:
     location:
       github_user:  InfinityMods
       repository: Ascension
-      release: "2.0.23"
-      asset: ascension-2.0.23.iemod
+      release: "2.0.24"
+      asset: ascension-2.0.24.iemod
     ignore_warnings: true
   - name: ascension
     description: ascension - the other components
@@ -171,8 +171,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: The_Boareskyr_Bridge_Scene
-      release: v4.0
-      asset: the-boareskyr-bridge-scene-v4.iemod
+      release: v5
+      asset:  the-boareskyr-bridge-scene-v5.iemod
   - name: turnabout
     components:
       - 0 # Ascension: Turnabout
@@ -389,7 +389,8 @@ modules:
     location:
       github_user: Gitjas
       repository: Ascalons_Questpack
-      commit: c2b5139
+      release: v5.0
+      asset:  ascalons-questpack-5.0.iemod
   #- name: BG_Travel
   #  description: New travel system between Baldur's Gate City areas
   #  comment: Original location http://athkatla.cob-bg.pl/download.php?id=1595 (BG_Travel_v2.1.rar)
@@ -474,7 +475,7 @@ modules:
     description: BG2 npc - dwarven fighter/mage/thief
     components:
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Dvaradime v1.01.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Dvaradime v1.3.zip
   - name: InLoveUndeath
     description: BG2 npc - Xzelë Melaenitt, the paladin of Evening Glory (beauty in undeath)
     components:
@@ -694,8 +695,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Jasteys_SoD_Tweakpack
-      release: v10.2
-      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v10.2.iemod
+      release: v11
+      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v11.iemod
   - name: themed_tweaks
     components:
       - 60  # SoD - Give Imoen a special wand for palace attack scene
@@ -774,6 +775,14 @@ modules:
       repository: BG1NPC
       release: v30
       asset: the-bg1npc-project-v30.iemod
+  - name: BG1Aerie
+    components:
+      - 0 # Aerie for BG:EE
+    location:
+      github_user: The-Gate-Project
+      repository: AerieBG1
+      release: v2.0
+      asset: aerie-in-bgee-2.0.iemod
   - name: garrick-tt
     components:
       - 0 # Garrick : les contes d'un troubadour
@@ -1385,10 +1394,10 @@ modules:
         - c#anotherfinehell
         - endlessbg1
     components:
-      - 0 # Breagar: Contents
-      - 2 # Breagar: Crossmods and PID
-      - 12 # Change Breagar's dialog timer? (Default is 30 minutes between dialogues.) - 15 minutes real time between talks
-      # - 20 # Install Alternative Portrait from v4.X? (Default is Original Art by Nix)
+      #- 0 # Breagar: Contents
+      #- 2 # Breagar: Crossmods and PID
+      #- 12 # Change Breagar's dialog timer? (Default is 30 minutes between dialogues.) - 15 minutes real time between talks
+      ## - 20 # Install Alternative Portrait from v4.X? (Default is Original Art by Nix)
     location:
       github_user: Gitjas
       repository: Ascalons_Breagar
@@ -1884,7 +1893,7 @@ modules:
       - 0 # Fhaugy - Baldur's Gate 2: EE NPC
       - 1 # Fhaugy: Player-Initiated Dialogues (PIDs)
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Fhaugy v0.8.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Fhaugy v1.0.zip
   - name: banterpack
     components:
       - 0 # Pack de Dialogues du Pocket Plane Group pour BG2 : SoA
@@ -1988,12 +1997,15 @@ modules:
       - 0 # Faldorn NPC for BG2EE
       - 1 # Faldorn NPC for BG2EE: Player-Initiated Dialogues (PIDs)
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/FaldornBG2 v1.1.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/FaldornBG2 v1.3.zip
   - name: Lhannd
     components: ask
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/Lhannd v1.0.zip
-  - name: rose
+  - name: https://thecompany.westanedigital.com/play/pics/sophie/topless.jpg
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/fyalvara v1.0.zip
   - name: SkitiaRomanceTweak
     components: [0]
     location:
@@ -3654,7 +3666,7 @@ modules:
     location:
       github_user: mleduque
       repository: jmerry_jtweaks
-      tag: v3.0
+      tag: v3.1
   - name: HouseTweaks
     description: House Rule TweakPack
     comment: put before tb_tweaks cCON component so regen is changed (house) and the rest comes from tb_tweaks
