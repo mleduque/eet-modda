@@ -77,9 +77,16 @@ modules:
   - name: DarkHorizonsBGee
     components:
     location:
-      github_user: 11jo
+      github_user: The-Gate-Project
       repository: DarkHorizonsBGee
-      tag: V.215
+      commit: 205e256 # 2023-06-08
+  - name: saradas_magic
+    components:
+      - 0 # Saradas magic
+    location:
+      github_user: The-Gate-Project
+      repository: Saradas_Magic_for_BGEE
+      commit: f770f7f-updateit
   - name: Sirene
     components:
       - 0   # Sirene NPC for Baldur's Gate: Enhanced Edition
