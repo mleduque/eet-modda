@@ -79,7 +79,7 @@ modules:
     location:
       github_user: The-Gate-Project
       repository: DarkHorizonsBGee
-      commit: 205e256 # 2023-06-08
+      commit: 205e256-updateit # 2023-06-08
   - name: saradas_magic
     components:
       - 0 # Saradas magic

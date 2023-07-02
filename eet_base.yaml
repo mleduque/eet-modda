@@ -389,8 +389,8 @@ modules:
     location:
       github_user: Gitjas
       repository: Ascalons_Questpack
-      release: v5.0
-      asset:  ascalons-questpack-5.0.iemod
+      release: v5.1
+      asset:  ascalons-questpack-5.1.iemod
   #- name: BG_Travel
   #  description: New travel system between Baldur's Gate City areas
   #  comment: Original location http://athkatla.cob-bg.pl/download.php?id=1595 (BG_Travel_v2.1.rar)
@@ -470,7 +470,7 @@ modules:
       - 2 # The Journey to the Whin Hill: add the optional minor joinable companion - Afu-Zuuvi
       - 3 # The Journey to the Whin Hill: Player-Initiated Dialogues for the optional companion - Afu-Zuuvi
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/WhinHill v1.0.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/WhinHill v1.1.zip
   - name: Dvaradime
     description: BG2 npc - dwarven fighter/mage/thief
     components:
@@ -543,8 +543,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: BG1_Romantic_Encounters
-      release: v10.1
-      asset:  baldurs-gate-romantic-encounters-modification-bg1re-10.1.iemod
+      release: v10.2
+      asset:  baldurs-gate-romantic-encounters-modification-bg1re-10.2.iemod
   - name: wheels
     description: Wheels Of Prophecy
     components:
@@ -566,8 +566,8 @@ modules:
     location:
       github_user: Pocket-Plane-Group
       repository: Assassinations
-      release: v17
-      asset: assassinations-v17.iemod
+      release: v18
+      asset: assassinations-v18.iemod
   - name: BackBrynnlaw
     components: [0] # Mod Retour Ã  Brynnlaw mod pour Baldur's Gate II: v9
     location:
@@ -695,8 +695,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Jasteys_SoD_Tweakpack
-      release: v11
-      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v11.iemod
+      release: v11.1
+      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v11.1.iemod
   - name: themed_tweaks
     components:
       - 60  # SoD - Give Imoen a special wand for palace attack scene
@@ -897,6 +897,14 @@ modules:
       github_user: mleduque
       repository: quieter_sirene
       tag: v0.9
+  - name: ShukBG1EE
+    component:
+      - 0 # Mod de Shuk le gobelin - V 1.0
+    location:
+      github_user: 11jo
+      repository: ShukBGEE
+      branch: master
+      refresh: 1day
   - name: bst
     components:
       - 0 # The BS Company presents Balduran's Seatower: vEAOB.6
@@ -913,6 +921,8 @@ modules:
       - 0 # Brage's Redemption - Brage Joinable NPC for Baldur's Gate Saga: 8.0
       - 1 # Assign the mod's portrait and soundset to the original Brage in game: 8.0
       - 10 # Brage's Redemption: Crossmod Content
+      - todo crossmlod after thalantyr
+      - todo brage after finch
     location:
       github_user: Gitjas
       repository: Brages_Redemption
@@ -993,8 +1003,7 @@ modules:
   - name: Tidings
     components: ask
     location:
-      http: https://baldurs-gate.de/index.php?resources/dark-tidings.65/download
-      rename: DarkTidings.rar
+      path: /home/mick/Games/modda-cache/static/Dark_Tidings_1.4.rar
   - name: SOS # Shadows Over Soubar
     components: ask
     location:
@@ -1885,8 +1894,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Ajantis_BG1_Expansion
-      release: v19.1
-      asset: ajantis-bg1-expansion-modification-19.1.iemod
+      release: v19.2
+      asset: ajantis-bg1-expansion-modification-19.2.iemod
   - name: SkieCost # install late because adds crossmod banters with Yvette & Foundling
     description: "Skie: The Cost of One Girl’s Soul"
     components:
@@ -1939,6 +1948,13 @@ modules:
       repository: IEP_Extended_Banter
       release: v5.9
       asset: iep-extended-banters-v5.9.iemod
+  - name: kivan
+    components: ask
+    location:
+      github_user: Gibberlings3
+      repository: Kivan_and_Deheriana
+      release: v18
+      asset:  kivan-and-deheriana-companions-for-bg2-v18.iemod
   - name: BG1NPCSoA
     description: BG1 NPCs in BG2
     installation:
@@ -1959,11 +1975,6 @@ modules:
       github_user: SpellholdStudios
       repository: BG1_NPCs_for_SoA_-_ToB
       commit: dafa3ef # 2023-06-09
-  - name: BG1NPCSoA
-    description: BG1 NPCs in BG2 - components with warnings
-    components:
-      - 11 # ToB-part for Shar-Teel or/and Yeslick, Garrick, Branwen, Skie, Eldoth: 13.5
-    ignore_warnings: true
   - name: TS_sime
     components:
       - 0 # Vlad's Sime NPC: 0.8
@@ -2424,7 +2435,22 @@ modules:
     location:
       github_user: cgordon
       repository: customs
-
+  - name: DGItems
+    components:
+      - 0 # Mod DGItems (Necessite BG2-ToB, BG2EE ou EET)
+    location:
+      github_user: 11jo
+      repository: DGItems
+      branch: master
+      refresh: 1day
+  - name: IRStore
+    components:
+      - 0 # Mod IRStore (Necessite BG2ToB ou BG2EE)
+    location:
+      github_user: 11jo
+      repository: IRStore
+      branch: master
+      refresh: 1day
 
   #########
   # Early tweaks
@@ -3787,3 +3813,10 @@ modules:
       repository: generalized_biffing
       release: v2.6
       asset: generalized-biffing-v2.6.iemods
+  - name: cd_icpp
+    components: ask
+    location:
+      github_user: Gibberlings3
+      repository: Infinity_Collection_Portrait_Pack
+      release: v2
+      asset: infinity-collection-portrait-pack-v2.iemod
