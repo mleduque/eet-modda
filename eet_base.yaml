@@ -14,6 +14,7 @@ modules:
       github_user: r-e-d
       repository: correctfrBG2EE
       branch: master
+      refresh: 2days
       precopy:
         command: bash
         subdir: correctfrBG2EE-master
@@ -23,7 +24,8 @@ modules:
     location:
       github_user: mleduque
       repository: EET
-      commit: c135086-updateit # 2023-045-27
+      branch: master
+      refresh: 2days
       layout:
           layout_type: multi_dir
           dirs:
@@ -42,7 +44,8 @@ modules:
     location:
       github_user: Renegade0
       repository: InfinityUI
-      tag: v0.42-updateit
+      branch: master
+      refresh: 1day
 
   - name: bggoEET
     components: ask
@@ -50,6 +53,7 @@ modules:
       github_user: SpellholdStudios
       repository: BGGOEET
       branch: master
+      refresh: 1day
 
   #########
   # story
@@ -64,7 +68,7 @@ modules:
     location:
       github_user: UnearthedArcana
       repository: BP_in_BG
-      tag: "0.9.2"
+      tag: "0.9.3"
   - name: ascension
     description: ascension - main component -> WARNs no effects added to SPPR403.spl | SPWI306.spl | spermel.itm
     components:
@@ -72,8 +76,8 @@ modules:
     location:
       github_user:  InfinityMods
       repository: Ascension
-      release: "2.0.24"
-      asset: ascension-2.0.24.iemod
+      release: "2.0.26"
+      asset: ascension-2.0.26.iemod
     ignore_warnings: true
   - name: ascension
     description: ascension - the other components
@@ -470,7 +474,7 @@ modules:
       - 2 # The Journey to the Whin Hill: add the optional minor joinable companion - Afu-Zuuvi
       - 3 # The Journey to the Whin Hill: Player-Initiated Dialogues for the optional companion - Afu-Zuuvi
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/WhinHill v1.1.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/WhinHill v1.2.zip
   - name: Dvaradime
     description: BG2 npc - dwarven fighter/mage/thief
     components:
@@ -773,8 +777,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: BG1NPC
-      release: v30
-      asset: the-bg1npc-project-v30.iemod
+      release: v31
+      asset: the-bg1npc-project-v31.iemod
   - name: BG1Aerie
     components:
       - 0 # Aerie for BG:EE
@@ -1148,7 +1152,7 @@ modules:
       - 1000 # The Beaurin Legacy for BG2:SoA & ToB & BGII:EE
       - 3010 # Minyae's Portrait -> Change Minyae's portrait to alternative by TamikaProud at DeviantArt
     location:
-      path: /home/mick/Games/modda-cache/static/lin-TheBeaurinLegacy-v5.2.1.tar.gz
+      path: /home/mick/Games/modda-cache/static/lin-TheBeaurinLegacy-v5.3.tar.gz
   - name: "voloquest" # IM10
     components: [0]
     location:
@@ -1201,8 +1205,8 @@ modules:
     location:
       github_user: GraionDilach
       repository: ExtraExpandedEnhancedEncounters
-      release: "4.0"
-      asset: extra-enhanced-expanded-encounters-4.0.iemod
+      release: "4.1"
+      asset: extra-enhanced-expanded-encounters-4.1.iemod
       patch:
         relative: patches/ExtraExpandedEnhancedEncouter-reducegnolls.diff
   - name: gbthfkp
@@ -1251,13 +1255,6 @@ modules:
   #    github_user: SpellholdStudios
   #    repository: Check_the_Bodies
   #    commit: be5c6e0 # single fix over 3.0
-  - name: Tactics-Remix
-    components:
-    location:
-      github_user: Gibberlings3
-      repository: Tactics-Remix
-      release: 0.3-alpha
-      asset: tactics-remix-v0.3-alpha.iemod
   - name: gorgon
     components:
     location:
@@ -2031,10 +2028,14 @@ modules:
     components: ask
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/Lhannd v1.0.zip
-  - name: https://thecompany.westanedigital.com/play/pics/sophie/topless.jpg
+  - name: fyalvara
     components: ask
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/fyalvara v1.0.zip
+  - name: JuniperAndTheStoneLeech
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/JuniperAndTheStoneLeech v1.0.zip
   - name: SkitiaRomanceTweak
     components: [0]
     location:
@@ -2046,7 +2047,33 @@ modules:
     location:
     github_user: RamosPabloA
     repository: NPC_Dusk_MOD
-    tag: v0.9.4--overrides-ribald-incompat
+    tag: v1.0.0-wait-for-1.1
+  - name: ChaosKnight
+    installation:
+      before: Askaria
+    components:
+      - 0 # Installer le Seigneur du Chaos, Kit pour BGT, BGEE, BG2EE, IWDEE ou EET et Jacob, Npc pour BGT, BGEE ou EET
+    location:
+      github_user: The-Gate-Project
+      repository: Askaria-Quest_ChaosKnight-kit
+      branch: master
+      refresh: 1day
+  - name: Askaria
+    components:
+      - 0 # Askaria Quest pour BGT, BGEE ou EET
+    location:
+      github_user: The-Gate-Project
+      repository: Askaria-Quest_ChaosKnight-kit
+      branch: master
+      refresh: 1day
+  - name: Ishlilkamod
+    components:
+      - 0 # Ishlilka mod for BGSoD and EET
+    location:
+      githubuser: The-Gate-Project
+      repository: Ishlilka_The-Wizard-Slayer
+      branch: master
+      refresh: 1day
 
   #########
   # Spells
@@ -2063,7 +2090,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: SpellRevisions
-      commit: 642a450
+      branch: master
+      refresh: 8hours
   - name: iwdification
     components:
       - 10 # Icewind Dale Casting Graphics (Andyr): Release Candidate 2
@@ -2279,7 +2307,8 @@ modules:
     location:
       github_user: ArtemiusI
       repository: Bardic-Wonders
-      tag: v2.5
+      branch: master
+      refresh: 2days
   - name: A7#ImprovedArcher
     components:
       - 0   # Profil d'Archer ameliore
@@ -2292,11 +2321,13 @@ modules:
       repository: A7-ImprovedArcher
       commit: 7b291cd
   - name: saradas_magic
-    components: ask
+    components:
+      - 0 # saradas_magic for BGEE / EET
     location:
       github_user: The-Gate-Project
       repository: Saradas_Magic_for_BGEE
-      commit: 80a2479 # 2023-05-05
+      branch: master
+      refresh: 1day
   - name: saradas_magic_2
     components:
       - 1 # Saradas Magic NPC Mod for BGII -> Saradas has a mage sprite (optional)
@@ -2451,6 +2482,14 @@ modules:
       repository: IRStore
       branch: master
       refresh: 1day
+  - name: customs
+    components:
+      - 0 # Composant principal de Sword Coast Customs
+    location:
+      github_user: /cgordon
+      repository: customs
+      branch: master
+      refresh: 2days
 
   #########
   # Early tweaks
@@ -2513,9 +2552,9 @@ modules:
       #- 4010 # Ajouter un jet de sauvegarde pour les effets d'absorption de niveau: 1.5.4
       #- 4020 # AmÃ©liorer les valeurs de caractÃ©ristiques des monstres: 1.5.4
     location:
-      github_user: subtledoctor
+      github_user: mleduque
       repository: d5_Random_Tweaks
-      tag: "1.6"
+      branch: "1.6.1-fr"
   - name: d5_random_tweaks
     description: SubtleDoctor's Random Tweaks - components with warnings
     components:
@@ -2593,7 +2632,8 @@ modules:
     location:
       github_user: ArtemiusI
       repository: The-Artisan-s-Kitpack
-      tag: v3.6a
+      branch: master
+      refresh: 2days
       patch:
         relative: patches/ArtisansKitPack-fix_2da.diff
   - name: A7-ChaosSorcerer
@@ -2647,8 +2687,8 @@ modules:
     location:
       github_user:  D2-mods
       repository: The-Workshop-Kitpack
-      release: "3.1"
-      asset:  the-workshop-kitpack-3.1.iemod
+      release: v4.0a
+      asset: the-workshop-kitpack-4.0.iemod
   - name: shadowadept
     description: shadowadept - components without warningq
     components:
@@ -2709,7 +2749,7 @@ modules:
     location:
       github_user: mleduque
       repository: TomeAndBlood
-      branch: "0.9.48-fr"
+      branch: "0.9.49-fr"
   - name: TomeAndBlood
     description: Tome And Blood (warning components)
     components:
@@ -2767,7 +2807,7 @@ modules:
     location:
       github_user: mleduque
       repository: Faiths_and_Powers
-      tag: 0.85sd19-fr
+      tag: 0.85sd20-fr
       patch:
         relative: patches/fnp_configure.diff
   - name: 5E_spellcasting
@@ -2831,7 +2871,7 @@ modules:
     location:
       github_user: mleduque
       repository: Might_and_Guile
-      branch: 5.3-fr
+      tag: 5.3.1-fr
       patch:
         relative: patches/mng-multibard-shools.diff
   - name: might_and_guile
@@ -2882,9 +2922,10 @@ modules:
       - 2160 # Remove Delay from Improved Haste Spells
       - 2200 # Familiars can sort magical scrolls
     location:
-      github_user: mleduque
-      repository: Klatu_tweaks_and_fixes
-      branch: main
+      github_user: The-Gate-Project
+      repository: klatu-tweaks-and-fixes
+      branch: master
+      refresh: 1day
       patch:
         relative: patches/klatu-fix-manual_of_war.diff
   - name: klatu
@@ -3487,7 +3528,7 @@ modules:
     location:
       github_user: mleduque
       repository: Scales_of_Balance
-      tag: "6.5a12-fr"
+      tag: "6.6-fr"
       patch:
         relative: patches/scales-config.diff
   - name: forgotten-armament
@@ -3523,6 +3564,13 @@ modules:
       repository: A7-HiddenGameplayOptions
       release: v4.2
       asset: A7-HiddenGameplayOptions-v4.2.iemod
+  - name: Tactics-Remix
+    components:
+    location:
+      github_user: Gibberlings3
+      repository: Tactics-Remix
+      release: 0.3-alpha
+      asset: tactics-remix-v0.3-alpha.iemod
   - name: "butchery"
     components: #components installé avant SCS, deuxèmeliste pour après SCS
       - 41 # Boucherie de nains dans le donjon d'Irenicus [a installer apres Stratagems]: v5.0.0

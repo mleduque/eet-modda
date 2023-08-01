@@ -9,7 +9,7 @@ modules:
     components: ask
     #ignore_warnings: true # all except 31 emit no effect changed/added
     location:
-      github_user: subtledoctor
+      github_user: mleduque
       repository: Faiths_and_Powers
-      tag: 0.85sd19
+      tag: 0.85sd19-fr
 
