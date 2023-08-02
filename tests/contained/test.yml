@@ -7,6 +7,20 @@ global:
   local_mods: mods
   local_patches: patches
   local_files: files
+locations:
+  ub:
+    github_user: Pocket-Plane-Group
+    repository: UnfinishedBusiness
+    commit: 9cceb75
+    replace:
+      - file_globs: ["*.tp2"]
+        replace: "^ASK_EVERY_COMPONENT$"
+        with: ""
+  TDD-iegmc:
+    http: http://europe.iegmc.net/tdd-weidu/TDDv1.14.rar
+    layout:
+      layout_type: single_dir_plus_tp2
+
 modules:
   - name: ub
     description: Unfinished Business
@@ -32,14 +46,7 @@ modules:
       - 23 # Feralan Kit: v28
       - 24 # Sarevok's Remorse: v28
       - 25 # The Murder of Acton Balthis, by Kulyok: v28
-    location:
-      github_user: Pocket-Plane-Group
-      repository: UnfinishedBusiness
-      commit: 9cceb75
-      replace:
-        file_globs: ["*.tp2"]
-        replace: "^ASK_EVERY_COMPONENT$"
-        with: ""
+
   # test: none (components) mode
   # test: http download
   - name: TDD
@@ -47,10 +54,7 @@ modules:
     description: The Darkest Days
     installation:
       general: DO NOT install any component, TDDz needs its mod files but does the installation
-    location:
-      http: http://europe.iegmc.net/tdd-weidu/TDDv1.14.rar
-      layout:
-        layout_type: single_dir_plus_tp2
+    location: TDD-iegmc
   - name: TDDz
     description: TDDz is not a mod, it is just an way to install TDD for BG2EE with Worldmap and Extended Animation.
     components:
