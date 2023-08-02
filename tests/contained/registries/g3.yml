@@ -1,0 +1,10 @@
+
+iwdification:
+  github_user: Gibberlings3
+  repository: iwdification
+  release: v5
+  asset: lin-iwdification-v5.tar.gz
+spell_rev:
+  github_user: Gibberlings3
+  repository: SpellRevisions
+  commit: 2f8f727 # last check 2023-03-18

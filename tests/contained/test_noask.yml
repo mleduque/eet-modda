@@ -18,10 +18,9 @@ locations:
         - file_globs: ["*.tp2"]
           replace: "^ASK_EVERY_COMPONENT$"
           with: ""
-    TDD-iegmc:
-      http: http://europe.iegmc.net/tdd-weidu/TDDv1.14.rar
-      layout:
-        layout_type: single_dir_plus_tp2
+  external:
+    - local: registries/tdd.yml
+    - local: registries/g3.yml
 
 modules:
   - name: ub
@@ -153,11 +152,6 @@ modules:
       - 120 #// Mises a jour de classes IWD : Voleur : Esquive totale: v1
       - 30 #// Pack de sortileges profanes d'IWD: v1
       - 40 #// Pack de sortileges divins d'IWD: v1
-    location:
-      github_user: Gibberlings3
-      repository: iwdification
-      release: v5
-      asset: lin-iwdification-v5.tar.gz
   - name: spell_rev
     components:
       - 0   # Spell Revisions
@@ -167,10 +161,6 @@ modules:
       - 55  # Spell Deflection blocks AoE spells
       - 60  # Update Spellbooks of Joinable NPCs
     language: 0 # translation is not up to date with recent changes
-    location:
-      github_user: Gibberlings3
-      repository: SpellRevisions
-      commit: 2f8f727 # last check 2023-03-18
   # test add_conf on extract
   - name: cdtweaks
     description: Tweaks Anthology - only spell progression tables
