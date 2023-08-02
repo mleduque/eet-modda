@@ -9,18 +9,19 @@ global:
   local_files: files
 
 locations:
-  ub:
-    github_user: Pocket-Plane-Group
-    repository: UnfinishedBusiness
-    commit: 9cceb75
-    replace:
-      - file_globs: ["*.tp2"]
-        replace: "^ASK_EVERY_COMPONENT$"
-        with: ""
-  TDD-iegmc:
-    http: http://europe.iegmc.net/tdd-weidu/TDDv1.14.rar
-    layout:
-      layout_type: single_dir_plus_tp2
+  entries:
+    ub:
+      github_user: Pocket-Plane-Group
+      repository: UnfinishedBusiness
+      commit: 9cceb75
+      replace:
+        - file_globs: ["*.tp2"]
+          replace: "^ASK_EVERY_COMPONENT$"
+          with: ""
+    TDD-iegmc:
+      http: http://europe.iegmc.net/tdd-weidu/TDDv1.14.rar
+      layout:
+        layout_type: single_dir_plus_tp2
 
 modules:
   - name: ub
