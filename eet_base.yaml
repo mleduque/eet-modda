@@ -900,23 +900,6 @@ modules:
       repository: BS_Baldurans_Seatower
       release: vEAOB.8
       asset: bs-baldurans-seatower-veaob.8.iemod
-  - name: "c#brage"
-    installation:
-      general: for crossmod content
-      after: [AC_QUEST, bg1re, bg1ub, bgqe, bst, endlessbg1, finch, ntotsc, thalantyr, transitions, ajantisbg1, c#sodboabri, imoen4ever]
-    components:
-      - 0 # Brage's Redemption - Brage Joinable NPC for Baldur's Gate Saga: 8.0
-      - 1 # Assign the mod's portrait and soundset to the original Brage in game: 8.0
-      - 10 # Brage's Redemption: Crossmod Content
-      - todo crossmlod after thalantyr
-      - todo brage after finch
-    location:
-      github_user: Gitjas
-      repository: Brages_Redemption
-      release: v8.1
-      asset:  brages-redemption-brage-npc-8.2.iemod
-      patch:
-        relative: patches/brage_less_wait.diff
   - name: "c#solaufein"
     components:
       - 0 # Solaufein's Rescue: Jastey's Solaufein NPC for BGII: 3.2
@@ -1427,13 +1410,27 @@ modules:
       repository: Husam_NPC
       release: vBeta_230411
       asset: husam-npc-for-bgt-bgsod-bgiiee-and-eet-beta_230411.iemod
+  - name: "c#brage"
+    installation:
+      general: for crossmod content
+      after: [AC_QUEST, bg1re, bg1ub, bgqe, bst, endlessbg1, finch, ntotsc, thalantyr, transitions, ajantisbg1, c#sodboabri, imoen4ever]
+    components:
+      - 0 # Brage's Redemption - Brage Joinable NPC for Baldur's Gate Saga: 8.0
+      - 1 # Assign the mod's portrait and soundset to the original Brage in game: 8.0
+      - 5 # Give Brage unique Two-Handed Sword +1: 9.0
+    location:
+      github_user: Gitjas
+      repository: Brages_Redemption
+      release: v9
+      asset: brages-redemption-brage-npc-9.0.iemod
+      patch:
+        relative: patches/brage_less_wait.diff
   - name: c#greythedog
     description: Grey the dog
     installation:
       after: [ACBre, ajantisbg1, ajantisbg2, bg1npc, bg2fixpack, bst, c#brage, c#brandock, c#husam, c#sodboabri, EET, JA#BGT_AdvPack, imoen_forever ]
     components:
       - 0 # Grey The Dog NPC
-      - 10 # Grey the Dog: Crossmod Content
       - 22 # portrait or 20/21
     location:
       github_user: Gibberlings3
@@ -1971,36 +1968,6 @@ modules:
     installation:
       after: kelsey
     components: not the accelerator (banterpack)
-  - name: crossmodbg2
-    description: Crossmod Banter Pack
-    components:
-      - 0 # Crossmod Banter Pack for Shadows of Amn
-      - 1 # Crossmod Banter Pack for Throne of Bhaal
-      # - 2 # Crossmod Romance Conflicts
-    location:
-      github_user: Gibberlings3
-      repository: Crossmod_Banter_Pack_for_Baldurs_Gate_II
-      release: v21
-      asset: crossmod-banter-pack-for-baldurs-gate-ii-v21.iemod # tgz truncates some file names
-  - name: adrian
-    description: Adrian crossmod
-    components:
-      - 20 # Adrian NPC - Crossmod content
-  - name: c#brandock
-    description: Brandock the mage - crossmod
-    components:
-      - 10 # Brandock the Mage: Crossmod Content
-  - name: SmilingImpCrossBanterMod
-    components:
-      - 0 # Shar-Teel Banters: 1.4
-      # Garrick not installed
-      #- 2 # Garrick Banters: 1.4
-      - 16 # "Wilson Chonicles" Mod - Cross Banters: 1.4
-    location:
-      github_user: SpellholdStudios
-      repository: SmilingImpCrossBanterMod
-      release: v.1.7
-      asset: smiling-imps-cross-banter-mod-1.7.iemod
   - name: FaldornBG2
     components:
       - 0 # Faldorn NPC for BG2EE
@@ -2061,6 +2028,48 @@ modules:
       repository: Ishlilka_The-Wizard-Slayer
       branch: master
       refresh: 1day
+
+
+  #########
+  # Crossmod
+  #########
+  - name: crossmodbg2
+    description: Crossmod Banter Pack
+    components:
+      - 0 # Crossmod Banter Pack for Shadows of Amn
+      - 1 # Crossmod Banter Pack for Throne of Bhaal
+      # - 2 # Crossmod Romance Conflicts
+    location:
+      github_user: Gibberlings3
+      repository: Crossmod_Banter_Pack_for_Baldurs_Gate_II
+      release: v21
+      asset: crossmod-banter-pack-for-baldurs-gate-ii-v21.iemod # tgz truncates some file names
+  - name: adrian
+    description: Adrian crossmod
+    components:
+      - 20 # Adrian NPC - Crossmod content
+  - name: c#brandock
+    description: Brandock the mage - crossmod
+    components:
+      - 10 # Brandock the Mage: Crossmod Content
+  - name: SmilingImpCrossBanterMod
+    components:
+      - 0 # Shar-Teel Banters: 1.4
+      # Garrick not installed
+      #- 2 # Garrick Banters: 1.4
+      - 16 # "Wilson Chonicles" Mod - Cross Banters: 1.4
+    location:
+      github_user: SpellholdStudios
+      repository: SmilingImpCrossBanterMod
+      release: v.1.7
+      asset: smiling-imps-cross-banter-mod-1.7.iemod
+  - name: "c#brage"
+    components:
+      - 10 # Brage's Redemption: Crossmod Content
+  - name: c#greythedog
+    description: Grey the dog
+    components:
+      - 10 # Grey the Dog: Crossmod Content
 
   #########
   # Spells
