@@ -375,8 +375,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: BG_Quests_And_Encounters
-      release: v26
-      asset: baldurs-gate-mini-quests-and-encounters-modification-v26.iemod
+      release: v26.1
+      asset: baldurs-gate-mini-quests-and-encounters-modification-v26.1.iemod
   - name: AC_QUEST
     description: Ascalon's Questpack
     components:
@@ -756,29 +756,12 @@ modules:
       release: v3
       asset: lin-thecalling-v3.tar.gz
   - name: bg1npc
-    components:
-      - 0    # BG1 NPC Project : modifications necessaires
-      - 10   # BG1 NPC Project : bavardages, quetes et interjections
-      - 22   # BG1 NPC Project : romance d'Ajantis, elements de base (contenu adolescent) -> Rythme : 30 minutes de temps reel entre les dialogues de romance
-      - 32   # BG1 NPC Project : romance de Branwen, elements de base (contenu adolescent) -> Rythme : 30 minutes de temps reel entre les dialogues de romance
-      - 42   # BG1 NPC Project : romance de Coran, elements de base (contenu adulte) -> Rythme : 30 minutes de temps reel entre les dialogues de romance
-      - 53   # BG1 NPC Project : romance de Dynaheir, elements de base (contenu adolescent) -> Rythme : 15 minutes de temps reel entre les dialogues de romance
-      - 62   # BG1 NPC Project : relation avec Shar-Teel, elements de base (contenu adulte) -> Rythme : 30 minutes de temps reel entre les dialogues de romance
-      - 71   # BG1 NPC Project : romance de Xan, elements de base (contenu adolescent) -> Rythme : 45 minutes de temps reel entre les dialogues de romance
-      - 80   # BG1 NPC Project : conflits de romance pour personnage feminin, Ajantis - Xan - Coran
-      - 90   # BG1 NPC Project : The BG1 NPC Project: NPCs can be sent to wait in an inn
-      - 111  # Ajustement du rythme des bavardages pour BG:EE -> Rythme des bavardages : frequents
-      - 120  # BG1 NPC Project : ajustement de reputation grace a des bardes
-      - 130  # BG1 NPC Project : ajustements du journal de Sarevok -> Journal de Sarevok enrichi par SixofSpades
-      - 150  # BG1 NPC Project : donner a Kivan son portait issu du mod "Kivan and Deheriana Companions"
-      - 155  # BG1 NPC Project : donner a Coran son portrait de "Murder in Baldur's Gate"
-      - 160  # BG1 NPC Project : ajouter des portraits de PNJs non-recrutables pour les dialogues et les quetes
-      - 200  # BG1 NPC Project : dialogues inities par le joueur
+    components: ask
     location:
       github_user: Gibberlings3
       repository: BG1NPC
-      release: v31
-      asset: the-bg1npc-project-v31.iemod
+      release: v32
+      asset: the-bg1npc-project-v32.iemod
   - name: BG1Aerie
     components:
       - 0 # Aerie for BG:EE
@@ -2035,7 +2018,11 @@ modules:
   - name: JuniperAndTheStoneLeech
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/JuniperAndTheStoneLeech v1.0.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/JuniperAndTheStoneLeech v1.1.zip
+  - name: verrsza
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/VerrSzaBGEE v6.01.zip
   - name: SkitiaRomanceTweak
     components: [0]
     location:
@@ -2687,10 +2674,10 @@ modules:
     location:
       github_user:  D2-mods
       repository: The-Workshop-Kitpack
-      release: v4.0a
-      asset: the-workshop-kitpack-4.0.iemod
+      release: v4.3a
+      asset: the-workshop-kitpack-4.3.iemod
   - name: shadowadept
-    description: shadowadept - components without warningq
+    description: shadowadept - components without warning
     components:
       - 1 # Shadow Magic: Shadow Monk monk
       - 2 # Shadow Magic: Quests and Encounters
@@ -3569,8 +3556,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Tactics-Remix
-      release: 0.3-alpha
-      asset: tactics-remix-v0.3-alpha.iemod
+      release: 0.4.1-alpha
+      asset: lin-tactics-remix-v0.4.1-alpha.zip
   - name: "butchery"
     components: #components installé avant SCS, deuxèmeliste pour après SCS
       - 41 # Boucherie de nains dans le donjon d'Irenicus [a installer apres Stratagems]: v5.0.0
