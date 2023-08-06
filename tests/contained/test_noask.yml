@@ -23,6 +23,20 @@ locations:
     - local: registries/g3.yml
 
 modules:
+  - name: correctfrbg2ee
+    components:
+      - 10 # Correction de la traduction de Baldur's Gate II : Enhanced Edition: 0.7
+      - 20 # Correction de la description des objets: 0.7
+      - 30 # Patch audio et video francais: 0.7
+    location:
+      github_user: r-e-d
+      repository: correctfrBG2EE
+      branch: master
+      refresh: 2days
+      precopy:
+        command: bash
+        subdir: correctfrBG2EE-master
+        args: [ "-c", "node dist/index.js" ]
   - name: ub
     description: Unfinished Business
     components:
@@ -47,6 +61,18 @@ modules:
       - 23 # Feralan Kit: v28
       - 24 # Sarevok's Remorse: v28
       - 25 # The Murder of Acton Balthis, by Kulyok: v28
+
+  # test: directory location
+  - name: d0questpack
+    components: [0, 1, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+    location:
+      path: /home/mick/Games/dev/simding0_questpack
+      layout:
+        layout_type: multi_dir
+        dirs:
+          - questpack
+          - setup-d0questpack.tp2
+
   # test: none (components) mode
   # test: http download
   - name: TDD
