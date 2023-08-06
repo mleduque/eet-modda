@@ -1883,7 +1883,7 @@ modules:
       - 4 # Skie: The Cost of One Girl's Soul - Add Player-Initiated Dialogue (PID) for Eddard: 4.01
       - 5 # Skie: The Cost of One Girl's Soul - Add brand new SoD-oriented items to BG2: 4.01
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Skie The Cost of One Girls Soul v4.2.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Skie The Cost of One Girls Soul v5.1.zip
   - name: Wings
     components:
       - 0 # Wings - Wings for BG2:EE
