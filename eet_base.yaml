@@ -5,6 +5,13 @@ global:
   lang_dir: "fr_FR"
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
 modules:
+  - name: bg2fixpack
+    components: ask
+    location:
+      github_user: Gibberlings3
+      repository: BG2-Fixpack
+      release: v13
+      asset: lin-bg2fixpack-v13.tar.gz
   - name: correctfrbg2ee
     components:
       - 10 # Correction de la traduction de Baldur's Gate II : Enhanced Edition: 0.7
@@ -39,7 +46,7 @@ modules:
       file_name: bgee_dir.txt
       content: ../../bg1/game
 
-  - name: infinity_ui #orm aybe dragonspear-ui++
+  - name: infinity_ui #or maybe dragonspear-ui++
     components: ask
     location:
       github_user: Renegade0
@@ -54,6 +61,13 @@ modules:
       repository: BGGOEET
       branch: master
       refresh: 1day
+  - name: infinitysounds
+    components: ask
+    location:
+      github_user: skellytz
+      repository: infinity-sounds
+      release: v2.0
+      asset: infinitysounds-v2.0.iemod
 
   #########
   # story
@@ -175,8 +189,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: The_Boareskyr_Bridge_Scene
-      release: v5
-      asset:  the-boareskyr-bridge-scene-v5.iemod
+      release: v6
+      asset:  the-boareskyr-bridge-scene-v6.iemod
   - name: turnabout
     components:
       - 0 # Ascension: Turnabout
@@ -238,8 +252,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: EndlessBG1
-      release: v17
-      asset: endless-bg1-mod-17.iemod
+      release: v18
+      asset: endless-bg1-mod-18.iemod
   - name: transitions
     installation:
       after: endlessbg1
@@ -347,6 +361,7 @@ modules:
       - 10 # Improved Lesser Fiends: 5.0.0
       - 11 # Improved Haeball: 5.0.0
       - 12 # Improved Ghotal: 5.0.0
+      - 15 # Spell scrolls : Revised Version (level 6 spells)
     location:
       github_user: SpellholdStudios
       repository: NTotSC
@@ -570,7 +585,7 @@ modules:
     location:
       github_user: Pocket-Plane-Group
       repository: Assassinations
-      release: v18
+      release: v19
       asset: assassinations-v18.iemod
   - name: BackBrynnlaw
     components: [0] # Mod Retour Ã  Brynnlaw mod pour Baldur's Gate II: v9
@@ -649,8 +664,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Imoen4Ever
-      release: v11.2
-      asset: imoen-4-ever-v11.2.iemod
+      release: v11.3
+      asset: imoen-4-ever-v11.3.iemod
   - name: alternatives
     installation:
       before: imoen4ever except imoen4ever compatibility (should be after alternative)
@@ -1226,8 +1241,8 @@ modules:
     location:
       github_user: TotalMilk90
       repository: gorgon
-      release: v3.1
-      asset: gorgon-v3.1.iemod
+      release: v3.3
+      asset: gorgon-v3.3.iemod
   - name: w_packmule
     components:
       - 3 # Mule de bat (bgee) -> Fontes sans fond
@@ -1241,6 +1256,8 @@ modules:
       github_ruser: A-Wizard-Did-It
       repository: Black-Hearts-EET
       tag: v1.04
+      patch:
+        local: needs-patch #  https://forums.beamdog.com/discussion/comment/1200875/#Comment_1200875
   - name: TheUndying
     components: ask
     location:
@@ -1474,7 +1491,7 @@ modules:
       patch:
         relative: finch-wait-here.diff
   - name: IndiNPC
-    version: "14"
+    version: "15"
     components:
       - 0 # Indira PNJ
       - 1 # Install Interjections for Indira (BETA)
@@ -1642,7 +1659,7 @@ modules:
     components:
       - 0 # Tyris Flare NPC: v9
     location:
-      http: http://europe.iegmc.net/g3/tyrisflare-v10.zip
+      http: http://europe.iegmc.net/g3/tyrisflare-v11.zip
       patch: tyris-conflicts.diff
   - name: navarra
     components:
@@ -2111,6 +2128,13 @@ modules:
       - 0
     location:
       path: wherever...
+  - name:
+    components: ask
+    location:
+      github_user: shohysie
+      repository: Isaac-s_Missile_Storm
+      release: v0.3
+      asset: Isaac.s_Missile_Storm.v0.3.zip
   - name: Magic_Battles_Revised
     components:
       #- 10 # Revised Magic Battles
@@ -2427,20 +2451,21 @@ modules:
   - name: forgotten-armament
     description: Forgotten armaments - comopnent that warns
     components:
-      - 17 # Installer " Armes et Equipements oublies " -> Mise Ã  jour des objets existants et ajout des nouveaux objets: v0.7.1-beta
+      - voir quoi installer et quand
+      #- 17 # Installer " Armes et Equipements oublies " -> Mise à jour des objets existants et ajout des nouveaux objets: v0.7.1-beta
     location:
       github_user:  mleduque
       repository: Forgotten-Armament
-      tag: 2.1-keep-some-boots
+      tag: 3.0-keep-some-boots
     ignore_warnings: true
     #patch:
     #  relative: patches/forgotten-armament-ini.diff
   - name: forgotten-armament
     description: Forgotten armaments - components without warnings
     components: # except stat increase items
-      - 11 # Ajouter le parchemin Breche au Bazar Magique de la Porte de Baldur: v0.7.1-beta
-      - 8 # Remplacer les Bottes de Rapidite (Les Pattes de Guepard): v0.7.1-beta
-      - 10 # Armes dans le style de NWN2: v0.7.1-beta
+      #- 11 # Ajouter le parchemin Breche au Bazar Magique de la Porte de Baldur: v0.7.1-beta
+      #- 8 # Remplacer les Bottes de Rapidite (Les Pattes de Guepard): v0.7.1-beta
+      #- 10 # Armes dans le style de NWN2: v0.7.1-beta
   - name: S3DisClubs
     description: Distinguishable clubs
     origin: https://forums.beamdog.com/discussion/34524/distinguishable-clubs-weidu-update-1-1
@@ -2596,7 +2621,7 @@ modules:
 
 
   #########
-  # Kits
+  # Single class kits
   #########
   - name: MilitiaOfficer
     components: [0]
@@ -2605,13 +2630,11 @@ modules:
       repository: MilitiaOfficer-Kit
       tag: "1.8"
   - name: ArtisansKitpack
+    description: ArtisansKitpack - only single-class kits
     components:
       #- 1 # Artisan's Kitpack: Enable All Classes for All Races: 2.5
       #- 2 # Artisan's Kitpack: Enable Multi-Classes for -> All Races: 2.5
       #- 1000 # Artisan's Kitpack: Arcane Archer Fighter Kit: 2.5
-      #- 1001 # Artisan's Kitpack: Arcane Archer (Fighter/Mage): 2.5
-      #- 1103 # Artisan's Kitpack: (BG:EE) Make Skitia's Emily an -> Arcane Archer / Mage: 2.5
-      #- 1105 # Artisan's Kitpack: (BG2:EE) Make Skitia's Emily an -> Arcane Archer / Mage: 2.5
       #- 1002 # Artisan's Kitpack: Vanguard Fighter Kit: 2.5
       #- 1101 # Artisan's Kitpack: Give Khalid the Vanguard Kit: 2.5
       #- 2001 # Artisan's Kitpack: Rashemi Berserker Ranger Kit for Minsc: 2.5
@@ -2623,8 +2646,6 @@ modules:
       #- 7001 # Artisan's Kitpack: Rogue Archer Thief Kit: 2.5
       #- 9001 # Artisan's Kitpack: Warhorn Shaman Kit: 2.5
       #- 10001 # Artisan's Kitpack: Monk Revisions: 2.5
-      #- 20000 # Artisan's Kitpack: Eldritch Knight (Fighter / Mage Kit): 2.5
-      #- 20001 # Artisan's Kitpack: Arcane Trickster (Mage / Thief Kit)
     location:
       github_user: ArtemiusI
       repository: The-Artisan-s-Kitpack
@@ -2643,18 +2664,6 @@ modules:
       asset: A7-ChaosSorcerer-v2.7.iemod
       patch:
         relative: patches/A7-ChaosSorcerer-remove_str_con_malus.diff
-  - name: Px_Chantelame
-    components:
-      - 0
-    location:
-      path: /home/mick/Games/modda-cache/static/Chantelame v7.1.zip
-  - name: Derats_kits
-    components:
-    location:
-      path: /home/mick/Games/modda-cache/static/Derats Unused Kits Pack v17.6.zip
-      layout:
-        strip_leading: 1
-        layout_type: single_dir
   - name: wildmage
     components:
       # Rhialto's death gives way too much XP
@@ -2678,18 +2687,33 @@ modules:
       branch: master
       patch:
         relative: patches/shadowmagic-condrain.diff
-  - name: d2-workshopkits
-    components:
-    location:
-      github_user:  D2-mods
-      repository: The-Workshop-Kitpack
-      release: v4.3a
-      asset: the-workshop-kitpack-4.3.iemod
   - name: shadowadept
     description: shadowadept - components without warning
     components:
       - 1 # Shadow Magic: Shadow Monk monk
       - 2 # Shadow Magic: Quests and Encounters
+  - name: Px_Chantelame # single class fighter kit
+    components:
+      #- 0
+    location:
+      path: /home/mick/Games/modda-cache/static/Chantelame v7.1.zip
+  - name: Derats_kits
+    components:
+      #- 0 # chasseur de vermine, ranger
+      #- 1 # PORTEUR DE HAINE, guerrier (demi-orc)
+      #- 2 # PRECHEUR DES FLAMMES, clerc
+      #- 3 # CHANTRE DE LA PIERRE, clerc (nain)
+      #- 4 # CROISÉ DE GARAGOS, clerc
+      #- 5 # ARPENTEUR D'OMBRES, voleur
+      #- 6 # OMBREMAGE, voleur(gnome)
+      ##- 7 # SAVANT ARTILLEUR, mage - remplace invocateur
+      #- 8 # SORCELIER, ensorceleur
+      #- 9 # GUERRIER EXALTÉ/SEIGNEUR DE GUERRE combo jumelageguerrier -> mage
+    location:
+      path: /home/mick/Games/modda-cache/static/Derats Unused Kits Pack v17.6.zip
+      layout:
+        strip_leading: 1
+        layout_type: single_dir
   - name: song_and_silence
     components:
       - 0  # Changements concernant les bardes et voleurs purs, ainsi que les kits originaux du jeu (necessaire pour les autres composants)
@@ -2708,14 +2732,76 @@ modules:
       release: v16
       asset: lin-song_and_silence-v16.tar.gz
   - name: morpheus562-s-kitpack
+    description: morpheus562's kitpack - only single-class kits
     components:
+      # Fighters
+      - 100 # Install Battle Master Kit
+      - 110 # Install Psi Warrior Kit
+      - 120 # Install Shield Breaker Kit
+      - 130 # Install Dragoon Kit
+      - 141 # Install Deathbringer Prestige Kit - Assign kit to Sarevok
+      #- 142 # Install Deathbringer Prestige Kit - Do NOT assign kit to Sarevok
+      - 151  # Install Battlerager Kit - Assign kit to Korgan
+      - 152 # Install Battlerager Kit - Do NOT assign kit to Korgan
+      - 160 # Install Death Knight Kit
+      - 170 # Install Champion Kit
+      # Rangers
+      #- 201 # Install Rashemaar Berserker Kit - Assign kit to Minsc
+      - 202 # Install Rashemaar Berserker Kit - Do NOT assign kit to Minsc
+      - 210 # Install Champion of the Wild Kit
+      # Paladins
+      - 300 # Install Champion of the Silver Flame
+      - 310 # Install Templar Kit
+      - 320 # Install Reaver Kit
+      # Wizards
+      #- 600 # Archmage Prestige Kit
+      # Sorcerers
+      - 900 # Install Eldritch Scion Kit
     location:
       github_user: Gibberlings3
       repository: Morpheus562-s-Kitpack
       release: "3.1"
-      asset: morpheus562s-kitpack-v3.1.iemod
+      asset: lin-morpheus562-s-kitpack-v3.1.zip
       patch:
         relative: patches/morpheus562-s-kitpack.diff
+
+  #########
+  # Kits, mixed single/multi, not separable
+  #########
+  - name: d2-workshopkits
+    installation:
+      after: rr, class revisions, sphere system
+    components:
+      - 0 # Base kits + multiclass variants
+      - 3 # Misc item pack
+      - 4 # Install if using subtledoctor's 5e casting mod
+    location:
+      github_user: D2-mods
+      repository: The-Workshop-Kitpack
+      release: v4.5b
+      asset: the-workshop-kitpack-4.5.iemod
+
+  #########
+  # Multiclass kits
+  #########
+  - name: ArtisansKitpack
+    description: ArtisansKitpack - multiclass kits
+    components:
+      #- 1001 # Artisan's Kitpack: Arcane Archer (Fighter/Mage): 2.5
+      #- 1103 # Artisan's Kitpack: (BG:EE) Make Skitia's Emily an -> Arcane Archer / Mage: 2.5
+      #- 1105 # Artisan's Kitpack: (BG2:EE) Make Skitia's Emily an -> Arcane Archer / Mage: 2.5
+      #- 20000 # Artisan's Kitpack: Eldritch Knight (Fighter / Mage Kit): 2.5
+      #- 20001 # Artisan's Kitpack: Arcane Trickster (Mage / Thief Kit)
+  - name: Derats_kits
+    components:
+      #- 10 # CHANTELAMEUR, guerrier mage
+      #- 11 # Standardiser le Chantelameur (plus de malus RP au temps d'incantation et bonus de maitrise +1+1 automatique au niveau 9)
+      #- 12 # EXPLORATEUR THEURGIQUE, clerc/en
+  - name: morpheus562-s-kitpack
+    description: morpheus562's kitpack - only single-class kits
+    components:
+      - 1103 # Install Stormlord Multiclass Kit for Fighter/Druids - Do NOT assign kit to Jaheira
+
   - name: TomeAndBlood
     description: Tome And Blood - main
     components:
@@ -2803,7 +2889,7 @@ modules:
     location:
       github_user: mleduque
       repository: Faiths_and_Powers
-      tag: 0.85sd20-fr
+      tag: 0.85sd21-fr
       patch:
         relative: patches/fnp_configure.diff
   - name: 5E_spellcasting
@@ -2847,7 +2933,7 @@ modules:
     location:
       github_user: mleduque
       repository: Will_to_Power
-      branch: 2.3.3-fr
+      branch: 2.5-fr
       patch:
         relative: patches/will_to_power_tweaks.diff
   - name: Will_to_Power
@@ -3524,7 +3610,7 @@ modules:
     location:
       github_user: mleduque
       repository: Scales_of_Balance
-      tag: "6.6-fr"
+      tag: "6.6.2-fr"
       patch:
         relative: patches/scales-config.diff
   - name: forgotten-armament
@@ -3532,8 +3618,8 @@ modules:
     installation:
       general: these two components go after SCS which adds items
     components: # only stat increase items
-      - 10 # Armes dans le style de NWN2: v0.7.1-beta
-      - 4 # Mise a jour des statistiques et scores de capacite des objets ameliores pour une meilleur integration: v0.7.1-beta
+      #- 10 # Armes dans le style de NWN2: v0.7.1-beta
+      #- 4 # Mise a jour des statistiques et scores de capacite des objets ameliores pour une meilleur integration: v0.7.1-beta
   - name: EEUITweaks
     components:
       #- 1000 # Mods Options: 3.9
@@ -3565,8 +3651,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Tactics-Remix
-      release: 0.4.1-alpha
-      asset: lin-tactics-remix-v0.4.1-alpha.zip
+      release: 0.5.1-alpha
+      asset:  lin-tactics-remix-v0.5.1-alpha.zip
   - name: "butchery"
     components: #components installé avant SCS, deuxèmeliste pour après SCS
       - 41 # Boucherie de nains dans le donjon d'Irenicus [a installer apres Stratagems]: v5.0.0
@@ -3615,9 +3701,9 @@ modules:
       - 212 # Rendre les sorts de detection des alignements plus precis
       - 213 # Tables des bonus aux jets de sauvegardes etendus pour les nains, les gnomes et les halfelins
       - 270 # Recompenses de quetes impartiales
-      - 220 # Script simple du voleur
-      - 230 # Script simple du Barde (chante Chant du Barde quand inactif)
-      - 239 # Script simple pour clerc/paladin
+      #- 220 # Script simple du voleur
+      #- 230 # Script simple du Barde (chante Chant du Barde quand inactif)
+      #- 239 # Script simple pour clerc/paladin
       - 300 # Utiliser l'animation de Porte Dimensionnelle issue d'Icewind Dale -> Rythme d'animation eleve (equivalent a IWD)
       - 301 # Changer l'apparence de l'armure de Valygar
       #- 302 # Changer l'apparence de la Robe de Vecna -> item_rev removes it
@@ -3655,8 +3741,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Skills-and-Abilities
-      release:  1.3-beta
-      asset: lin-skills-and-abilities-v1.3-beta.zip
+      release: "2.0"
+      asset: lin-skills-and-abilities-v2.0.zip
       patch:
         relative: patches/skills-and-abilities-prof-points.diff
   - name: npc_ee
@@ -3801,6 +3887,10 @@ modules:
     repository: Better-IWD-Pregen
     release: v7.1
     asset: better-iwd-pregen-7.1.iemod
+  - name: wl_summonsFoV
+    components: ask
+    location:
+      http: https://forums.beamdog.com/uploads/editor/cw/zu3604sk4p36.zip
   - name: 35thac0
     components: [0]
     location:
