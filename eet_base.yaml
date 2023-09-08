@@ -1314,7 +1314,8 @@ modules:
     location:
       github_user: Skitia
       repository: Emily-BG1
-      commit: ddcbbaf # 2023-02-18
+      branch: master
+      refresh: 3days
   - name: Helga
     components:
       - 0
@@ -1357,7 +1358,7 @@ modules:
     location:
       github_user: Skitia
       repository: SkitiaNPCs
-      commit: 64a502d # 2023-02-18
+      tag: v1.1
       patch:
         relative: patches/skitia_npc_defaultportraits.diff
     #prompt for portrait (1. Default the 1. Default)
@@ -2013,6 +2014,7 @@ modules:
       github_user: Skitia
       repository: SkitiaBG2RomanceTweaks
       branch: master
+      refresh: 7days
   - name: Dusk
     components: ask
     location:
@@ -2208,6 +2210,13 @@ modules:
       github_user: CrevsDaak
       repository: thalan
       tag: v4.2.5
+  - name: mod-thalantyr-ex
+    components: ask
+    location:
+      github_user: BardezAnAvatar
+      repository: BGEE-Thalantyr-Ex
+      release: v1.0.0
+      asset: modthalantyrex-v1.0.0.iemod
   - name: valhorn
     components: [0]
     location:
@@ -2327,7 +2336,7 @@ modules:
     location:
       github_user: ArtemiusI
       repository: Bardic-Wonders
-      branch: master
+      tag: v2.71
       refresh: 2days
   - name: A7#ImprovedArcher
     components:
@@ -2649,8 +2658,7 @@ modules:
     location:
       github_user: ArtemiusI
       repository: The-Artisan-s-Kitpack
-      branch: master
-      refresh: 2days
+      tag: v4.32
       patch:
         relative: patches/ArtisansKitPack-fix_2da.diff
   - name: A7-ChaosSorcerer
@@ -2684,7 +2692,7 @@ modules:
     location:
       github_user: ArtemiusI
       repository: Shadow-Magic
-      branch: master
+      tag: v3.0.1
       patch:
         relative: patches/shadowmagic-condrain.diff
   - name: shadowadept
@@ -2975,7 +2983,7 @@ modules:
     location:
       github_user: ArtemiusI
       repository: House-Rule-Tweaks
-      tag: v2.1a
+      tag: v2.3
   - name: klatu
     description: Klatu Tweaks
     components:
@@ -3434,7 +3442,7 @@ modules:
     location:
       github_user: subtledoctor
       repository:  IWD_EET_Integration
-      tag: "0.9.1"
+      tag: "0.9.3"
 
   #########
   # EET_end
