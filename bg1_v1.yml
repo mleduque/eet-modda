@@ -9,8 +9,8 @@ modules:
     location:
       github_user: Argent77
       repository: A7-DlcMerger
-      release: v1.3
-      asset: lin-A7-DlcMerger-v1.3.zip
+      release: v1.4
+      asset: lin-A7-DlcMerger-v1.4.zip
     components:
       - 1 # Merge DLC into game -> Merge "Siege of Dragonspear"
   # EET can't merge EEFixpack right
@@ -59,6 +59,9 @@ modules:
       branch: french
       layout:
         layout_type: single_dir_plus_tp2
+  - name: TenyaThermidor
+    location:
+      http: https://coutelier.org.uk/Files/BGEETenya15c.rar.
   - name: drizztsaga
     components:
       - 0 # The Drizzt Saga pour BGEE/Tutu/BGT -> Version par defaut : zones connectees par des declencheurs de voyage
