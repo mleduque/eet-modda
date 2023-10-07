@@ -34,4 +34,4 @@ modules:
     location:
       github_user: mleduque
       repository: TomeAndBlood
-      branch: french
+      branch: 0.9.49-fr

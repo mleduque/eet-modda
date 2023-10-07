@@ -723,8 +723,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Jasteys_SoD_Tweakpack
-      release: v11.1
-      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v11.1.iemod
+      release: v12
+      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v12.iemod
   - name: themed_tweaks
     components:
       - 60  # SoD - Give Imoen a special wand for palace attack scene
@@ -997,7 +997,8 @@ modules:
   - name: Tidings
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/static/Dark_Tidings_1.4.rar
+      http: http://america.iegmc.net/g3/Dark_Tidings.rar
+      rename: Dark_Tidings_1.5.rar
   - name: SOS # Shadows Over Soubar
     components: ask
     location:
@@ -1448,8 +1449,8 @@ modules:
     location:
       github_user: Gitjas
       repository: Brages_Redemption
-      release: v9
-      asset: brages-redemption-brage-npc-9.0.iemod
+      release: v9.1
+      asset: brages-redemption-brage-npc-9.1.iemod
       patch:
         relative: patches/brage_less_wait.diff
   - name: c#greythedog
@@ -1978,7 +1979,8 @@ modules:
     location:
       github_user: SpellholdStudios
       repository: BG1_NPCs_for_SoA_-_ToB
-      commit: dafa3ef # 2023-06-09
+      reklease: v14.3
+      asset: bg1-npc-in-soatob-14.3.iemod
   - name: TS_sime
     components:
       - 0 # Vlad's Sime NPC: 0.8
@@ -2146,15 +2148,6 @@ modules:
       repository: Isaac-s_Missile_Storm
       release: v0.4
       asset: Isaac.s_Missile_Storm.v0.4.zip
-  - name: Magic_Battles_Revised
-    components:
-      #- 10 # Revised Magic Battles
-    location:
-      github_user: mleduque
-      repository: magic_battles_revised
-      branch: 1.7.1-fr
-      patch:
-        relative: patches/mbr_spell_thrust_lv2.diff
   # #######   compat issues with cowled menace
   #- name: Unofficial Item Pack
   #  original_thread: https://forums.beamdog.com/discussion/56567/mod-bgii-ee-unofficial-item-pack
@@ -2325,12 +2318,12 @@ modules:
       release: v6.0.0
       asset: bolsa-v6.0.0.iemod
   - name: A7-MagicStore
-    components: [1, 10] # 1=fee required
+    components: ask
     location:
       github_user: Argent77
       repository: A7-MagicStore
-      release: v2.3
-      asset: A7-MagicStore-v2.3.iemod
+      release: v3.0
+      asset: A7-MagicStore-v3.0.iemod
   - name: heartwood
     description: Heart of the Wood
     components: [0]
@@ -2592,9 +2585,9 @@ modules:
       #- 4010 # Ajouter un jet de sauvegarde pour les effets d'absorption de niveau: 1.5.4
       #- 4020 # AmÃ©liorer les valeurs de caractÃ©ristiques des monstres: 1.5.4
     location:
-      github_user: mleduque
+      github_user: subtledoctor
       repository: d5_Random_Tweaks
-      branch: "1.6.1-fr"
+      branch: "1.7.2"
   - name: d5_random_tweaks
     description: SubtleDoctor's Random Tweaks - components with warnings
     components:
@@ -2865,8 +2858,8 @@ modules:
     location:
       github_user: Argent77
       repository: A7-ImprovedShamanicDance
-      release: v4.4
-      asset: A7-ImprovedShamanicDance-v4.4.iemod
+      release: v4.5
+      asset: A7-ImprovedShamanicDance-v4.5.iemod
   - name: divine_remix
     components:
       - 11 # Installer les nouveaux sorts -> Ajouter les nouveaux sorts uniquement si d'autres mods ne l'ont pas deja fait: 8.1
@@ -2971,7 +2964,7 @@ modules:
     location:
       github_user: mleduque
       repository: Might_and_Guile
-      tag: 5.3.1-fr
+      tag: 5.3.4-fr
       patch:
         relative: patches/mng-multibard-shools.diff
   - name: might_and_guile
@@ -3631,6 +3624,17 @@ modules:
       tag: "6.6.2-fr"
       patch:
         relative: patches/scales-config.diff
+  - name: Magic_Battles_Revised
+    installation:
+      after: stratagems
+    components:
+      #- 10 # Revised Magic Battles
+    location:
+      github_user: mleduque
+      repository: magic_battles_revised
+      branch: 1.7.1-fr
+      patch:
+        relative: patches/mbr_spell_thrust_lv2.diff
   - name: forgotten-armament
     description: forgotten-armament - stat increasing items
     installation:
@@ -3669,8 +3673,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Tactics-Remix
-      release: 0.5.1-alpha
-      asset:  lin-tactics-remix-v0.5.1-alpha.zip
+      release: 0.6.1-beta
+      asset: lin-tactics-remix-v0.6.1-beta.zip
   - name: "butchery"
     components: #components installé avant SCS, deuxèmeliste pour après SCS
       - 41 # Boucherie de nains dans le donjon d'Irenicus [a installer apres Stratagems]: v5.0.0
