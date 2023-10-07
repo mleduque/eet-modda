@@ -792,8 +792,8 @@ modules:
     location:
       github_user: The-Gate-Project
       repository: AerieBG1
-      release: v2.3
-      asset: aerie-in-bgee-2.3.iemod
+      release: v2.4
+      asset: aerie-in-bgee-2.4.iemod
   - name: garrick-tt
     components:
       - 0 # Garrick : les contes d'un troubadour
@@ -1196,8 +1196,8 @@ modules:
     location:
       github_user: GraionDilach
       repository: ExtraExpandedEnhancedEncounters
-      release: "4.1"
-      asset: extra-enhanced-expanded-encounters-4.1.iemod
+      release: "4.2"
+      asset: extra-enhanced-expanded-encounters-4.2.iemod
       patch:
         relative: patches/ExtraExpandedEnhancedEncouter-reducegnolls.diff
   - name: gbthfkp
