@@ -2176,7 +2176,6 @@ modules:
     description: Made in Heaven - Fixes & Restorations ; items restorations only
     components:
       - 3  # item restorations
-  - name: mih_sp
   - name: mih_ip
     description: Made In Heaven Item Pack
     components:
@@ -2461,7 +2460,7 @@ modules:
       - 1060 # Les Kensai peuvent porter des bracelets
       - 1070 # Les Voleurs peuvent utiliser des baguettes
   - name: forgotten-armament
-    description: Forgotten armaments - comopnent that warns
+    description: Forgotten armaments - component that warns
     components:
       - voir quoi installer et quand
       #- 17 # Installer " Armes et Equipements oublies " -> Mise à jour des objets existants et ajout des nouveaux objets: v0.7.1-beta
@@ -2527,74 +2526,6 @@ modules:
   #########
   # Early tweaks
   #########
-  - name: d5_random_tweaks
-    description: SubtleDoctor's Random Tweaks
-    components:
-      # last selection : "1.5.4.1"
-      #- 5010 # Modifier les sorts de soin et similaires pour ignorer les protections contre les sorts: 1.5.4
-      #- 2105 # Ajouter un effet d'aveuglement pour 1 round Ã  Vapeur colorÃ©e: 1.5.4
-      #- 2108 # Changer Protection contre la pÃ©trification en 'RÃ©trovision': 1.5.4
-      #- 2116 # Autoriser les cibles de Sommeil Ã  se rÃ©veiller quand elles sont frappÃ©es: 1.5.4
-      #- 1151 # RÃ©duire les dÃ©gÃ¢ts mais amÃ©liorer la CÃ©citÃ© pour le Soleil ardent de Spell Revisions: 1.5.4
-      #- 1152 # AmÃ©liorer Lueur fÃ©erique: 1.5.4
-      #- 2201 # Ajouter un Ã©vitement des projectiles Ã  Flou: 1.5.4
-      #- 2209 # Modifier Chance pour affecter tout le groupe: 1.5.4
-      #- 2212 # DÃ©placer Image miroir au niveau 3: 1.5.4
-      #- 2213 # Ajouter des effets persistants au Nuage puant de Spell Revisions: 1.5.4
-      #- 2215 # Modifier Toile d'araignÃ©e pour ralentir au lieu d'immobiliser: 1.5.4
-      #- 2217 # Changer IncinÃ©rateur d'Agannazar en Projectiles ardents de Melf: 1.5.4
-      #- 2224 # AmÃ©liorer PoussiÃšre scintillante: 1.5.4
-      #- 2251 # Ajouter un effet de SurditÃ© au toucher Ã  BÃ¢ton dÃ©cuplÃ©: 1.5.4
-      #- 1207 # Modifier Baies magiques pour en faire une rÃ©gÃ©nÃ©ration hors combat: 1.5.4
-      #- 1212 # Ajuster Ralentissement du Poison: 1.5.4
-      #- 1251 # AmÃ©liorer les dÃ©gÃ¢ts et modifier le type de dÃ©gÃ¢ts pour Lance d'alicorne: 1.5.4
-      #- 2321 # Permettre Ã  Annulation des protections de cibler les "acteurs": 1.5.4
-      #- 2324 # Modifier Immobilisation des morts-vivants et ContrÃŽle des morts-vivants pour ignorer la rÃ©sistance Ã  la magie: 1.5.4
-      #- 1323 # AmÃ©liorer le temps d'incantation pour Exaltation et ClartÃ© spirituelle: 1.5.4
-      #- 1351 # Ajouter des effets de Lueur fÃ©erique et Lenteur au toucher de la Lame de lune: 1.5.4
-      #- 1352 # Augmenter la portÃ©e de Lance de glace: 1.5.4
-      #- 2413 # Autoriser la cible de SphÃšre rÃ©sistante d'Otiluke Ã  utiliser son inventaire: 1.5.4
-      #- 2418 # Rendre Bouclier de feu et Gaine acide de Mestil dissipable par BrÃšche: 1.5.4
-      #- 2451 # Modifier les monstres de Convocation d'ombre plus illusoires: 1.5.4
-      #- 1404 # Remplacer Neutralisation du poison par Suppression des afflictions: 1.5.4
-      #- 1451 # Modifier Vague destructrice pour ne pas affecter le groupe: 1.5.4
-      #- 2508 # AmÃ©liorer Vagues de fatigue de Spell Revisions: 1.5.4
-      #- 2518 # Changer le type de dÃ©gÃ¢ts et l'Ã©cole de Lame fantomatique: 1.5.4
-      #- 2523 # Remplacer Feu du soleil par Â«Â TempÃªte de projectilesÂ Â»: 1.5.4
-      #- 1505 # Modifier Vision VÃ©ritable pour affecter le groupe: 1.5.4
-      #- 1603 # Rendre BarriÃšre de lames dissipable par BrÃšche: 1.5.4
-      #- 1611 # Modifier Souvenir merveilleux pour restaurer tous les sorts de niveau 1 et 2: 1.5.4
-      #- 1614 # Rendre Orbe dessÃ©chant de Sol plus facile Ã  lancer: 1.5.4
-      #- 2711 # Ajuster les effets de Chaos: 1.5.4
-      #- 1710 # Ajouter un effet de Lenteur Ã  Parole sacrÃ©e: 1.5.4
-      #- 2808 # Rendre Moment de prescience dissipable par BrÃšche: 1.5.4
-      #- 2811 # DÃ©placer Symbole, terreur au niveauÂ 7: 1.5.4
-      #- 2916 # DÃ©placer Changement de forme au niveauÂ 8: 1.5.4
-      #- 2915 # DÃ©placer Lame noire du dÃ©sastre au niveauÂ 8: 1.5.4
-      #- 2914 # Ajouter un effet de mort instantanÃ©e Ã  Absorption d'Ã©nergie: 1.5.4
-      #- 3000 # Donner aux armes crÃ©Ã©es par les sorts 2 attaques par round (APR): 1.5.4
-      #- 3010 # Ajouter une immunitÃ© aux attaques sournoises Ã  l'Anneau de perception du danger: 1.5.4
-      #- 3020 # Donner une vraie dÃ©viation des projectiles aux Bracelets antiprojectiles: 1.5.4
-      #- 3030 # AmÃ©liorer les armes avec effet de dÃ©tonation: 1.5.4
-      #- 3040 # Ajouter un effet de Peau d'Ã©corce 'rÃ©visÃ©' Ã  l'Armure de la foi +3: 1.5.4
-      #- 3050 # Rendre le BÃ¢ton d'absorption d'Item Revisions rÃ©ellement instantanÃ©: 1.5.4
-      #- 3060 # Modifier la Cape de gargouille pour appliquer un effet de Peau de pierre au lieu d'un bonus Ã  la classe d'armure: 1.5.4
-      #- 3070 # Rendre les marteaux de jet nains utilisables par les non-nains: 1.5.4
-      #- 3080 # AmÃ©liorer la Harpe d'Azlaer et la Harpe de Methild: 1.5.4
-      #- 3100 # Remplacer la rÃ©sistance Ã  la magie par de la mÃ©tamagie pour la Robe de la toile: 1.5.4
-      #- 4010 # Ajouter un jet de sauvegarde pour les effets d'absorption de niveau: 1.5.4
-      #- 4020 # AmÃ©liorer les valeurs de caractÃ©ristiques des monstres: 1.5.4
-    location:
-      github_user: subtledoctor
-      repository: d5_Random_Tweaks
-      branch: "1.7.2"
-  - name: d5_random_tweaks
-    description: SubtleDoctor's Random Tweaks - components with warnings
-    components:
-      - 2305 # Modifier RapiditÃ© et Lenteur pour qu'ils s'annulent l'un l'autre: 1.5.4
-      - 1609 # Modifier Aube illusoire pour ignorer la rÃ©sistance Ã  la magie: 1.5.4
-      - 1707 # Modifier Rayon de soleil pour ignorer la rÃ©sistance Ã  la magie: 1.5.4
-    ignore_warnings: true
   - name: cdtweaks
     description: Tweaks Anthology - only spell progression tables
     components:
@@ -2813,6 +2744,17 @@ modules:
     components:
       - 1103 # Install Stormlord Multiclass Kit for Fighter/Druids - Do NOT assign kit to Jaheira
 
+  - name: SubtleD_Spell_Tweaks
+    description: SubtleD's Spell Tweaks
+    installation:
+      general: probably juste before TnB
+      after: spell_rev, iwdification
+      before: TomeandBlood, faiths_and_powers, will_to_power, might_and_guile, cdtweaks, stratagems
+    components: ask
+    location:
+      github_user: subtledoctor
+      repository: SubtleD_Spell_Tweaks
+      tag: "2.2"
   - name: TomeAndBlood
     description: Tome And Blood - main
     components:
@@ -2842,7 +2784,7 @@ modules:
     location:
       github_user: mleduque
       repository: TomeAndBlood
-      branch: "0.9.49-fr"
+      branch: "1.0-fr"
   - name: TomeAndBlood
     description: Tome And Blood (warning components)
     components:
@@ -2900,7 +2842,7 @@ modules:
     location:
       github_user: mleduque
       repository: Faiths_and_Powers
-      tag: 0.85sd22-fr
+      tag: 0.86sd1-fr
       patch:
         relative: patches/fnp_configure.diff
   - name: 5E_spellcasting
@@ -2922,7 +2864,7 @@ modules:
     location:
       github_user: mleduque
       repository: 5E_spellcasting
-      branch: 1.20-fr
+      branch: 2.0-fr
       patch:
         # configure "lose spell on interrupted" and "int bonus slots"
         relative: patches/spellcasting-5e-config.diff
@@ -2956,26 +2898,14 @@ modules:
       - 900 # Mode Dark Sun : Tout le monde est un talent natif: 2.0
   - name: might_and_guile
     description: Might And Guile - Main component (warns)
-    components:
-      #- 220 # Révision du multiclassage et kits multiclasses: 4.21.1
-      #- 205 # Tir à l'arc révisé: 4.21.1
-      #- 210 # Révision du Barde : bardes multiclasses: 4.21.1
+    components: ask
     ignore_warnings: true
     location:
       github_user: mleduque
       repository: Might_and_Guile
-      tag: 5.3.4-fr
+      tag: 5.5-fr
       patch:
         relative: patches/mng-multibard-shools.diff
-  - name: might_and_guile
-    description: Might And Guile - Other components
-    components:
-      #- 200 # Système de Dons: 4.21.1
-      #- 240 # Rôdeur améliorés: 4.21.1
-      #- 245 # Bonus de mouvement révisés (Déplacement accru): 4.21.1
-      #- 250 # Berserker révisé et rage: 4.21.1
-      #- 265 # Poings du moine révisés: 4.21.1
-      #- 310 # Ajoute le Corsaire (kit de guerrier): 4.21.1
   - name: HouseTweaks
     description: The Artisan's Tweaks and Overhauls
     components:
@@ -3294,6 +3224,8 @@ modules:
       tag: v1
   - name: PPE
     description: Portraits, Portraits Everywhere
+    installation:
+      general: very late, so mod-added npcs have portraits
     components:
       - 0   # Portraits Portraits Everywhere (PPE) - Composant principal
       - 100 # Categorie de portraits (Recommande) -> Sequenced
@@ -3342,7 +3274,9 @@ modules:
     location:
       github_user: mleduque
       repository: thepicturestandard
-      branch: master
+      release: v0.7.1
+      asset: The.Picture.Standard-9-0-7-1.7z
+      auth: PAT xxx
   - name: A7-ConvenientEENPCs
     description: Convenient Enhanced Edition NPCs
     components:
@@ -3596,34 +3530,32 @@ modules:
   #########
   # Final Tweaks
   #########
-  - name: scales_of_balance
+  - name: SubtleD_Item_Tweaks
     installation:
-      general: -|
-      I just install the whole thing after SCS - Subtledoctor
-      proficiency part should go after SCS - Actually all can go after SCS
-      .
-      https://www.gibberlings3.net/forums/topic/26838-unearthed-arcana-presents-scales-of-balance-a-post-hac-tweak-pack/?do=findComment&comment=319930
-      .
-      cdtweaks:2520;cdtweaks - Allow Mages to Use Bucklers and Thieves to Use Small Shields (Angel)
-      SkillsAndAbilitiesNewProf3;Skills and Abilities - NWN2 Style Proficiency Progression
-      scales_of_balance:124;Scales of Balance - WPO - Fighting Style Changes
-      cdtweaks:2060;cdtweaks - Weapon Styles for All
-    components:
-      - 9876543210
-      #- 100 # IWO - Encore une autre revision du systeme d'armure (YARAS): v5.38.3
-      ##- 102 # IWO - Ajustements fonctionnels des armes: v5.38.3
-      #- 109 # IWO - Toutes les potions sont utilisables par toutes les classes: v5.38.3
-      ## 121 # WPO - Fusion des categories d'armes: v5.38.3
-      ##- 125 # WPO - APR bonus pour la specialisation: v5.38.3
-      ##- 200 # SBO - Revision des bonus de stats (Stat Bonus Overhaul): v5.38.3
-      #- 201 # SBO - emplacements de sorts bonus dus aux stats: v5.38.3
-      #- 2013 # SBO - sorts bonus lies aux stats pour les lanceurs 5E -> SBO - bonus seulement pour les emplacements de lancer: v5.38.3
+      after: spell_rev, cdtweaks
+      before: NPC_EE
+    components: ask
     location:
-      github_user: mleduque
-      repository: Scales_of_Balance
-      tag: "6.6.2-fr"
+      github_user:  subtledoctor
+      repository: SubtleD_Item_Tweaks
+      tag: 1.02-fr
+  - name: Combat_Skill_Proficiencies
+    installation:
+      after: [stratagems, atweaks, cdtweaks]
+      before: [ npc_ee ]
+    components: ask
+    location:
+      github_user: subtledoctor
+      repository: Combat_Skill_Proficiencies
+      tag: "1.0.1-fr"
       patch:
-        relative: patches/scales-config.diff
+        relative: patches/cobat-skill-profs-config.diff
+  - name: SubtleD_Stat_Overhauls
+    components: ask
+    location:
+      github_user: subtledoctor
+      repository: SubtleD_Stat_Overhauls
+      tage: 1.02-fr
   - name: Magic_Battles_Revised
     installation:
       after: stratagems
@@ -3632,7 +3564,7 @@ modules:
     location:
       github_user: mleduque
       repository: magic_battles_revised
-      branch: 1.7.1-fr
+      branch: 1.9-fr
       patch:
         relative: patches/mbr_spell_thrust_lv2.diff
   - name: forgotten-armament
@@ -3777,7 +3709,7 @@ modules:
     location:
       github_user: mleduque
       repository: NPC_EE
-      commit: "5.9.6-fr"
+      commit: "6.0-fr"
   - name: POISON_NO_BYPASS
     components:
       - 3 # Limited Exclusions(Anti-magic, AoE, Gaze): Mirror Image or Stoneskin
