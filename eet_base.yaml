@@ -2754,7 +2754,7 @@ modules:
     location:
       github_user: subtledoctor
       repository: SubtleD_Spell_Tweaks
-      tag: "2.2"
+      tag: "2.4.3"
   - name: TomeAndBlood
     description: Tome And Blood - main
     components:
@@ -3538,7 +3538,7 @@ modules:
     location:
       github_user:  subtledoctor
       repository: SubtleD_Item_Tweaks
-      tag: 1.02-fr
+      tag: 1.2-fr
   - name: Combat_Skill_Proficiencies
     installation:
       after: [stratagems, atweaks, cdtweaks]
@@ -3555,7 +3555,7 @@ modules:
     location:
       github_user: subtledoctor
       repository: SubtleD_Stat_Overhauls
-      tage: 1.02-fr
+      tage: 1.1-fr
   - name: Magic_Battles_Revised
     installation:
       after: stratagems
