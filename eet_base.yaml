@@ -827,6 +827,13 @@ modules:
       repository: hiddenadventure
       release: vBeta_7
       asset: hidden-adventures-beta_7.iemod
+  - name: com_encouters
+    components: ask
+    location:
+      github_user: /The-Gate-Project
+      repository: Com_encounters
+      release: v1.20
+      asset: com-encounters-v1.20.iemod
   - name: isra
     components: [0]
     location:
@@ -1115,7 +1122,7 @@ modules:
   - name: SotSC
     description: Shades of the Sword Coast
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/SotSC v7.3.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/SotSC v7.4.zip
     components: [0]
   - name: JanQuest
     components: [0]
@@ -3669,9 +3676,10 @@ modules:
     location:
       # github_user: TotoR115
       # commit: 00c1388
-      github_user: CamDawg # canonical version: FredrikLindgren/aTweaks
+      github_user: TotoR # canonical version: FredrikLindgren/aTweaks
       repository: aTweaks
-      commit: 2469eb1
+      branch: ???
+      refresh: 1week
   - name: c#brandock
     description: Brandock the mage - atweak compat
     installation:
