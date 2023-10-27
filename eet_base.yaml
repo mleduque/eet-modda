@@ -164,17 +164,14 @@ modules:
     installation:
       general: at least component 5 must be after ub
     components:
-      #- 0 # BG1 Fixpack
-      #- 1 # SoD Fixpack
+      - 9999
+      - 0 # BG1 Fixpack
+      - 1 # SoD Fixpack
       - 2 # BG2 Fixpack
       - 5 # Restaurations de rencontres pour BG2: v1
       - 6 # Restaurations de dialogues BG2: v1
       - 7 # Artemis Entreri dans l'antre de Bodhi: v1
-      #- 8 # Allies are Better Prepared
-    location:
-      github_user: mleduque
-      repository: MadeInHeaven_FixesAndRestorations
-      commit: 054fcb7-fr
+      - 8 # Allies are Better Prepared
   - name: c#sodboabri
     description: The Boareskyr Bridge Scene
     link: https://github.com/Gitjas/The_Boareskyr_Bridge_Scene
@@ -291,62 +288,7 @@ modules:
       before: bg1re & npc mods
     components:
       - 32 # Clean-up Quests -> Option 1 and use gentler Tamoko quest: v2.4
-    ignore_warnings: true
-  - name: iwdification
-    description: spell packs of iwdification
-    installation:
-      general: just the spell packs part early, before some stroy mods (TDD, Totlm, dsotsc)
-    components:
-      - 30 # IWD Arcane Spell Pack: Release Candidate 2
-      - 40 # IWD Divine Spell Pack: Release Candidate 2
-    location:
-      github_user: Gibberlings3
-      repository: iwdification
-      release: v5
-      asset: lin-iwdification-v5.tar.gz
-      patch:
-        relative: patches/iwdification-ini.diff
-  - name: IWD1_EET
-    installation:
-      after: EET
-      before: A7-TotLM-BG2EE
-    components:
-    location:
-      github_user: The-Gate-Project
-      repository: IWD1_EET
-      branch: master
-      refresh: 1week
-  - name: IWD2_EET
-    installation:
-      after: EET
-      before: A7-TotLM-BG2EE
-    components:
-    location:
-      github_user: The-Gate-Project
-      repository: IWD2_EET
-      branch: master
-      patch: https://www.gibberlings3.net/forums/topic/36405-discussion-of-tipun%E2%80%99s-iwd-mods-and-their-integration-in-eet-games/?do=findComment&comment=326993
-  - name: A7-TotLM-BG2EE
-    description: Trial of the Luremaster - Main component (warns)
-    components:
-      - 0  # Trials of the Luremaster for Baldur's Gate
-      - 20 # Rebalance weapons and equipment
-      #- 30 # Reduce experience from monsters and quests - Reduce by 25 percent
-      - 31 # Reduce experience from monsters and quests - Reduce by 50 percent
-      #- 32 # Reduce experience from monsters and quests - Reduce by 75 percent
-      #- 33 # Reduce experience from monsters and quests - No XP
-      - 40 # Allow to trade with Hobart before starting the adventure
-    ignore_warnings: true
-    location:
-      github_user: Argent77
-      repository: A7-TotLM-BG2EE
-      release: v4.1
-      asset: A7-TotLM-BG2EE-v4.1.iemod
-  - name: A7-TotLM-BG2EE
-    description: Trial of the Luremaster - XP reduction
-    components: ask
-      #- 30 # Reduire les points d'experience des monstres et des quetes. -> Reduction de 25 pour cent
-  - name: DSotSC
+    ignore_warnings: true  - name: DSotSC
     description: Dark Side of the Sword Coast
     components:
       - 0 # Dark Side of the Sword Coast (DSotSC)
@@ -2065,7 +2007,13 @@ modules:
       repository: Ishlilka_The-Wizard-Slayer
       branch: master
       refresh: 1day
-
+  - name: zakrion_bg1
+    location:
+      http: https://www.gibberlings3.net/files/file/1020-zakrion/?do=download&r=6095&confirm=1&t=1&csrfKey=26496983391408bcb5e250b559da1945
+  - name: zakrion_bg2
+    location:
+      http: https://www.gibberlings3.net/files/file/1040-zakrion-for-bg2/?do=download&r=6417&confirm=1&t=1&csrfKey=26496983391408bcb5e250b559da1945
+  # end NPC
 
   #########
   # Crossmod
@@ -2079,8 +2027,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Crossmod_Banter_Pack_for_Baldurs_Gate_II
-      release: v21
-      asset: crossmod-banter-pack-for-baldurs-gate-ii-v21.iemod # tgz truncates some file names
+      release: v23
+      asset: crossmod-banter-pack-for-baldurs-gate-ii-v23.iemod # tgz truncates some file names
   - name: adrian
     description: Adrian crossmod
     components:
@@ -2107,9 +2055,10 @@ modules:
     description: Grey the dog
     components:
       - 10 # Grey the Dog: Crossmod Content
+  # end crossmod
 
   #########
-  # Spells
+  # Early spells
   #########
   - name: spell_rev
     components:
@@ -2125,6 +2074,70 @@ modules:
       repository: SpellRevisions
       branch: master
       refresh: 8hours
+  - name: iwdification
+    description: spell packs of iwdification
+    installation:
+      general: just the spell packs part early, before some stroy mods (TDD, Totlm, dsotsc)
+    components:
+      - 30 # IWD Arcane Spell Pack: Release Candidate 2
+      - 40 # IWD Divine Spell Pack: Release Candidate 2
+    location:
+      github_user: Gibberlings3
+      repository: iwdification
+      release: v5
+      asset: lin-iwdification-v5.tar.gz
+      patch:
+        relative: patches/iwdification-ini.diff
+
+  #########
+  # Late Quests
+  # Depend on iwdification
+  #########
+
+  - name: IWD1_EET
+    installation:
+      after: EET
+      before: A7-TotLM-BG2EE
+    components:
+    location:
+      github_user: The-Gate-Project
+      repository: IWD1_EET
+      branch: master
+      refresh: 1week
+  - name: IWD2_EET
+    installation:
+      after: EET
+      before: A7-TotLM-BG2EE
+    components:
+    location:
+      github_user: The-Gate-Project
+      repository: IWD2_EET
+      branch: master
+      patch: https://www.gibberlings3.net/forums/topic/36405-discussion-of-tipun%E2%80%99s-iwd-mods-and-their-integration-in-eet-games/?do=findComment&comment=326993
+  - name: A7-TotLM-BG2EE
+    description: Trial of the Luremaster - Main component (warns)
+    components:
+      - 0  # Trials of the Luremaster for Baldur's Gate
+      - 20 # Rebalance weapons and equipment
+      #- 30 # Reduce experience from monsters and quests - Reduce by 25 percent
+      - 31 # Reduce experience from monsters and quests - Reduce by 50 percent
+      #- 32 # Reduce experience from monsters and quests - Reduce by 75 percent
+      #- 33 # Reduce experience from monsters and quests - No XP
+      - 40 # Allow to trade with Hobart before starting the adventure
+    ignore_warnings: true
+    location:
+      github_user: Argent77
+      repository: A7-TotLM-BG2EE
+      release: v4.1
+      asset: A7-TotLM-BG2EE-v4.1.iemod
+  - name: A7-TotLM-BG2EE
+    description: Trial of the Luremaster - XP reduction
+    components: ask
+      #- 30 # Reduire les points d'experience des monstres et des quetes. -> Reduction de 25 pour cent
+
+  #########
+  # Spells
+  #########
   - name: iwdification
     components:
       - 10 # Icewind Dale Casting Graphics (Andyr): Release Candidate 2
@@ -2143,6 +2156,22 @@ modules:
       - 90 # Expanded Polymorph Self: Release Candidate 2
       - 100 # IWD Class Updates: Paladin: IWD Abilities and Skills: Release Candidate 2
     ignore_warnings: true
+  - name: mih_fr
+    description: MadeInHeaven Fixes and restorations -- https://raw.githack.com/AngelGryph/MadeInHeaven_FixesAndRestorations/main/mih_fr/docs/readme-mih_fr.html
+    components:
+      - spell restorations
+    location:
+      github_user: AngelGryph
+      repository: MadeInHeaven_FixesAndRestorations
+  - name: mih_sp
+    description: MadeInHeaven SpellPack --  https://raw.githack.com/AngelGryph/MadeInHeaven_SpellPack/main/mih_sp/docs/readme-mih_sp.html
+    components:
+      - monster summoning
+      - No Elemental Mind Battle
+      - Spell Improvements
+    location:
+      github_user: AngelGryph
+      repository: MadeInHeaven_SpellPack
   - name : Weasels!
     components:
       - 0
@@ -2225,6 +2254,14 @@ modules:
       repository: BGEE-Thalantyr-Ex
       release: v1.0.0
       asset: modthalantyrex-v1.0.0.iemod
+  - name: zgbg2evermemory
+    componennts:
+      - 0 # Evermemory for BG2EE
+    location:
+      github_user: GraionDilach
+      repository: zgbg2evermemory
+      release: v1
+      asset: evermemory-for-bg2ee-1.iemod
   - name: valhorn
     components: [0]
     location:
@@ -2445,8 +2482,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Lore_From_Learning
-      release: v4
-      asset: lin-cdlore-v4.tar.gz
+      release: v6
+      asset: lin-cdlore-v6.tar.gz
   - name: polyvorp
     components:
       - 10 # Rebalanced Vorpal Weapons (affects enemies and players)
@@ -2667,19 +2704,19 @@ modules:
     components:
       - 0  # Changements concernant les bardes et voleurs purs, ainsi que les kits originaux du jeu (necessaire pour les autres composants)
       - 1  # Ajout d'une echoppe pour bardes et voleurs
-      ##- 2  # Installer l'Acrobate (kit de barde)
-      ##- 3  # Installer le Choriste (kit de barde)
-      ##- 4  # Installer le Chanteur Funebre (kit de barde)
-      ##- 5  # Installer le Gitan (kit de barde)
+      - 2  # Installer l'Acrobate (kit de barde)
+      - 3  # Installer le Choriste (kit de barde)
+      - 4  # Installer le Chanteur Funebre (kit de barde)
+      - 5  # Installer le Gitan (kit de barde)
       - 6  # Installer l'Aventurier (kit de voleur)
-      #- 7  # Installer le Cambrioleur (kit de voleur)
-      ##- 8  # Installer le Lamesprit (kit de voleur)
+      - 7  # Installer le Cambrioleur (kit de voleur)
+      - 8  # Installer le Lamesprit (kit de voleur)
       - 9  # Installer le Tireur d'Elite (kit de voleur)
     location:
       github_user: Gibberlings3
       repository: SongAndSilence
-      release: v16
-      asset: lin-song_and_silence-v16.tar.gz
+      release: v17
+      asset: lin-song_and_silence-v17.tar.gz
   - name: morpheus562-s-kitpack
     description: morpheus562's kitpack - only single-class kits
     components:
@@ -2849,7 +2886,7 @@ modules:
     location:
       github_user: mleduque
       repository: Faiths_and_Powers
-      tag: 0.86sd1-fr
+      tag: 0.86sd2-fr
       patch:
         relative: patches/fnp_configure.diff
   - name: 5E_spellcasting
@@ -2910,7 +2947,7 @@ modules:
     location:
       github_user: mleduque
       repository: Might_and_Guile
-      tag: 5.5-fr
+      tag: 5.6.1-fr
       patch:
         relative: patches/mng-multibard-shools.diff
   - name: HouseTweaks
@@ -3554,7 +3591,7 @@ modules:
     location:
       github_user: subtledoctor
       repository: Combat_Skill_Proficiencies
-      tag: "1.0.1-fr"
+      tag: "1.3.1-fr"
       patch:
         relative: patches/cobat-skill-profs-config.diff
   - name: SubtleD_Stat_Overhauls
@@ -3562,7 +3599,7 @@ modules:
     location:
       github_user: subtledoctor
       repository: SubtleD_Stat_Overhauls
-      tage: 1.1-fr
+      tage: 1.2-fr
   - name: Magic_Battles_Revised
     installation:
       after: stratagems
@@ -3715,9 +3752,9 @@ modules:
       #- 1010 #/ Retirer l'indicateur de classe jumelee pour Imoen (attention, lire le fichier Readme): 5.2
       - 2000 #/ Choix des classes/caracteristiques/kits des PNJ: 5.2
     location:
-      github_user: mleduque
+      github_user: subtledoctor
       repository: NPC_EE
-      commit: "6.0-fr"
+      commit: "6.4"
   - name: POISON_NO_BYPASS
     components:
       - 3 # Limited Exclusions(Anti-magic, AoE, Gaze): Mirror Image or Stoneskin
