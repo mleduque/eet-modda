@@ -5,6 +5,20 @@ global:
   lang_dir: "fr_FR"
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
 modules:
+  - name: spell_rev
+    components:
+      - 0   # Spell Revisions
+      - 10  # Deva and Planetar Animations
+      - 20  # Mirror Image Fix
+      - 30  # Dispel Magic Fix    <- must be before TotLM
+      - 55  # Spell Deflection blocks AoE spells
+      - 60  # Update Spellbooks of Joinable NPCs
+      #- 65   # Revised Warrior HLAs
+    location:
+      github_user: Gibberlings3
+      repository: SpellRevisions
+      branch: master
+      refresh: 8hours
   - name: SubtleD_Spell_Tweaks
     components: ask
     location:

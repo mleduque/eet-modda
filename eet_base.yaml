@@ -1964,6 +1964,10 @@ modules:
     components: ask
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/JuniperAndTheStoneLeech v1.1.zip
+  - name: BloodiedStingsOfBarovia
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/BloodiedStingsOfBarovia v1.0.zip
   - name: verrsza
     components: ask
     location:
