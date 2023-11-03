@@ -1,0 +1,47 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+  #lang_preferences: ["#rx#^english", "american english" ]
+modules:
+  # private
+  # tag
+  - name: d0questpack
+    description: SimDing0's Quest Pack
+    installation:
+      before: alternatives
+    components: [0, 1, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+    original_location: http://mods.pocketplane.net/questpack-v35-win.zip
+    location:
+    # alternative: http://america.iegmc.net/ppg/questpack-v35-win.zip
+      github_user: mleduque
+      repository: simding0_questpack
+      tag: v3.5-lean
+      layout:
+        layout_type: multi_dir
+        dirs:
+          - questpack
+          - setup-d0questpack.tp2
+      auth: PAT my_repositories
+  # private
+  # commit
+  - name: Foundling
+    description: "Colours of Infinity: Foundling"
+    components:
+      - 0   # Foundling
+    location:
+      github_user: mleduque
+      repository: Lava_Foundling
+      commit: 591acfd4505f33a2a1cf47f23aad902670c3d533
+      auth: PAT my_repositories
+  # private
+  # release
+  - name: Yvette
+    components: [ 0 ]
+    location:
+      github_user: mleduque
+      repository: Lava_Yvette
+      release: v5.0
+      asset: Yvette.Romance.v5.1.0.zip
+      auth: PAT my_repositories

@@ -70,7 +70,7 @@ modules:
       asset: infinitysounds-v2.0.iemod
 
   #########
-  # story
+  # Section: Story
   #########
   - name: BP_in_BG
     description: Black Pits in BGEE
@@ -719,8 +719,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: The_Calling
-      release: v3
-      asset: lin-thecalling-v3.tar.gz
+      release: v4
+      asset: lin-thecalling-v4.tar.gz
   - name: bg1npc
     components: ask
     location:
@@ -772,7 +772,7 @@ modules:
   - name: com_encouters
     components: ask
     location:
-      github_user: /The-Gate-Project
+      github_user: The-Gate-Project
       repository: Com_encounters
       release: v1.20
       asset: com-encounters-v1.20.iemod
@@ -1228,7 +1228,7 @@ modules:
       repository: VampireTales
 
   #########
-  # NPC
+  # Section: NPC
   #########
   - name: npc_tweak
     comments: also adds an heirloom to anomen
@@ -1697,7 +1697,7 @@ modules:
       - 1 # Chatty Imoen : Interactions supplementaires avec les autres personnages
       - 4 # Chatty Imoen : Changement de portrait pour Imoen -> Donner a Imoen son portrait de BG2
     location:
-      github_user: AstroBryGuy
+      github_user: The-Gate-Project
       repository: ChattyImoen
       release: v1.3
       asset: lin-chattyimoen-v1.3.zip
@@ -2017,10 +2017,14 @@ modules:
   - name: zakrion_bg2
     location:
       http: https://www.gibberlings3.net/files/file/1040-zakrion-for-bg2/?do=download&r=6417&confirm=1&t=1&csrfKey=26496983391408bcb5e250b559da1945
+  - name: NikitaRdux
+    location:
+      github_user: The-Gate-Project
+      repository: NikitaRedux
   # end NPC
 
   #########
-  # Crossmod
+  # Section: Crossmod
   #########
   - name: crossmodbg2
     description: Crossmod Banter Pack
@@ -2802,7 +2806,7 @@ modules:
     location:
       github_user: subtledoctor
       repository: SubtleD_Spell_Tweaks
-      tag: "2.4.3"
+      tag: "2.6.1"
   - name: TomeAndBlood
     description: Tome And Blood - main
     components:
@@ -2890,7 +2894,7 @@ modules:
     location:
       github_user: mleduque
       repository: Faiths_and_Powers
-      tag: 0.86sd2-fr
+      tag: 0.86sd4-fr
       patch:
         relative: patches/fnp_configure.diff
   - name: 5E_spellcasting
@@ -3427,7 +3431,7 @@ modules:
     location:
       github_user: subtledoctor
       repository:  IWD_EET_Integration
-      tag: "0.9.3"
+      tag: "0.10.1"
 
   #########
   # EET_end
@@ -3586,7 +3590,7 @@ modules:
     location:
       github_user:  subtledoctor
       repository: SubtleD_Item_Tweaks
-      tag: 1.2-fr
+      tag: 1.3-fr
   - name: Combat_Skill_Proficiencies
     installation:
       after: [stratagems, atweaks, cdtweaks]
@@ -3603,7 +3607,7 @@ modules:
     location:
       github_user: subtledoctor
       repository: SubtleD_Stat_Overhauls
-      tage: 1.2-fr
+      tage: 1.3-fr
   - name: Magic_Battles_Revised
     installation:
       after: stratagems
@@ -3802,8 +3806,8 @@ modules:
     location:
       github_user: BGforgeNet
       repository: bg2-tweaks-and-tricks
-      release: v8.26
-      asset: tweaks-and-tricks-v8.26.iemod
+      release: v8.29
+      asset: tweaks-and-tricks-v8.29.iemod
   - name: zgtweaks
     components:
       #- 10 # one arcane scroll on the level of the highest arcane level memorized
@@ -3819,8 +3823,8 @@ modules:
     location:
       github_user: GraionDilach
       repository: RandomGraionTweaks
-      release: version-1.10
-      asset: random-graion-tweaks-1.10.iemod
+      release: version-1.12
+      asset: random-graion-tweaks-1.12.iemod
     ignore_warnings: true
   - name: jtweaks
     components:

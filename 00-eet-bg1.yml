@@ -61,9 +61,7 @@ modules:
     components: [0]
     version: "2.2"
     location:
-      github_user: mleduque
-      repository: redcarnelian_stone_of_askavar
-      tag: v2.2
+      http: http://www.users.totalise.co.uk/~bluerift/tsoaV2_2.zip
   - name: Margarita
     components:
       - 0 # Margarita for Baldur's Gate: Enhanced Edition
