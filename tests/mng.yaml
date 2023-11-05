@@ -10,5 +10,5 @@ modules:
     location:
       github_user:  mleduque
       repository: Might_and_Guile
-      branch: 5.6.2-fr
+      branch: french-tracking
       refresh: always
