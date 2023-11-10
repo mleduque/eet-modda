@@ -1,0 +1,25 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: spell_rev
+    components:
+      - 0   # Spell Revisions
+      - 20  # Mirror Image Fix
+      - 30  # Dispel Magic Fix    <- must be before TotLM
+      - 55  # Spell Deflection blocks AoE spells
+    location:
+      github_user: Gibberlings3
+      repository: SpellRevisions
+      branch: master
+      refresh: 8hours
+  - name: SubtleD_Item_Tweaks
+    components: ask
+    location:
+      github_user:  mleduque
+      repository: SubtleD_Item_Tweaks
+      branch: 1.3-french
+      refresh: always

@@ -223,6 +223,13 @@ modules:
       repository: A7-GolemConstruction
       release: v6.3
       asset:  A7-GolemConstruction-v6.3.iemod
+  - name: JA#BGT_AdvPack
+    components: ask
+    location:
+      github_user: TotoR115
+      repository: JA-AdventurePack or gitjas
+      branch: master
+      refresh: 4days
   - name: "c#endlessbg1"
     components: ask
       - 0 # Endless BG1 : Composant principal (requis): 10
@@ -414,7 +421,7 @@ modules:
     components:
       - 0 # Southern Edge: the new district of Athkatla -> Yes, but don't patch the existing save games: 3.4
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/SouthernEdge v4.0.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/SouthernEdge v4.3.zip
   - name: Ooze
     description: "Athkatlan Grounds: The Ooze’s Lounge"
     components:
@@ -1718,8 +1725,8 @@ modules:
     location:
       github_user: The-Gate-Project
       repository: NeeraBanters
-      release: v0.9.1
-      asset: win-neerabanters-v0.9.1.zip
+      release: v0.9.2
+      asset: win-neerabanters-v0.9.2.zip
   - name: korganfriendship
     components: [0]
     location:
@@ -2013,7 +2020,7 @@ modules:
       refresh: 1day
   - name: zakrion_bg1
     location:
-      http: https://www.gibberlings3.net/files/file/1020-zakrion/?do=download&r=6095&confirm=1&t=1&csrfKey=26496983391408bcb5e250b559da1945
+      path: /home/mick/Games/modda-cache/static/lin-Zakrion_BG1-v2.0.zip
   - name: zakrion_bg2
     location:
       http: https://www.gibberlings3.net/files/file/1040-zakrion-for-bg2/?do=download&r=6417&confirm=1&t=1&csrfKey=26496983391408bcb5e250b559da1945
@@ -2519,7 +2526,7 @@ modules:
     location:
       github_user:  mleduque
       repository: Forgotten-Armament
-      tag: 3.0-keep-some-boots
+      tag: 4.0-keep-some-boots
     ignore_warnings: true
     #patch:
     #  relative: patches/forgotten-armament-ini.diff
@@ -3599,7 +3606,7 @@ modules:
     location:
       github_user: subtledoctor
       repository: Combat_Skill_Proficiencies
-      tag: "1.3.1-fr"
+      tag: "1.3.3-fr"
       patch:
         relative: patches/cobat-skill-profs-config.diff
   - name: SubtleD_Stat_Overhauls
@@ -3657,8 +3664,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Tactics-Remix
-      release: 0.6.1-beta
-      asset: lin-tactics-remix-v0.6.1-beta.zip
+      release: 0.6.2-beta
+      asset: lin-tactics-remix-v0.6.2-beta.zip
   - name: "butchery"
     components: #components installé avant SCS, deuxèmeliste pour après SCS
       - 41 # Boucherie de nains dans le donjon d'Irenicus [a installer apres Stratagems]: v5.0.0
@@ -3748,8 +3755,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Skills-and-Abilities
-      release: "2.0"
-      asset: lin-skills-and-abilities-v2.0.zip
+      release: "2.1"
+      asset: lin-skills-and-abilities-v2.1.zip
       patch:
         relative: patches/skills-and-abilities-prof-points.diff
   - name: npc_ee
