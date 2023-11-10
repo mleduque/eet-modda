@@ -2220,9 +2220,9 @@ modules:
     components:
       - 0 # Item Revisions by Demivrgvs (main component)
     location: # temporary, hope for maintenance and releases soon
-      github_user: mleduque
+      github_user: subtledoctor
       repository: ItemRevisions
-      branch: run_v4b10sd17_2022-04-02
+      branch: v4b10sd19
   - name: mih_fr
     description: Made in Heaven - Fixes & Restorations ; items restorations only
     components:
