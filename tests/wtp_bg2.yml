@@ -7,13 +7,26 @@ global:
 modules:
   - name: Will_to_Power
     components:
+      - 200 # Ajouter le Psioniste, voleur/psion: 2.6
+      - 300 # Ajouter le Guerrier Psychique, guerrier/psion: 2.6
+      - 400 # Ajouter le Psypher, rodeur/psion: 2.6
+      - 500 # Ajouter le Cerebromant, mage/psion: 2.6
+      - 900 # Mode Dark Sun : Tout le monde est un talent natif: 2.6
+      - 950 # Permettre aux clercs multiclasses d'utiliser plus d'armes: 2.6
     location:
       github_user: mleduque
       repository: Will_to_Power
-      branch: 1.3.4-fr
+      branch: 2.6-fr
+      refresh: always
   - name: npc_ee
     components:
+      - 1010 # Retirer l'indicateur de classe jumelee pour Imoen (attention, lire le fichier Readme): 6.4.1
+      - 1020 # Retirer l'indicateur de classe jumelee pour Nalia (attention, lire le fichier Readme): 6.4.1
+      - 1030 # Retirer l'indicateur de classe jumelee pour Anomen (attention, lire le fichier Readme): 6.4.1
+      - 1200 # Retirer l'indicateur de classe jumelee pour tous les autres PNJ (attention, lire le fichier Readme): 6.4.1
+      - 2000 # Choix des classes/caracteristiques/kits des PNJ: 6.4.1
     location:
       github_user: UnearthedArcana
       repository: NPC_EE
-      tag: "4.4.3"
+      branch: master # contains french!
+      refresh: always

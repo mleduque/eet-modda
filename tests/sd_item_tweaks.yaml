@@ -14,7 +14,21 @@ modules:
       repository: ItemRevisions
       tag: v4b10sd19
   - name: SubtleD_Item_Tweaks
-    components: ask
+    components:
+      - 100 # Encore une autre revision du systeme d'armure (YARAS): v1.3
+      - 112 # Ajustements sur l'esthetique et les enchantements -> Remplacer l'equipement enchante par des armes de maitre: v1.3
+      - 120 # Ajustements fonctionnels des armes: v1.3
+      - 160 # Toutes les potions sont utilisables par toutes les classes: v1.3
+      - 1000 # Donner deux APR aux armes creees par des sorts: v1.3
+      - 1010 # Ajouter une immunite aux attaques sournoises a l'Anneau de perception du danger: v1.3
+      - 1020 # Donner une vraie deviation des projectiles aux Bracelets antiprojectiles: v1.3
+      - 1030 # Ameliorer les armes avec effet de detonation: v1.3
+      - 1040 # Ajouter un effet de Peau d'ecorce 'revise' a l'Armure de la foi +3: v1.3
+      - 1051 # Modifie le Baton d'absorption d'Item Revisions -> ...Utilisation instantanee: v1.3
+      - 1070 # Rendre les marteaux de jet nains utilisables par les non-nains: v1.3
+      - 1080 # Ameliorer la Harpe d'Azlaer et la Harpe de Methild: v1.3
+      - 1091 # Degrader l'amulette d'Edwin -> Un seul emplacement de sort bonus par niveau de sorts: v1.3
+      - 1100 # Remplacer la resistance a la magie par de la metamagie pour la Robe de la toile: v1.3
     location:
       github_user:  mleduque
       repository: SubtleD_Item_Tweaks
