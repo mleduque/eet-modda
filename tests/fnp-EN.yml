@@ -1,0 +1,27 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "en_US"
+  lang_preferences: ["#rx#^english", "american english"]
+modules:
+  - name: Faiths_and_Powers
+    components:
+      - 25 # Choisir un systeme de spheres -> nuFnp (Nouveau FnP) : un nouveau système de spheres (moins de spheres, plus equilibre globalement, plus proche du PnP): 0.86sd5
+      - 30 # Donner l'option de lancer les sorts comme les Ensorceleurs (ne pas installer si l'utilisation du lancer 5E est prevue): 0.86sd5
+      - 31 # Installer les kits de clerc: 0.86sd5
+      - 33 # Installer les kits de druide: 0.86sd5
+      - 36 # Installer les kits de paladin -> ...pour ceux ci-dessus, PLUS les divinites Neutres/Mauvaises/demi-humaines: 0.86sd5
+      - 45 # Revision de la table de sorts des paladins: 0.86sd5
+      - 75 # Modifier l'utilisabilite des armes et armures pour les pretres: 0.86sd5
+      - 80 # Appliquer le systeme de spheres (REQUIS pour que le systeme de spheres fonctionne): 0.86sd5
+      - 91 # Druides multiclasses: 0.86sd5
+      - 92 # Chamans multiclasses: 0.86sd5
+      - 95 # Kits de clerc multiclasses (installer apres les autres mods de kits !!): 0.86sd5
+      - 99 # Appliquer les kits multiclasses de FnP aux PNJ: 0.86sd5
+    location:
+      github_user: mleduque
+      repository: Faiths_and_Powers
+      branch: 0.86sd5-fr
+      refresh: always
+

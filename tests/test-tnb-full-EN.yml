@@ -2,13 +2,13 @@ version: "1"
 global:
   #lang_dir: "en_US"
   #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
-  lang_dir: "fr_FR"
+  lang_dir: "en_US"
   lang_preferences: ["#rx#^english", "american english"]
 modules:
   - name: TomeAndBlood
-    description: Tome And Blood - main
     components: ask
     location:
-      github_user: subtledoctor
+      github_user: mleduque
       repository: TomeAndBlood
-      tag: "1.0"
+      branch: 1.0.1-fr
+      refresh: always
