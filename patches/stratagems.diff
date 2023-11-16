@@ -1,0 +1,12 @@
+--- stratagems/spellholditems/spellholditems.tpa
++++ stratagems/spellholditems/spellholditems.tpa
+@@ -34,7 +34,8 @@ DEFINE_ACTION_FUNCTION ~spellholditems~ BEGIN  // mostly legacy code
+                  TO_LOWER entry
+              PATCH_IF !VARIABLE_IS_SET $item_name_familiars("%entry%") BEGIN
+                 LPF ITM_read_droppable RET value END
+-                PATCH_IF value BEGIN
++                skipped = (SOURCE_RES=~L#HNDST~)
++                PATCH_IF value AND NOT skipped BEGIN
+                      LPF ITM_read_category RET cat=value END
+                      PATCH_IF cat=36 BEGIN //a bag
+                           SPRINT $container_list("%entry%") ""
