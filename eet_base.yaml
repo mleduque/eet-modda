@@ -1339,7 +1339,7 @@ modules:
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/Yvette Romance v5.00.zip
       patch:
-        relative: patches/yvette-noprompt.diff and remove romance conflicts
+        relative: patches/yvette.diff
   - name: ACBre
     description: Ascalon's Breagar
     installation:
