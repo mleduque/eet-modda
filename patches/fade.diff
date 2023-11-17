@@ -1,0 +1,288 @@
+--- fade/Dialogues/BE3FADE.d
++++ fade/Dialogues/BE3FADE.d
+@@ -5485,34 +5485,6 @@ IF ~~ THEN BE3FADE treat
+ @3953 == BVICONI @3954 == BE3FADE @3955
+ EXIT
+ 
+-CHAIN
+-IF ~~ THEN BE3FADE fadevsviconia3_interest
+-@3956 DO ~SetGlobal("E3FADEROMANCEACTIVE","GLOBAL",3)~
+-== BVICONI @3957 DO ~SetGlobal("VICONIAROMANCEACTIVE","GLOBAL",3)~
+-EXIT
+-
+-CHAIN
+-IF ~~ THEN BJAHEIR fadevsjaheira_slack
+-@3958 == BE3FADE @3959 == BJAHEIR @3960
+-END
+-IF ~~ THEN REPLY @3961 GOTO fadevsjaheira_ask
+-IF ~~ THEN REPLY @3962 EXTERN BE3FADE fadevsjaheira_worried
+-
+-CHAIN
+-IF ~~ THEN BE3FADE fadevsjaheira_worried
+-@3963 == BJAHEIR @3964 DO ~SetGlobal("E3FADEROMANCEACTIVE","GLOBAL",3)~
+-EXIT
+-
+-CHAIN
+-IF ~~ THEN BJAHEIR fadevsjaheira_ask
+-@3965 DO ~SetGlobal("JAHEIRAROMANCEACTIVE","GLOBAL",3)~ 
+-== BE3FADE @3966
+-END
+-IF ~~ THEN REPLY @2359 EXTERN BE3FADE lt14_recently
+-IF ~~ THEN REPLY @2360 EXTERN BE3FADE lt14_surprise
+-IF ~~ THEN REPLY @2361 EXTERN BE3FADE lt14_sarcasm
+-IF ~~ THEN REPLY @2362 EXTERN BE3FADE lt14_alone
+-
+ CHAIN
+ IF ~InParty(Myself) 
+ !StateCheck(Myself,CD_STATE_NOTVALID) 
+@@ -5937,13 +5909,6 @@ Global("E3FADEYOSHIMOTALK","LOCALS",0)~ THEN BYOSHIM fadeyoshimo
+ == BE3FADE @4217 == BYOSHIM @4218 == BE3FADE @4219 == BYOSHIM @4220 == BE3FADE @4221
+ EXIT
+ 
+-APPEND BAERIE
+-IF ~~ THEN BEGIN fadevsaerie_like
+-SAY @4222
+-IF ~~ THEN DO ~SetGlobal("AERIEROMANCEACTIVE","GLOBAL",3)~ EXTERN BE3FADE fadevsaerie_like_2
+-END
+-END
+-
+ APPEND BANOMEN
+ IF ~~ THEN BEGIN placate
+ SAY @4223
+@@ -5979,116 +5944,5 @@ SAY @4228
+ IF ~~ THEN EXIT
+ END
+ 
+-IF ~~ THEN BEGIN fadevsviconia3_saying
+-SAY @3957
+-IF ~~ THEN DO ~SetGlobal("VICONIAROMANCEACTIVE","GLOBAL",3)~ EXTERN BE3FADE fadevsviconia3_saying_2
+-END
+-END
+-
+-INTERJECT BE3FADE lt4_start e3fadevsaerie
+-== BAERIE IF ~InParty("Aerie") InMyArea("Aerie")
+-!StateCheck("Aerie",CD_STATE_NOTVALID)
+-Global("AERIEROMANCEACTIVE","GLOBAL",1)~ THEN @4229
+-== BE3FADE IF ~InParty("Aerie") InMyArea("Aerie")
+-!StateCheck("Aerie",CD_STATE_NOTVALID)
+-Global("AERIEROMANCEACTIVE","GLOBAL",1)~ THEN @4205
+-== BAERIE IF ~InParty("Aerie") InMyArea("Aerie")
+-!StateCheck("Aerie",CD_STATE_NOTVALID)
+-Global("AERIEROMANCEACTIVE","GLOBAL",1)~ THEN @4230
+-== BE3FADE IF ~InParty("Aerie") InMyArea("Aerie")
+-!StateCheck("Aerie",CD_STATE_NOTVALID)
+-Global("AERIEROMANCEACTIVE","GLOBAL",1)~ THEN @4231
+-== BAERIE IF ~InParty("Aerie") InMyArea("Aerie")
+-!StateCheck("Aerie",CD_STATE_NOTVALID)
+-Global("AERIEROMANCEACTIVE","GLOBAL",1)~ THEN @4232
+-== BE3FADE IF ~InParty("Aerie") InMyArea("Aerie")
+-!StateCheck("Aerie",CD_STATE_NOTVALID)
+-Global("AERIEROMANCEACTIVE","GLOBAL",1)~ THEN @4233
+-== BAERIE IF ~InParty("Aerie") InMyArea("Aerie")
+-!StateCheck("Aerie",CD_STATE_NOTVALID)
+-Global("AERIEROMANCEACTIVE","GLOBAL",1)~ THEN @4234
+-== BE3FADE IF ~InParty("Aerie") InMyArea("Aerie")
+-!StateCheck("Aerie",CD_STATE_NOTVALID)
+-Global("AERIEROMANCEACTIVE","GLOBAL",1)~ THEN @4235
+-== BAERIE IF ~InParty("Aerie") InMyArea("Aerie")
+-!StateCheck("Aerie",CD_STATE_NOTVALID)
+-Global("AERIEROMANCEACTIVE","GLOBAL",1)~ THEN @4236
+-END
+-IF ~~ THEN REPLY @4237 GOTO fadevsaerie_me
+-IF ~~ THEN REPLY @4238 EXTERN BAERIE fadevsaerie_like
+-
+-INTERJECT BE3FADE lt10_start e3fadevsviconia1
+-== BVICONI IF ~InParty("Viconia") InMyArea("Viconia")
+-!StateCheck("Viconia",CD_STATE_NOTVALID)
+-Global("VICONIAROMANCEACTIVE","GLOBAL",1)~ THEN @4239
+-== BE3FADE IF ~InParty("Viconia") InMyArea("Viconia")
+-!StateCheck("Viconia",CD_STATE_NOTVALID)
+-Global("VICONIAROMANCEACTIVE","GLOBAL",1)~ THEN @4240
+-== BVICONI IF ~InParty("Viconia") InMyArea("Viconia")
+-!StateCheck("Viconia",CD_STATE_NOTVALID)
+-Global("VICONIAROMANCEACTIVE","GLOBAL",1)~ THEN @4241
+-== BE3FADE IF ~InParty("Viconia") InMyArea("Viconia")
+-!StateCheck("Viconia",CD_STATE_NOTVALID)
+-Global("VICONIAROMANCEACTIVE","GLOBAL",1)~ THEN @4242
+-== BVICONI IF ~InParty("Viconia") InMyArea("Viconia")
+-!StateCheck("Viconia",CD_STATE_NOTVALID)
+-Global("VICONIAROMANCEACTIVE","GLOBAL",1)~ THEN @4243
+-END
+-IF ~~ THEN REPLY @4244 GOTO lt10_childhood
+-IF ~~ THEN REPLY @4245 GOTO lt10_waned
+-
+-INTERJECT BE3FADE lt20_start e3fadevsviconia3
+-== BVICONI IF ~InParty("Viconia") InMyArea("Viconia")
+-!StateCheck("Viconia",CD_STATE_NOTVALID)
+-Global("VICONIAROMANCEACTIVE","GLOBAL",1)~ THEN @4246
+-== BE3FADE IF ~InParty("Viconia") InMyArea("Viconia")
+-!StateCheck("Viconia",CD_STATE_NOTVALID)
+-Global("VICONIAROMANCEACTIVE","GLOBAL",1)~ THEN @4247
+-== BVICONI IF ~InParty("Viconia") InMyArea("Viconia")
+-!StateCheck("Viconia",CD_STATE_NOTVALID)
+-Global("VICONIAROMANCEACTIVE","GLOBAL",1)~ THEN @4248
+-== BE3FADE IF ~InParty("Viconia") InMyArea("Viconia")
+-!StateCheck("Viconia",CD_STATE_NOTVALID)
+-Global("VICONIAROMANCEACTIVE","GLOBAL",1)~ THEN @4249
+-== BVICONI IF ~InParty("Viconia") InMyArea("Viconia")
+-!StateCheck("Viconia",CD_STATE_NOTVALID)
+-Global("VICONIAROMANCEACTIVE","GLOBAL",1)~ THEN @4250
+-== BE3FADE IF ~InParty("Viconia") InMyArea("Viconia")
+-!StateCheck("Viconia",CD_STATE_NOTVALID)
+-Global("VICONIAROMANCEACTIVE","GLOBAL",1)~ THEN @4251
+-== BVICONI IF ~InParty("Viconia") InMyArea("Viconia")
+-!StateCheck("Viconia",CD_STATE_NOTVALID)
+-Global("VICONIAROMANCEACTIVE","GLOBAL",1)~ THEN @4252
+-END
+-IF ~~ THEN REPLY @4253 GOTO fadevsviconia3_point
+-IF ~~ THEN REPLY @4254 EXTERN BVICONI fadevsviconia3_saying
+-IF ~~ THEN REPLY @4255 GOTO fadevsviconia3_interest
+-
+-INTERJECT BE3FADE lt14_start e3fadevsjaheira
+-== BJAHEIR IF ~InParty("Jaheira") InMyArea("Jaheira")
+-!StateCheck("Jaheira",CD_STATE_NOTVALID)
+-Global("JAHEIRAROMANCEACTIVE","GLOBAL",1)~ THEN @4256
+-== BE3FADE IF ~InParty("Jaheira") InMyArea("Jaheira")
+-!StateCheck("Jaheira",CD_STATE_NOTVALID)
+-Global("JAHEIRAROMANCEACTIVE","GLOBAL",1)~ THEN @4257
+-== BJAHEIR IF ~InParty("Jaheira") InMyArea("Jaheira")
+-!StateCheck("Jaheira",CD_STATE_NOTVALID)
+-Global("JAHEIRAROMANCEACTIVE","GLOBAL",1)~ THEN @4258
+-== BE3FADE IF ~InParty("Jaheira") InMyArea("Jaheira")
+-!StateCheck("Jaheira",CD_STATE_NOTVALID)
+-Global("JAHEIRAROMANCEACTIVE","GLOBAL",1)~ THEN @4259
+-== BJAHEIR IF ~InParty("Jaheira") InMyArea("Jaheira")
+-!StateCheck("Jaheira",CD_STATE_NOTVALID)
+-Global("JAHEIRAROMANCEACTIVE","GLOBAL",1)~ THEN @4260
+-== BE3FADE IF ~InParty("Jaheira") InMyArea("Jaheira")
+-!StateCheck("Jaheira",CD_STATE_NOTVALID)
+-Global("JAHEIRAROMANCEACTIVE","GLOBAL",1)~ THEN @4261
+-END
+-IF ~~ THEN REPLY @4262 GOTO fadevsjaheira_apologise
+-IF ~~ THEN REPLY @4263 EXTERN BJAHEIR fadevsjaheira_slack
+-IF ~~ THEN REPLY @4264 GOTO fadevsjaheira_tolerate
+-
+-
+-
+ 
+ 
+--- fade/Dialogues/E3FADE25.d
++++ fade/Dialogues/E3FADE25.d
+@@ -75,7 +75,6 @@ END
+ 
+ IF~~THEN BEGIN FadeToB006x
+ SAY @4824
+-IF~~THEN DO ~SetGlobal("E3FADEROMANCEACTIVE","GLOBAL",3)~ EXIT
+ END
+ 
+ /////////////////////////////////////////////////////
+@@ -119,5 +118,5 @@ END
+ 
+ IF~~THEN BEGIN FadeToB014
+ SAY @4834
+-IF~~THEN DO ~SetGlobal("E3FadeKickedOut","LOCALS",1) SetGlobal("E3FADEROMANCEACTIVE","GLOBAL",3)~ EXIT
+-END
+\ No newline at end of file
++IF~~THEN DO ~SetGlobal("E3FadeKickedOut","LOCALS",1)~ EXIT
++END
+--- fade/Dialogues/FADE.d
++++ fade/Dialogues/FADE.d
+@@ -1320,7 +1320,6 @@ END
+ 
+ IF ~~ THEN BEGIN phaere2_want
+ SAY @382
+-IF ~~ THEN DO ~SetGlobal("E3FADEROMANCEACTIVE","GLOBAL",3)~ EXIT
+ END
+ 
+ IF ~~ THEN BEGIN phaere2_turn
+@@ -1353,7 +1352,6 @@ END
+ 
+ IF ~~ THEN BEGIN phaere2_problem
+ SAY @392
+-IF ~~ THEN DO ~SetGlobal("E3FADEROMANCEACTIVE","GLOBAL",3)~ EXIT
+ END
+ 
+ IF ~InParty(Myself)
+--- fade/Dialogues/RE.d
++++ fade/Dialogues/RE.d
+@@ -21,7 +21,6 @@ END
+ 
+ IF ~~ THEN BEGIN fade_TALMISS_greatsex
+ SAY @6992
+-IF~~THEN DO ~SetGlobal("E3FADEROMANCEACTIVE","GLOBAL",3) SetGlobal("E3FadeREAda","GLOBAL",2)~ EXIT
+ END
+ 
+ IF ~~ THEN BEGIN fade_TALMISS_getout
+@@ -249,4 +248,4 @@ END
+ 
+ 
+ 
+-END
+\ No newline at end of file
++END
+--- fade/Scripts/E3Fade.baf
++++ fade/Scripts/E3Fade.baf
+@@ -17,39 +17,6 @@ THEN
+       Attack(NearestEnemyOf(Myself))
+ END
+ 
+-IF
+-  InParty(Myself)
+-  Global("E3FADEROMANCEACTIVE","GLOBAL",2)
+-  OR(2)
+-       Global("AERIEROMANCEACTIVE","GLOBAL",1)
+-       Global("AERIEROMANCEACTIVE","GLOBAL",2)
+-THEN
+-    RESPONSE #100
+-       SetGlobal("AERIEROMANCEACTIVE","GLOBAL",3)
+-END
+-
+-IF
+-  InParty(Myself)
+-  Global("E3FADEROMANCEACTIVE","GLOBAL",2)
+-  OR(2)
+-       Global("JAHEIRAROMANCEACTIVE","GLOBAL",1)
+-       Global("JAHEIRAROMANCEACTIVE","GLOBAL",2)
+-THEN
+-    RESPONSE #100
+-        SetGlobal("JAHEIRAROMANCEACTIVE","GLOBAL",3)
+-END
+-
+-IF
+-  InParty(Myself)
+-  Global("E3FADEROMANCEACTIVE","GLOBAL",2)
+-  OR(2)
+-       Global("VICONIAROMANCEACTIVE","GLOBAL",1)
+-       Global("VICONIAROMANCEACTIVE","GLOBAL",2)
+-THEN
+-    RESPONSE #100
+-        SetGlobal("VICONIAROMANCEACTIVE","GLOBAL",3)
+-END
+-
+ IF
+   InParty(Myself)
+   GlobalGT("E3LOVETALK","GLOBAL",30)
+--- fade/Setup-Fade.tp2
++++ fade/Setup-Fade.tp2
+@@ -550,9 +550,6 @@ REPLACE ~99999~ @90
+ EXTEND_BOTTOM ~baldur.bcs~ ~Fade/Scripts/baldur.baf~  EVALUATE_BUFFER
+ USING ~fade\tra\%s\fade.tra~
+ 
+-EXTEND_TOP ~aerie.bcs~ ~Fade/Scripts/E3Aerie.baf~  EVALUATE_BUFFER
+-EXTEND_TOP ~jaheira.bcs~ ~Fade/Scripts/E3Jaheira.baf~ EVALUATE_BUFFER
+-EXTEND_TOP ~viconia.bcs~ ~Fade/Scripts/E3Viconia.baf~ EVALUATE_BUFFER
+ EXTEND_TOP ~ar0527.bcs~ ~Fade/Scripts/E3AR0527.baf~ EVALUATE_BUFFER
+ EXTEND_BOTTOM ~ar0907.bcs~ ~Fade/Scripts/E3AR0907.baf~ EVALUATE_BUFFER
+ EXTEND_BOTTOM ~ar0500.bcs~ ~Fade/Scripts/E3AR0500.baf~ EVALUATE_BUFFER
+@@ -606,11 +603,6 @@ AT_INTERACTIVE_UNINSTALL ~Fade/fadeaudiouninstall.bat~
+ /////////////////////EE///////////////////////////
+ //////////////////////////////////////////////////
+ 
+-ACTION_IF FILE_EXISTS_IN_GAME ~neera.dlg~ THEN BEGIN
+-  COMPILE EVALUATE_BUFFER ~fade/dialogues/ee.d~ EVALUATE_BUFFER
+-USING ~fade\tra\%s\fade.tra~
+-  EXTEND_TOP ~e3fade.bcs~ ~fade/scripts/ee.baf~ EVALUATE_BUFFER
+-END
+ 
+ //JOURNAL EE
+ 
