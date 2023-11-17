@@ -672,7 +672,30 @@
  
 --- Amber/dialogs/m#npcapp.d
 +++ Amber/dialogs/m#npcapp.d
-@@ -1904,42 +1904,6 @@ IF ~~ THEN BEGIN M#P2CT6
+@@ -1245,22 +1245,6 @@ APPEND ~JAHEIRAJ~
+       IF ~~ THEN EXIT
+   END
+   
+-  IF ~Global("M#AmberJaheiraRomanceConflict","GLOBAL",2)
+-      !StateCheck("M#Amber",STATE_SLEEPING)
+-      !StateCheck("M#Amber",STATE_HELPLESS)
+-      !StateCheck("M#Amber",STATE_STUNNED)
+-      !StateCheck("M#Amber",STATE_SILENCED)~ THEN BEGIN M#AmberJaheiraRCBegin1
+-    SAY @4068 /* @4068 = ~Amber, a moment of your time, if you please. ~ */
+-    IF ~~ THEN DO ~ActionOverride("m#amber",SetDialog("m#ambern"))~ GOTO M#AmberJaheiraRCBegin2
+-  END
+-  IF ~~ THEN BEGIN M#AmberJaheiraRCBegin2
+-    SAY @4069 /* @4069 = ~I see that you are getting close with <CHARNAME>, but you should bear in mind that he is still very young and inexperienced in many ways. Although your face does not betray your age, I suspect you are his senior by far and thus should be careful with him.~ */
+-    IF ~~ THEN EXTERN M#AMBERN AmberJaheiraRCA
+-  END
+-  IF ~~ THEN BEGIN M#AmberJaheiraRCB
+-    SAY @4070 /* @4070 = ~I only try to do what I think is best, and you try to turn it into a quarrel between us? You should think twice before calling me a hypocrite.~ */
+-    IF ~~ THEN EXTERN M#AMBERN AmberJaheiraRCC
+-  END
+ END
+ 
+ // APPENDs to Jan's dialog files
+@@ -1904,42 +1888,6 @@ IF ~~ THEN BEGIN M#P2CT6
         									RestParty()~ EXIT
    END
    
@@ -715,7 +738,7 @@
  END
  
  APPEND ~BVICONI~
-@@ -3290,7 +3254,7 @@ IF ~~ THEN BEGIN M#19
+@@ -3290,7 +3238,7 @@ IF ~~ THEN BEGIN M#19
  END
  
  IF ~~ THEN BEGIN M#BMThiefA
