@@ -810,6 +810,8 @@ modules:
       repository: Isra_NPC_BG2
       release: v3.1
       asset: isra-npc-for-bgii-v3.1.iemod
+      patch:
+        relative: patch/isra_bg2.diff
   - name: yeslicknpc
     components: [1]
     location:
@@ -860,7 +862,8 @@ modules:
       github_user: ArtemiusI
       repository: Sirene-NPC-for-BG2-EE
       tag: v2.02
-    # prompt for portrait
+      patch:
+        local: patches/sirene-bg2.diff
   - name: quieter_sirene
     component:
       - 0
@@ -1330,7 +1333,7 @@ modules:
       repository: SkitiaNPCs
       tag: v1.1
       patch:
-        relative: patches/skitia_npc_defaultportraits.diff
+        relative: patches/skitia_npc_defaultportraits.diff + patches/skitia-npc-bg2.diff
     #prompt for portrait (1. Default the 1. Default)
   - name: Petsy
     components: [0, 1]
@@ -1631,7 +1634,8 @@ modules:
       - 0 # Tyris Flare NPC: v9
     location:
       http: http://europe.iegmc.net/g3/tyrisflare-v11.zip
-      patch: tyris-conflicts.diff
+      patch:
+        relative: patch/tyris.diff
   - name: navarra
     components:
       - 0 # Navarra for BG2

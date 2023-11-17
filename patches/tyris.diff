@@ -1,0 +1,139 @@
+--- tyrisflare/dialogue/g#tyrisp.d
++++ tyrisflare/dialogue/g#tyrisp.d
+@@ -1,8 +1,6 @@
+ BEGIN G#TYRISP
+ 
+-  IF ~Global("G#TF.KickedOut","LOCALS",0)
+-      !Global("G#TF.TyrisRomanceActive","GLOBAL",1)
+-      !Global("G#TF.TyrisRomanceActive","GLOBAL",2)~ BEGIN KickOutDialogue#1.1
++  IF ~Global("G#TF.KickedOut","LOCALS",0)~ BEGIN KickOutDialogue#1.1
+     SAY @0 
+     ++ @1 GOTO KickOutDialogue#1.2
+     ++ @2 GOTO KickOutDialogue#1.3
+@@ -163,7 +161,6 @@ BEGIN G#TYRISP
+   IF ~~ BEGIN KickOutDialogue#2.5 //From KickOutDialogue#2.2.1
+     SAY @19
+     IF ~~ DO ~
+-      SetGlobal("G#TF.TyrisRomanceActive","GLOBAL",3)
+       SetGlobal("G#TF.KickedOut","LOCALS",1)
+       MoveGlobal("AR1105","G#Tyris",[1063.262])
+       EscapeAreaMove("AR1105",1063,262,4)
+@@ -173,7 +170,6 @@ BEGIN G#TYRISP
+   IF ~~ BEGIN KickOutDialogue#2.6 //From KickOutDialogue#2.2.2
+     SAY @20
+     IF ~~ DO ~
+-      SetGlobal("G#TF.TyrisRomanceActive","GLOBAL",3)
+       SetGlobal("G#TF.KickedOut","LOCALS",1)
+     ~ EXIT
+   END
+--- tyrisflare/scripts/g#tyris.baf
++++ tyrisflare/scripts/g#tyris.baf
+@@ -24,60 +24,6 @@ THEN
+     SetGlobal("G#TF.TyrisRomanceActive","GLOBAL",1)
+ END
+ 
+-IF // Kill Aerie romance if Tyris romance becomes serious
+-  InParty(Myself)
+-  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+-  OR(2)
+-    Global("AerieRomanceActive","GLOBAL",1)
+-    Global("AerieRomanceActive","GLOBAL",2)
+-THEN
+-  RESPONSE #1
+-    SetGlobal("AerieRomanceActive","GLOBAL",3)
+-END
+-
+-IF // Kill Jaheira romance if Tyris romance becomes serious
+-  InParty(Myself)
+-  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+-  OR(2)
+-    Global("JaheiraRomanceActive","GLOBAL",1)
+-    Global("JaheiraRomanceActive","GLOBAL",2)
+-THEN
+-  RESPONSE #1
+-    SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+-END
+-
+-IF // Kill Viconia romance if Tyris romance becomes serious
+-  InParty(Myself)
+-  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+-  OR(2)
+-    Global("ViconiaRomanceActive","GLOBAL",1)
+-    Global("ViconiaRomanceActive","GLOBAL",2)
+-THEN
+-  RESPONSE #1
+-    SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+-END
+-
+-IF // Kill Neera romance if Tyris romance becomes serious
+-  InParty(Myself)
+-  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+-  OR(2)
+-    Global("NeeraRomanceActive","GLOBAL",1)
+-    Global("NeeraRomanceActive","GLOBAL",2)
+-THEN
+-  RESPONSE #1
+-    SetGlobal("NeeraRomanceActive","GLOBAL",3)
+-END
+-
+-IF // Kill Dorn romance if Tyris romance becomes serious
+-  InParty(Myself)
+-  Global("G#TF.TyrisRomanceActive","GLOBAL",2)
+-  OR(2)
+-    Global("DornRomanceActive","GLOBAL",1)
+-    Global("DornRomanceActive","GLOBAL",2)
+-THEN
+-  RESPONSE #1
+-    SetGlobal("DornRomanceActive","GLOBAL",3)
+-END
+ 
+ IF // Trigger "morning after" lovetalks
+   InParty(Myself)
+--- tyrisflare/scripts/g#tyrs25.baf
++++ tyrisflare/scripts/g#tyrs25.baf
+@@ -5,14 +5,6 @@ THEN
+     StartDialogueNoSet([PC])
+ END
+ 
+-IF // If a non-serious romance was leftover from SoA, kill it
+-  InParty(Myself)
+-  Global("G#TF.TyrisRomanceActive","GLOBAL",1)
+-THEN
+-  RESPONSE #1
+-    SetGlobal("G#TF.TyrisRomanceActive","GLOBAL",3)
+-END
+-
+ IF // Starts the ToB section of Tyris' romance
+   InParty(Myself)
+   Global("G#TF.ExpLovetalk","LOCALS",0)
+--- tyrisflare/setup-tyrisflare.tp2
++++ tyrisflare/setup-tyrisflare.tp2
+@@ -45,9 +45,6 @@ ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
+   ADD_JOURNAL EXISTING @4 @11 @26 USING ~tyrisflare/languages/%LANGUAGE%/bodhiabduction.tra~
+   
+   COPY ~tyrisflare/bams/cg#tfamr.bmp~ ~override~
+-  
+-  EXTEND_TOP ~neera.bcs~ ~tyrisflare/scripts/biowarenpcs/neera.baf~
+-  EXTEND_TOP ~dorn.bcs~ ~tyrisflare/scripts/biowarenpcs/dorn.baf~
+ 
+ END ELSE BEGIN
+ 
+@@ -160,7 +157,6 @@ COMPILE ~tyrisflare/dialogue/g#tyris.d~
+         ~tyrisflare/dialogue/bg#tyris.d~
+         ~tyrisflare/dialogue/interjections.d~
+         ~tyrisflare/dialogue/lovetalks.d~
+-        ~tyrisflare/dialogue/romanceconflicts.d~
+         ~tyrisflare/dialogue/bodhiabduction.d~
+         ~tyrisflare/dialogue/flirts.d~
+ 
+@@ -214,10 +210,6 @@ EXTEND_TOP    ~ar0809.bcs~ ~tyrisflare/scripts/areascripts/ar0809.baf~
+ EXTEND_TOP    ~ar1100.bcs~ ~tyrisflare/scripts/areascripts/ar1100.baf~
+ EXTEND_TOP    ~ar1105.bcs~ ~tyrisflare/scripts/areascripts/ar1105.baf~
+ 
+-EXTEND_TOP ~aerie.bcs~   ~tyrisflare/scripts/biowarenpcs/aerie.baf~
+-EXTEND_TOP ~jaheira.bcs~ ~tyrisflare/scripts/biowarenpcs/jaheira.baf~
+-EXTEND_TOP ~viconia.bcs~ ~tyrisflare/scripts/biowarenpcs/viconia.baf~
+-
+ COMPILE ~tyrisflare/scripts/vampirescripts/g#tfvamp.baf~
+         ~tyrisflare/scripts/vampirescripts/g#tfcutv.baf~
+ EXTEND_BOTTOM ~bodhiamb.bcs~ ~tyrisflare/scripts/vampirescripts/bodhiamb.baf~

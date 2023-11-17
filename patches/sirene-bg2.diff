@@ -1,0 +1,217 @@
+diff --git a/Sirene_BG2/dialogue/c0sire2j.d b/Sirene_BG2/dialogue/c0sire2j.d
+index 6498a6e..37e9977 100644
+--- a/Sirene_BG2/dialogue/c0sire2j.d
++++ b/Sirene_BG2/dialogue/c0sire2j.d
+@@ -1278,7 +1278,7 @@ I_C_T UDSVIR03 23 C0SireneUDSVIR0323
+ END
+ 
+ I_C_T UDSILVER 0 C0SireneUDSILVER0
+-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Oh... oh, my.Å She is so beautiful... I cannot even describe it.~
++== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Oh... oh, my.ÔøΩ She is so beautiful... I cannot even describe it.~
+ END
+ 
+ I_C_T UDSILVER 53 C0SireneUDSILVER53
+@@ -4652,86 +4652,7 @@ IF ~~ EXIT
+ END
+ 
+ // Romance conflict
+-
+-IF ~Global("C0SireneRomanceConflict","GLOBAL",1) RealGlobalTimerExpired("C0SireneRomanceConflictTimer","GLOBAL")~ C0SireneConflict
+-SAY ~<CHARNAME>, may we talk a moment? 'Tis of an important matter to me.~ [C0BLANK]
+-++ ~Of course. What is it?~ + C0SireneConflict1
+-++ ~I'm afraid I don't have the time right now.~ + C0SireneConflict0
+-END
+-
+-IF ~~ C0SireneConflict0
+-SAY ~I... I see. Forgive me, then. I will not bother you again.~
+-IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)
+-SetGlobal("C0SireneRomanceConflict","GLOBAL",2)~ EXIT
+-END
+-
+-IF ~~ C0SireneConflict1
+-SAY ~I... I know we have talked often, and I do feel that we have become close. However, I feel like 'tis time to ask if... if you have affections for someone else. Within our group, in particular.~
+-= ~It may not be my place to ask, but... at the same time, I hope you will be truthful. I do not wish to intrude, if you truly have strong feelings for another.~
+-++ ~If you're forcing me to make a choice, then I'll admit it- I'd choose you. Whether it goes any further than that is up to you.~ + C0SireneConflict8
+-+ ~Global("AerieRomanceActive","GLOBAL",1)~ + ~In that case, I'll be honest. I may truly have feelings for Aerie.~ + C0SireneConflict2
+-+ ~Global("JaheiraRomanceActive","GLOBAL",1)~ + ~My thoughts about Jaheira are... complicated. I may be seeing her as more than just a guardian.~ + C0SireneConflict3
+-+ ~Global("AnomenRomanceActive","GLOBAL",1)~ + ~Anomen is rough around the edges, but I think it may work out.~ + C0SireneConflict4
+-+ ~Global("ViconiaRomanceActive","GLOBAL",1)~ + ~Viconia may in fact have captured my heart.~ + C0SireneConflict5
+-+ ~Global("RasaadRomanceActive","GLOBAL",1)~ + ~Rasaad is a good man. I do wish to become closer with him.~ + C0SireneConflict6
+-+ ~Global("NeeraRomanceActive","GLOBAL",1)~ + ~I'm not entirely sure how well it'll, but I do like Neera, even with the danger involved.~ + C0SireneConflict7
+-++ ~For another? No... I much prefer talking to you, in truth.~ + C0SireneConflict8
+-++ ~Not in particular. I greatly value all our allies, but I'm not interested in starting a relationship.~ + C0SireneConflict9
+-++ ~What are you implying, Sirene? I don't have any special feelings for you, or anyone in particular.~ + C0SireneConflict9
+-END
+-
+-IF ~~ C0SireneConflict2
+-SAY ~Ah... I should have realized sooner. Aerie is close to my own heart as well... I hope you will take good care of her, <CHARNAME>.~
+-IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)
+-SetGlobal("C0SireneRomanceConflict","GLOBAL",2)~ EXIT
+-END
+-
+-IF ~~ C0SireneConflict3
+-SAY ~I understand, <CHARNAME>. I do not think such feelings are so wrong, in truth.~
+-IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)
+-SetGlobal("C0SireneRomanceConflict","GLOBAL",2)~ EXIT
+-END
+-
+-IF ~~ C0SireneConflict4
+-SAY ~Aye, he is not such a bad person, despite his flaws. Perhaps you may bring out the good in him.~
+-IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)
+-SetGlobal("C0SireneRomanceConflict","GLOBAL",2)~ EXIT
+-END
+-
+-IF ~~ C0SireneConflict5
+-SAY ~If that is so, then I pray you know what you are doing. I do not think she is incapable of kindness, but... take care not to let her pull you into the darkness.~
+-IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)
+-SetGlobal("C0SireneRomanceConflict","GLOBAL",2)~ EXIT
+-END
+-
+-IF ~~ C0SireneConflict6
+-SAY ~In that case, I only ask that you treat him well, <CHARNAME>. He has suffered much, and I only wish for some happiness in his life once more.~
+-IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)
+-SetGlobal("C0SireneRomanceConflict","GLOBAL",2)~ EXIT
+-END
+-
+-IF ~~ C0SireneConflict7
+-SAY ~(laugh) I think the risk may be worth it, <CHARNAME>. She truly is a kind person, regardless of how unpredictable she may be.~
+-IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)
+-SetGlobal("C0SireneRomanceConflict","GLOBAL",2)~ EXIT
+-END
+-
+-IF ~~ C0SireneConflict8
+-SAY ~Oh... I am flattered, truly. I hope that we may... continue as we were, then.~
+-IF ~~ DO ~SetGlobal("AerieRomanceActive","GLOBAL",3)
+-SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+-SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+-SetGlobal("AnomenRomanceActive","GLOBAL",3)
+-SetGlobal("RasaadRomanceActive","GLOBAL",3)
+-SetGlobal("NeeraRomanceActive","GLOBAL",3)
+-SetGlobal("C0SireneRomanceConflict","GLOBAL",2)~ EXIT
+-END
+-
+-IF ~~ C0SireneConflict9
+-SAY ~I see. That is... disappointing, I suppose. I thought that perhaps... no, never mind. That is your decision to make.~
+-IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3) SetGlobal("C0SireneRomanceConflict","GLOBAL",2)~ EXIT
+-END
+-END
++// deleted
+ 
+ // Low Reputation
+ 
+@@ -6288,4 +6209,4 @@ SAY ~I cannot deny that I am wary of her origins... yet I do enjoy her company.
+ IF ~~ EXIT
+ END
+ 
+-END // END for APPEND
+\ No newline at end of file
++END // END for APPEND
+diff --git a/Sirene_BG2/scripts/c0sire2.baf b/Sirene_BG2/scripts/c0sire2.baf
+index 655f5d1..0619787 100644
+--- a/Sirene_BG2/scripts/c0sire2.baf
++++ b/Sirene_BG2/scripts/c0sire2.baf
+@@ -1334,103 +1334,4 @@ THEN
+ END
+ 
+ // Romance Conflicts
+-
+-IF
+-InParty(Myself)
+-Global("C0SireneRomanceActive","GLOBAL",1)
+-GlobalGT("C0SireneLovetalk","GLOBAL",22)
+-Global("C0SireneRomanceConflict","GLOBAL",0)
+-OR(6)
+-Global("AerieRomanceActive","GLOBAL",1)
+-Global("JaheiraRomanceActive","GLOBAL",1)
+-Global("AnomenRomanceActive","GLOBAL",1)
+-Global("ViconiaRomanceActive","GLOBAL",1)
+-Global("RasaadRomanceActive","GLOBAL",1)
+-Global("NeeraRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-RealSetGlobalTimer("C0SireneRomanceConflictTimer","GLOBAL",600)
+-SetGlobal("C0SireneRomanceConflict","GLOBAL",1)
+-END
+-
+-IF
+-InParty(Myself)
+-RealGlobalTimerExpired("C0SireneRomanceConflictTimer","GLOBAL")
+-Global("C0SireneRomanceConflict","GLOBAL",1)
+-Global("C0SireneRomanceActive","GLOBAL",1)
+-GlobalGT("C0SireneLovetalk","GLOBAL",22)
+-OR(6)
+-Global("AerieRomanceActive","GLOBAL",1)
+-Global("JaheiraRomanceActive","GLOBAL",1)
+-Global("AnomenRomanceActive","GLOBAL",1)
+-Global("ViconiaRomanceActive","GLOBAL",1)
+-Global("RasaadRomanceActive","GLOBAL",1)
+-Global("NeeraRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-StartDialogueNoSet(Player1)
+-END
+-
+-// Auto-kill romances
+-
+-IF
+-Global("C0SireneRomanceActive","GLOBAL",1)
+-OR(6)
+-Global("AerieRomanceActive","GLOBAL",2)
+-Global("JaheiraRomanceActive","GLOBAL",2)
+-Global("AnomenRomanceActive","GLOBAL",2)
+-Global("ViconiaRomanceActive","GLOBAL",2)
+-Global("RasaadRomanceActive","GLOBAL",2)
+-Global("NeeraRomanceActive","GLOBAL",2)
+-THEN
+-RESPONSE #100
+-SetGlobal("C0SireneRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("C0SireneRomanceActive","GLOBAL",2)
+-Global("AerieRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("AerieRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("C0SireneRomanceActive","GLOBAL",2)
+-Global("JaheiraRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("C0SireneRomanceActive","GLOBAL",2)
+-Global("AnomenRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("AnomenRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("C0SireneRomanceActive","GLOBAL",2)
+-Global("ViconiaRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("C0SireneRomanceActive","GLOBAL",2)
+-Global("RasaadRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("RasaadRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("C0SireneRomanceActive","GLOBAL",2)
+-Global("NeeraRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("NeeraRomanceActive","GLOBAL",3)
+-END
++// deleted

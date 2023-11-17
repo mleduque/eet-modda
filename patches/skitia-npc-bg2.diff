@@ -1,0 +1,1114 @@
+--- SkitiaNPCs/SkitiaNPCs/Dialogue/X3EmiJ.d
++++ SkitiaNPCs/SkitiaNPCs/Dialogue/X3EmiJ.d
+@@ -3934,81 +3934,8 @@ CHAIN X3EmiJ 11.8
+ DO ~SetGlobal("X3EmiRomanceActive","GLOBAL",3)~
+ EXIT 
+ 
+-// Romance conflict
+-
+-CHAIN IF ~Global("X3EmiRomanceConflict","GLOBAL",1)~ THEN X3EmiJ X3EmiRomanceConflict
+-@1157
+-== X3EmiJ @1158
+-END 
+-++ @1159 + RC.1
+-+ ~Global("AerieRomanceActive","GLOBAL",1)~ + @1160 + RC.Aerie
+-+ ~Global("JaheiraRomanceActive","GLOBAL",1)~ + @1161 + RC.Jaheira
+-+ ~Global("ViconiaRomanceActive","GLOBAL",1)~ + @1162 + RC.Viconia
+-+ ~Global("NeeraRomanceActive","GLOBAL",1)~ + @1163 + RC.Neera
+-+ ~Global("C0SireneRomanceActive","GLOBAL",1)~ + @1164 + RC.Sirene
+-+ ~Global("L3PetsyRomanceActive","GLOBAL",1)~ + @1165 + RC.Petsy
+-+ ~Global("YvetteRomanceActive","GLOBAL",1)~ + @1166 + RC.Yvette
+-++ @1167 + RC.1
+-++ @1168 + RC.2
+-
+-
+-CHAIN X3EmiJ RC.Aerie
+-@1169
+-DO ~SetGlobal("X3EmiRomanceActive","GLOBAL",3)
+-SetGlobal("X3EmiRomanceConflict","GLOBAL",2)~ EXIT
+-
+-
+-
+-CHAIN X3EmiJ RC.Jaheira
+-@1170
+-DO ~SetGlobal("X3EmiRomanceActive","GLOBAL",3)
+-SetGlobal("X3EmiRomanceConflict","GLOBAL",2)~ EXIT
+-
+-CHAIN X3EmiJ RC.Viconia
+-@1171
+-DO ~SetGlobal("X3EmiRomanceActive","GLOBAL",3)
+-SetGlobal("X3EmiRomanceConflict","GLOBAL",2)~ EXIT
+-
+-CHAIN X3EmiJ RC.Neera
+-@1172
+-DO ~SetGlobal("X3EmiRomanceActive","GLOBAL",3)
+-SetGlobal("X3EmiRomanceConflict","GLOBAL",2)~ EXIT
+-
+-CHAIN X3EmiJ RC.Yvette
+-@1173
+-DO ~SetGlobal("X3EmiRomanceActive","GLOBAL",3)
+-SetGlobal("X3EmiRomanceConflict","GLOBAL",2)~ EXIT
+-
+-CHAIN X3EmiJ RC.Petsy
+-@1174
+-DO ~SetGlobal("X3EmiRomanceActive","GLOBAL",3)
+-SetGlobal("X3EmiRomanceConflict","GLOBAL",2)~ EXIT
+-
+-CHAIN X3EmiJ RC.Sirene
+-@1175
+-DO ~SetGlobal("X3EmiRomanceActive","GLOBAL",3)
+-SetGlobal("X3EmiRomanceConflict","GLOBAL",2)~ EXIT
+-
+-CHAIN X3EmiJ RC.1
+-@1176
+-DO ~SetGlobal("X3EmiAppChange","GLOBAL",9)SetGlobal("AerieRomanceActive","GLOBAL",3)
+-SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+-SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+-SetGlobal("AnomenRomanceActive","GLOBAL",3)
+-SetGlobal("RasaadRomanceActive","GLOBAL",3)
+-SetGlobal("NeeraRomanceActive","GLOBAL",3)
+-SetGlobal("C0SireneRomanceActive","GLOBAL",3)
+-SetGlobal("YvetteRomanceActive","GLOBAL",3)
+-SetGlobal("L3PetsyRomanceActive","GLOBAL",3)
+-SetGlobal("X3EmiRomanceConflict","GLOBAL",2)~ 
+-EXIT
+-
++// Romance conflict- deleted
+ 
+-CHAIN X3EmiJ RC.2
+-@1177
+-DO ~SetGlobal("X3EmiRomanceActive","GLOBAL",3) SetGlobal("X3EmiRomanceConflict","GLOBAL",2)~ 
+-EXIT
+- 
+ // Post Rest 
+ CHAIN IF ~Global("X3EmiLoveTalk","LOCALS",24)~ THEN X3EmiJ LoveTalk12 
+ @1178
+--- SkitiaNPCs/SkitiaNPCs/Dialogue/X3KalJ.d
++++ SkitiaNPCs/SkitiaNPCs/Dialogue/X3KalJ.d
+@@ -3061,59 +3061,7 @@ CHAIN X3KalJ 10.11
+ EXIT 
+ // Other NPC Conflicts here 
+ 
+-// Romance conflict
+-
+-CHAIN IF ~Global("X3KalRomanceConflict","GLOBAL",1)~ THEN X3KalJ X3VieRomanceConflict
+-@919
+-DO ~SetGlobal("X3KalRomanceConflict","GLOBAL",2)~
+-== X3KalJ @920
+-END 
+-++ @921 + RC.1
+-+ ~Global("AerieRomanceActive","GLOBAL",1)~ + @922 + RC.2
+-+ ~Global("JaheiraRomanceActive","GLOBAL",1)~ + @923 + RC.2
+-+ ~Global("AnomenRomanceActive","GLOBAL",1)~ + @924 + RC.2
+-+ ~Global("ViconiaRomanceActive","GLOBAL",1)~ + @925 + RC.Viconia
+-+ ~Global("RasaadRomanceActive","GLOBAL",1)~ + @926 + RC.2
+-+ ~Global("HexxatRomanceActive","GLOBAL",1)~ + @927 + RC.Hexxat
+-+ ~Global("NeeraRomanceActive","GLOBAL",1)~ + @928 + RC.2
+-+ ~Global("C0SireneRomanceActive","GLOBAL",1)~ + @929 + RC.2
+-+ ~Global("L3PetsyRomanceActive","GLOBAL",1)~ + @930 + RC.Petsy
+-+ ~Global("YvetteRomanceActive","GLOBAL",1)~ + @931 + RC.2
+-+ ~Global("DornRomanceActive","GLOBAL",1)~ + @932 + RC.2
+-++ @933 + RC.2
+-
+-
+-CHAIN X3KalJ RC.2
+-@934
+-DO ~SetGlobal("X3KalRomanceActive","GLOBAL",3)~ EXIT
+-
+-CHAIN X3KalJ RC.Hexxat
+-@935
+-DO ~SetGlobal("X3KalRomanceActive","GLOBAL",3)~ EXIT
+-
+-CHAIN X3KalJ RC.Petsy
+-@936
+-DO ~SetGlobal("X3KalRomanceActive","GLOBAL",3)~ EXIT
+-
+-CHAIN X3KalJ RC.Viconia
+-@937
+-DO ~SetGlobal("X3KalRomanceActive","GLOBAL",3)~ EXIT
+-
+-CHAIN X3KalJ RC.1
+-@938
+-DO ~SetGlobal("X3KalAppChange","GLOBAL",9)SetGlobal("AerieRomanceActive","GLOBAL",3)
+-SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+-SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+-SetGlobal("AnomenRomanceActive","GLOBAL",3)
+-SetGlobal("RasaadRomanceActive","GLOBAL",3)
+-SetGlobal("NeeraRomanceActive","GLOBAL",3)
+-SetGlobal("NeeraRomanceActive","GLOBAL",3)
+-SetGlobal("C0SireneRomanceActive","GLOBAL",3)
+-SetGlobal("HexxatRomanceActive","GLOBAL",3)
+-SetGlobal("YvetteRomanceActive","GLOBAL",3)
+-SetGlobal("L3PetsyRomanceActive","GLOBAL",3)
+-SetGlobal("X3VieRomanceConflict","GLOBAL",2)~ 
+-EXIT
++// Romance conflict - deleted
+ 
+ 
+ //Love Talk #11
+--- SkitiaNPCs/SkitiaNPCs/Dialogue/X3RebJ.d
++++ SkitiaNPCs/SkitiaNPCs/Dialogue/X3RebJ.d
+@@ -3478,104 +3478,7 @@ CHAIN X3RebJ 11.19
+ EXTERN X3RebJ 11.16 
+ 
+ 
+-// Romance conflict
+-
+-CHAIN IF ~Global("X3RebRomanceConflict","GLOBAL",1)~ THEN X3RebJ X3RebRomanceConflict
+-@1050
+-== X3RebJ @1051 
+-END 
+-++ @1052 + RC.1
+-+ ~Global("AerieRomanceActive","GLOBAL",1)~ + @1053 + RC.Aerie
+-+ ~Global("JaheiraRomanceActive","GLOBAL",1)~ + @1054 + RC.Jaheira
+-+ ~Global("AnomenRomanceActive","GLOBAL",1)~ + @1055 + RC.Anomen
+-+ ~Global("ViconiaRomanceActive","GLOBAL",1)~ + @1056 + RC.Viconia
+-+ ~Global("RasaadRomanceActive","GLOBAL",1)~ + @1057 + RC.Rasaad
+-+ ~Global("NeeraRomanceActive","GLOBAL",1)~ + @1058 + RC.Neera
+-+ ~Global("C0SireneRomanceActive","GLOBAL",1)~ + @1059 + RC.Sirene
+-+ ~Global("L3PetsyRomanceActive","GLOBAL",1)~ + @1060 + RC.Petsy
+-+ ~Global("YvetteRomanceActive","GLOBAL",1)~ + @1061 + RC.Yvette
+-+ ~Global("DornRomanceActive","GLOBAL",1)~ + @1062 + RC.Dorn
+-+ ~Global("HexxatRomanceActive","GLOBAL",1)~ + @1063 + RC.Hexxat
+-++ @1064 + RC.1
+-++ @1065 + RC.2
+-++ @1066 + RC.2
+-
+-
+-CHAIN X3RebJ RC.Aerie
+-@1067
+-DO ~SetGlobal("X3RebRomanceActive","GLOBAL",3)
+-SetGlobal("X3RebRomanceConflict","GLOBAL",2)~ EXIT
+-
+-CHAIN X3RebJ RC.Anomen
+-@1068
+-DO ~SetGlobal("X3RebRomanceActive","GLOBAL",3)
+-SetGlobal("X3RebRomanceConflict","GLOBAL",2)~ EXIT
+-
+-CHAIN X3RebJ RC.Jaheira
+-@1069
+-DO ~SetGlobal("X3RebRomanceActive","GLOBAL",3)
+-SetGlobal("X3RebRomanceConflict","GLOBAL",2)~ EXIT
+-
+-CHAIN X3RebJ RC.Viconia
+-@1070
+-DO ~SetGlobal("X3RebRomanceActive","GLOBAL",3)
+-SetGlobal("X3RebRomanceConflict","GLOBAL",2)~ EXIT
+-
+-CHAIN X3RebJ RC.Rasaad
+-@1071
+-DO ~SetGlobal("X3RebRomanceActive","GLOBAL",3)
+-SetGlobal("X3RebRomanceConflict","GLOBAL",2)~ EXIT
+-
+-CHAIN X3RebJ RC.Neera
+-@1072
+-DO ~SetGlobal("X3RebRomanceActive","GLOBAL",3)
+-SetGlobal("X3RebRomanceConflict","GLOBAL",2)~ EXIT
+-
+-CHAIN X3RebJ RC.Dorn
+-@1073
+-DO ~SetGlobal("X3RebRomanceActive","GLOBAL",3)
+-SetGlobal("X3RebRomanceConflict","GLOBAL",2)~ EXIT
+-
+-CHAIN X3RebJ RC.Hexxat
+-@1074
+-DO ~SetGlobal("X3RebRomanceActive","GLOBAL",3)
+-SetGlobal("X3RebRomanceConflict","GLOBAL",2)~ EXIT
+-
+-CHAIN X3RebJ RC.Yvette
+-@1075
+-DO ~SetGlobal("X3RebRomanceActive","GLOBAL",3)
+-SetGlobal("X3RebRomanceConflict","GLOBAL",2)~ EXIT
+-
+-CHAIN X3RebJ RC.Petsy
+-@1076
+-DO ~SetGlobal("X3RebRomanceActive","GLOBAL",3)
+-SetGlobal("X3RebRomanceConflict","GLOBAL",2)~ EXIT
+-
+-CHAIN X3RebJ RC.Sirene
+-@1077
+-DO ~SetGlobal("X3RebRomanceActive","GLOBAL",3)
+-SetGlobal("X3RebRomanceConflict","GLOBAL",2)~ EXIT
+-
+-CHAIN X3RebJ RC.1
+-@1078
+-DO ~SetGlobal("X3RebAppChange","GLOBAL",9)SetGlobal("AerieRomanceActive","GLOBAL",3)
+-SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+-SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+-SetGlobal("AnomenRomanceActive","GLOBAL",3)
+-SetGlobal("RasaadRomanceActive","GLOBAL",3)
+-SetGlobal("NeeraRomanceActive","GLOBAL",3)
+-SetGlobal("C0SireneRomanceActive","GLOBAL",3)
+-SetGlobal("YvetteRomanceActive","GLOBAL",3)
+-SetGlobal("L3PetsyRomanceActive","GLOBAL",3)
+-SetGlobal("X3RebRomanceConflict","GLOBAL",2)~ 
+-EXIT
+-
+-
+-CHAIN X3RebJ RC.2
+-@1079
+-DO ~SetGlobal("X3RebRomanceActive","GLOBAL",3) SetGlobal("X3RebRomanceConflict","GLOBAL",2)~ 
+-EXIT
+- 
++// Romance conflict - deleted
+ 
+ CHAIN IF ~Global("X3RebLoveTalk","LOCALS",24)~ THEN X3RebJ LoveTalk12
+ @1080
+--- SkitiaNPCs/SkitiaNPCs/Dialogue/X3VieJ.d
++++ SkitiaNPCs/SkitiaNPCs/Dialogue/X3VieJ.d
+@@ -3639,68 +3639,7 @@ CHAIN X3VieJ 11.8
+ DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)~
+ EXIT 
+ 
+-// Romance conflict
+-
+-CHAIN IF ~Global("X3VieRomanceConflict","GLOBAL",1)~ THEN X3VieJ X3VieRomanceConflict
+-@1101
+-== X3VieJ @1102
+-END 
+-++ @1103 + RC.1
+-+ ~Global("AerieRomanceActive","GLOBAL",1)~ + @1104 + RC.2
+-+ ~Global("JaheiraRomanceActive","GLOBAL",1)~ + @1105 + RC.3
+-+ ~Global("AnomenRomanceActive","GLOBAL",1)~ + @1106 + RC.2
+-+ ~Global("ViconiaRomanceActive","GLOBAL",1)~ + @1107 + RC.Viconia
+-+ ~Global("RasaadRomanceActive","GLOBAL",1)~ + @1108 + RC.2
+-+ ~Global("HexxatRomanceActive","GLOBAL",1)~ + @1109 + RC.2
+-+ ~Global("NeeraRomanceActive","GLOBAL",1)~ + @1110 + RC.3
+-+ ~Global("C0SireneRomanceActive","GLOBAL",1)~ + @1111 + RC.Sirene
+-+ ~Global("L3PetsyRomanceActive","GLOBAL",1)~ + @1112 + RC.2
+-+ ~Global("YvetteRomanceActive","GLOBAL",1)~ + @1113 + RC.Yvette
+-+ ~Global("DornRomanceActive","GLOBAL",1)~ + @1114 + RC.2
+-++ @1115 + RC.2
+-++ @1116 + RC.2
+-
+-
+-CHAIN X3VieJ RC.2
+-@1117
+-DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)
+-SetGlobal("X3VieRomanceConflict","GLOBAL",2)~ EXIT
+-
+-CHAIN X3VieJ RC.Viconia
+-@1118
+-DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)
+-SetGlobal("X3VieRomanceConflict","GLOBAL",2)~ EXIT
+-
+-CHAIN X3VieJ RC.3
+-@1119
+-DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)
+-SetGlobal("X3VieRomanceConflict","GLOBAL",2)~ EXIT
+-
+-CHAIN X3VieJ RC.Yvette
+-@1120
+-DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)
+-SetGlobal("X3VieRomanceConflict","GLOBAL",2)~ EXIT
+-
+-CHAIN X3VieJ RC.Sirene
+-@1121
+-DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)
+-SetGlobal("X3VieRomanceConflict","GLOBAL",2)~ EXIT
+-
+-CHAIN X3VieJ RC.1
+-@1122
+-DO ~SetGlobal("X3VieAppChange","GLOBAL",9)SetGlobal("AerieRomanceActive","GLOBAL",3)
+-SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+-SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+-SetGlobal("AnomenRomanceActive","GLOBAL",3)
+-SetGlobal("RasaadRomanceActive","GLOBAL",3)
+-SetGlobal("NeeraRomanceActive","GLOBAL",3)
+-SetGlobal("NeeraRomanceActive","GLOBAL",3)
+-SetGlobal("C0SireneRomanceActive","GLOBAL",3)
+-SetGlobal("HexxatRomanceActive","GLOBAL",3)
+-SetGlobal("YvetteRomanceActive","GLOBAL",3)
+-SetGlobal("L3PetsyRomanceActive","GLOBAL",3)
+-SetGlobal("X3VieRomanceConflict","GLOBAL",2)~ 
+-EXIT
++// Romance conflict -deleted
+ 
+ 
+ 
+--- SkitiaNPCs/SkitiaNPCs/Scripts/X3Emi.baf
++++ SkitiaNPCs/SkitiaNPCs/Scripts/X3Emi.baf
+@@ -680,188 +680,9 @@ THEN RESPONSE #100
+ SetGlobal("X3EmiHexxatConflict","LOCALS",1) 
+ StartDialogueNoSet(Player1)
+ END 
+-// Romance Conflicts
++// Romance Conflicts - deleted
+ 
+-IF
+-InParty(Myself)
+-Global("X3EmiRomanceActive","GLOBAL",1)
+-GlobalGT("X3EmiLoveTalk","LOCALS",20)
+-Global("X3EmiRomanceConflict","GLOBAL",0)
+-OR(11)
+-Global("AerieRomanceActive","GLOBAL",1)
+-Global("JaheiraRomanceActive","GLOBAL",1)
+-Global("AnomenRomanceActive","GLOBAL",1)
+-Global("ViconiaRomanceActive","GLOBAL",1)
+-Global("RasaadRomanceActive","GLOBAL",1)
+-Global("NeeraRomanceActive","GLOBAL",1)
+-Global("DornRomanceActive","GLOBAL",1)
+-Global("HexxatRomanceActive","GLOBAL",1)
+-Global("L3PetsyRomanceActive","GLOBAL",1)
+-Global("YvetteRomanceActive","GLOBAL",1)
+-Global("C0SireneRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-RealSetGlobalTimer("X3EmiRomanceConflictTimer","GLOBAL",600)
+-SetGlobal("X3EmiRomanceConflict","GLOBAL",1)
+-END
+-
+-IF
+-InParty(Myself)
+-RealGlobalTimerExpired("X3EmiRomanceConflictTimer","GLOBAL")
+-Global("X3EmiRomanceConflict","GLOBAL",1)
+-Global("X3EmiRomanceActive","GLOBAL",1)
+-GlobalGT("X3EmiLovetalk","GLOBAL",22)
+-OR(11)
+-Global("AerieRomanceActive","GLOBAL",1)
+-Global("JaheiraRomanceActive","GLOBAL",1)
+-Global("AnomenRomanceActive","GLOBAL",1)
+-Global("ViconiaRomanceActive","GLOBAL",1)
+-Global("RasaadRomanceActive","GLOBAL",1)
+-Global("NeeraRomanceActive","GLOBAL",1)
+-Global("DornRomanceActive","GLOBAL",1)
+-Global("HexxatRomanceActive","GLOBAL",1)
+-Global("L3PetsyRomanceActive","GLOBAL",1)
+-Global("YvetteRomanceActive","GLOBAL",1)
+-Global("C0SireneRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-StartDialogueNoSet(Player1)
+-END
+-
+-//Auto Break Romances 
+-IF
+-Global("X3EmiRomanceActive","GLOBAL",1)
+-OR(14)
+-Global("AerieRomanceActive","GLOBAL",2)
+-Global("JaheiraRomanceActive","GLOBAL",2)
+-Global("AnomenRomanceActive","GLOBAL",2)
+-Global("ViconiaRomanceActive","GLOBAL",2)
+-Global("RasaadRomanceActive","GLOBAL",2)
+-Global("NeeraRomanceActive","GLOBAL",2)
+-Global("X3KalRomanceActive","GLOBAL",2)
+-Global("X3RebRomanceActive","GLOBAL",2)
+-Global("X3EmiRomanceActive","GLOBAL",2)
+-Global("DornRomanceActive","GLOBAL",2)
+-Global("HexxatRomanceActive","GLOBAL",2)
+-Global("L3PetsyRomanceActive","GLOBAL",2)
+-Global("YvetteRomanceActive","GLOBAL",2)
+-Global("C0SireneRomanceActive","GLOBAL",2)
+-THEN
+-RESPONSE #100
+-SetGlobal("X3EmiRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3EmiRomanceActive","GLOBAL",2)
+-Global("AerieRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("AerieRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3EmiRomanceActive","GLOBAL",2)
+-Global("JaheiraRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3EmiRomanceActive","GLOBAL",2)
+-Global("AnomenRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("AnomenRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3EmiRomanceActive","GLOBAL",2)
+-Global("ViconiaRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3EmiRomanceActive","GLOBAL",2)
+-Global("RasaadRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("RasaadRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3EmiRomanceActive","GLOBAL",2)
+-Global("NeeraRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("NeeraRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3EmiRomanceActive","GLOBAL",2)
+-Global("DornRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("DornRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3EmiRomanceActive","GLOBAL",2)
+-Global("HexxatRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("HexxatRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3EmiRomanceActive","GLOBAL",2)
+-Global("L3PetsyRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("L3PetsyRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3EmiRomanceActive","GLOBAL",2)
+-Global("YvetteRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("YvetteRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3EmiRomanceActive","GLOBAL",2)
+-Global("X3RebRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("X3RebRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3EmiRomanceActive","GLOBAL",2)
+-Global("X3VieRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("X3VieRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3EmiRomanceActive","GLOBAL",2)
+-Global("X3KalRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("X3KalRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3EmiRomanceActive","GLOBAL",2)
+-Global("C0SireneRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("C0SireneRomanceActive","GLOBAL",3)
+-END
++//Auto Break Romances  - deleted
+ 
+ // Flirts
+ IF
+@@ -915,4 +736,4 @@ Global("X3EmiRomanceActive","GLOBAL",1)
+ THEN
+ RESPONSE #100
+ RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",600)
+-END
+\ No newline at end of file
++END
+--- SkitiaNPCs/SkitiaNPCs/Scripts/X3Kal.baf
++++ SkitiaNPCs/SkitiaNPCs/Scripts/X3Kal.baf
+@@ -661,185 +661,6 @@ THEN RESPONSE #100
+ SetGlobal("X3BreakUp","LOCALS",0)
+ END 
+ 
+-// Romance Conflicts
++// Romance Conflicts - deleted
+ 
+-IF
+-InParty(Myself)
+-Global("X3KalRomanceActive","GLOBAL",1)
+-GlobalGT("X3KalLoveTalk","LOCALS",22)
+-Global("X3KalRomanceConflict","GLOBAL",0)
+-OR(11)
+-Global("AerieRomanceActive","GLOBAL",1)
+-Global("JaheiraRomanceActive","GLOBAL",1)
+-Global("AnomenRomanceActive","GLOBAL",1)
+-Global("ViconiaRomanceActive","GLOBAL",1)
+-Global("RasaadRomanceActive","GLOBAL",1)
+-Global("NeeraRomanceActive","GLOBAL",1)
+-Global("DornRomanceActive","GLOBAL",1)
+-Global("HexxatRomanceActive","GLOBAL",1)
+-Global("L3PetsyRomanceActive","GLOBAL",1)
+-Global("YvetteRomanceActive","GLOBAL",1)
+-Global("C0SireneRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-RealSetGlobalTimer("X3KalRomanceConflictTimer","GLOBAL",600)
+-SetGlobal("X3KalRomanceConflict","GLOBAL",1)
+-END
+-
+-IF
+-InParty(Myself)
+-RealGlobalTimerExpired("X3KalRomanceConflictTimer","GLOBAL")
+-Global("X3KalRomanceConflict","GLOBAL",1)
+-Global("X3KalRomanceActive","GLOBAL",1)
+-GlobalGT("X3KalLovetalk","GLOBAL",22)
+-OR(11)
+-Global("AerieRomanceActive","GLOBAL",1)
+-Global("JaheiraRomanceActive","GLOBAL",1)
+-Global("AnomenRomanceActive","GLOBAL",1)
+-Global("ViconiaRomanceActive","GLOBAL",1)
+-Global("RasaadRomanceActive","GLOBAL",1)
+-Global("NeeraRomanceActive","GLOBAL",1)
+-Global("DornRomanceActive","GLOBAL",1)
+-Global("HexxatRomanceActive","GLOBAL",1)
+-Global("L3PetsyRomanceActive","GLOBAL",1)
+-Global("YvetteRomanceActive","GLOBAL",1)
+-Global("C0SireneRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-StartDialogueNoSet(Player1)
+-END
+-
+-//Auto Break Romances 
+-IF
+-Global("X3KalRomanceActive","GLOBAL",1)
+-OR(14)
+-Global("AerieRomanceActive","GLOBAL",2)
+-Global("JaheiraRomanceActive","GLOBAL",2)
+-Global("AnomenRomanceActive","GLOBAL",2)
+-Global("ViconiaRomanceActive","GLOBAL",2)
+-Global("RasaadRomanceActive","GLOBAL",2)
+-Global("NeeraRomanceActive","GLOBAL",2)
+-Global("X3VieRomanceActive","GLOBAL",2)
+-Global("X3RebRomanceActive","GLOBAL",2)
+-Global("X3EmiRomanceActive","GLOBAL",2)
+-Global("DornRomanceActive","GLOBAL",2)
+-Global("HexxatRomanceActive","GLOBAL",2)
+-Global("L3PetsyRomanceActive","GLOBAL",2)
+-Global("YvetteRomanceActive","GLOBAL",2)
+-Global("C0SireneRomanceActive","GLOBAL",2)
+-THEN
+-RESPONSE #100
+-SetGlobal("X3KalRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3KalRomanceActive","GLOBAL",2)
+-Global("AerieRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("AerieRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3KalRomanceActive","GLOBAL",2)
+-Global("JaheiraRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3KalRomanceActive","GLOBAL",2)
+-Global("AnomenRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("AnomenRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3KalRomanceActive","GLOBAL",2)
+-Global("ViconiaRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3KalRomanceActive","GLOBAL",2)
+-Global("RasaadRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("RasaadRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3KalRomanceActive","GLOBAL",2)
+-Global("NeeraRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("NeeraRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3KalRomanceActive","GLOBAL",2)
+-Global("DornRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("DornRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3KalRomanceActive","GLOBAL",2)
+-Global("HexxatRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("HexxatRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3KalRomanceActive","GLOBAL",2)
+-Global("L3PetsyRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("L3PetsyRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3KalRomanceActive","GLOBAL",2)
+-Global("YvetteRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("YvetteRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3KalRomanceActive","GLOBAL",2)
+-Global("X3EmiRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("X3EmiRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3KalRomanceActive","GLOBAL",2)
+-Global("X3VieRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("X3VieRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3KalRomanceActive","GLOBAL",2)
+-Global("X3RebRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("X3RebRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3KalRomanceActive","GLOBAL",2)
+-Global("C0SireneRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("C0SireneRomanceActive","GLOBAL",3)
+-END
++//Auto Break Romances - deleted
+--- SkitiaNPCs/SkitiaNPCs/Scripts/X3Reb.baf
++++ SkitiaNPCs/SkitiaNPCs/Scripts/X3Reb.baf
+@@ -141,53 +141,7 @@ THEN RESPONSE #100
+ 	StartDialogueNoSet(Player1)
+ END 
+ 
+-// Romance Conflicts
+-
+-IF
+-InParty(Myself)
+-Global("X3RebRomanceActive","GLOBAL",1)
+-GlobalGT("X3RebLoveTalk","LOCALS",22)
+-Global("X3RebRomanceConflict","GLOBAL",0)
+-OR(11)
+-Global("AerieRomanceActive","GLOBAL",1)
+-Global("JaheiraRomanceActive","GLOBAL",1)
+-Global("AnomenRomanceActive","GLOBAL",1)
+-Global("ViconiaRomanceActive","GLOBAL",1)
+-Global("RasaadRomanceActive","GLOBAL",1)
+-Global("NeeraRomanceActive","GLOBAL",1)
+-Global("DornRomanceActive","GLOBAL",1)
+-Global("HexxatRomanceActive","GLOBAL",1)
+-Global("L3PetsyRomanceActive","GLOBAL",1)
+-Global("YvetteRomanceActive","GLOBAL",1)
+-Global("C0SireneRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-RealSetGlobalTimer("X3RebRomanceConflictTimer","GLOBAL",600)
+-SetGlobal("X3RebRomanceConflict","GLOBAL",1)
+-END
+-
+-IF
+-InParty(Myself)
+-RealGlobalTimerExpired("X3RebRomanceConflictTimer","GLOBAL")
+-Global("X3RebRomanceConflict","GLOBAL",1)
+-Global("X3RebRomanceActive","GLOBAL",1)
+-GlobalGT("X3RebLovetalk","GLOBAL",22)
+-OR(11)
+-Global("AerieRomanceActive","GLOBAL",1)
+-Global("JaheiraRomanceActive","GLOBAL",1)
+-Global("AnomenRomanceActive","GLOBAL",1)
+-Global("ViconiaRomanceActive","GLOBAL",1)
+-Global("RasaadRomanceActive","GLOBAL",1)
+-Global("NeeraRomanceActive","GLOBAL",1)
+-Global("DornRomanceActive","GLOBAL",1)
+-Global("HexxatRomanceActive","GLOBAL",1)
+-Global("L3PetsyRomanceActive","GLOBAL",1)
+-Global("YvetteRomanceActive","GLOBAL",1)
+-Global("C0SireneRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-StartDialogueNoSet(Player1)
+-END
++// Romance Conflicts - deleted
+ 
+ //Friendship Talk Checkers
+ 
+@@ -669,140 +623,7 @@ THEN RESPONSE #100
+ SetGlobal("X3BreakUp","LOCALS",0)
+ END 
+ 
+-//Auto Break Romances 
+-IF
+-Global("X3RebRomanceActive","GLOBAL",1)
+-OR(14)
+-Global("AerieRomanceActive","GLOBAL",2)
+-Global("JaheiraRomanceActive","GLOBAL",2)
+-Global("AnomenRomanceActive","GLOBAL",2)
+-Global("ViconiaRomanceActive","GLOBAL",2)
+-Global("RasaadRomanceActive","GLOBAL",2)
+-Global("NeeraRomanceActive","GLOBAL",2)
+-Global("X3KalRomanceActive","GLOBAL",2)
+-Global("X3VieRomanceActive","GLOBAL",2)
+-Global("X3EmiRomanceActive","GLOBAL",2)
+-Global("DornRomanceActive","GLOBAL",2)
+-Global("HexxatRomanceActive","GLOBAL",2)
+-Global("L3PetsyRomanceActive","GLOBAL",2)
+-Global("YvetteRomanceActive","GLOBAL",2)
+-Global("C0SireneRomanceActive","GLOBAL",2)
+-THEN
+-RESPONSE #100
+-SetGlobal("X3RebRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3RebRomanceActive","GLOBAL",2)
+-Global("AerieRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("AerieRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3RebRomanceActive","GLOBAL",2)
+-Global("JaheiraRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3RebRomanceActive","GLOBAL",2)
+-Global("AnomenRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("AnomenRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3RebRomanceActive","GLOBAL",2)
+-Global("ViconiaRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3RebRomanceActive","GLOBAL",2)
+-Global("RasaadRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("RasaadRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3RebRomanceActive","GLOBAL",2)
+-Global("NeeraRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("NeeraRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3RebRomanceActive","GLOBAL",2)
+-Global("DornRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("DornRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3RebRomanceActive","GLOBAL",2)
+-Global("HexxatRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("HexxatRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3RebRomanceActive","GLOBAL",2)
+-Global("L3PetsyRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("L3PetsyRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3RebRomanceActive","GLOBAL",2)
+-Global("YvetteRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("YvetteRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3RebRomanceActive","GLOBAL",2)
+-Global("X3EmiRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("X3EmiRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3RebRomanceActive","GLOBAL",2)
+-Global("X3VieRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("X3VieRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3RebRomanceActive","GLOBAL",2)
+-Global("X3KalRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("X3KalRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3RebRomanceActive","GLOBAL",2)
+-Global("C0SireneRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("C0SireneRomanceActive","GLOBAL",3)
+-END
++//Auto Break Romances - deleted
+ 
+ IF 
+ AreaCheck("AR2402")
+--- SkitiaNPCs/SkitiaNPCs/Scripts/X3Vie.baf
++++ SkitiaNPCs/SkitiaNPCs/Scripts/X3Vie.baf
+@@ -581,53 +581,7 @@ THEN RESPONSE #100
+ SetGlobal("X3BreakUp","LOCALS",0)
+ END 
+ 
+-// Romance Conflicts
+-
+-IF
+-InParty(Myself)
+-Global("X3VieRomanceActive","GLOBAL",1)
+-GlobalGT("X3VieLoveTalk","LOCALS",22)
+-Global("X3VieRomanceConflict","GLOBAL",0)
+-OR(11)
+-Global("AerieRomanceActive","GLOBAL",1)
+-Global("JaheiraRomanceActive","GLOBAL",1)
+-Global("AnomenRomanceActive","GLOBAL",1)
+-Global("ViconiaRomanceActive","GLOBAL",1)
+-Global("RasaadRomanceActive","GLOBAL",1)
+-Global("NeeraRomanceActive","GLOBAL",1)
+-Global("DornRomanceActive","GLOBAL",1)
+-Global("HexxatRomanceActive","GLOBAL",1)
+-Global("L3PetsyRomanceActive","GLOBAL",1)
+-Global("YvetteRomanceActive","GLOBAL",1)
+-Global("C0SireneRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-RealSetGlobalTimer("X3VieRomanceConflictTimer","GLOBAL",600)
+-SetGlobal("X3VieRomanceConflict","GLOBAL",1)
+-END
+-
+-IF
+-InParty(Myself)
+-RealGlobalTimerExpired("X3VieRomanceConflictTimer","GLOBAL")
+-Global("X3VieRomanceConflict","GLOBAL",1)
+-Global("X3VieRomanceActive","GLOBAL",1)
+-GlobalGT("X3VieLovetalk","GLOBAL",22)
+-OR(11)
+-Global("AerieRomanceActive","GLOBAL",1)
+-Global("JaheiraRomanceActive","GLOBAL",1)
+-Global("AnomenRomanceActive","GLOBAL",1)
+-Global("ViconiaRomanceActive","GLOBAL",1)
+-Global("RasaadRomanceActive","GLOBAL",1)
+-Global("NeeraRomanceActive","GLOBAL",1)
+-Global("DornRomanceActive","GLOBAL",1)
+-Global("HexxatRomanceActive","GLOBAL",1)
+-Global("L3PetsyRomanceActive","GLOBAL",1)
+-Global("YvetteRomanceActive","GLOBAL",1)
+-Global("C0SireneRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-StartDialogueNoSet(Player1)
+-END
++// Romance Conflicts - deleted
+ 
+ 
+ //Experience
+@@ -776,138 +730,4 @@ RESPONSE #100
+ RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",600)
+ END
+ 
+-// Auto-kill romances
+-
+-IF
+-Global("X3VieRomanceActive","GLOBAL",1)
+-OR(14)
+-Global("AerieRomanceActive","GLOBAL",2)
+-Global("JaheiraRomanceActive","GLOBAL",2)
+-Global("AnomenRomanceActive","GLOBAL",2)
+-Global("ViconiaRomanceActive","GLOBAL",2)
+-Global("RasaadRomanceActive","GLOBAL",2)
+-Global("NeeraRomanceActive","GLOBAL",2)
+-Global("X3KalRomanceActive","GLOBAL",2)
+-Global("X3RebRomanceActive","GLOBAL",2)
+-Global("X3EmiRomanceActive","GLOBAL",2)
+-Global("DornRomanceActive","GLOBAL",2)
+-Global("HexxatRomanceActive","GLOBAL",2)
+-Global("L3PetsyRomanceActive","GLOBAL",2)
+-Global("YvetteRomanceActive","GLOBAL",2)
+-Global("C0SireneRomanceActive","GLOBAL",2)
+-THEN
+-RESPONSE #100
+-SetGlobal("X3VieRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3VieRomanceActive","GLOBAL",2)
+-Global("AerieRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("AerieRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3VieRomanceActive","GLOBAL",2)
+-Global("JaheiraRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3VieRomanceActive","GLOBAL",2)
+-Global("AnomenRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("AnomenRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3VieRomanceActive","GLOBAL",2)
+-Global("ViconiaRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3VieRomanceActive","GLOBAL",2)
+-Global("RasaadRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("RasaadRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3VieRomanceActive","GLOBAL",2)
+-Global("NeeraRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("NeeraRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3VieRomanceActive","GLOBAL",2)
+-Global("DornRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("DornRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3VieRomanceActive","GLOBAL",2)
+-Global("HexxatRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("HexxatRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3VieRomanceActive","GLOBAL",2)
+-Global("L3PetsyRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("L3PetsyRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3VieRomanceActive","GLOBAL",2)
+-Global("YvetteRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("YvetteRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3VieRomanceActive","GLOBAL",2)
+-Global("X3EmiRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("X3EmiRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3VieRomanceActive","GLOBAL",2)
+-Global("X3RebRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("X3RebRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3VieRomanceActive","GLOBAL",2)
+-Global("X3KalRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("X3KalRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("X3VieRomanceActive","GLOBAL",2)
+-Global("C0SireneRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("C0SireneRomanceActive","GLOBAL",3)
+-END
++// Auto-kill romances - deleted

@@ -1,0 +1,532 @@
+--- isra_bg2/dialogue/bgee.d
++++ isra_bg2/dialogue/bgee.d
+@@ -214,35 +214,8 @@ DO ~SetGlobal("rh#IsraNeeraToB","GLOBAL",1)~
+ == BRH#IS25 @57 /* Yes... I am sure there are. */
+ EXIT
+ 
+-// romance conflict
++// romance conflict -deleted
+ // ----------------
+-CHAIN IF ~Global("rh#IsraNeeraRomance","GLOBAL",2)~ THEN NEERAJ c5
+-@58 /* You and Isra seem to be spending a lot of time together these days. */
+-DO ~SetGlobal("rh#IsraNeeraRomance","GLOBAL",3)~
+-END
+-	++ @59 /* Do you think so? */ + c5.1
+-	++ @60 /* No more than we always have. */ + c5.1
+-	++ @61 /* I suppose that's true. */ + c5.1
+-
+-APPEND NEERAJ
+-
+-IF ~~ c5.1
+- SAY @62 /* I guess you've always been friendly, but the way she's beginning to look at you these days is a little bit less innocent. Not that there's anything wrong with that! What goes on with you is between you, her, and her goddess, but I don't mean to just wait around and see what happens. Whatever you're thinking, I'd kind of like to know. No hard feelings, I promise. */
+-	++ @63 /* Isra is only a friend, Neera. It's you I'm interested in. */ + c5.2
+-	++ @64 /* Yes, I am interested in her. I'm sorry, Neera. */ + c5.3
+-END
+- 
+-IF ~~ c5.2
+- SAY @65 /* That's -- that's good to know. Really good. Just make sure that she knows it too, alright? */
+-IF ~~ DO ~SetGlobal("rh#IsraRomanceActive","GLOBAL",3)~ EXIT
+-END
+- 
+-IF ~~ c5.3
+- SAY @66 /* I see. Thanks for telling me. I wish I could say that I was surprised, but I'm not really. And she'll be good for you, I think. Myself, I guess this means I'm a free woman. That's actually kind of a relief. Should we get moving? */
+-IF ~~ DO ~SetGlobal("NeeraRomanceActive","GLOBAL",3)~ EXIT
+-END
+-END
+-
+ 
+ /* -------- *
+  *  Rasaad  *
+@@ -333,55 +306,5 @@ DO ~SetGlobal("rh#IsraRasaadToB","GLOBAL",2)~
+ == BRH#IS25 @101 /* I... can only hope that is true. */
+ EXIT
+ 
+-// romance conflict
++// romance conflict - deleted
+ // ----------------
+-CHAIN IF ~Global("rh#IsraRasaadRomance","GLOBAL",2)~ THEN RH#ISRJ c6
+-@102 /* May I speak with you a moment, <CHARNAME>? */
+-DO ~SetGlobal("rh#IsraRasaadRomance","GLOBAL",3)~
+-END
+-	++ @103 /* Of course, Isra. What is it? */ + c6.1
+-	++ @104 /* Technically, you already are. */ + c6.2
+-
+-APPEND RH#ISRJ
+-
+-IF ~~ c6.1
+- SAY @105 /* I do not mean to impose, but Rasaad seems rather taken with you as of late. He is a good man, if somewhat... vulnerable at present. */
+- 	++ @106 /* Are you asking me if I'm interested in him? */ + c6.3
+- 	++ @107 /* You're not jealous, are you? */ + c6.4
+- 	++ @108 /* Too vulnerable, I'd say. And too clueless. */ + c6.5
+-END
+-
+-IF ~~ c6.2
+- SAY @109 /* Yes... I noticed that. */ 
+-IF ~~ + c6.1
+-END
+-
+-IF ~~ c6.3
+- SAY @110 /* Are you? */
+- 	++ @111 /* Not remotely. */ + c6.5
+- 	++ @112 /* Absolutely. */ + c6.6
+- 	++ @113 /* Yes, I think I am. */ + c6.6
+-END
+-
+-IF ~~ c6.4
+- SAY @114 /* Of *him*, mayhap, if his feelings are returned. */
+- 	++ @115 /* Oh. Well, you needn't worry about that. I'm not interested in him. */ + c6.5
+- 	++ @116 /* They are, actually. I'm sorry. */ + c6.6
+- 	++ @117 /* Can you take this bizarre love triangle elsewhere? I'm not interested in either of you. */ + c6.7
+-END
+-
+-IF ~~ c6.5
+- SAY 118 /* I see. Please, <CHARNAME>, let him know. I would not have him burdened with false hope. */
+-IF ~~ DO ~SetGlobal("RasaadRomanceActive","GLOBAL",3)~ EXIT
+-END 
+-
+-IF ~~ c6.6
+- SAY @119 /* I see. Thank you for telling me, <CHARNAME>. */
+-IF ~~ DO ~SetGlobal("rh#IsraRomanceActive","GLOBAL",3)~ EXIT
+-END
+-
+-IF ~~ c6.7
+- SAY @120 /* I see. I shan't mention it again. */
+-IF ~~ DO ~SetGlobal("rh#IsraRomanceActive","GLOBAL",3) SetGlobal("RasaadRomanceActive","GLOBAL",3)~ EXIT
+-END 
+-END
+\ No newline at end of file
+--- isra_bg2/dialogue/rh#isrj.d
++++ isra_bg2/dialogue/rh#isrj.d
+@@ -6978,217 +6978,8 @@ EXIT
+ 
+ 
+ // ---------------------------------------------
+-// Romance Conflicts
+-// ---------------------------------------------
+-
+-// Viconia
+-// -------
+-CHAIN IF ~Global("rh#IsraViconiaRomance","GLOBAL",2)~ THEN RH#ISRJ c1
+-@2138 /* <CHARNAME>, might I have a brief word? Privately? */
+-DO ~SetGlobal("rh#IsraViconiaRomance","GLOBAL",3)~
+-END
+-	++ @2139 /* Of course, Isra. What is it? */ + c1.1
+-	++ @2140 /* This sounds somewhat ominous. */ + c1.1
+-	++ @2141 /* Whatever it is, I don't want to hear it. */ + c1.exit
+-
+-APPEND RH#ISRJ
+-
+-IF ~~ c1.1
+- SAY @2142 /* I am growing somewhat concerned about Viconia. I may not have objected to her presence, but I have seen the way that she eyes you, <CHARNAME>. I can only wonder what her ulterior motive might be. */ 
+-	++ @2143 /* She may be drow, but she's as in need of support as anyone. */ + c1.2
+-	++ @2144 /* Can you drop the judgmental paladin act for once? */ + c1.3
+-	++ @2145 /* What do you want me to do? Kick her out? */ + c1.4
+-	++ @2146 /* I've been wondering much the same thing. */ + c1.5
+-END
+-
+-IF ~~ c1.exit
+- SAY @2147 /* So I see. */
+-IF ~~ DO ~IncrementGlobal("rh#IsraOffense","GLOBAL",1)~ EXIT
+-END
+-
+-IF ~~ c1.2
+- SAY @2148 /* She is in the service of Shar, my Lord. Do not assume that she thinks like you do. */
+-IF ~~ + c1.5
+-END
+-
+-IF ~~ c1.3
+- SAY @2149 /* Act? She is in the service of Shar, my Lord, and the foulness of that allegiance clings to her like a second skin. */
+- = @2150 /* 'Tis no great stretch to assume that she means you ill. */
+-IF ~~ DO ~IncrementGlobal("rh#IsraOffense","GLOBAL",1)~ EXIT
+-END
+-
+-IF ~~ c1.4
+- SAY @2151 /* I would hardly regret that choice, though I won't ask you to make it. */
+-IF ~~ + c1.5
+-END
+-
+-IF ~~ c1.5
+- SAY @2152 /* All I can do is warn you to turn down her... advances, such as they are. Whatever she might feel for you, my Lord, 'tis far removed from love. */
+-	++ @2153 /* Maybe now, though who can say what the future may bring? */ + c1.6
+-	++ @2154 /* I'm more interested in lust than love anyway. */ + c1.7
+-	++ @2155 /* If you're so worried, I'll have to tell her to stop. */ + c1.8
+-	+ ~Global("rh#IsraRomanceActive","GLOBAL",1)~ + @2156 /* She's less attractive than she thinks she is anyway... especially compared to you. */ + c1.9
+-END
+-
+-IF ~~ c1.6
+- SAY @2157 /* (sigh) I cannot tell you what to do, but... be careful. Please. */
+-IF ~~ DO ~IncrementGlobal("rh#IsraOffense","GLOBAL",1)~ EXIT
+-END
+-
+-IF ~~ c1.7
+- SAY @2158 /* I see. I cannot tell you what to do, but... be careful. Please. */
+-IF ~~ DO ~IncrementGlobal("rh#IsraOffense","GLOBAL",1)~ EXIT
+-END
+-
+-IF ~~ c1.8
+- SAY @2159 /* Hopefully she will actually listen. */
+-IF ~~ DO ~SetGlobal("ViconiaRomanceActive","GLOBAL",3)~ EXIT
+-END
+-
+-IF ~~ c1.9
+- SAY @2160 /* (laugh) I would not normally appreciate being compared to a dark elf, but in this context, I cannot say that I mind it at all. */
+-IF ~~ DO ~SetGlobal("ViconiaRomanceActive","GLOBAL",3)~ EXIT
+-END
+-END
+-
+-// Anomen
+-// ------
+-CHAIN IF ~Global("rh#IsraAnomenRomance","GLOBAL",2)~ THEN RH#ISRJ c2
+-@2138 /* <CHARNAME>, might I have a brief word? Privately? */
+-DO ~SetGlobal("rh#IsraAnomenRomance","GLOBAL",3)~
+-END
+-	++ @2139 /* Of course, Isra. What is it? */ + c2.1
+-	++ @2140 /* This sounds somewhat ominous. */ + c2.1
+-	++ @2141 /* Whatever it is, I don't want to hear it. */ + c1.exit
+-
+-APPEND RH#ISRJ
+-
+-IF ~~ c2.1
+- SAY @2161 /* I would speak of Anomen, my Lady. I tried to speak to him earlier myself, but he was... not exactly amenable. */
+- = @2162 /* I have seen the way he looks at you. The way he speaks with you. He is a good enough man, 'tis true, but... please, make sure he is not so blinded by the idea of you that he fails to see the mortal woman beneath. */
+- = @2163 /* I have seen the alternative. 'Tis seldom pleasant for anybody involved. */
+-	++ @2164 /* You dislike courtly love? What sort of Sunite are you anyway? */ + c2.2
+-	++ @2165 /* You're not just saying this because you don't like him, I hope. */ + c2.3
+-	++ @2166 /* Thank you for the advice, Isra. I'll keep that in mind. */ + c2.4
+-	+ ~Global("rh#IsraRomanceActive","GLOBAL",1)~ + @2167 /* As attractive as knights in shining armor can be, I actually prefer the female ones. */ + c2.5
+-END
+-
+-IF ~~ c2.2
+- SAY @2168 /* One who can tell the difference between stories and reality. */
+-IF ~~ + c2.4
+-END
+-
+-IF ~~ c2.3
+- SAY @2169 /* No... no, I hope that I would not be so petty. */
+-IF ~~ + c2.4
+-END
+-
+-IF ~~ c2.4
+- SAY @2170 /* I will not tell you what to do, and I shan't say that any romance between you is doomed to failure, but be careful, <CHARNAME>. Please. */
+-IF ~~ EXIT
+-END
+-
+-IF ~~ c2.5
+- SAY @2171 /* (laugh) Oh, do you? Then I can't say I regret this conversation at all. */
+- = @2172 /* If you do not share his affections, though, you should tell him, and sooner rather than later. 'Tis no kindess to give him false hope. */
+-IF ~~ DO ~SetGlobal("AnomenRomanceActive","GLOBAL",3)~ EXIT
+-END
+-END
+-
+-// Aerie
+-// -----
+-CHAIN IF WEIGHT #-1 ~Global("rh#IsraAerieRomance","GLOBAL",2)~ THEN AERIEJ c3
+-@2173 /* <CHARNAME>, do you... do you have a moment? I wanted to ask you something. */
+-DO ~IncrementGlobal("rh#IsraAerieRomance","GLOBAL",1)~
+-END
+-	++ @2174 /* Of course I do. What is it? */ + c3.1
+-	++ @2175 /* Fine, but make it quick. */ + c3.1
+-	++ @2176 /* For you? No, Aerie, not right now. */ + c3.2
+-
+-APPEND AERIEJ
+-
+-IF ~~ c3.1
+- SAY @2177 /* You seem to be talking to Isra a lot recently. Do you... do you think that she's pretty? */
+-	++ @2178 /* Not nearly as pretty as you are, Aerie. */ + c3.3
+-	++ @2179 /* Pretty? I think that's a bit of an understatement. */ + c3.4
+-	++ @2180 /* She's definitely pleasant enough company. */ + c3.4
+-	++ @2181 /* I wouldn't kick her out of bed, though I'll need to find a way to get her there first. */ + c3.5
+-END
+- 
+-IF ~~ c3.2
+- SAY @2182 /* Then... then that answers my question, I guess. I... I'm sorry. */
+-IF ~~ DO ~SetGlobal("AerieRomanceActive","GLOBAL",3)~ EXIT
+-END
+-
+-IF ~~ c3.3
+- SAY @2183 /* Oh! I--I don't know if that's true, but thank you for saying so. You don't... you don't like her, then? Like *that*, I mean. */
+-	++ @2184 /* No, Aerie, I don't. Not with you around. */ + c3.6
+-	++ @2185 /* I might. Do you think she's actually interested? */ + c3.7
+-	++ @2186 /* Actually, I do. Very much so. */ + c3.8
+-	++ @2187 /* Your jealousy is not very becoming, you know. */ + c3.9
+-END
+-
+-IF ~~ c3.4
+- SAY @2188 /* Oh. The does that mean that you... that you like her? Like *that*, I mean. */
+-	++ @2184 /* No, Aerie, I don't. Not with you around. */ + c3.6
+-	++ @2185 /* I might. Do you think she's actually interested? */ + c3.7
+-	++ @2186 /* Actually, I do. Very much so. */ + c3.8
+-	++ @2187 /* Your jealousy is not very becoming, you know. */ + c3.9
+-END
+- 
+-IF ~~ c3.5
+- SAY @2189 /* Y-you are a very bad man, <CHARNAME>! I'm going to tell her that you said that! */
+-IF ~~ DO ~SetGlobal("AerieRomanceActive","GLOBAL",3)
+-SetGlobal("rh#IsraRomanceActive","GLOBAL",3)~ EXIT
+-END
+-
+-IF ~~ c3.6
+- SAY @2190 /* Thank you, <CHARNAME>. That is very kind of you. */
+-IF ~~ DO ~SetGlobal("rh#IsraRomanceActive","GLOBAL",3)~ EXIT
+-END
+-
+-IF ~~ c3.7
+- SAY @2191 /* I--I think she might be. */
+- = @2192 /* I'm sorry, <CHARNAME>. I don't want to talk right now. */
+-IF ~~ DO ~SetGlobal("AerieRomanceActive","GLOBAL",3)~ EXIT
+-END
+-
+-IF ~~ c3.8
+- SAY @2193 /* Oh. I... I see. Thank you for telling me the truth, <CHARNAME>. */
+-IF ~~ DO ~SetGlobal("AerieRomanceActive","GLOBAL",3)~ EXIT
+-END
+-
+-IF ~~ c3.9
+- SAY @2194 /* I wasn't... I wasn't jealous! Ohh, never mind! */
+-IF ~~ DO ~SetGlobal("AerieRomanceActive","GLOBAL",3)~ EXIT
+-END
+-END
+-
+-// Jaheira
+-// -------
+-CHAIN IF WEIGHT #-1 ~Global("rh#IsraJaheiraRomance","GLOBAL",2)~ THEN JAHEIRAJ c4
+-@2195 /* I expect to one day find that you have accidentally drowned yourself in that new perfume of yours, child. */
+-DO ~IncrementGlobal("rh#IsraJaheiraRomance","GLOBAL",1)~
+-== RH#ISRJ @2196 /* ... Does the scent trouble you in some way, Jaheira? */
+-== JAHEIRAJ @2197 /* It is not the scent that concerns me, but your lack of focus. Your carefully cultivated beauty is of no use on the battlefield. */
+-== RH#ISRJ @2198 /* How strange. I had always thought that Harpers preached religious tolerance... especially amongst those faiths that supported their activities. */
+-== JAHEIRAJ @2199 /* Hmph. You cannot wave your faith about as an excuse for everything you do, Isra. Your habits have changed recently. Do not think that I did not notice that deeper shade of lip stain that you purchased. */
+-== RH#ISRJ @2200 /* 'Twas my own money, I assure you. */
+-== JAHEIRAJ @2201 /* I did not think otherwise. But I will warn you now not to indulge your taste for cosmetics merely because you find a man attractive. He is not the type to appreciate such superficial concerns anyway. */
+-== RH#ISRJ @2202 /* Oh. Oh, I see. */
+-== JAHEIRAJ @2203 /* You see what exactly? */
+-== RH#ISRJ @2204 /* Nothing I care to share. */
+-= @2205 /* Jaheira, I have no desire to argue with you over this. Or over anything else, preferably. I assure you, my focus is as strong as it ever was... regardless of which shade I paint my lips. */
+-== JAHEIRAJ @2206 /* For one who has no wish to argue, you are surprisingly combative. */
+-EXIT
+-
+-// Breakup
+-// -------
+-CHAIN IF WEIGHT #-1 ~Global("rh#IsraRomanceBreakup","GLOBAL",1)~ THEN RH#ISRJ c5
+-@2207 /* <CHARNAME>, I thought that this would work, but I'm beginning to believe that I was mistaken. I'll remain at your side, but more than that... */
+-= @2208 /* I'm sorry. */
+-DO ~SetGlobal("rh#IsraRomanceBreakup","GLOBAL",2)~
+-EXIT
++// Romance Conflicts - deleted
++// ---------------------------------------------$
+ 
+ 
+ // ---------------------------------------------
+--- isra_bg2/lib/main_component.tpa
++++ isra_bg2/lib/main_component.tpa
+@@ -114,13 +114,10 @@ EXTEND_TOP ~ar1002.bcs~		 ~isra_bg2/scripts/ar1002.baf~
+ EXTEND_TOP ~ar1005.bcs~		 ~isra_bg2/scripts/ar1005.baf~
+ EXTEND_BOTTOM ~ar1006.bcs~	 ~isra_bg2/scripts/ar1006.baf~
+ EXTEND_BOTTOM ~ar0809.bcs~	 ~isra_bg2/scripts/ar0809.baf~
+-EXTEND_BOTTOM ~aerie.bcs~	 ~isra_bg2/scripts/aerie.baf~
+ EXTEND_BOTTOM ~anomen.bcs~	 ~isra_bg2/scripts/anomen.baf~
+ EXTEND_BOTTOM ~bodhiamb.bcs~ ~isra_bg2/scripts/bodhiamb.baf~
+ EXTEND_BOTTOM ~cleanse.bcs~	 ~isra_bg2/scripts/cleanse.baf~
+-EXTEND_BOTTOM ~jaheira.bcs~  ~isra_bg2/scripts/jaheira.baf~
+ EXTEND_BOTTOM ~vampamb.bcs~  ~isra_bg2/scripts/vampamb.baf~
+-EXTEND_BOTTOM ~viconia.bcs~  ~isra_bg2/scripts/viconia.baf~
+ 
+ 
+ /* -------------------------------------- *
+--- isra_bg2/scripts/aerie.baf
++++ isra_bg2/scripts/aerie.baf
+@@ -48,53 +48,5 @@ THEN
+ 		Dialogue("rh#Isra2")
+ END
+ 
+-// romance conflict
++// romance conflict - deleted
+ // ----------------
+-IF
+-	InParty("rh#Isra2")
+-	InParty("Aerie")
+-	Global("rh#IsraAerieRomance","GLOBAL",0)
+-	Global("AerieRomanceActive","GLOBAL",1)
+-	Global("rh#IsraRomanceActive","GLOBAL",1)
+-	GlobalGT("LoveTalk","LOCALS",13)
+-	GlobalGT("rh#IsraTalks","GLOBAL",16)
+-THEN
+-	RESPONSE #100
+-		RealSetGlobalTimer("rh#IsraAerieRomanceTimer","GLOBAL",1200)
+-		SetGlobal("rh#IsraAerieRomance","GLOBAL",1)
+-END
+-
+-IF
+-	InParty("rh#Isra2")
+-	InParty("Aerie")
+-	See(Player1)
+-	!StateCheck("Aerie",CD_STATE_NOTVALID)
+-	!StateCheck("rh#Isra2",CD_STATE_NOTVALID)
+-	!StateCheck(Player1,CD_STATE_NOTVALID)
+-	CombatCounter(0)
+-	!See([ENEMY])
+-	Global("rh#IsraAerieRomance","GLOBAL",1)
+-	Global("AerieRomanceActive","GLOBAL",1)
+-	Global("rh#IsraRomanceActive","GLOBAL",1)
+-	RealGlobalTimerExpired("rh#IsraAerieRomanceTimer","GLOBAL")
+-THEN
+-	RESPONSE #100
+-		SetGlobal("rh#IsraAerieRomance","GLOBAL",2)
+-END
+-
+-IF
+-	InParty("rh#Isra2")
+-	InParty("Aerie")
+-	See(Player1)
+-	!StateCheck("Aerie",CD_STATE_NOTVALID)
+-	!StateCheck("rh#Isra2",CD_STATE_NOTVALID)
+-	!StateCheck(Player1,CD_STATE_NOTVALID)
+-	CombatCounter(0)
+-	!See([ENEMY])
+-	Global("rh#IsraAerieRomance","GLOBAL",2)
+-	Global("AerieRomanceActive","GLOBAL",1)
+-	Global("rh#IsraRomanceActive","GLOBAL",1)
+-THEN
+-	RESPONSE #100
+-		Dialogue(Player1)
+-END
+\ No newline at end of file
+--- isra_bg2/scripts/rh#isr.baf
++++ isra_bg2/scripts/rh#isr.baf
+@@ -1081,135 +1081,9 @@ END
+ 
+ 
+ // ---------------------------------------------
+-// Romance Conflicts
++// Romance Conflicts -deleted
+ // ---------------------------------------------
+ 
+-IF
+-	OR(2)
+-	Global("rh#IsraRomanceActive","GLOBAL",1)
+-	Global("rh#IsraRomanceActive","GLOBAL",2)
+-	OR(6)
+-		Global("AerieRomanceActive","GLOBAL",2)
+-		Global("JaheiraRomanceActive","GLOBAL",2)
+-		Global("ViconiaRomanceActive","GLOBAL",2)
+-		Global("AnomenRomanceActive","GLOBAL",2)
+-		Global("NeeraRomanceActive","GLOBAL",2)
+-		Global("RasaadRomanceActive","GLOBAL",2)
+-THEN
+-	RESPONSE #100
+-		SetGlobal("rh#IsraRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-	Global("rh#IsraRomanceActive","GLOBAL",2)
+-	OR(2)
+-		Global("AerieRomanceActive","GLOBAL",1)
+-		Global("AerieRomanceActive","GLOBAL",2)
+-THEN
+-	RESPONSE #100
+-		SetGlobal("AerieRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-	Global("rh#IsraRomanceActive","GLOBAL",2)
+-	OR(2)
+-		Global("JaheiraRomanceActive","GLOBAL",1)
+-		Global("JaheiraRomanceActive","GLOBAL",2)
+-THEN
+-	RESPONSE #100
+-		SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-	Global("rh#IsraRomanceActive","GLOBAL",2)
+-	OR(2)
+-		Global("ViconiaRomanceActive","GLOBAL",1)
+-		Global("ViconiaRomanceActive","GLOBAL",2)
+-THEN
+-	RESPONSE #100
+-		SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-	Global("rh#IsraRomanceActive","GLOBAL",2)
+-	OR(2)
+-		Global("AnomenRomanceActive","GLOBAL",1)
+-		Global("AnomenRomanceActive","GLOBAL",2)
+-THEN
+-	RESPONSE #100
+-		SetGlobal("AnomenRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-	Global("rh#IsraRomanceActive","GLOBAL",2)
+-	OR(2)
+-		Global("RasaadRomanceActive","GLOBAL",1)
+-		Global("RasaadRomanceActive","GLOBAL",2)
+-THEN
+-	RESPONSE #100
+-		SetGlobal("RasaadRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-	Global("rh#IsraRomanceActive","GLOBAL",2)
+-	OR(2)
+-		Global("NeeraRomanceActive","GLOBAL",1)
+-		Global("NeeraRomanceActive","GLOBAL",2)
+-THEN
+-	RESPONSE #100
+-		SetGlobal("NeeraRomanceActive","GLOBAL",3)
+-END
+-
+-
+-// conflicts
+-// ---------
+-IF
+-    InParty("rh#Isra2")
+-	See(Player1)
+-    !StateCheck(Myself,CD_STATE_NOTVALID)
+-    !StateCheck(Player1,CD_STATE_NOTVALID)
+-    CombatCounter(0)
+-    !See([ENEMY])
+-    Global("ViconiaRomanceActive","GLOBAL",1)
+-    Global("rh#IsraViconiaRomance","GLOBAL",1)
+-    RealGlobalTimerExpired("rh#IsraViconiaTimer","GLOBAL")
+-THEN
+-	RESPONSE #100
+-		IncrementGlobal("rh#IsraViconiaRomance","GLOBAL",1)
+-END
+-
+-IF
+-    InParty("rh#Isra2")
+-	See(Player1)
+-    !StateCheck(Myself,CD_STATE_NOTVALID)
+-    !StateCheck(Player1,CD_STATE_NOTVALID)
+-    CombatCounter(0)
+-    !See([ENEMY])
+-    Global("AnomenRomanceActive","GLOBAL",1)
+-    Global("rh#IsraAnomenRomance","GLOBAL",1)
+-    RealGlobalTimerExpired("rh#IsraAnomenTimer","GLOBAL")
+-THEN
+-	RESPONSE #100
+-		IncrementGlobal("rh#IsraAnomenRomance","GLOBAL",1)
+-END
+-
+-IF
+-    InParty("rh#Isra2")
+-	See(Player1)
+-    !StateCheck(Myself,CD_STATE_NOTVALID)
+-    !StateCheck(Player1,CD_STATE_NOTVALID)
+-    CombatCounter(0)
+-    !See([ENEMY])
+-    OR(2)
+-	    !ReputationGT(Player1,8)
+-    	GlobalGT("rh#IsraOffense","GLOBAL",2)
+-	Global("rh#IsraRomanceActive","GLOBAL",2)
+-	Global("rh#IsraRomanceBreakup","GLOBAL",0)
+-THEN
+-	RESPONSE #100
+-		SetGlobal("rh#IsraRomanceBreakup","GLOBAL",1)
+-END
+-
+ 
+ // ---------------------------------------------
+ // Flirts
