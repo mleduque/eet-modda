@@ -820,7 +820,11 @@ modules:
   - name: amber
     components: [0, 1]
     location:
-      path: /home/mick/Games/modda-cache/static/lin-amber-v5.1.zip
+      path: /home/mick/Games/modda-cache/static/lin-amber-v6.zip
+      patch:
+        relative: patches/amber.diff
+      replace:
+        - xxx xxxx. 
   - name: Foundling
     description: "Colours of Infinity: Foundling"
     components:
