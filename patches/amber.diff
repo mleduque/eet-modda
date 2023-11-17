@@ -110,6 +110,15 @@
    IF ~~ THEN REPLY @6785 /* @6785 = ~Amber, I don't care *what* you are, it is *who* you are that's important. And right now, the only thing that matters is that you are with me.~ */ DO ~IncrementGlobal("M#AmberLike","LOCALS",1)~ GOTO P2LT7G
    IF ~~ THEN REPLY @6786 /* @6786 = ~Look, Amber, is this going somewhere or are you just wasting my time with your silly babbling?~ */ DO ~IncrementGlobal("M#AmberLike","LOCALS",-1)~ GOTO P2LT7D
    IF ~~ THEN REPLY @6787 /* @6787 = ~Well, that might be true, but there have been a whole bunch of things in my life that I never saw coming. In any case I am happy that we met.~ */ DO ~IncrementGlobal("M#AmberLike","LOCALS",1)~ GOTO P2LT7G
+@@ -13795,7 +13795,7 @@ END
+ 
+ // Amber breaking. This looks a bit wierd BTW - old stuff, should check out. 
+   
+-IF ~GlobalLT("M#AmberLike","LOCALS",90)~ THEN BEGIN Break
++IF ~GlobalLT("M#AmberLike","LOCALS",75)~ THEN BEGIN Break
+   SAY @7316 /* @7316 = ~That does it! I'm sick and tired of you walking around with your head up your ass and acting like a total prat. I'm not going to suffer your abuse for a minute longer. May you rot in hell where you belong.~ */
+   IF ~~ THEN DO ~SetGlobal("M#AmberDestroy","GLOBAL",1)
+                  SetGlobal("M#AmberRomanceActive","GLOBAL",3)
 @@ -14428,273 +14428,7 @@ IF ~~ THEN BEGIN RepTalk2D
    IF ~~ THEN REPLY @7401 /* @7401 = ~You demand? The last time I checked, I was the leader of this group. I will do whatever I wish, and if you have a problem with it, you can get lost.~ */ GOTO RepTalk2C
  END
@@ -1118,6 +1127,42 @@
  
  // Amber returns after getting her bracelet back
  IF
+--- Amber/scripts/extend/m#jaheir.baf
++++ Amber/scripts/extend/m#jaheir.baf
+@@ -11,32 +11,3 @@ THEN
+ 	RESPONSE #100
+ 	Dialog(Player1)	
+ END
+-
+-IF
+-	RealGlobalTimerExpired("M#AmberJaheiraRomanceConflictTime","GLOBAL")
+-	Global("M#AmberJaheiraRomanceConflict","GLOBAL",1)
+-	!Global("Chapter","GLOBAL",%bg2_chapter_5%)
+-	!AreaType(DUNGEON)
+-	InParty("m#amber")
+-	InParty("Jaheira")
+-	Global("M#AmberRomanceActive","GLOBAL",1)
+-	Global("M#AmberMatch","GLOBAL",1)
+-	!Global("M#AmberMad","GLOBAL",1)
+-	Global("JaheiraRomanceActive","GLOBAL",1)
+-THEN
+-	RESPONSE #100
+-	SetGlobal("M#AmberJaheiraRomanceConflict","GLOBAL",2)
+-END
+-
+-IF
+-	Global("M#AmberJaheiraRomanceConflict","GLOBAL",2)
+-	!StateCheck("m#amber",STATE_PANIC)
+-	!StateCheck("m#amber",STATE_BERSERK)
+-	!StateCheck("m#amber",STATE_CHARMED)
+-	!StateCheck("m#amber",STATE_CONFUSED)
+-	CombatCounter(0)
+-	See("m#amber")
+-THEN
+-	RESPONSE #100
+-	Dialog("m#amber")
+-END
+\ No newline at end of file
 --- Amber/scripts/extend/m#viconi.baf
 +++ Amber/scripts/extend/m#viconi.baf
 @@ -12,35 +12,6 @@ THEN
