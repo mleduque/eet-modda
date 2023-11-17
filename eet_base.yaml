@@ -1260,6 +1260,36 @@ modules:
       repository: Branwen_for_BGII
       release: v8
       asset: branwen-v8pre.iemod
+      patch:
+        relative: patches/branwen_bg2.diff
+      replace:
+        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
+          replace: 'RealSetGlobalTimer("O#BranFlirtTimer","GLOBAL",2500)' # 42 min
+          with: 'RealSetGlobalTimer("O#BranFlirtTimer","GLOBAL",780)' # 13min
+        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
+          replace: 'RealSetGlobalTimer("O#BranTimer","GLOBAL",3600)' # 60 min
+          with: 'RealSetGlobalTimer("O#BranTimer","GLOBAL",1200)' # 20min
+        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
+          replace: 'RealSetGlobalTimer("O#BranFlirtTimerToB","GLOBAL",2500)' # 42 min
+          with: 'RealSetGlobalTimer("O#BranFlirtTimerToB","GLOBAL",780)' # 13min
+        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
+          replace: 'RealSetGlobalTimer("O#BranTimerToB","GLOBAL",3600)' # 60 min
+          with: 'RealSetGlobalTimer("O#BranTimerToB","GLOBAL",1200)' # 20min
+        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
+          replace: 'RealSetGlobalTimer("O#BranTimerToB","GLOBAL",1800)' # 30 min
+          with: 'RealSetGlobalTimer("O#BranTimerToB","GLOBAL",600)' # 10min
+        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
+          replace: 'RealSetGlobalTimer("O#BranLoveTimer","GLOBAL",3600)' # 60 min
+          with: 'RealSetGlobalTimer("O#BranLoveTimer","GLOBAL",1080)' # 18min
+        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
+          replace: 'RealSetGlobalTimer("O#BranChapter5Timer","GLOBAL",3600)' # 60 min
+          with: 'RealSetGlobalTimer("O#BranChapter5Timer","GLOBAL",300)' # 5min
+        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
+          replace: 'RealSetGlobalTimer("O#BranFlirtTimer","GLOBAL",300)' # 5min
+          with: 'RealSetGlobalTimer("O#BranFlirtTimer","GLOBAL",180)' # 3min
+        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
+          replace: 'RealSetGlobalTimer("O#BranFlirtTimerToB","GLOBAL",300)' # 5min
+          with: 'RealSetGlobalTimer("O#BranFlirtTimerToB","GLOBAL",180)' # 3min
   - name: ViconiaRevamped
     components:
     location:

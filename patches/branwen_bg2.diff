@@ -1,0 +1,56 @@
+--- Branwen_for_BGII/Branwen/Scripts/O#BranS.baf
++++ Branwen_for_BGII/Branwen/Scripts/O#BranS.baf
+@@ -368,51 +368,10 @@ END
+ 
+ // What else are we missing? Romance!
+ // If Aerie or Viconia or Jaheira love PC, Branwen should surrender.
+-IF 
+-OR(3)
+-Global("AerieRomanceActive","GLOBAL",2)
+-Global("JaheiraRomanceActive","GLOBAL",2)
+-Global("ViconiaRomanceActive","GLOBAL",2)
+-OR(2)
+-Global("O#BranRomanceActive","GLOBAL",1)
+-Global("O#BranRomanceActive","GLOBAL",2)
+-Global("O#BranAnotherRomanceWon","GLOBAL",0)
+-THEN
+-RESPONSE #100
+-SetGlobal("O#BranRomanceActive","GLOBAL",3)
+-SetGlobal("O#BranAnotherRomanceWon","GLOBAL",1)
+-END
++// deleted
+ 
+ // And if Branwen's romance is at 2, Aerie, Viconia and Jaheira lose.
+-IF 
+-Global("O#BranRomanceActive","GLOBAL",2)
+-Global("AerieRomanceActive","GLOBAL",1)
+-Global("O#BranAerieRomanceLost","GLOBAL",0)
+-THEN
+-RESPONSE #100
+-SetGlobal("AerieRomanceActive","GLOBAL",3)
+-SetGlobal("O#BranAerieRomanceLost","GLOBAL",1)
+-END
+-
+-IF 
+-Global("O#BranRomanceActive","GLOBAL",2)
+-Global("JaheiraRomanceActive","GLOBAL",1)
+-Global("O#BranJaheiraRomanceLost","GLOBAL",0)
+-THEN
+-RESPONSE #100
+-SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+-SetGlobal("O#BranJaheiraRomanceLost","GLOBAL",1)
+-END
+-
+-IF 
+-Global("O#BranRomanceActive","GLOBAL",2)
+-Global("ViconiaRomanceActive","GLOBAL",1)
+-Global("O#BranViconiaRomanceLost","GLOBAL",0)
+-THEN
+-RESPONSE #100
+-SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+-SetGlobal("O#BranViconiaRomanceLost","GLOBAL",1)
+-END
++// deleted
+ 
+ // Branwen is romanceable, and she is going to initiate flirts!
+ // The blocks seem a bit heavy, but if you read them line by line, you'll be all right.
