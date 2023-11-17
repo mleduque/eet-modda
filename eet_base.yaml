@@ -1846,6 +1846,24 @@ modules:
       repository: deArnise_Romance
       release: v7
       asset: deArnise_v7.zip
+      patch:
+        relative: patches/dearnise.diff
+        replace:
+          - file_globs: ["Dialogue/PGNalLT.d"]
+            replace: 'RealSetGlobalTimer("PGNaliaRomanceTimer","GLOBAL",2700)' # 45min
+            with: 'RealSetGlobalTimer("PGNaliaRomanceTimer","GLOBAL",600)'    # 10min
+          - file_globs: ["Dialogue/PGNalFL.d"]
+            replace: 'RealSetGlobalTimer("PGNaliaFlirtTimer","GLOBAL",2700)' # 45min
+            with: 'RealSetGlobalTimer("PGNaliaFlirtTimer","GLOBAL",600)'    # 10min
+          - file_globs: ["Dialogue/PGNalQ.d"]
+            replace: 'RealSetGlobalTimer("PGNaliaCowledTimer","GLOBAL",5000)' # 83min
+            with: 'RealSetGlobalTimer("PGNaliaCowledTimer","GLOBAL",600)' # 10min
+          - file_globs: ["Scripts/PGNalia.baf"]
+            replace: 'RealSetGlobalTimer("PGNaliaRomanceTimer","GLOBAL",1200)' # 20min
+            with: 'RealSetGlobalTimer("PGNaliaRomanceTimer","GLOBAL",360)' # 6min
+          - file_globs: ["Scripts/PGNalia.baf"]
+            replace: 'RealSetGlobalTimer("PGNaliaLT14Timer","GLOBAL",500)'
+            with: 'RealSetGlobalTimer("PGNaliaLT14Timer","GLOBAL",200)'
   # not compatible with imoen4ever
   #- name: imoenRomance
   #  components: [0, 1]
