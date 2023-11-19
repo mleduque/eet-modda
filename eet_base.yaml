@@ -1065,8 +1065,8 @@ modules:
     location:
       github_user: Austin-BG
       repository: HTaM
-      release: v.4.3
-      asset: heroes-thieves-and-moneylenders-4.3.iemod
+      release: v.4.3.2
+      asset: heroes-thieves-and-moneylenders-4.3.2.iemod
   - name: "snakes"
     description: The slithering Menace
     components: [0]
@@ -1305,13 +1305,6 @@ modules:
         relative: patches/aura_bg1-select-artificer_and_timers.diff
     #prompt for class (1. Artificer)
     #prompt for portrait (2. BG2 style)
-  - name: nephele
-    components: [0]
-    location:
-      github_user: SpellholdStudios
-      repository: Nephele_NPC
-      release: v.2.7
-      asset:  nephele-npc-v2.7.iemod
   - name: Emily
     components: [0]
     location:
@@ -1363,12 +1356,41 @@ modules:
       repository: SkitiaNPCs
       tag: v1.1
       patch:
-        relative: patches/skitia_npc_defaultportraits.diff + patches/skitia-npc-bg2.diff
-    #prompt for portrait (1. Default the 1. Default)
+        relative: patches/skitia-npc-bg2.diff
+  - name: nephele
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: Nephele_NPC
+      release: v.2.7
+      asset:  nephele-npc-v2.7.iemod
   - name: Petsy
+    installation:
+      general: mustbe after nephele for crossmod component
     components: [0, 1]
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/Petsy v4.2.zip
+      patch:
+        relative: patches/petsy.diff
+      replace:
+        - file_globs: ['Dialogues/L3PetsyJ.d']
+          replace: 'RealSetGlobalTimer("L3PetsyQ2T","GLOBAL",2000)'
+          with: 'RealSetGlobalTimer("L3PetsyQ2T","GLOBAL",600)'
+        - file_globs: ['Dialogues/Samuel.d']
+          replace: 'RealSetGlobalTimer("SamuelAndPetsy","GLOBAL",3000)'
+          with: 'RealSetGlobalTimer("SamuelAndPetsy","GLOBAL",900)'
+        - file_globs: ['Scripts/L3Pet25.baf']
+          replace: 'RealSetGlobalTimer("L3ToBN","GLOBAL",2400)'
+          with: 'RealSetGlobalTimer("L3ToBN","GLOBAL",900)'
+        - file_globs: ['Scripts/L3Pet25.baf']
+          replace: 'RealSetGlobalTimer("L3ToBRomanceTime","GLOBAL",1200)'
+          with: 'RealSetGlobalTimer("L3ToBRomanceTime","GLOBAL",450)'
+        - file_globs: ['Scripts/L3Petsy.baf']
+          replace: '23,1: RealSetGlobalTimer("L3PetsyNormalTime","GLOBAL",1500)'
+          with: '23,1: RealSetGlobalTimer("L3PetsyNormalTime","GLOBAL",600)'
+        - file_globs: ['Scripts/L3Petsy.baf']
+          replace: '23,1: RealSetGlobalTimer("L3PetsyRomanceTime","GLOBAL",1500)'
+          with: '23,1: RealSetGlobalTimer("L3PetsyRomanceTime","GLOBAL",600)'
   - name: Yvette
     description: "Colours of Infinity: Yvette Romance"
     components:
