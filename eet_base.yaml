@@ -1429,6 +1429,7 @@ modules:
       asset: ascalons-breagar-12.2.0.iemod
       patch:
         relative: breagar-wait-here.diff
+        # components 10-13 change timers
   - name: c#brandock
     description: Brandock the mage
     installation:
@@ -1446,6 +1447,31 @@ modules:
       repository: Brandock_the_Mage
       release: v1.3
       asset: brandock-the-mage-v1.3.iemod
+      replace:
+        # BrandockNPCBanterTimer3600
+        - file_globs: ["crossmod/bg1npc.baf", "crossmod/brando_crossmod_bg1npc_BG1.d", "dialogue/brandock_sod.d", "dialogue/c#brando.d"]
+          replace: 'RealSetGlobalTimer("C#BrandockNPCBanterTimer","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("C#BrandockNPCBanterTimer","GLOBAL",1200)'
+          comment: Reduce 3600s/1h _real-time_ talks timers to 1200s/20min real-time
+        # 1200
+        - file_globs: ["dialogue/brandock_sod.d"]
+          replace: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",1200)'
+          with: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",600)'
+        # 600
+        - file_globs: ["dialogue/brandock_sod.d", "scripts/c#brando_bg2.baf"]
+          replace: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",600)'
+          with: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",300)'
+        # 1800
+        - file_globs: ["scripts/c#brando_sod.baf"]
+          replace: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",1800)'
+          with: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",900)'
+        # timer constants
+        - file_globs: ["c#brandock.tp2"]
+          replace: 'APPEND ~gtimes.ids~ ~3600 C#BRANDOCK_TIMERLONG~ UNLESS ~C#BRANDOCK_TIMERLONG~'
+          with: 'APPEND ~gtimes.ids~ ~1200 C#BRANDOCK_TIMERLONG~ UNLESS ~C#BRANDOCK_TIMERLONG~'
+        - file_globs: ["c#brandock.tp2"]
+          replace: 'APPEND ~gtimes.ids~ ~1800 C#BRANDOCK_TIMERSHORT~ UNLESS ~C#BRANDOCK_TIMERSHORT~'
+          with: 'APPEND ~gtimes.ids~ ~900 C#BRANDOCK_TIMERSHORT~ UNLESS ~C#BRANDOCK_TIMERSHORT~'
   - name: c#husam
     components: ask
     location:
