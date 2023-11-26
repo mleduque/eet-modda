@@ -741,8 +741,8 @@ modules:
     location:
       github_user: The-Gate-Project
       repository: AerieBG1
-      release: v2.4
-      asset: aerie-in-bgee-2.4.iemod
+      release: v2.5
+      asset: aerie-in-bgee-2.5.iemod
   - name: garrick-tt
     components:
       - 0 # Garrick : les contes d'un troubadour
@@ -1472,13 +1472,6 @@ modules:
         - file_globs: ["c#brandock.tp2"]
           replace: 'APPEND ~gtimes.ids~ ~1800 C#BRANDOCK_TIMERSHORT~ UNLESS ~C#BRANDOCK_TIMERSHORT~'
           with: 'APPEND ~gtimes.ids~ ~900 C#BRANDOCK_TIMERSHORT~ UNLESS ~C#BRANDOCK_TIMERSHORT~'
-  - name: c#husam
-    components: ask
-    location:
-      github_user: Gitjas
-      repository: Husam_NPC
-      release: vBeta_230411
-      asset: husam-npc-for-bgt-bgsod-bgiiee-and-eet-beta_230411.iemod
   - name: "c#brage"
     installation:
       general: for crossmod content
@@ -1494,6 +1487,19 @@ modules:
       asset: brages-redemption-brage-npc-9.1.iemod
       patch:
         relative: patches/brage_less_wait.diff
+      replace:
+        - file_globs: []
+          replace:
+          with:
+  - name: c#husam
+    components: ask
+    installation:
+      general: main comp before grey, crossmod after brage
+    location:
+      github_user: Gitjas
+      repository: Husam_NPC
+      release: vBeta_230411
+      asset: husam-npc-for-bgt-bgsod-bgiiee-and-eet-beta_230411.iemod
   - name: c#greythedog
     description: Grey the dog
     installation:
@@ -1817,14 +1823,14 @@ modules:
       asset: AllisonV15MacOSX.zip
   - name: chattyimoen
     components:
-      - 0 # Chatty Imoen : Repliques audio supplementaires
-      - 1 # Chatty Imoen : Interactions supplementaires avec les autres personnages
-      - 4 # Chatty Imoen : Changement de portrait pour Imoen -> Donner a Imoen son portrait de BG2
+      # - 0 # Chatty Imoen : Repliques audio supplementaires
+      # - 1 # Chatty Imoen : Interactions supplementaires avec les autres personnages
+      # - 4 # Chatty Imoen : Changement de portrait pour Imoen -> Donner a Imoen son portrait de BG2
     location:
       github_user: The-Gate-Project
       repository: ChattyImoen
-      release: v1.3
-      asset: lin-chattyimoen-v1.3.zip
+      release: v1.5
+      asset: lin-chattyimoen-v1.5.zip
   - name: neera
     description: neera expansion
     components:
@@ -2543,8 +2549,8 @@ modules:
     location:
       github_user: Argent77
       repository: A7-ImprovedArcher
-      release: v4.1
-      asset: A7-ImprovedArcher-v4.1.iemod
+      release: v4.2
+      asset: A7-ImprovedArcher-v4.2.iemod
   - name: saradas_magic
     components:
       - 0 # saradas_magic for BGEE / EET

@@ -1,0 +1,57 @@
+version: '1'
+global:
+  lang_dir: fr_FR
+  lang_preferences:
+  - '#rx#^fran[cç]ais'
+  - french
+  - english
+  - american english
+  patch_path: iwd2_patches
+modules:
+- name: iwd2ee
+  components:
+  - 0 # Class Revisions
+  - 1 # Looser Alignment Restrictions
+  - 2 # Spell Revisions
+  - 3 # Spell Focus Feats for All Schools
+  - 4 # Item Revisions
+  - 5 # Creature Revisions
+  - 7 # 'Better XP Progression -> Partially unnerfed challenge ratings: enemy CR is equal to or slightly less than their level (recommended)'
+  - 8 # More Interesting Alternative to the Palisade Quests
+  - 94 # Add Additional Ways to Progress Through Certain Areas
+  - 11 # Faster Wandering Village
+  - 14 # Faster Dragon's Eye
+  - 27 # Shorten the Dragon's Eye time loop questline to a single battle
+  - 17 # Add more scrolls to the game
+  - 18 # Revised Creature Resistances and Immunities
+  - 20 # More Accurate Saving Throws for Enemies
+  - 51 # Revise Critical Hit Immunity -> Undead, constructs, objects, elementals and oozes become immune to critical hits; all other creatures become vulnerable to critical hits
+  - 23 # Better Racial Enemies for Rangers
+  - 24 # Cosmetic Tweaks
+  - 93 # More Persuasion Options
+  - 36 # NPC Core
+  - 52 # NPCs gain experience upon joining to match the party's experience -> NPCs start with the average experience of the rest of the party
+  - 37 # Cosmetic improvements to the GUI and new loading screens
+  - 80 # Looping main theme
+  - 38 # Revised Battle Square
+  - 39 # Minor Damage Resistance for Armor and Shields
+  - 41 # Race Revisions
+  - 84 # Revise racial level adjustment/ECL
+  - 43 # Enemies give the same amount of experience regardless of the party's level -> Enemies give 35 * CR experience, enough for a six-character party to reach level 18-19 by the end of the game
+  - 44 # Adjust encounter level-scaling -> Always fight at least the medium-level version of an encounter
+  - 46 # Reduce the HP bonuses of creatures in Heart of Fury Mode
+  - 47 # Reduce the attack bonuses of creatures in Heart of Fury Mode
+  - 49 # Reduce the Saving Throw bonuses of creatures in Heart of Fury Mode -> Creatures in Heart of Fury Mode that are normally 10 HD or less get -3 to all saves
+  - 66 # Have the party start the game with extra experience in Heart of Fury Mode -> Each party member starts HoF with 45000 experience, enough to reach level 10
+  - 76 # Reduce the delay after a sneak attack before the creature can be sneak attacked again -> Lower it to 1 round
+  - 82 # Increase the level cap -> Increase it to 50
+  - 85 # Always learn spells from scrolls successfully
+  - 88 # Everyone can perform attacks of opportunity
+  - 90 # Change the way ability scores are assigned at character creation -> Roll for stats - Plus/minus buttons enabled (like in Baldur's Gate)
+  - 91 # Add more traps
+  - 92 # Add key bindings for automating buffing (see the readme for more information)
+  location:
+    github_user: mleduque
+    repository: IWD2EE
+    branch: linux
+    refresh: always

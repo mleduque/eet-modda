@@ -1,0 +1,140 @@
+version: '1'
+global:
+  lang_dir: fr_FR
+  lang_preferences:
+  - '#rx#^fran[^a]+ais'
+  - french
+  - english
+  - american english
+modules:
+  - name: IWD2_correctFR
+    components:
+      - 0
+    location:
+      github_user: mleduque
+      repository: IWD2_correctFR
+      tag: v1
+  - name: iwd2ee
+    components:
+    - 0 # Class Revisions
+    - 1 # Looser Alignment Restrictions
+    - 2 # Spell Revisions
+    - 3 # Spell Focus Feats for All Schools
+    - 4 # Item Revisions
+    - 5 # Creature Revisions
+    - 7 # 'Better XP Progression -> Partially unnerfed challenge ratings: enemy CR is equal to or slightly less than their level (recommended)'
+    - 8 # More Interesting Alternative to the Palisade Quests
+    - 94 # Add Additional Ways to Progress Through Certain Areas
+    - 11 # Faster Wandering Village
+    - 14 # Faster Dragon's Eye
+    - 27 # Shorten the Dragon's Eye time loop questline to a single battle
+    - 17 # Add more scrolls to the game
+    - 18 # Revised Creature Resistances and Immunities
+    - 20 # More Accurate Saving Throws for Enemies
+    - 51 # Revise Critical Hit Immunity -> Undead, constructs, objects, elementals and oozes become immune to critical hits; all other creatures become vulnerable to critical hits
+    - 23 # Better Racial Enemies for Rangers
+    - 24 # Cosmetic Tweaks
+    - 93 # More Persuasion Options
+    - 36 # NPC Core
+    - 52 # NPCs gain experience upon joining to match the party's experience -> NPCs start with the average experience of the rest of the party
+    - 37 # Cosmetic improvements to the GUI and new loading screens
+    - 80 # Looping main theme
+    - 38 # Revised Battle Square
+    - 39 # Minor Damage Resistance for Armor and Shields
+    - 41 # Race Revisions
+    - 84 # Revise racial level adjustment/ECL
+    - 43 # Enemies give the same amount of experience regardless of the party's level -> Enemies give 35 * CR experience, enough for a six-character party to reach level 18-19 by the end of the game
+    - 44 # Adjust encounter level-scaling -> Always fight at least the medium-level version of an encounter
+    - 46 # Reduce the HP bonuses of creatures in Heart of Fury Mode
+    - 47 # Reduce the attack bonuses of creatures in Heart of Fury Mode
+    - 49 # Reduce the Saving Throw bonuses of creatures in Heart of Fury Mode -> Creatures in Heart of Fury Mode that are normally 10 HD or less get -3 to all saves
+    - 66 # Have the party start the game with extra experience in Heart of Fury Mode -> Each party member starts HoF with 45000 experience, enough to reach level 10
+    - 76 # Reduce the delay after a sneak attack before the creature can be sneak attacked again -> Lower it to 1 round
+    - 82 # Increase the level cap -> Increase it to 50
+    - 85 # Always learn spells from scrolls successfully
+    - 88 # Everyone can perform attacks of opportunity
+    - 90 # Change the way ability scores are assigned at character creation -> Roll for stats - Plus/minus buttons enabled (like in Baldur's Gate)
+    - 91 # Add more traps
+    - 92 # Add key bindings for automating buffing (see the readme for more information)
+    location:
+      github_user: mleduque
+      repository: IWD2EE
+      branch: linux
+      refresh: always
+      layout:
+          layout_type: multi_dir
+          dirs:
+            - iwd2ee
+            - iwd2ee_mod_compatibility_patch
+  - name: iwd2fixpack
+    components:
+      - 0 # fixpack
+      - 1 # unfinished business
+    ignore_warnings: true # cannot verify trigger on IEex_LuaTrigger
+    location:
+      http: https://iegmc.kjtd.net/iwd2fixpack/IWD2FIXPACKv7.zip
+  - name: iwd2npc
+    components:
+    - 0 # 'Install Joinable NPCs for IWD2: Test_Build_1_for_v7'
+    location:
+      github_user: Gibberlings3
+      repository: IWD2_NPC_Project
+      tag: Test_Build_1_for_v7
+  - name: merchant
+    components:
+    - 0 # 'Bonus Merchant for IWD2: v5'
+    location:
+      github_user: Pocket-Plane-Group
+      repository: iwd2_bonus_merchant
+      tag: Test_Build_1_for_v5
+  - name: comstore
+    components:
+      - 0 # comstore
+    location:
+      http: https://iegmc.kjtd.net/com/CoMstore210.rar
+      layout:
+        layout_type: single_dir_plus_tp2
+  - name: iwd2-ease
+    components:
+    - 12 # 'Always Get Some XP Per Kill: Test_Build_1_for_v16'
+    - 13 # 'Some Heart of Fury Items In Normal Mode: Test_Build_1_for_v16'
+    - 16 # 'Non-Linear Teleportation: Test_Build_1_for_v16'
+    - 18 # 'Include Forgotten Armor and Shields: Test_Build_1_for_v16'
+    - 23 # 'Faster Oswald: Test_Build_1_for_v16'
+    location:
+      github_user: Pocket-Plane-Group
+      repository: iwd2_ease_of_use
+      tag: Test_Build_1_for_v16
+  - name: los
+    components:
+    - 2 # Light of Selune MOD
+    location:
+      http: https://github.com/mleduque/IWD2_save/releases/download/v1/LightOfSelune.zip
+      layout:
+        layout_type: single_dir_plus_tp2
+  - name: cdtweaks
+    components:
+    - 60 # 'Animation des armes amelioree: v16'
+    - 130 # 'Mode pause dans tous les dialogues: v16'
+    - 160 # 'Rendre rougeoyants les boucliers magiques (plainab/grogerson): v16'
+    - 191 # 'Utiliser les couleurs du personnage plutot que les couleurs de l''objet -> Pour tous les boucliers et casques non magiques: v16'
+    - 1120 # 'Plus de munitions dans les boutiques: v16'
+    - 2220 # 'Donner un poids de 0 aux armes creees par magie: v16'
+    - 2312 # 'Ajouter des penalites aux jets de sauvegarde des sorts des lanceurs de sorts de haut niveau -> Magie divine et des arcanes: v16'
+    - 2999 # 'Maximum de PV au niveau 1: v16'
+    - 3001 # 'Davantage de points de vie a la montee de niveau -> Style NWN: v16'
+    - 3040 # 'Sacs de contenance sans fond: v16'
+    - 3083 # 'Augmenter la taille de la pile de munitions -> Piles de 120: v16'
+    - 3093 # 'Augmenter la limite d''empilement des gemmes et des bijoux -> Piles de 120: v16'
+    - 3102 # 'Augmenter la limite d''empilement des potions -> Piles de 80: v16'
+    - 3112 # 'Augmenter la limite d''empilement des parchemins -> Piles de 80: v16'
+    - 3197 # 'Alterer les interruptions du repos hostiles -> Doubler la frequence: v16'
+    - 3200 # 'Batons, gourdins et frondes vendables (Icelus): v16'
+    - 3320 # 'Pas de depreciation dans les magasins: v16'
+    location:
+      github_user: Gibberlings3
+      repository: Tweaks-Anthology
+      tag: v16
+  - name: iwd2ee_mod_compatibility_patch
+    components:
+    - 0 # IWD2EE Mod Compatibility Patch (Install AFTER all mods and only if you have a mod other than IWD2EE installed)
