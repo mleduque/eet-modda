@@ -366,8 +366,8 @@ modules:
     location:
       github_user: Gitjas
       repository: Ascalons_Questpack
-      release: v5.1
-      asset:  ascalons-questpack-5.1.iemod
+      release: v5.2
+      asset:  ascalons-questpack-5.2.iemod
   #- name: BG_Travel
   #  description: New travel system between Baldur's Gate City areas
   #  comment: Original location http://athkatla.cob-bg.pl/download.php?id=1595 (BG_Travel_v2.1.rar)
