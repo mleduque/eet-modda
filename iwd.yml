@@ -5,12 +5,16 @@ global:
   lang_dir: "fr_FR"
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
 modules:
-  - name: eefixpack
-    components:
-    location:
-      github_user: Gibberlings3
-      repository: EE_Fixpack
-      commit: f9906c2-update-it
+
+##############
+# Fixpacks
+##############
+  #- name: eefixpack
+  #  components:
+  #  location:
+  #    github_user: Gibberlings3
+  #    repository: EE_Fixpack
+  #    commit: f9906c2-update-it
   ## story
   - name: ub_iwd
     description: Unfinished Business for Icewind Dale
@@ -20,110 +24,140 @@ modules:
       repository: iwd_unfinished_business
       release: v11
       asset: lin-ub_iwd-v11.tar.gz
-  - name: LEUI-IWDEE # or some other UI mod
+
+##############
+# Full UI
+##############
+  #- name: LEUI-IWDEE # or some other UI mod
+  #  components:
+  #    - 0 #
+  #  location:
+  #    github_user: r-e-d
+  #    repository: LeUI-IWDEE
+  #    branch: master
+  #    refresh: 3days
+  - name: dragonspear_ui++
+    components: ask
+    location:
+      github_user: 11jo
+      repository: French-Translation_For_Dragonspear-UI_Artifox
+      tag: Artifox
+
+##############
+# Story/Quest
+##############
   - name: Kuldahar
     description: The Rediscovery of Kuldahar
-    components:
+    components: ask
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Kuldahar v2.2.zip
+      path: /home/mick/Games/modda-cache/static-iwd/Kuldahar v2.4.zip
   - name: Snowytoes
-    components:
+    components: ask
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Snowytoes v1.3.zip
   - name: willowisp
-    components:
+    components: ask
     location:
       path: /home/mick/Games/modda-cache/static/Will of the Wisp v2.20.zip
   - name: BlinkingDead
-    components:
+    components: ask
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/BlinkingDead v3.0.zip
+      path: /home/mick/Games/modda-cache/static-iwd/BlinkingDead v3.01.zip
   - name: OurLady
     description: Tale of Our Lady Dreamless
-    components:
+    components: ask
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Tale of Our Lady Dreamless v2.6.zip
   - name: InnBB
     description: Below & Below Inn
-    components:
+    components: ask
     location:
       path: /home/mick/Games/modda-cache/static-iwd/InnBB v2.3.zip
   - name: Skineater
-    components:
+    components: ask
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Skineater v2.3.zip
-  ## npc
+
+##############
+# NPC
+##############
   - name: iwdnpc
     description: 5 npcs with banter, friendship, interjections, romance
-    components:
+    components: ask
     location:
       github_user: Pocket-Plane-Group
       repository: IWD_NPC
   - name: dendjelion
     description: male halfling blackguard + quest
-    components:
+    components: ask
     location:
       path: /home/mick/Games/modda-cache/static-iwd/dendjelion v1.3.zip
   - name: Dusky
     description: male half-orcish cleric/thief, chaotic neutral; m/m romance
-    components:
+    components: ask
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Dusky v2.4.1.zip
   - name: Hommet
     description: necromancer, chaotic good + dialogues, items, spells
-    components:
+    components: ask
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Hommet v1.0.zip
   - name: Ina
     description: female bard spectre + banter +romance (with female)
-    components:
+    components: ask
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Ina v2.1.zip
   - name: Lanna
     description: elven paladin, quest, talks, romance
-    components:
+    components: ask
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Lanna v1.6.zip
   - name: OakMaw
     description: dark fey hunter
-    components:
+    components: ask
     location:
       path: /home/mick/Games/modda-cache/static-iwd/OakMaw v2.1.zip
   - name: Orra
     description: fighter/mage/cleric.woman + friendship
-    components:
+    components: ask
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Orra v2.1.zip
   - name: Tipps
     description: halfling geomantic sorcerer + talks + romance + items
-    components:
+    components: ask
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Tipps v2.1.zip
   - name: Tviy
     description: chaotic evil gnome cleric, follows Urdlen
-    components:
+    components: ask
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Tviy v2.2.zip
   - name: Urchin
     description: urchin(creature) + area=night glade
-    components:
+    components: ask
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Urchin v2.2.zip
-  - name: Afaaq
+  - name: DjinniCompanion
+    compoennts: ask
+    location:
+      github_user: Argent77
+      repository: DjinniCompanion
+      branch: devel
+      refresh: 2days
   - name: TuraldNPC
     description: male dwarf figther/cleric, NG, dialogs, interjections, crossmod
-    components:
+    components: ask
     location:
       path: /home/mick/Games/modda-cache/static-iwd/TuraldNPC.zip
   - name: KarihiNPC
     description: genasi pyromancer + friendship + romance + encounter + spells + crossmod banters support
-    components: ~
+    components: ask
     location:
       github_user: ArtemiusI
       repository: KarihiNPC
       tag: v1.01
   - name: MinervaNPC
-    components: ~
+    components: ask
     location:
       github_user: ArtemiusI
       repository: KarihiNPC
@@ -135,8 +169,12 @@ modules:
       repository: CassiaNPC
       branch: master
       refresh: 1day
+
+##############
+# Crossmod
+##############
   - name: iwdcrossmodpack
-    components: ~
+    components: ask
     location:
       http: http://america.iegmc.net/g3//lin-IWDCrossmodPack-v1.4.tar.gz
       patch: patch/iwdcrossmodpack_readln.diff
@@ -145,23 +183,71 @@ modules:
   #  components: ~
   #  location:
   #    path: /home/mick/Games/modda-cache/static-iwd/Setup-MinorNPCPortraitsforIWDEEv1.04.zip
-  - name: PPE
-    description: Portraits, Portraits Everywhere
+
+##############
+# Spells
+##############
+  - name : stratagems
+    description: SCS - the new spells and spell tweaks
     components: ask
     location:
-      #github_user: DaftHunk # canonical:smeagolheart
-      github_user: mleduque
-      repository: Portraits-Portraits-Everywhere
-      branch: check which one
-  ## items-
+      github_user: Gibberlings3
+      repository: SwordCoastStratagems
+      release: v35
+  - name: Weasels!
+    components:
+      - 0
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/Weasels! v3.4.zip
+  - name: A7-GolemConstruction
+    components:
+    location:
+      github_user: Argent77
+      repository: A7-GolemConstruction
+      release: v6.3
+      asset: A7-GolemConstruction-v6.3.iemod
+  - name: wildmage
+    components:
+      # Rhialto's death gives way too much XP
+      - 1 # New Wild Magic Spells -> Haughty pansy
+      - 2 # Retain Rhialto's items
+      #- 3 # Spellshaper Kit -> Original avatar
+      - 5 # Diverses Modifications de Sorts
+    location:
+      github_user: BGforgeNet
+      repository: bg2-wildmage
+      release: v2.2
+      asset: wild-mage-additions-v2.2.iemod
+  - name: SubtleD_Spell_Tweaks
+    description: SubtleD's Spell Tweaks
+    installation:
+      general: probably juste before TnB
+      after: spell_rev, iwdification
+      before: TomeandBlood, faiths_and_powers, will_to_power, might_and_guile, cdtweaks, stratagems
+    components: ask
+    location:
+      github_user: subtledoctor
+      repository: SubtleD_Spell_Tweaks
+      tag: "2.6.2"
+
+##############
+# Items/Stores
+##############
+  - name: A7-MagicStore
+    compoennts: ask
+    location:
+      github_user: Argent77
+      repository: A7-MagicStore
+      branch: devel
+      refresh: 2days
   - name: FindIt-IWD
     description: new items
-    components:
+    components: ask
     location:
       path: /home/mick/Games/modda-cache/static-iwd/FindIt-IWD v2.6.zip
   - name: iu_iwd-IWD
     description: Item Upgrade for Icewind Dale
-    components:
+    components: ask
     location:
       github_user: Gibberlings3
       repository: itemupgrade_iwd
@@ -169,74 +255,375 @@ modules:
       asset: lin-iu_iwd-v6.tar.gz
   - name: ForgeIt-IWD
     description: new items to create
-    components:
+    components: ask
     location:
       path: /home/mick/Games/modda-cache/static-iwd/ForgeIt-IWD v1.8.zip
   - name: msfm
-  ## spells
-  - name: Weasels!
-    components:
-      - 0
+    components: ask
     location:
-      github_user: mleduque
-      repository: lava_weasels
-      branch: v3.3
-  - name: A7-GolemConstruction
+      github_user: Renegade0
+      repository: msfm
+      tag: "1.57"
+  - name: rr # rogue rebalancing
+    description: additional equipment only
     components:
+      - 7     # Equipement supplementaire pour les voleurs et les bardes
+    location:
+      github_user: FredrikLindgren
+      repository: rr
+      branch: devel
+  - name: forgotten-armament
+    description: Forgotten armaments
+    components: ask
+
+##############
+# Kits
+##############
+  #- name: k9IWDEEKit
+  #  home: http://www.shsforums.net/files/file/1099-a-frosty-journey-the-iwdee-kitpack/
+  #  components: ~
+  #  location:
+  #    http: http://www.shsforums.net/files/getdownload/12410-a-frosty-journey-the-iwdee-kitpack/
+  - name: A7#ImprovedArcher
+    components: ask
     location:
       github_user: Argent77
-      repository: A7-GolemConstruction
-      branch: devel
-  ## kits
-  - name: k9IWDEEKit
-    home: http://www.shsforums.net/files/file/1099-a-frosty-journey-the-iwdee-kitpack/
-    components: ~
+      repository: A7-ImprovedArcher
+      releases: v4.2
+      asset:  A7-ImprovedArcher-v4.2.iemod
+  - name: ArtisansKitpack
+    description: ArtisansKitpack - only single-class kits
+    components: ask
     location:
-      http: http://www.shsforums.net/files/getdownload/12410-a-frosty-journey-the-iwdee-kitpack/
-  ## tweaks
+      github_user: ArtemiusI
+      repository: The-Artisan-s-Kitpack
+      tag: v4.3211
+  - name: A7-ImprovedShamanicDance
+    components: ask
+    location:
+      github_user: Argent77
+      repository: A7-ImprovedShamanicDance
+      branch: devel
+      refresh: 2days
+  - name: A7-ChaosSorcerer
+    components: ask
+    location:
+      github_user: Argent77
+      repository: A7-ChaosSorcerer
+      branch: devel
+      refresh: 2days
+  - name: A7-CustomKits
+    components: ask
+    location:
+      github_user: Argent77
+      repository: A7-CustomKits
+      branch: devel
+      refresh: 2days
+  - name: song_and_silence
+    components: ask
+    location:
+      github_user: Gibberlings3
+      repository: SongAndSilence
+      release: v17
+      asset: lin-song_and_silence-v17.tar.gz
+  - name: TomeAndBlood
+    description: Tome And Blood - main
+    components: ask
+    location:
+      github_user: mleduque
+      repository: TomeAndBlood
+      branch: "1.0.1-fr"
+  - name: divine_remix
+    components: ask
+    location:
+      github_user: TotoR115
+      repository: Divine_Remix
+      commit: a443b16??
+  - name: Faiths_and_Powers
+    components: ask
+    ignore_warnings: true # all except 31 emit no effect changed/added
+    location:
+      github_user: mleduque
+      repository: Faiths_and_Powers
+      tag: 0.86sd4-fr
+      patch:
+        relative: patches/fnp_configure.diff
+  - name: 5E_spellcasting
+    installation:
+      after: Tome & Blood and Faiths & Powers
+      before: Might & Guile
+      general: >
+        1. Casting slots are determined at install time
+        2. Memorization slots are determined at runtime
+        3. Ability score-based bonuses are determined at install time AND they only work perfectly if they know
+            what the spell table is at install time.
+        3rd means you really should not change the spell table after installing ability score-based bonuses.
+        Memorization slots will naturally adjust, but the stat-based bonuses may get (slightly) out of whack.
+    components: ask
+    ignore_warnings: true # no effect altered on... for each component
+    location:
+      github_user: mleduque
+      repository: 5E_spellcasting
+      branch: 2.2-fr
+      patch:
+        # configure "lose spell on interrupted" and "int bonus slots"
+        relative: patches/spellcasting-5e-config.diff
+  - name: sword_and_fist
+    components: ask
+    location:
+      github_user: Gibberlings3
+      repository: sword_and_fist
+      branch: main
+  - name: Will_to_Power
+    description: Will to power - the first component warns
+    components: ask
+    location:
+      github_user: mleduque
+      repository: Will_to_Power
+      branch: 2.5-fr
+      patch:
+        relative: patches/will_to_power_tweaks.diff
+  - name: might_and_guile
+    description: Might And Guile - Main component (warns)
+    components: ask
+    ignore_warnings: true
+    location:
+      github_user: mleduque
+      repository: Might_and_Guile
+      tag: 5.6.3-fr
+      patch:
+        relative: patches/mng-multibard-shools.diff
+
+
+
+##############
+# Tweaks
+##############
   - name: cdtweaks
     location:
       github_user: Gibberlings3
       repository: Tweaks-Anthology
-      release: v15
-      asset: lin-cdtweaks-v15.tar.gz
-  - name: aTweaks
-    components: ask
-    location:
-    # github_user: TotoR115
-    # commit: 00c1388
-    github_user: CamDawg # canonical version: FredrikLindgren/aTweaks
-    repository: aTweaks
-    commit: 2469eb1
+      release: v16
+      tag: v16
   - name: S9HouseRules
     components: ask
     location:
       github_user: mleduque
       repository: S9HouseRules
       tag: v1.1
-  - name: cd_appraiser
-    components: [ 0 ]
-    location:
-      github_user: Gibberlings3
-      repository: Bardic_Appraisal
-      commit: 979ba99 # post-v2, adds multi-bard support
   - name: HouseTweaks
     description: The Artisan's Tweaks and Overhauls
     components: ask
     location:
       github_user: ArtemiusI
       repository: House-Rule-Tweaks
-      tag: v2.01
-  - name: iwd_compat
+      branch: master
+      refresh: 2days
+  - name: aTweaks
+  - anme: klatu
     components: ask
     location:
-      github_user: D2-mods
-      repository: IWDEE-compatibility-fixer
-      release: v0.7
-      asset: iwdee-compatibility-fixer-0.7.iemod
-  ## portraits
-  - name: PortraitsFromIWD2
+      github_user: The-Gate-Project
+      repository: klatu-tweaks-and-fixes
+      branch: master
+      refresh: 1day
+  - name: METweaks
+    location:
+      github_user: OlvynChuru
+      repository: Olvyn-Tweaks
+  - name: Trap_Overhaul
+    description: Kjeron's Trap Overhaul
+    original_thread: https://forums.beamdog.com/discussion/71763/trap-detection-recovery-evasion
+    original_dl: https://us.v-cdn.net/5019558/uploads/editor/cq/pzpto4fbfcov.zip
     components:
+      - 1111 # Trap Overhaul -> Monk Evasion, Fast Detection, Recovery, Anyone OpenLocks: 0.20
+    location:
+      github_user: mleduque
+      repository: kjeron_Trap_Overhaul
+      tag: v0.20-french
+      patch: trap_overhaul-bonus.diff
+  - name: DUAL_TO_KIT
+    description: "Kjeron's 'Dual to Kit'"
+    original_thread: https://forums.beamdog.com/discussion/comment/985679#Comment_985679
+    original_dl: https://us.v-cdn.net/5019558/uploads/editor/m1/4sxyexv1ptj0.zip
+    components:
+      - 0 # DUAL_TO_KIT_MENU -> Enable Dualclassing into Kits
+      - 1 # Grant second-class Specialists their Bonus Spell Slots
+      - 2 # Grant second-class Kits their Proper Proficiency Selection
+
+##############
+# stratagems
+##############
+  - name : stratagems
+    description: SCS - the main part
+    components: ask
+    location:
+      github_user: Gibberlings3
+      repository: SwordCoastStratagems
+      release: v35
+##############
+# Final tweaks
+##############
+  - name: SubtleD_Item_Tweaks
+    installation:
+      after: spell_rev, cdtweaks
+      before: NPC_EE
+    components: ask
+    location:
+      github_user:  subtledoctor
+      repository: SubtleD_Item_Tweaks
+      tag: 1.3-fr
+  - name: Combat_Skill_Proficiencies
+    installation:
+      after: [stratagems, atweaks, cdtweaks]
+      before: [ npc_ee ]
+    components: ask
+    location:
+      github_user: subtledoctor
+      repository: Combat_Skill_Proficiencies
+      tag: "1.3.3-fr"
+      patch:
+        relative: patches/combat-skill-profs-config.diff + extend mage/sorc feats (d5csdlg.2da, weapprof.2da, profs.2da, profsmax.2da)
+  - name: SubtleD_Stat_Overhauls
+    components: ask
+    location:
+      github_user: subtledoctor
+      repository: SubtleD_Stat_Overhauls
+      branch: 1.3.2-fr
+      patch: config
+  - name: Magic_Battles_Revised
+    installation:
+      after: stratagems
+    components: ask
+    location:
+      github_user: mleduque
+      repository: magic_battles_revised
+      branch: 1.9-fr
+      patch:
+        relative: patches/mbr_spell_thrust_lv2.diff
+  - name: skills-and-abilities
+    description: skills-and-abilities - components that warn
+    installation:
+      general: "Skills and Abilities Proficiency Overhaul should be installed AFTER SCS just for the reason you specified. No harm in installing after. - morpheus562"
+    components: ask
+    location:
+      github_user: Gibberlings3
+      repository: Skills-and-Abilities
+      release: "2.1"
+      asset: lin-skills-and-abilities-v2.1.zip
+  - name: npc_ee
+    installation:
+      general: towards theend, after mods that change profs (skills-and-abilities?)
+      before: install NPC_EE before Dual-to-Kit
+    components:
+      #- 1010 #/ Retirer l'indicateur de classe jumelee pour Imoen (attention, lire le fichier Readme): 5.2
+      - 2000 #/ Choix des classes/caracteristiques/kits des PNJ: 5.2
+    location:
+      github_user: subtledoctor
+      repository: NPC_EE
+      commit: "6.4"
+  - name: EET_Tweaks
+    components: ask
+    location:
+      github_user: K4thos
+      repository: EET_Tweaks
+      branch: master
+      refresh: 10days
+      patch:
+        relative: patches/eet_tweaks-xpbonus.diff
+  - name: POISON_NO_BYPASS
+    components:
+      - 3 # Limited Exclusions(Anti-magic, AoE, Gaze): Mirror Image or Stoneskin
+    location:
+      github_user: mleduque
+      repository: kjeron_poison_no_bypass
+      branch: workaround_greythedog
+      layout:
+        layout_type: single_dir_plus_tp2
+        tp2: Setup-POISON_NO_BYPASS.tp2
+  - name: cd_appraiser
+    components: [ 0 ]
+    location:
+      github_user: Gibberlings3
+      repository: Bardic_Appraisal
+      branch: master
+      refresh: 2days
+  - name: jimfix
+  - name: tnt
+    description: Tweaks and Tricks mod for Baldur's Gate 2
+    components: ask
+    location:
+      github_user: BGforgeNet
+      repository: bg2-tweaks-and-tricks
+      release: v8.29
+      asset: tweaks-and-tricks-v8.29.iemod
+  - name: zgtweaks
+    components: ask
+    location:
+      github_user: GraionDilach
+      repository: RandomGraionTweaks
+      release: version-1.12
+      asset: random-graion-tweaks-1.12.iemod
+  - name: fix_cre_script_names
+    description: Some mod out there is altering various creatures' script names to "cre_strref." This hotfix changes the script name of all such creatures from "cre_strref" to their filename.
+    components:
+    location:
+      github_user: subtledoctor
+      repository: SubtleD_hotfixes
+      tag: v29
+  - name: 35thac0
+    components: [0]
+    location:
+      github_user: mleduque
+      repository: ie-mods-35
+      branch: main
+  - name: PathfinderHitDice
+    components: [0]
+    location:
+      github_user: mleduque
+      repository: ie-mods-35
+      branch: main
+
+##############
+# UI tweaks
+##############
+  - name: EEUITweaks
+    components: ask
+    location:
+      github_user: r-e-d
+      repository: EEUI-Tweaks
+      release: v4.0.4
+      asset: eeuitweaks-4.0.4.iemod
+  - name: A7-HiddenGameplayOptions
+    components: ask
+    location:
+      github_user: Argent77
+      repository: HiddenGameplayOptions
+      branch: devel
+      refresh: 2days
+  - name: A7-LightingPackEE
+    components: ask
+    location:
+      github_user: Argent77
+      repository: A7-LightingPackEE
+      branch: devel
+      refresh: 2days
+
+##############
+# Portraits/Sound/Etc
+##############
+  - name: HQ_SoundClips_BG2EE?
+  - name: InfinitySounds?
+  - name: PPE
+    description: Portraits, Portraits Everywhere
+    components: ask
+    location:
+      #github_user: DaftHunk # canonical:smeagolheart
+      github_user: mleduque
+      repository: Portraits-Portraits-Everywhere
+      branch: npc-fixes
+  - name: PortraitsFromIWD2
+    components: ask
     location:
       github_user: Ineth2
       repository: PortraitsFromIWD2
@@ -247,4 +634,30 @@ modules:
       github_user: Ineth2
       repository: iwd_portrait_variations
       tag: v1.3
+  - name: cd_icpp
+    components: ask
+    location:
+      github_user: Gibberlings3
+      repository: Infinity_Collection_Portrait_Pack
+      release: v2
+      asset: infinity-collection-portrait-pack-v2.iemod
+
+##############
+# Closing
+##############
+  - name: A7-Achievements
+    components: ask
+    location:
+      github_user: Argent77
+      repository: A7-Achievements
+      release: v2.1
+      asset:  A7-Achievements-v2.1.iemod
+  - name: generalized_biffing
+    components:
+      - 1
+    location:
+      github_user: SpellholdStudios
+      repository: generalized_biffing
+      release: v2.6
+      asset: generalized-biffing-v2.6.iemods
 

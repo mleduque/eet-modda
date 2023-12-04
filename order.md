@@ -1,0 +1,24 @@
+
+- fixpack
+- overwriting
+- full-ui
+- **EET (if applicable)**
+- story/quest
+- npc
+- crossmod
+- early-spells (spell_rev, iwdification, stratagems of mystra)
+- late-quests (those which may depend on spells -totlm- or add spells - dsotsc-)
+- spells
+- item_rev-main (special, overwrites many items so must come early)
+- items/stores
+- item-upgrades (may offer upgrades for mod-added items)
+- item_rev (rest)
+- cdtweaks spell progression
+- kits
+- **Icewind_EET/d5_iwd_eet_integration (if applicable)**
+- **EET_end**
+- stratagems-main (can also be before EET_end)
+- final tweaks ; including 
+  - * item-mass-changes (forgotten-armament, item tweaks)
+  - * bug rules changes (traps, stats, etc.)
+- ui-tweaks

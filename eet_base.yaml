@@ -38,8 +38,6 @@ modules:
           dirs:
             - EET
             - EET_end
-      patch:
-        relative: patches/eet_allowlist.diff
     components:
       - 0 # EET core (importation de ressource)
     add_conf:
@@ -781,8 +779,8 @@ modules:
     location:
       github_user: The-Gate-Project
       repository: Com_encounters
-      release: v1.20
-      asset: com-encounters-v1.20.iemod
+      release: v1.21
+      asset: com-encounters-v1.21.iemod
   - name: isra
     components: [0]
     location:
@@ -1065,8 +1063,8 @@ modules:
     location:
       github_user: Austin-BG
       repository: HTaM
-      release: v.4.3.2
-      asset: heroes-thieves-and-moneylenders-4.3.2.iemod
+      release: v.4.3.3
+      asset: heroes-thieves-and-moneylenders-4.3.3.iemod
   - name: "snakes"
     description: The slithering Menace
     components: [0]
@@ -1236,10 +1234,20 @@ modules:
     location:
       http: http://downloads.chosenofmystra.net/bg2/TheUndying2_53.rar
   - name: vampiretales
-    components: ask
+    components:
+      - 0 # Vampire tales
+      # - 1 # Improved cult
+      - 2 # Improved Harpers
+      - 3 # COM store
     location:
       github_user: The-Gate-Project
       repository: VampireTales
+  - name: rr # rogue rebalancing
+    description: rogue rebalancing - story part
+    components:
+      - 11    #  Rencontre avec les Elus de Cyric
+      - 12    #  Amelioration des Voleurs de l'Ombre
+  - name: ironmodderXX
 
   #########
   # Section: NPC
@@ -2395,14 +2403,8 @@ modules:
     location:
       github_user: CrevsDaak
       repository: thalan
-      tag: v4.2.5
-  - name: thalan
-    description: Thalantyr Item Upgrade
-    components: [0]
-    location:
-      github_user: CrevsDaak
-      repository: thalan
-      tag: v4.2.5
+      branch: master
+      refresh: 2days
   - name: mod-thalantyr-ex
     components: ask
     location:
@@ -2433,15 +2435,15 @@ modules:
       repository: HaerDalis_Swords
       release: v3.1.0
       asset: improved-haerdalis-swords-v3.1.0.iemod
-  # - name: itemupgrade
-  #   components:
-  #     - 10
-  #     - 11
-  #   location:
-  #     github_user: Pocket-Plane-Group
-  #     repository: Item_Upgrade
-  #     release: v50
-  #     asset: lin-itemupgrade-v50.tar.gz
+  - name: itemupgrade
+    components:
+      - 10
+      - 11
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Item_Upgrade
+      release: v50
+      asset: lin-itemupgrade-v50.tar.gz
   - name: ruad
     description: Ruad Ro'fhessa Item Upgrade
     components: [0, 10]
@@ -2540,11 +2542,8 @@ modules:
       tag: v2.71
       refresh: 2days
   - name: A7#ImprovedArcher
+    description: Improved Archer - items
     components:
-      - 0   # Profil d'Archer ameliore
-      - 10  # Ajouter le profil de guerrier : Tireur d'elite
-      - 20  # Ajouter le profil de paladin : Chevalier archer
-      - 30  # Ajouter le profil de voleur : Tireur de precision
       - 100 # Ajouter des fleches et des carreaux +4, et des arcs puissants et dans le jeu
     location:
       github_user: Argent77
@@ -2552,6 +2551,7 @@ modules:
       release: v4.2
       asset: A7-ImprovedArcher-v4.2.iemod
   - name: saradas_magic
+  comment: both a spell and items mod but a single component :/
     components:
       - 0 # saradas_magic for BGEE / EET
     location:
@@ -2613,6 +2613,7 @@ modules:
     description: additional equipment only - component with WARNING
     components:
       - 7     # Equipement supplementaire pour les voleurs et les bardes
+      - 8     # Rogue Rebalancing - Upgradeable Equipment
     ignore_warn: true # WARNING: no effects altered on MISC2P.ITM
     location:
       github_user: FredrikLindgren
@@ -2622,61 +2623,11 @@ modules:
     description: additional equipment upgrade  & story only
     components:
       - 8     # Equipement ameliorable
-      - 11    #  Rencontre avec les Elus de Cyric
-      - 12    #  Amelioration des Voleurs de l'Ombre
       - Rogue Rebalancing has "Crippling Strike" and retains vanilla UAI
         Refinements has "Cripple" and changes UAI to UMD.
         So installing both doesn't get you a soup, it just gives you both Crippling Strike and Cripple. (And it might not even do that - you might end up with just one of them.)
         As has been said elsewhere, RR and Refinements borrowed a lot from each other with regard to thief HLAs, and basically give you two slightly different versions of what is largely the same HLA table. So, decide which version you prefer, and install that mod.
         If you want to add more to the "soup," then you need to find other thief HLA mods. (And I'm not even sure there are any.)
-  - name: cdlore
-    components:
-      - 10 # Books Provide Lore Bonuses
-      - 20 # Weapon Knowledge Provides Lore Bonuses
-      - 30 # Party Members Provide Lore Bonuses
-      - 40 # Defeating Monsters Provides Lore Bonuses
-    location:
-      github_user: Gibberlings3
-      repository: Lore_From_Learning
-      release: v6
-      asset: lin-cdlore-v6.tar.gz
-  - name: polyvorp
-    components:
-      - 10 # Rebalanced Vorpal Weapons (affects enemies and players)
-      # - 20 # Make all Dragons immune to Vorpal hits (previously some were, with default rebalancing none are)
-    location:
-      github_user: mleduque
-      repository: polytope_rebalanced_vorpal
-      tag: v1.00
-  - name: item_rev
-    description: Item Revisions (more changes)
-    components:
-      - 1030 # Revision des boutiques
-      #- 10   # Bonus des boucliers revus
-      #- 17   # Weapon Changes
-      #- 11   # Le combat a deux armes differe selon le type d'arme, legere ou lourde
-      #- 20   # Attaque sournoise revue (avec et sans penalite) -> Toutes les armes de melee et a projectiles utilisables pour l'attaque sournoise
-      - 1200 # Evitement des coups critiques revu
-      - 1060 # Les Kensai peuvent porter des bracelets
-      - 1070 # Les Voleurs peuvent utiliser des baguettes
-  - name: forgotten-armament
-    description: Forgotten armaments - component that warns
-    components:
-      - voir quoi installer et quand
-      #- 17 # Installer " Armes et Equipements oublies " -> Mise à jour des objets existants et ajout des nouveaux objets: v0.7.1-beta
-    location:
-      github_user:  mleduque
-      repository: Forgotten-Armament
-      tag: 4.0-keep-some-boots
-    ignore_warnings: true
-    #patch:
-    #  relative: patches/forgotten-armament-ini.diff
-  - name: forgotten-armament
-    description: Forgotten armaments - components without warnings
-    components: # except stat increase items
-      #- 11 # Ajouter le parchemin Breche au Bazar Magique de la Porte de Baldur: v0.7.1-beta
-      #- 8 # Remplacer les Bottes de Rapidite (Les Pattes de Guepard): v0.7.1-beta
-      #- 10 # Armes dans le style de NWN2: v0.7.1-beta
   - name: S3DisClubs
     description: Distinguishable clubs
     origin: https://forums.beamdog.com/discussion/34524/distinguishable-clubs-weidu-update-1-1
@@ -2718,10 +2669,48 @@ modules:
     components:
       - 0 # Composant principal de Sword Coast Customs
     location:
-      github_user: /cgordon
+      github_user: cgordon
       repository: customs
       branch: master
       refresh: 2days
+  - name: Derats_Archery
+    components: ask
+      github_user: Deratiseur
+      repository: Archery
+      tag: v4
+
+  #########
+  # Mass item updates
+  #########
+  - name: item_rev
+    description: Item Revisions (more changes)
+    components:
+      - 1030 # Revision des boutiques
+      #- 10   # Bonus des boucliers revus
+      #- 17   # Weapon Changes
+      #- 11   # Le combat a deux armes differe selon le type d'arme, legere ou lourde
+      #- 20   # Attaque sournoise revue (avec et sans penalite) -> Toutes les armes de melee et a projectiles utilisables pour l'attaque sournoise
+      - 1200 # Evitement des coups critiques revu
+      - 1060 # Les Kensai peuvent porter des bracelets
+      - 1070 # Les Voleurs peuvent utiliser des baguettes
+  - name: forgotten-armament
+    description: Forgotten armaments - component that warns
+    components:
+      - voir quoi installer et quand
+      #- 17 # Installer " Armes et Equipements oublies " -> Mise à jour des objets existants et ajout des nouveaux objets: v0.7.1-beta
+    location:
+      github_user:  mleduque
+      repository: Forgotten-Armament
+      tag: 4.0-keep-some-boots
+    ignore_warnings: true
+    #patch:
+    #  relative: patches/forgotten-armament-ini.diff
+  - name: forgotten-armament
+    description: Forgotten armaments - components without warnings
+    components: # except stat increase items
+      #- 11 # Ajouter le parchemin Breche au Bazar Magique de la Porte de Baldur: v0.7.1-beta
+      #- 8 # Remplacer les Bottes de Rapidite (Les Pattes de Guepard): v0.7.1-beta
+      #- 10 # Armes dans le style de NWN2: v0.7.1-beta
 
   #########
   # Early tweaks
@@ -2766,6 +2755,13 @@ modules:
   #########
   # Single class kits
   #########
+  - name: A7#ImprovedArcher
+    description: Improved Archer - kist
+    components:
+      - 0   # Profil d'Archer ameliore
+      - 10  # Ajouter le profil de guerrier : Tireur d'elite
+      - 20  # Ajouter le profil de paladin : Chevalier archer
+      - 30  # Ajouter le profil de voleur : Tireur de precision
   - name: MilitiaOfficer
     components: [0]
     location:
@@ -2792,9 +2788,7 @@ modules:
     location:
       github_user: ArtemiusI
       repository: The-Artisan-s-Kitpack
-      tag: v4.32
-      patch:
-        relative: patches/ArtisansKitPack-fix_2da.diff
+      tag: v4.3211
   - name: A7-ChaosSorcerer
     components:
       - 0 # Kit d'Ensorceleur du Chaos
@@ -3080,8 +3074,7 @@ modules:
       branch: main
   - name: Will_to_Power
     description: Will to power - the first component warns
-    components:
-      - 200 # Ajouter le Psioniste, voleur/psion: 2.0
+    components: ask
     ignore_warnings: true
     location:
       github_user: mleduque
@@ -3555,6 +3548,26 @@ modules:
       repository: CowledMenace
       release: "1.0.1"
       asset: lin-cowledmenace-v1.0.1.zip
+  - name: cdlore
+    components:
+      - 10 # Books Provide Lore Bonuses
+      - 20 # Weapon Knowledge Provides Lore Bonuses
+      - 30 # Party Members Provide Lore Bonuses
+      - 40 # Defeating Monsters Provides Lore Bonuses
+    location:
+      github_user: Gibberlings3
+      repository: Lore_From_Learning
+      release: v6
+      asset: lin-cdlore-v6.tar.gz
+  - name: polyvorp
+    components:
+      - 10 # Rebalanced Vorpal Weapons (affects enemies and players)
+      # - 20 # Make all Dragons immune to Vorpal hits (previously some were, with default rebalancing none are)
+    location:
+      github_user: mleduque
+      repository: polytope_rebalanced_vorpal
+      tag: v1.00
+
 
 
 
@@ -4023,7 +4036,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Bardic_Appraisal
-      commit: 979ba99 # post-v2, adds multi-bard support
+      branch: master
+      refresh: 2days
   - name: DUAL_TO_KIT
     description: "Kjeron's 'Dual to Kit'"
     original_thread: https://forums.beamdog.com/discussion/comment/985679#Comment_985679
