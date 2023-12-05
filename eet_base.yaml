@@ -820,7 +820,7 @@ modules:
   - name: amber
     components: [0, 1]
     location:
-      path: /home/mick/Games/modda-cache/static/lin-amber-v7.zip
+      path: /home/mick/Games/modda-cache/static/lin-amber-v8.zip
       patch:
         relative: patches/amber.diff
       replace:
@@ -992,7 +992,7 @@ modules:
       github_user: SpellholdStudios
       repository: Edwin_Romance
       release: v4,0
-      asset:  edwin-romance-v4.0.iemod 
+      asset:  edwin-romance-v4.0.iemod
       patch: edwin_multi_romance.diff
   - name: framed
     components:
