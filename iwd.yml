@@ -19,6 +19,7 @@ modules:
   - name: ub_iwd
     description: Unfinished Business for Icewind Dale
     compatibility: "Only Marketh's Ring is available for Icewind Dale: Enhanced Edition (or the EET conversion). The rest of the restorations were included in IWDEE itself."
+    components: ask
     location:
       github_user: Gibberlings3
       repository: iwd_unfinished_business
@@ -549,6 +550,15 @@ modules:
       branch: master
       refresh: 2days
   - name: jimfix
+    components:
+      #- 201 # Add spell school notifications to the combat log -> All spells with a casting time greater than 1
+      #- 300 # Expiration notices for spells
+      #- 600 # Expiration notices for items
+    location:
+      github_user: Banananaut
+      repository: jimfix
+      branch: master
+      refresh: 10days
   - name: tnt
     description: Tweaks and Tricks mod for Baldur's Gate 2
     components: ask
