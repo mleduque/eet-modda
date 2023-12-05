@@ -980,7 +980,7 @@ modules:
       repository: Keldorn_Romance
       release: v8.1
       asset: berelindes-keldorn-romance-8.1.iemod
-  - name: edwin
+  - name: edwinromance
     description: Edwin romance
     components:
       - 0 # Edwin Romance
@@ -991,8 +991,8 @@ modules:
     location:
       github_user: SpellholdStudios
       repository: Edwin_Romance
-      release: v3.1
-      asset: edwinromance-v3.1.zip
+      release: v4,0
+      asset:  edwin-romance-v4.0.iemod 
       patch: edwin_multi_romance.diff
   - name: framed
     components:
