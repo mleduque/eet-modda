@@ -88,6 +88,8 @@ modules:
     location:
       github_user: Pocket-Plane-Group
       repository: IWD_NPC
+      release: v9
+      asset: lin-iwdnpc-v9.zip
   - name: dendjelion
     description: male halfling blackguard + quest
     components: ask
@@ -139,7 +141,7 @@ modules:
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Urchin v2.2.zip
   - name: DjinniCompanion
-    compoennts: ask
+    components: ask
     location:
       github_user: Argent77
       repository: DjinniCompanion
@@ -178,7 +180,8 @@ modules:
     components: ask
     location:
       http: http://america.iegmc.net/g3//lin-IWDCrossmodPack-v1.4.tar.gz
-      patch: patch/iwdcrossmodpack_readln.diff
+      patch:
+      relative: iwd/iwdcrossmodpack_readln.diff
   # Use PPE instead
   #- name: MinorNPCPortraitsforIWDEE
   #  components: ~
@@ -194,14 +197,14 @@ modules:
     location:
       github_user: Gibberlings3
       repository: SwordCoastStratagems
-      release: v35
+      tag: v35.1
   - name: Weasels!
     components:
       - 0
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/Weasels! v3.4.zip
   - name: A7-GolemConstruction
-    components:
+    components: ask
     location:
       github_user: Argent77
       repository: A7-GolemConstruction
@@ -235,7 +238,7 @@ modules:
 # Items/Stores
 ##############
   - name: A7-MagicStore
-    compoennts: ask
+    components: ask
     location:
       github_user: Argent77
       repository: A7-MagicStore
@@ -274,8 +277,14 @@ modules:
       repository: rr
       branch: devel
   - name: forgotten-armament
-    description: Forgotten armaments
+    description: Forgotten armament
     components: ask
+    location:
+      github_user:  Gibberlings3
+      repository: Forgotten-Armament
+      tag: "4.0"
+      patch:
+        relative: iwd/forgotten-armament.diff
 
 ##############
 # Kits
@@ -401,10 +410,10 @@ modules:
 # Tweaks
 ##############
   - name: cdtweaks
+    components: ask
     location:
       github_user: Gibberlings3
       repository: Tweaks-Anthology
-      release: v16
       tag: v16
   - name: S9HouseRules
     components: ask
@@ -421,7 +430,13 @@ modules:
       branch: master
       refresh: 2days
   - name: aTweaks
-  - anme: klatu
+    components: ask
+    location:
+      github_user: TotoR # canonical version: FredrikLindgren/aTweaks
+      repository: aTweaks
+      branch: master
+      refresh: 5days
+  - name: klatu
     components: ask
     location:
       github_user: The-Gate-Project
@@ -429,9 +444,12 @@ modules:
       branch: master
       refresh: 1day
   - name: METweaks
+    components: ask
     location:
       github_user: OlvynChuru
       repository: Olvyn-Tweaks
+      branch: master
+      refresh: 5days
   - name: Trap_Overhaul
     description: Kjeron's Trap Overhaul
     original_thread: https://forums.beamdog.com/discussion/71763/trap-detection-recovery-evasion
@@ -442,7 +460,8 @@ modules:
       github_user: mleduque
       repository: kjeron_Trap_Overhaul
       tag: v0.20-french
-      patch: trap_overhaul-bonus.diff
+      patch:
+        relative: trap_overhaul-bonus.diff
   - name: DUAL_TO_KIT
     description: "Kjeron's 'Dual to Kit'"
     original_thread: https://forums.beamdog.com/discussion/comment/985679#Comment_985679
@@ -451,6 +470,10 @@ modules:
       - 0 # DUAL_TO_KIT_MENU -> Enable Dualclassing into Kits
       - 1 # Grant second-class Specialists their Bonus Spell Slots
       - 2 # Grant second-class Kits their Proper Proficiency Selection
+    location:
+      github_user: mleduque
+      repository: kjeron_DUAL_TO_KIT
+      tag: v0.35
 
 ##############
 # stratagems
@@ -458,10 +481,7 @@ modules:
   - name : stratagems
     description: SCS - the main part
     components: ask
-    location:
-      github_user: Gibberlings3
-      repository: SwordCoastStratagems
-      release: v35
+
 ##############
 # Final tweaks
 ##############
@@ -484,14 +504,15 @@ modules:
       repository: Combat_Skill_Proficiencies
       tag: "1.3.3-fr"
       patch:
-        relative: patches/combat-skill-profs-config.diff + extend mage/sorc feats (d5csdlg.2da, weapprof.2da, profs.2da, profsmax.2da)
+        relative: iwd/combat-skill-profs-config.diff + extend mage/sorc feats (d5csdlg.2da, weapprof.2da, profs.2da, profsmax.2da)
   - name: SubtleD_Stat_Overhauls
     components: ask
     location:
       github_user: subtledoctor
       repository: SubtleD_Stat_Overhauls
       branch: 1.3.2-fr
-      patch: config
+      patch:
+        relative: iwd/stat-overhaul-config.diff # disable race stat changes
   - name: Magic_Battles_Revised
     installation:
       after: stratagems
@@ -501,7 +522,7 @@ modules:
       repository: magic_battles_revised
       branch: 1.9-fr
       patch:
-        relative: patches/mbr_spell_thrust_lv2.diff
+        relative: iwd/mbr_spell_thrust_lv2.diff
   - name: skills-and-abilities
     description: skills-and-abilities - components that warn
     installation:
@@ -512,6 +533,8 @@ modules:
       repository: Skills-and-Abilities
       release: "2.1"
       asset: lin-skills-and-abilities-v2.1.zip
+      patch:
+        relative: iwd/skills-and-abilities.diff
   - name: npc_ee
     installation:
       general: towards theend, after mods that change profs (skills-and-abilities?)
@@ -531,14 +554,14 @@ modules:
       branch: master
       refresh: 10days
       patch:
-        relative: patches/eet_tweaks-xpbonus.diff
+        relative: iwd/eet_tweaks-xpbonus.diff
   - name: POISON_NO_BYPASS
     components:
       - 3 # Limited Exclusions(Anti-magic, AoE, Gaze): Mirror Image or Stoneskin
     location:
       github_user: mleduque
       repository: kjeron_poison_no_bypass
-      branch: workaround_greythedog
+      branch: master
       layout:
         layout_type: single_dir_plus_tp2
         tp2: Setup-POISON_NO_BYPASS.tp2
