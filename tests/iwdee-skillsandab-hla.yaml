@@ -1,0 +1,39 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  #- name: dragonspear_ui++
+  #  components:
+  #    - 0
+  #    - 1
+  #    - 2
+  #    - 8
+  #    - 10
+  #  location:
+  #    github_user: 11jo
+  #    repository: French-Translation_For_Dragonspear-UI_Artifox
+  #    tag: Artifox
+  - name: LEUI-IWDEE # or some other UI mod
+    components:
+      - 0 #
+    location:
+      github_user: r-e-d
+      repository: LeUI-IWDEE
+      branch: master
+      refresh: 3days
+  - name: skills-and-abilities
+    description: skills-and-abilities - components that warn
+    installation:
+      general: "Skills and Abilities Proficiency Overhaul should be installed AFTER SCS just for the reason you specified. No harm in installing after. - morpheus562"
+    components:
+      - 730
+    location:
+      github_user: Gibberlings3
+      repository: Skills-and-Abilities
+      release: "2.1"
+      asset: lin-skills-and-abilities-v2.1.zip
+      patch:
+        relative: patches/sna.diff

@@ -8,7 +8,7 @@ modules:
   - name: stratagems
     components: ask
     location:
-      github_user: Gibberlings3
+      github_user: mleduque
       repository: SwordCoastStratagems
-      release: v35.1
-      asset: lin-stratagems-35.1.zip
+      branch: fix-fr
+      refresh: always

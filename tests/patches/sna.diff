@@ -1,0 +1,11 @@
+--- skills-and-abilities/skills-and-abilities.tp2
++++ skills-and-abilities/skills-and-abilities.tp2
+@@ -80,7 +80,7 @@ INCLUDE ~skills-and-abilities/components/spells/prot_spells.tpa~
+ // Add HLAs to IWDEE (Lefreut UI Required)                               //
+ ///////////////////////////////////////////////////////////////////////////
+ BEGIN @730 DESIGNATED 730 GROUP @7 LABEL SkillsAndAbilitiesIWDEEHLA
+-REQUIRE_PREDICATE (GAME_IS ~iwdee~) && MOD_IS_INSTALLED ~LeUI-IWDEE.tp2~ ~0~ @3009
++REQUIRE_PREDICATE (GAME_IS ~iwdee~)  @3009
+ 
+ INCLUDE ~skills-and-abilities/components/spells/iwdee_hlas.tpa~
+ 

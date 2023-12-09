@@ -883,8 +883,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: BS_Baldurans_Seatower
-      release: vEAOB.8
-      asset: bs-baldurans-seatower-veaob.8.iemod
+      release: vEAOB.9
+      asset: bs-baldurans-seatower-veaob.9.iemod
   - name: "c#solaufein"
     components:
       - 0 # Solaufein's Rescue: Jastey's Solaufein NPC for BGII: 3.2
@@ -965,7 +965,8 @@ modules:
     location:
       github_user: SpellholdStudios
       repository: Shadows_over_Soubar
-      commit: 5377c4c # post v1.16 2023-05-27
+      release: "2.0"
+      asset: shadows-over-soubar-2.0.iemod
   - name: MTS_Crappack
     description: soubar fixes
     installation:
@@ -1195,18 +1196,18 @@ modules:
       # github_user: GwendolyneFreddy
       # repository: L-Ogre-et-le-Gnome
       path: /home/mick/Games/modda-cache/static/Derats Ogre v3.zip
-  # v3: incompatible with iwdification
-  #- name: CtB
-  #  description: Check the bodies
-  #  components:
-  #    - 0 # Check The Bodies : main component
-  #    - 1 # Candlekeep Chores component
-  #    - 2 # Candlekeep Chores Fast Forward
-  #    - 3 # CtB other improvements
-  #  location:
-  #    github_user: SpellholdStudios
-  #    repository: Check_the_Bodies
-  #    commit: be5c6e0 # single fix over 3.0
+  - name: CtB
+    description: Check the bodies
+    components:
+      - 0 # Check The Bodies : main component
+      - 1 # Candlekeep Chores component
+      - 2 # Candlekeep Chores Fast Forward
+      - 3 # CtB other improvements
+    location:
+      github_user: mleduque
+      repository: Check_the_Bodies
+      branch: no_spells
+      refresh: 3days
   - name: gorgon
     components:
     location:
@@ -3485,8 +3486,8 @@ modules:
     location:
       github_user: Argent77
       repository: A7-NoEENPCs
-      release: v4.4
-      asset: A7-ConvenientEENPCs-v4.4.iemod
+      release: v4.5
+      asset: A7-ConvenientEENPCs-v4.5.iemod
   - name: S9BGEENPCTweaks
     description: S9 BGEENPC Tweaks for BGEE / SOD / BG2EE / EET
     comment: >
@@ -3812,8 +3813,8 @@ modules:
     location:
       github_user: Argent77
       repository: A7-HiddenGameplayOptions
-      release: v4.4
-      asset: A7-HiddenGameplayOptions-v4.4.iemod
+      release: v4.5
+      asset: A7-HiddenGameplayOptions-v4.5.iemod
   - name: Tactics-Remix
     components:
     location:

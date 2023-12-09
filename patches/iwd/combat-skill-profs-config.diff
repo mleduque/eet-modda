@@ -1,1 +1,18 @@
-qq
+--- Combat_Skill_Proficiencies/data/profs/profs.2da
++++ Combat_Skill_Proficiencies/data/profs/profs.2da
+@@ -1,7 +1,7 @@
+ 2DA V1.0
+ 0
+                         FIRST_LEVEL     RATE
+-MAGE                    3               50
++MAGE                    3               8
+ FIGHTER                 6               3
+ CLERIC                  5               5
+ THIEF                   5               4
+@@ -19,6 +19,6 @@ CLERIC_THIEF            5               4
+ FIGHTER_DRUID           5               3
+ FIGHTER_MAGE_CLERIC     5               3
+ CLERIC_RANGER           5               3
+-SORCERER                3               50
++SORCERER                3               8
+ MONK                    3               4
