@@ -3059,7 +3059,7 @@ modules:
     location:
       github_user: mleduque
       repository: 5E_spellcasting
-      branch: 2.2-fr
+      branch: 2.5-fr
       patch:
         # configure "lose spell on interrupted" and "int bonus slots"
         relative: patches/spellcasting-5e-config.diff
