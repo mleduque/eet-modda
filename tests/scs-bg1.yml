@@ -5,13 +5,18 @@ global:
   lang_dir: "fr_FR"
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
 modules:
-  - name: stratagems
+  - name: DlcMerger
+    location:
+      github_user: Argent77
+      repository: A7-DlcMerger
+      release: v1.3
+      asset: lin-A7-DlcMerger-v1.3.zip
     components:
-      - 1500
-      - 2000
+      - 1 # Merge DLC into game -> Merge "Siege of Dragonspear"
+  - name: stratagems
+    components: all
     location:
       github_user: mleduque
       repository: SwordCoastStratagems
-      branch: some-spell-tra
+      branch: fix-fr
       refresh: ask
-

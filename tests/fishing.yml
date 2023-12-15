@@ -5,13 +5,10 @@ global:
   lang_dir: "fr_FR"
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
 modules:
-  - name: stratagems
-    components:
-      - 1500
-      - 2000
+  - name: FishingForTrouble
+    components: ask
     location:
-      github_user: mleduque
-      repository: SwordCoastStratagems
-      branch: some-spell-tra
-      refresh: ask
-
+      github_user: InfinityMods
+      repository: FishingForTrouble
+      branch: master
+      refresh: 1day

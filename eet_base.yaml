@@ -2267,8 +2267,8 @@ modules:
     location:
       github_user: The-Gate-Project
       repository: IWD1_EET
-      branch: master
-      refresh: 1week
+      release: v4.2
+      asset: lin-A7-TotLM-BG2EE-v4.2.zip
   - name: IWD2_EET
     installation:
       after: EET

@@ -1,0 +1,31 @@
+version: "1"
+global:
+  lang_dir: "en_US"
+  lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  #lang_dir: "fr_FR"
+  #lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: stratagems
+    components:
+      #- 1600 # Use Baldur's Gate-style Insect Plague and Creeping Doom instead of Icewind Dale versions: 35.2
+      #- 1610 # Use Baldur's Gate-style Mordenkainen's Sword in addition to Icewind Dale version: 35.2
+      #- 2000 # Install all spell tweaks (if you don't select this, you will be given a chance to choose by category): 35.2
+      - 2060
+      - 3510 # scrolls
+    location:
+      github_user: mleduque
+      repository: SwordCoastStratagems
+      branch: master
+      refresh: ask
+      patch:
+        inline: |
+          --- stratagems/iwdscroll/data/common_spells.txt
+          +++ stratagems/iwdscroll/data/common_spells.txt
+          @@ -72,8 +72,7 @@ FLESH_TO_STONE
+           STONE_TO_FLESH
+           DEATH_SPELL
+           MISLEAD
+          -ANTIMAGIC_SHELL
+           DISINTEGRATE
+           TRUE_SIGHT
+
