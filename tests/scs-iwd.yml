@@ -7,8 +7,9 @@ global:
 modules:
   - name: stratagems
     components: all
-      #- 1500 # include arcane spells from iwd
-      #- 2080 # spells increased in power
+      #- 1610
+      #- 2000
+      #- 2080
     location:
       github_user: mleduque
       repository: SwordCoastStratagems

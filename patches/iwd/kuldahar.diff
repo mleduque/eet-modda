@@ -1,0 +1,52 @@
+--- Kuldahar/dialogues/DORRICK.d
++++ Kuldahar/dialogues/DORRICK.d
+@@ -60,7 +60,7 @@ CHAIN DORRICK KU.ORRICK.SIGNS.02
+ @8 /* Ah, splendid! Show me this parchment... */
+ ==DORRICK @9 /* Hmm, I'll send it to my friend, a master of sigils and old languages. We know each other from Ulcaster School. */
+ ==DORRICK @10 /* Get back to me in fourteen days. I should have more information by then. */
+-DO ~SetGlobalTimer("L#KUSYMBOLTIME","GLOBAL",FOURTEEN_DAYS) TakePartyItem("L#KUSIG2") DestroyItem("L#KUSIG2") SetGlobal("L#KUSIGNSCLICKED","GLOBAL",4)~ EXIT
++DO ~SetGlobalTimer("L#KUSYMBOLTIME","GLOBAL",SEVEN_DAYS) TakePartyItem("L#KUSIG2") DestroyItem("L#KUSIG2") SetGlobal("L#KUSIGNSCLICKED","GLOBAL",4)~ EXIT
+ 
+ CHAIN DORRICK KU.ORRICK.SIGNS.03
+ @11 /* Well, yes, but it's a bit less impressive than I thought. */
+--- Kuldahar/dialogues/L#KUTEL.d
++++ Kuldahar/dialogues/L#KUTEL.d
+@@ -92,7 +92,7 @@ EXIT
+ CHAIN IF ~Global("L#KUTelescopeQuest","GLOBAL",2)~ THEN L#KUTEL telescope3.00
+ @36 /* It's you again. Does it mean you want to make a donation and give me those 3.000 so I could work on the star atlas? You'll get the copy of it, once I'm done. */
+ END
+-IF~PartyGoldGT(2999)~THEN REPLY @37 /* Yes. Here's the gold. */ DO ~TakePartyGold(3000) DestroyGold(3000) SetGlobal("L#KUTelescopeQuest","GLOBAL",3) SetGlobalTimer("L#KUSTARATLASTIME","GLOBAL",THIRTY_DAYS)~ EXTERN L#KUTEL telescope3.01
++IF~PartyGoldGT(2999)~THEN REPLY @37 /* Yes. Here's the gold. */ DO ~TakePartyGold(3000) DestroyGold(3000) SetGlobal("L#KUTelescopeQuest","GLOBAL",3) SetGlobalTimer("L#KUSTARATLASTIME","GLOBAL",TEN_DAYS)~ EXTERN L#KUTEL telescope3.01
+ IF~~THEN REPLY @38 /* No. I'm still thinking about this. We should talk once I know if that's how I want to spend my gold. */ EXTERN L#KUTEL telescope3.02
+ IF~PartyGoldLT(3000)~THEN REPLY @39 /* I don't have that much gold. */ EXTERN L#KUTEL telescope3.03
+--- Kuldahar/translations/english/BALDUR.TRA
++++ Kuldahar/translations/english/BALDUR.TRA
+@@ -20,7 +20,7 @@ I met a man who said he may be able to prepare a high quality star atlas. Howeve
+ @11   = ~Telescope and the Star Atlas
+ I met a man who said he may be able to prepare a high quality star atlas. I brought him a telescope, but he also needs some gold. It's going to cost 3,000 gold pieces.~
+ @12   = ~Telescope and the Star Atlas
+-I met a man who said he may be able to prepare a high quality star atlas. I brought him a telescope and the gold he needed. The atlas should be ready in a month. I should return to him after thirty days. I'll find him at Kuldahar's Lower Clearing. He can be found there at night.~
++I met a man who said he may be able to prepare a high quality star atlas. I brought him a telescope and the gold he needed. The atlas should be ready in ten days. I should return to him after ten days. I'll find him at Kuldahar's Lower Clearing. He can be found there at night.~
+ @13   = ~Telescope and the Star Atlas
+ I met a man who said he may be able to prepare a high quality star atlas. It looks like he didn't lie. Once he finished his work I got my copy and I must say that it is indeed of good quality!~
+ @14   = ~Some new fishing lure
+@@ -56,7 +56,7 @@ I've found some strange signs in one of the caves below Kuldahar. Perhaps I can
+ @29   = ~Strange Signs
+ I've found some strange signs in one of the caves below Kuldahar. I asked Orrick about them. He said he may learn more about them if I copy those symbols. He gave me a piece of parchment and some charcoal so I could sketch them. Once I have a copy of those symbols, I should return to him.~
+ @30   = ~Strange Signs
+-I've found some strange signs in one of the caves below Kuldahar. I wrote them on a piece of parchment and gave them to Orrick. He may be able to tell me more about the meaning behind those strange symbols, but he's going to need fourteen days to contact his friend and to help him put all the pieces of information together.~
++I've found some strange signs in one of the caves below Kuldahar. I wrote them on a piece of parchment and gave them to Orrick. He may be able to tell me more about the meaning behind those strange symbols, but he's going to need seven days to contact his friend and to help him put all the pieces of information together.~
+ @31   = ~Strange Signs
+ I've found some strange signs in one of the caves below Kuldahar. I wrote them on a piece of parchment and gave them to Orrick. The scribings described some kind of... magic oil. Orrick was able to make one portion of the oil, but since it wasn't something he found interesting, he gave me the results of that small experiment.~
+ @32   = ~Snack for a Goblin
+--- Kuldahar/translations/english/DORRICK.TRA
++++ Kuldahar/translations/english/DORRICK.TRA
+@@ -8,10 +8,10 @@
+ @7    = ~Then, I'll send it to a proper person so she could investigate it.~
+ @8    = ~Ah, splendid! Show me this parchment...~
+ @9    = ~Hmm, I'll send it to my friend, a master of sigils and old languages. We know each other from the Ulcaster School.~
+-@10   = ~Get back to me in fourteen days. I should have more information by then.~
++@10   = ~Get back to me in seven days. I should have more information by then.~
+ @11   = ~Well, yes, but it's a bit less impressive than I thought.~
+ @12   = ~Those sigils aren't as old as I thought and were apparently made by a barbaric shaman. It was an instruction on how to extract special oils from acorns.~
+ @13   = ~I checked it and it works. Sadly, I only had ingredients for one portion, but it's better than nothing.~

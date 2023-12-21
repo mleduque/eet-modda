@@ -346,8 +346,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: BG_Quests_And_Encounters
-      release: v26.1
-      asset: baldurs-gate-mini-quests-and-encounters-modification-v26.1.iemod
+      release: v27
+      asset: baldurs-gate-mini-quests-and-encounters-modification-v27.iemod
   - name: AC_QUEST
     description: Ascalon's Questpack
     components:
@@ -450,12 +450,12 @@ modules:
     description: BG2 npc - dwarven fighter/mage/thief
     components:
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Dvaradime v1.3.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Dvaradime v1.4.zip
   - name: InLoveUndeath
     description: BG2 npc - Xzelë Melaenitt, the paladin of Evening Glory (beauty in undeath)
     components:
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/InLoveUndeath v1.0.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/InLoveUndeath v1.6.zip
   - name: SirinesCall
     description: The Lure of the Sirine's Call
     components:
@@ -670,8 +670,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Jasteys_SoD_Tweakpack
-      release: v12
-      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v12.iemod
+      release: v12.1
+      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v12.1.iemod
   - name: themed_tweaks
     components:
       - 60  # SoD - Give Imoen a special wand for palace attack scene
@@ -843,7 +843,23 @@ modules:
       # 4 : crossmod banter later after installing other mods
       - 5 # [CHEAT] Enable shaman stronghold for all classes
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Will of the Wisp v2.20.zip
+      path: /home/mick/Games/modda-cache/static/willowisp v2.3.zip
+      replace:
+        - file_globs: [ "willowisp/baf/l0will.baf" ]
+          replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",2400)'
+          with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",1200)'
+        - file_globs: [ "willowisp/baf/l0will.baf" ]
+          replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",1600)'
+          with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",900)'
+        - file_globs: [ "willowisp/baf/l0will.baf" ]
+          replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",6000)'
+          with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",1200)'
+        - file_globs: [ "willowisp/baf/l0will.baf" ]
+          replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",12000)'
+          with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",1800)'
+        - file_globs: [ "willowisp/baf/l0will25.baf" ]
+          replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",1800)'
+          with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",900)'
   - name: paina
     components:
       - 0 # Pai'Na NPC for BG:EE
@@ -1213,8 +1229,8 @@ modules:
     location:
       github_user: TotalMilk90
       repository: gorgon
-      release: v3.3
-      asset: gorgon-v3.3.iemod
+      release: v4.1
+      asset: gorgon-v4.1.iemod
   - name: w_packmule
     components:
       - 3 # Mule de bat (bgee) -> Fontes sans fond
@@ -2017,7 +2033,7 @@ modules:
       - 4 # Skie: The Cost of One Girl's Soul - Add Player-Initiated Dialogue (PID) for Eddard: 4.01
       - 5 # Skie: The Cost of One Girl's Soul - Add brand new SoD-oriented items to BG2: 4.01
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Skie The Cost of One Girls Soul v5.1.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Skie The Cost of One Girls Soul v6.0.zip
   - name: Wings
     components:
       - 0 # Wings - Wings for BG2:EE
@@ -2116,7 +2132,7 @@ modules:
   - name: fyalvara
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/fyalvara v1.0.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/fyalvara v1.1.zip
   - name: JuniperAndTheStoneLeech
     components: ask
     location:

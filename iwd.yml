@@ -29,53 +29,55 @@ modules:
 ##############
 # Full UI
 ##############
-  #- name: LEUI-IWDEE # or some other UI mod
-  #  components:
-  #    - 0 #
-  #  location:
-  #    github_user: r-e-d
-  #    repository: LeUI-IWDEE
-  #    branch: master
-  #    refresh: 3days
-  - name: dragonspear_ui++
-    components: ask
+  - name: LEUI-IWDEE # or some other UI mod
+    components: # single component
+      - 0 # lefreut's Enhanced UI - Core component
     location:
-      github_user: 11jo
-      repository: French-Translation_For_Dragonspear-UI_Artifox
-      tag: Artifox
+      github_user: r-e-d
+      repository: LeUI-IWDEE
+      branch: master
+      refresh: 3days
+  #- name: dragonspear_ui++
+  #  components: ask
+  #  location:
+  #    github_user: 11jo
+  #    repository: French-Translation_For_Dragonspear-UI_Artifox
+  #    tag: Artifox
 
 ##############
 # Story/Quest
 ##############
   - name: Kuldahar
     description: The Rediscovery of Kuldahar
-    components: ask
+    components: # single component
+      - 0 # La redecouverte de Kuldahar (IWDEE) -> Oui, mais sans corriger les sauvegarde existantes
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Kuldahar v2.4.zip
   - name: Snowytoes
-    components: ask
+    components: # single component
+      - 0 # Snowytoes Hamlet, a new area (IWD EE) -> Yes, but don't patch existing save games
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Snowytoes v1.3.zip
-  - name: willowisp
-    components: ask
-    location:
-      path: /home/mick/Games/modda-cache/static/Will of the Wisp v2.20.zip
   - name: BlinkingDead
-    components: ask
+    components: # single component
+      - 0 # Night of the Blinking Dead (IWD) -> Yes, but don't patch existing save games
     location:
       path: /home/mick/Games/modda-cache/static-iwd/BlinkingDead v3.01.zip
   - name: OurLady
     description: Tale of Our Lady Dreamless
-    components: ask
+    components: # single component
+      - 0 # Tale of Our Lady Dreamless (IWD EE) -> Yes, but don't patch existing save games
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Tale of Our Lady Dreamless v2.6.zip
   - name: InnBB
     description: Below & Below Inn
-    components: ask
+    components: # single component
+      - 0 # Below & Below Inn (IWD EE) -> Yes, but don't patch existing save games
     location:
       path: /home/mick/Games/modda-cache/static-iwd/InnBB v2.3.zip
   - name: Skineater
-    components: ask
+    components: # single component
+      - 0 # Terror of the Skineater (IWD EE) -> Yes, but don't patch existing save games
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Skineater v2.3.zip
 
@@ -92,19 +94,46 @@ modules:
       asset: lin-iwdnpc-v9.zip
   - name: dendjelion
     description: male halfling blackguard + quest
-    components: ask
+    components:
+      - 0 # Dendjelion NPC for IWD:EE
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/dendjelion v1.3.zip
+      path: /home/mick/Games/modda-cache/static-iwd/dendjelion v1.4.zip
+      replace:
+        file_globs: [ 'dendjelion/scripts/L#dendj.baf' ]
+        replace: 'RealSetGlobalTimer("L#DendjelionTime","GLOBAL",2700)'
+        with: 'RealSetGlobalTimer("L#DendjelionTime","GLOBAL",1200)'
+        file_globs: [ 'dendjelion/scripts/L#dendj.baf' ]
+        replace: 'RealSetGlobalTimer("L#DendjelionTime","GLOBAL",2400)'
+        with: 'RealSetGlobalTimer("L#DendjelionTime","GLOBAL",990)'
   - name: Dusky
     description: male half-orcish cleric/thief, chaotic neutral; m/m romance
-    components: ask
+    components:
+      - 0 # Dusky NPC for IWD:EE
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Dusky v2.4.1.zip
+      replace:
+        file_globs: [ 'Dusky/baf/L#DUSKY.baf' ]
+        replace: 'RealSetGlobalTimer("DuskyDontTalkOften","GLOBAL",1200)'
+        with: 'RealSetGlobalTimer("DuskyDontTalkOften","GLOBAL",600)'
+        file_globs: [ 'Dusky/baf/L#DUSKY.baf' ]
+        replace: 'RealSetGlobalTimer("DuskyBlacksmithTime","GLOBAL",1200)'
+        with: 'RealSetGlobalTimer("DuskyBlacksmithTime","GLOBAL",600)'
+        file_globs: [ 'Dusky/baf/L#DUSKY.baf' ]
+        replace: 'RealSetGlobalTimer("DuskyHandTalksTime","GLOBAL",1000)'
+        with: 'RealSetGlobalTimer("DuskyHandTalksTime","GLOBAL",600)'
   - name: Hommet
     description: necromancer, chaotic good + dialogues, items, spells
-    components: ask
+    components:
+      - 0 # Hommet Shaw for IWD EE
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Hommet v1.0.zip
+      replace:
+        file_globs: [ 'Hommet/scripts/L#HOMM.baf' ]
+        replace: 'RealSetGlobalTimer("L#HommetFriendshipTime","GLOBAL",1800)'
+        with: 'RealSetGlobalTimer("L#HommetFriendshipTime","GLOBAL",900)'
+        file_globs: [ 'Hommet/dialogues/L#HOMMJ.d' ]
+        replace: 'SetGlobalTimer("L#HommPidStoryTime","GLOBAL",FIVE_DAYS)'
+        with: 'SetGlobalTimer("L#HommPidStoryTime","GLOBAL",TWO_DAYS)'
   - name: Ina
     description: female bard spectre + banter +romance (with female)
     components: ask
@@ -177,11 +206,26 @@ modules:
 # Crossmod
 ##############
   - name: iwdcrossmodpack
-    components: ask
+    components:
+      - 0 # Icewind Dale Crossmod Banter Pack
     location:
-      http: http://america.iegmc.net/g3//lin-IWDCrossmodPack-v1.4.tar.gz
-      patch:
-      relative: iwd/iwdcrossmodpack_readln.diff
+      path: /home/mick/Games/modda-cache/static-iwd/IWDCrossmodPack v1.6.zip
+      replace:
+        file_globs: [ "IWDCrossmodPack/IWDCrossmodPack.tp2" ]
+        replace: 'OUTER_SPRINT ~banttime~ ~placeholder_value~'
+        with: 'OUTER_SPRINT ~banttime~ ~1~'
+        file_globs: [ "IWDCrossmodPack/IWDCrossmodPack.tp2" ]
+        replace: 'OUTER_SPRINT ~conflict~ ~placeholder_value~'
+        with: 'OUTER_SPRINT ~conflict~ ~2~'
+        file_globs: [ "IWDCrossmodPack/IWDCrossmodPack.tp2" ]
+        replace: 'OUTER_SPRINT ~conflict-cass-dendj~ ~placeholder_value~'
+        with: 'OUTER_SPRINT ~conflict-cass-dendj~ ~2~'
+        file_globs: [ "IWDCrossmodPack/IWDCrossmodPack.tp2" ]
+        replace: 'OUTER_SPRINT ~conflict-cass-tviy~ ~placeholder_value~'
+        with: 'OUTER_SPRINT ~conflict-cass-tviy~ ~2~'
+        file_globs: [ "IWDCrossmodPack/IWDCrossmodPack.tp2" ]
+        replace: 'OUTER_SPRINT ~romance~ ~placeholder_value~'
+        with: 'OUTER_SPRINT ~romance~ ~2~'
   # Use PPE instead
   #- name: MinorNPCPortraitsforIWDEE
   #  components: ~
@@ -195,9 +239,10 @@ modules:
     description: SCS - the new spells and spell tweaks
     components: ask
     location:
-      github_user: Gibberlings3
+      github_user: mleduque
       repository: SwordCoastStratagems
-      tag: v35.1
+      branch: fr-fix
+      refresh: ask
   - name: Weasels!
     components:
       - 0
