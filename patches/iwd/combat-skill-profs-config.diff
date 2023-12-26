@@ -5,7 +5,7 @@
  0
                          FIRST_LEVEL     RATE
 -MAGE                    3               50
-+MAGE                    3               8
++MAGE                    3               7
  FIGHTER                 6               3
  CLERIC                  5               5
  THIEF                   5               4
@@ -14,5 +14,58 @@
  FIGHTER_MAGE_CLERIC     5               3
  CLERIC_RANGER           5               3
 -SORCERER                3               50
-+SORCERER                3               8
++SORCERER                3               7
  MONK                    3               4
+--- Combat_Skill_Proficiencies/components/combat_skills.tpa
++++ Combat_Skill_Proficiencies/components/combat_skills.tpa
+@@ -892,12 +892,12 @@ COPY_EXISTING ~weapprof.2da~ ~override~
+           SET_2DA_ENTRY_LATER ~s2el_csp~ dodge_row (col + 1)    0
+           SET_2DA_ENTRY_LATER ~s2el_csp~ backstab_row (col + 1) 0
+           SET_2DA_ENTRY_LATER ~s2el_csp~ snares_row (col + 1)   0
+-          SET_2DA_ENTRY_LATER ~s2el_csp~ ranged_row (col + 1)   0
++          SET_2DA_ENTRY_LATER ~s2el_csp~ ranged_row (col + 1)   1
+           SET_2DA_ENTRY_LATER ~s2el_csp~ hurling_row (col + 1)  1
+-          SET_2DA_ENTRY_LATER ~s2el_csp~ postures_row (col + 1) 0
++          SET_2DA_ENTRY_LATER ~s2el_csp~ postures_row (col + 1) 2
+           SET_2DA_ENTRY_LATER ~s2el_csp~ health_row (col + 1)   0
+           SET_2DA_ENTRY_LATER ~s2el_csp~ misc_row (col + 1)     2
+-          SET_2DA_ENTRY_LATER ~s2el_csp~ magic_row (col + 1)    0
++          SET_2DA_ENTRY_LATER ~s2el_csp~ magic_row (col + 1)    1
+         END
+         PATCH_IF (%class% = 2) BEGIN										//	fighter
+           SET_2DA_ENTRY_LATER ~s2el_csp~ melee_row (col + 1)    4
+@@ -1108,12 +1108,12 @@ COPY_EXISTING ~weapprof.2da~ ~override~
+           SET_2DA_ENTRY_LATER ~s2el_csp~ dodge_row (col + 1)    0
+           SET_2DA_ENTRY_LATER ~s2el_csp~ backstab_row (col + 1) 0
+           SET_2DA_ENTRY_LATER ~s2el_csp~ snares_row (col + 1)   0
+-          SET_2DA_ENTRY_LATER ~s2el_csp~ ranged_row (col + 1)   0
++          SET_2DA_ENTRY_LATER ~s2el_csp~ ranged_row (col + 1)   1
+           SET_2DA_ENTRY_LATER ~s2el_csp~ hurling_row (col + 1)  1
+-          SET_2DA_ENTRY_LATER ~s2el_csp~ postures_row (col + 1) 0
++          SET_2DA_ENTRY_LATER ~s2el_csp~ postures_row (col + 1) 2
+           SET_2DA_ENTRY_LATER ~s2el_csp~ health_row (col + 1)   0
+           SET_2DA_ENTRY_LATER ~s2el_csp~ misc_row (col + 1)     2
+-          SET_2DA_ENTRY_LATER ~s2el_csp~ magic_row (col + 1)    0
++          SET_2DA_ENTRY_LATER ~s2el_csp~ magic_row (col + 1)    1
+         END
+         PATCH_IF (%class% = 20) BEGIN										//	monk
+           SET_2DA_ENTRY_LATER ~s2el_csp~ melee_row (col + 1)    2
+--- Combat_Skill_Proficiencies/data/csp/d5csdlg.2da
++++ Combat_Skill_Proficiencies/data/csp/d5csdlg.2da
+@@ -24,7 +24,7 @@ GREASE_SMOKE		127D          1              0              0              1
+ ESCAPE_ARTIST		127E          0              0              0              1              1              0              0              1              0              0              0              0                   0                   1                   0                   0                   0                   1                   1                   0                   1  
+ SLIPPERY_MIND		127F          0              0              0              1              0              0              1              1              0              0              1              0                   0                   1                   0                   0                   0                   1                   1                   0                   1  
+ LUCK_BONUS			127G          1              1              1              1              1              1              1              1              1              1              1              1                   1                   1                   1                   1                   1                   1                   1                   1                   1  
+-WILD_TALENT			127H          0              1              1              1              1              1              1              1              1              0              1              1                   1                   1                   1                   1                   1                   1                   1                   1                   1  
++WILD_TALENT			127H          1              1              1              1              1              1              1              1              1              1              1              1                   1                   1                   1                   1                   1                   1                   1                   1                   1  
+ UMD					110A          0              0              0              1              0              0              0              0              0              0              0              0                   0                   1                   0                   0                   0                   0                   0                   0                   0  
+ COLOR_SPRAY			110B          0              0              0              1              0              0              0              0              0              0              0              0                   0                   1                   0                   0                   0                   0                   0                   0                   0  
+ REFLECTED_IMAGE		110C          0              0              0              1              0              0              0              0              0              0              0              0                   0                   1                   0                   0                   0                   0                   0                   0                   0  
+@@ -32,5 +32,5 @@ BLUR				110D          0              0              0              1
+ KNOCK				110E          0              0              0              1              0              0              0              0              0              0              0              0                   0                   1                   0                   0                   0                   0                   0                   0                   0  
+ LUCK				110F          0              0              0              1              0              0              0              0              0              0              0              0                   0                   1                   0                   0                   0                   0                   0                   0                   0  
+ GLITTERDUST			110G          0              0              0              1              0              0              0              0              0              0              0              0                   0                   1                   0                   0                   0                   0                   0                   0                   0  
+-SANCTUARY			110H          0              0              0              1              0              0              0              0              0              0              0              0                   0                   1                   0                   0                   0                   0                   0                   0                   0  
+-SHADOWSTEP			110I          0              0              0              1              0              0              0              0              0              0              0              0                   0                   1                   0                   0                   0                   0                   0                   0                   0  
++SANCTUARY			110H          1              0              0              1              0              0              0              0              0              1              0              0                   0                   1                   0                   0                   0                   0                   0                   0                   0  
++SHADOWSTEP			110I          1              0              0              1              0              0              0              0              0              1              0              0                   0                   1                   0                   1                   0                   0                   1                   0                   0  
