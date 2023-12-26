@@ -1,0 +1,29 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: tobex
+    components:
+      - 100 # TobEx - Core: v28
+    location:
+      path: /home/mick/Games/modda-cache/static/TobEx.zip
+  - name: bg2fixpack
+    components:
+      - 0 # BG2 Fixpack - Correctifs principaux: v13
+    location:
+      github_user: Gibberlings3
+      repository: BG2-Fixpack
+      release: v13
+      asset: lin-bg2fixpack-v13.tar.gz
+  - name: stratagems
+    components:
+      - 3020 # Replace magic weapons with fine versions
+    location:
+      github_user: mleduque
+      repository: SwordCoastStratagems
+      branch: regex
+      refresh: ask
+

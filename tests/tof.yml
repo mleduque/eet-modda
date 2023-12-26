@@ -1,0 +1,24 @@
+version: "1"
+global:
+  lang_dir: "en_US"
+  lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  #lang_dir: "fr_FR"
+  #lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: dw_talents
+    components:
+      - 1500 # iwd arcane
+      - 1510 # iwd divine
+      - 2000 # all spell tweaksr
+      - 2500 # Add 9 new arcane spells
+      - 2510 # Add 6 new divine spells (some borrowed from Divine Remix)
+      - 40650 # Revised speciality priests of Lathander/Helm/Talos/Tempus/Tyr
+      - 41000 # Rebalanced and revised kits
+      - 50400 # New choices of god / goddess for speciality priests
+      - 90000 # Tidy up class-selection menu
+    location:
+      github_user: mleduque
+      repository: TalentsOfFaerun
+      branch: french
+      refresh: ask
+

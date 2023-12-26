@@ -9,9 +9,11 @@ modules:
     components: all
       #- 1500 # include arcane spells from iwd
       #- 2080 # spells increased in power
+      #- 4135 # Repos revise : camper dans la nature consomme des provisions: 35.4
+      #- 4140 # Auberges révisées
     location:
       github_user: mleduque
       repository: SwordCoastStratagems
-      branch: fix-fr
+      branch: regex
       refresh: ask
 
