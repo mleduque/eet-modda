@@ -1229,8 +1229,8 @@ modules:
     location:
       github_user: TotalMilk90
       repository: gorgon
-      release: v4.1
-      asset: gorgon-v4.1.iemod
+      release: v4.2
+      asset: gorgon-v4.2.iemod
   - name: w_packmule
     components:
       - 3 # Mule de bat (bgee) -> Fontes sans fond
