@@ -18,12 +18,13 @@ modules:
   - name: ub_iwd
     description: Unfinished Business for Icewind Dale
     compatibility: "Only Marketh's Ring is available for Icewind Dale: Enhanced Edition (or the EET conversion). The rest of the restorations were included in IWDEE itself."
-    components: ask
+    components:
+      - 700 # Actual Shadows in Vale of Shadows [Graion Dilach]: v11
     location:
       github_user: Gibberlings3
       repository: iwd_unfinished_business
       release: v11
-      asset: lin-ub_iwd-v11.tar.gz
+      asset: unfinished-business-for-icewind-dale-v11.iemod
 
 ##############
 # Full UI
