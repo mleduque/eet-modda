@@ -15,6 +15,6 @@ modules:
     location:
       github_user: mleduque
       repository: SwordCoastStratagems
-      branch: regex
+      branch: fix-fr
       refresh: ask
 

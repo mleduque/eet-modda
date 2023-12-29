@@ -15,7 +15,6 @@ modules:
   #    github_user: Gibberlings3
   #    repository: EE_Fixpack
   #    commit: f9906c2-update-it
-  ## story
   - name: ub_iwd
     description: Unfinished Business for Icewind Dale
     compatibility: "Only Marketh's Ring is available for Icewind Dale: Enhanced Edition (or the EET conversion). The rest of the restorations were included in IWDEE itself."
@@ -103,12 +102,12 @@ modules:
     location:
       path: /home/mick/Games/modda-cache/static-iwd/dendjelion v1.4.zip
       replace:
-        file_globs: [ 'dendjelion/scripts/L#dendj.baf' ]
-        replace: 'RealSetGlobalTimer("L#DendjelionTime","GLOBAL",2700)'
-        with: 'RealSetGlobalTimer("L#DendjelionTime","GLOBAL",1200)'
-        file_globs: [ 'dendjelion/scripts/L#dendj.baf' ]
-        replace: 'RealSetGlobalTimer("L#DendjelionTime","GLOBAL",2400)'
-        with: 'RealSetGlobalTimer("L#DendjelionTime","GLOBAL",990)'
+        - file_globs: [ 'dendjelion/scripts/L#dendj.baf' ]
+          replace: 'RealSetGlobalTimer("L#DendjelionTime","GLOBAL",2700)'
+          with: 'RealSetGlobalTimer("L#DendjelionTime","GLOBAL",1200)'
+        - file_globs: [ 'dendjelion/scripts/L#dendj.baf' ]
+          replace: 'RealSetGlobalTimer("L#DendjelionTime","GLOBAL",2400)'
+          with: 'RealSetGlobalTimer("L#DendjelionTime","GLOBAL",990)'
   - name: Dusky
     description: male half-orcish cleric/thief, chaotic neutral; m/m romance
     components:
@@ -116,15 +115,15 @@ modules:
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Dusky v2.4.1.zip
       replace:
-        file_globs: [ 'Dusky/baf/L#DUSKY.baf' ]
-        replace: 'RealSetGlobalTimer("DuskyDontTalkOften","GLOBAL",1200)'
-        with: 'RealSetGlobalTimer("DuskyDontTalkOften","GLOBAL",600)'
-        file_globs: [ 'Dusky/baf/L#DUSKY.baf' ]
-        replace: 'RealSetGlobalTimer("DuskyBlacksmithTime","GLOBAL",1200)'
-        with: 'RealSetGlobalTimer("DuskyBlacksmithTime","GLOBAL",600)'
-        file_globs: [ 'Dusky/baf/L#DUSKY.baf' ]
-        replace: 'RealSetGlobalTimer("DuskyHandTalksTime","GLOBAL",1000)'
-        with: 'RealSetGlobalTimer("DuskyHandTalksTime","GLOBAL",600)'
+        - file_globs: [ 'Dusky/baf/L#DUSKY.baf' ]
+          replace: 'RealSetGlobalTimer("DuskyDontTalkOften","GLOBAL",1200)'
+          with: 'RealSetGlobalTimer("DuskyDontTalkOften","GLOBAL",600)'
+        - file_globs: [ 'Dusky/baf/L#DUSKY.baf' ]
+          replace: 'RealSetGlobalTimer("DuskyBlacksmithTime","GLOBAL",1200)'
+          with: 'RealSetGlobalTimer("DuskyBlacksmithTime","GLOBAL",600)'
+        - file_globs: [ 'Dusky/baf/L#DUSKY.baf' ]
+          replace: 'RealSetGlobalTimer("DuskyHandTalksTime","GLOBAL",1000)'
+          with: 'RealSetGlobalTimer("DuskyHandTalksTime","GLOBAL",600)'
   - name: Hommet
     description: necromancer, chaotic good + dialogues, items, spells
     components:
@@ -132,12 +131,12 @@ modules:
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Hommet v1.0.zip
       replace:
-        file_globs: [ 'Hommet/scripts/L#HOMM.baf' ]
-        replace: 'RealSetGlobalTimer("L#HommetFriendshipTime","GLOBAL",1800)'
-        with: 'RealSetGlobalTimer("L#HommetFriendshipTime","GLOBAL",900)'
-        file_globs: [ 'Hommet/dialogues/L#HOMMJ.d' ]
-        replace: 'SetGlobalTimer("L#HommPidStoryTime","GLOBAL",FIVE_DAYS)'
-        with: 'SetGlobalTimer("L#HommPidStoryTime","GLOBAL",TWO_DAYS)'
+        - file_globs: [ 'Hommet/scripts/L#HOMM.baf' ]
+          replace: 'RealSetGlobalTimer("L#HommetFriendshipTime","GLOBAL",1800)'
+          with: 'RealSetGlobalTimer("L#HommetFriendshipTime","GLOBAL",900)'
+        - file_globs: [ 'Hommet/dialogues/L#HOMMJ.d' ]
+          replace: 'SetGlobalTimer("L#HommPidStoryTime","GLOBAL",FIVE_DAYS)'
+          with: 'SetGlobalTimer("L#HommPidStoryTime","GLOBAL",TWO_DAYS)'
   - name: Ina
     description: female bard spectre + banter +romance (with female)
     components: ask
@@ -215,21 +214,21 @@ modules:
     location:
       path: /home/mick/Games/modda-cache/static-iwd/IWDCrossmodPack v1.6.zip
       replace:
-        file_globs: [ "IWDCrossmodPack/IWDCrossmodPack.tp2" ]
-        replace: 'OUTER_SPRINT ~banttime~ ~placeholder_value~'
-        with: 'OUTER_SPRINT ~banttime~ ~1~'
-        file_globs: [ "IWDCrossmodPack/IWDCrossmodPack.tp2" ]
-        replace: 'OUTER_SPRINT ~conflict~ ~placeholder_value~'
-        with: 'OUTER_SPRINT ~conflict~ ~2~'
-        file_globs: [ "IWDCrossmodPack/IWDCrossmodPack.tp2" ]
-        replace: 'OUTER_SPRINT ~conflict-cass-dendj~ ~placeholder_value~'
-        with: 'OUTER_SPRINT ~conflict-cass-dendj~ ~2~'
-        file_globs: [ "IWDCrossmodPack/IWDCrossmodPack.tp2" ]
-        replace: 'OUTER_SPRINT ~conflict-cass-tviy~ ~placeholder_value~'
-        with: 'OUTER_SPRINT ~conflict-cass-tviy~ ~2~'
-        file_globs: [ "IWDCrossmodPack/IWDCrossmodPack.tp2" ]
-        replace: 'OUTER_SPRINT ~romance~ ~placeholder_value~'
-        with: 'OUTER_SPRINT ~romance~ ~2~'
+        - file_globs: [ "IWDCrossmodPack/IWDCrossmodPack.tp2" ]
+          replace: 'OUTER_SPRINT ~banttime~ ~placeholder_value~'
+          with: 'OUTER_SPRINT ~banttime~ ~1~'
+        - file_globs: [ "IWDCrossmodPack/IWDCrossmodPack.tp2" ]
+          replace: 'OUTER_SPRINT ~conflict~ ~placeholder_value~'
+          with: 'OUTER_SPRINT ~conflict~ ~2~'
+        - file_globs: [ "IWDCrossmodPack/IWDCrossmodPack.tp2" ]
+          replace: 'OUTER_SPRINT ~conflict-cass-dendj~ ~placeholder_value~'
+          with: 'OUTER_SPRINT ~conflict-cass-dendj~ ~2~'
+        - file_globs: [ "IWDCrossmodPack/IWDCrossmodPack.tp2" ]
+          replace: 'OUTER_SPRINT ~conflict-cass-tviy~ ~placeholder_value~'
+          with: 'OUTER_SPRINT ~conflict-cass-tviy~ ~2~'
+        - file_globs: [ "IWDCrossmodPack/IWDCrossmodPack.tp2" ]
+          replace: 'OUTER_SPRINT ~romance~ ~placeholder_value~'
+          with: 'OUTER_SPRINT ~romance~ ~2~'
   # Use PPE instead
   #- name: MinorNPCPortraitsforIWDEE
   #  components: ~
@@ -547,8 +546,8 @@ modules:
         relative: iwd/configure-yaras.diff
   - name: Combat_Skill_Proficiencies
     installation:
-      after: [stratagems, atweaks, cdtweaks]
-      before: [ npc_ee ]
+      after: stratagems, atweaks, cdtweaks
+      before: npc_ee
     components: ask
     location:
       github_user: subtledoctor
@@ -616,7 +615,7 @@ modules:
       branch: master
       refresh: 2days
   - name: jimfix
-    components:
+    components: ask
       #- 201 # Add spell school notifications to the combat log -> All spells with a casting time greater than 1
       #- 300 # Expiration notices for spells
       #- 600 # Expiration notices for items
@@ -642,7 +641,7 @@ modules:
       asset: random-graion-tweaks-1.12.iemod
   - name: fix_cre_script_names
     description: Some mod out there is altering various creatures' script names to "cre_strref." This hotfix changes the script name of all such creatures from "cre_strref" to their filename.
-    components:
+    components: ask
     location:
       github_user: subtledoctor
       repository: SubtleD_hotfixes
@@ -688,8 +687,8 @@ modules:
 ##############
 # Portraits/Sound/Etc
 ##############
-  - name: HQ_SoundClips_BG2EE?
-  - name: InfinitySounds?
+  #- name: HQ_SoundClips_BG2EE?
+  #- name: InfinitySounds?
   - name: PPE
     description: Portraits, Portraits Everywhere
     components: ask
@@ -705,7 +704,7 @@ modules:
       repository: PortraitsFromIWD2
       tag: v01
   - name: iwd_portrait_variations
-    components:
+    components: ask
     location:
       github_user: Ineth2
       repository: iwd_portrait_variations
