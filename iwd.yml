@@ -80,6 +80,10 @@ modules:
       - 0 # Terror of the Skineater (IWD EE) -> Yes, but don't patch existing save games
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Skineater v2.3.zip
+  - name: GroveOfChaos
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static-iwd/GroveOfChaos v1.00.zip
 
 ##############
 # NPC
@@ -559,22 +563,14 @@ modules:
       repository: SubtleD_Stat_Overhauls
       branch: 1.3.2-fr
       patch:
-        relative: iwd/stat-overhaul-config.diff # disable race stat changes
-  - name: Magic_Battles_Revised
-    installation:
-      after: stratagems
-    components: ask
-    location:
-      github_user: mleduque
-      repository: magic_battles_revised
-      branch: 1.9-fr
-      patch:
-        relative: iwd/mbr_spell_thrust_lv2.diff
+        relative: iwd/stat-overhaul-config.diff
   - name: skills-and-abilities
-    description: skills-and-abilities - components that warn
+    description: skills-and-abilities
     installation:
       general: "Skills and Abilities Proficiency Overhaul should be installed AFTER SCS just for the reason you specified. No harm in installing after. - morpheus562"
-    components: ask
+    components:
+      - 730 # Add HLAs to IWDEE (Lefreut UI Required)
+      - 710 # Add New HLAs for ALL CLasses and Kits
     location:
       github_user: Gibberlings3
       repository: Skills-and-Abilities
