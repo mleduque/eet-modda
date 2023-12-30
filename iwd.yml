@@ -247,6 +247,8 @@ modules:
       repository: SwordCoastStratagems
       branch: fr-fix
       refresh: ask
+      patch:
+        relative: patches/iwd/stratagems.diff
   - name: Weasels!
     components:
       - 0
