@@ -86,7 +86,7 @@ modules:
     location:
       github_user: Pocket-Plane-Group
       repository: iwd2_bonus_merchant
-      tag: Test_Build_1_for_v5
+      tag: v5
   - name: comstore
     components:
       - 0 # comstore
@@ -104,7 +104,7 @@ modules:
     location:
       github_user: Pocket-Plane-Group
       repository: iwd2_ease_of_use
-      tag: Test_Build_1_for_v16
+      tag: v16
   - name: los
     components:
     - 2 # Light of Selune MOD

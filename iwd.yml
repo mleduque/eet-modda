@@ -213,7 +213,10 @@ modules:
     components:
       - 0 # Icewind Dale Crossmod Banter Pack
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/IWDCrossmodPack v1.6.zip
+      github_user: Gibberlings3
+      repository: iwdcrossmod
+      release: v2
+      asset: icewind-dale-crossmod-banter-pack-v2.iemod
       replace:
         - file_globs: [ "IWDCrossmodPack/IWDCrossmodPack.tp2" ]
           replace: 'OUTER_SPRINT ~banttime~ ~placeholder_value~'

@@ -2459,8 +2459,8 @@ modules:
     location:
       github_user: Pocket-Plane-Group
       repository: Item_Upgrade
-      release: v50
-      asset: lin-itemupgrade-v50.tar.gz
+      release: v52
+      asset: lin-itemupgrade-v52.tar.gz
   - name: ruad
     description: Ruad Ro'fhessa Item Upgrade
     components: [0, 10]
@@ -2882,8 +2882,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: SongAndSilence
-      release: v17
-      asset: lin-song_and_silence-v17.tar.gz
+      release: v18
+      asset: lin-song_and_silence-v18.tar.gz
   - name: morpheus562-s-kitpack
     description: morpheus562's kitpack - only single-class kits
     components:
