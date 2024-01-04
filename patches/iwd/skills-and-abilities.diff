@@ -1,1 +1,115 @@
-ddd
+--- /dev/null
++++ skills-and-abilities/languages/french/hla_descriptions.tra
+@@ -0,0 +1,86 @@
++// Skills and Abilities, American English
++// Proficiency range @8001 to @9000
++///////////////////////////////////////////////////////////////////////////
++// Groups                                                                //
++///////////////////////////////////////////////////////////////////////////
++@8001 = ~Réduction épique des dégâts~
++@8002 = ~Réduction épique des dégâts
++Le personnage obtient un bonus de 10 % de réduction des dégâts pour toutes les attaques physiques.~
++
++@8003 = ~Maître voleur~
++@8004 = ~Maître voleur
++Le personnage obtient un bonus de 5 points pour chaque compétence. Ce don peut être sélectionné plusieurs fois pour un bonus maximum de +25 points pour chaque compétence.~
++
++@8005 = ~Résistance élémentaire~
++@8006 = ~Résistance élémentaire
++Le personnage obtient 10 % de résistance à tous les dégâts élémentaires.~
++
++@8007 = ~Résistance aux dégâts magiques~
++@8008 = ~Résistance aux dégâts magiques
++Le personnage obtient 10 % de résistance aux dégâts magiques.~
++
++@8009 = ~Robustesse épique~
++@8010 = ~Robustesse épique
++Le personnage gagne 20 points de vie. Ce don peut être sélectionné plusieurs fois pour un bonus maximum de +100 points de vie.~
++
++@8011 = ~Prouesse épique~
++@8012 = ~Prouesse épique
++Le personnage étoffe ses compétences martiales et gagne un bonus supplémentaire de +1 au TAC0.~
++
++@8013 = ~Peau métallique~
++@8014 = ~Peau métallique
++Le personnage obtient un bonus de +1 à sa classe d'armure naturelle.~
++
++@8015 = ~Arme de prédilection épique~
++@8016 = ~Arme de prédilection épique
++Le guerrier bénéficie d'un bonus de 2 points au TAC0.~
++
++@8017 = ~Spécialisation martiale épique~
++@8018 = ~Spécialisation martiale épique
++Le guerrier bénéficie d'un bonus de 2 points aux dégâts.
++
++Nécessite : Arme de prédilection épique~
++
++@8019 = ~Charisme surhumain~
++@8020 = ~Charisme surhumain
++Le personnage gagne un bonus de +1 à sa sagesse. Ce don peut être sélectionné plusieurs fois jusqu'à un bonus maximum de +5.~
++
++@8021 = ~Constitution surhumaine~
++@8022 = ~Constitution surhumaine
++Le personnage gagne un bonus de +1 à sa constitution. Ce don peut être sélectionné plusieurs fois jusqu'à un bonus maximum de +5.~
++
++@8023 = ~Dextérité surhumaine~
++@8024 = ~Dextérité surhumaine
++Le personnage gagne un bonus de +1 à sa dextérité. Ce don peut être sélectionné plusieurs fois jusqu'à un bonus maximum de +5~
++
++@8025 = ~Intelligence surhumaine~
++@8026 = ~Intelligence surhumaine
++Le personnage gagne un bonus de +1 à son intelligence. Ce don peut être sélectionné plusieurs fois jusqu'à un bonus maximum de +~
++
++@8027 = ~Force surhumaine~
++@8028 = ~Force surhumaine
++Le personnage gagne un bonus de +1 à sa force. Ce don peut être sélectionné plusieurs fois jusqu'à un bonus maximum de +~
++
++@8029 = ~Sagesse surhumaine~
++@8030 = ~Sagesse surhumaine
++Le personnage gagne un bonus de +1 à sa sagesse. Ce don peut être sélectionné plusieurs fois jusqu'à un bonus maximum de +~
++
++@8031 = ~un round~
++@8032 = ~trois rounds~
++
++@8033 = ~Science du critique~
++@8034 = ~Science du critique
++Cette capacité de combat augmente de 2 points la chance de porter une attaque critique. Une épée longue qui peut effectuer un critique sur un jet de 19-20, peut ainsi obtenir le même résultat sur un jet de 17-20.~
++
++// Resist Magic
++@8035 = ~Résistance magique
++Cette capacité permet au combattant de puiser dans sa force intérieure pour contrer les effets négatifs de la magie. Pendant 1 rounds pour chaque tranche de 2 niveaux du guerrier, la résistance à la magie du combattant augmente de 40 %.~
++
++// Mildly Infuriated
++@8036 = ~Cri de guerre
++Le combattant émet un cri de guerre puissant et impressionnant qui inspire tous les alliés dans un rayon de 4,5 m. Pendant 1 tour, les dégâts physiques infligés par les alliés augmentent de 10 % et leur chance d'effectuer un coup critique augmentent de 5 %.~
++
++@8037 = ~Résistance magique~
++@8038 = ~Cri de guerre~
++
++@9000 = ~[LAST TRA HERE]~
+--- skills-and-abilities/skills-and-abilities.tp2
++++ skills-and-abilities/skills-and-abilities.tp2
+@@ -32,6 +32,23 @@ LANGUAGE ~English~
+          ~skills-and-abilities/languages/english/fighter.tra~
+          ~skills-and-abilities/languages/english/enchant_items.tra~	 
+ 
++LANGUAGE ~French~
++        ~french~
++         ~skills-and-abilities/languages/english/setup.tra~
++         ~skills-and-abilities/languages/english/barbarian.tra~
++         ~skills-and-abilities/languages/english/bard.tra~
++         ~skills-and-abilities/languages/english/paladin.tra~
++         ~skills-and-abilities/languages/english/monk.tra~
++         ~skills-and-abilities/languages/english/proficiency_descriptions.tra~
++         ~skills-and-abilities/languages/english/ranger.tra~
++         ~skills-and-abilities/languages/english/strength.tra~
++         ~skills-and-abilities/languages/english/hla_descriptions.tra~
++         ~skills-and-abilities/languages/english/turn_undead.tra~
++         ~skills-and-abilities/languages/english/spell_descriptions.tra~
++         ~skills-and-abilities/languages/english/fighter.tra~
++         ~skills-and-abilities/languages/english/enchant_items.tra~
++         ~skills-and-abilities/languages/french/hla_descriptions.tra~
++
+ ///////////////////////////////////////////////////////////////////////////
+ ///////////////////////////////////////////////////////////////////////////
+ // Spells and HLAs (Group 7)                                             //

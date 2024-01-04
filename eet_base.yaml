@@ -3927,8 +3927,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Skills-and-Abilities
-      release: "2.1"
-      asset: lin-skills-and-abilities-v2.1.zip
+      release: "2.3"
+      asset: lin-skills-and-abilities-v2.3.zip
       patch:
         relative: patches/skills-and-abilities-prof-points.diff
   - name: npc_ee

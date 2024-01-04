@@ -579,8 +579,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Skills-and-Abilities
-      release: "2.1"
-      asset: lin-skills-and-abilities-v2.1.zip
+      branch: master
+      refresh: 2days
       patch:
         relative: iwd/skills-and-abilities.diff
   - name: npc_ee
@@ -673,8 +673,8 @@ modules:
     location:
       github_user: r-e-d
       repository: EEUI-Tweaks
-      release: v4.0.4
-      asset: eeuitweaks-4.0.4.iemod
+      release: v4.0.5
+      asset: eeuitweaks-4.0.5.iemod
   - name: A7-HiddenGameplayOptions
     components: ask
     location:
