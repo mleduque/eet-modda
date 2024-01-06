@@ -25,6 +25,13 @@ modules:
       repository: iwd_unfinished_business
       release: v11
       asset: unfinished-business-for-icewind-dale-v11.iemod
+  - name: iwdee-broken-bonecir
+    components:
+      - 1 # Remove invalid #BONECIR.SPL from chitin.key
+    location:
+      github_user: mleduque
+      repository: ie-fixes
+      branch: iwdee-broken-bonecir
 
 ##############
 # Full UI
@@ -81,16 +88,31 @@ modules:
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Skineater v2.3.zip
   - name: GroveOfChaos
-    components: ask
+    components:
+      - 0 # Xikasz's Grove Of Chaos - a quest & companion mod for IWD:EE -> Yes, but don't patch existing save games.: v1.0
     location:
       path: /home/mick/Games/modda-cache/static-iwd/GroveOfChaos v1.00.zip
+
+
+##############
+# Kit(s) erquierd by NPCs
+##############
+  - name: druidsor
+    components:
+      - 0 # Geomantic Sorcerer Kit: v6
+    location:
+      github_user: Gibberlings3
+      repository: Geomantic_Sorcerer
+      release: v7
+      asset:  lin-druidsor-v7.tar.gz
 
 ##############
 # NPC
 ##############
   - name: iwdnpc
     description: 5 npcs with banter, friendship, interjections, romance
-    components: ask
+    components:
+      - 0 # Icewind Dale NPCs: v9
     location:
       github_user: Pocket-Plane-Group
       repository: IWD_NPC
@@ -140,41 +162,49 @@ modules:
           with: 'SetGlobalTimer("L#HommPidStoryTime","GLOBAL",TWO_DAYS)'
   - name: Ina
     description: female bard spectre + banter +romance (with female)
-    components: ask
+    components:
+      - 0 # Ina NPC for IWD:EE: 2.1
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Ina v2.1.zip
   - name: Lanna
     description: elven paladin, quest, talks, romance
-    components: ask
+    components:
+      - 0 # L'anna - a new IWD EE companion: v1.6
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Lanna v1.6.zip
   - name: OakMaw
     description: dark fey hunter
-    components: ask
+    components:
+      - 0 # Oak-Maw NPC for IWD:EE: 3.1
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/OakMaw v2.1.zip
+      path: /home/mick/Games/modda-cache/static-iwd/OakMaw v3.1.zip
   - name: Orra
     description: fighter/mage/cleric.woman + friendship
-    components: ask
+    components:
+      - 0 # Orra NPC for IWD:EE: v2.1
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Orra v2.1.zip
   - name: Tipps
     description: halfling geomantic sorcerer + talks + romance + items
-    components: ask
+    components:
+      - 0 # Tipps NPC for IWD:EE
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Tipps v2.1.zip
+      path: /home/mick/Games/modda-cache/static-iwd/Tipps v2.2.zip
   - name: Tviy
     description: chaotic evil gnome cleric, follows Urdlen
-    components: ask
+    components:
+      - 0 # T'viy NPC for IWD:EE: v2.3
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Tviy v2.2.zip
+      path: /home/mick/Games/modda-cache/static-iwd/Tviy v2.3.zip
   - name: Urchin
     description: urchin(creature) + area=night glade
-    components: ask
+    components:
+      - 0 # Urchin NPC for IWD:EE: 2.3
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Urchin v2.2.zip
+      path: /home/mick/Games/modda-cache/static-iwd/Urchin v2.3.zip
   - name: DjinniCompanion
-    components: ask
+    components:
+      - 2 # Afaaq, le compagnon Djinn (version IWD:EE): v2.9
     location:
       github_user: Argent77
       repository: DjinniCompanion
@@ -182,57 +212,48 @@ modules:
       refresh: 2days
   - name: TuraldNPC
     description: male dwarf figther/cleric, NG, dialogs, interjections, crossmod
-    components: ask
+    components:
+      - 0 # Turald NPC for IWD:EE
+      - 1 # Crossmod Content: talks between Kulyok's NPCs and Turald
+      - 2 # Crossmod Content: talks between LavaDelVortel's Dusky and Turald
+      - 3 # Player-initiated talks
     location:
       path: /home/mick/Games/modda-cache/static-iwd/TuraldNPC.zip
   - name: KarihiNPC
     description: genasi pyromancer + friendship + romance + encounter + spells + crossmod banters support
-    components: ask
+    components:
+      - 0 # Karihi NPC for Icewind Dale: Enhanced Edition: 1.0
     location:
       github_user: ArtemiusI
       repository: KarihiNPC
       tag: v1.01
   - name: MinervaNPC
-    components: ask
+    components:
+      - 0 # Minerva NPC for Icewind Dale: Enhanced Edition: 1.0
     location:
       github_user: ArtemiusI
-      repository: KarihiNPC
+      repository: MinervaNPC
       tag: v1.1
   - name: CassiaNPC
-    components: ask
+    components:
+      - 0 # Cassia NPC for Icewind Dale: Enhanced Edition: v1.04b
     location:
       github_user: Arvendor
       repository: CassiaNPC
-      branch: master
-      refresh: 1day
+      branch: main
+      refresh: 1week
 
 ##############
 # Crossmod
 ##############
   - name: iwdcrossmodpack
     components:
-      - 0 # Icewind Dale Crossmod Banter Pack
+      - 10 # Install Crossmod Banters With This Minimum Delay Between Banters: -> 5 minutes: v2
     location:
       github_user: Gibberlings3
       repository: iwdcrossmod
       release: v2
       asset: icewind-dale-crossmod-banter-pack-v2.iemod
-      replace:
-        - file_globs: [ "IWDCrossmodPack/IWDCrossmodPack.tp2" ]
-          replace: 'OUTER_SPRINT ~banttime~ ~placeholder_value~'
-          with: 'OUTER_SPRINT ~banttime~ ~1~'
-        - file_globs: [ "IWDCrossmodPack/IWDCrossmodPack.tp2" ]
-          replace: 'OUTER_SPRINT ~conflict~ ~placeholder_value~'
-          with: 'OUTER_SPRINT ~conflict~ ~2~'
-        - file_globs: [ "IWDCrossmodPack/IWDCrossmodPack.tp2" ]
-          replace: 'OUTER_SPRINT ~conflict-cass-dendj~ ~placeholder_value~'
-          with: 'OUTER_SPRINT ~conflict-cass-dendj~ ~2~'
-        - file_globs: [ "IWDCrossmodPack/IWDCrossmodPack.tp2" ]
-          replace: 'OUTER_SPRINT ~conflict-cass-tviy~ ~placeholder_value~'
-          with: 'OUTER_SPRINT ~conflict-cass-tviy~ ~2~'
-        - file_globs: [ "IWDCrossmodPack/IWDCrossmodPack.tp2" ]
-          replace: 'OUTER_SPRINT ~romance~ ~placeholder_value~'
-          with: 'OUTER_SPRINT ~romance~ ~2~'
   # Use PPE instead
   #- name: MinorNPCPortraitsforIWDEE
   #  components: ~
@@ -244,11 +265,17 @@ modules:
 ##############
   - name : stratagems
     description: SCS - the new spells and spell tweaks
-    components: ask
+    components:
+      - 1600 # Utiliser les versions Baldur's Gate II des sorts Fleau d'insectes et Fatalite rampante a la place des versions d'Icewind Dale: 35.4
+      - 1610 # Utiliser la version Baldur's Gate II du sort Epee de Mordenkainen en plus de la version d'Icewind Dale: 35.4
+      - 2000 # Installer toutes les modifications de sorts (si vous ne selectionnez pas cette option, vous aurez la possibilite de les choisir par categorie): 35.4
+      - 2500 # Ajouter 9 nouveaux sorts profanes: 35.4
+      - 2510 # Ajouter 9 nouveaux sorts divins/druidiques (dont certains proviennent du mod Divine Remix): 35.4
+      - 2520 # Revision des elementaires et des sorts de type Conjuration d'elementaire: 35.4
     location:
       github_user: mleduque
       repository: SwordCoastStratagems
-      branch: fr-fix
+      branch: fix-fr
       refresh: ask
       patch:
         relative: patches/iwd/stratagems.diff
@@ -258,7 +285,10 @@ modules:
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/Weasels! v3.4.zip
   - name: A7-GolemConstruction
-    components: ask
+    components:
+      - 0 # Capacite de Fabrication de Golem pour lanceurs de sorts: 6.3
+      - 35 # Rendre les golems vulnerables aux effets de certains sorts: 6.3
+      - 50 # Ajouter la capacite "Teleportation" aux golems: 6.3
     location:
       github_user: Argent77
       repository: A7-GolemConstruction
@@ -267,8 +297,8 @@ modules:
   - name: wildmage
     components:
       # Rhialto's death gives way too much XP
-      - 1 # New Wild Magic Spells -> Haughty pansy
-      - 2 # Retain Rhialto's items
+      - 0 # New Wild Magic Spells -> Ironman
+      #- 2 # Retain Rhialto's items
       #- 3 # Spellshaper Kit -> Original avatar
       - 5 # Diverses Modifications de Sorts
     location:
@@ -284,9 +314,11 @@ modules:
       before: TomeandBlood, faiths_and_powers, will_to_power, might_and_guile, cdtweaks, stratagems
     components: ask
     location:
-      github_user: subtledoctor
+      github_user: mleduque
       repository: SubtleD_Spell_Tweaks
-      tag: "2.6.2"
+      branch: fix-french
+      #patch:
+      #  relative: patches/iwd/subtled-spell-tweaks.diff
 
 ##############
 # Items/Stores
@@ -361,7 +393,7 @@ modules:
     location:
       github_user: ArtemiusI
       repository: The-Artisan-s-Kitpack
-      tag: v4.3211
+      tag: v4.4
   - name: A7-ImprovedShamanicDance
     components: ask
     location:
@@ -481,8 +513,7 @@ modules:
     location:
       github_user: ArtemiusI
       repository: House-Rule-Tweaks
-      branch: master
-      refresh: 2days
+      tag: v2.5
   - name: aTweaks
     components: ask
     location:

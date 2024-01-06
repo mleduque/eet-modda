@@ -1225,12 +1225,12 @@ modules:
       branch: no_spells
       refresh: 3days
   - name: gorgon
-    components:
+    components: ask
     location:
       github_user: TotalMilk90
       repository: gorgon
-      release: v4.2
-      asset: gorgon-v4.2.iemod
+      release: v4.3
+      asset: gorgon-v4.3.iemod
   - name: w_packmule
     components:
       - 3 # Mule de bat (bgee) -> Fontes sans fond
@@ -2805,7 +2805,7 @@ modules:
     location:
       github_user: ArtemiusI
       repository: The-Artisan-s-Kitpack
-      tag: v4.3211
+      tag: v4.4
   - name: A7-ChaosSorcerer
     components:
       - 0 # Kit d'Ensorceleur du Chaos
@@ -3126,7 +3126,7 @@ modules:
     location:
       github_user: ArtemiusI
       repository: House-Rule-Tweaks
-      tag: v2.3
+      tag: v2.5
   - name: klatu
     description: Klatu Tweaks
     components:

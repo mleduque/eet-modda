@@ -1,0 +1,37 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+  - name: iwdee-broken-bonecir
+    components:
+      - 1 # Remove invalid #BONECIR.SPL from chitin.key
+    location:
+      github_user: mleduque
+      repository: ie-fixes
+      branch: iwdee-broken-bonecir
+  - name: stratagems
+    components:
+      - 1600 # Utiliser les versions Baldur's Gate II des sorts Fleau d'insectes et Fatalite rampante a la place des versions d'Icewind Dale: 35.4
+      - 1610 # Utiliser la version Baldur's Gate II du sort Epee de Mordenkainen en plus de la version d'Icewind Dale: 35.4
+      - 2000 # Installer toutes les modifications de sorts (si vous ne selectionnez pas cette option, vous aurez la possibilite de les choisir par categorie): 35.4
+      - 2500 # Ajouter 9 nouveaux sorts profanes: 35.4
+      - 2510 # Ajouter 9 nouveaux sorts divins/druidiques (dont certains proviennent du mod Divine Remix): 35.4
+      - 2520 # Revision des elementaires et des sorts de type Conjuration d'elementaire: 35.4
+    location:
+      github_user: Gibberlings3
+      repository: SwordCoastStratagems
+      branch: master
+      refresh: ask
+  - name: SubtleD_Spell_Tweaks
+    components:
+      - 1
+      - 1202 # Tweak Barkskin
+    location:
+      github_user: subtledoctor
+      repository: SubtleD_Spell_Tweaks
+      branch: master
+      refresh: ask
+

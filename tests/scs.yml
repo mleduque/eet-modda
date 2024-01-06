@@ -6,15 +6,9 @@ global:
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
 modules:
   - name: stratagems
-    components:
-      #- 1500 # include arcane spells from iwd
-      #- 2080 # spells increased in power
-      #- 4135 # Repos revise : camper dans la nature consomme des provisions: 35.4
-      #- 4140 # Auberges révisées
-      - 3020 # Replace magic weapons with fine versions
+    components: all
     location:
       github_user: mleduque
       repository: SwordCoastStratagems
-      branch: fix-fr
+      branch: test-sfo-tra
       refresh: ask
-
