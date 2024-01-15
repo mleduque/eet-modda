@@ -957,9 +957,9 @@ modules:
     location:
       github_user: InfinityMods
       repository: FishingForTrouble
-      commit: d062749 # 2023-04-06
-      #release: v3.2.8
-      #asset: fishing-for-trouble-v3.2.8.iemod
+
+      release: v3.2.9
+      asset: fishing-for-trouble-v3.2.9.iemod
   - name: tod
     description: Tower Of Deception
     components:
@@ -1265,6 +1265,7 @@ modules:
       - 11    #  Rencontre avec les Elus de Cyric
       - 12    #  Amelioration des Voleurs de l'Ombre
   - name: ironmodderXX
+  - name: neverwinter
 
   #########
   # Section: NPC

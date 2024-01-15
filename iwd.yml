@@ -242,6 +242,8 @@ modules:
       repository: CassiaNPC
       branch: main
       refresh: 1week
+      patch:
+        relative: patches/iwd/cassia.diff
 
 ##############
 # Crossmod
@@ -273,9 +275,9 @@ modules:
       - 2510 # Ajouter 9 nouveaux sorts divins/druidiques (dont certains proviennent du mod Divine Remix): 35.4
       - 2520 # Revision des elementaires et des sorts de type Conjuration d'elementaire: 35.4
     location:
-      github_user: mleduque
+      github_user: jazira
       repository: SwordCoastStratagems
-      branch: fix-fr
+      branch: master
       refresh: ask
       patch:
         relative: patches/iwd/stratagems.diff
@@ -312,13 +314,64 @@ modules:
       general: probably juste before TnB
       after: spell_rev, iwdification
       before: TomeandBlood, faiths_and_powers, will_to_power, might_and_guile, cdtweaks, stratagems
-    components: ask
+    components:
+      - 1 # Souhaitez-vous afficher les composants d'ajustement individuels de sorts ?: 2.6.3
+      - 21 # Re-equilibrage des ecoles profanes opposees -> Pas d'ecoles opposees: 2.6.3
+      - 35 # Ajouter un jet de sauvegarde pour les effets d'absorption de niveau: 2.6.3
+      - 55 # Modifier les sorts de soin pour ignorer les protections contre les sorts: 2.6.3
+      - 81 # Choisir son familier: 2.6.3
+      - 82 # Le mod de Pooky : Infuser les familiers: 2.6.3
+      - 1152
+      - 1202 # Modifier 'Peau d'ecorce' pour bloquer une attaque par round: 2.6.3
+      - 1207 # Modifier 'Baies magiques' pour en faire une regeneration hors combat: 2.6.3
+      - 1212 # Ajuster 'Ralentissement du Poison': 2.6.3
+      - 1251 # Ameliorer les degats et modifier le type de degats pour 'Lance d'alicorne': 2.6.3
+      - 1323 # Ameliorer le temps d'incantation pour 'Exaltation' et 'Clarte spirituelle': 2.6.3
+      - 1351 # Ajouter des effets de 'Lueur feerique' et 'Lenteur' au toucher de la 'Lame de lune': 2.6.3
+      - 1404 # Remplacer 'Neutralisation du poison' par 'Suppression des afflictions': 2.6.3
+      - 1451 # Modifier 'Vague destructrice' pour ne pas affecter le groupe: 2.6.3
+      - 1505 # Modifier 'Vision veritable' pour affecter le groupe: 2.6.3
+      - 1611 # Modifier 'Souvenir merveilleux' pour restaurer tous les sorts de niveau 1 et 2: 2.6.3
+      - 1614 # Rendre 'Orbe dessechant de Sol' plus facile a lancer: 2.6.3
+      - 1707 # Modifier 'Rayon de soleil' pour ignorer la resistance a la magie: 2.6.3
+      - 1710 # Ajouter un effet de Lenteur a 'Parole sacree': 2.6.3
+      - 2105 # Ajouter un effet d'aveuglement pour 1 round a 'Vapeur coloree': 2.6.3
+      - 2108 # Changer 'Protection contre la petrification' en 'Retrovision': 2.6.3
+      - 2116 # Autoriser les cibles de 'Sommeil' a se reveiller quand elles sont frappees: 2.6.3
+      - 2201 # Ajouter un evitement des projectiles a 'Flou': 2.6.3
+      - 2209 # Modifier 'Chance' pour affecter tout le groupe: 2.6.3
+      - 2215 # Modifier 'Toile d'araignee' pour ralentir au lieu d'immobiliser: 2.6.3
+      - 2217 # Changer 'Incinerateur d'Agannazar' en 'Projectiles ardents de Melf': 2.6.3
+      - 2224 # Ameliorer 'Poussiere scintillante': 2.6.3
+      - 2251 # Ajouter un effet de Surdite au toucher a 'Baton decuple': 2.6.3
+      - 2321 # Deplacer 'Annulation des protections' au niveau 1: 2.6.3
+      - 2324 # Modifier 'Immobilisation des morts-vivants' et 'Controle des morts-vivants' pour ignorer la resistance a la magie: 2.6.3
+      - 2352 # Augmenter la portee de 'Lance de glace': 2.6.3
+      - 2413 # Autoriser la cible de 'Sphere resistante d'Otiluke' a utiliser son inventaire: 2.6.3
+      - 2451 # Rendre les monstres de 'Convocation d'ombre' plus illusoires: 2.6.3
+      - 2514 # Modifier 'Abaissement de la resistance' pour en faire un sort de zone: 2.6.3
+      - 25231 # Remplacer 'Feu du Soleil' -> Remplacer 'Feu du Soleil' par 'Tempete de Projectiles': 2.6.3
+      - 2708 # Remplacer Manteau par 'Peau de fer': 2.6.3
+      - 2811 # Deplacer 'Symbole, terreur' au niveau 7: 2.6.3
+      - 2915 # Deplacer 'Lame noire du desastre' au niveau 8: 2.6.3
     location:
       github_user: mleduque
       repository: SubtleD_Spell_Tweaks
       branch: fix-french
-      #patch:
-      #  relative: patches/iwd/subtled-spell-tweaks.diff
+  - name: SubtleD_Spell_Tweaks
+    description: SubtleD's Spell Tweaks - cantrips (61 warns)
+    components:
+      - 61 # Tours de magie -> Tours de magie innes: 2.6.3
+      - 83 # Tours de magie pour les familiers: 2.6.3
+    ignore_warnings: true
+  - name: SubtleD_Spell_Tweaks
+    description: SubtleD's Spell Tweaks - those that warn
+    components:
+      - 45 # Revision des sorts 'Invisibilite' et 'Vision veritable': 2.6.3
+      - 1609 # Modifier 'Aube illusoire' pour ignorer la resistance a la magie: 2.6.3
+      - 2110 # Modifier 'Identification' pour que le sort s'ameliore avec le niveau: 2.6.3
+      - 2212 # Deplacer 'Image miroir' au niveau 3: 2.6.3
+    ignore_warnings: true
 
 ##############
 # Items/Stores

@@ -5,10 +5,23 @@ global:
   lang_dir: "fr_FR"
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
 modules:
+  - name: correctfrbg2ee
+    components:
+      - 10 # Correction de la traduction de Baldur's Gate II : Enhanced Edition: 0.7
+      - 20 # Correction de la description des objets: 0.7
+      - 30 # Patch audio et video francais: 0.7
+    location:
+      github_user: r-e-d
+      repository: correctfrBG2EE
+      release: "0.21"
+      asset: correctfrbg2ee-0.21.iemod
   - name: stratagems
-    components: all
+    components:
+      #- 1520 # bard
+      - 2050
+      - 2080
     location:
       github_user: mleduque
       repository: SwordCoastStratagems
-      branch: test-sfo-tra
+      branch: death-spell
       refresh: ask
