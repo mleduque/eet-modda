@@ -88,8 +88,8 @@ modules:
     location:
       github_user:  InfinityMods
       repository: Ascension
-      release: "2.0.26"
-      asset: ascension-2.0.26.iemod
+      release: "2.0.27"
+      asset: ascension-2.0.27.iemod
     ignore_warnings: true
   - name: ascension
     description: ascension - the other components
@@ -820,7 +820,7 @@ modules:
   - name: amber
     components: [0, 1]
     location:
-      path: /home/mick/Games/modda-cache/static/lin-amber-v8.zip
+      path: /home/mick/Games/modda-cache/static/lin-amber-v9.zip
       patch:
         relative: patches/amber.diff
       replace:
@@ -1265,7 +1265,12 @@ modules:
       - 11    #  Rencontre avec les Elus de Cyric
       - 12    #  Amelioration des Voleurs de l'Ombre
   - name: ironmodderXX
-  - name: neverwinter
+  - name: NwnForBg
+    components: ask
+    location:
+      github_user: abalabokhin
+      repository: NWNForBG
+      tag: 0.95
 
   #########
   # Section: NPC
@@ -2932,8 +2937,8 @@ modules:
     location:
       github_user: D2-mods
       repository: The-Workshop-Kitpack
-      release: v4.6a
-      asset: the-workshop-kitpack-4.6.iemod
+      release: v4.7
+      asset: the-workshop-kitpack-4.7.iemod
 
   #########
   # Multiclass kits
