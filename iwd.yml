@@ -123,7 +123,7 @@ modules:
     components:
       - 0 # Dendjelion NPC for IWD:EE
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/dendjelion v1.4.zip
+      path: /home/mick/Games/modda-cache/static-iwd/dendjelion v2.0.zip
       replace:
         - file_globs: [ 'dendjelion/scripts/L#dendj.baf' ]
           replace: 'RealSetGlobalTimer("L#DendjelionTime","GLOBAL",2700)'
