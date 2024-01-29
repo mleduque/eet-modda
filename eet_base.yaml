@@ -958,8 +958,8 @@ modules:
       github_user: InfinityMods
       repository: FishingForTrouble
 
-      release: v3.2.9
-      asset: fishing-for-trouble-v3.2.9.iemod
+      release: v3.2.10
+      asset: fishing-for-trouble-v3.2.10.iemod
   - name: tod
     description: Tower Of Deception
     components:
@@ -2027,8 +2027,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Ajantis_BG1_Expansion
-      release: v19.2
-      asset: ajantis-bg1-expansion-modification-19.2.iemod
+      release: v19.3
+      asset: ajantis-bg1-expansion-modification-19.3.iemod
   - name: SkieCost # install late because adds crossmod banters with Yvette & Foundling
     description: "Skie: The Cost of One Girl’s Soul"
     components:
