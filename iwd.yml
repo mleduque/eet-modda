@@ -275,7 +275,7 @@ modules:
       - 2510 # Ajouter 9 nouveaux sorts divins/druidiques (dont certains proviennent du mod Divine Remix): 35.4
       - 2520 # Revision des elementaires et des sorts de type Conjuration d'elementaire: 35.4
     location:
-      github_user: jazira
+      github_user: jazira33
       repository: SwordCoastStratagems
       branch: master
       refresh: ask
