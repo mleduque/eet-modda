@@ -6,13 +6,11 @@ global:
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
 modules:
   - name: stratagems
-    components: all
-      #- 1610
-      #- 2000
-      #- 2080
+    components:
+      - 2510
     location:
-      github_user: mleduque
+      github_user: Gibberlings3
       repository: SwordCoastStratagems
-      branch: fix-fr
+      branch: master
       refresh: ask
 
