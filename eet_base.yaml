@@ -2591,13 +2591,14 @@ modules:
       release: v2.0.0
       asset: saradas-magic-for-bg2-v2.0.0.iemod
   - name: rttitempack
-    description: Deratiseur's item pack (Ribald)
+    description: Return to Trademeet Item Pack
     components:
       - 0
     location:
-      github_user: 11jo
+      github_user: The-Gate-Project
       repository: RTT-ItemPack
-      tag: v.1.4
+      branch: master
+      refresh: 1week
   - name: iwditempack
     components:
       - 0 # Talisman du Loup Noir
@@ -2811,7 +2812,7 @@ modules:
     location:
       github_user: ArtemiusI
       repository: The-Artisan-s-Kitpack
-      tag: v4.4
+      tag: v4.6
   - name: A7-ChaosSorcerer
     components:
       - 0 # Kit d'Ensorceleur du Chaos
@@ -2889,7 +2890,7 @@ modules:
       github_user: Gibberlings3
       repository: SongAndSilence
       release: v18
-      asset: lin-song_and_silence-v18.tar.gz
+      asset: lin-song_and_silence-v18.zip
   - name: morpheus562-s-kitpack
     description: morpheus562's kitpack - only single-class kits
     components:
@@ -2997,8 +2998,7 @@ modules:
       #- 80 #// Multiclass Sorcerers: 0.9.25
       #- 82 # Arcanist NOPE - incompatible with 5E
       - 92 # Rendre les objets à emplacement de sorts bonus compatibles avec les ensorceleurs multi et les arcanistes -> Bonus pour la mémorisation ET les emplacements de lancer: 0.9.27
-      #- 95 # Ability Score Spellcasting Bonuses (install AFTER any mod that changes spell tables!) - prefer scalesofbalance
-    location:
+      - 95 # Specialistes multiclasse
       github_user: mleduque
       repository: TomeAndBlood
       branch: "1.1-fr"
