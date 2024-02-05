@@ -378,7 +378,9 @@ modules:
 # Items/Stores
 ##############
   - name: A7-MagicStore
-    components: ask
+    components:
+      - 1 # Magasin magique de Vergadain -> Frais requis: 4.0
+      - 24 # Limiter les services disponibles dans les magasins convoques -> Autoriser les echanges commerciaux uniquement: 4.0
     location:
       github_user: Argent77
       repository: A7-MagicStore
@@ -386,13 +388,16 @@ modules:
       refresh: 2days
   - name: FindIt-IWD
     description: new items
-    components: ask
+    components:
+      - 0 // FindIt IWD:EE: v2.6
     location:
       path: /home/mick/Games/modda-cache/static-iwd/FindIt-IWD v2.6.zip
   #- name: iu_iwd ==> included in EE
   - name: ForgeIt-IWD
     description: new items to create
-    components: ask
+    components:
+      - 0 # Artefacts forgeables pour IWD EE: v1.8
+      - 1 # Armure d'Icasaracht améliorée dans IWD EE: v1.8
     location:
       path: /home/mick/Games/modda-cache/static-iwd/ForgeIt-IWD v1.8.zip
   - name: msfm
@@ -420,8 +425,6 @@ modules:
       github_user:  Gibberlings3
       repository: Forgotten-Armament
       tag: "4.0"
-      patch:
-        relative: iwd/forgotten-armament.diff
 
 ##############
 # Kits
