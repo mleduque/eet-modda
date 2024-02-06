@@ -3001,7 +3001,7 @@ modules:
       - 95 # Specialistes multiclasse
       github_user: mleduque
       repository: TomeAndBlood
-      branch: "1.1-fr"
+      branch: "1.1.1"
   - name: TomeAndBlood
     description: Tome And Blood (warning components)
     components:
@@ -3119,7 +3119,7 @@ modules:
     location:
       github_user: mleduque
       repository: Might_and_Guile
-      tag: 5.7.2-fr # merged but not released
+      tag: "5.8"
       patch:
         relative: patches/mng-multibard-shools.diff
   - name: HouseTweaks
