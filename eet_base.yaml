@@ -419,7 +419,7 @@ modules:
     components:
       - 0 # Southern Edge: the new district of Athkatla -> Yes, but don't patch the existing save games: 3.4
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/SouthernEdge v4.3.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/SouthernEdge v4.4.zip
   - name: Ooze
     description: "Athkatlan Grounds: The Ooze’s Lounge"
     components:
@@ -431,7 +431,7 @@ modules:
     components:
       - 0 # Les terres d'Athkatlan : Le Bloc du Pont: 1.3
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/BridgesBlock v1.6.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/BridgesBlock v1.8.zip
   - name: AlabasterSands
     description: "Athkatlan Grounds: Alabaster Sands"
     components:
@@ -1093,7 +1093,7 @@ modules:
   - name: SotSC
     description: Shades of the Sword Coast
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/SotSC v7.4.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/SotSC v8.6.zip
     components: [0]
   - name: JanQuest
     components: [0]
@@ -2999,9 +2999,9 @@ modules:
       #- 82 # Arcanist NOPE - incompatible with 5E
       - 92 # Rendre les objets à emplacement de sorts bonus compatibles avec les ensorceleurs multi et les arcanistes -> Bonus pour la mémorisation ET les emplacements de lancer: 0.9.27
       - 95 # Specialistes multiclasse
-      github_user: mleduque
+      github_user: UnearthedArcana
       repository: TomeAndBlood
-      branch: "1.1.1"
+      branch: "1.1"
   - name: TomeAndBlood
     description: Tome And Blood (warning components)
     components:

@@ -91,7 +91,7 @@ modules:
     components:
       - 0 # Xikasz's Grove Of Chaos - a quest & companion mod for IWD:EE -> Yes, but don't patch existing save games.: v1.0
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/GroveOfChaos v1.00.zip
+      path: /home/mick/Games/modda-cache/static-iwd/GroveOfChaos v1.3.zip
 
 
 ##############
@@ -152,7 +152,7 @@ modules:
     components:
       - 0 # Hommet Shaw for IWD EE
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Hommet v1.0.zip
+      path: /home/mick/Games/modda-cache/static-iwd/Hommet v1.1.zip
       replace:
         - file_globs: [ 'Hommet/scripts/L#HOMM.baf' ]
           replace: 'RealSetGlobalTimer("L#HommetFriendshipTime","GLOBAL",1800)'
@@ -165,25 +165,25 @@ modules:
     components:
       - 0 # Ina NPC for IWD:EE: 2.1
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Ina v2.1.zip
+      path: /home/mick/Games/modda-cache/static-iwd/Ina v2.2.zip
   - name: Lanna
     description: elven paladin, quest, talks, romance
     components:
       - 0 # L'anna - a new IWD EE companion: v1.6
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Lanna v1.6.zip
+      path: /home/mick/Games/modda-cache/static-iwd/Lanna v1.7.zip
   - name: OakMaw
     description: dark fey hunter
     components:
       - 0 # Oak-Maw NPC for IWD:EE: 3.1
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/OakMaw v3.1.zip
+      path: /home/mick/Games/modda-cache/static-iwd/OakMaw v3.2.zip
   - name: Orra
     description: fighter/mage/cleric.woman + friendship
     components:
       - 0 # Orra NPC for IWD:EE: v2.1
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Orra v2.1.zip
+      path: /home/mick/Games/modda-cache/static-iwd/Orra v2.4.zip
   - name: Tipps
     description: halfling geomantic sorcerer + talks + romance + items
     components:
@@ -201,7 +201,7 @@ modules:
     components:
       - 0 # Urchin NPC for IWD:EE: 2.3
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Urchin v2.3.zip
+      path: /home/mick/Games/modda-cache/static-iwd/Urchin v2.5.zip
   - name: DjinniCompanion
     components:
       - 2 # Afaaq, le compagnon Djinn (version IWD:EE): v2.9
@@ -521,9 +521,9 @@ modules:
       - 80 # Ensorceleurs multiclasses: 1.1
       - 92 # Rendre les objets a emplacement de sorts bonus compatibles avec les ensorceleurs multi et les arcanistes -> Bonus pour la memorisation ET les emplacements de preparation: 1.1
     location:
-      github_user: mleduque
+      github_user: UnearthedArcana
       repository: TomeAndBlood
-      branch: "1.1.1"
+      branch: "1.1"
   - name: TomeAndBlood
     description: Tome And Blood - warns
     components:
