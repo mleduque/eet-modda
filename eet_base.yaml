@@ -4078,8 +4078,8 @@ modules:
     location:
     github_user: D2-mods
     repository: Better-IWD-Pregen
-    release: v7.1
-    asset: better-iwd-pregen-7.1.iemod
+    release: v7.3
+    asset: better-iwd-pregen-7.3.iemod
   - name: wl_summonsFoV
     components: ask
     location:

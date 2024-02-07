@@ -183,7 +183,7 @@ modules:
     components:
       - 0 # Orra NPC for IWD:EE: v2.1
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Orra v2.4.zip
+      path: /home/mick/Games/modda-cache/static-iwd/Orra v2.5.zip
   - name: Tipps
     description: halfling geomantic sorcerer + talks + romance + items
     components:
@@ -412,7 +412,9 @@ modules:
   - name: rr # rogue rebalancing
     description: additional equipment only
     components:
-      - 7     # Equipement supplementaire pour les voleurs et les bardes
+      - 0 # Rogue Rebalancing - Proper dual-wielding implementation for Thieves and Bards
+      - 3 # Rogue Rebalancing - Proper racial adjustments for thieving skills
+      - 7 # Equipement supplementaire pour les voleurs et les bardes
     location:
       github_user: FredrikLindgren
       repository: rr
@@ -425,6 +427,23 @@ modules:
       github_user:  Gibberlings3
       repository: Forgotten-Armament
       tag: "4.0"
+
+  - name: cdtweaks
+    description: remove kit/class restriction before TnB 95
+    components:
+      - 2360 # Suppression des restrictions raciales pour les mono-classes: v14
+      - 2380 # Suppression des restrictions raciales pour les kits: v14
+      - 2371 # Alterer les restrictions de jumelage -> Autoriser les non-humains a se jumeler: v14
+      - 2358 # Alterer les restrictions des multi-classses -> Installer les options une et trois (tout le monde a acces aux multi-classes des classes accessibles): v14
+
+  - name: cdtweaks
+    description: spell tables
+    components:
+      - 2250 # Table de progression des sorts du sorcier debridee
+      - 2260 # Alterer la table de progression des sorts du mage -> Table debridee (Blucher)
+      - 2270 # Alterer la table de progression des sorts du barde -> Table debridee (Blucher)
+      - 2280 # Alterer la table de progression des sorts du clerc -> Table debridee (Blucher)
+      - 2293 # Alterer les tables de progression des sorts et de niveaux du druide -> Utiliser la table de progression des clercs et la table debridee des sorts des druides (Blucher)s
 
 ##############
 # Kits
@@ -598,7 +617,7 @@ modules:
       repository: Will_to_Power
       branch: 2.5-fr
       patch:
-        relative: patches/will_to_power_tweaks.diff
+        relative: patches/iwd/will_to_power_tweaks.diff
   - name: might_and_guile
     description: Might And Guile - Main component (warns)
     components: ask
@@ -608,7 +627,7 @@ modules:
       repository: Might_and_Guile
       tag: "5.8"
       patch:
-        relative: patches/mng-multibard-shools.diff
+        relative: patches/iwd/mng.diff
 
 
 ##############
@@ -815,6 +834,13 @@ modules:
       release: version-1.12
       asset: random-graion-tweaks-1.12.iemod
   - name: fix_cre_script_names
+  - name: d2-script
+    components: asks
+    location:
+    github_user: D2-mods
+    repository: Better-IWD-Pregen
+    release: v7.3
+    asset: better-iwd-pregen-7.3.iemod
     description: Some mod out there is altering various creatures' script names to "cre_strref." This hotfix changes the script name of all such creatures from "cre_strref" to their filename.
     components: ask
     location:

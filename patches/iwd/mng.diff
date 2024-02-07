@@ -1,0 +1,572 @@
+diff --git a/might_and_guile/components/400_revised_bards.tpa b/might_and_guile/components/400_revised_bards.tpa
+index 46c2d86..261e68d 100755
+--- might_and_guile/components/400_revised_bards.tpa
++++ might_and_guile/components/400_revised_bards.tpa
+@@ -162,7 +162,7 @@ ACTION_IF GAME_IS ~bgee bg2ee eet iwdee~ THEN BEGIN
+ 			sneakatt = ~1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2~
+ 			backstab = ~1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2~
+ 			thiefskl = ~40 20~
+-			thiefscl = ~100 100 100 0 0 100 0 0~
++			thiefscl = ~100 100 100 0 0 100 100 0~
+ 	END
+ END
+ //___________________________________________________________________________________
+@@ -607,7 +607,7 @@ ACTION_IF GAME_IS ~bgee bg2ee eet iwdee~ THEN BEGIN
+ 			sneakatt = ~1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1~
+ 			backstab = ~1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1~
+ 			thiefskl = ~25 15~
+-			thiefscl = ~100 100 100 0 0 100 0 0~
++			thiefscl = ~100 100 100 50 50 100 0 0~
+ 			clsrcreq = ~1 1 1 0 0 1 0~
+ 	END
+ END
+@@ -711,7 +711,7 @@ ACTION_IF GAME_IS ~bgee bg2ee eet iwdee~ THEN BEGIN
+ 			backstab = ~1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2~
+ 			clswpbon = ~0 0 3~
+ 			thiefskl = ~25 15~
+-			thiefscl = ~100 100 100 100 100 100 0 0~
++			thiefscl = ~100 100 100 100 100 100 50 0~
+ 			clsrcreq = ~1 1 1 0 0 0 0~
+ 	END
+ END
+@@ -1125,7 +1125,7 @@ ACTION_IF GAME_IS ~bgee bg2ee eet iwdee~ THEN BEGIN
+ 			sneakatt = ~1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1~
+ 			backstab = ~1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1~
+ 			thiefskl = ~25 15~
+-			thiefscl = ~0 0 100 100 100 100 0 0~
++			thiefscl = ~0 0 200 100 100 100 100 0~
+ 			clsrcreq = ~1 1 1 0 1 1 0~
+ 	END
+ END
+@@ -1240,7 +1240,7 @@ ACTION_IF GAME_IS ~bgee bg2ee eet iwdee~ THEN BEGIN
+ 			backstab = ~1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2~
+ 			clswpbon = ~0 0 3~
+ 			thiefskl = ~30 20~
+-			thiefscl = ~100 100 100 100 100 100 0 0~
++			thiefscl = ~200 100 100 100 100 100 0 0~
+ 			clsrcreq = ~1 1 1 0 1 0 0~
+ 	END
+ END
+@@ -1344,7 +1344,7 @@ ACTION_IF GAME_IS ~bgee bg2ee eet iwdee~ THEN BEGIN
+ 			backstab = ~1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2~
+ 			clswpbon = ~0 0 3~
+ 			thiefskl = ~30 20~
+-			thiefscl = ~100 100 100 100 100 100 0 0~
++			thiefscl = ~100 50 100 100 100 200 0 0~
+ 			clsrcreq = ~1 1 1 0 1 0 0~
+ 	END
+ END
+@@ -1448,7 +1448,7 @@ ACTION_IF GAME_IS ~bgee bg2ee eet iwdee~ THEN BEGIN
+ 			backstab = ~1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2~
+ 			clswpbon = ~0 0 3~
+ 			thiefskl = ~30 20~
+-			thiefscl = ~100 100 100 100 100 100 0 0~
++			thiefscl = ~100 100 100 100 100 100 50 0~
+ 			clsrcreq = ~1 1 1 0 1 0 0~
+ 	END
+ END
+@@ -2043,11 +2043,11 @@ END
+ // fix UAI_____________________________________________________________________________
+ //
+ // if UAI is in the game, have it 321 d5mtnuse and d5fmnuse 
+-ACTION_IF FILE_EXISTS_IN_GAME ~spcl915.spl~ BEGIN
+-  COPY_EXISTING ~spcl915.spl~ ~override~
+-  	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 target = 1 timing = 9 STR_VAR resource = ~d5mtnuse~ END
+-  	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 target = 1 timing = 9 STR_VAR resource = ~d5fmnuse~ END
+-END
++//ACTION_IF FILE_EXISTS_IN_GAME ~spcl915.spl~ BEGIN
++//  COPY_EXISTING ~spcl915.spl~ ~override~
++//  	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 target = 1 timing = 9 STR_VAR resource = ~d5mtnuse~ END
++//  	LPF ADD_SPELL_EFFECT INT_VAR opcode = 321 target = 1 timing = 9 STR_VAR resource = ~d5fmnuse~ END
++//END
+ //____________________________________________________________________________________
+ 
+ 
+@@ -2068,9 +2068,8 @@ COPY_EXISTING_REGEXP GLOB ~^.+\.spl$~ ~override~
+ 	PATCH_IF spell_school = 7 	OR 		//	necromancy
+ 			spell_school = 6 	OR 		//	invocation
+ //			spell_school = 2 	OR 		//	conjuration
+-			spell_school = 9 	OR		//	wild magic
++			spell_school = 9 			//	wild magic
+ //			spell_level = 8 	OR
+-			spell_level = 9 	BEGIN
+ 	  WRITE_BYTE 0x20 (%bard_excludes% BOR ~0b10000000~) 		// unusable by skalds
+ 	END
+   END
+@@ -2129,7 +2128,7 @@ BUT_ONLY
+ //COPY ~might_and_guile/nubards/d5_bard.2da~ ~override/d5nubard.2da~
+ <<<<<<<< d5/d5nubard.2da
+ 
+-NU_BARDS    AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        **** 
++NU_BARDS    AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP        AP_D5_1HP        AP_D5_1HP        AP_D5_1HP        AP_D5_1HP        AP_D5_1HP        AP_D5_1HP        AP_D5_1HP        AP_D5_1HP        AP_D5_1HP        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        **** 
+ 
+ >>>>>>>> 
+ COPY ~d5/d5nubard.2da~ ~override/d5nubard.2da~
+@@ -3542,7 +3541,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~theshal.cre~ BEGIN
+ END
+ ACTION_IF (FILE_EXISTS_IN_GAME ~shlehlan.sto~)THEN BEGIN
+   COPY_EXISTING ~shlehlan.sto~ ~override~
+-	ADD_STORE_ITEM ~d5bd24~ #1 #0 #0 ~identified~ #1
++	ADD_STORE_ITEM ~d5bd24~ #1 #0 #0 ~identified~ #2
+ END
+ 
+ COPY ~might_and_guile/nubards/d5bd25.itm~ ~override~			//		entangle
+@@ -3612,7 +3611,7 @@ CREATE EFF ~d5bd48ic~
+ 
+ ACTION_IF (FILE_EXISTS_IN_GAME ~stoblack.sto~)THEN BEGIN
+   COPY_EXISTING ~stoblack.sto~ ~override~
+-	ADD_STORE_ITEM ~d5bd48~ #0 #0 #0 ~identified~ #1
++	ADD_STORE_ITEM ~d5bd48~ #0 #0 #0 ~identified~ #5
+ END
+ 
+ /*
+@@ -3858,8 +3857,8 @@ END
+ 
+ //make sure no level 9 slots________________________________________________________
+ //
+-COPY ~might_and_guile/lib/d5_base.spl~ ~override/d5zx9bd.spl~
+-  LPF ADD_SPELL_EFFECT INT_VAR opcode = 42 target = 1 parameter1 = (0 - 1) parameter2 = 256 timing = 9 END
++//COPY ~might_and_guile/lib/d5_base.spl~ ~override/d5zx9bd.spl~
++//  LPF ADD_SPELL_EFFECT INT_VAR opcode = 42 target = 1 parameter1 = (0 - 1) parameter2 = 256 timing = 9 END
+ 
+ COPY ~might_and_guile/lib/d5_base.spl~ ~override/d5x9spl.spl~
+ 	LPF ADD_SPELL_EFFECT INT_VAR opcode = 146 target = 1 parameter2 = 1 timing = 9 STR_VAR resource = ~d5zx9bd~ END
+@@ -4558,7 +4557,7 @@ APPEND ~d5_lort.2da~ ~BARD_SONG   AP_D5BDB00  ****        ****        ****
+ ACTION_PHP_EACH bard_kits_list AS clab => kind BEGIN
+   ACTION_IF !(~%kind%~ STRING_EQUAL_CASE ~w~) BEGIN
+     ACTION_IF (FILE_EXISTS_IN_GAME ~%clab%.2da~) BEGIN
+-	  APPEND ~%clab%.2da~ ~NU_BARDS    AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        **** ~
++	  APPEND ~%clab%.2da~ ~NU_BARDS    AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP   AP_D5_1HP        AP_D5_1HP        AP_D5_1HP        AP_D5_1HP        AP_D5_1HP        AP_D5_1HP        AP_D5_1HP        AP_D5_1HP        AP_D5_1HP        AP_D5_1HP        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        **** ~
+ //BARD_SONG   AP_D5BD000  ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****       ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****        ****  
+ 	END
+   END
+@@ -5056,30 +5055,30 @@ END
+ 
+ COMPILE ~d5/raelis+.d~
+ 
+-// take guild away from bard, jester, skald, gallant, herald, meistersinger, loresinger, whistler
+-
+-<<<<<<<< d5/renal+.d
+-ADD_TRANS_TRIGGER RENAL 7 ~!Kit(Player1,D5_BARD)
+-		!Kit(Player1,D5_BLADE)
+-		!Kit(Player1,D5_BLADESINGER)
+-		!Kit(Player1,D5_JESTER)
+-		!Kit(Player1,D5_MEISTER)
+-	    !Kit(Player1,D5_WHISTLER)
+-		!Kit(Player1,D5_LORESINGER_CT)~ DO 1
+-EXTEND_BOTTOM RENAL 7
+-  IF ~OR(5)
+-		Kit(Player1,D5_BARD)
+-		Kit(Player1,D5_BLADE)
+-		Kit(Player1,D5_BLADESINGER)
+-		Kit(Player1,D5_JESTER)
+-		Kit(Player1,D5_MEISTER)
+-		Kit(Player1,D5_LORESINGER_CT)
+-	    Kit(Player1,D5_WHISTLER)
+-  ~ THEN REPLY #21233 GOTO 18
+-END
+->>>>>>>> 
+-
+-COMPILE ~d5/renal+.d~
++//// take guild away from bard, jester, skald, gallant, herald, meistersinger, loresinger, whistler
++//
++//<<<<<<<< d5/renal+.d
++//ADD_TRANS_TRIGGER RENAL 7 ~!Kit(Player1,D5_BARD)
++//		!Kit(Player1,D5_BLADE)
++//		!Kit(Player1,D5_BLADESINGER)
++//		!Kit(Player1,D5_JESTER)
++//		!Kit(Player1,D5_MEISTER)
++//	    !Kit(Player1,D5_WHISTLER)
++//		!Kit(Player1,D5_LORESINGER_CT)~ DO 1
++//EXTEND_BOTTOM RENAL 7
++//  IF ~OR(5)
++//		Kit(Player1,D5_BARD)
++//		Kit(Player1,D5_BLADE)
++//		Kit(Player1,D5_BLADESINGER)
++//		Kit(Player1,D5_JESTER)
++//		Kit(Player1,D5_MEISTER)
++//		Kit(Player1,D5_LORESINGER_CT)
++//	    Kit(Player1,D5_WHISTLER)
++//  ~ THEN REPLY #21233 GOTO 18
++//END
++//>>>>>>>> 
++//
++//COMPILE ~d5/renal+.d~
+ 
+ // give ranger cabin to meistersinger
+ 
+diff --git a/might_and_guile/nubards/d5cstmbd.2da b/might_and_guile/nubards/d5cstmbd.2da
+index 8966bee..6f87403 100644
+--- might_and_guile/nubards/d5cstmbd.2da
++++ might_and_guile/nubards/d5cstmbd.2da
+@@ -1,43 +1,43 @@
+ 2DA V1.0
+ 0
+-        1   2   3   4   5   6   7   8
+-1       1   0   0   0   0   0   0   0
+-2       2   0   0   0   0   0   0   0
+-3       3   1   0   0   0   0   0   0
+-4       4   1   0   0   0   0   0   0
+-5       4   2   1   0   0   0   0   0
+-6       4   3   1   0   0   0   0   0
+-7       4   4   2   1   0   0   0   0
+-8       5   4   3   1   0   0   0   0
+-9       5   4   3   2   1   0   0   0
+-10      5   4   4   3   1   0   0   0
+-11      5   4   4   3   2   0   0   0
+-12      5   5   4   3   2   1   0   0
+-13      5   5   4   4   3   1   0   0
+-14      5   5   4   4   3   2   1   0
+-15      5   5   5   4   4   2   1   0
+-16      5   5   5   5   4   3   1   1
+-17      5   5   5   5   5   3   2   1
+-18      5   5   5   5   5   4   3   2
+-19      5   5   5   5   5   5   4   2
+-20      5   5   5   5   5   5   5   3
+-21      5   5   5   5   5   5   5   4
+-22      5   5   5   5   5   5   5   4
+-23      5   5   5   5   5   5   5   4
+-24      5   5   5   5   5   5   5   4
+-25      5   5   5   5   5   5   5   4
+-26      5   5   5   5   5   5   5   4
+-27      5   5   5   5   5   5   5   4
+-28      5   5   5   5   5   5   5   4
+-29      5   5   5   5   5   5   5   4
+-30      5   5   5   5   5   5   5   4
+-31      5   5   5   5   5   5   5   4
+-32      5   5   5   5   5   5   5   4
+-33      5   5   5   5   5   5   5   4
+-34      5   5   5   5   5   5   5   4
+-35      5   5   5   5   5   5   5   4
+-36      5   5   5   5   5   5   5   4
+-37      5   5   5   5   5   5   5   4
+-38      5   5   5   5   5   5   5   4
+-39      5   5   5   5   5   5   5   4
+-40      5   5   5   5   5   5   5   4
++        1   2   3   4   5   6   7   8   9
++1       1   0   0   0   0   0   0   0   0
++2       2   0   0   0   0   0   0   0   0
++3       3   1   0   0   0   0   0   0   0
++4       4   1   0   0   0   0   0   0   0
++5       4   2   1   0   0   0   0   0   0
++6       4   3   1   0   0   0   0   0   0
++7       4   4   2   1   0   0   0   0   0
++8       5   4   3   1   0   0   0   0   0
++9       5   4   3   2   1   0   0   0   0
++10      5   4   4   3   1   0   0   0   0
++11      5   4   4   3   2   0   0   0   0
++12      5   5   4   3   2   1   0   0   0
++13      5   5   4   4   3   1   0   0   0
++14      5   5   4   4   3   2   1   0   0
++15      5   5   5   4   4   2   1   0   0
++16      5   5   5   5   4   3   1   1   0
++17      5   5   5   5   5   3   2   1   0
++18      5   5   5   5   5   4   3   1   1
++19      5   5   5   5   5   5   4   2   1
++20      5   5   5   5   5   5   5   2   2
++21      5   5   5   5   5   5   5   3   2
++22      5   5   5   5   5   5   5   4   3
++23      5   5   5   5   5   5   5   5   3
++24      5   5   5   5   5   5   5   5   4
++25      5   5   5   5   5   5   5   5   5
++26      5   5   5   5   5   5   5   5   5
++27      5   5   5   5   5   5   5   5   5
++28      5   5   5   5   5   5   5   5   5
++29      5   5   5   5   5   5   5   5   5
++30      5   5   5   5   5   5   5   5   5
++31      5   5   5   5   5   5   5   5   5
++32      5   5   5   5   5   5   5   5   5
++33      5   5   5   5   5   5   5   5   5
++34      5   5   5   5   5   5   5   5   5
++35      5   5   5   5   5   5   5   5   5
++36      5   5   5   5   5   5   5   5   5
++37      5   5   5   5   5   5   5   5   5
++38      5   5   5   5   5   5   5   5   5
++39      5   5   5   5   5   5   5   5   5
++40      5   5   5   5   5   5   5   5   5
+diff --git a/might_and_guile/nubards/mxcstbrd.2da b/might_and_guile/nubards/mxcstbrd.2da
+index ced5d26..9dc34ed 100644
+--- might_and_guile/nubards/mxcstbrd.2da
++++ might_and_guile/nubards/mxcstbrd.2da
+@@ -1,43 +1,43 @@
+ 2DA V1.0
+ 0
+-        1   2   3   4   5   6   7
+-1       0   0   0   0   0   0   0
+-2       2   0   0   0   0   0   0
+-3       3   0   0   0   0   0   0
+-4       3   2   0   0   0   0   0
+-5       4   2   0   0   0   0   0
+-6       4   2   2   0   0   0   0
+-7       4   3   2   0   0   0   0
+-8       4   3   2   2   0   0   0
+-9       5   3   3   2   0   0   0
+-10      5   3   3   2   2   0   0
+-11      5   4   3   3   2   0   0
+-12      5   4   4   4   2   0   0
+-13      5   4   4   4   2   2   0
+-14      6   4   4   4   3   2   0
+-15      6   5   4   4   4   2   0
+-16      6   5   4   4   4   2   2
+-17      6   5   5   4   4   3   2
+-18      7   5   5   5   4   3   2
+-19      7   6   5   5   4   3   3
+-20      7   6   5   5   5   4   3
+-21      7   6   6   5   5   4   4
+-22      7   6   6   6   5   4   4
+-23      7   6   6   6   6   4   4
+-24      7   6   6   6   6   5   4
+-25      7   6   6   6   6   5   5
+-26      7   6   6   6   6   5   5
+-27      7   6   6   6   6   5   5
+-28      7   6   6   6   6   5   5
+-29      7   6   6   6   6   5   5
+-30      7   6   6   6   6   5   5
+-31      7   6   6   6   6   5   5
+-32      7   6   6   6   6   5   5
+-33      7   6   6   6   6   5   5
+-34      7   6   6   6   6   5   5
+-35      7   6   6   6   6   5   5
+-36      7   6   6   6   6   5   5
+-37      7   6   6   6   6   5   5
+-38      7   6   6   6   6   5   5
+-39      7   6   6   6   6   5   5
+-40      7   6   6   6   6   5   5
++        1   2   3   4   5   6   7   8   9
++1       0   0   0   0   0   0   0   0   0
++2       2   0   0   0   0   0   0   0   0
++3       3   0   0   0   0   0   0   0   0
++4       3   2   0   0   0   0   0   0   0
++5       4   2   0   0   0   0   0   0   0
++6       4   2   2   0   0   0   0   0   0
++7       4   3   2   0   0   0   0   0   0
++8       4   3   2   2   0   0   0   0   0
++9       5   3   3   2   0   0   0   0   0
++10      5   3   3   2   2   0   0   0   0
++11      5   4   3   3   2   0   0   0   0
++12      5   4   4   4   2   0   0   0   0
++13      5   4   4   4   2   2   0   0   0
++14      6   4   4   4   3   2   0   0   0
++15      6   5   4   4   4   2   0   0   0
++16      6   5   4   4   4   2   2   0   0
++17      6   5   5   4   4   3   2   0   0
++18      7   5   5   5   4   3   2   0   0
++19      7   6   5   5   4   3   3   2   0
++20      7   6   5   5   5   4   3   2   0
++21      7   6   6   5   5   4   4   2   0
++22      7   6   6   6   5   4   4   3   2
++23      7   6   6   6   6   4   4   3   2
++24      7   6   6   6   6   5   4   4   2
++25      7   6   6   6   6   5   5   4   3
++26      7   6   6   6   6   5   5   4   3
++27      7   6   6   6   6   5   5   4   4
++28      7   6   6   6   6   5   5   5   4
++29      7   6   6   6   6   5   5   5   4
++30      7   6   6   6   6   5   5   5   4
++31      7   6   6   6   6   5   5   5   5
++32      7   6   6   6   6   5   5   5   5
++33      7   6   6   6   6   5   5   5   5
++34      7   6   6   6   6   5   5   5   5
++35      7   6   6   6   6   5   5   5   5
++36      7   6   6   6   6   5   5   5   5
++37      7   6   6   6   6   5   5   5   5
++38      7   6   6   6   6   5   5   5   5
++39      7   6   6   6   6   5   5   5   5
++40      7   6   6   6   6   5   5   5   5
+diff --git a/might_and_guile/nubards/mxmembrd.2da b/might_and_guile/nubards/mxmembrd.2da
+index 4ce33d2..5c15680 100644
+--- might_and_guile/nubards/mxmembrd.2da
++++ might_and_guile/nubards/mxmembrd.2da
+@@ -1,43 +1,43 @@
+ 2DA V1.0
+ 0
+-        1   2   3   4   5   6   7
+-1       0   0   0   0   0   0   0
+-2       1   0   0   0   0   0   0
+-3       1   0   0   0   0   0   0
+-4       2   1   0   0   0   0   0
+-5       3   1   0   0   0   0   0
+-6       3   1   1   0   0   0   0
+-7       3   2   1   0   0   0   0
+-8       3   2   2   1   0   0   0
+-9       3   2   2   1   0   0   0
+-10      3   3   2   1   1   0   0
+-11      3   3   3   2   2   0   0
+-12      3   3   3   3   3   0   0
+-13      4   4   4   3   3   1   0
+-14      4   4   4   3   3   1   0
+-15      4   4   4   4   4   1   0
+-16      4   4   4   4   4   2   1
+-17      4   4   4   4   4   2   2
+-18      4   4   4   4   4   2   2
+-19      4   4   4   4   4   2   2
+-20      4   4   4   4   4   3   2
+-21      4   4   4   4   4   3   2
+-22      4   4   4   4   4   4   2
+-23      4   4   4   4   4   4   2
+-24      4   4   4   4   4   4   3
+-25      4   4   4   4   4   4   3
+-26      4   4   4   4   4   4   3
+-27      4   4   4   4   4   4   3
+-28      4   4   4   4   4   4   4
+-29      4   4   4   4   4   4   4
+-30      4   4   4   4   4   4   4
+-31      4   4   4   4   4   4   4
+-32      4   4   4   4   4   4   4
+-33      4   4   4   4   4   4   4
+-34      4   4   4   4   4   4   4
+-35      4   4   4   4   4   4   4
+-36      4   4   4   4   4   4   4
+-37      4   4   4   4   4   4   4
+-38      4   4   4   4   4   4   4
+-39      4   4   4   4   4   4   4
+-40      4   4   4   4   4   4   4
++        1   2   3   4   5   6   7   8   9
++1       0   0   0   0   0   0   0   0   0
++2       1   0   0   0   0   0   0   0   0
++3       1   0   0   0   0   0   0   0   0
++4       2   1   0   0   0   0   0   0   0
++5       3   1   0   0   0   0   0   0   0
++6       3   1   1   0   0   0   0   0   0
++7       3   2   1   0   0   0   0   0   0
++8       3   2   2   1   0   0   0   0   0
++9       3   2   2   1   0   0   0   0   0
++10      3   3   2   1   1   0   0   0   0
++11      3   3   3   2   2   0   0   0   0
++12      3   3   3   3   3   0   0   0   0
++13      4   4   4   3   3   1   0   0   0
++14      4   4   4   3   3   1   0   0   0
++15      4   4   4   4   4   1   0   0   0
++16      4   4   4   4   4   2   1   0   0
++17      4   4   4   4   4   2   2   0   0
++18      4   4   4   4   4   2   2   1   0
++19      4   4   4   4   4   2   2   1   0
++20      4   4   4   4   4   3   2   2   1
++21      4   4   4   4   4   3   2   2   2
++22      4   4   4   4   4   4   2   3   2
++23      4   4   4   4   4   4   2   3   3
++24      4   4   4   4   4   4   3   4   3
++25      4   4   4   4   4   4   3   4   4
++26      4   4   4   4   4   4   3   4   4
++27      4   4   4   4   4   4   3   4   4
++28      4   4   4   4   4   4   4   4   4
++29      4   4   4   4   4   4   4   4   4
++30      4   4   4   4   4   4   4   4   4
++31      4   4   4   4   4   4   4   4   4
++32      4   4   4   4   4   4   4   4   4
++33      4   4   4   4   4   4   4   4   4
++34      4   4   4   4   4   4   4   4   4
++35      4   4   4   4   4   4   4   4   4
++36      4   4   4   4   4   4   4   4   4
++37      4   4   4   4   4   4   4   4   4
++38      4   4   4   4   4   4   4   4   4
++39      4   4   4   4   4   4   4   4   4
++40      4   4   4   4   4   4   4   4   4
+diff --git a/might_and_guile/ranger/mxsplran.2da b/might_and_guile/ranger/mxsplran.2da
+index d251d66..fd30129 100644
+--- might_and_guile/ranger/mxsplran.2da
++++ might_and_guile/ranger/mxsplran.2da
+@@ -1,52 +1,52 @@
+ 2DA V1.0
+ 0
+-        1   2   3   4  
+-2       1   0   0   0   
+-3       2   0   0   0   
+-4       3   0   0   0   
+-5       3   1   0   0   
+-6       3   2   0   0   
+-7       4   2   0   0   
+-8       4   3   0   0   
+-9       4   3   1   0   
+-10      5   3   1   0   
+-11      5   3   2   0   
+-12      5   4   2   0   
+-13      5   4   2   1   
+-14      5   4   3   1   
+-15      5   4   3   2   
+-16      5   5   3   2   
+-17      5   5   4   2   
+-18      5   5   4   3   
+-19      5   5   5   3   
+-20      5   5   5   4   
+-21      5   5   5   4   
+-22      5   5   5   4   
+-23      5   5   5   4   
+-24      5   5   5   4   
+-25      5   5   5   4   
+-26      5   5   5   4   
+-27      5   5   5   4   
+-28      5   5   5   4   
+-29      5   5   5   4   
+-30      5   5   5   4   
+-31      5   5   5   4   
+-32      5   5   5   4   
+-33      5   5   5   4   
+-34      5   5   5   4   
+-35      5   5   5   4   
+-36      5   5   5   4   
+-37      5   5   5   4   
+-38      5   5   5   4   
+-39      5   5   5   4   
+-40      5   5   5   4   
+-41      5   5   5   4   
+-42      5   5   5   4   
+-43      5   5   5   4   
+-44      5   5   5   4   
+-45      5   5   5   4   
+-46      5   5   5   4   
+-47      5   5   5   4   
+-48      5   5   5   4   
+-49      5   5   5   4   
+-50      5   5   5   4   
+\ No newline at end of file
++        1   2   3   4   5   6
++2       1   0   0   0   0   0
++3       2   0   0   0   0   0
++4       3   0   0   0   0   0
++5       3   1   0   0   0   0
++6       3   2   0   0   0   0
++7       4   2   0   0   0   0
++8       4   3   0   0   0   0
++9       4   3   1   0   0   0
++10      5   3   1   0   0   0
++11      5   3   2   0   0   0
++12      5   4   2   0   0   0
++13      5   4   2   1   0   0
++14      5   4   3   1   0   0
++15      5   4   3   2   0   0
++16      5   5   3   2   0   0
++17      5   5   4   2   0   0
++18      5   5   4   3   0   0
++19      5   5   5   3   0   0
++20      5   5   5   4   1   0
++21      5   5   5   4   1   0
++22      5   5   5   4   1   0
++23      5   5   5   4   1   0
++24      5   5   5   4   2   0
++25      5   5   5   4   2   0
++26      5   5   5   4   2   0
++27      5   5   5   4   2   1
++28      5   5   5   4   3   1
++29      5   5   5   4   3   1
++30      5   5   5   4   3   1
++31      5   5   5   4   3   1
++32      5   5   5   4   3   1
++33      5   5   5   4   3   1
++34      5   5   5   4   3   1
++35      5   5   5   4   3   1
++36      5   5   5   4   3   1
++37      5   5   5   4   3   1
++38      5   5   5   4   3   1
++39      5   5   5   4   3   1
++40      5   5   5   4   3   1
++41      5   5   5   4   3   1
++42      5   5   5   4   3   1
++43      5   5   5   4   3   1
++44      5   5   5   4   3   1
++45      5   5   5   4   3   1
++46      5   5   5   4   3   1
++47      5   5   5   4   3   1
++48      5   5   5   4   3   1
++49      5   5   5   4   3   1
++50      5   5   5   4   3   1
