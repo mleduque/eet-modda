@@ -620,8 +620,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Imoen4Ever
-      release: v11.3
-      asset: imoen-4-ever-v11.3.iemod
+      release: v11.4
+      asset: imoen-4-ever-v11.4.iemod
   - name: alternatives
     installation:
       before: imoen4ever except imoen4ever compatibility (should be after alternative)
@@ -2972,7 +2972,7 @@ modules:
     location:
       github_user: subtledoctor
       repository: SubtleD_Spell_Tweaks
-      tag: "2.7-fr"
+      tag: "2.7.1-fr"
   - name: TomeAndBlood
     description: Tome And Blood - main
     components:
@@ -3100,9 +3100,9 @@ modules:
     components: ask
     ignore_warnings: true
     location:
-      github_user: mleduque
+      github_user: UnearthedArcana
       repository: Will_to_Power
-      branch: 2.5-fr
+      branch: "2.6.2"
       patch:
         relative: patches/will_to_power_tweaks.diff
   - name: Will_to_Power

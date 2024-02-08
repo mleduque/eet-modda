@@ -4,6 +4,15 @@ global:
   #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
   lang_dir: "fr_FR"
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+
+locations:
+  entries:
+    cdtweaks:
+      github_user: Gibberlings3
+      repository: Tweaks-Anthology
+      tag: v16
+
+
 modules:
 
 ##############
@@ -315,7 +324,6 @@ modules:
       after: spell_rev, iwdification
       before: TomeandBlood, faiths_and_powers, will_to_power, might_and_guile, cdtweaks, stratagems
     components:
-      - 1 # Souhaitez-vous afficher les composants d'ajustement individuels de sorts ?: 2.6.3
       - 21 # Re-equilibrage des ecoles profanes opposees -> Pas d'ecoles opposees: 2.6.3
       - 36 # Ajouter un jet de sauvegarde pour les effets d'absorption de niveau: 2.6.3
       - 55 # Modifier les sorts de soin pour ignorer les protections contre les sorts: 2.6.3
@@ -356,7 +364,9 @@ modules:
     location:
       github_user: mleduque
       repository: SubtleD_Spell_Tweaks
-      branch: 2.7-fr #fix-french
+      branch: 2.7.1-fr #fix-french
+      patch:
+        relative: patches/iwd/subtled-spell-tweaks.diff
   - name: SubtleD_Spell_Tweaks
     description: SubtleD's Spell Tweaks - cantrips (61 warns)
     components:
@@ -613,9 +623,9 @@ modules:
     description: Will to power - the first component warns
     components: ask
     location:
-      github_user: mleduque
+      github_user: UnearthedArcana
       repository: Will_to_Power
-      branch: 2.5-fr
+      branch: "2.6.2"
       patch:
         relative: patches/iwd/will_to_power_tweaks.diff
   - name: might_and_guile
@@ -654,10 +664,6 @@ modules:
 ##############
   - name: cdtweaks
     components: ask
-    location:
-      github_user: Gibberlings3
-      repository: Tweaks-Anthology
-      tag: v16
   - name: S9HouseRules
     components: ask
     location:
@@ -833,14 +839,14 @@ modules:
       repository: RandomGraionTweaks
       release: version-1.12
       asset: random-graion-tweaks-1.12.iemod
-  - name: fix_cre_script_names
   - name: d2-script
-    components: asks
+    components: ask
     location:
-    github_user: D2-mods
-    repository: Better-IWD-Pregen
-    release: v7.3
-    asset: better-iwd-pregen-7.3.iemod
+      github_user: D2-mods
+      repository: Better-IWD-Pregen
+      release: v7.3
+      asset: better-iwd-pregen-7.3.iemod
+  - name: fix_cre_script_names
     description: Some mod out there is altering various creatures' script names to "cre_strref." This hotfix changes the script name of all such creatures from "cre_strref" to their filename.
     components: ask
     location:
