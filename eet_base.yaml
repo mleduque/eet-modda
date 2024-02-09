@@ -2972,7 +2972,7 @@ modules:
     location:
       github_user: subtledoctor
       repository: SubtleD_Spell_Tweaks
-      tag: "2.7.1-fr"
+      tag: "2.7.2-fr"
   - name: TomeAndBlood
     description: Tome And Blood - main
     components:
