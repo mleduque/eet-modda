@@ -17,9 +17,11 @@ modules:
   #    asset: correctfrbg2ee-0.21.iemod
   - name: stratagems
     components:
-      - 2501
+      - 1500
+      - 1510
+      - 2000
     location:
-      github_user: Gibberlings3
+      github_user: jazira33
       repository: SwordCoastStratagems
-      branch: fr-check
+      branch: master
       refresh: ask
