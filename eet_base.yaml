@@ -1271,6 +1271,28 @@ modules:
       github_user: abalabokhin
       repository: NWNForBG
       tag: 0.95
+  - name: FowlWish
+    components: ask
+    location:
+      github_user: Glittergear
+      repository: A-Fowl-Wish
+      release: v1.3
+      asset: FowlWish.v1.3.zip
+  - name: GoneNuts
+    components: ask
+    location:
+      github_user: Glittergear
+      repository: GoneNuts
+      release: v1.1
+      asset: Gonenuts.zip
+  - name: DeadGardens
+    components: ask
+    location:
+      github_user: Glittergear
+      repository: DeadGardens
+      release: v1.0
+      asset: DeadGardens.zip
+
 
   #########
   # Section: NPC
@@ -2321,6 +2343,13 @@ modules:
     description: Trial of the Luremaster - XP reduction
     components: ask
       #- 30 # Reduire les points d'experience des monstres et des quetes. -> Reduction de 25 pour cent
+  - name: crucible
+    components: ask
+    location:
+      github_user: Gibberlings3
+      repository: Crucible
+      release: "1.1"
+      asset: lin-crucible-v1.1.zip
 
   #########
   # Spells
@@ -2938,8 +2967,8 @@ modules:
     location:
       github_user: D2-mods
       repository: The-Workshop-Kitpack
-      release: v4.7
-      asset: the-workshop-kitpack-4.7.iemod
+      release: v4.7.5
+      asset: the-workshop-kitpack-4.7.5.iemod
 
   #########
   # Multiclass kits
