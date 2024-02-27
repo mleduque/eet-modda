@@ -44,13 +44,19 @@ modules:
       file_name: bgee_dir.txt
       content: ../../bg1/game
 
-  - name: infinity_ui #or maybe dragonspear-ui++
+  - name: LeUI
+    components: ask
+    location:
+      github_user: r-e-d
+      repository: LeUI-SoD
+      release: v4.8
+      asset:  lefreuts-enhanced-ui-sod-skin-4.8.iemod
+  - name: remastered_spell_icons
     components: ask
     location:
       github_user: Renegade0
-      repository: InfinityUI
-      branch: master
-      refresh: 1day
+      repository: RemasteredSpellIcons
+      tag: v1.2
 
   - name: bggoEET
     components: ask

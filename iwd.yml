@@ -59,6 +59,12 @@ modules:
   #    github_user: 11jo
   #    repository: French-Translation_For_Dragonspear-UI_Artifox
   #    tag: Artifox
+  - name: remastered_spell_icons
+    components: ask
+    location:
+      github_user: Renegade0
+      repository: RemasteredSpellIcons
+      tag: v1.2
 
 ##############
 # Story/Quest
