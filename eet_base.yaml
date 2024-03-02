@@ -1276,7 +1276,7 @@ modules:
     location:
       github_user: abalabokhin
       repository: NWNForBG
-      tag: 0.95
+      tag: "0.96"
   - name: FowlWish
     components: ask
     location:
@@ -1298,6 +1298,13 @@ modules:
       repository: DeadGardens
       release: v1.0
       asset: DeadGardens.zip
+  - name: ErrantJusticeBG2
+    components: ask
+    location:
+      github_user: Glittergear
+      repository: ErrantJusticeBG2
+      release: v1.0
+      asset: Errant.Justice.1.0.zip
 
 
   #########
