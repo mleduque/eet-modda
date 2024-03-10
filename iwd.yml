@@ -223,8 +223,8 @@ modules:
     location:
       github_user: Argent77
       repository: DjinniCompanion
-      branch: devel
-      refresh: 2days
+      release: v2.10
+      asset: A7-DjinniCompanion-v2.10.iemod
   - name: TuraldNPC
     description: male dwarf figther/cleric, NG, dialogs, interjections, crossmod
     components:
@@ -479,8 +479,8 @@ modules:
     location:
       github_user: Argent77
       repository: A7-ImprovedArcher
-      release: v4.2
-      asset:  A7-ImprovedArcher-v4.2.iemod
+      release: v4.3
+      asset:  A7-ImprovedArcher-v4.3.iemod
   - name: ArtisansKitpack
     description: ArtisansKitpack - only single-class kits
     components:
@@ -766,7 +766,7 @@ modules:
     location:
       github_user: subtledoctor
       repository: SubtleD_Stat_Overhauls
-      branch: 1.5.1-fr
+      branch: 1.5.3-fr
       patch:
         relative: iwd/stat-overhaul-config.diff
   - name: skills-and-abilities
@@ -887,8 +887,8 @@ modules:
     location:
       github_user: Argent77
       repository: HiddenGameplayOptions
-      branch: devel
-      refresh: 2days
+      release: v4.7
+      asset: A7-HiddenGameplayOptions-v4.7.iemod
   - name: A7-LightingPackEE
     components: ask
     location:
