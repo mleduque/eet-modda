@@ -370,7 +370,7 @@ modules:
     location:
       github_user: mleduque
       repository: SubtleD_Spell_Tweaks
-      branch: 2.7.2-fr #fix-french
+      branch: 2.8-fr #fix-french
       patch:
         relative: patches/iwd/subtled-spell-tweaks.diff
   - name: SubtleD_Spell_Tweaks
