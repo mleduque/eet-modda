@@ -413,7 +413,7 @@ modules:
     components:
       - 0 # Colours of Infinity - The White Queen -> Yes, but don't patch the existing save games: 6.9
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/The White Queen v6.92.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/WhiteQueen v7.0.zip
   - name: ISNF
     description: "Colours of Infinity: I Shall Never Forget"
     components:
@@ -1180,8 +1180,8 @@ modules:
     location:
       github_user: GraionDilach
       repository: ExtraExpandedEnhancedEncounters
-      release: "4.2"
-      asset: extra-enhanced-expanded-encounters-4.2.iemod
+      release: "4.3"
+      asset: extra-enhanced-expanded-encounters-4.3.iemod
       patch:
         relative: patches/ExtraExpandedEnhancedEncouter-reducegnolls.diff
   - name: gbthfkp
@@ -2980,8 +2980,8 @@ modules:
     location:
       github_user: D2-mods
       repository: The-Workshop-Kitpack
-      release: v4.7.5
-      asset: the-workshop-kitpack-4.7.5.iemod
+      release: v4.7.8
+      asset: the-workshop-kitpack-4.7.8.iemod
 
   #########
   # Multiclass kits
