@@ -849,7 +849,7 @@ modules:
       # 4 : crossmod banter later after installing other mods
       - 5 # [CHEAT] Enable shaman stronghold for all classes
     location:
-      path: /home/mick/Games/modda-cache/static/willowisp v2.3.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/willowisp v3.0.zip
       replace:
         - file_globs: [ "willowisp/baf/l0will.baf" ]
           replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",2400)'
@@ -866,6 +866,10 @@ modules:
         - file_globs: [ "willowisp/baf/l0will25.baf" ]
           replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",1800)'
           with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",900)'
+  - name: bethany
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/Bethany v1.00.zip
   - name: paina
     components:
       - 0 # Pai'Na NPC for BG:EE
@@ -2361,8 +2365,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Crucible
-      release: "1.1"
-      asset: lin-crucible-v1.1.zip
+      release: "1.2"
+      asset: lin-crucible-v1.2.zip
 
   #########
   # Spells
