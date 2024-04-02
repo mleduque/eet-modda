@@ -862,19 +862,19 @@ modules:
       path: /home/mick/Games/modda-cache/static/weaselmods/willowisp v3.0.zip
       replace:
         - file_globs: [ "willowisp/baf/l0will.baf" ]
-          replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",2400)'
+          replace: 'RealSetGlobalTimer\("L0WillTimer","GLOBAL",2400\)'
           with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",1200)'
         - file_globs: [ "willowisp/baf/l0will.baf" ]
-          replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",1600)'
+          replace: 'RealSetGlobalTimer\("L0WillTimer","GLOBAL",1600\)'
           with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",900)'
         - file_globs: [ "willowisp/baf/l0will.baf" ]
-          replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",6000)'
+          replace: 'RealSetGlobalTimer\("L0WillTimer","GLOBAL",6000\)'
           with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",1200)'
         - file_globs: [ "willowisp/baf/l0will.baf" ]
-          replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",12000)'
+          replace: 'RealSetGlobalTimer\("L0WillTimer","GLOBAL",12000\)'
           with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",1800)'
         - file_globs: [ "willowisp/baf/l0will25.baf" ]
-          replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",1800)'
+          replace: 'RealSetGlobalTimer\("L0WillTimer","GLOBAL",1800\)'
           with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",900)'
   - name: paina
     components:
@@ -1338,31 +1338,31 @@ modules:
         relative: patches/branwen_bg2.diff
       replace:
         - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
-          replace: 'RealSetGlobalTimer("O#BranFlirtTimer","GLOBAL",2500)' # 42 min
+          replace: 'RealSetGlobalTimer\("O#BranFlirtTimer","GLOBAL",2500\)' # 42 min
           with: 'RealSetGlobalTimer("O#BranFlirtTimer","GLOBAL",780)' # 13min
         - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
-          replace: 'RealSetGlobalTimer("O#BranTimer","GLOBAL",3600)' # 60 min
+          replace: 'RealSetGlobalTimer\("O#BranTimer","GLOBAL",3600\)' # 60 min
           with: 'RealSetGlobalTimer("O#BranTimer","GLOBAL",1200)' # 20min
         - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
-          replace: 'RealSetGlobalTimer("O#BranFlirtTimerToB","GLOBAL",2500)' # 42 min
+          replace: 'RealSetGlobalTimer\("O#BranFlirtTimerToB","GLOBAL",2500\)' # 42 min
           with: 'RealSetGlobalTimer("O#BranFlirtTimerToB","GLOBAL",780)' # 13min
         - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
-          replace: 'RealSetGlobalTimer("O#BranTimerToB","GLOBAL",3600)' # 60 min
+          replace: 'RealSetGlobalTimer\("O#BranTimerToB","GLOBAL",3600\)' # 60 min
           with: 'RealSetGlobalTimer("O#BranTimerToB","GLOBAL",1200)' # 20min
         - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
-          replace: 'RealSetGlobalTimer("O#BranTimerToB","GLOBAL",1800)' # 30 min
+          replace: 'RealSetGlobalTimer\("O#BranTimerToB","GLOBAL",1800\)' # 30 min
           with: 'RealSetGlobalTimer("O#BranTimerToB","GLOBAL",600)' # 10min
         - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
-          replace: 'RealSetGlobalTimer("O#BranLoveTimer","GLOBAL",3600)' # 60 min
+          replace: 'RealSetGlobalTimer\("O#BranLoveTimer","GLOBAL",3600\)' # 60 min
           with: 'RealSetGlobalTimer("O#BranLoveTimer","GLOBAL",1080)' # 18min
         - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
-          replace: 'RealSetGlobalTimer("O#BranChapter5Timer","GLOBAL",3600)' # 60 min
+          replace: 'RealSetGlobalTimer\("O#BranChapter5Timer","GLOBAL",3600\)' # 60 min
           with: 'RealSetGlobalTimer("O#BranChapter5Timer","GLOBAL",300)' # 5min
         - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
-          replace: 'RealSetGlobalTimer("O#BranFlirtTimer","GLOBAL",300)' # 5min
+          replace: 'RealSetGlobalTimer\("O#BranFlirtTimer","GLOBAL",300\)' # 5min
           with: 'RealSetGlobalTimer("O#BranFlirtTimer","GLOBAL",180)' # 3min
         - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
-          replace: 'RealSetGlobalTimer("O#BranFlirtTimerToB","GLOBAL",300)' # 5min
+          replace: 'RealSetGlobalTimer\("O#BranFlirtTimerToB","GLOBAL",300\)' # 5min
           with: 'RealSetGlobalTimer("O#BranFlirtTimerToB","GLOBAL",180)' # 3min
   - name: ViconiaRevamped
     components: ask
@@ -1388,10 +1388,10 @@ modules:
       refresh: 3days
       replace:
         - file_globs: ["Dialogue/SoD/X32milyJ.d"]
-          replace: 'RealSetGlobalTimer("X32milyRealTalkTimer","GLOBAL",ONE_HOUR)' # 60 min
+          replace: 'RealSetGlobalTimer\("X32milyRealTalkTimer","GLOBAL",ONE_HOUR\)' # 60 min
           with: 'RealSetGlobalTimer("X32milyRealTalkTimer","GLOBAL",900)' # 15 min
         - file_globs: ["Scripts/X3mily.baf", "Dialogue/X3milyJ.d"]
-          replace: 'RealSetGlobalTimer("X3milyTimer","GLOBAL",3200)' # 53 min
+          replace: 'RealSetGlobalTimer\("X3milyTimer","GLOBAL",3200\)' # 53 min
           with: 'RealSetGlobalTimer("X32milyRealTalkTimer","GLOBAL",720)' # 12 min
   - name: Helga
     components: ask
@@ -1404,13 +1404,13 @@ modules:
         relative: patches/eet/helga_bg1-defaultportrait-nomusic.diff
       replace:
         - file_globs: ["Dialogue/SoD/X32HelgJ.D"]
-          replace: 'RealSetGlobalTimer("X32HelgaRealTalkTimer","GLOBAL",ONE_HOUR)' # 60 min
+          replace: 'RealSetGlobalTimer\("X32HelgaRealTalkTimer","GLOBAL",ONE_HOUR\)' # 60 min
           with: 'RealSetGlobalTimer("X32HelgaRealTalkTimer","GLOBAL",900)' # 15 min
         - file_globs: ["Dialogue/X3HelgaJ.D"]
-          replace: 'RealSetGlobalTimer("X3HelgaTalkTimer","GLOBAL",3100)' # 51 min
+          replace: 'RealSetGlobalTimer\("X3HelgaTalkTimer","GLOBAL",3100\)' # 51 min
           with: 'RealSetGlobalTimer("X3HelgaTalkTimer","GLOBAL",720)' # 12 min
         - file_globs: ["Scripts/X3Helga.baf"]
-          replace: 'SetGlobalTimer("X3HelgaQuestTen","GLOBAL",TEN_DAYS)'
+          replace: 'SetGlobalTimer("X3HelgaQuestTen","GLOBAL",TEN_DAYS\)'
           with: 'SetGlobalTimer("X3HelgaQuestTen","GLOBAL",FOUR_DAYS)'
   - name: Kale
     components: ask
@@ -1423,7 +1423,7 @@ modules:
         relative: patches/eet/kale_bg1-nomusic.diff
       replace:
         - file_globs: ["Dialogue/SoD/X32KaleJ.d"]
-          replace: 'SetGlobalTimer("X32KaleGameTalkTimer","GLOBAL",THREE_DAYS)'
+          replace: 'SetGlobalTimer("X32KaleGameTalkTimer","GLOBAL",THREE_DAYS\)'
           with: 'SetGlobalTimer("X32KaleGameTalkTimer","GLOBAL",ONE_DAY)'
     #prompt for music (2. No)
   - name: Recorder
@@ -1435,7 +1435,7 @@ modules:
       refresh: 3days
       replace:
         - file_globs: ["Dialogue/SoD/X32RecJ.d"]
-          replace: 'SetGlobalTimer("X32RecGameTalkTimer","GLOBAL",THREE_DAYS)'
+          replace: 'SetGlobalTimer("X32RecGameTalkTimer","GLOBAL",THREE_DAYS\)'
           with: 'SetGlobalTimer("X32RecGameTalkTimer","GLOBAL",ONE_DAY)'
   - name: Vienxay
     components: ask
@@ -1449,7 +1449,7 @@ modules:
         relative: patches/eet/viexnay_bg1-defaultprotrait-nomusic.diff
       replace:
         - file_globs: ["Dialogue/SoD/X32VienJ.d"]
-          replace: 'SetGlobalTimer("X32VienGameTalkTimer","GLOBAL",THREE_DAYS)'
+          replace: 'SetGlobalTimer("X32VienGameTalkTimer","GLOBAL",THREE_DAYS\)'
           with: 'SetGlobalTimer("X32RecGameTalkTimer","GLOBAL",ONE_DAY)'
   - name: SkitiaNPCs
     components: ask
@@ -1469,13 +1469,13 @@ modules:
         replace: 'SetGlobalTimer\("X3(?<c>.*)Timer","GLOBAL",300\)'
         with: 'SetGlobalTimer("X3${c}Timer","GLOBAL",200)'
         file_globs: ["Dialogue/RestTalk.d", "Scripts/Rest*.baf"]
-        replace: 'RealSetGlobalTimer("X3RestTimer","GLOBAL",6000)'
+        replace: 'RealSetGlobalTimer\("X3RestTimer","GLOBAL",6000\)'
         with: 'RealSetGlobalTimer("X3RestTimer","GLOBAL",1200)'
         file_globs: ["Scripts/*.baf"]
-        replace: 'SetGlobalTimer("X3RestTimer","GLOBAL",SEVEN_DAYS)'
+        replace: 'SetGlobalTimer("X3RestTimer","GLOBAL",SEVEN_DAYS\)'
         with: 'SetGlobalTimer("X3RestTimer","GLOBAL",THREE_DAYS)'
         file_globs: ["Dialogue/X3IsaJ.d"]
-        replace: 'SetGlobalTimer("X3IsaReminder","GLOBAL",SEVEN_DAYS)'
+        replace: 'SetGlobalTimer("X3IsaReminder","GLOBAL",SEVEN_DAYS\)'
         with: 'SetGlobalTimer("X3IsaReminder","GLOBAL",FOURTEEN_DAYS)'
         file_globs: ["Dialogue/*.d"]
         replace: 'RealSetGlobalTimer\("X3(?<c>.*)Timer","GLOBAL",2700\)'
@@ -1492,7 +1492,7 @@ modules:
       asset:  nephele-npc-v2.7.iemod
       replace:
         file_globs: ["dialogue/lk#ne*.d"]
-        replace: 'RealSetGlobalTimer("LK#Neph(?<c>.*)TalksTimer","GLOBAL",5400)'
+        replace: 'RealSetGlobalTimer\("LK#Neph(?<c>.*)TalksTimer","GLOBAL",5400\)'
         with: 'RealSetGlobalTimer("LK#Neph${c}TalksTimer","GLOBAL",900)'
   - name: Petsy
     installation:
@@ -1504,16 +1504,16 @@ modules:
         relative: patches/eet/petsy-romance.diff
       replace:
         - file_globs: ['Dialogues/L3PetsyJ.d']
-          replace: 'RealSetGlobalTimer("L3PetsyQ2T","GLOBAL",2000)'
+          replace: 'RealSetGlobalTimer\("L3PetsyQ2T","GLOBAL",2000\)'
           with: 'RealSetGlobalTimer("L3PetsyQ2T","GLOBAL",600)'
         - file_globs: ['Dialogues/Samuel.d']
-          replace: 'RealSetGlobalTimer("SamuelAndPetsy","GLOBAL",3000)'
+          replace: 'RealSetGlobalTimer\("SamuelAndPetsy","GLOBAL",3000\)'
           with: 'RealSetGlobalTimer("SamuelAndPetsy","GLOBAL",900)'
         - file_globs: ['Scripts/L3Pet25.baf']
-          replace: 'RealSetGlobalTimer("L3ToBN","GLOBAL",2400)'
+          replace: 'RealSetGlobalTimer\("L3ToBN","GLOBAL",2400)'
           with: 'RealSetGlobalTimer("L3ToBN","GLOBAL",900)'
         - file_globs: ['Scripts/*.baf']
-          replace: 'RealSetGlobalTimer("L3(?<c>.*)Time","GLOBAL",1\d00)'
+          replace: 'RealSetGlobalTimer\("L3(?<c>.*)Time","GLOBAL",1\d00\)'
           with: 'RealSetGlobalTimer("L3${c}Time","GLOBAL",450)'
   - name: Yvette
     description: "Colours of Infinity: Yvette Romance"
@@ -1525,13 +1525,13 @@ modules:
         relative: patches/eet/yvette-romance.diff
       replace:
         file_globs: ["DIALOGUES/*.d"]
-        replace: 'RealSetGlobalTimer("YvetteUnderdarkTimer","GLOBAL",1000)'
+        replace: 'RealSetGlobalTimer\("YvetteUnderdarkTimer","GLOBAL",1000\)'
         with: 'RealSetGlobalTimer("YvetteUnderdarkTimer","GLOBAL",300)'
         file_globs: ["SCRIPTS/YxYv25.baf"]
-        replace: 'RealSetGlobalTimer("YvetteToBTimer","GLOBAL",1600)'
+        replace: 'RealSetGlobalTimer\("YvetteToBTimer","GLOBAL",1600\)'
         with: 'RealSetGlobalTimer("YvetteToBTimer","GLOBAL",600)'
         file_globs: ["SCRIPTS/YxYve.baf"]
-        replace: 'RealSetGlobalTimer("YvetteRomanceTime","GLOBAL",1800)'
+        replace: 'RealSetGlobalTimer\("YvetteRomanceTime","GLOBAL",1800\)'
         with: 'RealSetGlobalTimer("YvetteRomanceTime","GLOBAL",700)'
   - name: ACBre
     description: Ascalon's Breagar
@@ -1584,20 +1584,20 @@ modules:
       replace:
         # BrandockNPCBanterTimer3600
         - file_globs: ["crossmod/bg1npc.baf", "crossmod/brando_crossmod_bg1npc_BG1.d", "dialogue/brandock_sod.d", "dialogue/c#brando.d"]
-          replace: 'RealSetGlobalTimer("C#BrandockNPCBanterTimer","GLOBAL",3600)'
+          replace: 'RealSetGlobalTimer\("C#BrandockNPCBanterTimer","GLOBAL",3600\)'
           with: 'RealSetGlobalTimer("C#BrandockNPCBanterTimer","GLOBAL",1200)'
           comment: Reduce 3600s/1h _real-time_ talks timers to 1200s/20min real-time
         # 1200
         - file_globs: ["dialogue/brandock_sod.d"]
-          replace: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",1200)'
+          replace: 'RealSetGlobalTimer\("C#BrandockDialogTimer","GLOBAL",1200\)'
           with: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",600)'
         # 600
         - file_globs: ["dialogue/brandock_sod.d", "scripts/c#brando_bg2.baf"]
-          replace: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",600)'
+          replace: 'RealSetGlobalTimer\("C#BrandockDialogTimer","GLOBAL",600\)'
           with: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",300)'
         # 1800
         - file_globs: ["scripts/c#brando_sod.baf"]
-          replace: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",1800)'
+          replace: 'RealSetGlobalTimer\("C#BrandockDialogTimer","GLOBAL",1800\)'
           with: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",900)'
         # timer constants
         - file_globs: ["c#brandock.tp2"]
@@ -1619,12 +1619,25 @@ modules:
       repository: Brages_Redemption
       release: v9.1
       asset: brages-redemption-brage-npc-9.1.iemod
-      patch:
-        relative: patches/brage_less_wait.diff
       replace:
-        - file_globs: []
-          replace:
-          with:
+        - file_globs: ["baf/C#BrageD.baf", "baf/c#brage1.baf"]
+          replace: 'RealSetGlobalTimer\("C#BE_BrageDialogueTimer","GLOBAL",3200\)'
+          with: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",420)'
+        - file_globs: ["baf/c#brage2.baf"]
+          replace: 'RealSetGlobalTimer\("C#BE_LilarcorEquippedTimer","GLOBAL",3600\)'
+          with: 'RealSetGlobalTimer("C#BE_LilarcorEquippedTimer","GLOBAL",600)'
+        - file_globs: ["crossmod/*.baf"]
+          replace: 'RealSetGlobalTimer\("C#BE_BGQETimer","GLOBAL",1000\)'
+          with: 'RealSetGlobalTimer("C#BE_BGQETimer","GLOBAL",120)'
+        - file_globs: ["dialogue/bg1.d", "dialogue/joining_bg1.d"]
+          replace: 'RealSetGlobalTimer\("C#BE_BrageDialogueTimer","GLOBAL",800\)'
+          with: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",100)'
+        - file_globs: ["dialogue/joining_bg2.d"]
+          replace: 'RealSetGlobalTimer\("C#BE_BrageDialogueTimer","GLOBAL",1600\)'
+          with: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",200)'
+        - file_globs: ["dialogue/joining_tob.d"]
+          replace: 'RealSetGlobalTimer\("C#BE_BrageDialogueTimer","GLOBAL",800\)'
+          with: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",200)'
   - name: c#husam
     components: ask
     installation:
@@ -1634,6 +1647,28 @@ modules:
       repository: Husam_NPC
       release: vBeta_230411
       asset: husam-npc-for-bgt-bgsod-bgiiee-and-eet-beta_230411.iemod
+      replace:
+        file_glob: ["scripts/c#husam_sva.baf"]
+        replace: 'RealSetGlobalTimer\("C#Husam2_DialogTimer","GLOBAL",1800\)'
+        with: 'RealSetGlobalTimer("C#Husam2_DialogTimer","GLOBAL",800)'
+        file_glob: ["dialogues/husam_pid.d"]
+        replace: 'RealSetGlobalTimer\("C#HusamDialogTimer","GLOBAL",2400\)'
+        with: 'RealSetGlobalTimer("C#HusamDialogTimer","GLOBAL",600)'
+        file_glob: ["scripts/c#husam_base.baf"]
+        replace: 'RealSetGlobalTimer\("C#HusamDialogTimer","GLOBAL",900\)'
+        with: 'RealSetGlobalTimer("C#HusamDialogTimer","GLOBAL",300)'
+        file_glob: ["scripts/c#husam_base.baf"]
+        replace: 'RealSetGlobalTimer\("C#HusamNPCBanterTimer","GLOBAL",1800\)'
+        with: 'RealSetGlobalTimer("C#HusamNPCBanterTimer","GLOBAL",800)'
+        file_glob: ["scripts/c#husam_base.baf"]
+        replace: 'RealSetGlobalTimer\("C#HusamNPCBanterTimer","GLOBAL",3000\)'
+        with: 'RealSetGlobalTimer("C#HusamNPCBanterTimer","GLOBAL",900)'
+        file_glob: ["crossmod/husam_alternatives.baf"]
+        replace: 'RealSetGlobalTimer\("C#Husam(?<c>.*)Timer","GLOBAL",1800\)'
+        with: 'RealSetGlobalTimer("C#Husam${c}Timer","GLOBAL",1800)'
+        file_glob: ["dialogues/husam_sod.d"]
+        replace: 'RealSetGlobalTimer\("C#Husam(?<c>.*)Timer","GLOBAL",900\)'
+        with: 'RealSetGlobalTimer("C#Husam${c}Timer","GLOBAL",400)'
   - name: c#greythedog
     description: Grey the dog
     installation:
@@ -1658,6 +1693,7 @@ modules:
       release: v2.0.0
       asset: beyond-the-law-v2.0.0.iemod
   - name: alora
+    description: alora in bg2, minimal npc with some banter and no quest
     components:
       - 0 # Alora PNJ de Chosen of Mystra: 2.0
     location:
@@ -1672,6 +1708,15 @@ modules:
       repository: Xan_BG1_Friendship
       release: v11
       asset: xanbg1friend_v11.zip
+      replace:
+        file_globs: ["Dialogue/O#XanBG1.d", "Dialogue/O#XanBGT.d", "Dialogue/O#XanBGEE.d",
+                      "Scripts/xan.baf", "Scripts/xanbgee.baf"]
+        replace: 'RealSetGlobalTimer\("O#XanBG1FriendTimer","GLOBAL",3000\)'
+        with: 'RealSetGlobalTimer("O#XanBG1FriendTimer","GLOBAL",600)'
+      replace:
+        file_globs: ["Scripts/_xan.baf", "Scripts/xan.baf", "Scripts/xanbgee.baf"]
+        replace: 'RealSetGlobalTimer\("O#XanBG1FriendTimer(?<c>\d)","GLOBAL",500\)'
+        with: 'RealSetGlobalTimer("O#XanBG1FriendTimer${c}","GLOBAL",180)'
   - name: FinchNPC
     version: 6.0
     components: [0]
@@ -1681,7 +1726,7 @@ modules:
       release: v6.0
       asset: finch-npc-mod-v6.0.iemod
       patch:
-        relative: finch-wait-here.diff
+        relative: eet/finch-wait-here.diff
   - name: IndiNPC
     version: "15"
     components:
@@ -1693,9 +1738,17 @@ modules:
       release: v14
       asset: indira-npc-mod-v14.iemod
   - name: Walahnan
+    description: mage in Ulgoth's beard, with quest, only until chapter 4 (included)
     components: [0]
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/Walahnan v2.00.zip
+      replace:
+        file_glob: ["dialogue/L#SWALAJ.d", "dialogue/L#WALAHJ.d"]
+        replace: 'RealSetGlobalTimer\("L#WalahnanUniquePIDTIME","GLOBAL",3800\)'
+        with: 'RealSetGlobalTimer("L#WalahnanUniquePIDTIME","GLOBAL",800)'
+        file_glob: ["scripts/L#SWALAH.baf", "scripts/L#WALAH.baf"]
+        replace: 'RealSetGlobalTimer\("L#WalahnanFriendTime","GLOBAL",\d\d00\)'
+        with: 'RealSetGlobalTimer("L#WalahnanUniquePIDTIME","GLOBAL",800)'
   - name: WalahnanBG2
     components:
       - 0 # Walahnan NPC for BG2EE: 0.92
@@ -1757,44 +1810,44 @@ modules:
       replace:
         # faster mini-quest start
         - file_globs: ["adrian/dialogue/rh#adrj.d"]
-          replace: 'RealSetGlobalTimer("rh#AdrianDamarovTimer","GLOBAL",2700)'
+          replace: 'RealSetGlobalTimer\("rh#AdrianDamarovTimer","GLOBAL",2700\)'
           with: 'RealSetGlobalTimer("rh#AdrianDamarovTimer","GLOBAL",1200)'
           comment: Reduce 2700s/45min _real-time_ talks timers to 1200s/20min real-time
         # gavin
         - file_globs: ["adrian/crossmod/gavin.d"]
-          replace: 'RealSetGlobalTimer("rh#AdrianGavinTalkTimer","GLOBAL",3600)'
+          replace: 'RealSetGlobalTimer\("rh#AdrianGavinTalkTimer","GLOBAL",3600\)'
           with: 'RealSetGlobalTimer("rh#AdrianGavinTalkTimer","GLOBAL",900)'
         # kivan
         - file_globs: ["adrian/crossmod/kivan.d"]
-          replace: 'RealSetGlobalTimer("rh#AdrianKivanTalkTimer","GLOBAL",3600)'
+          replace: 'RealSetGlobalTimer\("rh#AdrianKivanTalkTimer","GLOBAL",3600\)'
           with: 'RealSetGlobalTimer("rh#AdrianKivanTalkTimer","GLOBAL",900)'
         # TOB banters
         - file_globs: ["adrian/dialogue/brh#ad25.d"]
-          replace: '"GLOBAL",3600)'
+          replace: '"GLOBAL",3600\)'
           with: '"GLOBAL",1200)'
         # banters
         - file_globs: ["adrian/dialogue/brh#adr.d"]
-          replace: '"GLOBAL",3600)'
+          replace: '"GLOBAL",3600\)'
           with: '"GLOBAL",1200)'
         # banters
         - file_globs: ["adrian/dialogue/brh#adr.d"]
-          replace: '"GLOBAL",7200)'
+          replace: '"GLOBAL",7200\)'
           with: '"GLOBAL",2400)'
         # TOB talks
         - file_globs: ["adrian/dialogue/rh#ad25j.d"]
-          replace: 'RealSetGlobalTimer("rh#AdrianTalksTOBTimer","GLOBAL",2700)'
+          replace: 'RealSetGlobalTimer\("rh#AdrianTalksTOBTimer","GLOBAL",2700\)'
           with: 'RealSetGlobalTimer("rh#AdrianTalksTOBTimer","GLOBAL",1200)'
         # talks
         - file_globs: ["adrian/dialogue/rh#adrj.d"]
-          replace: 'RealSetGlobalTimer("rh#AdrianTalksTimer","GLOBAL",2700)'
+          replace: 'RealSetGlobalTimer\("rh#AdrianTalksTimer","GLOBAL",2700\)'
           with: 'RealSetGlobalTimer("rh#AdrianTalksTimer","GLOBAL",1200)'
         # talks
         - file_globs: ["adrian/dialogue/rh#adrj.d"]
-          replace: 'RealSetGlobalTimer("rh#AdrianSpawnTimer","GLOBAL",2700)'
+          replace: 'RealSetGlobalTimer\("rh#AdrianSpawnTimer","GLOBAL",2700\)'
           with: 'RealSetGlobalTimer("rh#AdrianSpawnTimer","GLOBAL",1200)'
         # quest
         - file_globs: ["adrian/dialogue/rh#quest.d"]
-          replace: 'SetGlobalTimer("rh#DamarovReturnsTimer","GLOBAL",TEN_DAYS) RealSetGlobalTimer("rh#AdrianTalksTimer","GLOBAL",5)'
+          replace: 'SetGlobalTimer\("rh#DamarovReturnsTimer","GLOBAL",TEN_DAYS\) RealSetGlobalTimer\("rh#AdrianTalksTimer","GLOBAL",5\)'
           with: 'SetGlobalTimer("rh#DamarovReturnsTimer","GLOBAL",FIVE_DAYS) RealSetGlobalTimer("rh#AdrianTalksTimer","GLOBAL",5)'
   - name: valerie
     components: [0]
@@ -1904,32 +1957,32 @@ modules:
         relative: patches/fade.diff
       replace:
         - file_globs: ["Dialogues/FADE.d"]
-          replace: 'RealSetGlobalTimer("E3FADEFRIEND","GLOBAL",2600)'
+          replace: 'RealSetGlobalTimer\("E3FADEFRIEND","GLOBAL",2600\)'
           with: 'RealSetGlobalTimer("E3FADEFRIEND","GLOBAL",720)'
           comment: Reduce 2600s/43min _real-time_ talks timers to 720s/12min real-time
         - file_globs: ["Scripts/E3Fade.baf"]
-          replace: 'RealSetGlobalTimer("E3FADEFRIEND","GLOBAL",3800)'
+          replace: 'RealSetGlobalTimer\("E3FADEFRIEND","GLOBAL",3800\)'
           with: 'RealSetGlobalTimer("E3FADEFRIEND","GLOBAL",720)'
         - file_globs: ["Scripts/*.baf"]
-          replace: 'RealSetGlobalTimer("E3FADEROMANCE","GLOBAL",3800)'
+          replace: 'RealSetGlobalTimer\("E3FADEROMANCE","GLOBAL",3800\)'
           with: 'RealSetGlobalTimer("E3FADEROMANCE","GLOBAL",800)'
         - file_globs: ["Scripts/*.baf"]
-          replace: 'RealSetGlobalTimer("E3FADEROMANCE","GLOBAL",2600)'
+          replace: 'RealSetGlobalTimer\("E3FADEROMANCE","GLOBAL",2600\)'
           with: 'RealSetGlobalTimer("E3FADEROMANCE","GLOBAL",600)'
         - file_globs: ["Scripts/*.baf"]
-          replace: 'RealSetGlobalTimer("E3FADEROMANCE","GLOBAL",2400)'
+          replace: 'RealSetGlobalTimer\("E3FADEROMANCE","GLOBAL",2400\)'
           with: 'RealSetGlobalTimer("E3FADEROMANCE","GLOBAL",600)'
         - file_globs: ["Scripts/*.baf"]
-          replace: 'RealSetGlobalTimer("E3FADEROMANCE","GLOBAL",2000)'
+          replace: 'RealSetGlobalTimer\("E3FADEROMANCE","GLOBAL",2000\)'
           with: 'RealSetGlobalTimer("E3FADEROMANCE","GLOBAL",480)'
         - file_globs: ["Scripts/*.baf"]
-          replace: 'RealSetGlobalTimer("E3FADEROMANCE","GLOBAL",1000)'
+          replace: 'RealSetGlobalTimer\("E3FADEROMANCE","GLOBAL",1000\)'
           with: 'RealSetGlobalTimer("E3FADEROMANCE","GLOBAL",240)'
         - file_globs: ["Scripts/E3Fade25.baf"]
-          replace: 'RealSetGlobalTimer("E3BABYTALKTIMER","GLOBAL",1200)'
+          replace: 'RealSetGlobalTimer\("E3BABYTALKTIMER","GLOBAL",1200\)'
           with: 'RealSetGlobalTimer("E3BABYTALKTIMER","GLOBAL",200)'
         - file_globs: ["Scripts/E3Fade25.baf"]
-          replace: 'RealSetGlobalTimer("E3BABYTALKTIMER","GLOBAL",2000)'
+          replace: 'RealSetGlobalTimer\("E3BABYTALKTIMER","GLOBAL",2000\)'
           with: 'RealSetGlobalTimer("E3BABYTALKTIMER","GLOBAL",300)'
   - name: dace
     components:
@@ -2069,19 +2122,19 @@ modules:
         relative: patches/dearnise.diff
         replace:
           - file_globs: ["Dialogue/PGNalLT.d"]
-            replace: 'RealSetGlobalTimer("PGNaliaRomanceTimer","GLOBAL",2700)' # 45min
+            replace: 'RealSetGlobalTimer\("PGNaliaRomanceTimer","GLOBAL",2700\)' # 45min
             with: 'RealSetGlobalTimer("PGNaliaRomanceTimer","GLOBAL",600)'    # 10min
           - file_globs: ["Dialogue/PGNalFL.d"]
-            replace: 'RealSetGlobalTimer("PGNaliaFlirtTimer","GLOBAL",2700)' # 45min
+            replace: 'RealSetGlobalTimer\("PGNaliaFlirtTimer","GLOBAL",2700\)' # 45min
             with: 'RealSetGlobalTimer("PGNaliaFlirtTimer","GLOBAL",600)'    # 10min
           - file_globs: ["Dialogue/PGNalQ.d"]
-            replace: 'RealSetGlobalTimer("PGNaliaCowledTimer","GLOBAL",5000)' # 83min
+            replace: 'RealSetGlobalTimer\("PGNaliaCowledTimer","GLOBAL",5000\)' # 83min
             with: 'RealSetGlobalTimer("PGNaliaCowledTimer","GLOBAL",600)' # 10min
           - file_globs: ["Scripts/PGNalia.baf"]
-            replace: 'RealSetGlobalTimer("PGNaliaRomanceTimer","GLOBAL",1200)' # 20min
+            replace: 'RealSetGlobalTimer\("PGNaliaRomanceTimer","GLOBAL",1200\)' # 20min
             with: 'RealSetGlobalTimer("PGNaliaRomanceTimer","GLOBAL",360)' # 6min
           - file_globs: ["Scripts/PGNalia.baf"]
-            replace: 'RealSetGlobalTimer("PGNaliaLT14Timer","GLOBAL",500)'
+            replace: 'RealSetGlobalTimer\("PGNaliaLT14Timer","GLOBAL",500\)'
             with: 'RealSetGlobalTimer("PGNaliaLT14Timer","GLOBAL",200)'
   # not compatible with imoen4ever
   #- name: imoenRomance

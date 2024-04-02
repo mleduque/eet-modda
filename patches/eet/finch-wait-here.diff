@@ -1,0 +1,55 @@
+diff --git a/FinchNPC/d/sufinch.D b/FinchNPC/d/sufinch.D
+index c005a83..302199b 100644
+--- FinchNPC/d/sufinch.D
++++ FinchNPC/d/sufinch.D
+@@ -295,6 +295,7 @@ BEGIN ~SUFINCHP~
+ IF ~Global("SUFinchJoined","LOCALS",1)~ THEN BEGIN SuFinchKickOut
+   SAY @157 
+   ++ @158 GOTO SuFinchAlrightThen
++  ++ @158001  DO ~SetGlobal("SUFinchJoined","LOCALS",0)~ GOTO SuFinchWaitHere
+   ++ @159 DO ~SetGlobal("SUFinchJoined","LOCALS",0)~ GOTO SuFinchSecondThoughts
+ END
+ 
+@@ -303,6 +304,11 @@ SAY @160
+ IF ~~ THEN DO ~JoinParty()~  EXIT
+ END
+ 
++IF ~~ THEN BEGIN SuFinchWaitHere
++SAY @161001
++IF ~~ THEN EXIT
++END
++
+ IF ~~ THEN BEGIN SuFinchSecondThoughts
+ SAY @161
+ IF ~~ THEN EXIT
+diff --git a/FinchNPC/tra/english/sufinch.tra b/FinchNPC/tra/english/sufinch.tra
+index b628795..c8f7891 100644
+--- FinchNPC/tra/english/sufinch.tra
++++ FinchNPC/tra/english/sufinch.tra
+@@ -180,8 +180,10 @@ We should visit the manor house in the north of Nashkel once we have all of Finc
+ @157  = ~You... you want our association to end? Why, my journal is hardly full! Please reconsider.~ [SUFINC55]
+ @158  = ~You are right. We cannot stop before that journal is filled with adventures!~
+ @159  = ~No, I have had enough of your bookish ways. I need someone more exciting in this party.~
++@158001	= ~I just need you to wait me me here. We'llsearch again when I'm back.~
+ @160  = ~Oh! I am so glad you agree, <CHARNAME>!~
+ @161  = ~Oh. And I thought I was coming out of my shell... How disappointing!~
++@161001 = ~Really ? I'll spend some time classifying what we found, but don't make we wait too much !~
+ @162  = ~Why, <CHARNAME>! I had hoped to see you again! Do you wish for us to travel in tandem once more?~ [SUFINC56]
+ @163  = ~Certainly! It was just not the same with the constant scratching of a quill in the air! ~
+ @164  = ~No, I need different company than you at the moment.~
+diff --git a/FinchNPC/tra/french/sufinch.tra b/FinchNPC/tra/french/sufinch.tra
+index 2990194..5b87967 100644
+--- FinchNPC/tra/french/sufinch.tra
++++ FinchNPC/tra/french/sufinch.tra
+@@ -179,9 +179,11 @@ Nous devrions aller au manoir au nord de Nashkel une fois que nous aurons tous l
+ @156	= ~J'accepte vos excuses avec joie ! Je n'ai pas l'habitude d'être en conflit avec les gens -- c'est si peu agréable ! J'en deviens nerveuse !~
+ @157	= ~Vous... Vous voulez mettre fin à notre association ? Quoi, mon journal est loin d'être terminé ! S'il vous plaît, repensez-y.~ [SUFINC55]
+ @158	= ~Vous avez raison. Nous ne pouvons arrêter avant que votre journal ne soit empli d'aventures !~
++@158001	= ~J'ai juste besoin que vous m'attendiez ici. Nous pourrons reprendre notre recherche quand je reviendrai vous chercher.~
+ @159	= ~Non, j'en ai assez de vos manières littéraires. J'ai besoin de quelqu'un de plus excitant dans ce groupe.~
+ @160	= ~Oh, je suis si heureuse que vous soyez d'accord, <CHARNAME> !~
+ @161	= ~Oh. Et dire que je pensais que je sortais de ma coquille... Que c'est triste !~
++@161001 = ~Vraiment ? Je vais réorganiser mes trouvailles en attendant, mais ne tardez pas trop !~
+ @162	= ~Quoi, <CHARNAME> ! J'espérais vous rencontrer de nouveau ! Voulez-vous que nous voyagions ensemble une fois de plus ?~ [SUFINC56]
+ @163	= ~Certainement ! Ce n'était plus la même chose sans le grattement permanent d'une plume !~
+ @164	= ~Non, j'ai besoin de quelqu'un d'autre que vous en ce moment.~
