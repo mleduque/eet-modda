@@ -5,13 +5,6 @@ global:
   lang_dir: "fr_FR"
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
 modules:
-  - name: bg2fixpack
-    components: ask
-    location:
-      github_user: Gibberlings3
-      repository: BG2-Fixpack
-      release: v13
-      asset: lin-bg2fixpack-v13.tar.gz
   - name: correctfrbg2ee
     components:
       - 10 # Correction de la traduction de Baldur's Gate II : Enhanced Edition: 0.7
@@ -111,26 +104,6 @@ modules:
       - 2200  # Extended Epilogues for additional Beamdog NPCs, by shawne
       - 2300  # Sharper portraits of Abazigal and Gromnir for the Enhanced Edition, by DavidW
       - 2400  # Slightly improved cutscenes, by DavidW
-  - name: arestorationp
-    description: Almateria's Restoration Project
-    components:
-      # new version with components added
-      #- 0 # Restauration de lieux: v8.4
-      #- 1 # Restauration de personnages et de dialogues: v8.4
-      #- 2 # Restauration de sons: v8.4
-      #- 3 # Restauration d'objets: v8.4
-      #- 4 # Restauration d'options de souhait: v8.4
-      #- 5 # Restauration de table d'XP dans ToB: v8.4
-      #- 6 # Liche Deril: v8.4
-      #- 8 # Restaurations mineures: v8.4
-      #- 11 # Restauration du reve de fin avec l'Ecorcheur: v8.4
-      #- 12 # Transformation en Ecorcheur alternative: v8.4
-      #- 13 # Restauration de la cinematique de la Promenade de Waukyne: v8.4
-    location:
-      github_user: SpellholdStudios
-      repository: Almaterias_Restoration_Project
-      release: v10.0
-      asset: almaterias-restoration-project-v10.0.iemod
   - name: ub
     description: Unfinished Business
     components:
@@ -158,11 +131,32 @@ modules:
     location:
       github_user: Pocket-Plane-Group
       repository: UnfinishedBusiness
-      commit: 9cceb75
+      branch: master
+      refresh: 7days
       replace:
         file_glob: ["*.tp2"]
         replace: "^ASK_EVERY_COMPONENT$"
         with: ""
+  - name: arestorationp
+    description: Almateria's Restoration Project
+    components: ask
+      # new version with components added
+      #- 0 # Restauration de lieux: v8.4
+      #- 1 # Restauration de personnages et de dialogues: v8.4
+      #- 2 # Restauration de sons: v8.4
+      #- 3 # Restauration d'objets: v8.4
+      #- 4 # Restauration d'options de souhait: v8.4
+      #- 5 # Restauration de table d'XP dans ToB: v8.4
+      #- 6 # Liche Deril: v8.4
+      #- 8 # Restaurations mineures: v8.4
+      #- 11 # Restauration du reve de fin avec l'Ecorcheur: v8.4
+      #- 12 # Transformation en Ecorcheur alternative: v8.4
+      #- 13 # Restauration de la cinematique de la Promenade de Waukyne: v8.4
+    location:
+      github_user: SpellholdStudios
+      repository: Almaterias_Restoration_Project
+      branch: master
+      refresh: 7days
   - name: mih_fr
     description: Made in Heaven - Fixes & Restoration; 'fixes' part only
     installation:
@@ -176,6 +170,8 @@ modules:
       - 6 # Restaurations de dialogues BG2: v1
       - 7 # Artemis Entreri dans l'antre de Bodhi: v1
       - 8 # Allies are Better Prepared
+    branch: master
+    refresh: 7days
   - name: c#sodboabri
     description: The Boareskyr Bridge Scene
     link: https://github.com/Gitjas/The_Boareskyr_Bridge_Scene
@@ -231,7 +227,7 @@ modules:
     components: ask
     location:
       github_user: TotoR115
-      repository: JA-AdventurePack or gitjas
+      repository: JA-AdventurePack
       branch: master
       refresh: 4days
   - name: "c#endlessbg1"
@@ -293,14 +289,20 @@ modules:
       repository: transitions
       release: v2.4
       asset: transitions-v2.4.iemod
+      patch:
+        relative: patches/eet/transition-split-bg2-part.diff
   - name: transitions
     installation:
       after: endlessbg1
       before: bg1re & npc mods
     components:
       - 32 # Clean-up Quests -> Option 1 and use gentler Tamoko quest: v2.4
-    ignore_warnings: true  - name: DSotSC
+    ignore_warnings: true
+  - name: DSotSC
     description: Dark Side of the Sword Coast
+    installation:
+      general: NTotSC is no longer dependent on DSotSC. If you want to play the two mods together, install DSotSC first
+      before: ntotsc
     components:
       - 0 # Dark Side of the Sword Coast (DSotSC)
       #- 1, # DSotSC Wizard spells
@@ -310,7 +312,8 @@ modules:
     location:
       github_user: SpellholdStudios
       repository: DSotSC
-      commit: 3a247522a # with french, 2023-04-05
+      branch: master
+      refresh: 7days
   - name: ntotsc
     description: Northern Tales of the Sword Coast
     components:
@@ -395,13 +398,13 @@ modules:
     components:
       - 0 # Eilistraee's Song -> Yes, but don't patch the existing save games: 7.1
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Eilistraees Song v7.1.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Eilistraees Song v7.3.zip
   - name: TotDG
     description: "Colours of Infinity: Tales of the Deep Gardens"
     components:
       - 0 # Colours of Infinity: Tales of the Deep Gardens -> Yes, but don't patch the existing save games: 12.7
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Tales of the Deep Gardens v12.81.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Tales of the Deep Gardens v12.9.zip
   - name: Innershade
     description: "Colours of Infinity: Innershade"
     components:
@@ -413,19 +416,19 @@ modules:
     components:
       - 0 # Colours of Infinity - The White Queen -> Yes, but don't patch the existing save games: 6.9
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/WhiteQueen v7.0.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/WhiteQueen v7.1.zip
   - name: ISNF
     description: "Colours of Infinity: I Shall Never Forget"
     components:
       - 0 # Colours of Infinity: I Shall Never Forget: 6.0
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/I Shall Never Forget v6.1.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/I Shall Never Forget v6.1.1.zip
   - name: SouthernEdge
     description: "Athkatlan Grounds: Southern Edge"
     components:
       - 0 # Southern Edge: the new district of Athkatla -> Yes, but don't patch the existing save games: 3.4
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/SouthernEdge v4.4.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/SouthernEdge v5.0.zip
   - name: Ooze
     description: "Athkatlan Grounds: The Ooze’s Lounge"
     components:
@@ -443,7 +446,7 @@ modules:
     components:
       - 0 # Alabaster Sands: the new area of Athkatla -> Yes, but don't patch existing save games: v1.0
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/AlabasterSands v1.2.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/AlabasterSands v1.5.zip
   - name: WhinHill
     description: "THE JOURNEY TO THE WHIN HILL"
     components:
@@ -454,7 +457,7 @@ modules:
       path: /home/mick/Games/modda-cache/static/weaselmods/WhinHill v1.2.zip
   - name: Dvaradime
     description: BG2 npc - dwarven fighter/mage/thief
-    components:
+    components: ask
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/Dvaradime v1.4.zip
   - name: InLoveUndeath
@@ -470,8 +473,8 @@ modules:
     location:
       github_user: Pocket-Plane-Group
       repository: Lure_Of_Sirines_Call
-      release: v16.3
-      asset: the-lure-of-the-sirines-call-v16.3.iemod
+      branch: master
+      refresh: 7days
   - name: bg1re
     description: Baldur's Gate Romantic Encounters
     comment: did a "install all" this time
@@ -526,15 +529,16 @@ modules:
       repository: BG1_Romantic_Encounters
       release: v11.0
       asset:  baldurs-gate-romantic-encounters-modification-bg1re-11.0.iemod
-  - name: wheels
-    description: Wheels Of Prophecy
-    components:
-      - 0 # Les Roues de la Prophetie (The Wheels of Prophecy): v8.5
-    location:
-      github_user: Gibberlings3
-      repository: WheelsOfProphecy
-      release: v8.5
-      asset: lin-wheels-v8.5.tar.gz
+  # According to DW, needs maintenance
+  #- name: wheels
+  #  description: Wheels Of Prophecy
+  #  components:
+  #    - 0 # Les Roues de la Prophetie (The Wheels of Prophecy): v8.5
+  #  location:
+  #    github_user: Gibberlings3
+  #    repository: WheelsOfProphecy
+  #    release: v8.5
+  #    asset: lin-wheels-v8.5.tar.gz
   - name: fadingpromises
     components: [0] # Fading Promises: v9
     location:
@@ -602,32 +606,36 @@ modules:
         dirs:
           - questpack
           - setup-d0questpack.tp2
-  - name: Saerileth
-    components:
-    location:
-      github_user: PaulaMigrate
-      repository: Saerileth
-      tag: V22
-      patch:
-        relative: saerileth-unobnoxiousify.diff
-  - name: imoen_forever
-    installation:
-      after: { name: imoen_forever , component: 0 }
+  #- name: Saerileth
+  #  components:
+  #  location:
+  #    github_user: PaulaMigrate
+  #    repository: Saerileth
+  #    tag: V22
+  #    patch:
+  #      relative: saerileth-unobnoxiousify.diff
+  - name: ImoenIsStone
     components: ask
-      #- 0 # Imoen 4 Ever in BGII: Imoen Returns after Talking to Gaelan in Chapter 2: v9
-      #- 1 # Imoen 4 Ever in BGII: Give Imoen Dialogue Content in SoA: v9
-      #- 2 # Imoen 4 Ever in BGII: Yoshimo Comes to Brynnlaw: v9
-      #- 11 # Imoen 4 Ever in SoD: Imoen Returns to PC in First Coalition Camp (bd1000): v9
-      #- 12 # Imoen 4 Ever in SoD: Imoen Gives Better Reason to Stay Behind in Palace: v9
-      #- 13 # Imoen 4 Ever in SoD: Play Cutscene With Imoen and Duke Jannath: v9
-      #- 14 # Imoen 4 Ever in SoD: Give Imoen Dialogue Content in Chapters 8-12: v9
-      #- 20 # Imoen's chest moves with the campaign, too: v9
-      ##- 9 # Imoen 4 Ever in BGII: Compatibility with Alternatives and Saerileth: v9
     location:
-      github_user: Gibberlings3
-      repository: Imoen4Ever
-      release: v11.4
-      asset: imoen-4-ever-v11.4.iemod
+      path: /home/mick/Games/modda-cache/static/ImoenIsStone_v1-0.zip
+  #- name: imoen_forever
+  #  installation:
+  #    after: { name: imoen_forever , component: 0 }
+  #  components: ask
+  #    #- 0 # Imoen 4 Ever in BGII: Imoen Returns after Talking to Gaelan in Chapter 2: v9
+  #    #- 1 # Imoen 4 Ever in BGII: Give Imoen Dialogue Content in SoA: v9
+  #    #- 2 # Imoen 4 Ever in BGII: Yoshimo Comes to Brynnlaw: v9
+  #    #- 11 # Imoen 4 Ever in SoD: Imoen Returns to PC in First Coalition Camp (bd1000): v9
+  #    #- 12 # Imoen 4 Ever in SoD: Imoen Gives Better Reason to Stay Behind in Palace: v9
+  #    #- 13 # Imoen 4 Ever in SoD: Play Cutscene With Imoen and Duke Jannath: v9
+  #    #- 14 # Imoen 4 Ever in SoD: Give Imoen Dialogue Content in Chapters 8-12: v9
+  #    #- 20 # Imoen's chest moves with the campaign, too: v9
+  #    ##- 9 # Imoen 4 Ever in BGII: Compatibility with Alternatives and Saerileth: v9
+  #  location:
+  #    github_user: Gibberlings3
+  #    repository: Imoen4Ever
+  #    release: v11.4
+  #    asset: imoen-4-ever-v11.4.iemod
   - name: alternatives
     installation:
       before: imoen4ever except imoen4ever compatibility (should be after alternative)
@@ -637,9 +645,9 @@ modules:
       repository: Alternatives
       release: v15
       asset: Alternatives_v15.zip
-  - name: imoen_forever
-    components:
-    - 9  # BGII content: ~Compatibility with Alternatives and Saerileth~
+  #- name: imoen_forever
+  #  components:
+  #  - 9  # BGII content: ~Compatibility with Alternatives and Saerileth~
   - name: c#anotherfinehell
     installation:
       general: Install Another fine Hell as an early quest mod, before NPC mods
@@ -763,6 +771,7 @@ modules:
     location:
       path: /home/mick/Games/modda-cache/static/lin-ajantisbg2-v20.zip
   - name: hiddenadventure
+    description: Hidden Adventures, bg2, little quests and tweaks
     components:
       - 0  # Lady Elgea's extended plot
       - 1  # Anomen's extended plot
@@ -781,12 +790,13 @@ modules:
       release: vBeta_7
       asset: hidden-adventures-beta_7.iemod
   - name: com_encouters
+    description: Encounters for Baldur's Gate II
     components: ask
     location:
       github_user: The-Gate-Project
       repository: Com_encounters
-      release: v1.21
-      asset: com-encounters-v1.21.iemod
+      release: v1.22
+      asset: com-encounters-v1.22.iemod
   - name: isra
     components: [0]
     location:
@@ -836,7 +846,7 @@ modules:
     components:
       - 0   # Foundling
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Foundling v5.3.zip # selectskit
+      path: /home/mick/Games/modda-cache/static/weaselmods/Foundling v5.4.zip # selectskit
       patch:
         relative: patches/foundling-class.diff
   - name: willowisp
@@ -866,10 +876,6 @@ modules:
         - file_globs: [ "willowisp/baf/l0will25.baf" ]
           replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",1800)'
           with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",900)'
-  - name: bethany
-    components: ask
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Bethany v1.00.zip
   - name: paina
     components:
       - 0 # Pai'Na NPC for BG:EE
@@ -877,9 +883,9 @@ modules:
     location:
       github_user: ArtemiusI
       repository: Pai-Na-NPC-mod-for-BG2-EE
-      tag: v1.08a
+      tag: v1.8a
   - name: Sirene_BG2
-    components:
+    components: ask
       #- 0   # Sirene NPC for BG2:EE
       #- 2 # Choose an portrait for Sirene (check mod folder for portraits) -> Alternate Light Armor portrait by Sirick
     location:
@@ -925,11 +931,11 @@ modules:
     components:
       - 0 # L'ile du Chene Enchevetre : une nouvelle zone d'Athkatla -> Oui , mais ne pas patcher les sauvegardes existantes: v2.26
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Tangled Isle v3.0.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Tangled Isle v4.2.zip
   - name: TheVanishingOfSkieSilvershield
     components:
     location:
-    path: /home/mick/Games/modda-cache/static/weaselmods/TheVanishingOfSkieSilvershield v2.2.zip
+    path: /home/mick/Games/modda-cache/static/weaselmods/TheVanishingOfSkieSilvershield v2.3.zip
   - name: "g3anniversary"
     components:
       - 0 # The Gibberlings Three Anniversary Mod
@@ -967,7 +973,6 @@ modules:
     location:
       github_user: InfinityMods
       repository: FishingForTrouble
-
       release: v3.2.10
       asset: fishing-for-trouble-v3.2.10.iemod
   - name: tod
@@ -984,7 +989,7 @@ modules:
   - name: Tidings
     components: ask
     location:
-      http: http://america.iegmc.net/g3/Dark_Tidings.rar
+      http: http://america.iegmc.net/g3/Dark_Tidings.rar # 2023-09-24
       rename: Dark_Tidings_1.5.rar
   - name: SOS # Shadows Over Soubar
     components: ask
@@ -993,13 +998,13 @@ modules:
       repository: Shadows_over_Soubar
       release: "2.0"
       asset: shadows-over-soubar-2.0.iemod
-  - name: MTS_Crappack
-    description: soubar fixes
-    installation:
-      after: Soubar
-    components:
-      - 22 # Install Charlotte sans Menagerie by Sir BillyBob
-      - 23 # Install All Items Identified in Selence's Shop
+  #- name: MTS_Crappack
+  #  description: soubar fixes
+  #  installation:
+  #    after: Soubar
+  #  components:
+  #    - 22 # Install Charlotte sans Menagerie by Sir BillyBob
+  #    - 23 # Install All Items Identified in Selence's Shop
   - name: "keldorn_rom"
     components: [0, 2, 8]
     location:
@@ -1034,7 +1039,8 @@ modules:
     location:
       github_user: SpellholdStudio
       repository: Region_of_Terror
-      commit: af02c2bc2
+      branch: master
+      refresh: 7days
       patch: rot-taming-drizzt.diff
   - name: TDD
     components: none
@@ -1168,7 +1174,8 @@ modules:
     location:
       github_user: K4thos
       repository: TGC1e
-      commit: 02c034d
+      branch: master
+      refresh: 10days
       layout:
         layout_type: single_dir_plus_tp2
         tp2: Setup-TGC1E.tp2
@@ -1218,10 +1225,9 @@ modules:
     components:
       - 0
     location:
-      # v2
-      # github_user: GwendolyneFreddy
-      # repository: L-Ogre-et-le-Gnome
-      path: /home/mick/Games/modda-cache/static/Derats Ogre v3.zip
+      github_user: Deratiseur
+      repository: Ogre
+      tag: v4
   - name: CtB
     description: Check the bodies
     components:
@@ -1246,8 +1252,6 @@ modules:
       - 3 # Mule de bat (bgee) -> Fontes sans fond
     location:
       path: /home/mick/Games/modda-cache/static/w_packmule-v1.4b.zip
-  - name: TDD
-    description: the darkest day
   - name: Blackhearts EET
     components: ask
     location:
@@ -1274,7 +1278,6 @@ modules:
     components:
       - 11    #  Rencontre avec les Elus de Cyric
       - 12    #  Amelioration des Voleurs de l'Ombre
-  - name: ironmodderXXx
   - name: FowlWish
     components: ask
     location:
@@ -1303,6 +1306,13 @@ modules:
       repository: ErrantJusticeBG2
       release: v1.0
       asset: Errant.Justice.1.0.zip
+  - name: DarkHorizons
+    components: ask
+    location:
+      github_user: The-Gate-project
+      repository: DarkHorizons
+      branch: master
+      refresh: 3days
 
 
   #########
@@ -1355,72 +1365,124 @@ modules:
           replace: 'RealSetGlobalTimer("O#BranFlirtTimerToB","GLOBAL",300)' # 5min
           with: 'RealSetGlobalTimer("O#BranFlirtTimerToB","GLOBAL",180)' # 3min
   - name: ViconiaRevamped
-    components:
+    components: ask
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/ViconiaRevamped v7.2.zip
-  - name: Aura_BG1
-    components:
-      #- 0 # Aura NPC for Baldur's Gate: Enhanced Edition: 3.3
-    location:
-      github_user: ArtemiusI
-      repository: Aura_BG1
-      tag: v3.6
-      patch:
-        relative: patches/aura_bg1-select-artificer_and_timers.diff
-    #prompt for class (1. Artificer)
-    #prompt for portrait (2. BG2 style)
+  #- name: Aura_BG1
+  #  components:
+  #    #- 0 # Aura NPC for Baldur's Gate: Enhanced Edition: 3.3
+  #  location:
+  #    github_user: ArtemiusI
+  #    repository: Aura_BG1
+  #    tag: v3.6
+  #    patch:
+  #      relative: patches/aura_bg1-select-artificer_and_timers.diff
+  #  #prompt for class (1. Artificer)
+  #  #prompt for portrait (2. BG2 style)
   - name: Emily
-    components: [0]
+    components: ask
     location:
       github_user: Skitia
       repository: Emily-BG1
       branch: master
       refresh: 3days
+      replace:
+        - file_globs: ["Dialogue/SoD/X32milyJ.d"]
+          replace: 'RealSetGlobalTimer("X32milyRealTalkTimer","GLOBAL",ONE_HOUR)' # 60 min
+          with: 'RealSetGlobalTimer("X32milyRealTalkTimer","GLOBAL",900)' # 15 min
+        - file_globs: ["Scripts/X3mily.baf", "Dialogue/X3milyJ.d"]
+          replace: 'RealSetGlobalTimer("X3milyTimer","GLOBAL",3200)' # 53 min
+          with: 'RealSetGlobalTimer("X32milyRealTalkTimer","GLOBAL",720)' # 12 min
   - name: Helga
-    components:
-      - 0
+    components: ask
     location:
       github_user: Skitia
       repository: Helga-BG1
-      commit: a9c3c53 # 2023-03-22
+      branch: master
+      refresh: 3days
       patch:
-        relative: patches/helga_bg1-defaultportrait-nomusic.diff
+        relative: patches/eet/helga_bg1-defaultportrait-nomusic.diff
+      replace:
+        - file_globs: ["Dialogue/SoD/X32HelgJ.D"]
+          replace: 'RealSetGlobalTimer("X32HelgaRealTalkTimer","GLOBAL",ONE_HOUR)' # 60 min
+          with: 'RealSetGlobalTimer("X32HelgaRealTalkTimer","GLOBAL",900)' # 15 min
+        - file_globs: ["Dialogue/X3HelgaJ.D"]
+          replace: 'RealSetGlobalTimer("X3HelgaTalkTimer","GLOBAL",3100)' # 51 min
+          with: 'RealSetGlobalTimer("X3HelgaTalkTimer","GLOBAL",720)' # 12 min
+        - file_globs: ["Scripts/X3Helga.baf"]
+          replace: 'SetGlobalTimer("X3HelgaQuestTen","GLOBAL",TEN_DAYS)'
+          with: 'SetGlobalTimer("X3HelgaQuestTen","GLOBAL",FOUR_DAYS)'
   - name: Kale
-    components: [0]
+    components: ask
     location:
       github_user: Skitia
       repository: Kale-BG1
-      commit:  996dd40 # 2022-09-07
+      branch: master
+      refresh: 3days
       patch:
-        relative: patches/kale_bg1-nomusic.diff
+        relative: patches/eet/kale_bg1-nomusic.diff
+      replace:
+        - file_globs: ["Dialogue/SoD/X32KaleJ.d"]
+          replace: 'SetGlobalTimer("X32KaleGameTalkTimer","GLOBAL",THREE_DAYS)'
+          with: 'SetGlobalTimer("X32KaleGameTalkTimer","GLOBAL",ONE_DAY)'
     #prompt for music (2. No)
   - name: Recorder
-    components: [0]
+    components: ask
     location:
       github_user: Skitia
       repository: Recorder-BG1
-      commit: ef1b8c0 # 2023-02-18
-      patch:
-        relative: patch to have her wait somewhere else
+      branch: master
+      refresh: 3days
+      replace:
+        - file_globs: ["Dialogue/SoD/X32RecJ.d"]
+          replace: 'SetGlobalTimer("X32RecGameTalkTimer","GLOBAL",THREE_DAYS)'
+          with: 'SetGlobalTimer("X32RecGameTalkTimer","GLOBAL",ONE_DAY)'
   - name: Vienxay
-    components: [0]
+    components: ask
     location:
       github_user: Skitia
       repository: Vienxay-BG1
-      commit: 49aa8e0 # 2023-02-18
+      branch: master
+      refresh: 3days
       patch:
-        relative: patches/viexnay_bg1-defaultprotrait-nomusic.diff
-    #prompt for portrait (1. Default)
+        #prompt for portrait (1. Default)
+        relative: patches/eet/viexnay_bg1-defaultprotrait-nomusic.diff
+      replace:
+        - file_globs: ["Dialogue/SoD/X32VienJ.d"]
+          replace: 'SetGlobalTimer("X32VienGameTalkTimer","GLOBAL",THREE_DAYS)'
+          with: 'SetGlobalTimer("X32RecGameTalkTimer","GLOBAL",ONE_DAY)'
   - name: SkitiaNPCs
-    components:
-      - 0 # Skitia NPCs for Baldur's Gate 2: 1.007
-      - 1 # Skitia NPCs: Romance Theme Soundtrack -> Romance Theme Music: 1.007
+    components: ask
     location:
       github_user: Skitia
       repository: SkitiaNPCs
-      tag: v1.1
+      branch: master
+      refresh: 3days
       patch:
-        relative: patches/skitia-npc-bg2.diff
+        # Note: ACTION_READLN appear in _commented-out_ code
+        relative: patches/eet/skitia-npc-bg2-romance-conflicts.diff
+      replace:
+        file_globs: ["Scripts/*.baf"]
+        replace: 'SetGlobalTimer\("X3(?<c>.*)Timer","GLOBAL",600\)'
+        with: 'SetGlobalTimer("X3${c}Timer","GLOBAL",400)'
+        file_globs: ["Scripts/*.baf"]
+        replace: 'SetGlobalTimer\("X3(?<c>.*)Timer","GLOBAL",300\)'
+        with: 'SetGlobalTimer("X3${c}Timer","GLOBAL",200)'
+        file_globs: ["Dialogue/RestTalk.d", "Scripts/Rest*.baf"]
+        replace: 'RealSetGlobalTimer("X3RestTimer","GLOBAL",6000)'
+        with: 'RealSetGlobalTimer("X3RestTimer","GLOBAL",1200)'
+        file_globs: ["Scripts/*.baf"]
+        replace: 'SetGlobalTimer("X3RestTimer","GLOBAL",SEVEN_DAYS)'
+        with: 'SetGlobalTimer("X3RestTimer","GLOBAL",THREE_DAYS)'
+        file_globs: ["Dialogue/X3IsaJ.d"]
+        replace: 'SetGlobalTimer("X3IsaReminder","GLOBAL",SEVEN_DAYS)'
+        with: 'SetGlobalTimer("X3IsaReminder","GLOBAL",FOURTEEN_DAYS)'
+        file_globs: ["Dialogue/*.d"]
+        replace: 'RealSetGlobalTimer\("X3(?<c>.*)Timer","GLOBAL",2700\)'
+        with: 'RealSetGlobalTimer("X3${c}Timer","GLOBAL",900)'
+        file_globs: ["Dialogue/*.d"]
+        replace: 'RealSetGlobalTimer\("X3(?<c>.*)Timer","GLOBAL",3\d00\))'
+        with: 'RealSetGlobalTimer("X3${c}Timer","GLOBAL",960)'
   - name: nephele
     components: [0]
     location:
@@ -1428,14 +1490,18 @@ modules:
       repository: Nephele_NPC
       release: v.2.7
       asset:  nephele-npc-v2.7.iemod
+      replace:
+        file_globs: ["dialogue/lk#ne*.d"]
+        replace: 'RealSetGlobalTimer("LK#Neph(?<c>.*)TalksTimer","GLOBAL",5400)'
+        with: 'RealSetGlobalTimer("LK#Neph${c}TalksTimer","GLOBAL",900)'
   - name: Petsy
     installation:
-      general: mustbe after nephele for crossmod component
+      general: must be after nephele for crossmod component
     components: [0, 1]
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/Petsy v4.2.zip
       patch:
-        relative: patches/petsy.diff
+        relative: patches/eet/petsy-romance.diff
       replace:
         - file_globs: ['Dialogues/L3PetsyJ.d']
           replace: 'RealSetGlobalTimer("L3PetsyQ2T","GLOBAL",2000)'
@@ -1446,15 +1512,9 @@ modules:
         - file_globs: ['Scripts/L3Pet25.baf']
           replace: 'RealSetGlobalTimer("L3ToBN","GLOBAL",2400)'
           with: 'RealSetGlobalTimer("L3ToBN","GLOBAL",900)'
-        - file_globs: ['Scripts/L3Pet25.baf']
-          replace: 'RealSetGlobalTimer("L3ToBRomanceTime","GLOBAL",1200)'
-          with: 'RealSetGlobalTimer("L3ToBRomanceTime","GLOBAL",450)'
-        - file_globs: ['Scripts/L3Petsy.baf']
-          replace: '23,1: RealSetGlobalTimer("L3PetsyNormalTime","GLOBAL",1500)'
-          with: '23,1: RealSetGlobalTimer("L3PetsyNormalTime","GLOBAL",600)'
-        - file_globs: ['Scripts/L3Petsy.baf']
-          replace: '23,1: RealSetGlobalTimer("L3PetsyRomanceTime","GLOBAL",1500)'
-          with: '23,1: RealSetGlobalTimer("L3PetsyRomanceTime","GLOBAL",600)'
+        - file_globs: ['Scripts/*.baf']
+          replace: 'RealSetGlobalTimer("L3(?<c>.*)Time","GLOBAL",1\d00)'
+          with: 'RealSetGlobalTimer("L3${c}Time","GLOBAL",450)'
   - name: Yvette
     description: "Colours of Infinity: Yvette Romance"
     components:
@@ -1462,7 +1522,17 @@ modules:
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/Yvette Romance v5.00.zip
       patch:
-        relative: patches/yvette.diff
+        relative: patches/eet/yvette-romance.diff
+      replace:
+        file_globs: ["DIALOGUES/*.d"]
+        replace: 'RealSetGlobalTimer("YvetteUnderdarkTimer","GLOBAL",1000)'
+        with: 'RealSetGlobalTimer("YvetteUnderdarkTimer","GLOBAL",300)'
+        file_globs: ["SCRIPTS/YxYv25.baf"]
+        replace: 'RealSetGlobalTimer("YvetteToBTimer","GLOBAL",1600)'
+        with: 'RealSetGlobalTimer("YvetteToBTimer","GLOBAL",600)'
+        file_globs: ["SCRIPTS/YxYve.baf"]
+        replace: 'RealSetGlobalTimer("YvetteRomanceTime","GLOBAL",1800)'
+        with: 'RealSetGlobalTimer("YvetteRomanceTime","GLOBAL",700)'
   - name: ACBre
     description: Ascalon's Breagar
     installation:
@@ -1481,7 +1551,7 @@ modules:
         - bst
         - c#anotherfinehell
         - endlessbg1
-    components:
+    components: ask
       #- 0 # Breagar: Contents
       #- 2 # Breagar: Crossmods and PID
       #- 12 # Change Breagar's dialog timer? (Default is 30 minutes between dialogues.) - 15 minutes real time between talks
@@ -1492,7 +1562,7 @@ modules:
       release: v12.2.0
       asset: ascalons-breagar-12.2.0.iemod
       patch:
-        relative: breagar-wait-here.diff
+        relative: eet/breagar-wait-here.diff
         # components 10-13 change timers
   - name: c#brandock
     description: Brandock the mage
@@ -2040,8 +2110,8 @@ modules:
     location:
       github_user: SpellholdStudios
       repository: YoshimoFriendship
-      release: v4.6
-      asset: yoshimo-friendship-v4.6.iemod
+      release: v5.0
+      asset: yoshimo-friendship-v5.0.iemod
   - name: sarevokfriendship
     components: [0]
     location:
@@ -2319,7 +2389,7 @@ modules:
     location:
       github_user: abalabokhin
       repository: NWNForBG
-      tag: "0.96"
+      tag: "0.97"
   - name: IWD1_EET
     installation:
       after: EET
@@ -2748,6 +2818,15 @@ modules:
       github_user: Deratiseur
       repository: Archery
       tag: v4
+  - name: A7-WaresOfThePlanes
+    components: ask
+      github_user: Argent77
+      repository: A7-WaresOfThePlanes
+      release: v1.1
+      asset: A7-WaresOfThePlanes-v1.1.iemod
+    installation:
+      after: ub
+
 
   #########
   # Mass item updates

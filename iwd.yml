@@ -79,7 +79,7 @@ modules:
     components: # single component
       - 0 # Snowytoes Hamlet, a new area (IWD EE) -> Yes, but don't patch existing save games
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Snowytoes v1.3.zip
+      path: /home/mick/Games/modda-cache/static-iwd/Snowytoes v1.4.zip
   - name: BlinkingDead
     components: # single component
       - 0 # Night of the Blinking Dead (IWD) -> Yes, but don't patch existing save games
@@ -217,6 +217,10 @@ modules:
       - 0 # Urchin NPC for IWD:EE: 2.3
     location:
       path: /home/mick/Games/modda-cache/static-iwd/Urchin v2.5.zip
+  - name: bethany
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static-iwd/Bethany v1.00.zip
   - name: DjinniCompanion
     components:
       - 2 # Afaaq, le compagnon Djinn (version IWD:EE): v2.9
