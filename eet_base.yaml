@@ -1776,11 +1776,37 @@ modules:
       - 0 # Walahnan NPC for BG2EE: 0.92
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/WalahnanBG2 v1.00.zip
+      replace:
+        - file_glob: ["dialogue/L#2WH.d"]
+          replace: 'SetGlobalTimer("L#2WHTimeToDie","GLOBAL",FIFTEEN_DAYS)'
+          with: 'SetGlobalTimer("L#2WHTimeToDie","GLOBAL",THIRTY_DAYS)'
+        - file_glob: ["scripts/L#2WH.baf"]
+          replace: 'RealSetGlobalTimer("L#2WHTimer","GLOBAL",3600)'
+        with: 'RealSetGlobalTimer("L#2WHTimer","GLOBAL",900)'
+        - file_glob: ["scripts/L#2WH25.baf"]
+          replace: 'RealSetGlobalTimer("L#2WalahToBFT","GLOBAL",3000)'
+        with: 'RealSetGlobalTimer("L#2WalahToBFT","GLOBAL",900)'
   - name: WilsonChronicles
     components:
       - 0 # Wilson Chronicles - expansion for our favorite bear companion: 1.9
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/Wilson Chronicles v2.1.zip
+      replace:
+        - file_glob: ["baf/wilson_append.baf"]
+          replace: 'RealSetGlobalTimer("L#WilsonFriendTime","GLOBAL",1200)'
+          with: 'RealSetGlobalTimer("L#WilsonFriendTime","GLOBAL",400)'
+        - file_glob: ["baf/wilson_append.baf"]
+          replace: 'RealSetGlobalTimer("L#WilsonFriendTime","GLOBAL",1800)'
+          with: 'RealSetGlobalTimer("L#WilsonFriendTime","GLOBAL",600)'
+        - file_glob: ["baf/wilson_append.baf"]
+          replace: 'RealSetGlobalTimer("L#WilsonFriendTime","GLOBAL",600)'
+          with: 'RealSetGlobalTimer("L#WilsonFriendTime","GLOBAL",200)'
+        - file_glob: ["baf/wilson25_append.baf"]
+          replace: 'RealSetGlobalTimer("L#WilsonFriendTimeToB","GLOBAL",600)'
+          with: 'RealSetGlobalTimer("L#WilsonFriendTimeToB","GLOBAL",200)'
+        - file_glob: ["baf/wilson25_append.baf"]
+          replace: 'RealSetGlobalTimer("L#WilsonFriendTimeToB","GLOBAL",1600)'
+          with: 'RealSetGlobalTimer("L#WilsonFriendTimeToB","GLOBAL",800)'
   - name: gavin
     # will prompt for romance timer
     components:
@@ -1794,7 +1820,8 @@ modules:
       release: v14
       asset: lin-gavin-v14.tar.gz
       patch:
-        relative: patches/gavin_bg1-romance-timer-30.diff
+        relative: patches/eet/gavin_bg1-romance-timer-15.diff
+        # there is no need to patch timers
   - name: gavin_bg2
     # will prompt for romance timer
     components:
@@ -1807,15 +1834,30 @@ modules:
       release: v23
       asset: lin-gavin_bg2-v23.tar.gz
       patch:
-        relative: patches/gavin_bg2_romance-timer-30.diff
+        relative: patches/eet/gavin_bg2_romance-timer-15.diff
   - name: arath
+    description: bg2 druid npc with romance+friendship and quest (late  soa)
     components: [0]
     location:
       github_user: SpellholdStudios
       repository: Arath_NPC
       release: v6
       asset: arath-npc-mod-for-baldurs-gate-2-soa-tob-v6.iemod
+      replace:
+        - file_globs: ["dialogue/lk#ar25j.d", "dialogue/lk#aratj.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("LK#Arath(?<c>.*)Timer","GLOBAL",3600\)'
+          with: 'RealSetGlobalTimer("LK#Arath${c}Timer","GLOBAL",900)'
+        - file_globs: ["scripts/lk#arath.baf", "scripts/lk#ar25.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("LK#Arath(?<c>.*)Timer","GLOBAL",1080\)'
+          with: 'RealSetGlobalTimer("LK#Arath${c}Timer","GLOBAL",500)'
+        - file_globs: ["scripts/lk#ar25.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("LK#Arath(?<c>.*)Timer","GLOBAL",900\)'
+          with: 'RealSetGlobalTimer("LK#Arath${c}Timer","GLOBAL",300)'
   - name: adrian
+    description: bg2 sorcerer npc with romance+friendship and encounters
     components:
       # - 0 # Adrian is a Sorcerer
       # - 1 #Change Adrian's class to Cleric/Mage
@@ -1830,66 +1872,99 @@ modules:
       release: v6.0
       asset: adrian-npc-for-bgii-v6.iemod
       replace:
-        # faster mini-quest start
-        - file_globs: ["adrian/dialogue/rh#adrj.d"]
-          replace: 'RealSetGlobalTimer("rh#AdrianDamarovTimer","GLOBAL",2700)'
-          with: 'RealSetGlobalTimer("rh#AdrianDamarovTimer","GLOBAL",1200)'
-          comment: Reduce 2700s/45min _real-time_ talks timers to 1200s/20min real-time
-        # gavin
-        - file_globs: ["adrian/crossmod/gavin.d"]
-          replace: 'RealSetGlobalTimer("rh#AdrianGavinTalkTimer","GLOBAL",3600)'
-          with: 'RealSetGlobalTimer("rh#AdrianGavinTalkTimer","GLOBAL",900)'
-        # kivan
-        - file_globs: ["adrian/crossmod/kivan.d"]
-          replace: 'RealSetGlobalTimer("rh#AdrianKivanTalkTimer","GLOBAL",3600)'
-          with: 'RealSetGlobalTimer("rh#AdrianKivanTalkTimer","GLOBAL",900)'
+        # faster mini-quest start, Soa & TOB talks
+        - file_globs: ["adrian/dialogue/rh#adrj.d", "adrian/dialogue/rh#adrj.d", "adrian/dialogue/rh#ad25j.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("rh#Adrian(?<c>.*)Timer","GLOBAL",2700\)'
+          with: 'RealSetGlobalTimer("rh#Adrian${c}Timer","GLOBAL",800)'
+        # gavin, kivan
+        - file_globs: ["adrian/crossmod/gavin.d", "adrian/crossmod/kivan.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("rh#Adrian(?<c>.*)TalkTimer","GLOBAL",3600\)'
+          with: 'RealSetGlobalTimer("rh#Adrian${c}TalkTimer","GLOBAL",900)'
         # TOB banters
         - file_globs: ["adrian/dialogue/brh#ad25.d"]
-          replace: '"GLOBAL",3600\)'
-          with: '"GLOBAL",1200)'
+          regex: true
+          replace: RealSetGlobalTimer\("rh#Adrian(?<c>.*)Timer","GLOBAL",3600\)'
+          with: 'RealSetGlobalTimer("rh#Adrian${c}Timer","GLOBAL",900)'
         # banters
         - file_globs: ["adrian/dialogue/brh#adr.d"]
-          replace: '"GLOBAL",3600\)'
-          with: '"GLOBAL",1200)'
+          regex: true
+          replace: 'RealSetGlobalTimer\("rh#Adrian(?<c>.*)Timer","GLOBAL",3600\)'
+          with: 'RealSetGlobalTimer("rh#Adrian${c}Timer","GLOBAL",900)'
         # banters
         - file_globs: ["adrian/dialogue/brh#adr.d"]
-          replace: '"GLOBAL",7200\)'
-          with: '"GLOBAL",2400)'
-        # TOB talks
-        - file_globs: ["adrian/dialogue/rh#ad25j.d"]
-          replace: 'RealSetGlobalTimer("rh#AdrianTalksTOBTimer","GLOBAL",2700)'
-          with: 'RealSetGlobalTimer("rh#AdrianTalksTOBTimer","GLOBAL",1200)'
-        # talks
-        - file_globs: ["adrian/dialogue/rh#adrj.d"]
-          replace: 'RealSetGlobalTimer("rh#AdrianTalksTimer","GLOBAL",2700)'
-          with: 'RealSetGlobalTimer("rh#AdrianTalksTimer","GLOBAL",1200)'
-        # talks
-        - file_globs: ["adrian/dialogue/rh#adrj.d"]
-          replace: 'RealSetGlobalTimer("rh#AdrianSpawnTimer","GLOBAL",2700)'
-          with: 'RealSetGlobalTimer("rh#AdrianSpawnTimer","GLOBAL",1200)'
+          regex: true
+          replace: 'RealSetGlobalTimer\("rh#Adrian(?<c>.*)Timer","GLOBAL",7200\)'
+          with: 'RealSetGlobalTimer("rh#Adrian${c}Timer","GLOBAL",1200)'
         # quest
         - file_globs: ["adrian/dialogue/rh#quest.d"]
-          replace: 'SetGlobalTimer("rh#DamarovReturnsTimer","GLOBAL",TEN_DAYS\) RealSetGlobalTimer("rh#AdrianTalksTimer","GLOBAL",5)'
-          with: 'SetGlobalTimer("rh#DamarovReturnsTimer","GLOBAL",FIVE_DAYS) RealSetGlobalTimer("rh#AdrianTalksTimer","GLOBAL",5)'
+          replace: 'SetGlobalTimer("rh#DamarovReturnsTimer","GLOBAL",TEN_DAYS)'
+          with: 'SetGlobalTimer("rh#DamarovReturnsTimer","GLOBAL",FIVE_DAYS)'
   - name: valerie
+    description: bg1 cowled wizard npc,friendship, no quest
     components: [0]
     location:
       github_user: SpellholdStudios
       repository: Valerie_NPC
       release: v1.2
       asset: valerie-npc-for-bg-v1.2.iemod
+      replace:
+        - file_globs: ["scripts/t2val.baf", "dialogue/t2valj.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("T2Val(?<c>.*)Timer","GLOBAL",2700\)'
+          with: 'RealSetGlobalTimer("T2Val${c}Timer","GLOBAL",900)'
   - name: Bristlelick
+    description: bg1+sod gnoll npc (fighter kit) with talks and small quest
     components:
       - 0 #  Bristlelick the gnoll companion for BGEE: 2.0
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Bristlelick v2.2.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Bristlelick v2.3.zip
+      replace:
+        - file_globs: ["scripts/l#2brist.baf", "scripts/l#brist.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("L#Bristle(?<c>.*)","GLOBAL",1600\)'
+          with: 'RealSetGlobalTimer("L#Bristle${c}","GLOBAL",700)'
+        - file_globs: ["scripts/l#2brist.baf"]
+          replace: 'RealSetGlobalTimer("L#BristleTimeSoD","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("L#BristleTimeSoD","GLOBAL",1000)'
+        - file_globs: ["scripts/l#brist.baf"]
+          replace: 'RealSetGlobalTimer("L#BristleTime","GLOBAL",2000)'
+          with: 'RealSetGlobalTimer("L#BristleTime","GLOBAL",800)'
   - name: evandra
+    description: >
+      Illusionist for soa+tob
+      Alters knights of Solamnia content + quest in underdark
+      Friendship stops at chapter 4 / trip to spellhold, romance for male elven npc
     components:
       - 0 #/ Evandra NPC: v2.2
       - 1 # Crossmod Content: v2.2
     location:
-      path: /home/mick/Games/modda-cache/static/lin-evandra-v2.2.zip
+      http: http://america.iegmc.net/g3/lin-evandra-v2.2.zip
+      # also path: /home/mick/Games/modda-cache/static/lin-evandra-v2.2.zip
+      patch:
+        relative: patches/eet/evandra-romance.diff
+      replace:
+        - file_globs: ["crossmod/adrian.d", "dialogue/talks.d", "dialogue/talkstob.d", "scripts/rh#ev25.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("rh#(?<c>.*)Timer","GLOBAL",2700\)'
+          with: 'RealSetGlobalTimer("rh#${c}Timer","GLOBAL",810)'
+        - file_globs: ["scripts/rh#ev25.baf"]
+          replace: 'RealSetGlobalTimer("rh#EvaTalksTimer","GLOBAL",1800)'
+          with: 'RealSetGlobalTimer("rh#EvaTalksTimer","GLOBAL",580)'
+        - file_globs: ["scripts/rh#eva.baf", "scripts/rh#ev25.baf"]
+          replace: 'RealSetGlobalTimer("rh#EvaTalksTimer","GLOBAL",900)'
+          with: 'RealSetGlobalTimer("rh#EvaTalksTimer","GLOBAL",320)'
+        - file_globs: ["scripts/rh#eva.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer("rh#(?<c>.*)","GLOBAL",450)'
+          with: 'RealSetGlobalTimer("rh#${c},"GLOBAL",180)'
+        - file_globs: ["scripts/rh#eva.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer("rh#(?<c>.*)","GLOBAL",300)'
+          with: 'RealSetGlobalTimer("rh#${c},"GLOBAL",120)'
   - name: sarahtob
+    description: bg2 ranger npc, romance (f/f), friendhsip, quest, encounter
     components:
       - 0 # Mod Sarah NPC Romance pour BG2:ToB: 6
     location:
@@ -1897,7 +1972,18 @@ modules:
       repository: Sarah
       release: v6
       asset: lin-sarahtob-v6.zip
+      replace:
+        file_globs: ["dialogues/k#sarahb.d", "dialogues/k#sar25b.d"]
+        regex: true
+        replace: 'RealSetGlobalTimer\("K#Sarah(?<c>)","GLOBAL",1800\)'
+        with: 'RealSetGlobalTimer("K#Sarah${c}","GLOBAL",630)'
+      replace:
+        file_globs: ["scripts/k#sara25.baf", "dialogues/k#sar25j.d"]
+        regex: true
+        replace: 'RealSetGlobalTimer\("K#Sarah(?<c>)","GLOBAL",1500\)'
+        with: 'RealSetGlobalTimer("K#Sarah${c}","GLOBAL",540)'
   - name: aurenaseph
+    description: bg2 fighter npc, romance (f/nalia), banters
     components:
       - 0 # Auren Aseph pour BG2:ToB: v12
     location:
@@ -1906,15 +1992,19 @@ modules:
       release: v12
       asset: lin-aurenaseph-v12.zip
   - name: GlamNPCPack
+    description: bg1npcs, Vynd(drow ass., m), Littlun(Halfling arch., f), Moidre(Dwarwen Def, f), Dave(Talos, m), Flara(DD, f)
     components:
       - 0 # Glam's NPC Pack for BG:EE, BGT and BG TUTU
     location:
-      github_user: mleduque
+      github_user: Gibberlings3
       repository: Glam-NPC-Pack
       tag: v3.1
-      patch:
-        relative: for flara to stay past chapter 2
+      replace:
+        - file_globs: ["Dialogue/GV#LITT.d"]
+          replace: 'SetGlobalTimer("GV#LITTGnollsTimer","GLOBAL",ONE_DAY)'
+          with: 'SetGlobalTimer("GV#LITTGnollsTimer","GLOBAL",TEN_DAYS)'
   - name: anishai
+    description: one-day npc, modifies existing npc from Mae'Var's guildhouse, CN female monk
     components:
       - 0 # Anishai one-day NPC: v3
     location:
@@ -1923,42 +2013,98 @@ modules:
       release: v3
       asset: lin-anishai-v3.zip
   - name: tyrisflare
+    description: bg2+tob - female fighter/mage, quest, romance
     components:
       - 0 # Tyris Flare NPC: v9
     location:
       http: http://europe.iegmc.net/g3/tyrisflare-v11.zip
       patch:
-        relative: patch/tyris.diff
+        relative: patches/eet/tyris-romance.diff
+      replace:
+        - file_globs: ["dialogue/lovetalks.d", "dialogue/romanceconflicts.d", "scripts/g#tyris.baf, "scripts/g#tyrs25.baf"]
+          replace: 'RealSetGlobalTimer("G#TF.TyrisRomance","GLOBAL",1800)'
+          with: 'RealSetGlobalTimer("G#TF.TyrisRomance","GLOBAL",820)'
+        - file_globs: ["dialogue/lovetalks.d"]
+          replace: 'RealSetGlobalTimer("G#TF.TyrisRomance","GLOBAL",900)'
+          with: 'RealSetGlobalTimer("G#TF.TyrisRomance","GLOBAL",420)'
+        - file_globs: ["dialogue/expflirts.d", "dialogue/flirts.d", "scripts/g#tyris.baf, "scripts/g#tyrs25.baf"]
+          replace: 'RealSetGlobalTimer("G#TF.TyrisFlirt","LOCALS",900)'
+          with: 'RealSetGlobalTimer("G#TF.TyrisFlirt","LOCALS",310)'
   - name: navarra
+    description: bg2 - human, female barb, quest, banters, frienship, romance
     components:
       - 0 # Navarra for BG2
     location:
-      path: /home/mick/Games/modda-cache/static/lin-navarra-v1.1.tar.gz
+      http: https://iegmc.kjtd.net/g3/lin-navarra-v1.5.tar.gz
+      # or /home/mick/Games/modda-cache/static/lin-navarra-v1.5.tar.gz
       patch:
-        relative: patches/navarra-no-prompt.diff
+        relative: patches/eet/navarra-timer-prompt-15min.diff
+      replace:
+        - file_globs: ["dialogues/kknavj.d", "scripts/kknavar.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("KK(?<c>[^"]+)","GLOBAL",1800\)'
+          with: 'RealSetGlobalTimer("KK${c}","GLOBAL",750)'
+        - file_globs: ["scripts/kknav25.baf", "scripts/kknavar.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("KK(?<c>[^"]+)","GLOBAL",3600\)'
+          with: 'RealSetGlobalTimer("KK${c}","GLOBAL",850)'
+        - file_globs: ["dialogues/kknav25.d"]
+          replace: 'RealSetGlobalTimer("KKNFriendTalkTimeTOB","GLOBAL",2500)'
+          with: 'RealSetGlobalTimer("KKNFriendTalkTimeTOB","GLOBAL",750)'
+        - file_globs: ["dialogues/kknavrom_ed.d", "dialogues/kktobedwinrom.d", "scripts/kknavar.baf", "scripts/kknaved.baf", "scripts/kknavedw.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("KK(?<c>[^"]+)","GLOBAL",900\)'
+          with: 'RealSetGlobalTimer("KK${c}","GLOBAL",280)'
+        - file_globs: ["dialogues/kknavrom_ed.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("KK(?<c>[^"]+)","GLOBAL",300\)'
+          with: 'RealSetGlobalTimer("KK${c}","GLOBAL",120)'
   - name: haiass
+    description: wolf follower
     components:
       - 0 # Haiass le Loup: v2.4
       - 10 #  Haiass peut être ressuscité -> Pénalisation modérée (-4 Constitution temporairement): v2.4
     location:
-      http: https://github.com/11jo/Backup_Gate/raw/main/EET-NPC_Backup/Haiass%20the%20Wolf.....v2.4.zip
+      path: /home/mick/Games/modda-cache/static/haiass_v2_4.zip
   - name: Ishlilkamod
+    description: bg1/sod - female wizard slayer, good, romance, quest(x2)
     components:
       - 0 # Ishlilka mod for BGSoD and EET
     location:
       github_user: The-Gate-Project
       repository: Ishlilka_The-Wizard-Slayer
-      tag: v3
-  - name: aurora
-    description: Aurora shoes and boots - non-joinable NPC
-    components:
-      - 0 # Aurora's Shoes and Boots: v5.3 (EE & EET)
-      - 20 # Petits portraits pour les PNJs -> Marchands uniquement: v5.3 (EE & EET)
-    location:
-      github_user: mleduque
-      repository: Bookwyrme_Aurora_s_shoes
-      tag: "???"
+      branch: main
+      refresh: 5days
+      replace:
+        - file_globs: ["Dialogues/ishyJ.d"]
+          replace: 'RealSetGlobalTimer("IshyRomanceTimer","GLOBAL",3000)'
+          with: 'RealSetGlobalTimer("IshyRomanceTimer","GLOBAL",700)'
+        - file_globs: ["Scripts/ishyscrp.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("Ishy(?<t>[^""]+)","GLOBAL",([0-9]{4})\)'
+          with: 'RealSetGlobalTimer("Ishy${t}","GLOBAL",680)'
+        - file_globs: ["Dialogues/bdishy.d"]
+          replace: 'RealSetGlobalTimer("IshyTimer","GLOBAL",5600)'
+          with: 'RealSetGlobalTimer("IshyTimer","GLOBAL",900)'
+        - file_globs: ["Dialogues/ishyD.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("Ishy(?<t>[^""]+)","GLOBAL",([0-9]{4})\)'
+          with: 'RealSetGlobalTimer("Ishy${t}","GLOBAL",690)'
+        - file_globs: ["Scripts/cutcutscene/ishyscrp.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("Ishy(?<t>[^""]+)","GLOBAL",([0-9]{4})\)'
+          with: 'RealSetGlobalTimer("Ishy${t}","GLOBAL",720)'
+  #- name: aurora
+  #  description: Aurora shoes and boots - non-joinable NPC
+  #  components:
+  #    - 0 # Aurora's Shoes and Boots: v5.3 (EE & EET)
+  #    - 20 # Petits portraits pour les PNJs -> Marchands uniquement: v5.3 (EE & EET)
+  #  location:
+  #    github_user: mleduque
+  #    repository: Bookwyrme_Aurora_s_shoes
+  #    tag: "???"
   - name: luxleysoa
+    description: soa - playwright (wiz) + monk npc, both male, quest, friendship, romance
     components:
       - 0 # Luxley Family Mod for BGII:SoA: v2.0.0
     location:
@@ -1966,17 +2112,29 @@ modules:
       repository: The_Luxley_Family
       release: v2.0.0
       asset: the-luxley-family-v2.0.0.iemod
+      replace:
+        - file_globs: ["dialogues/fhlseb.d"]
+          replace: 'RealSetGlobalTimer("FHLAndDarkTime","GLOBAL",1500)'
+          with: 'RealSetGlobalTimer("FHLAndDarkTime","GLOBAL",510)'
+        - file_globs: ["dialogues/fhlsebj.d", "dialogues/fhlandj.d", "scripts/fhland.baf"]
+          replace: 'RealSetGlobalTimer("FHLLuxTalkTime","GLOBAL",900)'
+          with: 'RealSetGlobalTimer("FHLLuxTalkTime","GLOBAL",480)'
+        - file_globs: ["scripts/fhlseb.baf", "scripts/fhland.baf"]
+          replace: 'RealSetGlobalTimer("FHLLuxTalkTime","GLOBAL",TWELVE_HOURS)'
+          with: 'RealSetGlobalTimer("FHLLuxTalkTime","GLOBAL",1200)'
+        - file_globs: ["dialogues/fhland.d"]
+          replace: 'RealSetGlobalTimer("FHLAndDarkTime","GLOBAL",900)'
+          with: 'RealSetGlobalTimer("FHLAndDarkTime","GLOBAL",470)'
   - name: Fade
-    components:
-      - 0 # Fade: An NPC for Baldur's Gate II: SoA and ToB: 5.6
-      - 1 # Fade NPC: reactions to Romantic Encounters (RE may be installed before or after this component): 5.6
+    description: chaotic neutral Fey'ri Shadow Thief, romance
+    components: ask
     location:
       github_user: SpellholdStudios
       repository: Fade_NPC
       release: v5.6
       asset: Fade_v5-6.zip
       patch:
-        relative: patches/fade.diff
+        relative: patches/eet/fade-romance.diff
       replace:
         - file_globs: ["Dialogues/FADE.d"]
           replace: 'RealSetGlobalTimer("E3FADEFRIEND","GLOBAL",2600)'
@@ -2007,6 +2165,7 @@ modules:
           replace: 'RealSetGlobalTimer("E3BABYTALKTIMER","GLOBAL",2000)'
           with: 'RealSetGlobalTimer("E3BABYTALKTIMER","GLOBAL",300)'
   - name: dace
+    description: Chaotic Neutral human female bounty hunter, friendship, banters, romance
     components:
       - 0 # Dace Linton NPC Mod for BG2:SoA & ToB: v5
     location:
@@ -2014,6 +2173,19 @@ modules:
       repository: Dace_NPC
       release: v5
       asset: lin-dace-v5.zip
+      patch: patches/eet/dace-romance.diff
+      replace:
+        - file_globs: ["scripts/t#dace.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("T#Dace(?<c>[^"]+")Timer","GLOBAL",2700\)'
+          with: 'RealSetGlobalTimer("T#Dace${c}Timer","GLOBAL",700)'
+        - file_globs: ["scripts/t#dace.baf"]
+          replace: 'RealSetGlobalTimer("T#DaceFlirtTimer","GLOBAL",1800)'
+          with: 'RealSetGlobalTimer("T#DaceFlirtTimer","GLOBAL",610)'
+        - file_globs: ["scripts/t#dace.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("T#Dace(?<c>[^"]+")Timer","GLOBAL",900\)'
+          with: 'RealSetGlobalTimer("T#Dace${c}Timer","GLOBAL",230)'
   - name: hubelpot
     components:
       - 1 # Hubelpot Thistledown, the Vegetable Merchant NPC mod -> Hubelpot is a Village Druid (alternate kit): v2.1.0

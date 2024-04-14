@@ -1,0 +1,47 @@
+diff --git a/dace/scripts/t#dace.baf b/dace/scripts/t#dace.baf
+index 6e06657..814560a 100644
+--- dace/scripts/t#dace.baf
++++ dace/scripts/t#dace.baf
+@@ -198,20 +198,6 @@ THEN
+ END
+ 
+ 
+-IF // If there's a romance already happening with the PC
+-    InParty(Myself)
+-    !Dead("T#Dace")
+-    Global("T#DaceIntTalks","GLOBAL",22)
+-    Global("T#DaceFriendshipActive","GLOBAL",0)
+-    OR(4)
+-      Global("AerieRomanceActive","GLOBAL",2)
+-      Global("AnomenRomanceActive","GLOBAL",2)
+-      Global("JaheiraRomanceActive","GLOBAL",2)
+-      Global("ViconiaRomanceActive","GLOBAL",2)
+-THEN
+-  RESPONSE #100
+-    SetGlobal("T#DaceFriendshipActive","GLOBAL",1)
+-END
+ 
+ 
+ 
+diff --git a/dace/scripts/t#daced.baf b/dace/scripts/t#daced.baf
+index c0240c7..6240d77 100644
+--- dace/scripts/t#daced.baf
++++ dace/scripts/t#daced.baf
+@@ -13,10 +13,6 @@ IF
+     !Global("T#DaceJackass","GLOBAL",1)
+     Global("T#DaceFromBeginning","GLOBAL",1)
+     Global("T#DaceIntTalks","GLOBAL",10)
+-    !Global("AerieRomanceActive","GLOBAL",2)
+-    !Global("AnomenRomanceActive","GLOBAL",2)
+-    !Global("JaheiraRomanceActive","GLOBAL",2)
+-    !Global("ViconiaRomanceActive","GLOBAL",2)
+ THEN
+   RESPONSE #100
+     PlaySong(0)
+@@ -42,4 +38,4 @@ THEN
+     IncrementGlobal("T#DaceEdwin","GLOBAL",1)
+     MoveToObject("Edwin")
+     Interact("Edwin")
+-END
+\ No newline at end of file
++END
