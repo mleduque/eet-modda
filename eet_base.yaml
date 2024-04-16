@@ -1328,6 +1328,7 @@ modules:
       release: v7
       asset: lin-npc_tweak-v7.tar.gz
   - name: Branwen
+    description: bg2+tob, adds branwen, friendship, romance, pid, banters, interjections
     components: [0]
     location:
       github_user: Pocket-Plane-Group
@@ -2187,6 +2188,7 @@ modules:
           replace: 'RealSetGlobalTimer\("T#Dace(?<c>[^"]+")Timer","GLOBAL",900\)'
           with: 'RealSetGlobalTimer("T#Dace${c}Timer","GLOBAL",230)'
   - name: hubelpot
+    description: bg2+tob, male druid npc, banters, quest
     components:
       - 1 # Hubelpot Thistledown, the Vegetable Merchant NPC mod -> Hubelpot is a Village Druid (alternate kit): v2.1.0
     location:
@@ -2195,6 +2197,7 @@ modules:
       release: v2.1.0
       asset: hubelpot-the-vegetable-merchant-npc-v2.1.0.iemod
   - name: allison
+    description: bg2 - onedays npc, TN female druid, interjection, banter
     components:
       - 0 # Allison (One-Day NPC)
     location:
@@ -2202,27 +2205,41 @@ modules:
       repository: Allison_One-Day_NPC
       release: v1.8
       asset: AllisonV15MacOSX.zip
+  # Will use bg1npcsoa version
+  #- name: Coran
+  #  description: Coran for bg2+tob,
+  #  components: ask
+  #  location:
+  #    github_user: Pocket-Plane-Group
+  #    repository: Coran_for_BGII
+  #    release: v9
+  #    asset: coran-npc-mod-for-baldurs-gate-ii-v9.iemod
+
+  ###########
+  # NPC extensions
+  ###########
   - name: chattyimoen
+    description: bg1 - adds banters to Imoen
     components:
-      # - 0 # Chatty Imoen : Repliques audio supplementaires
-      # - 1 # Chatty Imoen : Interactions supplementaires avec les autres personnages
-      # - 4 # Chatty Imoen : Changement de portrait pour Imoen -> Donner a Imoen son portrait de BG2
+      - 0 # Chatty Imoen : Repliques audio supplementaires
+      - 10 # Chatty Imoen : Interactions supplementaires avec les autres personnages
     location:
       github_user: The-Gate-Project
       repository: ChattyImoen
       release: v1.5
       asset: lin-chattyimoen-v1.5.zip
   - name: neera
-    description: neera expansion
+    description: bg1 - more diliagues with neera, flirts
     components:
       - 0 # Neera Expansion
-      - 2 # How much time would you like between talks (approximately)? -> 30 minutes
+      - 1 # How much time would you like between talks (approximately)? -> 15 minutes
     location:
       github_user: SpellholdStudios
       repository: Neera_Expansion
       release: v1.3.1
       asset: neera-expansion-v1.3.1.iemod
   - name: neerabanters
+    description: bg1 - add interjections and banters for neera
     components:
       - 10 # Neera Banters: Dialogue Banters and Interjections
       - 20 # Neera Banters: Interaction Banters
@@ -2232,72 +2249,186 @@ modules:
       release: v0.9.2
       asset: win-neerabanters-v0.9.2.zip
   - name: korganfriendship
-    components: [0]
+    components:
+      - 0
     location:
       github_user: SpellholdStudios
       repository: KorganFriendship
       release: v1.6
       asset: korgan-friendship-v1.6.iemod
   - name: korgan
-    description:
-    components: [0]
+    description: Korgan's Redemption - possibility of redeeming Korgan if Mazzy is in your party
+    components:
+      - 0
     location:
       github_user: SpellholdStudios
       repository: KorgansRedemption
       release: v10.0.1
       asset: korgans-redemption-v10.0.1.iemod
+      replace:
+        - file_globs: ["dlg/korgan.d", "baf/korgan.baf"]
+          replace: 'RealSetGlobalTimer("KorgMaz","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("KorgMaz","GLOBAL",800)'
+        - file_globs: ["dlg/korgan.d"]
+          replace: 'RealSetGlobalTimer("KorgMaz","GLOBAL",1200)'
+          with: 'RealSetGlobalTimer("KorgMaz","GLOBAL",400)'
   - name: minscfriendship
+    description: bg2, friendship path for minsc
     components: [0]
     location:
       github_user: SpellholdStudios
       repository: MinscFriendship
       release: v1.3
       asset: minsc-friendship-v1.3.iemod
-  - name: Coran
-    description: Coran for bg2
-    components: ask
-    location:
-      github_user: Pocket-Plane-Group
-      repository: Coran_for_BGII
-      release: v9
-      asset: coran-npc-mod-for-baldurs-gate-ii-v9.iemod
-  - name: coranbgfriend # coran bg1 friendship
+      replace:
+        - file_globs: ["scripts/minsc.baf"]
+          replace: 'RealSetGlobalTimer("I#MinscTime","GLOBAL",1800)'
+          with: 'RealSetGlobalTimer("I#MinscTime","GLOBAL",700)'
+      replace:
+        - file_globs: ["dialogues/misc84.d"]
+          replace: 'RealSetGlobalTimer("I#BooTime","GLOBAL",1600)'
+          with: 'RealSetGlobalTimer("I#BooTime","GLOBAL",600)'
+  - name: coranbgfriend
+    description: coran bg1 friendship
     components: [0]
     location:
       github_user:  Gibberlings3
       repository: CoranBGFriend
       release: v5.2
       asset: corans-bg-extended-friendship-talks-v5.2.iemod
+      replace:
+        - file_globs: ["baf/p#corannobg1npc.baf", "dlg/p#coranft.d", "baf/p#coranbgfriendship.baf"]
+          replace: 'RealSetGlobalTimer("P#CoFriendshipNewTimer","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("P#CoFriendshipNewTimer","GLOBAL",600)'
   - name: haerdalis_friendship
-    components: [0]
+    description: soa+tob - add frienship path for Haer-Dalis
+    components:
+      - 0
     location:
       github_user: SpellholdStudios
       repository: HaerdalisFriendship
       release: v1.2
       asset: haerdalis-friendship-v1.2.iemod
+      replace:
+        - file_globs: ["scripts/haer25.baf"]
+          replace: 'RealSetGlobalTimer\("I#HaerDalisIEPTimerToB","GLOBAL",1?00\)'
+          with: 'RealSetGlobalTimer("I#HaerDalisIEPTimerToB","GLOBAL",600)'
+        - file_globs: ["scripts/haerdali.baf", "dialogues/haerd25j.d", "dialogues/haerdaj.d"]
+          replace: 'RealSetGlobalTimer\("I#HaerDalis(?<c>[^"]+)","GLOBAL",3600\)'
+          with: 'RealSetGlobalTimer("I#HaerDalis${c}","GLOBAL",900)'
   - name: valygarfriendship
-    components: [0]
+    description: soa+tob - add frienship path for Haer-Dalis
+    components:
+      - 0
     location:
       github_user: SpellholdStudios
       repository: ValygarFriendship
       release: v1.5
       asset: valygar-friendship-v1.5.iemod
+      replace:
+        - file_globs: ["scripts/valy25.baf", "scripts/valygar.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("I#Valygar(?<c>[^"]+)","GLOBAL",1?00\)'
+          with: 'RealSetGlobalTimer("I#Valygar${c}","GLOBAL",470)'
   - name: mazzy
-    description: Mazzy friendship
+    description: soa+tob - add frienship path for Mazzy
     components: [0]
     location:
       github_user: SpellholdStudios
       repository: MazzyFriendship
       release: v3.5
       asset: mazzy-friendship-v3.5.iemod
+      replace:
+        - file_globs: ["scripts/mazzy.baf"]
+          replace: 'RealSetGlobalTimer("I#MazzyFriendTalksTimer","GLOBAL",1200)'
+          with: 'RealSetGlobalTimer("I#MazzyFriendTalksTimer","GLOBAL",350)'
+        - file_globs: ["scripts/mazzy.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer("I#MazzyFriendTalksTimer","GLOBAL",[9,6]00)'
+          with: 'RealSetGlobalTimer("I#MazzyFriendTalksTimer","GLOBAL",200)'
+        - file_globs: ["dialogue/mazzyj.d", "scripts/mazz25.baf"]
+          replace: 'RealSetGlobalTimer("I#MazzyFriendTalksTimer","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("I#MazzyFriendTalksTimer","GLOBAL",870)'
+        - file_globs: ["dialogue/mazzyj.d", "scripts/mazz25.baf"]
+          replace: 'RealSetGlobalTimer("I#MazzyFriendTalksTimer","GLOBAL",1800)'
+          with: 'RealSetGlobalTimer("I#MazzyFriendTalksTimer","GLOBAL",390)'
+        - file_globs: ["dialogue/mazzy25j.d"]
+          replace: 'RealSetGlobalTimer("I#MazzyToBFriendTalksTimer","GLOBAL",5400)'
+          with: 'RealSetGlobalTimer("I#MazzyToBFriendTalksTimer","GLOBAL",910)'
   - name: cernd
-    components: [0]
+    description: soa+tob - add frienship path for Cernd
+    components:
+      - 0
     location:
       github_user: SpellholdStudios
       repository: CerndFriendship
       release: v1.3
       asset: Cernd-Friendship-v1.3.iemod
+      replace:
+        - file_globs: ["scripts/cernd.baf", "scripts/cern25.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",1600\)'
+          with: 'RealSetGlobalTimer("${c}","GLOBAL",510)'
+        - file_globs: ["scripts/cernd.baf"]
+          replace: 'RealSetGlobalTimer("I#CerndFamiliarTime","GLOBAL",600)'
+          with: 'RealSetGlobalTimer("I#CerndFamiliarTime","GLOBAL",300)'
+  - name: viconia
+    description: soa+tob - add frienship path for Viconia
+    components:
+      - 0
+    location:
+      github_user: SpellholdStudios
+      repository: ViconiaFriendship
+      release: v4.5
+      asset: Viconia-Friendship-v4.5.iemod
+      replace:
+        - file_globs: ["scripts/vico25.baf"]
+          replace: 'RealSetGlobalTimer("I#ViconiaToBTimer","GLOBAL",1800)'
+          with: 'RealSetGlobalTimer("I#ViconiaToBTimer","GLOBAL",512)'
+        - file_globs: ["dialogue/vicon25j.d"]
+          replace: 'RealSetGlobalTimer("I#ViconiaToBTimer","GLOBAL",2700)'
+          with: 'RealSetGlobalTimer("I#ViconiaToBTimer","GLOBAL",654)'
+        - file_globs: ["scripts/viconia.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("I#Viconia(?<c>[^"]+)","GLOBAL",900\)'
+          with: 'RealSetGlobalTimer("I#Viconia${c}","GLOBAL",183)'
+        - file_globs: ["scripts/viconia.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("I#Viconia(?<c>[^"]+)","GLOBAL",3600\)'
+          with: 'RealSetGlobalTimer("I#Viconia${c}","GLOBAL",672)'
+        - file_globs: ["scripts/viconia.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("I#Viconia(?<c>[^"]+)","GLOBAL",7200\)'
+          with: 'RealSetGlobalTimer("I#Viconia${c}","GLOBAL",2000)'
+        - file_globs: ["dialogue/viconij.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer("I#Viconia(?<c>[^"]+)","GLOBAL",[23]?00)'
+          with: 'RealSetGlobalTimer("I#Viconia${c}","GLOBAL",700)'
+  - name: yoshimo
+    description: soa+tob - add frienship path for Yoshimo
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: YoshimoFriendship
+      release: v5.0
+      asset: yoshimo-friendship-v5.0.iemod
+      replace:
+        - file_globs: ["dialogue/yoshj.d", "scripts/yoshimo.baf"]
+          replace: 'RealSetGlobalTimer("I#YoshimoFriendTalksTimer","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("I#YoshimoFriendTalksTimer","GLOBAL",731)'
+        - file_globs: ["scripts/yoshimo.baf"]
+          replace: 'RealSetGlobalTimer("I#YoshimoFriendTalksTimer","GLOBAL",600)'
+          with: 'RealSetGlobalTimer("I#YoshimoFriendTalksTimer","GLOBAL",231)'
+  - name: sarevokfriendship
+    description: soa+tob - add frienship path for Sarevok
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: SarevokFriendship
+      release: v2.7
+      asset: sarevok-friendship-v2.7.iemod
   - name: HexxatFriendship
+    description: soa+tob - add frienship path for Hexxat
     components:
       - 0
     location:
@@ -2306,14 +2437,16 @@ modules:
       release: v1.1
       asset:  hexxat-friendship-1.1.iemod
   - name: deArnise
-    components: [0]
+    description: romance with Nalia (soa part)
+    components:
+      - 0
     location:
       github_user: Pocket-Plane-Group
       repository: deArnise_Romance
       release: v7
       asset: deArnise_v7.zip
       patch:
-        relative: patches/dearnise.diff
+        relative: patches/eet/dearnise-romance.diff
         replace:
           - file_globs: ["Dialogue/PGNalLT.d"]
             replace: 'RealSetGlobalTimer("PGNaliaRomanceTimer","GLOBAL",2700)' # 45min
@@ -2330,47 +2463,75 @@ modules:
           - file_globs: ["Scripts/PGNalia.baf"]
             replace: 'RealSetGlobalTimer("PGNaliaLT14Timer","GLOBAL",500)'
             with: 'RealSetGlobalTimer("PGNaliaLT14Timer","GLOBAL",200)'
-  # not compatible with imoen4ever
-  #- name: imoenRomance
-  #  components: [0, 1]
-  #  location:
-  #    # original location https://www.blindmonkey.org/imoen/files/Imoen%20Romance.zip
-  #    # started to give SSL errors
-  #    github_user: mleduque
-  #    repository: ImoenRomance
-  #    branch: main
-  - name: Nalia_at_Last
+  - name: imoenRomance # not compatible with imoen4ever
     components:
+      - 0 # Imoen NPC Romance Mod for BG2:SoA TOB (4.1.0 Version!)
+      - 1 # Romance Option-> Allow Multiple Romance's~
+    location:
+      # original location https://www.blindmonkey.org/imoen/files/Imoen%20Romance.zip
+      # started to give SSL errors
+      github_user: mleduque
+      repository: ImoenRomance
+      branch: main
+      # no need to patch out romance conflicts
+      replace:
+        - file_globs: ["dialogues/SOA/Love/RomanceContent.d", "scripts/SOA/misc/imoen2.baf"]
+          replace: 'RealSetGlobalTimer("MRAerieFriendshipTimer","GLOBAL",800)'
+          with: 'RealSetGlobalTimer("MRAerieFriendshipTimer","GLOBAL",500)'
+        - file_globs: ["dialogues/SOA/Love/lovetalks.d", "dialogues/SOA/misc/AerieImoen.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("MR(?<c>[^"]*)","GLOBAL",1\d\d\d\)'
+          with: 'RealSetGlobalTimer("MR${c}","GLOBAL",600)'
+        - file_globs: ["dialogues/SOA/Spellhold/Exit.d"]
+          replace: 'RealSetGlobalTimer("MRBanterStuffTalk","GLOBAL",1800)'
+          with: 'RealSetGlobalTimer("MRBanterStuffTalk","GLOBAL",730)'
+        - file_globs: ["dialogues/SOA/Spellhold/SlayerDreamTalk.d"]
+          replace: 'RealSetGlobalTimer("MRImoenLovetalkTimer","GLOBAL",2400)'
+          with: 'RealSetGlobalTimer("MRImoenLovetalkTimer","GLOBAL",530)'
+        - file_globs: ["dialogues/SOA/Love/lovetalks.d"]
+          replace: 'RealSetGlobalTimer("MRImoenLovetalkTimer","GLOBAL",2600)'
+          with: 'RealSetGlobalTimer("MRImoenLovetalkTimer","GLOBAL",550)'
+        - file_globs: ["dialogues/SOA/Love/pidtree.d"]
+          replace: 'RealSetGlobalTimer("MRImoenLovetalkTimer","GLOBAL",3000)'
+          with: 'RealSetGlobalTimer("MRImoenLovetalkTimer","GLOBAL",580)'
+  - name: Nalia_at_Last
+    description: tob part of Nalia romance(s)
+    components:
+       - 0 # Nalia at Last: A ToB Romance MoD.
+       - 8 # Romance theme usic
     location:
       github_user: Skitia
       repository: Nalia_At_Last
-      tag: v1.10
-  - name: viconia
-    components: [0]
-    location:
-      github_user: SpellholdStudios
-      repository: ViconiaFriendship
-      release: v4.5
-      asset: Viconia-Friendship-v4.5.iemod
-  - name: yoshimo
-    components: [0]
-    location:
-      github_user: SpellholdStudios
-      repository: YoshimoFriendship
-      release: v5.0
-      asset: yoshimo-friendship-v5.0.iemod
-  - name: sarevokfriendship
-    components: [0]
-    location:
-      github_user: SpellholdStudios
-      repository: SarevokFriendship
-      release: v2.7
-      asset: sarevok-friendship-v2.7.iemod
+      tag: v1.11
+      patch:
+        path: patches/eet/nalia-at-last-conflicts.diff
+      replace:
+        - file_globs: ["Dialogue/Original.d", "Dialogue/X3Nal25.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("X3Nalia(?<c>[^"]+)","GLOBAL",2700\)'
+          with: 'RealSetGlobalTimer("X3Nalia${c}","GLOBAL",700)'
+        - file_globs: ["Dialogue/X3Nal25.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("X3Nalia(?<c>[^"]+)","GLOBAL",1500\)'
+          with: 'RealSetGlobalTimer("X3Nalia${c}","GLOBAL",500)'
+        - file_globs: ["Dialogue/X3Nal25.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("X3Nalia(?<c>[^"]+)","GLOBAL",3200\)'
+          with: 'RealSetGlobalTimer("X3Nalia${c}","GLOBAL",800)'
+        - file_globs: ["Scripts/X3Nal25.baf", "Scripts/X3NalD.baf"]
+          replace: 'RealSetGlobalTimer\("X3Nalia(?<c>[^"]+)","GLOBAL",\d\d00\)'
+          with: 'RealSetGlobalTimer("X3Nalia${c}","GLOBAL",600)'
+        - file_globs: ["Scripts/X3Nal25.baf"]
+          replace: 'RealSetGlobalTimer("X3NaliaFlirtTimer","GLOBAL",600)'
+          with: 'RealSetGlobalTimer("X3NaliaFlirtTimer","GLOBAL",180)'
   - name: YoshimosRemorse
-    components: [0]
+    description: tob mod, adds Yoshimo as joinable, dialogues, friendship
+    components:
+      - 0
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/lin-YoshimosRemorse-v3.1.1.tar.gz
   - name: ajantisbg1
+    description: More content (dialogues, banters) for Ajantis in BG1
     components:
       - 0 # Installs Ajantis BG1 Expansion Modification
       - 30 # Ajantis SoD NPC: Crossmod Content
@@ -2379,8 +2540,18 @@ modules:
       repository: Ajantis_BG1_Expansion
       release: v19.3
       asset: ajantis-bg1-expansion-modification-19.3.iemod
+      replace:
+        - file_globs: ["lib/ajantis_bgt.tpa", "lib/ajantis_tutu.tpa", "lib/ajantis_bgee.tpa"]
+          replace: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",500)'
+          with: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",200)'
+        - file_globs: ["lib/ajantis_bgt.tpa", "lib/ajantis_tutu.tpa", "lib/ajantis_bgee.tpa"]
+          replace: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",800)'
   - name: SkieCost # install late because adds crossmod banters with Yvette & Foundling
-    description: "Skie: The Cost of One Girl’s Soul"
+    description: >
+      Skie: The Cost of One Girl’s Soul
+      The mod gives the player a chance to continue Skie's plot that began in Siege of Dragonspear.
+      BG2 - 2 quests, 2 npcs Skie, friendship, , Eddard (bard kit), friendship+romance
     components:
       - 0 # Skie: The Cost of One Girl's Soul - New quest for Baldur's Gate 2 EE: 4.01
       - 1 # Skie: The Cost of One Girl's Soul - Allow Skie to return as a joinable NPC: 4.01
@@ -2389,7 +2560,26 @@ modules:
       - 4 # Skie: The Cost of One Girl's Soul - Add Player-Initiated Dialogue (PID) for Eddard: 4.01
       - 5 # Skie: The Cost of One Girl's Soul - Add brand new SoD-oriented items to BG2: 4.01
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Skie The Cost of One Girls Soul v6.0.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/SkieCost v6.2.zip
+      replace:
+        - file_globs: ["dialogues/pid-*.d"]
+          replace: 'RealSetGlobalTimer("L#SDSkiesNewSeriesTime","GLOBAL",3800)'
+          with: 'RealSetGlobalTimer("L#SDSkiesNewSeriesTime","GLOBAL",800)'
+        - file_globs: ["scripts/L#2ED.baf", "/scripts/L#2ED25.baf", "scripts/l#2sd25.baf", "scripts/L#2SDSKI-EdEnd.baf", "scripts/l#2sdski.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("L#<?<c>[^"]+","GLOBAL",400\)'
+          with: 'RealSetGlobalTimer("L#${c}","GLOBAL",120)'
+        - file_globs: ["scripts/L#2ED.baf", "/scripts/L#2ED25.baf", "scripts/l#2sd25.baf", "scripts/L#2SDSKI-EdEnd.baf", "scripts/l#2sdski.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("L#<?<c>[^"]+","GLOBAL",600\)'
+          with: 'RealSetGlobalTimer("L#${c}","GLOBAL",180)'
+        - file_globs: ["scripts/L#2ED.baf", "/scripts/L#2ED25.baf", "scripts/l#2sd25.baf", "scripts/L#2SDSKI-EdEnd.baf", "scripts/l#2sdski.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("L#<?<c>[^"]+","GLOBAL",2400\)'
+          with: 'RealSetGlobalTimer("L#${c}","GLOBAL",700)'
+        - file_globs: ["scripts/l#2sd25.baf"]
+          replace: 'RealSetGlobalTimer("L#2SDSkieComparisonTime","GLOBAL",8000)'
+          with: 'RealSetGlobalTimer("L#2SDSkieComparisonTime","GLOBAL",1200)'
   - name: Wings
     components:
       - 0 # Wings - Wings for BG2:EE
@@ -2399,6 +2589,14 @@ modules:
       github_user: Skitia
       repository: Wings
       tag: v1.05
+      replace:
+        - file_globs: ["Scripts/B2#AERIE.baf"]
+          replace: 'RealSetGlobalTimer("B2#AerieFriends","GLOBAL",2500)'
+          with: 'RealSetGlobalTimer("B2#AerieFriends","GLOBAL",600)'
+        - file_globs: ["Dialogue/B2#Aerie.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("([^"]+)","GLOBAL",36\d\d\)'
+          with: 'RealSetGlobalTimer("${c}","GLOBAL",800)'
   - name: Fhaugy
     components:
       - 0 # Fhaugy - Baldur's Gate 2: EE NPC

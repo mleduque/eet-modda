@@ -1,0 +1,42 @@
+diff --git a/Nalia_at_Last/Dialogue/FATESP.d b/Nalia_at_Last/Dialogue/FATESP.d
+index 7c91b56..fa62fac 100644
+--- a/Nalia_at_Last/Dialogue/FATESP.d
++++ b/Nalia_at_Last/Dialogue/FATESP.d
+@@ -1,13 +1,13 @@
+ EXTEND_TOP FATESP 6
+ IF ~%New_ToB_Game%
+-!Dead("NALIA")!InMyArea("NALIA")Global("NaliaSummoned","GLOBAL",0)!Global("NaliaRomanceActive","GLOBAL",3)!Global("X3IsaRomanceActive","GLOBAL",2)!Global("X3KalRomanceActive","GLOBAL",2)!Global("X3EmiRomanceActive","GLOBAL",2)!Global("X3RebRomanceActive","GLOBAL",2)!Global("X3VieRomanceActive","GLOBAL",2)!Global("AerieRomanceActive","GLOBAL",2)!Global("JaheiraRomanceActive","GLOBAL",2)!Global("ViconiaRomanceActive","GLOBAL",2)ReputationGT(Player1,7)Gender(Player1,MALE)~ THEN REPLY @0
++!Dead("NALIA")!InMyArea("NALIA")Global("NaliaSummoned","GLOBAL",0)!Global("NaliaRomanceActive","GLOBAL",3)ReputationGT(Player1,7)Gender(Player1,MALE)~ THEN REPLY @0
+ DO ~SetGlobal("NaliaSpawnPlane","GLOBAL",1)CreateVisualEffect("SPPORTAL",[1999.1228])
+ Wait(2) 
+ SetGlobal("NaliaRomanceActive","GLOBAL",2)
+ CreateCreature("NALIA18",[1999.1228],0) 
+ SetGlobal("NaliaSummoned","GLOBAL",1)~ GOTO 8
+ IF ~%New_ToB_Game%
+-!Dead("NALIA")!InMyArea("NALIA")Global("NaliaSummoned","GLOBAL",0)!Global("PGNaliaRomanceActive","GLOBAL",3)!Global("X3IsaRomanceActive","GLOBAL",2)!Global("X3KalRomanceActive","GLOBAL",2)!Global("X3EmiRomanceActive","GLOBAL",2)!Global("X3RebRomanceActive","GLOBAL",2)!Global("X3VieRomanceActive","GLOBAL",2)!Global("AerieRomanceActive","GLOBAL",2)!Global("JaheiraRomanceActive","GLOBAL",2)!Global("ViconiaRomanceActive","GLOBAL",2)ReputationGT(Player1,7)Gender(Player1,MALE)~ THEN REPLY @1
++!Dead("NALIA")!InMyArea("NALIA")Global("NaliaSummoned","GLOBAL",0)!Global("PGNaliaRomanceActive","GLOBAL",3)ReputationGT(Player1,7)Gender(Player1,MALE)~ THEN REPLY @1
+ DO ~SetGlobal("NaliaSpawnPlane","GLOBAL",1)CreateVisualEffect("SPPORTAL",[1999.1228])
+ Wait(2)
+ SetGlobal("PGNaliaRomanceActive","GLOBAL",2)
+diff --git a/Nalia_at_Last/Scripts/X3Nal25.baf b/Nalia_at_Last/Scripts/X3Nal25.baf
+index 5fad9b7..bb3363a 100644
+--- a/Nalia_at_Last/Scripts/X3Nal25.baf
++++ b/Nalia_at_Last/Scripts/X3Nal25.baf
+@@ -14,17 +14,6 @@ IF
+ InParty(Myself)
+ GlobalLT("NaliaRomanceActive","GLOBAL",2)
+ GlobalLT("PGNaliaRomanceActive","GLOBAL",2)
+-!Global("JaheiraRomanceActive","GLOBAL",2)
+-!Global("AerieRomanceActive","GLOBAL",2)
+-!Global("ViconiaRomanceActive","GLOBAL",2)
+-!Global("NeeraRomanceActive","GLOBAL",2)
+-!Global("C0SireneRomanceActive","GLOBAL",2)
+-!Global("L3PetsyRomanceActive","GLOBAL",2)
+-!Global("YvetteRomanceActive","GLOBAL",2)
+-!Global("X3EmiRomanceActive","GLOBAL",2)
+-!Global("X3RebRomanceActive","GLOBAL",2)
+-!Global("X3KalRomanceActive","GLOBAL",2)
+-!Global("X3VieRomanceActive","GLOBAL",2)
+ Gender(Player1,MALE)
+ Global("X3NaliaMatch","GLOBAL",0)
+ THEN RESPONSE #100
