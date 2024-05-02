@@ -204,8 +204,8 @@ modules:
     location:
       github_user: Argent77
       repository: A7-TestYourMettle
-      release: v1.4
-      asset: A7-TestYourMettle-v1.4.iemod
+      release: v1.5
+      asset: A7-TestYourMettle-v1.5.iemod
   - name: A7-GolemConstruction
     components:
       - 0   # Capacite de Fabrication de Golem pour lanceurs de sorts
@@ -1034,13 +1034,14 @@ modules:
       repository: framed
       release: v1.14
       asset: framed-v1.14.iemod
-  - name: RoT # Region of Terror
-    components: [0]
+  - name: RoT
+    description: Region of Terror
+    components: ask
     location:
       github_user: SpellholdStudio
       repository: Region_of_Terror
-      branch: master
-      refresh: 7days
+      release: v5.0
+      asset: region-of-terror-v5.0.iemod
       patch: rot-taming-drizzt.diff
   - name: TDD
     components: none
@@ -2214,6 +2215,50 @@ modules:
   #    repository: Coran_for_BGII
   #    release: v9
   #    asset: coran-npc-mod-for-baldurs-gate-ii-v9.iemod
+  - name: Fhaugy
+    components:
+      - 0 # Fhaugy - Baldur's Gate 2: EE NPC
+      - 1 # Fhaugy: Player-Initiated Dialogues (PIDs)
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/Fhaugy v1.0.zip
+      replace:
+        files_globs: ["scripts/L#FHA.baf", "scripts/L#FHA25.baf"]
+        regex: true
+        replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",[23]\d00\)'
+        with: 'RealSetGlobalTimer("${c}","GLOBAL",740)'
+        files_globs: ["scripts/L#FHA.baf", "scripts/L#FHA25.baf"]
+        regex: true
+        replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",1\d00\)'
+        with: 'RealSetGlobalTimer("${c}","GLOBAL",340)'
+  - name: kivan
+    description: bg2+soa, adds Kivan and possibly Deheriana, friendship, Kivan romance (exclusive with Deheriana)
+    components: ask
+    location:
+      github_user: Gibberlings3
+      repository: Kivan_and_Deheriana
+      release: v18
+      asset:  kivan-and-deheriana-companions-for-bg2-v18.iemod
+  - name: BG1NPCSoA
+    description: BG1 NPCs in BG2
+    installation:
+      after: other versions of same npcs
+    components: ask
+      #s- 0 # Water Gardens. New Athkatla's district & new quests: 13.5
+      #s- 2 # Shar-Teel NPC in BG2. "Nightbringer of Shar" (SoA): 13.5
+      #s## issues with multibards
+      #s##- 6 # Brave Sir Garrick NPC in BG2 (SoA): 13.5
+      #s- 20 # Coran & Safana Chronicles (SoA & ToB): 13.5
+      #s- 35 # Kagain's Corner (SoA & ToB) -> Store with Vanilla Items Only: 13.5
+      #s- 40 # Faldorn's New Leaf (SoA & ToB): 13.5
+      #s- 45 # Xzar and Monty Murder Mysteries (SoA & ToB): 13.5
+      #s##- 83 # Make Garrick a Skald: 13.5
+      #s#- 85 # Make Safana a Swashbuckler: 13.5
+      #s- 87 # Inter Component Banter Pack: 13.5
+    location:
+      github_user: SpellholdStudios
+      repository: BG1_NPCs_for_SoA_-_ToB
+      reklease: v14.3
+      asset: bg1-npc-in-soatob-14.3.iemod
 
   ###########
   # NPC extensions
@@ -2502,7 +2547,7 @@ modules:
     location:
       github_user: Skitia
       repository: Nalia_At_Last
-      tag: v1.11
+      tag: v1.12
       patch:
         path: patches/eet/nalia-at-last-conflicts.diff
       replace:
@@ -2588,7 +2633,7 @@ modules:
     location:
       github_user: Skitia
       repository: Wings
-      tag: v1.05
+      tag: v1.06
       replace:
         - file_globs: ["Scripts/B2#AERIE.baf"]
           replace: 'RealSetGlobalTimer("B2#AerieFriends","GLOBAL",2500)'
@@ -2597,12 +2642,6 @@ modules:
           regex: true
           replace: 'RealSetGlobalTimer\("([^"]+)","GLOBAL",36\d\d\)'
           with: 'RealSetGlobalTimer("${c}","GLOBAL",800)'
-  - name: Fhaugy
-    components:
-      - 0 # Fhaugy - Baldur's Gate 2: EE NPC
-      - 1 # Fhaugy: Player-Initiated Dialogues (PIDs)
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Fhaugy v1.0.zip
   - name: banterpack
     components:
       - 0 # Pack de Dialogues du Pocket Plane Group pour BG2 : SoA
@@ -2629,34 +2668,6 @@ modules:
       repository: IEP_Extended_Banter
       release: v5.9
       asset: iep-extended-banters-v5.9.iemod
-  - name: kivan
-    components: ask
-    location:
-      github_user: Gibberlings3
-      repository: Kivan_and_Deheriana
-      release: v18
-      asset:  kivan-and-deheriana-companions-for-bg2-v18.iemod
-  - name: BG1NPCSoA
-    description: BG1 NPCs in BG2
-    installation:
-      after: other versions of same npcs
-    components:
-      #s- 0 # Water Gardens. New Athkatla's district & new quests: 13.5
-      #s- 2 # Shar-Teel NPC in BG2. "Nightbringer of Shar" (SoA): 13.5
-      #s## issues with multibards
-      #s##- 6 # Brave Sir Garrick NPC in BG2 (SoA): 13.5
-      #s- 20 # Coran & Safana Chronicles (SoA & ToB): 13.5
-      #s- 35 # Kagain's Corner (SoA & ToB) -> Store with Vanilla Items Only: 13.5
-      #s- 40 # Faldorn's New Leaf (SoA & ToB): 13.5
-      #s- 45 # Xzar and Monty Murder Mysteries (SoA & ToB): 13.5
-      #s##- 83 # Make Garrick a Skald: 13.5
-      #s#- 85 # Make Safana a Swashbuckler: 13.5
-      #s- 87 # Inter Component Banter Pack: 13.5
-    location:
-      github_user: SpellholdStudios
-      repository: BG1_NPCs_for_SoA_-_ToB
-      reklease: v14.3
-      asset: bg1-npc-in-soatob-14.3.iemod
   - name: TS_sime
     components:
       - 0 # Vlad's Sime NPC: 0.8
@@ -2880,8 +2891,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Crucible
-      release: "1.2"
-      asset: lin-crucible-v1.2.zip
+      release: "2.0"
+      asset: lin-crucible-v2.0.zip
 
   #########
   # Spells
@@ -3629,7 +3640,7 @@ modules:
     location:
       github_user: mleduque
       repository: Faiths_and_Powers
-      tag: 0.86sd7-fr
+      tag: 0.86sd9
       patch:
         relative: patches/fnp_configure.diff
   - name: 5E_spellcasting

@@ -21,7 +21,7 @@ modules:
       - 1510
       - 2000
     location:
-      github_user: jazira33
+      github_user: mleduque
       repository: SwordCoastStratagems
-      branch: master
+      branch: redo-regexes
       refresh: ask

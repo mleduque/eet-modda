@@ -70,13 +70,13 @@ modules:
       github_user: ??
       repository: DrizztSaga
       tag: V3.03
-  - name: soa # The Stone of Askavar
-    components: [0]
-    version: "2.2"
+  - name: soa
+    description: The Stone of Askavar
+    components: ask
     location:
-      github_user: mleduque
-      repository: redcarnelian_stone_of_askavar
-      tag: v2.2
+      github_user: red-carnelian
+      repository: The-Stone-of-Askavar
+      tag: "2.3"
   - name: DarkHorizonsBGee
     components:
     location:
