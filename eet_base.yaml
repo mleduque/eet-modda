@@ -3306,7 +3306,7 @@ modules:
     location:
       github_user:  mleduque
       repository: Forgotten-Armament
-      tag: 4.0-keep-some-boots
+      tag: 4.1-keep-some-boots
     ignore_warnings: true
     #patch:
     #  relative: patches/forgotten-armament-ini.diff
