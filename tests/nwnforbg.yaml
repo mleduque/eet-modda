@@ -1,0 +1,13 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  lang_dir: "fr_FR"
+  #lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+  lang_preferences: ["#rx#^english", "american english" ]
+modules:
+  - name: NwnForBg
+    components: ask
+    location:
+      github_user: abalabokhin
+      repository: NWNForBG
+      tag: "0.97"

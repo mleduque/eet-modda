@@ -79,7 +79,7 @@ modules:
     location:
       github_user: UnearthedArcana
       repository: BP_in_BG
-      tag: "0.9.3"
+      tag: "0.9.5"
   - name: ascension
     description: ascension - main component -> WARNs no effects added to SPPR403.spl | SPWI306.spl | spermel.itm
     components:
@@ -989,8 +989,17 @@ modules:
   - name: Tidings
     components: ask
     location:
-      http: http://america.iegmc.net/g3/Dark_Tidings.rar # 2023-09-24
-      rename: Dark_Tidings_1.5.rar
+      homepage: https://baldurs-gate.de/index.php?resources/dark-tidings.65/
+      file: /home/mick/Games/modda-cache/static/Dark_Tidings_v2.0.rar # 2024-05-16
+      #http: http://america.iegmc.net/g3/Dark_Tidings.rar # 2023-09-24
+      #rename: Dark_Tidings_2.0.rar
+      #https://www.baldurs-gate.de/acifer/Dark_Tidings.rar # 2024-05-16
+  - name:
+    components: ask
+    location:
+      http: https://www.baldurs-gate.de/acifer/Call_of_the_lost_goddess.zip
+      #http: http://america.iegmc.net/g3/Call_of_the_lost_goddess.zip
+      rename: Call_of_the_lost_goddes_1.1.zip # 2024-05-20
   - name: SOS # Shadows Over Soubar
     components: ask
     location:
@@ -1298,7 +1307,7 @@ modules:
     location:
       github_user: Glittergear
       repository: DeadGardens
-      release: v1.0
+      release: v1.1
       asset: DeadGardens.zip
   - name: ErrantJusticeBG2
     components: ask
@@ -3278,8 +3287,8 @@ modules:
     components: ask
       github_user: Argent77
       repository: A7-WaresOfThePlanes
-      release: v1.1
-      asset: A7-WaresOfThePlanes-v1.1.iemod
+      release: v1.2
+      asset: A7-WaresOfThePlanes-v1.2.iemod
     installation:
       after: ub
 
