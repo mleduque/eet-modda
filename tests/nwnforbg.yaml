@@ -5,9 +5,48 @@ global:
   #lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
   lang_preferences: ["#rx#^english", "american english" ]
 modules:
+  - name: tobex
+    components:
+      - 100 # TobEx - Core: v28
+    location:
+      path: /home/mick/Games/modda-cache/static/TobEx.zip
+  - name: bg2fixpack
+    components: all
+    location:
+      github_user: Gibberlings3
+      repository: BG2-Fixpack
+      release: v13
+      asset: lin-bg2fixpack-v13.tar.gz
+  - name: InfinityAnimations
+    components:
+      - 0 #/ Infinity Animations: v5.1.2
+      - 25 #/ Humanoid Animation Fixes: v5.1.2
+      - 50 #/ Distinctive Genies: v5.1.2
+      - 100 #/ Distinctive Fiends: v5.1.2
+      - 150 #/ Pit Fiends -> All get the NWN animation: v5.1
+      - 210 #/ Cambion/Isair Animation -> All cambions: v5.1
+      - 260 #/ Alu-Fiend/Madae Animation -> All alu-fiends:
+      - 400 #/ Distinctive Undead: v5.1.2
+      - 415 #/ Skeleton Warriors -> Skeleton animation: v5.1
+      - 450 #/ Seer Animation -> Some beggars and slaves: v5
+      - 480 #/ Svirfneblin Animations -> Animations only: v5
+      - 500 #/ More Base Animations: v5.1.2
+      - 550 #/ More Icewind Dale Animations: v5.1.2
+      - 600 #/ More Icewind Dale II Animations: v5.1.2
+      - 650 #/ More Neverwinter Nights Animations: v5.1.2
+    location:
+      path: /home/mick/Games/modda-cache/static/infinityanimations-v5.1.2.zip
   - name: NwnForBg
-    components: ask
+    components:
+      - 0 # NWN For BG: 0.97
     location:
       github_user: abalabokhin
       repository: NWNForBG
       tag: "0.97"
+  - name: bp-bgt-worldmap
+    components: ask
+    location:
+      github_user: SpellholdStudios
+      repository: BP-BGT-Worldmap
+      release: v13.1.1
+      asset: worldmap-v13.1.1.iemod

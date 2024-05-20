@@ -994,7 +994,7 @@ modules:
       #http: http://america.iegmc.net/g3/Dark_Tidings.rar # 2023-09-24
       #rename: Dark_Tidings_2.0.rar
       #https://www.baldurs-gate.de/acifer/Dark_Tidings.rar # 2024-05-16
-  - name:
+  - name: godcall
     components: ask
     location:
       http: https://www.baldurs-gate.de/acifer/Call_of_the_lost_goddess.zip
