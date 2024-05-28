@@ -79,7 +79,7 @@ modules:
     location:
       github_user: UnearthedArcana
       repository: BP_in_BG
-      tag: "0.9.5"
+      tag: "1.0"
   - name: ascension
     description: ascension - main component -> WARNs no effects added to SPPR403.spl | SPWI306.spl | spermel.itm
     components:
@@ -259,45 +259,49 @@ modules:
       repository: EndlessBG1
       release: v18.1
       asset: endless-bg1-mod-18.1.iemod
-  - name: transitions
-    installation:
-      after: endlessbg1
-      before: bg1re & npc mods
-    components:
-      - 0 # Main component: Allow continued play after Sarevok and/or Irenicus is defeated: v2.4
-      - 10 # Use BGI ending movie as a dream and give new bhaal-spawn power at first rest: v2.4
-      # done in endlessbg1
-      #- 20  # Give Sarevok his armor, helm, and sword -> Equipped
-      - 32 # Clean-up Quests -> Option 1 and use gentler Tamoko quest: v2.4
-      - 200 # Close quests and rumors that can't be finished after Sarevok is defeated: v2.4
-      - 40 # Clean up the town folk chatter with regard to Sarevok: v2.4
-      - 50 # Clean up the wounded from the thieves' maze: v2.4
-      # done in endlessbg1
-      #- 60  # Elminster makes an appearance outside of the Ducal Palace
-
-      # install all reward houses evenif youdonot intend to use them
-      - 70 # Duke Eltan's reward option: House in front of Palace
-      # This house is used in various other mods (Ascalon's Questpack and Glam's NPC Pack), so you may want to not select it in-game as your reward if those mods are installed and still using it.  Installing it, however, shouldn't affect those mods.
-      - 71 # Duke Eltan's reward option: Cabin in High Hedge
-      - 72 # Duke Eltan's reward option: Gray house in NW Beregost: v2.4
-      - 73  # Duke Eltan's reward option: House across from Flaming Fist compound
-
-      - 80 # Add Waves of Refugees to Baldur's Gate: v2.4
-      - 140 # Use Irenicus in hell movie to restore Bhaal-spawn powers after he is defeated: v2.4
+  #- name: transitions
+  #  installation:
+  #    after: endlessbg1
+  #    before: bg1re & npc mods
+  #  components:
+  #    - 0 # Main component: Allow continued play after Sarevok and/or Irenicus is defeated: v2.4
+  #    - 10 # Use BGI ending movie as a dream and give new bhaal-spawn power at first rest: v2.4
+  #    # done in endlessbg1
+  #    #- 20  # Give Sarevok his armor, helm, and sword -> Equipped
+  #    - 32 # Clean-up Quests -> Option 1 and use gentler Tamoko quest: v2.4
+  #    - 200 # Close quests and rumors that can't be finished after Sarevok is defeated: v2.4
+  #    - 40 # Clean up the town folk chatter with regard to Sarevok: v2.4
+  #    - 50 # Clean up the wounded from the thieves' maze: v2.4
+  #    # done in endlessbg1
+  #    #- 60  # Elminster makes an appearance outside of the Ducal Palace
+  #    # install all reward houses evenif youdonot intend to use them
+  #    - 70 # Duke Eltan's reward option: House in front of Palace
+  #    # This house is used in various other mods (Ascalon's Questpack and Glam's NPC Pack), so you may want to not select it in-game as your reward if those mods are installed and still using it.  Installing it, however, shouldn't affect those mods.
+  #    - 71 # Duke Eltan's reward option: Cabin in High Hedge
+  #    - 72 # Duke Eltan's reward option: Gray house in NW Beregost: v2.4
+  #    - 73  # Duke Eltan's reward option: House across from Flaming Fist compound
+  #    - 80 # Add Waves of Refugees to Baldur's Gate: v2.4
+  #    - 140 # Use Irenicus in hell movie to restore Bhaal-spawn powers after he is defeated: v2.4
+  #  location:
+  #    github_user: Gibberlings3
+  #    repository: transitions
+  #    release: v2.4
+  #    asset: transitions-v2.4.iemod
+  #    patch:
+  #      relative: patches/eet/transition-split-bg2-part.diff
+  #- name: transitions
+  #  installation:
+  #    after: endlessbg1
+  #    before: bg1re & npc mods
+  #  components:
+  #    - 32 # Clean-up Quests -> Option 1 and use gentler Tamoko quest: v2.4
+  #  ignore_warnings: true
+  - name: Reflections
+    components: ask
     location:
-      github_user: Gibberlings3
-      repository: transitions
-      release: v2.4
-      asset: transitions-v2.4.iemod
-      patch:
-        relative: patches/eet/transition-split-bg2-part.diff
-  - name: transitions
-    installation:
-      after: endlessbg1
-      before: bg1re & npc mods
-    components:
-      - 32 # Clean-up Quests -> Option 1 and use gentler Tamoko quest: v2.4
-    ignore_warnings: true
+      github_user: subtledoctor
+      repository: Reflections-of-Destiny
+      tag: "0.2.2"
   - name: DSotSC
     description: Dark Side of the Sword Coast
     installation:
@@ -3562,7 +3566,7 @@ modules:
     location:
       github_user: subtledoctor
       repository: SubtleD_Spell_Tweaks
-      tag: "2.8-fr"
+      tag: "2.8.3"
   - name: TomeAndBlood
     description: Tome And Blood - main
     components:
@@ -3591,7 +3595,7 @@ modules:
       - 95 # Specialistes multiclasse
       github_user: UnearthedArcana
       repository: TomeAndBlood
-      branch: "1.1"
+      branch: "1.1.2"
   - name: TomeAndBlood
     description: Tome And Blood (warning components)
     components:
@@ -3647,9 +3651,9 @@ modules:
       #- 85 # Appliquer les kits de FnP aux PNJ: 0.83.6
     ignore_warnings: true # all except 31 emit no effect changed/added
     location:
-      github_user: mleduque
+      github_user: UnearthedArcana
       repository: Faiths_and_Powers
-      tag: 0.86sd9
+      tag: "0.90"
       patch:
         relative: patches/fnp_configure.diff
   - name: 5E_spellcasting
@@ -3671,7 +3675,7 @@ modules:
     location:
       github_user: mleduque
       repository: 5E_spellcasting
-      branch: "2.5.3"
+      branch: "2.5.4"
       patch:
         # configure "lose spell on interrupted" and "int bonus slots"
         relative: patches/spellcasting-5e-config.diff
@@ -3692,7 +3696,7 @@ modules:
     location:
       github_user: UnearthedArcana
       repository: Will_to_Power
-      branch: "2.6.2"
+      branch: "2.6.3"
       patch:
         relative: patches/will_to_power_tweaks.diff
   - name: Will_to_Power
@@ -3701,7 +3705,7 @@ modules:
       - 300 # Ajouter le Guerrier Psychique, guerrier/psion: 2.0
       - 400 # Ajouter le Psypher, rôdeur/psion: 2.0
       #- 500 # Ajouter le Cerebromant, mage/psion: 2.0
-      - 900 # Mode Dark Sun : Tout le monde est un talent natif: 2.0
+      - 900 # Mode Dark Sun : Tout le monde est un talent natif: 2.0
   - name: might_and_guile
     description: Might And Guile - Main component (warns)
     components: ask
@@ -3709,7 +3713,7 @@ modules:
     location:
       github_user: mleduque
       repository: Might_and_Guile
-      tag: "5.8"
+      tag: "5.8.2"
       patch:
         relative: patches/mng-multibard-shools.diff
   - name: HouseTweaks
@@ -4364,7 +4368,7 @@ modules:
     location:
       github_user:  subtledoctor
       repository: SubtleD_Item_Tweaks
-      tag: 1.3.2-fr
+      tag: "1.3.4"
   - name: Combat_Skill_Proficiencies
     installation:
       after: [stratagems, atweaks, cdtweaks]
@@ -4373,7 +4377,7 @@ modules:
     location:
       github_user: subtledoctor
       repository: Combat_Skill_Proficiencies
-      tag: "1.4.3-fr"
+      tag: "1.4.4"
       patch:
         relative: patches/combat-skill-profs-config.diff + extend mage/sorc feats (d5csdlg.2da, weapprof.2da, profs.2da, profsmax.2da)
   - name: SubtleD_Stat_Overhauls
@@ -4381,7 +4385,7 @@ modules:
     location:
       github_user: subtledoctor
       repository: SubtleD_Stat_Overhauls
-      branch: 1.5.3-fr
+      branch: "1.5.5"
       patch: config
   - name: Magic_Battles_Revised
     installation:
@@ -4537,7 +4541,7 @@ modules:
     location:
       github_user: subtledoctor
       repository: NPC_EE
-      commit: "6.4"
+      commit: "6.5.1"
   - name: POISON_NO_BYPASS
     components:
       - 3 # Limited Exclusions(Anti-magic, AoE, Gaze): Mirror Image or Stoneskin
