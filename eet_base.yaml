@@ -531,8 +531,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: BG1_Romantic_Encounters
-      release: v11.0
-      asset:  baldurs-gate-romantic-encounters-modification-bg1re-11.0.iemod
+      release: v11.1
+      asset: baldurs-gate-romantic-encounters-modification-bg1re-11.1.iemod
   # According to DW, needs maintenance
   #- name: wheels
   #  description: Wheels Of Prophecy
@@ -1004,6 +1004,11 @@ modules:
       http: https://www.baldurs-gate.de/acifer/Call_of_the_lost_goddess.zip
       #http: http://america.iegmc.net/g3/Call_of_the_lost_goddess.zip
       rename: Call_of_the_lost_goddes_1.1.zip # 2024-05-20
+  - name: loretaker
+    components: ask
+    location:
+      http: https://www.baldurs-gate.de/acifer/Loretakers.rar
+      rename: Loretakers_1.1.zip # 2024-06-01
   - name: SOS # Shadows Over Soubar
     components: ask
     location:
@@ -2596,8 +2601,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Ajantis_BG1_Expansion
-      release: v19.3
-      asset: ajantis-bg1-expansion-modification-19.3.iemod
+      release: v19.4
+      asset: ajantis-bg1-expansion-modification-19.4.iemod
       replace:
         - file_globs: ["lib/ajantis_bgt.tpa", "lib/ajantis_tutu.tpa", "lib/ajantis_bgee.tpa"]
           replace: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",500)'
@@ -4253,7 +4258,7 @@ modules:
     location:
       github_user: mleduque
       repository: SwordCoastStratagems
-      branch: run/34.3/2023-04-07
+      branch: "v35.17"
       patch:
         relative: patches/scs-item-nerf-config.diff
   - name: stratagems
@@ -4585,7 +4590,7 @@ modules:
     location:
       github_user: BGforgeNet
       repository: bg2-tweaks-and-tricks
-      release: v8.29
+      release: v8.31
       asset: tweaks-and-tricks-v8.29.iemod
   - name: zgtweaks
     components:

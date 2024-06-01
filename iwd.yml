@@ -273,8 +273,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: iwdcrossmod
-      release: v3_for_real
-      asset: icewind-dale-crossmod-banter-pack-v3.iemod
+      release: v4
+      asset: icewind-dale-crossmod-banter-pack-v4.iemod
   # Use PPE instead
   #- name: MinorNPCPortraitsforIWDEE
   #  components: ~

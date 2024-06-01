@@ -11,4 +11,6 @@ Each 1200 seconds = 20 min increases fatigue by one so 3 points per hour, 3 ×�
 
 no way to read in-game clock?
 
+SEE G3 discussion for implementation idea
 
+2. compatibility mod between wildmage addition and 5E
