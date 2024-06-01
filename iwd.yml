@@ -106,7 +106,7 @@ modules:
     components:
       - 0 # Xikasz's Grove Of Chaos - a quest & companion mod for IWD:EE -> Yes, but don't patch existing save games.: v1.0
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/GroveOfChaos v1.3.zip
+      path: /home/mick/Games/modda-cache/static-iwd/GroveOfChaos v1.4.zip
 
 
 ##############
@@ -220,7 +220,7 @@ modules:
   - name: bethany
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Bethany v1.00.zip
+      path: /home/mick/Games/modda-cache/static-iwd/Bethany v1.01.zip
   - name: DjinniCompanion
     components:
       - 2 # Afaaq, le compagnon Djinn (version IWD:EE): v2.9

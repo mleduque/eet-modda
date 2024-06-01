@@ -232,33 +232,33 @@ modules:
       refresh: 4days
   - name: "c#endlessbg1"
     components: ask
-      - 0 # Endless BG1 : Composant principal (requis): 10
-      - 1 # Plus de prestige pour le Heros de la Porte de Baldur (avec la residence du personnage principal dans le palais): 10
-      - 2 # Court hommage au Heros: 10
-      - 3 # Les objets uniques de Sarevok: 10
-      - 4 # L'épee de Sarevok: 10
-      # overwritten by transition
-      - 5 # Imoen et la duchesse Jannath (Imoen reside dans le palais): 10
-      # overwritten by transition
-      #- 6 # Le duc Eltan se trouve au palais: 10
-      # overwritten by transition
-      - 7 # Le Poing Enflamme arrive apres la bataille finale: 10
-      - 8 # Elminster fait une apparition -> Version de Jastey: 10
-      #- 9 # Elminster fait une apparition -> Textes de BG1 restaures
-      - 10 # Arrivee des premiers refugies a la Porte de Baldur: 10
-      - 11 # Le tresorier Ophyllis se trouve dans le donjon du palais: 10
-      - 12 # Commentaires de Denkod dans la guilde des voleurs au sujet de la mort de Sarevok: 10
-      # 13 # Skip Thieves' Maze Once After Sarevok's Death
-      # incompatible with or overwritten by transition
-      # 14 # Korlasz' Dungeon is in BG1
-      # overwritten by transition
-      - 15 # Fenster le soigneur du palais se trouve dans le palais: 10
-      - 16 # Le Capitaine Corwin se trouve dans le palais: 10
+      #- 0 # Endless BG1 : Composant principal (requis): 10
+      #- 1 # Plus de prestige pour le Heros de la Porte de Baldur (avec la residence du personnage principal dans le palais): 10
+      #- 2 # Court hommage au Heros: 10
+      #- 3 # Les objets uniques de Sarevok: 10
+      #- 4 # L'épee de Sarevok: 10
+      ## overwritten by transition
+      #- 5 # Imoen et la duchesse Jannath (Imoen reside dans le palais): 10
+      ## overwritten by transition
+      ##- 6 # Le duc Eltan se trouve au palais: 10
+      ## overwritten by transition
+      #- 7 # Le Poing Enflamme arrive apres la bataille finale: 10
+      #- 8 # Elminster fait une apparition -> Version de Jastey: 10
+      ##- 9 # Elminster fait une apparition -> Textes de BG1 restaures
+      #- 10 # Arrivee des premiers refugies a la Porte de Baldur: 10
+      #- 11 # Le tresorier Ophyllis se trouve dans le donjon du palais: 10
+      #- 12 # Commentaires de Denkod dans la guilde des voleurs au sujet de la mort de Sarevok: 10
+      ## 13 # Skip Thieves' Maze Once After Sarevok's Death
+      ## incompatible with or overwritten by transition
+      ## 14 # Korlasz' Dungeon is in BG1
+      ## overwritten by transition
+      #- 15 # Fenster le soigneur du palais se trouve dans le palais: 10
+      #- 16 # Le Capitaine Corwin se trouve dans le palais: 10
     location:
       github_user: Gibberlings3
       repository: EndlessBG1
-      release: v18.1
-      asset: endless-bg1-mod-18.1.iemod
+      release: v19
+      asset: endless-bg1-mod-19.iemod
   #- name: transitions
   #  installation:
   #    after: endlessbg1
@@ -402,19 +402,19 @@ modules:
     components:
       - 0 # Eilistraee's Song -> Yes, but don't patch the existing save games: 7.1
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Eilistraees Song v7.3.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Eilistraees Song v7.4.zip
   - name: TotDG
     description: "Colours of Infinity: Tales of the Deep Gardens"
     components:
       - 0 # Colours of Infinity: Tales of the Deep Gardens -> Yes, but don't patch the existing save games: 12.7
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Tales of the Deep Gardens v12.9.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Tales of the Deep Gardens v12.91.zip
   - name: Innershade
     description: "Colours of Infinity: Innershade"
     components:
       - 0 # Colours of Infinity: Innershade -> Yes, but don't patch the existing save games: 11.0
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Innershade v11.1.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Innershade v11.11.zip
   - name: WhiteQueen
     description: "Colours of Infinity: The White Queen"
     components:
@@ -426,31 +426,37 @@ modules:
     components:
       - 0 # Colours of Infinity: I Shall Never Forget: 6.0
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/I Shall Never Forget v6.1.1.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/I Shall Never Forget v6.2.zip
   - name: SouthernEdge
     description: "Athkatlan Grounds: Southern Edge"
     components:
       - 0 # Southern Edge: the new district of Athkatla -> Yes, but don't patch the existing save games: 3.4
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/SouthernEdge v5.0.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/SouthernEdge v5.1.zip
   - name: Ooze
     description: "Athkatlan Grounds: The Ooze’s Lounge"
     components:
       - 0 # Le Salon des vases : une nouvelle zone sous les bas quartiers d'Athkatla: 2.92
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Oozes Lounge v2.93.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Oozes Lounge v2.94.zip
+  - name: TangledIsle
+    description: "Athkatlan Grounds: The Tangled Oak Isle"
+    components:
+      - 0 # L'ile du Chene Enchevetre : une nouvelle zone d'Athkatla -> Oui , mais ne pas patcher les sauvegardes existantes: v2.26
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/TangledIsle v4.3.zip
   - name: BridgesBlock
     description: "Athkatlan Grounds: Bridge’s Block"
     components:
       - 0 # Les terres d'Athkatlan : Le Bloc du Pont: 1.3
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/BridgesBlock v1.8.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/BridgesBlock v1.91.zip
   - name: AlabasterSands
     description: "Athkatlan Grounds: Alabaster Sands"
     components:
       - 0 # Alabaster Sands: the new area of Athkatla -> Yes, but don't patch existing save games: v1.0
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/AlabasterSands v1.5.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/AlabasterSands v1.7.zip
   - name: WhinHill
     description: "THE JOURNEY TO THE WHIN HILL"
     components:
@@ -458,7 +464,7 @@ modules:
       - 2 # The Journey to the Whin Hill: add the optional minor joinable companion - Afu-Zuuvi
       - 3 # The Journey to the Whin Hill: Player-Initiated Dialogues for the optional companion - Afu-Zuuvi
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/WhinHill v1.2.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/WhinHill v1.3.zip
   - name: Dvaradime
     description: BG2 npc - dwarven fighter/mage/thief
     components: ask
@@ -930,16 +936,10 @@ modules:
       repository: Solaufeins_Rescue_NPC
       release: v4.2
       asset:  solaufeins-rescue-jasteys-solaufein-npc-mod-for-bgii-4.2.iemod
-  - name: TangledIsle
-    description: "Athkatlan Grounds: The Tangled Oak Isle"
-    components:
-      - 0 # L'ile du Chene Enchevetre : une nouvelle zone d'Athkatla -> Oui , mais ne pas patcher les sauvegardes existantes: v2.26
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Tangled Isle v4.2.zip
   - name: TheVanishingOfSkieSilvershield
     components:
     location:
-    path: /home/mick/Games/modda-cache/static/weaselmods/TheVanishingOfSkieSilvershield v2.3.zip
+    path: /home/mick/Games/modda-cache/static/weaselmods/TheVanishingOfSkieSilvershield v2.4.zip
   - name: "g3anniversary"
     components:
       - 0 # The Gibberlings Three Anniversary Mod
@@ -1003,7 +1003,7 @@ modules:
     location:
       http: https://www.baldurs-gate.de/acifer/Call_of_the_lost_goddess.zip
       #http: http://america.iegmc.net/g3/Call_of_the_lost_goddess.zip
-      rename: Call_of_the_lost_goddes_1.1.zip # 2024-05-20
+      rename: Call_of_the_lost_goddes_1.2.zip # 2024-06-01
   - name: loretaker
     components: ask
     location:
@@ -1552,7 +1552,7 @@ modules:
     components:
       - 0 # Yvette Romance - BG2 Romance Character
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Yvette Romance v5.00.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Yvette Romance v5.1.0.zip
       patch:
         relative: patches/eet/yvette-romance.diff
       replace:
@@ -1810,7 +1810,7 @@ modules:
     components:
       - 0 # Wilson Chronicles - expansion for our favorite bear companion: 1.9
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Wilson Chronicles v2.1.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Wilson Chronicles v2.4.zip
       replace:
         - file_glob: ["baf/wilson_append.baf"]
           replace: 'RealSetGlobalTimer("L#WilsonFriendTime","GLOBAL",1200)'
@@ -2238,7 +2238,7 @@ modules:
       - 0 # Fhaugy - Baldur's Gate 2: EE NPC
       - 1 # Fhaugy: Player-Initiated Dialogues (PIDs)
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Fhaugy v1.0.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Fhaugy v1.03.zip
       replace:
         files_globs: ["scripts/L#FHA.baf", "scripts/L#FHA25.baf"]
         regex: true
@@ -2711,7 +2711,7 @@ modules:
   - name: Lhannd
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Lhannd v1.0.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/Lhannd v1.5.zip
   - name: fyalvara
     components: ask
     location:
@@ -2719,15 +2719,19 @@ modules:
   - name: JuniperAndTheStoneLeech
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/JuniperAndTheStoneLeech v1.1.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/JuniperAndTheStoneLeech v1.5.zip
   - name: BloodiedStingsOfBarovia
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/BloodiedStingsOfBarovia v1.0.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/BloodiedStingsOfBarovia v2.1.zip
   - name: verrsza
     components: ask
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/VerrSzaBGEE v6.01.zip
+  - name: verrBG2
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/VerrBG2 v2.1.zip
   - name: SkitiaRomanceTweak
     components: [0]
     location:
@@ -2953,7 +2957,7 @@ modules:
     components:
       - 0
     location:
-      path: wherever...
+      path:  /home/mick/Games/modda-cache/static/weaselmod
   - name:
     components: ask
     location:
