@@ -465,11 +465,6 @@ modules:
       - 3 # The Journey to the Whin Hill: Player-Initiated Dialogues for the optional companion - Afu-Zuuvi
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/WhinHill v1.3.zip
-  - name: Dvaradime
-    description: BG2 npc - dwarven fighter/mage/thief
-    components: ask
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Dvaradime v1.4.zip
   - name: InLoveUndeath
     description: BG2 npc - Xzelë Melaenitt, the paladin of Evening Glory (beauty in undeath)
     components:
@@ -728,17 +723,6 @@ modules:
       repository: Road_To_Discovery_for_SoD
       release: v3.0
       asset: road-to-discovery-for-sod-3.0.iemod
-  - name: DjinniCompanion
-    description: Afaaq, the Djinni Companion v2.9
-    components:
-      - 0   # Afaaq, le compagnon Djinn -> Version complete (avec quetes, conversations et plus encore)
-      - 103 # Changer la frequence des conversations (n'affecte que le djinn, par defaut : 60 minutes) -> 45 minutes
-      - 300 # Portrait de djinn alternatif par Ulb
-    location:
-      github_user: Argent77
-      repository: DjinniCompanion
-      release: v2.10
-      asset: A7-DjinniCompanion-v2.10.iemod
   - name: thecalling
     description: The calling
     components:
@@ -750,6 +734,378 @@ modules:
       repository: The_Calling
       release: v4
       asset: lin-thecalling-v4.tar.gz
+  - name: hiddenadventure
+    description: Hidden Adventures, bg2, little quests and tweaks
+    components:
+      - 0  # Lady Elgea's extended plot
+      - 1  # Anomen's extended plot
+      - 2  # Jerlia's Ore Shop
+      - 3  # Elven holy water in the Temple of Lathander
+      - 4  # Wave Blade in Treasury
+      - 5  # Silver Dagger in Irenicus Dungeon
+      - 6  # Bards can spend the night at their stronghold (Five Flagons)
+      - 7  # A bard for the bard stronghold
+      - 8  # Silver Sword
+      - 9  # A Tunnel for Saradush
+      - 10 # Temple of Mask in Docks District
+    location:
+      github_user: Gitjas
+      repository: hiddenadventure
+      release: vBeta_7
+      asset: hidden-adventures-beta_7.iemod
+  - name: bst
+    components:
+      - 0 # The BS Company presents Balduran's Seatower: vEAOB.6
+    location:
+      github_user: Gibberlings3
+      repository: BS_Baldurans_Seatower
+      release: vEAOB.9
+      asset: bs-baldurans-seatower-veaob.9.iemod
+  - name: com_encouters
+    description: Encounters for Baldur's Gate II
+    components: ask
+    location:
+      github_user: The-Gate-Project
+      repository: Com_encounters
+      release: v1.22
+      asset: com-encounters-v1.22.iemod
+  - name: TheVanishingOfSkieSilvershield
+    components:
+    location:
+    path: /home/mick/Games/modda-cache/static/weaselmods/TheVanishingOfSkieSilvershield v2.4.zip
+  - name: "g3anniversary"
+    components:
+      - 0 # The Gibberlings Three Anniversary Mod
+    location:
+      github_user: Gibberlings3
+      repository: g3anniversary
+      release: V13
+      asset: lin-g3anniversary-v13.tar.gz
+  - name: DC
+    description: Dungeon Crawl
+    components:
+      - 0 # Dungeon Crawl: v13.1
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Dungeon_Crawl
+      release: v13.1
+      asset: DungeonCrawl_v13-1.zip
+  - name: ToA
+    description: Tales of Anegh
+    components:
+      - 1 # Tales of Anegh (Weidu): v2.6
+      - 10 # Creature Balancing: v2.6
+      - 20 # AREA Balancing: v2.6
+      - 30 # Dialog & Script Balancing: v2.6
+      - 40 # Stores Balancing: v2.6
+      - 50 # Item Balancing: v2.6
+    location:
+      github_user: Gitjas
+      repository: ToA
+      branch: master
+  - name: FishingForTrouble
+    components:
+      - 0 # Fishing for Trouble by Yovaneth: v3.2.8
+      - 1 # Fishing for Trouble - Major character portraits: v3.2.8
+    location:
+      github_user: InfinityMods
+      repository: FishingForTrouble
+      release: v3.2.10
+      asset: fishing-for-trouble-v3.2.10.iemod
+  - name: tod
+    description: Tower Of Deception
+    components:
+      - 0 # Mod Tower of Deception (necessite Throne of Bhaal): v4.0.5
+      - 1 # Gardien ameliore de l'Eclat Astral: v4.0.5
+      - 2 # Rencontre avec Ustrain: v4.0.5
+    location:
+      github_user: InfinityMods
+      repository: TowerOfDeception
+      release: v4.0.5
+      asset: tower-of-deception-v4.0.5.iemod
+  - name: Tidings
+    components: ask
+    location:
+      homepage: https://baldurs-gate.de/index.php?resources/dark-tidings.65/
+      file: /home/mick/Games/modda-cache/static/Dark_Tidings_v2.0.rar # 2024-05-16
+      #http: http://america.iegmc.net/g3/Dark_Tidings.rar # 2023-09-24
+      #rename: Dark_Tidings_2.0.rar
+      #https://www.baldurs-gate.de/acifer/Dark_Tidings.rar # 2024-05-16
+  - name: godcall
+    components: ask
+    location:
+      http: https://www.baldurs-gate.de/acifer/Call_of_the_lost_goddess.zip
+      #http: http://america.iegmc.net/g3/Call_of_the_lost_goddess.zip
+      rename: Call_of_the_lost_goddes_1.2.zip # 2024-06-01
+  - name: loretaker
+    components: ask
+    location:
+      http: https://www.baldurs-gate.de/acifer/Loretakers.rar
+      rename: Loretakers_1.1.zip # 2024-06-01
+  - name: SOS # Shadows Over Soubar
+    components: ask
+    location:
+      github_user: SpellholdStudios
+      repository: Shadows_over_Soubar
+      release: "2.0"
+      asset: shadows-over-soubar-2.0.iemod
+  - name: framed
+    components:
+      - 0 # FFramed ou Piege: Propose plusieurs versions du chapitre 6 -> LUtilisez des voix personnalisees pour les films des nouveaux chapitres
+    location:
+      github_user:  Gibberlings3
+      repository: framed
+      release: v1.14
+      asset: framed-v1.14.iemod
+  - name: RoT
+    description: Region of Terror
+    components: ask
+    location:
+      github_user: SpellholdStudio
+      repository: Region_of_Terror
+      release: v5.0
+      asset: region-of-terror-v5.0.iemod
+      patch: rot-taming-drizzt.diff
+  - name: TDD
+    components: none
+    description: The Darkest Days
+    installation:
+      general: DO NOT install any component, TDDz needs its mod files but does the installation
+    location:
+      http: http://europe.iegmc.net/tdd-weidu/TDDv1.14.rar
+      layout:
+        layout_type: single_dir_plus_tp2
+  - name: TDDz
+    description: TDDz is not a mod, it is just an way to install TDD for BG2EE with Worldmap and Extended Animation.
+    components:
+      - 0 # TDD - Core: v1.3.1
+      - 1 # TDD - Gué du troll: v1.3.1
+      - 2 # TDD - Eshpurta: v1.3.1
+      - 3 # TDD - Purskal: v1.3.1
+      - 4 # TDD - Riatavin: v1.3.1
+      - 5 # TDD - l'Avènement du Jour le plus Sombre: v1.3.1
+      - 6 # TDD - Robilard: v1.3.1
+    location:
+      github_user: InfinityMods
+      repository: TDDz
+      tag: v1.3.1
+  - name: AjocMod
+    description: Ajoc's minimod - actually a composite of original v1.6.5 + BWP patchess + EET patch
+    sources:
+      original: http://www.shsforums.net/files/download/119-ajocs-minimod/
+      bwp_patches: https://github.com/BigWorldSetup/BigWorldSetup-Fixpack/tree/master/Big%20World%20Fixpack/AjocMod
+      eet_patch: http://www.shsforums.net/index.php?app=core&module=attach&section=attach&attach_id=29207
+    installation: needs TDD installed
+    components:
+    location:
+      github_user: mleduque
+      repository: AjocMod
+      tag: v1.6.5-mle # this version has BWS patches applied + ikki EET compat patch
+  - name: RE
+    description: BG2 romantic Encounters
+    components: [0, 1, 2, 3, 4, 6, 7, 8, 9, 11, 13, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 38, 39, 41, 42, 43, 45, 46, 47, 50, 52, 53, 54]
+    location:
+      github_user: Gibberlings3
+      repository: Romantic_Encounters_BG2
+      release: v15
+      asset: RE_v15.zip
+  - name: HerThiMoney
+    description: Heroes Thieves and Moneylenders
+    components:
+      - 0 # Component 1. Interjections & Mini-quests (by Austin & Arcanecoast Team): 4.2.3
+      - 10 # Component 2. First Calimport Bank Pack (by Scheele & Austin & Arcanecoast Team): 4.2.3
+      - 20 # Component 3. Shadow-Covered Love & Death (by Alisia & Austin): 4.2.3
+      - 30 # Component 4. The Missing Troll Case (by Alisia & Austin): 4.2.3
+      - 40 # Component 5. Unlocked original dialogs of all NPC (by Tipun & Austin): 4.2.3
+    location:
+      github_user: Austin-BG
+      repository: HTaM
+      release: v.4.3.3
+      asset: heroes-thieves-and-moneylenders-4.3.3.iemod
+  - name: "snakes"
+    description: The slithering Menace
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: TheSlitheringMenace
+      release: v4.0.0
+      asset: the-slithering-menace-v4.0.0.iemod
+  - name: SotSC
+    description: Shades of the Sword Coast
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/SotSC v8.6.zip
+    components: [0]
+  - name: JanQuest
+    components: [0]
+    location:
+      http: http://akadis.baldursgateworld.fr/Jan/zip/JansQuest1.5.0.zip
+  - name: "voloquest" # IM10
+    components: [0]
+    location:
+      path: /home/mick/Games/modda-cache/static/im10_voloquest.zip
+  - name: "IM10Kulyok" # IM10
+    components: [0]
+    location:
+      github_user: Pocket-Plane-Group
+      repository: IronModder10_Kulyok
+      release: v1.1
+      asset: im10kulyok-v1.1.zip
+  - name: "emad"
+    description: every mod and dog
+    components:
+      - 0 # Une aventure classée Z - Une non-entrée pour l'IM4
+      - 1 # La promesse d'un troll
+      - 2 # Le meilleur ami de l'enfant de Bhaal
+      - 3 # Sous son charme
+      - 5 # Pot-pourri de personnages
+    location:
+      path: /home/mick/Games/modda-cache/static/emad_v11.zip
+  - name: TGC1e
+    description: the grey clan candelight(part 1)
+    components:
+      - 0 # Le Clan Gris Episode Un : A la Lumiere d'une Bougie, BGT-WeiDU/EET/BG:EE edition v1.9 -> Edition normale
+    location:
+      github_user: K4thos
+      repository: TGC1e
+      branch: master
+      refresh: 10days
+      layout:
+        layout_type: single_dir_plus_tp2
+        tp2: Setup-TGC1E.tp2
+  - name: ExtraExpandedEnhancedEncounters
+    components:
+      - 0 # EEEE: Melia Quicknight, Crossroads: 3.1
+      - 1 # EEEE: Bimmy's Badgering Bandits: 3.1
+      - 2 # EEEE: Reinforced Gnoll Stronghold: 3.1
+      - 3 # EEEE: Bear Encounter near the Gnoll Stronghold: 3.1
+      - 5 # EEEE: Daenni's Bridge Bandits: 3.1
+      - 6 # EEEE: The Fire Drake in the Wyvern Cave: 3.1
+      - 7 # EEEE: Undercity Magma Bulwark Encounter; Red Skeleton-(U.M.B.E.R.S.): 3.1
+    location:
+      github_user: GraionDilach
+      repository: ExtraExpandedEnhancedEncounters
+      release: "4.3"
+      asset: extra-enhanced-expanded-encounters-4.3.iemod
+      patch:
+        relative: patches/ExtraExpandedEnhancedEncouter-reducegnolls.diff
+  - name: gbthfkp
+    description: Expanded Thief Stronghold
+    components:
+      - 0 # Expanded Thief Stronghold (Expansion de la Forteresse des voleurs): v3.0.0
+    location:
+      github_user: SpellholdStudios
+      repository: Expanded_Thief_Stronghold
+      release: v3.0.0
+      asset: expanded-thief-stronghold-v3.0.0.iemod
+  - name: shardsofice
+    components:
+      - 0 # Le prix de l'amitie: v7
+      - 1 # Certains de mes meilleurs amis sont des vases: v7
+      - 2 # Restaurer la convocation de vache ? Mais pourquoi faire ?: v7
+    location:
+      github_user: Gibberlings3
+      repository: Shards_of_Ice
+      release: v7
+      asset: lin-shardsofice-v7.tar.gz
+  - name: magestronghold_eet
+    components:
+      - 0 # Expanded Mage Stronghold EET: 0.5
+    location:
+      github_user: RoxanneSHS
+      repository: Magestronghold
+      tag: V0.5
+  - name: Derats_Ogre
+    components:
+      - 0
+    location:
+      github_user: Deratiseur
+      repository: Ogre
+      tag: v4
+  - name: CtB
+    description: Check the bodies
+    components:
+      - 0 # Check The Bodies : main component
+      - 1 # Candlekeep Chores component
+      - 2 # Candlekeep Chores Fast Forward
+      - 3 # CtB other improvements
+    location:
+      github_user: mleduque
+      repository: Check_the_Bodies
+      branch: no_spells
+      refresh: 3days
+  - name: gorgon
+    components: ask
+    location:
+      github_user: TotalMilk90
+      repository: gorgon
+      release: v4.4
+      asset: gorgon-v4.4.iemod
+  - name: Blackhearts EET
+    components: ask
+    location:
+      github_ruser: A-Wizard-Did-It
+      repository: Black-Hearts-EET
+      tag: v1.04
+      patch:
+        local: needs-patch #  https://forums.beamdog.com/discussion/comment/1200875/#Comment_1200875
+  - name: TheUndying
+    components: ask
+    location:
+      http: http://downloads.chosenofmystra.net/bg2/TheUndying2_53.rar
+  - name: vampiretales
+    components:
+      - 0 # Vampire tales
+      # - 1 # Improved cult
+      - 2 # Improved Harpers
+      - 3 # COM store
+    location:
+      github_user: The-Gate-Project
+      repository: VampireTales
+  - name: rr # rogue rebalancing
+    description: rogue rebalancing - story part
+    components:
+      - 11    #  Rencontre avec les Elus de Cyric
+      - 12    #  Amelioration des Voleurs de l'Ombre
+  - name: FowlWish
+    components: ask
+    location:
+      github_user: Glittergear
+      repository: A-Fowl-Wish
+      release: v1.3
+      asset: FowlWish.v1.3.zip
+  - name: GoneNuts
+    components: ask
+    location:
+      github_user: Glittergear
+      repository: GoneNuts
+      release: v1.1
+      asset: Gonenuts.zip
+  - name: DeadGardens
+    components: ask
+    location:
+      github_user: Glittergear
+      repository: DeadGardens
+      release: v1.1
+      asset: DeadGardens.zip
+  - name: ErrantJusticeBG2
+    components: ask
+    location:
+      github_user: Glittergear
+      repository: ErrantJusticeBG2
+      release: v1.0
+      asset: Errant.Justice.1.0.zip
+  - name: DarkHorizons
+    components: ask
+    location:
+      github_user: The-Gate-project
+      repository: DarkHorizons
+      branch: master
+      refresh: 3days
+
+    ###########################
+    ## NPC
+    #########################""
+
   - name: bg1npc
     components: ask
     location:
@@ -780,33 +1136,17 @@ modules:
       - 42 # Select Ajantis' Friendship Dialogues and Romance Speed: -> Speed: 30 minutes real time minimum between Dialogues
     location:
       path: /home/mick/Games/modda-cache/static/lin-ajantisbg2-v20.zip
-  - name: hiddenadventure
-    description: Hidden Adventures, bg2, little quests and tweaks
+  - name: DjinniCompanion
+    description: Afaaq, the Djinni Companion v2.9
     components:
-      - 0  # Lady Elgea's extended plot
-      - 1  # Anomen's extended plot
-      - 2  # Jerlia's Ore Shop
-      - 3  # Elven holy water in the Temple of Lathander
-      - 4  # Wave Blade in Treasury
-      - 5  # Silver Dagger in Irenicus Dungeon
-      - 6  # Bards can spend the night at their stronghold (Five Flagons)
-      - 7  # A bard for the bard stronghold
-      - 8  # Silver Sword
-      - 9  # A Tunnel for Saradush
-      - 10 # Temple of Mask in Docks District
+      - 0   # Afaaq, le compagnon Djinn -> Version complete (avec quetes, conversations et plus encore)
+      - 103 # Changer la frequence des conversations (n'affecte que le djinn, par defaut : 60 minutes) -> 45 minutes
+      - 300 # Portrait de djinn alternatif par Ulb
     location:
-      github_user: Gitjas
-      repository: hiddenadventure
-      release: vBeta_7
-      asset: hidden-adventures-beta_7.iemod
-  - name: com_encouters
-    description: Encounters for Baldur's Gate II
-    components: ask
-    location:
-      github_user: The-Gate-Project
-      repository: Com_encounters
-      release: v1.22
-      asset: com-encounters-v1.22.iemod
+      github_user: Argent77
+      repository: DjinniCompanion
+      release: v2.10
+      asset: A7-DjinniCompanion-v2.10.iemod
   - name: isra
     components: [0]
     location:
@@ -941,6 +1281,11 @@ modules:
         - file_globs: [ "willowisp/baf/l0will25.baf" ]
           replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",1800)'
           with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",700)'
+  - name: Dvaradime
+    description: BG2 npc - dwarven fighter/mage/thief
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/Dvaradime v1.4.zip
   - name: paina
     components:
       - 0 # Pai'Na NPC for BG:EE
@@ -974,14 +1319,6 @@ modules:
       repository: ShukBGEE
       branch: master
       refresh: 1day
-  - name: bst
-    components:
-      - 0 # The BS Company presents Balduran's Seatower: vEAOB.6
-    location:
-      github_user: Gibberlings3
-      repository: BS_Baldurans_Seatower
-      release: vEAOB.9
-      asset: bs-baldurans-seatower-veaob.9.iemod
   - name: "c#solaufein"
     components:
       - 0 # Solaufein's Rescue: Jastey's Solaufein NPC for BGII: 3.2
@@ -991,86 +1328,6 @@ modules:
       repository: Solaufeins_Rescue_NPC
       release: v4.2
       asset:  solaufeins-rescue-jasteys-solaufein-npc-mod-for-bgii-4.2.iemod
-  - name: TheVanishingOfSkieSilvershield
-    components:
-    location:
-    path: /home/mick/Games/modda-cache/static/weaselmods/TheVanishingOfSkieSilvershield v2.4.zip
-  - name: "g3anniversary"
-    components:
-      - 0 # The Gibberlings Three Anniversary Mod
-    location:
-      github_user: Gibberlings3
-      repository: g3anniversary
-      release: V13
-      asset: lin-g3anniversary-v13.tar.gz
-  - name: DC
-    description: Dungeon Crawl
-    components:
-      - 0 # Dungeon Crawl: v13.1
-    location:
-      github_user: Pocket-Plane-Group
-      repository: Dungeon_Crawl
-      release: v13.1
-      asset: DungeonCrawl_v13-1.zip
-  - name: ToA
-    description: Tales of Anegh
-    components:
-      - 1 # Tales of Anegh (Weidu): v2.6
-      - 10 # Creature Balancing: v2.6
-      - 20 # AREA Balancing: v2.6
-      - 30 # Dialog & Script Balancing: v2.6
-      - 40 # Stores Balancing: v2.6
-      - 50 # Item Balancing: v2.6
-    location:
-      github_user: Gitjas
-      repository: ToA
-      branch: master
-  - name: FishingForTrouble
-    components:
-      - 0 # Fishing for Trouble by Yovaneth: v3.2.8
-      - 1 # Fishing for Trouble - Major character portraits: v3.2.8
-    location:
-      github_user: InfinityMods
-      repository: FishingForTrouble
-      release: v3.2.10
-      asset: fishing-for-trouble-v3.2.10.iemod
-  - name: tod
-    description: Tower Of Deception
-    components:
-      - 0 # Mod Tower of Deception (necessite Throne of Bhaal): v4.0.5
-      - 1 # Gardien ameliore de l'Eclat Astral: v4.0.5
-      - 2 # Rencontre avec Ustrain: v4.0.5
-    location:
-      github_user: InfinityMods
-      repository: TowerOfDeception
-      release: v4.0.5
-      asset: tower-of-deception-v4.0.5.iemod
-  - name: Tidings
-    components: ask
-    location:
-      homepage: https://baldurs-gate.de/index.php?resources/dark-tidings.65/
-      file: /home/mick/Games/modda-cache/static/Dark_Tidings_v2.0.rar # 2024-05-16
-      #http: http://america.iegmc.net/g3/Dark_Tidings.rar # 2023-09-24
-      #rename: Dark_Tidings_2.0.rar
-      #https://www.baldurs-gate.de/acifer/Dark_Tidings.rar # 2024-05-16
-  - name: godcall
-    components: ask
-    location:
-      http: https://www.baldurs-gate.de/acifer/Call_of_the_lost_goddess.zip
-      #http: http://america.iegmc.net/g3/Call_of_the_lost_goddess.zip
-      rename: Call_of_the_lost_goddes_1.2.zip # 2024-06-01
-  - name: loretaker
-    components: ask
-    location:
-      http: https://www.baldurs-gate.de/acifer/Loretakers.rar
-      rename: Loretakers_1.1.zip # 2024-06-01
-  - name: SOS # Shadows Over Soubar
-    components: ask
-    location:
-      github_user: SpellholdStudios
-      repository: Shadows_over_Soubar
-      release: "2.0"
-      asset: shadows-over-soubar-2.0.iemod
   #- name: MTS_Crappack
   #  description: soubar fixes
   #  installation:
@@ -1099,96 +1356,25 @@ modules:
       release: v4,0
       asset:  edwin-romance-v4.0.iemod
       patch: edwin_multi_romance.diff
-  - name: framed
+  - name: "TheBeaurinLegacy"
     components:
-      - 0 # FFramed ou Piege: Propose plusieurs versions du chapitre 6 -> LUtilisez des voix personnalisees pour les films des nouveaux chapitres
+      - 1000 # The Beaurin Legacy for BG2:SoA & ToB & BGII:EE
+      - 3010 # Minyae's Portrait -> Change Minyae's portrait to alternative by TamikaProud at DeviantArt
     location:
-      github_user:  Gibberlings3
-      repository: framed
-      release: v1.14
-      asset: framed-v1.14.iemod
-  - name: RoT
-    description: Region of Terror
-    components: ask
-    location:
-      github_user: SpellholdStudio
-      repository: Region_of_Terror
-      release: v5.0
-      asset: region-of-terror-v5.0.iemod
-      patch: rot-taming-drizzt.diff
-  - name: TDD
-    components: none
-    description: The Darkest Days
-    installation:
-      general: DO NOT install any component, TDDz needs its mod files but does the installation
-    location:
-      http: http://europe.iegmc.net/tdd-weidu/TDDv1.14.rar
-      layout:
-        layout_type: single_dir_plus_tp2
-  - name: TDDz
-    description: TDDz is not a mod, it is just an way to install TDD for BG2EE with Worldmap and Extended Animation.
+      path: /home/mick/Games/modda-cache/static/lin-TheBeaurinLegacy-v5.3.tar.gz
+  - name: "xulaye"
     components:
-      - 0 # TDD - Core: v1.3.1
-      - 1 # TDD - Gué du troll: v1.3.1
-      - 2 # TDD - Eshpurta: v1.3.1
-      - 3 # TDD - Purskal: v1.3.1
-      - 4 # TDD - Riatavin: v1.3.1
-      - 5 # TDD - l'Avènement du Jour le plus Sombre: v1.3.1
-      - 6 # TDD - Robilard: v1.3.1
+      - 0 # Xulaye NPC Mod for BG2:SoA
+      - 1 # Xulaye's Player Initiated Dialogues
+      - 2 # Korgan Fights at the Pits
     location:
-      github_user: InfinityMods
-      repository: TDDz
-      tag: v1.3.1
-  - name: AjocMod
-    description: Ajoc's minimod - actually a composite of original v1.6.5 + BWP patchess + EET patch
-    sources:
-      original: http://www.shsforums.net/files/download/119-ajocs-minimod/
-      bwp_patches: https://github.com/BigWorldSetup/BigWorldSetup-Fixpack/tree/master/Big%20World%20Fixpack/AjocMod
-      eet_patch: http://www.shsforums.net/index.php?app=core&module=attach&section=attach&attach_id=29207
-    installation: needs TDD installed
+      http: http://europe.iegmc.net/xulaye/Xulaye%20v2.0.zip
+      rename: Xulaye_v2.0.zip
+  - name: w_packmule
     components:
+      - 3 # Mule de bat (bgee) -> Fontes sans fond
     location:
-      github_user: mleduque
-      repository: AjocMod
-      tag: v1.6.5-mle # this version has BWS patches applied + ikki EET compat patch
-  - name: RE
-    description: BG2 romantic Encounters
-    components: [0, 1, 2, 3, 4, 6, 7, 8, 9, 11, 13, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 38, 39, 41, 42, 43, 45, 46, 47, 50, 52, 53, 54]
-    location:
-      github_user: Gibberlings3
-      repository: Romantic_Encounters_BG2
-      release: v15
-      asset: RE_v15.zip
-  - name: HerThiMoney
-    description: Heroes Thieves and Moneylenders
-    components:
-      - 0 # Component 1. Interjections & Mini-quests (by Austin & Arcanecoast Team): 4.2.3
-      - 10 # Component 2. First Calimport Bank Pack (by Scheele & Austin & Arcanecoast Team): 4.2.3
-      - 20 # Component 3. Shadow-Covered Love & Death (by Alisia & Austin): 4.2.3
-      - 30 # Component 4. The Missing Troll Case (by Alisia & Austin): 4.2.3
-      - 40 # Component 5. Unlocked original dialogs of all NPC (by Tipun & Austin): 4.2.3
-    location:
-      github_user: Austin-BG
-      repository: HTaM
-      release: v.4.3.3
-      asset: heroes-thieves-and-moneylenders-4.3.3.iemod
-  - name: "snakes"
-    description: The slithering Menace
-    components: [0]
-    location:
-      github_user: SpellholdStudios
-      repository: TheSlitheringMenace
-      release: v4.0.0
-      asset: the-slithering-menace-v4.0.0.iemod
-  - name: SotSC
-    description: Shades of the Sword Coast
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/SotSC v8.6.zip
-    components: [0]
-  - name: JanQuest
-    components: [0]
-    location:
-      http: http://akadis.baldursgateworld.fr/Jan/zip/JansQuest1.5.0.zip
+      path: /home/mick/Games/modda-cache/static/w_packmule-v1.4b.zip
   - name: "butchery"
     description: Butchery - components that must be installed before SCS
     components:
@@ -1206,187 +1392,6 @@ modules:
       repository: butchery
       release: v5.0.0
       asset: butchery-v5.0.0.iemod
-  - name: "TheBeaurinLegacy"
-    components:
-      - 1000 # The Beaurin Legacy for BG2:SoA & ToB & BGII:EE
-      - 3010 # Minyae's Portrait -> Change Minyae's portrait to alternative by TamikaProud at DeviantArt
-    location:
-      path: /home/mick/Games/modda-cache/static/lin-TheBeaurinLegacy-v5.3.tar.gz
-  - name: "voloquest" # IM10
-    components: [0]
-    location:
-      path: /home/mick/Games/modda-cache/static/im10_voloquest.zip
-  - name: "IM10Kulyok" # IM10
-    components: [0]
-    location:
-      github_user: Pocket-Plane-Group
-      repository: IronModder10_Kulyok
-      release: v1.1
-      asset: im10kulyok-v1.1.zip
-  - name: "emad"
-    description: every mod and dog
-    components:
-      - 0 # Une aventure classée Z - Une non-entrée pour l'IM4
-      - 1 # La promesse d'un troll
-      - 2 # Le meilleur ami de l'enfant de Bhaal
-      - 3 # Sous son charme
-      - 5 # Pot-pourri de personnages
-    location:
-      path: /home/mick/Games/modda-cache/static/emad_v11.zip
-  - name: "xulaye"
-    components:
-      - 0 # Xulaye NPC Mod for BG2:SoA
-      - 1 # Xulaye's Player Initiated Dialogues
-      - 2 # Korgan Fights at the Pits
-    location:
-      http: http://europe.iegmc.net/xulaye/Xulaye%20v2.0.zip
-      rename: Xulaye_v2.0.zip
-  - name: TGC1e
-    description: the grey clan candelight(part 1)
-    components:
-      - 0 # Le Clan Gris Episode Un : A la Lumiere d'une Bougie, BGT-WeiDU/EET/BG:EE edition v1.9 -> Edition normale
-    location:
-      github_user: K4thos
-      repository: TGC1e
-      branch: master
-      refresh: 10days
-      layout:
-        layout_type: single_dir_plus_tp2
-        tp2: Setup-TGC1E.tp2
-  - name: ExtraExpandedEnhancedEncounters
-    components:
-      - 0 # EEEE: Melia Quicknight, Crossroads: 3.1
-      - 1 # EEEE: Bimmy's Badgering Bandits: 3.1
-      - 2 # EEEE: Reinforced Gnoll Stronghold: 3.1
-      - 3 # EEEE: Bear Encounter near the Gnoll Stronghold: 3.1
-      - 5 # EEEE: Daenni's Bridge Bandits: 3.1
-      - 6 # EEEE: The Fire Drake in the Wyvern Cave: 3.1
-      - 7 # EEEE: Undercity Magma Bulwark Encounter; Red Skeleton-(U.M.B.E.R.S.): 3.1
-    location:
-      github_user: GraionDilach
-      repository: ExtraExpandedEnhancedEncounters
-      release: "4.3"
-      asset: extra-enhanced-expanded-encounters-4.3.iemod
-      patch:
-        relative: patches/ExtraExpandedEnhancedEncouter-reducegnolls.diff
-  - name: gbthfkp
-    description: Expanded Thief Stronghold
-    components:
-      - 0 # Expanded Thief Stronghold (Expansion de la Forteresse des voleurs): v3.0.0
-    location:
-      github_user: SpellholdStudios
-      repository: Expanded_Thief_Stronghold
-      release: v3.0.0
-      asset: expanded-thief-stronghold-v3.0.0.iemod
-  - name: shardsofice
-    components:
-      - 0 # Le prix de l'amitie: v7
-      - 1 # Certains de mes meilleurs amis sont des vases: v7
-      - 2 # Restaurer la convocation de vache ? Mais pourquoi faire ?: v7
-    location:
-      github_user: Gibberlings3
-      repository: Shards_of_Ice
-      release: v7
-      asset: lin-shardsofice-v7.tar.gz
-  - name: magestronghold_eet
-    components:
-      - 0 # Expanded Mage Stronghold EET: 0.5
-    location:
-      github_user: RoxanneSHS
-      repository: Magestronghold
-      tag: V0.5
-  - name: Derats_Ogre
-    components:
-      - 0
-    location:
-      github_user: Deratiseur
-      repository: Ogre
-      tag: v4
-  - name: CtB
-    description: Check the bodies
-    components:
-      - 0 # Check The Bodies : main component
-      - 1 # Candlekeep Chores component
-      - 2 # Candlekeep Chores Fast Forward
-      - 3 # CtB other improvements
-    location:
-      github_user: mleduque
-      repository: Check_the_Bodies
-      branch: no_spells
-      refresh: 3days
-  - name: gorgon
-    components: ask
-    location:
-      github_user: TotalMilk90
-      repository: gorgon
-      release: v4.4
-      asset: gorgon-v4.4.iemod
-  - name: w_packmule
-    components:
-      - 3 # Mule de bat (bgee) -> Fontes sans fond
-    location:
-      path: /home/mick/Games/modda-cache/static/w_packmule-v1.4b.zip
-  - name: Blackhearts EET
-    components: ask
-    location:
-      github_ruser: A-Wizard-Did-It
-      repository: Black-Hearts-EET
-      tag: v1.04
-      patch:
-        local: needs-patch #  https://forums.beamdog.com/discussion/comment/1200875/#Comment_1200875
-  - name: TheUndying
-    components: ask
-    location:
-      http: http://downloads.chosenofmystra.net/bg2/TheUndying2_53.rar
-  - name: vampiretales
-    components:
-      - 0 # Vampire tales
-      # - 1 # Improved cult
-      - 2 # Improved Harpers
-      - 3 # COM store
-    location:
-      github_user: The-Gate-Project
-      repository: VampireTales
-  - name: rr # rogue rebalancing
-    description: rogue rebalancing - story part
-    components:
-      - 11    #  Rencontre avec les Elus de Cyric
-      - 12    #  Amelioration des Voleurs de l'Ombre
-  - name: FowlWish
-    components: ask
-    location:
-      github_user: Glittergear
-      repository: A-Fowl-Wish
-      release: v1.3
-      asset: FowlWish.v1.3.zip
-  - name: GoneNuts
-    components: ask
-    location:
-      github_user: Glittergear
-      repository: GoneNuts
-      release: v1.1
-      asset: Gonenuts.zip
-  - name: DeadGardens
-    components: ask
-    location:
-      github_user: Glittergear
-      repository: DeadGardens
-      release: v1.1
-      asset: DeadGardens.zip
-  - name: ErrantJusticeBG2
-    components: ask
-    location:
-      github_user: Glittergear
-      repository: ErrantJusticeBG2
-      release: v1.0
-      asset: Errant.Justice.1.0.zip
-  - name: DarkHorizons
-    components: ask
-    location:
-      github_user: The-Gate-project
-      repository: DarkHorizons
-      branch: master
-      refresh: 3days
 
 
   #########
