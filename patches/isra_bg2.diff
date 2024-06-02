@@ -1,109 +1,24 @@
---- isra_bg2/dialogue/bgee.d
-+++ isra_bg2/dialogue/bgee.d
-@@ -214,35 +214,8 @@ DO ~SetGlobal("rh#IsraNeeraToB","GLOBAL",1)~
- == BRH#IS25 @57 /* Yes... I am sure there are. */
- EXIT
+diff --git a/isra_bg2/dialogue/bgee.d b/isra_bg2/dialogue/bgee.d
+index 26b9373..3a3dcbb 100644
+--- Isra_NPC_BG2/isra_bg2/dialogue/bgee.d
++++ Isra_NPC_BG2/isra_bg2/dialogue/bgee.d
+@@ -335,7 +335,7 @@ EXIT
  
--// romance conflict
-+// romance conflict -deleted
- // ----------------
--CHAIN IF ~Global("rh#IsraNeeraRomance","GLOBAL",2)~ THEN NEERAJ c5
--@58 /* You and Isra seem to be spending a lot of time together these days. */
--DO ~SetGlobal("rh#IsraNeeraRomance","GLOBAL",3)~
--END
--	++ @59 /* Do you think so? */ + c5.1
--	++ @60 /* No more than we always have. */ + c5.1
--	++ @61 /* I suppose that's true. */ + c5.1
--
--APPEND NEERAJ
--
--IF ~~ c5.1
-- SAY @62 /* I guess you've always been friendly, but the way she's beginning to look at you these days is a little bit less innocent. Not that there's anything wrong with that! What goes on with you is between you, her, and her goddess, but I don't mean to just wait around and see what happens. Whatever you're thinking, I'd kind of like to know. No hard feelings, I promise. */
--	++ @63 /* Isra is only a friend, Neera. It's you I'm interested in. */ + c5.2
--	++ @64 /* Yes, I am interested in her. I'm sorry, Neera. */ + c5.3
--END
-- 
--IF ~~ c5.2
-- SAY @65 /* That's -- that's good to know. Really good. Just make sure that she knows it too, alright? */
--IF ~~ DO ~SetGlobal("rh#IsraRomanceActive","GLOBAL",3)~ EXIT
--END
-- 
--IF ~~ c5.3
-- SAY @66 /* I see. Thanks for telling me. I wish I could say that I was surprised, but I'm not really. And she'll be good for you, I think. Myself, I guess this means I'm a free woman. That's actually kind of a relief. Should we get moving? */
--IF ~~ DO ~SetGlobal("NeeraRomanceActive","GLOBAL",3)~ EXIT
--END
--END
--
- 
- /* -------- *
-  *  Rasaad  *
-@@ -333,55 +306,5 @@ DO ~SetGlobal("rh#IsraRasaadToB","GLOBAL",2)~
- == BRH#IS25 @101 /* I... can only hope that is true. */
- EXIT
- 
--// romance conflict
-+// romance conflict - deleted
+ // romance conflict
  // ----------------
 -CHAIN IF ~Global("rh#IsraRasaadRomance","GLOBAL",2)~ THEN RH#ISRJ c6
--@102 /* May I speak with you a moment, <CHARNAME>? */
--DO ~SetGlobal("rh#IsraRasaadRomance","GLOBAL",3)~
--END
--	++ @103 /* Of course, Isra. What is it? */ + c6.1
--	++ @104 /* Technically, you already are. */ + c6.2
--
--APPEND RH#ISRJ
--
--IF ~~ c6.1
-- SAY @105 /* I do not mean to impose, but Rasaad seems rather taken with you as of late. He is a good man, if somewhat... vulnerable at present. */
-- 	++ @106 /* Are you asking me if I'm interested in him? */ + c6.3
-- 	++ @107 /* You're not jealous, are you? */ + c6.4
-- 	++ @108 /* Too vulnerable, I'd say. And too clueless. */ + c6.5
--END
--
--IF ~~ c6.2
-- SAY @109 /* Yes... I noticed that. */ 
--IF ~~ + c6.1
--END
--
--IF ~~ c6.3
-- SAY @110 /* Are you? */
-- 	++ @111 /* Not remotely. */ + c6.5
-- 	++ @112 /* Absolutely. */ + c6.6
-- 	++ @113 /* Yes, I think I am. */ + c6.6
--END
--
--IF ~~ c6.4
-- SAY @114 /* Of *him*, mayhap, if his feelings are returned. */
-- 	++ @115 /* Oh. Well, you needn't worry about that. I'm not interested in him. */ + c6.5
-- 	++ @116 /* They are, actually. I'm sorry. */ + c6.6
-- 	++ @117 /* Can you take this bizarre love triangle elsewhere? I'm not interested in either of you. */ + c6.7
--END
--
--IF ~~ c6.5
-- SAY 118 /* I see. Please, <CHARNAME>, let him know. I would not have him burdened with false hope. */
--IF ~~ DO ~SetGlobal("RasaadRomanceActive","GLOBAL",3)~ EXIT
--END 
--
--IF ~~ c6.6
-- SAY @119 /* I see. Thank you for telling me, <CHARNAME>. */
--IF ~~ DO ~SetGlobal("rh#IsraRomanceActive","GLOBAL",3)~ EXIT
--END
--
--IF ~~ c6.7
-- SAY @120 /* I see. I shan't mention it again. */
--IF ~~ DO ~SetGlobal("rh#IsraRomanceActive","GLOBAL",3) SetGlobal("RasaadRomanceActive","GLOBAL",3)~ EXIT
--END 
--END
-\ No newline at end of file
---- isra_bg2/dialogue/rh#isrj.d
-+++ isra_bg2/dialogue/rh#isrj.d
-@@ -6978,217 +6978,8 @@ EXIT
- 
- 
++CHAIN IF ~Global("rh#IsraRasaadRomance","GLOBAL",2000)~ THEN RH#ISRJ c6
+ @102 /* May I speak with you a moment, <CHARNAME>? */
+ DO ~SetGlobal("rh#IsraRasaadRomance","GLOBAL",3)~
+ END
+diff --git a/isra_bg2/dialogue/rh#isrj.d b/isra_bg2/dialogue/rh#isrj.d
+index 8bad6bf..702615d 100644
+--- Isra_NPC_BG2/isra_bg2/dialogue/rh#isrj.d
++++ Isra_NPC_BG2/isra_bg2/dialogue/rh#isrj.d
+@@ -6981,215 +6981,6 @@ EXIT
+ // Romance Conflicts
  // ---------------------------------------------
--// Romance Conflicts
--// ---------------------------------------------
--
+ 
 -// Viconia
 -// -------
 -CHAIN IF ~Global("rh#IsraViconiaRomance","GLOBAL",2)~ THEN RH#ISRJ c1
@@ -312,18 +227,38 @@
 -= @2208 /* I'm sorry. */
 -DO ~SetGlobal("rh#IsraRomanceBreakup","GLOBAL",2)~
 -EXIT
-+// Romance Conflicts - deleted
-+// ---------------------------------------------$
- 
+-
  
  // ---------------------------------------------
---- isra_bg2/lib/main_component.tpa
-+++ isra_bg2/lib/main_component.tpa
-@@ -114,13 +114,10 @@ EXTEND_TOP ~ar1002.bcs~		 ~isra_bg2/scripts/ar1002.baf~
- EXTEND_TOP ~ar1005.bcs~		 ~isra_bg2/scripts/ar1005.baf~
- EXTEND_BOTTOM ~ar1006.bcs~	 ~isra_bg2/scripts/ar1006.baf~
- EXTEND_BOTTOM ~ar0809.bcs~	 ~isra_bg2/scripts/ar0809.baf~
--EXTEND_BOTTOM ~aerie.bcs~	 ~isra_bg2/scripts/aerie.baf~
+ // Flirts
+diff --git a/isra_bg2/dialogue/rh#isrp.d b/isra_bg2/dialogue/rh#isrp.d
+index 7d9b388..a97c5ea 100644
+--- Isra_NPC_BG2/isra_bg2/dialogue/rh#isrp.d
++++ Isra_NPC_BG2/isra_bg2/dialogue/rh#isrp.d
+@@ -4,6 +4,7 @@ IF ~Global("rh#IsraJoined","GLOBAL",1)~ p1
+  SAY @0 /* You truly wish to part company, <CHARNAME>? */
+  	+ ~!Global("Chapter","GLOBAL",%bg2_chapter_4%) !Global("Chapter","GLOBAL",%bg2_chapter_5%) !Global("Chapter","GLOBAL",%bg2_chapter_7%)~ + @1 /* For the moment, yes. */ + p2
+   	+ ~OR(3) Global("Chapter","GLOBAL",%bg2_chapter_4%) Global("Chapter","GLOBAL",%bg2_chapter_5%) Global("Chapter","GLOBAL",%bg2_chapter_7%)~ + @1 /* For the moment, yes. */ + p3
++    ++ @1004 /* wait here */+ p1004
+  	++ @2 /* Sorry, no. I'd rather not. */ + p4
+ END
+ 
+@@ -17,6 +18,10 @@ IF ~~ p3
+ IF ~~ DO ~SetGlobal("rh#IsraJoined","GLOBAL",0) EscapeAreaMove("AR0902",761,1060,13)~ EXIT
+ END
+ 
++IF ~~ p1004
++ SAY @1005 /* Very well. */
++END
++
+ IF ~~ p4
+  SAY @5 /* Very well. I am pleased to hear it. */
+ IF ~~ DO ~JoinParty()~ EXIT
+diff --git a/isra_bg2/lib/main_component.tpa b/isra_bg2/lib/main_component.tpa
+index 6b82f89..e1f9985 100644
+--- Isra_NPC_BG2/isra_bg2/lib/main_component.tpa
++++ Isra_NPC_BG2/isra_bg2/lib/main_component.tpa
+@@ -118,9 +118,7 @@ EXTEND_BOTTOM ~aerie.bcs~	 ~isra_bg2/scripts/aerie.baf~
  EXTEND_BOTTOM ~anomen.bcs~	 ~isra_bg2/scripts/anomen.baf~
  EXTEND_BOTTOM ~bodhiamb.bcs~ ~isra_bg2/scripts/bodhiamb.baf~
  EXTEND_BOTTOM ~cleanse.bcs~	 ~isra_bg2/scripts/cleanse.baf~
@@ -333,14 +268,21 @@
  
  
  /* -------------------------------------- *
---- isra_bg2/scripts/aerie.baf
-+++ isra_bg2/scripts/aerie.baf
-@@ -48,53 +48,5 @@ THEN
- 		Dialogue("rh#Isra2")
- END
+@@ -174,7 +172,6 @@ ACTION_IF is_ee BEGIN
+ 	COMPILE ~isra_bg2/dialogue/bgee.d~
+ 	EXTEND_BOTTOM ~rh#isr.bcs~	~isra_bg2/scripts/rh#isree.baf~
+ 	EXTEND_BOTTOM ~rh#is25.bcs~	~isra_bg2/scripts/rh#is25ee.baf~
+-	EXTEND_BOTTOM ~neera.bcs~	~isra_bg2/scripts/neera.baf~
+ 	EXTEND_TOP ~ohndenna.bcs~	~isra_bg2/scripts/ohndenna.baf~
  
--// romance conflict
-+// romance conflict - deleted
+ 	ADD_JOURNAL @19 @22 @33 @36 @63 @81 @113 @124 @129 @155 @168 @175 @191 USING ~isra_bg2/translations/%LANGUAGE%/rh#isr.tra~
+diff --git a/isra_bg2/scripts/aerie.baf b/isra_bg2/scripts/aerie.baf
+index 9ca0b2a..e4999a8 100644
+--- Isra_NPC_BG2/isra_bg2/scripts/aerie.baf
++++ Isra_NPC_BG2/isra_bg2/scripts/aerie.baf
+@@ -50,37 +50,6 @@ END
+ 
+ // romance conflict
  // ----------------
 -IF
 -	InParty("rh#Isra2")
@@ -373,32 +315,24 @@
 -	RESPONSE #100
 -		SetGlobal("rh#IsraAerieRomance","GLOBAL",2)
 -END
--
--IF
--	InParty("rh#Isra2")
--	InParty("Aerie")
--	See(Player1)
--	!StateCheck("Aerie",CD_STATE_NOTVALID)
--	!StateCheck("rh#Isra2",CD_STATE_NOTVALID)
--	!StateCheck(Player1,CD_STATE_NOTVALID)
--	CombatCounter(0)
--	!See([ENEMY])
--	Global("rh#IsraAerieRomance","GLOBAL",2)
+ 
+ IF
+ 	InParty("rh#Isra2")
+@@ -92,7 +61,7 @@ IF
+ 	CombatCounter(0)
+ 	!See([ENEMY])
+ 	Global("rh#IsraAerieRomance","GLOBAL",2)
 -	Global("AerieRomanceActive","GLOBAL",1)
--	Global("rh#IsraRomanceActive","GLOBAL",1)
--THEN
--	RESPONSE #100
--		Dialogue(Player1)
--END
-\ No newline at end of file
---- isra_bg2/scripts/rh#isr.baf
-+++ isra_bg2/scripts/rh#isr.baf
-@@ -1081,135 +1081,9 @@ END
- 
- 
- // ---------------------------------------------
--// Romance Conflicts
-+// Romance Conflicts -deleted
++	Global("AerieRomanceActive","GLOBAL",1000)
+ 	Global("rh#IsraRomanceActive","GLOBAL",1)
+ THEN
+ 	RESPONSE #100
+diff --git a/isra_bg2/scripts/rh#isr.baf b/isra_bg2/scripts/rh#isr.baf
+index 4dc17e4..3bf06de 100644
+--- Isra_NPC_BG2/isra_bg2/scripts/rh#isr.baf
++++ Isra_NPC_BG2/isra_bg2/scripts/rh#isr.baf
+@@ -1084,82 +1084,6 @@ END
+ // Romance Conflicts
  // ---------------------------------------------
  
 -IF
@@ -477,56 +411,19 @@
 -		SetGlobal("NeeraRomanceActive","GLOBAL",3)
 -END
 -
--
--// conflicts
--// ---------
--IF
--    InParty("rh#Isra2")
--	See(Player1)
--    !StateCheck(Myself,CD_STATE_NOTVALID)
--    !StateCheck(Player1,CD_STATE_NOTVALID)
--    CombatCounter(0)
--    !See([ENEMY])
--    Global("ViconiaRomanceActive","GLOBAL",1)
--    Global("rh#IsraViconiaRomance","GLOBAL",1)
--    RealGlobalTimerExpired("rh#IsraViconiaTimer","GLOBAL")
--THEN
--	RESPONSE #100
--		IncrementGlobal("rh#IsraViconiaRomance","GLOBAL",1)
--END
--
--IF
--    InParty("rh#Isra2")
--	See(Player1)
--    !StateCheck(Myself,CD_STATE_NOTVALID)
--    !StateCheck(Player1,CD_STATE_NOTVALID)
--    CombatCounter(0)
--    !See([ENEMY])
--    Global("AnomenRomanceActive","GLOBAL",1)
--    Global("rh#IsraAnomenRomance","GLOBAL",1)
--    RealGlobalTimerExpired("rh#IsraAnomenTimer","GLOBAL")
--THEN
--	RESPONSE #100
--		IncrementGlobal("rh#IsraAnomenRomance","GLOBAL",1)
--END
--
--IF
--    InParty("rh#Isra2")
--	See(Player1)
--    !StateCheck(Myself,CD_STATE_NOTVALID)
--    !StateCheck(Player1,CD_STATE_NOTVALID)
--    CombatCounter(0)
--    !See([ENEMY])
--    OR(2)
--	    !ReputationGT(Player1,8)
--    	GlobalGT("rh#IsraOffense","GLOBAL",2)
--	Global("rh#IsraRomanceActive","GLOBAL",2)
--	Global("rh#IsraRomanceBreakup","GLOBAL",0)
--THEN
--	RESPONSE #100
--		SetGlobal("rh#IsraRomanceBreakup","GLOBAL",1)
--END
--
  
- // ---------------------------------------------
- // Flirts
+ // conflicts
+ // ---------
+diff --git a/isra_bg2/translations/english/rh#isrp.tra b/isra_bg2/translations/english/rh#isrp.tra
+index 19be2a1..7abc8db 100644
+--- Isra_NPC_BG2/isra_bg2/translations/english/rh#isrp.tra
++++ Isra_NPC_BG2/isra_bg2/translations/english/rh#isrp.tra
+@@ -4,6 +4,8 @@
+ @3    = ~I see. Should you change your mind, I intend to visit the Temple of Lathander at least briefly before leaving the city. Perhaps you can find me there.~
+ @4    = ~I see. I've no wish to remain here in the meantime, I'm afraid. Perhaps we shall meet again.~
+ @5    = ~Very well. I am pleased to hear it.~
++@1004 = ~Please wait here, we'll be back soon.~
++@1005 = ~Very well.~
+ @6    = ~Hello, <CHARNAME>. I'm pleased to see you again.~ [rh#is156]
+ @7    = ~Would you care to join up with me again?~
+ @8    = ~Hello, Isra. I was just checking to see how you were.~

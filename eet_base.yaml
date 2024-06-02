@@ -816,9 +816,42 @@ modules:
       asset: isra-npc-for-bg-v3.5.iemod
       patch:
         relative: patches/isra_bg1_stay_after_mines.diff
+      replace:
+        - file_globs: ["dialogue/rh#israj.d"]
+          replace: 'RealSetGlobalTimer("rh#IsraTalksBG1Timer","GLOBAL",2700)'
+          with: 'RealSetGlobalTimer("rh#IsraTalksBG1Timer","GLOBAL",620)'
+  - name: isra_bg2
+    description: Isra Ghadir, a cavalier paladin of Sune Firehair - soa+tob, friendship, romance, encounters
+    components:
+      - 0 # Isra NPC for BGII
+    location:
+      github_user: SpellholdStudios
+      repository: Isra_NPC_BG2
+      release: v3.1
+      asset: isra-npc-for-bgii-v3.1.iemod
+      patch:
+        relative: patch/isra_bg2.diff
+      replace:
+        - file_globs: ["dialogue/rh#is25j.d", "dialogue/rh#isrj.d", "scripts/rh#isr.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",2\d\d\d\)'
+          with: 'RealSetGlobalTimer("${c}","GLOBAL",600)'
+        - file_globs: ["dialogue/rh#is25j.d"]
+          replace: 'RealSetGlobalTimer("rh#IsraTalksToBTimer","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("rh#IsraTalksToBTimer","GLOBAL",800)'
+        - file_globs: ["dialogue/rh#is25j.d", "dialogue/rh#isrj.d", "scripts/rh#is25.baf", "scripts/rh#isr.baf", "scripts/rh#isree.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",1\d\d\d\)'
+          with: 'RealSetGlobalTimer("${c}","GLOBAL",500)'
+        - file_globs: ["dialogue/rh#isrp.d", "scripts/rh#isr.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",9\d\d\)'
+          with: 'RealSetGlobalTimer("${c}","GLOBAL",400)'
   - name: xan
-    description: Xan NPC for BG2
-    components: [0, 2]
+    description: Xan NPC for BG2 - friendship, romance
+    components:
+      - 0
+      - 2
     location:
       github_user: Pocket-Plane-Group
       repository: Xan_for_BGII
@@ -827,18 +860,26 @@ modules:
       layout:
         layout_type: multi_dir
         dirs: [Xan] # xan v.s. Xan :/
+        replace:
+        - file_globs: ["Dialogue/BO#Xan25.d", "Dialogue/O#Xan25J.d", "Dialogue/O#XanJ.d", "Dialogue/BO#Xan.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",3\d\d\d\)'
+          with: 'RealSetGlobalTimer("${c}","GLOBAL",600)'
+        - file_globs: ["Dialogue/BO#Xan25.d", "Dialogue/O#Xan25J.d", "Dialogue/O#XanJ.d", "Dialogue/BO#Xan.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",2\d\d\d\)'
+          with: 'RealSetGlobalTimer("${c}","GLOBAL",500)'
+        - file_globs: ["Dialogue/BO#Xan25.d", "Dialogue/O#Xan25J.d", "Dialogue/O#XanJ.d", "Dialogue/BO#Xan.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",1\d\d\d\)'
+          with: 'RealSetGlobalTimer("${c}","GLOBAL",400)'
+
   - name: isra_bg2
+    description: Isra Ghadir, a cavalier paladin of Sune Firehair - soa+tob, friendship, romance, encounters
     components:
-      - 0
-      - 1
-    location:
-      github_user: SpellholdStudios
-      repository: Isra_NPC_BG2
-      release: v3.1
-      asset: isra-npc-for-bgii-v3.1.iemod
-      patch:
-        relative: patch/isra_bg2.diff
+      - 1 # crossmod with Adrian, Coran (Kulyok's mod), Dace, Nephele, Ninde, Tiax (Kulyok's mod) and Xan (Kulyok's mod)
   - name: yeslicknpc
+    description: transposes bg1 dwarf in bg2 - banters, dialogue
     components: [1]
     location:
       github_user: SpellholdStudios
@@ -846,9 +887,10 @@ modules:
       release: v5.0
       asset: yeslick-npc-v5.0.iemod
   - name: amber
-    components
-      - 0
-      - 1
+    description: tiefling rogue of a chaotic good alignment - friendship, romance, quest
+    components:
+      - 0 # Amber the NPC MOD
+      - #1 # Multiplayer-friendly flirting for Amber
     location:
       path: /home/mick/Games/modda-cache/static/lin-amber-v9.zip
       patch:
