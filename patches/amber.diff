@@ -1,124 +1,59 @@
---- Amber/dialogs/m#amber.d
-+++ Amber/dialogs/m#amber.d
-@@ -1256,7 +1256,7 @@ IF ~OR(2)
-     !StateCheck(Player1,STATE_SILENCED)~ THEN BEGIN T2Begin
-       SAY @5208 /* @5208 = ~So, <GABBER>, how did you end up in Athkatla in the first place?~ */ 
-       IF ~~ THEN REPLY @5209 /* @5209 = ~I did not have much choice in that matter. The wizard Irenicus captured me after I had left Baldur's Gate.~ */ GOTO T2A
--      IF ~~ THEN REPLY @5210 /* @5210 = ~I'm an adventurer, Amber. I have travelled in many parts of Faer�n. Amn was just a place I had not yet visited.~ */ GOTO T2B
-+      IF ~~ THEN REPLY @5210 /* @5210 = ~I'm an adventurer, Amber. I have travelled in many parts of Faer�n. Amn was just a place I had not yet visited.~ */ GOTO T2B
-       IF ~~ THEN REPLY @5211 /* @5211 = ~Not now, Amber. We don't have time for this. Maybe later.~ */ 
-                  DO ~SetGlobal("M#EndMusic","GLOBAL",1)
-                      SetGlobal("M#AmberTalk","LOCALS",0) 
-@@ -1413,7 +1413,7 @@ IF ~~ THEN BEGIN T4I
+diff --git a/dialogs/m#amber.d b/dialogs/m#amber.d
+index e7f06f7..eeba47f 100644
+--- amber/dialogs/m#amber.d
++++ amber/dialogs/m#amber.d
+@@ -404,7 +404,6 @@ IF ~~ THEN BEGIN Kidnap2B
+                  EraseJournalEntry(@51)
+                  SetGlobal("M#EndMusic","GLOBAL",1)
+                  SetGlobal("M#AmberKidnap","GLOBAL",9)
+-                 RealSetGlobalTimer("M#KillAmberRomance","GLOBAL",21600)
+                  SetGlobal("M#AmberJoined","GLOBAL",2)
+                  SetGlobal("M#AmberFiveFlagons","GLOBAL",1)
+                  SetGlobal("M#AmberTalk","LOCALS",12)~ EXIT
+@@ -436,15 +435,13 @@ END
+ 
+ IF ~~ THEN BEGIN 2
+   SAY @5068 /* @5068 = ~Very well. I don't like this, but I'll wait here. Remember that if you don't came back soon, I probably won't be here any more.~ */
+-  IF ~~ THEN DO ~RealSetGlobalTimer("M#AmberLeave","GLOBAL",7200)
+-                 RealSetGlobalTimer("M#KillAmberRomance","GLOBAL",21600)
++  IF ~~ THEN DO ~RealSetGlobalTimer("M#AmberLeave","GLOBAL",720000)
+                  SetGlobal("M#AmberJoined","GLOBAL",2)~ EXIT
  END
  
- IF ~~ THEN BEGIN T4A
--  SAY @5258 /* @5258 = ~I'd be surprised if you had. Fortunately we are few in number here on the face of Faer�n.~ */ 
-+  SAY @5258 /* @5258 = ~I'd be surprised if you had. Fortunately we are few in number here on the face of Faer�n.~ */ 
-   IF ~~ THEN REPLY @5259 /* @5259 = ~Fortunately? You don't seem proud of your heritage.~ */ GOTO T4D
-   IF ~~ THEN REPLY @5260 /* @5260 = ~Fortunately indeed. You tieflings have quite the reputation for spreading havoc wherever you go.~ */ DO ~IncrementGlobal("M#AmberLike","LOCALS",-2)~ GOTO T4C
- END
-@@ -2322,8 +2322,8 @@ IF ~Global("M#AmberMatch","GLOBAL",3)
-     !StateCheck(Player2,STATE_SLEEPING)
-     !StateCheck(Player2,STATE_SILENCED)~ THEN BEGIN P2T2Begin
-     SAY @5208 /* @5208 = ~So, <GABBER>, how did you end up in Athkatla in the first place?~ */ 
--    IF ~~ THEN REPLY @5438 /* @5438 = ~I didn't have much of a choice in that matter. The wizard Irenicus captured us after I had left Baldur�s Gate with <CHARNAME>.~ */ GOTO P2T2A
--    IF ~~ THEN REPLY @5210 /* @5210 = ~I'm an adventurer, Amber. I have travelled in many parts of Faer�n. Amn was just a place I had not yet visited.~ */ GOTO P2T2B
-+    IF ~~ THEN REPLY @5438 /* @5438 = ~I didn't have much of a choice in that matter. The wizard Irenicus captured us after I had left Baldur�s Gate with <CHARNAME>.~ */ GOTO P2T2A
-+    IF ~~ THEN REPLY @5210 /* @5210 = ~I'm an adventurer, Amber. I have travelled in many parts of Faer�n. Amn was just a place I had not yet visited.~ */ GOTO P2T2B
-     IF ~~ THEN REPLY @5211 /* @5211 = ~Not now, Amber. We don't have time for this. Maybe later.~ */ 
-                DO ~SetGlobal("M#EndMusic","GLOBAL",1)
-                	   SetGlobal("M#AmberTalk","LOCALS",0) 
-@@ -2363,7 +2363,7 @@ END
- 
- IF ~~ THEN BEGIN P2T2B
-   SAY @5223 /* @5223 = ~Really? You certainly don't look old enough to have travelled that much, but what do I know. Looks can be deceiving.~ */ 
--  IF ~~ THEN REPLY @5445 /* @5445 = ~Umm... Maybe I was exaggerating a bit. Truth be told, I did not have much choice in coming to Athkatla. The wizard Irenicus captured me and <CHARNAME> soon after we left Baldur�s Gate.~ */ GOTO P2T2A
-+  IF ~~ THEN REPLY @5445 /* @5445 = ~Umm... Maybe I was exaggerating a bit. Truth be told, I did not have much choice in coming to Athkatla. The wizard Irenicus captured me and <CHARNAME> soon after we left Baldur�s Gate.~ */ GOTO P2T2A
-   IF ~~ THEN REPLY @5225 /* @5225 = ~Yeah, you should know that.~ */ DO ~SetGlobal("M#AmberTalk","LOCALS",2) 					RealSetGlobalTimer("M#AmberRomanceTime","GLOBAL",2500) IncrementGlobal("M#AmberLike","LOCALS",-1)~ GOTO P2T2G
-   IF ~~ THEN REPLY @5226 /* @5226 = ~Look, Amber, I really don't like people prying into my affairs, so try to cut back on the questioning, all right.~ */ DO ~IncrementGlobal("M#AmberLike","LOCALS",-1)~ GOTO P2T2C
- END
-@@ -2516,7 +2516,7 @@ IF ~~ THEN BEGIN P2T4I
+ IF ~~ THEN BEGIN 3
+   SAY @5069 /* @5069 = ~I don't like this, but I'll find my way to the Five Flagons and wait for you there for a while.~ */
+-  IF ~~ THEN DO ~RealSetGlobalTimer("M#KillAmberRomance","GLOBAL",21600)
+-                 SetGlobal("M#AmberJoined","GLOBAL",2)
++  IF ~~ THEN DO ~SetGlobal("M#AmberJoined","GLOBAL",2)
+                  SetGlobal("M#AmberFiveFlagons","GLOBAL",1)~ EXIT
  END
  
- IF ~~ THEN BEGIN P2T4A
--  SAY @5258 /* @5258 = ~I'd be surprised if you had. Fortunately we are few in number here on the face of Faer�n.~ */ 
-+  SAY @5258 /* @5258 = ~I'd be surprised if you had. Fortunately we are few in number here on the face of Faer�n.~ */ 
-   IF ~~ THEN REPLY @5259 /* @5259 = ~Fortunately? You don't seem proud of your heritage.~ */ GOTO P2T4D
-   IF ~~ THEN REPLY @5260 /* @5260 = ~Fortunately indeed. You tieflings have quite the reputation for spreading havoc wherever you go.~ */ DO ~IncrementGlobal("M#AmberLike","LOCALS",-2)~ GOTO P2T4C
- END
-@@ -3026,7 +3026,7 @@ IF ~~ THEN BEGIN P2T7RangerBegin
-   IF ~~ THEN REPLY @5584 /* @5584 = ~I simply strive to maintain the balance of nature and crush everyone who opposes my goal.~ */ GOTO P2T7RangerA
-   IF ~~ THEN REPLY @5585 /* @5585 = ~I have never been much of a people person; I always got along much better with animals.~ */ GOTO P2T7RangerB
-   IF ~~ THEN REPLY @5586 /* @5586 = ~There is beauty in the quiet song the woodlands. The buzz of towns and the people inhabiting them distracts me from that.~ */ GOTO P2T7RangerC
--  IF ~~ THEN REPLY @5587 /* @5587 = ~Cities and other abominations of man are like sores on the fair face of Faer�n. A plague, truly.~ */ GOTO P2T7RangerA
-+  IF ~~ THEN REPLY @5587 /* @5587 = ~Cities and other abominations of man are like sores on the fair face of Faer�n. A plague, truly.~ */ GOTO P2T7RangerA
-   IF ~~ THEN REPLY @5588 /* @5588 = ~There is no hiding from the force of nature. Even as we speak, plants are making their way though the cracks in the stones that houses are built of, and the waves of the ocean are slowly eating away at the stone of the docks.~ */ GOTO P2T7RangerD
-   IF ~~ THEN REPLY @5589 /* @5589 = ~My goal is to create harmony between nature and the people. And that harmony cannot be won through the strength of arms.~ */ GOTO P2T7RangerE
- END
-@@ -5839,7 +5839,7 @@ IF ~OR(2)
-     !StateCheck(Player1,STATE_SLEEPING)
-     !StateCheck(Player1,STATE_SILENCED)~ THEN BEGIN FT1Begin
-   SAY @6255 /* @6255 = ~Look at the stars, <GABBER>. They are so pale and calm. Sometimes I wonder if they serve any other purpose besides comforting a troubled mind?~ */ 
--  IF ~~ THEN REPLY @6256 /* @6256 = ~I know it sounds crazy, but I like to think that stars are little suns like ours  - each shining for their own Faer�n.~ */ GOTO FT1A
-+  IF ~~ THEN REPLY @6256 /* @6256 = ~I know it sounds crazy, but I like to think that stars are little suns like ours  - each shining for their own Faer�n.~ */ GOTO FT1A
-   IF ~~ THEN REPLY @6257 /* @6257 = ~A gypsy storyteller once told me a story where the stars were shining gems on the cloak of the goddess Selune.~ */ DO ~IncrementGlobal("M#AmberLike","LOCALS",1)~ GOTO FT1B
-   IF ~~ THEN REPLY @6258 /* @6258 = ~This really is not the right time to be gawking at stars, Amber.~ */ DO ~IncrementGlobal("M#AmberLike","LOCALS",-1)~ GOTO FT1D
- END
-@@ -5953,7 +5953,7 @@ IF ~Global("M#AmberMatch","GLOBAL",3)
-     !StateCheck(Player1,STATE_SLEEPING)
-     !StateCheck(Player1,STATE_SILENCED)~ THEN BEGIN P2FT1Begin
-   SAY @6255 /* @6255 = ~Look at the stars, <GABBER>. They are so pale and calm. Sometimes I wonder if they serve any other purpose besides comforting a troubled mind?~ */ 
--  IF ~~ THEN REPLY @6256 /* @6256 = ~I know it sounds crazy, but I like to think that stars are little suns like ours  - each shining for their own Faer�n.~ */ GOTO P2FT1A
-+  IF ~~ THEN REPLY @6256 /* @6256 = ~I know it sounds crazy, but I like to think that stars are little suns like ours  - each shining for their own Faer�n.~ */ GOTO P2FT1A
-   IF ~~ THEN REPLY @6257 /* @6257 = ~A gypsy storyteller once told me a story where the stars were shining gems on the cloak of the goddess Selune.~ */ DO ~IncrementGlobal("M#AmberLike","LOCALS",1)~ GOTO P2FT1B
-   IF ~~ THEN REPLY @6258 /* @6258 = ~This really is not the right time to be gawking at stars, Amber.~ */ DO ~IncrementGlobal("M#AmberLike","LOCALS",-1)~ GOTO P2FT1D
- END
-@@ -8265,7 +8265,7 @@ END
- IF ~~ THEN BEGIN LT6A
-   SAY @6750 /* @6750 = ~Mmph... Oh, morning lovely. (She reaches up to kiss you, but there is a distant feeling about her that you are sure was not there last night.)~ */ 
-   IF ~~ THEN REPLY @6751 /* @6751 = ~Amber, what is it? You are not regretful of last night, are you? I mean how was it for you?~ */ DO ~IncrementGlobal("M#AmberLike","LOCALS",1)~ GOTO LT6B
--  IF ~~ THEN REPLY @6752 /* @6752 = ~Um... I really don�t think that we have time for that. We should be going, already.~ */ GOTO LT6F
-+  IF ~~ THEN REPLY @6752 /* @6752 = ~Um... I really don�t think that we have time for that. We should be going, already.~ */ GOTO LT6F
-   IF ~~ THEN REPLY @6753 /* @6753 = ~(Kiss her like you mean it.)~ */ 
-   	     DO ~SetGlobal("M#EndMusic","GLOBAL",1)
-   	     	 IncrementGlobal("M#AmberLike","LOCALS",1)
-@@ -8386,7 +8386,7 @@ IF ~~ THEN BEGIN LT7B
+@@ -479,15 +476,13 @@ END
+ 
+ IF ~~ THEN BEGIN 7
+   SAY @5074 /* @5074 = ~Well, it's your loss then. I do not like this, but I'll wait here.  Remember that if you don't came back soon, I may not be here any more.~ */
+-  IF ~~ THEN DO ~RealSetGlobalTimer("M#AmberLeave","GLOBAL",7200)
+-                 RealSetGlobalTimer("M#KillAmberRomance","GLOBAL",21600)
++  IF ~~ THEN DO ~RealSetGlobalTimer("M#AmberLeave","GLOBAL",720000)
+                  SetGlobal("M#AmberJoined","GLOBAL",2)~ EXIT
  END
  
- IF ~~ THEN BEGIN LT7C
--  SAY @6784 /* @6784 = ~<GABBER>, the best diplomat in the world. Just could not break me the news that a tiefling girl might not have been something you were expecting to make an entr�e into your life?~ */
-+  SAY @6784 /* @6784 = ~<GABBER>, the best diplomat in the world. Just could not break me the news that a tiefling girl might not have been something you were expecting to make an entr�e into your life?~ */
-   IF ~~ THEN REPLY @6785 /* @6785 = ~Amber, I don't care *what* you are, it is *who* you are that's important. And right now, the only thing that matters is that you are with me.~ */ DO ~IncrementGlobal("M#AmberLike","LOCALS",1)~ GOTO LT7G
-   IF ~~ THEN REPLY @6786 /* @6786 = ~Look, Amber, is this going somewhere or are you just wasting my time with your silly babbling?~ */ DO ~IncrementGlobal("M#AmberLike","LOCALS",-1)~ GOTO LT7D
-   IF ~~ THEN REPLY @6787 /* @6787 = ~Well, that might be true, but there have been a whole bunch of things in my life that I never saw coming. In any case I am happy that we met.~ */ DO ~IncrementGlobal("M#AmberLike","LOCALS",1)~ GOTO LT7G
-@@ -10155,7 +10155,7 @@ END
- IF ~~ THEN BEGIN P2LT6A
-   SAY @6750 /* @6750 = ~Mmph... Oh, morning lovely. (She reaches up to kiss you, but there is a distant feeling about her that you are sure was not there last night.)~ */ 
-   IF ~~ THEN REPLY @6751 /* @6751 = ~Amber, what is it? You are not regretful of last night, are you? I mean how was it for you?~ */ DO ~IncrementGlobal("M#AmberLike","LOCALS",1)~ GOTO P2LT6B
--  IF ~~ THEN REPLY @6752 /* @6752 = ~Um... I really don�t think that we have time for that. We should be going, already.~ */ GOTO P2LT6F
-+  IF ~~ THEN REPLY @6752 /* @6752 = ~Um... I really don�t think that we have time for that. We should be going, already.~ */ GOTO P2LT6F
-   IF ~~ THEN REPLY @6753 /* @6753 = ~(Kiss her like you mean it.)~ */ 
-   	     DO ~SetGlobal("M#EndMusic","GLOBAL",1)
-   	     	 IncrementGlobal("M#AmberLike","LOCALS",1)
-@@ -10272,7 +10272,7 @@ IF ~~ THEN BEGIN P2LT7B
+ IF ~~ THEN BEGIN 8
+   SAY @5075 /* @5075 = ~Well, it's your loss then. I do not like this, but I'll wait here.~ */
+-  IF ~~ THEN DO ~RealSetGlobalTimer("M#KillAmberRomance","GLOBAL",21600)
+-                 SetGlobal("M#AmberJoined","GLOBAL",2)
++  IF ~~ THEN DO ~SetGlobal("M#AmberJoined","GLOBAL",2)
+                  SetGlobal("M#AmberFiveFlagons","GLOBAL",1)~ EXIT
  END
  
- IF ~~ THEN BEGIN P2LT7C
--  SAY @6784 /* @6784 = ~<GABBER>, the best diplomat in the world. Just could not break me the news that a tiefling girl might not have been something you were expecting to make an entr�e into your life?~ */
-+  SAY @6784 /* @6784 = ~<GABBER>, the best diplomat in the world. Just could not break me the news that a tiefling girl might not have been something you were expecting to make an entr�e into your life?~ */
-   IF ~~ THEN REPLY @6785 /* @6785 = ~Amber, I don't care *what* you are, it is *who* you are that's important. And right now, the only thing that matters is that you are with me.~ */ DO ~IncrementGlobal("M#AmberLike","LOCALS",1)~ GOTO P2LT7G
-   IF ~~ THEN REPLY @6786 /* @6786 = ~Look, Amber, is this going somewhere or are you just wasting my time with your silly babbling?~ */ DO ~IncrementGlobal("M#AmberLike","LOCALS",-1)~ GOTO P2LT7D
-   IF ~~ THEN REPLY @6787 /* @6787 = ~Well, that might be true, but there have been a whole bunch of things in my life that I never saw coming. In any case I am happy that we met.~ */ DO ~IncrementGlobal("M#AmberLike","LOCALS",1)~ GOTO P2LT7G
-@@ -13795,7 +13795,7 @@ END
- 
- // Amber breaking. This looks a bit wierd BTW - old stuff, should check out. 
-   
--IF ~GlobalLT("M#AmberLike","LOCALS",90)~ THEN BEGIN Break
-+IF ~GlobalLT("M#AmberLike","LOCALS",75)~ THEN BEGIN Break
-   SAY @7316 /* @7316 = ~That does it! I'm sick and tired of you walking around with your head up your ass and acting like a total prat. I'm not going to suffer your abuse for a minute longer. May you rot in hell where you belong.~ */
-   IF ~~ THEN DO ~SetGlobal("M#AmberDestroy","GLOBAL",1)
-                  SetGlobal("M#AmberRomanceActive","GLOBAL",3)
+@@ -567,7 +562,6 @@ END
+ IF ~~ THEN BEGIN 15
+   SAY @5095 /* @5095 = ~After going through all the trouble of finding you again? OK, very well. But don't expect me to stay there forever.~ */
+   IF ~~ THEN DO ~SetGlobal("M#EndMusic","GLOBAL",1)
+-  		 RealSetGlobalTimer("M#KillAmberRomance","GLOBAL",21600)
+                  SetGlobal("M#JillBracelet","GLOBAL",9)
+                  SetGlobal("M#AmberQuestRemind","LOCALS",0)
+                  SetGlobal("M#AmberJoined","GLOBAL",2)
 @@ -14428,273 +14428,7 @@ IF ~~ THEN BEGIN RepTalk2D
    IF ~~ THEN REPLY @7401 /* @7401 = ~You demand? The last time I checked, I was the leader of this group. I will do whatever I wish, and if you have a problem with it, you can get lost.~ */ GOTO RepTalk2C
  END
@@ -394,75 +329,11 @@
  
  BEGIN ~M#AMBERJ~
  
-@@ -15223,7 +14957,7 @@ IF ~~ THEN BEGIN HeavyFlirt10
- END
- 
- IF ~~ THEN BEGIN HeavyFlirt11
--  SAY @7536 /* @7536 = ~You humans seem to be the most widespread race on Faer�n. I wonder why...~ */ 
-+  SAY @7536 /* @7536 = ~You humans seem to be the most widespread race on Faer�n. I wonder why...~ */ 
-   IF ~~ THEN REPLY @7537 /* @7537 = ~I honestly don't know the answer to that, Amber.~ */ GOTO HeavyFlirt11A
-   IF ~~ THEN REPLY @7538 /* @7538 = ~Well, I just might know a possible answer to that, but I really can't demonstrate it to you now. Not while others are around.~ */ GOTO HeavyFlirt11B
-   IF ~~ THEN REPLY @7539 /* @7539 = ~I really don't think we have yet beaten the kobolds in numbers, Amber.~ */ GOTO HeavyFlirt11C
-@@ -17376,7 +17110,7 @@ IF ~~ THEN BEGIN PoisonA
- END
- 
- IF ~~ THEN BEGIN PoisonC
--  SAY @7974 /* @7974 = ~Surely you aren�t saying that you always succeed in that? We both do the best we can.~ */
-+  SAY @7974 /* @7974 = ~Surely you aren�t saying that you always succeed in that? We both do the best we can.~ */
-   IF ~~ THEN REPLY @7972 /* @7972 = ~I guess you are right, but I was just wondering where you learned to make such powerful poisons.~ */ GOTO PoisonB
-   IF ~IsGabber(Player1)
-       !Kit(LastTalkedToBy(Myself),ASSASIN)~ THEN REPLY @7973 /* @7973 = ~No, I don't think it is the same thing at all. Using poison is just so...  unfair.~ */ GOTO PoisonD1
-@@ -18134,7 +17868,7 @@ IF ~~ THEN BEGIN Butt7
- END
- 
- IF ~~ THEN BEGIN Beautiful1
--  SAY @8169 /* @8169 = ~You're nuts, did you know that? (Despite the disdainful tone of her reply, the barely veiled smile playing around Amber�s eyes and lips hints at the fact that she is actually rather taken by your comment.)~ */ 
-+  SAY @8169 /* @8169 = ~You're nuts, did you know that? (Despite the disdainful tone of her reply, the barely veiled smile playing around Amber�s eyes and lips hints at the fact that she is actually rather taken by your comment.)~ */ 
-   IF ~~ THEN EXIT
-   IF ~GlobalLT("M#AmberLike","LOCALS",120)~ THEN DO ~IncrementGlobal("M#AmberLike","LOCALS",1)~ EXIT
- END
-@@ -18266,10 +18000,10 @@ IF ~~ THEN BEGIN KissHandMedium
-   IF ~RandomNum(4,3)~ THEN REPLY @8198 /* @8198 = ~(Courteously bow over her hand, but don't touch it with your lips.)~ */ GOTO KissHand1
-   IF ~RandomNum(4,4)~ THEN REPLY @8198 /* @8198 = ~(Courteously bow over her hand, but don't touch it with your lips.)~ */ GOTO KissHand2
-   
--  IF ~RandomNum(4,1)~ THEN REPLY @8199 /* @8199 = ~(Briefly brush your lips across the back of Amber�s hand.) ~ */ GOTO KissHand5
--  IF ~RandomNum(4,2)~ THEN REPLY @8199 /* @8199 = ~(Briefly brush your lips across the back of Amber�s hand.) ~ */ GOTO KissHand2
--  IF ~RandomNum(4,3)~ THEN REPLY @8199 /* @8199 = ~(Briefly brush your lips across the back of Amber�s hand.) ~ */ GOTO KissHand6
--  IF ~RandomNum(4,4)~ THEN REPLY @8199 /* @8199 = ~(Briefly brush your lips across the back of Amber�s hand.) ~ */ GOTO KissHand6
-+  IF ~RandomNum(4,1)~ THEN REPLY @8199 /* @8199 = ~(Briefly brush your lips across the back of Amber�s hand.) ~ */ GOTO KissHand5
-+  IF ~RandomNum(4,2)~ THEN REPLY @8199 /* @8199 = ~(Briefly brush your lips across the back of Amber�s hand.) ~ */ GOTO KissHand2
-+  IF ~RandomNum(4,3)~ THEN REPLY @8199 /* @8199 = ~(Briefly brush your lips across the back of Amber�s hand.) ~ */ GOTO KissHand6
-+  IF ~RandomNum(4,4)~ THEN REPLY @8199 /* @8199 = ~(Briefly brush your lips across the back of Amber�s hand.) ~ */ GOTO KissHand6
-   
-   IF ~RandomNum(4,1)~ THEN REPLY @8200 /* @8200 = ~(Place a tender, lingering kiss on the back of Amber's hand.)~ */ GOTO KissHand5
-   IF ~RandomNum(4,2)~ THEN REPLY @8200 /* @8200 = ~(Place a tender, lingering kiss on the back of Amber's hand.)~ */ GOTO KissHand8
-@@ -18299,10 +18033,10 @@ IF ~~ THEN BEGIN KissHandHeavy
-   IF ~RandomNum(4,3)~ THEN REPLY @8198 /* @8198 = ~(Courteously bow over her hand, but don't touch it with your lips.)~ */ GOTO KissHand3
-   IF ~RandomNum(4,4)~ THEN REPLY @8198 /* @8198 = ~(Courteously bow over her hand, but don't touch it with your lips.)~ */ GOTO KissHand4
-   
--  IF ~RandomNum(4,1)~ THEN REPLY @8204 /* @8204 = ~(Briefly brush your lips across the back of Amber�s hand.)~ */ GOTO KissHand5
--  IF ~RandomNum(4,2)~ THEN REPLY @8204 /* @8204 = ~(Briefly brush your lips across the back of Amber�s hand.)~ */ GOTO KissHand2
--  IF ~RandomNum(4,3)~ THEN REPLY @8204 /* @8204 = ~(Briefly brush your lips across the back of Amber�s hand.)~ */ GOTO KissHand6
--  IF ~RandomNum(4,4)~ THEN REPLY @8204 /* @8204 = ~(Briefly brush your lips across the back of Amber�s hand.)~ */ GOTO KissHand7
-+  IF ~RandomNum(4,1)~ THEN REPLY @8204 /* @8204 = ~(Briefly brush your lips across the back of Amber�s hand.)~ */ GOTO KissHand5
-+  IF ~RandomNum(4,2)~ THEN REPLY @8204 /* @8204 = ~(Briefly brush your lips across the back of Amber�s hand.)~ */ GOTO KissHand2
-+  IF ~RandomNum(4,3)~ THEN REPLY @8204 /* @8204 = ~(Briefly brush your lips across the back of Amber�s hand.)~ */ GOTO KissHand6
-+  IF ~RandomNum(4,4)~ THEN REPLY @8204 /* @8204 = ~(Briefly brush your lips across the back of Amber�s hand.)~ */ GOTO KissHand7
-   
-   IF ~RandomNum(4,1)~ THEN REPLY @8200 /* @8200 = ~(Place a tender, lingering kiss on the back of Amber's hand.)~ */ GOTO KissHand5
-   IF ~RandomNum(4,2)~ THEN REPLY @8200 /* @8200 = ~(Place a tender, lingering kiss on the back of Amber's hand.)~ */ GOTO KissHand8
---- Amber/dialogs/m#interject.d
-+++ Amber/dialogs/m#interject.d
-@@ -93,7 +93,7 @@ END
- 
- APPEND M#AMBERJ
- 	IF ~~ THEN BEGIN M#AmberDelcia
--		SAY @2004 /* @2004 = ~Her niece seems nice enough, even if she's a bit na�ve, but this lady certainly gets on my nerves.~ */ 
-+		SAY @2004 /* @2004 = ~Her niece seems nice enough, even if she's a bit na�ve, but this lady certainly gets on my nerves.~ */ 
- 		IF ~~ THEN EXIT
- 		IF ~IsValidForPartyDialog("Mazzy")~ THEN EXTERN MAZZYJ 187
- 		IF ~!IsValidForPartyDialog("Mazzy")
-@@ -1730,215 +1730,7 @@ DO ~SetDialog("m#amberj")
+diff --git a/dialogs/m#interject.d b/dialogs/m#interject.d
+index 33e3912..4fd62db 100644
+--- amber/dialogs/m#interject.d
++++ amber/dialogs/m#interject.d
+@@ -1730,215 +1730,8 @@ DO ~SetDialog("m#amberj")
      ActionOverride("SlumsSlaver3",Enemy())~
  EXIT              
  
@@ -574,7 +445,8 @@
 -    !StateCheck("m#amber",STATE_SLEEPING)
 -    !StateCheck("m#amber",STATE_SILENCED)~ THEN EXTERN M#AMBERJ AmberViconiaConflict3Begin
 -END 
--
++// Romance conflicts -deleted
+ 
 -APPEND M#AMBERJ
 -  IF ~~ THEN BEGIN AmberViconiaConflict3Begin
 -    SAY @2204 /* @2204 = ~Another tale of murder and deceit, is it Viconia?~ */ 
@@ -675,16 +547,18 @@
 -    IF ~~ THEN REPLY @2221 /* @2221 = ~More whining, Aerie?  Please keep it to yourself, will you?~ */ GOTO 222
 -  END
 -END
-+// Romance conflicts - deleted
  
  // Minor interjections commoners, peasants etc.
  
---- Amber/dialogs/m#npcapp.d
-+++ Amber/dialogs/m#npcapp.d
-@@ -1245,22 +1245,6 @@ APPEND ~JAHEIRAJ~
+diff --git a/dialogs/m#npcapp.d b/dialogs/m#npcapp.d
+index da258a3..fa4d5f5 100644
+--- amber/dialogs/m#npcapp.d
++++ amber/dialogs/m#npcapp.d
+@@ -1244,24 +1244,6 @@ APPEND ~JAHEIRAJ~
+       SAY @4017 /* @4017 = ~Perhaps <CHARNAME> could help?~ */
        IF ~~ THEN EXIT
    END
-   
+-  
 -  IF ~Global("M#AmberJaheiraRomanceConflict","GLOBAL",2)
 -      !StateCheck("M#Amber",STATE_SLEEPING)
 -      !StateCheck("M#Amber",STATE_HELPLESS)
@@ -701,10 +575,11 @@
 -    SAY @4070 /* @4070 = ~I only try to do what I think is best, and you try to turn it into a quarrel between us? You should think twice before calling me a hypocrite.~ */
 -    IF ~~ THEN EXTERN M#AMBERN AmberJaheiraRCC
 -  END
- END
+-END
  
  // APPENDs to Jan's dialog files
-@@ -1904,42 +1888,6 @@ IF ~~ THEN BEGIN M#P2CT6
+ APPEND ~JANJ~
+@@ -1904,42 +1886,6 @@ IF ~~ THEN BEGIN M#P2CT6
         									RestParty()~ EXIT
    END
    
@@ -747,35 +622,10 @@
  END
  
  APPEND ~BVICONI~
-@@ -3290,7 +3238,7 @@ IF ~~ THEN BEGIN M#19
- END
- 
- IF ~~ THEN BEGIN M#BMThiefA
--  SAY @4326 /* @4326 = ~�ice doing business with you, friend.~ */ 
-+  SAY @4326 /* @4326 = ~�ice doing business with you, friend.~ */ 
-   IF ~~ THEN EXTERN M#AMBERN 46
- END
- 
---- Amber/scripts/compile/m#amber.baf
-+++ Amber/scripts/compile/m#amber.baf
-@@ -457,7 +457,7 @@ END
- 
- // Ending romance and leaving party based on AmberLike variable.
- IF
--	GlobalLT("M#AmberLike","LOCALS",95)
-+	GlobalLT("M#AmberLike","LOCALS",75)
- 	Global("M#AmberLikeSet","LOCALS",1)
- 	OR(2)
- 	  Global("M#AmberRomanceActive","GLOBAL",1)
-@@ -468,7 +468,7 @@ THEN
- END
- 
- IF
--	GlobalLT("M#Amberlike","LOCALS",90)
-+	GlobalLT("M#Amberlike","LOCALS",50)
- 	Global("M#AmberLikeSet","LOCALS",0)
- 	!StateCheck(Player1,STATE_PANIC)
- 	!StateCheck(Player1,STATE_BERSERK)
+diff --git a/scripts/compile/m#amber.baf b/scripts/compile/m#amber.baf
+index fd3a3f2..87105b5 100644
+--- amber/scripts/compile/m#amber.baf
++++ amber/scripts/compile/m#amber.baf
 @@ -2766,294 +2766,7 @@ THEN
  	Interact("Korgan")	
  END
@@ -1068,16 +918,19 @@
 -        SetGlobal("M#AmberInitiateFlirt","LOCALS",0)
 -        RealSetGlobalTimer("M#AmberFlirtTimer","LOCALS",600)
 -END
-+// Romance conflicts - deleted
++// Romance conflicts -deleted
  
  // Amber flirts with PC1
  IF
---- Amber/scripts/extend/m#baldur.baf
-+++ Amber/scripts/extend/m#baldur.baf
-@@ -104,51 +104,7 @@ THEN
+diff --git a/scripts/extend/m#baldur.baf b/scripts/extend/m#baldur.baf
+index b9b4871..a14043e 100644
+--- amber/scripts/extend/m#baldur.baf
++++ amber/scripts/extend/m#baldur.baf
+@@ -103,53 +103,6 @@ THEN
+ 	SetGlobal("M#AmberMatch","GLOBAL",4)
  END
  
- // Setting Amber Romance timeout variables in case Amber is kicked out of party
+-// Setting Amber Romance timeout variables in case Amber is kicked out of party
 -IF
 -	OR(2)
 -	  Global("M#AmberRomanceActive","GLOBAL",1)
@@ -1123,18 +976,18 @@
 -		SetGlobal("M#AmberRomanceWaiting","GLOBAL",0)
 -		RealSetGlobalTimer("M#AmberRomanceTime","GLOBAL",3600)
 -END
-+// deletes
- 
+-
  // Amber returns after getting her bracelet back
  IF
---- Amber/scripts/extend/m#jaheir.baf
-+++ Amber/scripts/extend/m#jaheir.baf
-@@ -11,32 +11,3 @@ THEN
- 	RESPONSE #100
- 	Dialog(Player1)	
+ 	Global("M#JillBracelet","GLOBAL",2)
+diff --git a/scripts/extend/m#jaheir.baf b/scripts/extend/m#jaheir.baf
+index e4bef1b..588aaa9 100644
+--- amber/scripts/extend/m#jaheir.baf
++++ amber/scripts/extend/m#jaheir.baf
+@@ -13,23 +13,7 @@ THEN
  END
--
--IF
+ 
+ IF
 -	RealGlobalTimerExpired("M#AmberJaheiraRomanceConflictTime","GLOBAL")
 -	Global("M#AmberJaheiraRomanceConflict","GLOBAL",1)
 -	!Global("Chapter","GLOBAL",%bg2_chapter_5%)
@@ -1152,19 +1005,14 @@
 -
 -IF
 -	Global("M#AmberJaheiraRomanceConflict","GLOBAL",2)
--	!StateCheck("m#amber",STATE_PANIC)
--	!StateCheck("m#amber",STATE_BERSERK)
--	!StateCheck("m#amber",STATE_CHARMED)
--	!StateCheck("m#amber",STATE_CONFUSED)
--	CombatCounter(0)
--	See("m#amber")
--THEN
--	RESPONSE #100
--	Dialog("m#amber")
--END
-\ No newline at end of file
---- Amber/scripts/extend/m#viconi.baf
-+++ Amber/scripts/extend/m#viconi.baf
++	Global("M#AmberJaheiraRomanceConflict","GLOBAL",2000)
+ 	!StateCheck("m#amber",STATE_PANIC)
+ 	!StateCheck("m#amber",STATE_BERSERK)
+ 	!StateCheck("m#amber",STATE_CHARMED)
+diff --git a/scripts/extend/m#viconi.baf b/scripts/extend/m#viconi.baf
+index 60013c0..22a29e4 100644
+--- amber/scripts/extend/m#viconi.baf
++++ amber/scripts/extend/m#viconi.baf
 @@ -12,35 +12,6 @@ THEN
  	Dialog(Player1)	
  END

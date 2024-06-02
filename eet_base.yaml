@@ -828,7 +828,9 @@ modules:
         layout_type: multi_dir
         dirs: [Xan] # xan v.s. Xan :/
   - name: isra_bg2
-    components: [0, 1]
+    components:
+      - 0
+      - 1
     location:
       github_user: SpellholdStudios
       repository: Isra_NPC_BG2
@@ -844,13 +846,24 @@ modules:
       release: v5.0
       asset: yeslick-npc-v5.0.iemod
   - name: amber
-    components: [0, 1]
+    components
+      - 0
+      - 1
     location:
       path: /home/mick/Games/modda-cache/static/lin-amber-v9.zip
       patch:
         relative: patches/amber.diff
+        encoding: LATIN9
       replace:
-        - xxx xxxx.
+        - file_globs: [ "dialogs/m#amber.d" ]
+          replace: 'RealSetGlobalTimer("M#AmberRomanceTime","GLOBAL",2500)'
+          with: 'RealSetGlobalTimer("M#AmberRomanceTime","GLOBAL",500)'
+        - file_globs: [ "dialogs/m#amber.d" ]
+          replace: 'RealSetGlobalTimer("M#AmberQuestTime","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("M#AmberQuestTime","GLOBAL",600)'
+        - file_globs: [ "dialogs/m#amber.d" ]
+          replace: 'RealSetGlobalTimer("M#AmberQuestTime","GLOBAL",2500)'
+          with: 'RealSetGlobalTimer("M#AmberQuestTime","GLOBAL",500)'
   - name: Foundling
     description: "Colours of Infinity: Foundling"
     components:
