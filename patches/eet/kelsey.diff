@@ -1,0 +1,11 @@
+--- Kelsey/kelsey/baf/j#klsy25.baf
++++ Kelsey/kelsey/baf/j#klsy25.baf
+@@ -377,7 +377,7 @@ END
+ IF
+        !Global("J#KelseyRomanceActive","GLOBAL",2)
+        InParty("Imoen2")
+-       Global("FWImoenRomanceActive","GLOBAL",0)
++       Global("FWImoenRomanceActive","GLOBAL",1000)
+ THEN
+        RESPONSE #100
+                SetGlobal("FWImoenRomanceActive","GLOBAL",1)
