@@ -1,0 +1,71 @@
+
+modules:
+
+  #####################
+  #### Fixpacks
+  #####################
+  - name: correctfrbg2ee
+    components:
+      - 10 # Correction de la traduction de Baldur's Gate II : Enhanced Edition: 0.7
+      - 20 # Correction de la description des objets: 0.7
+      - 30 # Patch audio et video francais: 0.7
+    location:
+      github_user: r-e-d
+      repository: correctfrBG2EE
+      branch: master
+      refresh: 4days
+
+  #####################
+  #### EET
+  #####################
+  - name: EET  # needs EET/bgee_dir.txt with path to bg1 /game subdirectory inside
+    location:
+      github_user: mleduque
+      repository: EET
+      branch: master
+      refresh: 2days
+      layout:
+          layout_type: multi_dir
+          dirs:
+            - EET
+            - EET_end
+    components:
+      - 0 # EET core (importation de ressource)
+    add_conf:
+      file_name: bgee_dir.txt
+      content: ../../bg1/game
+
+  #####################
+  #### Full UI overwrite
+  #####################
+  - name: LeUI
+    components: ask
+    location:
+      github_user: r-e-d
+      repository: LeUI-SoD
+      release: v4.8
+      asset:  lefreuts-enhanced-ui-sod-skin-4.8.iemod
+  - name: remastered_spell_icons
+    components: ask
+    location:
+      github_user: Renegade0
+      repository: RemasteredSpellIcons
+      tag: v1.2
+  - name: EEUITweaks
+    components: ask
+    location:
+      github_user: r-e-d
+      repository: EEUITweaks
+      release: v4.0.2
+      asset: eeuitweaks-4.0.2.iemod
+
+  #####################
+  #### Resource overwrite
+  #####################
+  - name: bggoEET
+    components: ask
+    location:
+      github_user: SpellholdStudios
+      repository: BGGOEET
+      branch: master
+      refresh: 1day

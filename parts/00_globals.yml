@@ -1,0 +1,26 @@
+
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+  local_mods: mods
+  local_patches: patches
+
+locations:
+  entries:
+    ajantisbg1:
+      github_user: Gibberlings3
+      repository: Ajantis_BG1_Expansion
+      release: v20
+      asset: ajantis-bg1-expansion-modification-20.iemod
+    rr:
+      github_user: FredrikLindgren
+      repository: rr
+      branch: devel
+    Imoen4ever:
+      github_user: Gibberlings3
+      repository: Imoen4Ever
+      release: v11.4
+      asset: imoen-4-ever-v11.4.iemod

@@ -1,0 +1,34 @@
+
+
+
+  - name: ImoenIsStone
+    description: SoA -Imoen is turned to stone by the Cowled Wizards to lower pressureto go to Spellhold
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/ImoenIsStone_v1-0.zip
+  - name: Saerileth
+    components:
+    location:
+      github_user: PaulaMigrate
+      repository: Saerileth
+      tag: V22
+      patch:
+        relative: saerileth-unobnoxiousify.diff
+    disabled:
+      because: Seems obnoxious
+  - name: imoen_forever
+    installation:
+      after: { name: imoen_forever , component: 0 }
+    components: ask
+      - 0 # Imoen 4 Ever in BGII: Imoen Returns after Talking to Gaelan in Chapter 2: v9
+      - 1 # Imoen 4 Ever in BGII: Give Imoen Dialogue Content in SoA: v9
+      - 2 # Imoen 4 Ever in BGII: Yoshimo Comes to Brynnlaw: v9
+      - 20 # Imoen's chest moves with the campaign, too: v9
+    disabled:
+      because: using ImoenIsStone instead
+  - name: imoen_forever
+    description:
+    components:
+    - 9  # BGII content: ~Compatibility with Alternatives and Saerileth~
+    disabled:
+      because: using ImoenIsStone instead

@@ -24,14 +24,13 @@ modules:
       github_user: r-e-d
       repository: correctfrBG1EE
       branch: master
+      refresh: 3days
   - name: bg1ub
     description: BG1 Unfinished Business
-    version:
     location:
-      github_user: Pocket-Plane-Group - post eet?
+      github_user: Pocket-Plane-Group
       repository: bg1ub
-      release: v16.4
-      asset: bg1-unfinished-business-v16.4.zip
+      commit: f957a5e273 # from 16.4, last checked 2024-06-17
     components:
       - 0  # Ice Island Level Two Restoration
       - 11 # Scar and the Sashenstar's Daughter
@@ -49,19 +48,13 @@ modules:
       - 32 # Svlast, the Fallen Paladin Encounter
       - 33 # Mal-Kalen, the Ulcaster Ghost
       - 34 # Chapter 6 Dialogue Restorations
-  - name: BG1Aerie
-    version: 1.1-fr
-    components:
-      - 0 # Aerie for BG:EE
-    location:
-      github_user: mleduque
-      repository: aerie-bg1
-      branch: french
-      layout:
-        layout_type: single_dir_plus_tp2
   - name: TenyaThermidor
+    components:
+      - 0 # Tenya Thermidor for BG:EE
     location:
-      http: https://coutelier.org.uk/Files/BGEETenya15c.rar.
+      http: https://coutelier.org.uk/Files/BGEETenya15c.rar
+      alt:
+        - file: /home/mick/Games/modda-cache/static/BGEETenya15c.rar
   - name: drizztsaga
     components:
       - 0 # The Drizzt Saga pour BGEE/Tutu/BGT -> Version par defaut : zones connectees par des declencheurs de voyage
@@ -76,20 +69,23 @@ modules:
     location:
       github_user: red-carnelian
       repository: The-Stone-of-Askavar
-      tag: "2.3"
+      release: "2.4"
+      asset: tsoaV2_4.zip
   - name: DarkHorizonsBGee
     components:
     location:
       github_user: The-Gate-Project
       repository: DarkHorizonsBGee
-      commit: 205e256-updateit # 2023-06-08
+      branch: master
+      refresh: 5days
   - name: saradas_magic
     components:
       - 0 # Saradas magic
     location:
       github_user: The-Gate-Project
       repository: Saradas_Magic_for_BGEE
-      commit: f770f7f-updateit
+      branch: master
+      refresh: 5days
   - name: Sirene
     components:
       - 0   # Sirene NPC for Baldur's Gate: Enhanced Edition
@@ -97,7 +93,7 @@ modules:
     location:
       github_user: ArtemiusI
       repository: Sirene-NPC
-      tag: v3.0a
+      tag: v3.1
       patch:
         relative: patches/sirene-bg1-wait-here.diff
   - name: Drake
@@ -108,6 +104,12 @@ modules:
       tag: v1.7a
       patch:
         relative: patches/something-will-probably-need-patching.diff
+  - name: verrsza
+    description: bg1+sod, evil ranger, rakshasa, quests, romance
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/VerrSzaBGEE v6.01.zip
+
 #  - name: BGEE_AI_Denoised_Areas
 #    components:
 #      - 0

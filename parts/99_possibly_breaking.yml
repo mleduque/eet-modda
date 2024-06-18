@@ -1,0 +1,61 @@
+  - name: AThousandWords
+    description: 'Berelinde entry for Iron Modder 10: A Thousant Words'
+    components:
+      - 0 # A Thousand Words - v 2 10Dec2007
+    location:
+      path: /home/mick/Games/modda-cache/static/Ironmodder/im10/AThousandWordsV2.zip
+  - name: DaIRon
+    description: 'Deathsangel entry for Iron Modder 10: Volo quest'
+    components:
+      - 0 # A retake on a bible trick
+    location:
+      path: /home/mick/Games/modda-cache/static/Ironmodder/im10/DA-IM.rar
+
+  # ironmodder 9 entries
+  - name: BonsSorry
+    description: "Bons's Iron Modder IX Entry"
+    components:
+      - 0 # Being the Bhaalspawn Means Never Saying You're Sorry - Bons's Iron Modder IX Entry
+    location:
+      path: /home/mick/Games/modda-cache/static/Ironmodder/im9/BonsSorry.rar
+  - name: katiron
+    description: "Katalyn's Iron Modder 9 Entry"
+    components:
+      - 0 # Katalyn's Iron Mod
+    location:
+      path: /home/mick/Games/modda-cache/static/Ironmodder/im9/Katalyn-IM9.rar
+
+  # ironmodder 8 entries
+  - name: greyim8
+    description: "Ghreyfain's IM8 Entry: Careless Words Cost Lives"
+    components:
+      - 0 # Ghreyfain's IM8 Entry: Careless Words Cost Lives
+    location:
+      path: /home/mick/Games/modda-cache/static/Ironmodder/im8/IronGhrey8.zip
+  - name: BonsCareless
+    description: "Bons's Iron Modder 8 Entry: Careless Words Cost Lives"
+    components:
+      - 0 # Careless Words Cost Lives - Bons's Iron Modder 8 Entry
+    location:
+      path: /home/mick/Games/modda-cache/static/Ironmodder/im8/BonsCareless.rar
+
+  # ironmodder 7 entries
+  - name: im7jc
+    description: "JCompton's entry for IronModder 7"
+    components:
+      - 0 # Compton's Iron Modder 7: Blaze of Glory
+    location:
+      path: /home/mick/Games/modda-cache/static/Ironmodder/im7/im7-jc.rar
+  - name: BonsGlory
+    description: "Bons's entry for IronModder 7"
+    components:
+      - 0 # Blaze of Glory - Bons's Iron Modder VII Entry
+    location:
+      path: /home/mick/Games/modda-cache/static/Ironmodder/im7/BonsGlory.rar
+
+  # Not really IM entry
+  - name: ClifetteIM4
+    description : A Bee In Your Bonnet. Not submitted to any IM contests
+    components:
+      - 0 # Cliffette's Z-rated Adventure - an IM4 Non-Entry
+    location: /home/mick/Games/modda-cache/static/Ironmodder/CliffetteIMBonus.rar

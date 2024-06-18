@@ -1,0 +1,410 @@
+
+modules:
+
+  - name: BP_in_BG
+    description: Black Pits in BGEE
+    installation:
+      general: 'This mod should be installed VERY early since it (currently) overwrites several dialogue files: Baeloth's dialogues in BGEE and Sod, and the BP shop vendors' dialogues. It should be installed after EET if you are installing this in an EET game. In that case probably best to install it immediately after EET.'
+      after: EET
+    components:
+      - 0 # BP_in_BG: add access to the Black Pits in BGEE/EET
+    location:
+      github_user: UnearthedArcana
+      repository: BP_in_BG
+      tag: "1.0"
+
+  - name: JA#BGT_AdvPack
+    components: ask
+    location:
+      github_user: TotoR115
+      repository: JA-AdventurePack
+      branch: master
+      refresh: 4days
+
+    # maybe?
+  - name: DSotSC
+    description: Dark Side of the Sword Coast
+    installation:
+      general: NTotSC is no longer dependent on DSotSC. If you want to play the two mods together, install DSotSC first
+      before: ntotsc
+    components:
+      - 0 # Dark Side of the Sword Coast (DSotSC)
+      #- 1, # DSotSC Wizard spells
+      #- 2, # DSotSC Priest spells
+      #- 3 # More common encounters in vanilla areas
+      #- 4  # Distribute DSotSC items also in vanilla content
+    location:
+      github_user: SpellholdStudios
+      repository: DSotSC
+      branch: master
+      refresh: 7days
+  - name: ntotsc
+    description: Northern Tales of the Sword Coast
+    components:
+      - 0 # Northern Tales of the Sword Coast (NTotSC) for BGT-Weidu, BG:EE, and EET: 5.0.0
+      - 1 # Spawn less Monsters depending on Game Difficulty: 5.0.0
+      - 2 # Keelor the Dwarf: 5.0.0
+      - 3 # Llindellyn's Lucky Arrow: 5.0.0
+      - 5 # Pilar and Gheldehar: 5.0.0
+      - 9 # Fighting Encounters: 5.0.0
+      - 10 # Improved Lesser Fiends: 5.0.0
+      - 11 # Improved Haeball: 5.0.0
+      - 12 # Improved Ghotal: 5.0.0
+      - 15 # Spell scrolls : Revised Version (level 6 spells)
+    location:
+      github_user: SpellholdStudios
+      repository: NTotSC
+      release: v5.0.0
+      asset: northern-tales-of-the-sword-coast-5.0.0.iemod
+  - name: TGC1e
+    description: the grey clan candelight(part 1) - BG1 mod
+    components:
+      - 0 # Le Clan Gris Episode Un : A la Lumiere d'une Bougie, BGT-WeiDU/EET/BG:EE edition v1.9 -> Edition normale
+    location:
+      github_user: K4thos
+      repository: TGC1e
+      branch: master
+      refresh: 10days
+      layout:
+        layout_type: single_dir_plus_tp2
+        tp2: Setup-TGC1E.tp2
+
+  - name: "c#endlessbg1"
+    components:
+      - 0 # Endless BG1 : Composant principal (requis): 10
+      #- 1 # Plus de prestige pour le Heros de la Porte de Baldur (avec la residence du personnage principal dans le palais): 10
+      #- 2 # Court hommage au Heros: 10
+      - 3 # Les objets uniques de Sarevok: 10
+      - 4 # L'épee de Sarevok: 10
+      ## overwritten by transition
+      #- 5 # Imoen et la duchesse Jannath (Imoen reside dans le palais): 10
+      ## overwritten by transition
+      - 6 # Le duc Eltan se trouve au palais: 10
+      ## overwritten by transition
+      #- 7 # Le Poing Enflamme arrive apres la bataille finale: 10
+      - 8 # Elminster fait une apparition -> Version de Jastey: 10
+      ##- 9 # Elminster fait une apparition -> Textes de BG1 restaures
+      - 10 # Arrivee des premiers refugies a la Porte de Baldur: 10
+      - 11 # Le tresorier Ophyllis se trouve dans le donjon du palais: 10
+      #- 12 # Commentaires de Denkod dans la guilde des voleurs au sujet de la mort de Sarevok: 10
+      - 13 # Skip Thieves' Maze Once After Sarevok's Death
+      ## incompatible with or overwritten by transition
+      ## 14 # Korlasz' Dungeon is in BG1
+      ## overwritten by transition
+      - 15 # Fenster le soigneur du palais se trouve dans le palais: 10
+      - 16 # Le Capitaine Corwin se trouve dans le palais: 10
+    location:
+      github_user: Gibberlings3
+      repository: EndlessBG1
+      release: v19
+      asset: endless-bg1-mod-19.iemod
+  - name: c#anotherfinehell
+    installation:
+      general: Install Another fine Hell as an early quest mod, before NPC mods
+      after: Imoen4Ever
+      before : Jastey's SoD Tweakpack
+      incompatible: "any of the ending tweaks from Jastey's SoD Tweakpack component 8 SoD Ending: jastey's Tweaks"
+    components:
+      - 0 # Another Fine Hell ( Un autre genre d'enfer ) - Fin optionnelle pour le Final de SoD et BGII : Alpha_220123
+      - 1 # Get the Hells Out( Mettre l'enfer a la porte ) - Option de quete et contenu etendu pour BGII: Alpha_220123
+      - 2 # Le coffre du PC et d'Imoen dans le Palais devraient garder leur contenu.: Alpha_220123
+    location:
+      github_user: Gitjas
+      repository: Another_Fine_Hell
+      release: vAlpha_230919
+      asset: another-fine-hell-for-sod-alpha_230919.iemod
+  - name: c#sodboabri
+    description: The Boareskyr Bridge Scene
+    link: https://github.com/Gitjas/The_Boareskyr_Bridge_Scene
+    installation:
+      general: early story mod
+      before: npc mods and before EET_end
+    components:
+      - 0 # Scene at Boareskyr Bridge will be Acknowledged: Add NPC Reactions
+      - 1 # Add Description Text to Original Scene at Bridge
+      - 2 # Bridge Scene has Different Choices
+      - 3 # Add Stat Changes to Choices at Bridge
+    location:
+      github_user: Gibberlings3
+      repository: The_Boareskyr_Bridge_Scene
+      release: v7.0
+      asset: the-boareskyr-bridge-scene-v7.iemod
+  - name: c#sodtweaks
+    components: ask
+      ##- 1  # Ending Independent on PC Replies
+      ## - 2 # Ne manquez pas de dialogues entre NPC-PC -> For NPCs in Party Only
+      #- 3 # Ne manquez pas de dialogues entre NPC-PC -> Toujours activer tous les dialogues entre PNJ-PC: v8.1
+      ## - 4 # Skip Korlasz's Dungeon
+      #- 5 # Plus de choix de dialogue et eviter les situations sans issue: v8.1
+      ##- 6  # Use Imoen's SoD Portrait for BGII in EET & BGT
+      ## - 7 # restore scripted abductino scene fight - This component is only compatible with SoD, as EET already restores this scene by default.
+      ##- 8  # Adjust PC's Starting XP at Beginning of SoD, by subtledoctor -> Set Starting XP to 65,000
+      ##- 9  # Adjust PC's Starting XP at Beginning of SoD, by subtledoctor -> Set Starting XP to 90,000
+      ##- 10  # Adjust PC's Starting XP at Beginning of SoD, by subtledoctor -> Set Starting XP to 125,000
+      #- 11 # Ajuster l'experience de depart du PC au debut de SoD, par Subtledoctor -> Regler l'experience de depart a 161,000: v8.1
+      #- 20 # Fermer le portail depuis le Chateau Paldragon (Aun Argent survit toujours).: v8.1
+      #- 21 # Hephernaan prend la cle de la crypte du Chateau Paldragon.: v8.1
+      #        ##   it's either one of the soD Tweakpack new/revised SoD endings OR Another fine Hell. - jastey
+      #        ##   https://www.gibberlings3.net/forums/topic/36469-eet-end-error/?do=findComment&comment=321536
+      ##- 12, 13, 14, 15 # SoD Ending: jastey's Tweaks -> Revised Full Version # overwrittern by afh if installed
+    location:
+      github_user: Gibberlings3
+      repository: Jasteys_SoD_Tweakpack
+      release: v12.1
+      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v12.1.iemod
+  - name: imoen_forever
+    installation:
+      after: { name: imoen_forever , component: 0 }
+    components:
+      #- 0 # Imoen 4 Ever in BGII: Imoen Returns after Talking to Gaelan in Chapter 2: v9
+      #- 1 # Imoen 4 Ever in BGII: Give Imoen Dialogue Content in SoA: v9
+      #- 2 # Imoen 4 Ever in BGII: Yoshimo Comes to Brynnlaw: v9
+      #- 11 # Imoen 4 Ever in SoD: Imoen Returns to PC in First Coalition Camp (bd1000): v9
+      - 12 # Imoen 4 Ever in SoD: Imoen Gives Better Reason to Stay Behind in Palace: v9
+      #- 13 # Imoen 4 Ever in SoD: Play Cutscene With Imoen and Duke Jannath: v9
+      #- 14 # Imoen 4 Ever in SoD: Give Imoen Dialogue Content in Chapters 8-12: v9
+      #- 20 # Imoen's chest moves with the campaign, too: v9
+      ##- 9 # Imoen 4 Ever in BGII: Compatibility with Alternatives and Saerileth: v9
+    location:
+      github_user: Gibberlings3
+      repository: Imoen4Ever
+      release: v11.4
+      asset: imoen-4-ever-v11.4.iemod
+  - name: themed_tweaks
+    components:
+      - 60  # SoD - Give Imoen a special wand for palace attack scene
+      - 70  # SoD - Allow PC to give aid to Imoen after attack in palace
+      - 80  # SoD - Stat-based observations and quest options
+      - 90  # SoD - Ditch Tour-Guide Corwin Schael
+      - 100 # SoD - Quest: Scouting the Coast Way Crossing
+      - 140 # SoD/BG2EE - Add a little snark to dialogues
+      - 180 # BG2EE - Give Imoen innnate Magic Missiles for attack scene
+    location:
+      github_user: lzenner
+      repository: themed_tweaks
+      release: v.0.4
+      asset:  themed-tweaks-v0.4.iemod
+
+  - name: bgqe
+    description: Baldur's Gate Mini Quests and Encounters
+    components:
+      - 0 # Installation de la quete de la vase...: v25.3
+      - 1 # Installation de la quete de famille a Beregost...: v25.3
+      - 2 # Installation de la quete de la garde d'enfants, y compris la rencontre au festival...: v25.3
+      - 3 # Installation de la quete du monstre de Nashkel...: v25.3
+      - 4 # Installation de la quete du paladin dechu...: v25.3
+      - 5 # Installation de la quete de l'amour eternel...: v25.3
+      - 6 # Installation de la rencontre de l'orque amoureux...: v25.3
+      - 7 # Installation de la quete une aide inattendue...: v25.3
+      - 8 # Installation de la quete du hamster...: v25.3
+      - 9 # Installation de la quete de l'ivrogne pres du temple de Beregost...: v25.3
+      - 10 # Installation de la quete un endroit douillet pour Noober...: v25.3
+      - 11 # Installation de la quete de l'epee de Brage...: v25.3
+      - 12 # Installation de la quete sources legales des cartes maritimes...: v25.3
+      - 13 # Installation de la quete additions a la Maison de la Dame et du Temple de la Reine Garce...: v25.3
+      - 14 # Installation de la quete un fermier inquiet...: v25.3
+      - 15 # Installation de la quete des corps pour une bonne cause...: v25.3
+      - 16 # Installation de la quete terminer la quete de Cordyr sans tuer Sil...: v25.3
+    location:
+      github_user: Gibberlings3
+      repository: BG_Quests_And_Encounters
+      release: v27
+      asset: baldurs-gate-mini-quests-and-encounters-modification-v27.iemod
+  - name: bg1re
+    description: Baldur's Gate Romantic Encounters
+    comment: did a "install all" this time
+    components:
+      - 103 # Composant principal : quantite de... hum... details croustillants, et style BG ou textes explicites ! (necessaire) -> Version "style BG"  [contenu adulte] et faire apparaitre/installer les composants avec avertissement.: 9.0
+      - 1 # Le briefing de Bardolan, par berelinde: 9.0
+      - 2 # Du temps libre pour La Balafre, par jastey: 9.0
+      - 3 # L'obsession de Kim, par jastey (AVERTISSEMENT - consultez le fichier README !): 9.0
+      - 4 # Extension de la rencontre avec Bjornin (traitement medical personnalise), par jastey: 9.0
+      - 5 # Plus d'amidon dans mon mat: 9.0
+      - 6 # Une minute pour le duc Eltan, par jastey: 9.0
+      - 7 # L'entrainement tres special de Husam, par jastey: 9.0
+      - 8 # Laurel, apres la chasse, par jastey: 9.0
+      - 9 # La seduction de Bartus, par jastey: 9.0
+      - 10 # Le massage de Lina, par jastey: 9.0
+      - 11 # Premiere nuit avec Quentin, par Kulyok: 9.0
+      - 12 # Les jeux de Niklos, par Kulyok (contenu adulte. AVERTISSEMENT - consultez le fichier README !): 9.0
+      - 13 # Slythe et Krystin, par Kulyok (contenu adulte. AVERTISSEMENT - consultez le fichier README !): 9.0
+      - 14 # Sans regret, par Anonyme: 9.0
+      - 15 # Amour payant, par Thimblerig: 9.0
+      - 16 # Hull : le sens du devoir, par Lava: 9.0
+      - 17 # Fin de soiree avec Jaheira, par Kulyok: 9.0
+      - 18 # La benediction de Sil, par Lava: 9.0
+      - 19 # Melicamp : le garcon volaille, par Lava: 9.0
+      - 20 # Une lecture avec Rinnie, par Western Paladin: 9.0
+      - 21 # Molly cherche un mari, par Kulyok: 9.0
+      - 22 # Le deuil de Centeol, la dame araignee, par Lava: 9.0
+      - 23 # L'essentiel, par Lava (AVERTISSEMENT - consultez le fichier README !): 9.0
+      - 24 # Le repaire du Moissonneur, par Lava (contenu adulte): 9.0
+      - 25 # Le grand Zudini, par Kulyok (contenu adulte): 9.0
+      - 26 # Le messager, par Thimblerig: 9.0
+      - 27 # Ender Sai : la recompense du heros, par Thimblerig (AVERTISSEMENT - consultez le fichier README !): 9.0
+      - 28 # Les romanciers, par Thimblerig: 9.0
+      - 29 # Les honnetes mensonges des Deux Rives, par Lava: 9.0
+      - 30 # Le dilemme d'un necromancien, par jastey: 9.0
+      - 31 # Un diner avec Thalantyr, par jastey: 9.0
+      - 32 # Ceinture de changement de sexe et reactions, par Thimblerig, Kulyok, Domi, Lava, Lastknightleft, Twani, Jastey, Daisy Ninja Girl: 9.0
+      - 33 # Le reve du guerisseur, par Kulyok: 9.0
+      - 34 # Ce qu'etait Gauche, par Lava and Thimblerig: 9.0
+      - 35 # Un ami d'enfance, par Kulyok: 9.0
+      - 36 # Arlene la travailleuse, par Kulyok: 9.0
+      - 37 # Della May de Thay, par Kulyok: 9.0
+      - 38 # Un garde deprave a Chateau-Suif, par Kulyok (contenu adulte. AVERTISSEMENT - consultez le fichier README !): 9.0
+      - 39 # La flamme du phoenix, par Kulyok (contenu adulte): 9.0
+      - 40 # Mikala la moniale, par Twani: 9.0
+      - 41 # Le messager 2 : pluie, neige et noirceur de la nuit, par Thimblerig and tibicina: 9.0
+      - 42 # Camryn et Tamah, par tibicina: 9.0
+      - 43 # Petites indiscretions, par jastey: 9.0
+      - 44 # Les amoureux de Bois-Manteau, par tibicina: 9.0
+    location:
+      github_user: Gibberlings3
+      repository: BG1_Romantic_Encounters
+      release: v12
+      asset:  baldurs-gate-romantic-encounters-modification-bg1re-12.iemod
+  - name: AC_QUEST
+    description: Ascalon's Questpack
+    components:
+      - 0 # Un travail bien paye: 4.2
+      - 1 # Un festin pour les gnolls: 4.2
+      - 2 # A la recherche de Ricochet: 4.2
+      - 3 # A la recherche de Perwell: 4.2
+      - 4 # Des loups et des hommes -> Quete qui utilise une hutte pres de Thalantyr a Haute Haie.: 4.2
+      - 6 # Le grand Carlini: 4.2
+      - 7 # Elevage de grouilleux: 4.2
+      - 8 # Les groupies: 4.2
+      - 9 # Les Serpents d'Abbathor: 4.2
+      - 10 # Un petit-homme parmi les sans-yeux: 4.2
+    location:
+      github_user: Gitjas
+      repository: Ascalons_Questpack
+      release: v5.2
+      asset:  ascalons-questpack-5.2.iemod
+  - name: SirinesCall
+    description: The Lure of the Sirine's Call
+    components:
+      - 0 # Le Chant des Sirènes: v16.3
+      - 1 # Extended Lighthouse Area: v16.3
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Lure_Of_Sirines_Call
+      branch: master
+      refresh: 7days
+  - name: framed
+    components:
+      - 0 # FFramed ou Piege: Propose plusieurs versions du chapitre 6 -> LUtilisez des voix personnalisees pour les films des nouveaux chapitres
+    location:
+      github_user:  Gibberlings3
+      repository: framed
+      release: v1.14
+      asset: framed-v1.14.iemod
+  - name: thecalling
+    description: The calling
+    components: ask
+    location:
+      github_user: Camdawg # Gibberlings3
+      repository: The_Calling
+      branch: master
+      refresh: 3days
+  - name: Reflections
+    description: Reflections of Destiny, an SoD Remix Mod
+    installation:
+      after: EET, c#endless, thecalling
+      before: EET_end
+    components: ask
+    location:
+      github_user: subtledoctor
+      repository: Reflections-of-Destiny
+      tag: "0.3"
+
+  - name: bg1npc
+    components: ask
+    location:
+      github_user: Gibberlings3
+      repository: BG1NPC
+      release: v32
+      asset: the-bg1npc-project-v32.iemod
+  - name: garrick-tt
+    description: extends Garrick - dialogues, encounters
+    components:
+      - 0 # Garrick : les contes d'un troubadour
+    location:
+      github_user: mleduque
+      repository: garrick-tt
+      branch: k4thos-eet-compat
+
+  - name: ExtraExpandedEnhancedEncounters
+    components:
+      - 0 # EEEE: Melia Quicknight, Crossroads: 3.1
+      - 1 # EEEE: Bimmy's Badgering Bandits: 3.1
+      - 2 # EEEE: Reinforced Gnoll Stronghold: 3.1
+      - 3 # EEEE: Bear Encounter near the Gnoll Stronghold: 3.1
+      - 5 # EEEE: Daenni's Bridge Bandits: 3.1
+      - 6 # EEEE: The Fire Drake in the Wyvern Cave: 3.1
+      - 7 # EEEE: Undercity Magma Bulwark Encounter; Red Skeleton-(U.M.B.E.R.S.): 3.1
+    location:
+      github_user: GraionDilach
+      repository: ExtraExpandedEnhancedEncounters
+      release: "4.3"
+      asset: extra-enhanced-expanded-encounters-4.3.iemod
+      patch:
+        relative: patches/ExtraExpandedEnhancedEncouter-reducegnolls.diff
+  - name: gorgon
+    components: ask
+    location:
+      github_user: TotalMilk90
+      repository: gorgon
+      release: v4.4
+      asset: gorgon-v4.4.iemod
+  - name: Blackhearts EET
+    components: ask
+    location:
+      github_user: mleduque # forked because needs-patch #  https://forums.beamdog.com/discussion/comment/1200875/#Comment_1200875
+      repository: Black-Hearts-EET
+      branch: fix-wi0004-are
+  - name: bst
+    components:
+      - 0 # The BS Company presents Balduran's Seatower: vEAOB.6
+    location:
+      github_user: Gibberlings3
+      repository: BS_Baldurans_Seatower
+      release: vEAOB.9
+      asset: bs-baldurans-seatower-veaob.9.iemod
+  - name: loretaker
+    components: ask
+    location:
+      http: https://www.baldurs-gate.de/acifer/Loretakers.rar
+      rename: Loretakers_1.1.zip # 2024-06-01
+  - name: SotSC
+    description: Shades of the Sword Coast
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/SotSC v8.7.zip
+    components:
+      - 0
+  - name: TheVanishingOfSkieSilvershield
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/TheVanishingOfSkieSilvershield v2.4.zip
+  - name: BG1Aerie
+    components:
+      - 0 # Aerie for BG:EE
+    location:
+      github_user: The-Gate-Project
+      repository: AerieBG1
+      release: v2.5
+      asset: aerie-in-bgee-2.5.iemod
+  - name: DarkHorizons
+    description: old BG1 mod - one major quest, multiple minor quests
+    components: ask
+    location:
+      github_user: The-Gate-project
+      repository: DarkHorizons
+      branch: main
+      refresh: 3days
+
+
+
+
+#

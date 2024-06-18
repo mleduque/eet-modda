@@ -58,21 +58,15 @@ modules:
       repository: BGGOEET
       branch: master
       refresh: 1day
-  - name: infinitysounds
-    components: ask
-    location:
-      github_user: skellytz
-      repository: infinity-sounds
-      release: v2.0
-      asset: infinitysounds-v2.0.iemod
+
 
   #########
   # Section: Story
   #########
-  - name: BP_in_BG
+  - name: BP_in_BG # ok
     description: Black Pits in BGEE
     installation:
-      general: VERY early since it overwrites several dialogue files
+      general: 'This mod should be installed VERY early since it (currently) overwrites several dialogue files: Baeloth's dialogues in BGEE and Sod, and the BP shop vendors' dialogues. It should be installed after EET if you are installing this in an EET game. In that case probably best to install it immediately after EET.'
       after: EET
     components:
       - 0 # BP_in_BG: add access to the Black Pits in BGEE/EET
@@ -80,7 +74,11 @@ modules:
       github_user: UnearthedArcana
       repository: BP_in_BG
       tag: "1.0"
-  - name: ascension
+
+  - name: ascension # no
+    installation:
+      before: longerroad, spell_rev, stratagems, wheels, EET_end
+      after: EdwinRomance, Iylos, bg2fixpack, EET
     description: ascension - main component -> WARNs no effects added to SPPR403.spl | SPWI306.spl | spermel.itm
     components:
       - 0     # Rewritten Final Chapter of Throne of Bhaal
@@ -90,7 +88,7 @@ modules:
       release: "2.0.28"
       asset: ascension-2.0.28.iemod
     ignore_warnings: true
-  - name: ascension
+  - name: ascension # no
     description: ascension - the other components
     components:
       - 10    # Balthazar can be redeemed
@@ -104,7 +102,18 @@ modules:
       - 2200  # Extended Epilogues for additional Beamdog NPCs, by shawne
       - 2300  # Sharper portraits of Abazigal and Gromnir for the Enhanced Edition, by DavidW
       - 2400  # Slightly improved cutscenes, by DavidW
-  - name: ub
+  - name: turnabout # no
+    installation:
+      after : ascension
+    components:
+      - 0 # Ascension: Turnabout
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Turnabout
+      release: "1.8"
+      asset: turnabout-v1.8.iemod
+
+  - name: ub # ok
     description: Unfinished Business
     components:
       - 0 # The Kidnapping of Boo by Cliffette: v28
@@ -137,7 +146,7 @@ modules:
         - file_globs: ["*.tp2"]
           replace: "^ASK_EVERY_COMPONENT$"
           with: ""
-  - name: arestorationp
+  - name: arestorationp # ok
     description: Almateria's Restoration Project
     components: ask
       # new version with components added
@@ -157,7 +166,7 @@ modules:
       repository: Almaterias_Restoration_Project
       branch: master
       refresh: 7days
-  - name: mih_fr
+  - name: mih_fr # ok
     description: Made in Heaven - Fixes & Restoration; 'fixes' part only
     installation:
       general: at least component 5 must be after ub
@@ -172,65 +181,15 @@ modules:
       - 8 # Allies are Better Prepared
     branch: master
     refresh: 7days
-  - name: c#sodboabri
-    description: The Boareskyr Bridge Scene
-    link: https://github.com/Gitjas/The_Boareskyr_Bridge_Scene
-    installation:
-      general: early story mod
-      before: npc mods and before EET_end
-    components:
-      - 0 # Scene at Boareskyr Bridge will be Acknowledged: Add NPC Reactions
-      - 1 # Add Description Text to Original Scene at Bridge
-      - 2 # Bridge Scene has Different Choices
-      - 3 # Add Stat Changes to Choices at Bridge
-    location:
-      github_user: Gibberlings3
-      repository: The_Boareskyr_Bridge_Scene
-      release: v7.0
-      asset: the-boareskyr-bridge-scene-v7.iemod
-  - name: turnabout
-    components:
-      - 0 # Ascension: Turnabout
-    location:
-      github_user: Pocket-Plane-Group
-      repository: Turnabout
-      release: "1.8"
-      asset: turnabout-v1.8.iemod
-  - name: A7-TestYourMettle
-    components:
-      - 0   # Test Your Mettle!
-      - 11  # XP reduced by 50%
-      - 20  # Make "Spacewarp" available to stores
-    location:
-      github_user: Argent77
-      repository: A7-TestYourMettle
-      release: v1.5
-      asset: A7-TestYourMettle-v1.5.iemod
-  - name: A7-GolemConstruction
-    components:
-      - 0   # Capacite de Fabrication de Golem pour lanceurs de sorts
-      - 10  # Remplacer le Grimoire des golems original
-      - 15  # Ameliorer l'IA des lanceurs de sorts ennemis
-      - 20  # Des golems pour les lanceurs de sorts ennemis
-      - 25  # Une plus grande diversite de types de golems ennemis
-      - 30  # Les golems de la Forteresse du guerrier ont une chance de vous servir
-      - 35  # Rendre les golems vulnerables aux effets de certains sorts
-      - 40  # Reduire les resistances et l'immunite aux armes des golems fabriques
-      - 45  # Identifier tous les objets du module
-      - 50  # Ajouter la capacite "Teleportation" aux golems
-    location:
-      github_user: Argent77
-      repository: A7-GolemConstruction
-      release: v6.3
-      asset:  A7-GolemConstruction-v6.3.iemod
-  - name: JA#BGT_AdvPack
+
+  - name: JA#BGT_AdvPack # ok
     components: ask
     location:
       github_user: TotoR115
       repository: JA-AdventurePack
       branch: master
       refresh: 4days
-  - name: "c#endlessbg1"
+  - name: "c#endlessbg1" # ok
     components: ask
       #- 0 # Endless BG1 : Composant principal (requis): 10
       #- 1 # Plus de prestige pour le Heros de la Porte de Baldur (avec la residence du personnage principal dans le palais): 10
@@ -296,13 +255,23 @@ modules:
   #  components:
   #    - 32 # Clean-up Quests -> Option 1 and use gentler Tamoko quest: v2.4
   #  ignore_warnings: true
-  - name: Reflections
-    components: ask
+  - name: c#sodboabri # ok
+    description: The Boareskyr Bridge Scene
+    link: https://github.com/Gitjas/The_Boareskyr_Bridge_Scene
+    installation:
+      general: early story mod
+      before: npc mods and before EET_end
+    components:
+      - 0 # Scene at Boareskyr Bridge will be Acknowledged: Add NPC Reactions
+      - 1 # Add Description Text to Original Scene at Bridge
+      - 2 # Bridge Scene has Different Choices
+      - 3 # Add Stat Changes to Choices at Bridge
     location:
-      github_user: subtledoctor
-      repository: Reflections-of-Destiny
-      tag: "0.2.2"
-  - name: DSotSC
+      github_user: Gibberlings3
+      repository: The_Boareskyr_Bridge_Scene
+      release: v7.0
+      asset: the-boareskyr-bridge-scene-v7.iemod
+  - name: DSotSC # ok
     description: Dark Side of the Sword Coast
     installation:
       general: NTotSC is no longer dependent on DSotSC. If you want to play the two mods together, install DSotSC first
@@ -318,7 +287,7 @@ modules:
       repository: DSotSC
       branch: master
       refresh: 7days
-  - name: ntotsc
+  - name: ntotsc # ok
     description: Northern Tales of the Sword Coast
     components:
       - 0 # Northern Tales of the Sword Coast (NTotSC) for BGT-Weidu, BG:EE, and EET: 5.0.0
@@ -336,7 +305,19 @@ modules:
       repository: NTotSC
       release: v5.0.0
       asset: northern-tales-of-the-sword-coast-5.0.0.iemod
-  - name: bgqe
+  - name: TGC1e # ok
+    description: the grey clan candelight(part 1) - BG1 mod
+    components:
+      - 0 # Le Clan Gris Episode Un : A la Lumiere d'une Bougie, BGT-WeiDU/EET/BG:EE edition v1.9 -> Edition normale
+    location:
+      github_user: K4thos
+      repository: TGC1e
+      branch: master
+      refresh: 10days
+      layout:
+        layout_type: single_dir_plus_tp2
+        tp2: Setup-TGC1E.tp2
+  - name: bgqe # oks
     description: Baldur's Gate Mini Quests and Encounters
     components:
       - 0 # Installation de la quete de la vase...: v25.3
@@ -361,7 +342,7 @@ modules:
       repository: BG_Quests_And_Encounters
       release: v27
       asset: baldurs-gate-mini-quests-and-encounters-modification-v27.iemod
-  - name: AC_QUEST
+  - name: AC_QUEST # ok
     description: Ascalon's Questpack
     components:
       - 0 # Un travail bien paye: 4.2
@@ -379,98 +360,7 @@ modules:
       repository: Ascalons_Questpack
       release: v5.2
       asset:  ascalons-questpack-5.2.iemod
-  #- name: BG_Travel
-  #  description: New travel system between Baldur's Gate City areas
-  #  comment: Original location http://athkatla.cob-bg.pl/download.php?id=1595 (BG_Travel_v2.1.rar)
-  #  components:
-  #    - 66 # New travel system between Baldur's Gate City areas -> Full version of component
-  #  location:
-  #    github_user: mleduque
-  #    repository: BG_Travel
-  #    tag: v2.1
-  - name: c#sb_silber
-    description: Adalon's blood
-    components:
-      - 0 # Adalon's Blood - Modification pour BGII par Gandalf the white: 14
-    location:
-      github_user: Gitjas
-      repository: Adalons_Blood
-      release: "15"
-      asset: adalons-blood-15.iemod
-  - name: Eilistraee
-    description: Eilistraee's Song
-    components:
-      - 0 # Eilistraee's Song -> Yes, but don't patch the existing save games: 7.1
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Eilistraees Song v7.4.zip
-  - name: TotDG
-    description: "Colours of Infinity: Tales of the Deep Gardens"
-    components:
-      - 0 # Colours of Infinity: Tales of the Deep Gardens -> Yes, but don't patch the existing save games: 12.7
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Tales of the Deep Gardens v12.91.zip
-  - name: Innershade
-    description: "Colours of Infinity: Innershade"
-    components:
-      - 0 # Colours of Infinity: Innershade -> Yes, but don't patch the existing save games: 11.0
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Innershade v11.11.zip
-  - name: WhiteQueen
-    description: "Colours of Infinity: The White Queen"
-    components:
-      - 0 # Colours of Infinity - The White Queen -> Yes, but don't patch the existing save games: 6.9
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/WhiteQueen v7.1.zip
-  - name: ISNF
-    description: "Colours of Infinity: I Shall Never Forget"
-    components:
-      - 0 # Colours of Infinity: I Shall Never Forget: 6.0
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/I Shall Never Forget v6.2.zip
-  - name: SouthernEdge
-    description: "Athkatlan Grounds: Southern Edge"
-    components:
-      - 0 # Southern Edge: the new district of Athkatla -> Yes, but don't patch the existing save games: 3.4
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/SouthernEdge v5.1.zip
-  - name: Ooze
-    description: "Athkatlan Grounds: The Ooze’s Lounge"
-    components:
-      - 0 # Le Salon des vases : une nouvelle zone sous les bas quartiers d'Athkatla: 2.92
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Oozes Lounge v2.94.zip
-  - name: TangledIsle
-    description: "Athkatlan Grounds: The Tangled Oak Isle"
-    components:
-      - 0 # L'ile du Chene Enchevetre : une nouvelle zone d'Athkatla -> Oui , mais ne pas patcher les sauvegardes existantes: v2.26
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/TangledIsle v4.3.zip
-  - name: BridgesBlock
-    description: "Athkatlan Grounds: Bridge’s Block"
-    components:
-      - 0 # Les terres d'Athkatlan : Le Bloc du Pont: 1.3
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/BridgesBlock v1.91.zip
-  - name: AlabasterSands
-    description: "Athkatlan Grounds: Alabaster Sands"
-    components:
-      - 0 # Alabaster Sands: the new area of Athkatla -> Yes, but don't patch existing save games: v1.0
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/AlabasterSands v1.7.zip
-  - name: WhinHill
-    description: "THE JOURNEY TO THE WHIN HILL"
-    components:
-      - 0 # The Journey to the Whin Hill - a Baldur's Gate 2: EE quest -> Yes, but don't patch existing save games
-      - 2 # The Journey to the Whin Hill: add the optional minor joinable companion - Afu-Zuuvi
-      - 3 # The Journey to the Whin Hill: Player-Initiated Dialogues for the optional companion - Afu-Zuuvi
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/WhinHill v1.3.zip
-  - name: InLoveUndeath
-    description: BG2 npc - Xzelë Melaenitt, the paladin of Evening Glory (beauty in undeath)
-    components: ask
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/InLoveUndeath v1.6.zip
-  - name: SirinesCall
+  - name: SirinesCall # ok
     description: The Lure of the Sirine's Call
     components:
       - 0 # Le Chant des Sirènes: v16.3
@@ -480,7 +370,7 @@ modules:
       repository: Lure_Of_Sirines_Call
       branch: master
       refresh: 7days
-  - name: bg1re
+  - name: bg1re # ok
     description: Baldur's Gate Romantic Encounters
     comment: did a "install all" this time
     components:
@@ -534,126 +424,7 @@ modules:
       repository: BG1_Romantic_Encounters
       release: v12
       asset:  baldurs-gate-romantic-encounters-modification-bg1re-12.iemod
-  # According to DW, needs maintenance
-  #- name: wheels
-  #  description: Wheels Of Prophecy
-  #  components:
-  #    - 0 # Les Roues de la Prophetie (The Wheels of Prophecy): v8.5
-  #  location:
-  #    github_user: Gibberlings3
-  #    repository: WheelsOfProphecy
-  #    release: v8.5
-  #    asset: lin-wheels-v8.5.tar.gz
-  - name: fadingpromises
-    components: [0] # Fading Promises: v9
-    location:
-      github_user: SpellholdStudios
-      repository: Fading_Promises
-      release: v9
-      asset: fading-promises-v9.iemod
-  - name: Assassinations
-    components: [0] # Assassinations mod for Baldur's Gate II: v17
-    location:
-      github_user: Pocket-Plane-Group
-      repository: Assassinations
-      release: v19
-      asset: assassinations-v18.iemod
-  - name: BackBrynnlaw
-    components: [0] # Mod Retour Ã  Brynnlaw mod pour Baldur's Gate II: v9
-    location:
-      github_user: Pocket-Plane-Group
-      repository: Back_to_Brynnlaw
-      release: v9
-      asset: back-to-brynnlaw-mod-for-baldurs-gate-ii-bgii-bgt-bgiiee-and-eet-v9.iemod
-  - name: Sellswords
-    components: [0] # Mod Mercenaires pour Baldur's Gate II: v9.1
-    location:
-      github_user: Pocket-Plane-Group
-      repository: Sellswords
-      release: v9.1
-      asset: the-sellswords-mod-for-baldurs-gate-ii-v9.1.iemod
-  - name: lucy
-    description: Lucy the Wyvern
-    components: [0] # Lucy la Wiverne: v5.0
-    location:
-      github_user: SpellholdStudios
-      repository: Lucy_the_Wyvern
-      release: v5.0
-      asset: lucy-the-wyvern-v5.0.iemod
-  - name: slandor
-    description: The Minotaur and Lilacor
-    components: [0] # Le minotaure et Lilarcor: 2.0
-    location:
-      github_user: SpellholdStudios
-      repository: The_Minotaur_and_Lilacor
-      release: v2.1
-      asset: the-minotaur-and-lilacor-2.1.iemod
-  - name: reunion
-    components: [0] # Mod Reunion pour Baldur's Gate II: v7
-    location:
-      github_user: Pocket-Plane-Group
-      repository: Reunion
-      release: v7
-      asset: the-reunion-v7.iemod
-  - name: d0questpack
-    description: SimDing0's Quest Pack
-    installation:
-      before: alternatives
-    components: [0, 1, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
-    original_location: http://mods.pocketplane.net/questpack-v35-win.zip
-    location:
-    # alternative: http://america.iegmc.net/ppg/questpack-v35-win.zip
-      github_user: mleduque
-      repository: simding0_questpack
-      tag: v3.5-lean
-      layout:
-        layout_type: multi_dir
-        dirs:
-          - questpack
-          - setup-d0questpack.tp2
-  #- name: Saerileth
-  #  components:
-  #  location:
-  #    github_user: PaulaMigrate
-  #    repository: Saerileth
-  #    tag: V22
-  #    patch:
-  #      relative: saerileth-unobnoxiousify.diff
-  - name: ImoenIsStone
-    components: ask
-    location:
-      path: /home/mick/Games/modda-cache/static/ImoenIsStone_v1-0.zip
-  #- name: imoen_forever
-  #  installation:
-  #    after: { name: imoen_forever , component: 0 }
-  #  components: ask
-  #    #- 0 # Imoen 4 Ever in BGII: Imoen Returns after Talking to Gaelan in Chapter 2: v9
-  #    #- 1 # Imoen 4 Ever in BGII: Give Imoen Dialogue Content in SoA: v9
-  #    #- 2 # Imoen 4 Ever in BGII: Yoshimo Comes to Brynnlaw: v9
-  #    #- 11 # Imoen 4 Ever in SoD: Imoen Returns to PC in First Coalition Camp (bd1000): v9
-  #    #- 12 # Imoen 4 Ever in SoD: Imoen Gives Better Reason to Stay Behind in Palace: v9
-  #    #- 13 # Imoen 4 Ever in SoD: Play Cutscene With Imoen and Duke Jannath: v9
-  #    #- 14 # Imoen 4 Ever in SoD: Give Imoen Dialogue Content in Chapters 8-12: v9
-  #    #- 20 # Imoen's chest moves with the campaign, too: v9
-  #    ##- 9 # Imoen 4 Ever in BGII: Compatibility with Alternatives and Saerileth: v9
-  #  location:
-  #    github_user: Gibberlings3
-  #    repository: Imoen4Ever
-  #    release: v11.4
-  #    asset: imoen-4-ever-v11.4.iemod
-  - name: alternatives
-    installation:
-      before: imoen4ever except imoen4ever compatibility (should be after alternative)
-    components: [0]
-    location:
-      github_user: Gibberlings3
-      repository: Alternatives
-      release: v15
-      asset: Alternatives_v15.zip
-  #- name: imoen_forever
-  #  components:
-  #  - 9  # BGII content: ~Compatibility with Alternatives and Saerileth~
-  - name: c#anotherfinehell
+  - name: c#anotherfinehell # ok
     installation:
       general: Install Another fine Hell as an early quest mod, before NPC mods
       after: Imoen4Ever
@@ -668,7 +439,7 @@ modules:
       repository: Another_Fine_Hell
       release: vAlpha_230919
       asset: another-fine-hell-for-sod-alpha_230919.iemod
-  - name: c#sodtweaks #[0, 1, 2, 5, 13]
+  - name: c#sodtweaks #ok
     components:
       #- 1  # Ending Independent on PC Replies
       # - 2 # Ne manquez pas de dialogues entre NPC-PC -> For NPCs in Party Only
@@ -691,39 +462,28 @@ modules:
       repository: Jasteys_SoD_Tweakpack
       release: v12.1
       asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v12.1.iemod
-  - name: themed_tweaks
+  - name: themed_tweaks # ok
     components:
-      - 60  # SoD - Give Imoen a special wand for palace attack scene
-      - 70  # SoD - Allow PC to give aid to Imoen after attack in palace
       - 80  # SoD - Stat-based observations and quest options
       - 90  # SoD - Ditch Tour-Guide Corwin Schael
       - 100 # SoD - Quest: Scouting the Coast Way Crossing
       - 140 # SoD/BG2EE - Add a little snark to dialogues
       - 180 # BG2EE - Give Imoen innnate Magic Missiles for attack scene
+      - 200 # BG2EE - Use Irenicus in hell movie as dream to restore Bhaalspawn powers
     location:
       github_user: lzenner
       repository: themed_tweaks
       release: v.0.4
       asset:  themed-tweaks-v0.4.iemod
-  - name: sodrtd
-    description: Road To Discovery
-    installation:
-      general: after any mod that adds reply options or transactions to SoD, like NPC mods or story tweak mods.
-      after: themed_tweaks, c#sodtweaks
-    components: ask
-      #- 0 # Composant principal : Systeme de Pistage: 0.4 (Beta)
-      #- 10 # Changements dans les dialogues du jeu pour plus de coherence.: 0.4 (Beta)
-      #- 20 # Les officiers sont plus attentifs: 0.4 (Beta)
-      #- 30 # Donnez au PC des options de reponse avisee: 0.4 (Beta)
-      ## bug, won't install ATM
-      ##-40 # PC Can Tell the Officers
-      #- 60 #Points d'information supplementaires: 0.4 (Beta)
+  - name: framed # ok
+    components:
+      - 0 # FFramed ou Piege: Propose plusieurs versions du chapitre 6 -> LUtilisez des voix personnalisees pour les films des nouveaux chapitres
     location:
-      github_user: Gibberlings3
-      repository: Road_To_Discovery_for_SoD
-      release: v4.0
-      asset: road-to-discovery-for-sod-4.0.iemod
-  - name: thecalling
+      github_user:  Gibberlings3
+      repository: framed
+      release: v1.14
+      asset: framed-v1.14.iemod
+  - name: thecalling # ok
     description: The calling
     components:
       - 0 # The Calling (L'appel): v2
@@ -734,7 +494,336 @@ modules:
       repository: The_Calling
       release: v4
       asset: lin-thecalling-v4.tar.gz
-  - name: hiddenadventure
+  - name: Reflections # ok
+    components: ask
+    location:
+      github_user: subtledoctor
+      repository: Reflections-of-Destiny
+      tag: "0.3"
+  - name: bst # ok
+    components:
+      - 0 # The BS Company presents Balduran's Seatower: vEAOB.6
+    location:
+      github_user: Gibberlings3
+      repository: BS_Baldurans_Seatower
+      release: vEAOB.9
+      asset: bs-baldurans-seatower-veaob.9.iemod
+  - name: ExtraExpandedEnhancedEncounters # ok
+    components:
+      - 0 # EEEE: Melia Quicknight, Crossroads: 3.1
+      - 1 # EEEE: Bimmy's Badgering Bandits: 3.1
+      - 2 # EEEE: Reinforced Gnoll Stronghold: 3.1
+      - 3 # EEEE: Bear Encounter near the Gnoll Stronghold: 3.1
+      - 5 # EEEE: Daenni's Bridge Bandits: 3.1
+      - 6 # EEEE: The Fire Drake in the Wyvern Cave: 3.1
+      - 7 # EEEE: Undercity Magma Bulwark Encounter; Red Skeleton-(U.M.B.E.R.S.): 3.1
+    location:
+      github_user: GraionDilach
+      repository: ExtraExpandedEnhancedEncounters
+      release: "4.3"
+      asset: extra-enhanced-expanded-encounters-4.3.iemod
+      patch:
+        relative: patches/ExtraExpandedEnhancedEncouter-reducegnolls.diff
+
+  - name: bg1npc #ok
+    components: ask
+    location:
+      github_user: Gibberlings3
+      repository: BG1NPC
+      release: v32
+      asset: the-bg1npc-project-v32.iemod
+  - name: garrick-tt # ok
+    description: extends Garrick - dialogues, encounters
+    components:
+      - 0 # Garrick : les contes d'un troubadour
+    location:
+      github_user: mleduque
+      repository: garrick-tt
+      branch: k4thos-eet-compat
+
+  - name: gorgon # ok
+    components: ask
+    location:
+      github_user: TotalMilk90
+      repository: gorgon
+      release: v4.4
+      asset: gorgon-v4.4.iemod
+  - name: Blackhearts EET # ok
+    components: ask
+    location:
+      github_user: mleduque
+      repository: Black-Hearts-EET
+      branch: fix-wi0004-are
+      # forked because needs-patch #  https://forums.beamdog.com/discussion/comment/1200875/#Comment_1200875
+  - name: loretaker # ok
+    components: ask
+    location:
+      http: https://www.baldurs-gate.de/acifer/Loretakers.rar
+      rename: Loretakers_1.1.zip # 2024-06-01
+  - name: SotSC # ok
+    description: Shades of the Sword Coast
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/SotSC v8.6.zip
+    components:
+      - 0
+  - name: TheVanishingOfSkieSilvershield # ok
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/TheVanishingOfSkieSilvershield v2.4.zip
+  - name: BG1Aerie # ok
+  - name: DarkHorizons # ok
+    description: old BG1 mod - one major quest, multiple minor quests
+    components: ask
+    location:
+      github_user: The-Gate-project
+      repository: DarkHorizons
+      branch: main
+      refresh: 3days
+
+  #- name: BG_Travel
+  #  description: New travel system between Baldur's Gate City areas
+  #  comment: Original location http://athkatla.cob-bg.pl/download.php?id=1595 (BG_Travel_v2.1.rar)
+  #  components:
+  #    - 66 # New travel system between Baldur's Gate City areas -> Full version of component
+  #  location:
+  #    github_user: mleduque
+  #    repository: BG_Travel
+  #    tag: v2.1
+
+  - name: fadingpromises # ok
+    components:
+      - 0 # Fading Promises: v9
+    location:
+      github_user: SpellholdStudios
+      repository: Fading_Promises
+      release: v9
+      asset: fading-promises-v9.iemod
+  - name: A7-TestYourMettle # ok
+    description: brings the Modron Maze dungeon from PST to BG2:EE and EET
+    components:
+      - 0   # Test Your Mettle!
+      #- 11  # XP reduced by 50%
+      - 12  # XP reduced by 75% (recommended)
+      - 20  # Make "Spacewarp" available to stores
+    location:
+      github_user: Argent77
+      repository: A7-TestYourMettle
+      release: v1.5
+      asset: A7-TestYourMettle-v1.5.iemod
+  - name: A7-GolemConstruction # ok
+    components:
+      - 0   # Capacite de Fabrication de Golem pour lanceurs de sorts
+      - 10  # Remplacer le Grimoire des golems original
+      - 15  # Ameliorer l'IA des lanceurs de sorts ennemis
+      - 20  # Des golems pour les lanceurs de sorts ennemis
+      - 25  # Une plus grande diversite de types de golems ennemis
+      - 30  # Les golems de la Forteresse du guerrier ont une chance de vous servir
+      - 35  # Rendre les golems vulnerables aux effets de certains sorts
+      - 40  # Reduire les resistances et l'immunite aux armes des golems fabriques
+      - 45  # Identifier tous les objets du module
+      - 50  # Ajouter la capacite "Teleportation" aux golems
+    location:
+      github_user: Argent77
+      repository: A7-GolemConstruction
+      release: v6.3
+      asset:  A7-GolemConstruction-v6.3.iemod
+  - name: FishingForTrouble # ok
+    description: |
+      Large quest, which leads you to multiple new and existing locations in Shadows of Amn
+      New areas, Main quest, side-quests
+    components:
+      - 0 # Fishing for Trouble by Yovaneth: v3.2.8
+      - 1 # Fishing for Trouble - Major character portraits: v3.2.8
+    location:
+      github_user: InfinityMods
+      repository: FishingForTrouble
+      release: v3.2.10
+      asset: fishing-for-trouble-v3.2.10.iemod
+
+  - name: c#sb_silber # ok
+    description: Adalon's blood
+    components:
+      - 0 # Adalon's Blood - Modification pour BGII par Gandalf the white: 14
+    location:
+      github_user: Gitjas
+      repository: Adalons_Blood
+      release: "15"
+      asset: adalons-blood-15.iemod
+    # Colours of Infinity series
+  - name: TotDG # ok
+    description: "Colours of Infinity: Tales of the Deep Gardens"
+    components:
+      - 0 # Colours of Infinity: Tales of the Deep Gardens -> Yes, but don't patch the existing save games: 12.7
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/Tales of the Deep Gardens v12.91.zip
+  - name: Innershade # ok
+    description: "Colours of Infinity: Innershade"
+    components:
+      - 0 # Colours of Infinity: Innershade -> Yes, but don't patch the existing save games: 11.0
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/Innershade v11.11.zip
+  - name: WhiteQueen # ok
+    description: "Colours of Infinity: The White Queen"
+    components:
+      - 0 # Colours of Infinity - The White Queen -> Yes, but don't patch the existing save games: 6.9
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/WhiteQueen v7.2.zip
+  - name: ISNF # ok
+    description: "Colours of Infinity: I Shall Never Forget"
+    components:
+      - 0 # Colours of Infinity: I Shall Never Forget: 6.0
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/I Shall Never Forget v6.2.zip*
+
+  # Athkatlan Grounds series
+  - name: SouthernEdge # ok
+    description: "Athkatlan Grounds: Southern Edge"
+    components:
+      - 0 # Southern Edge: the new district of Athkatla -> Yes, but don't patch the existing save games: 3.4
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/SouthernEdge v5.1.zip
+  - name: Ooze # ok
+    description: "Athkatlan Grounds: The Ooze’s Lounge"
+    components:
+      - 0 # Le Salon des vases : une nouvelle zone sous les bas quartiers d'Athkatla: 2.92
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/Oozes Lounge v2.94.zip
+  - name: TangledIsle # ok
+    description: "Athkatlan Grounds: The Tangled Oak Isle"
+    components:
+      - 0 # L'ile du Chene Enchevetre : une nouvelle zone d'Athkatla -> Oui , mais ne pas patcher les sauvegardes existantes: v2.26
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/TangledIsle v4.3.zip
+  - name: BridgesBlock # ok
+    description: "Athkatlan Grounds: Bridge’s Block"
+    components:
+      - 0 # Les terres d'Athkatlan : Le Bloc du Pont: 1.3
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/BridgesBlock v1.91.zip
+  - name: AlabasterSands # ok
+    description: "Athkatlan Grounds: Alabaster Sands"
+    components:
+      - 0 # Alabaster Sands: the new area of Athkatla -> Yes, but don't patch existing save games: v1.0
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/AlabasterSands v1.7.zip
+
+  # The Dreadful Tales series
+  - name: InLoveUndeath # ok
+    description: BG2 npc - Xzelë Melaenitt, the paladin of Evening Glory (beauty in undeath)
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/InLoveUndeath v1.7.1.zip
+  - name: JuniperAndTheStoneLeech # ok
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/JuniperAndTheStoneLeech v1.5.zip
+  - name: BloodiedStingsOfBarovia # ok
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/BloodiedStingsOfBarovia v2.2.zip
+
+  # various Lava
+  - name: WhinHill # ok
+    description: "THE JOURNEY TO THE WHIN HILL"
+    components:
+      - 0 # The Journey to the Whin Hill - a Baldur's Gate 2: EE quest -> Yes, but don't patch existing save games
+      - 2 # The Journey to the Whin Hill: add the optional minor joinable companion - Afu-Zuuvi
+      - 3 # The Journey to the Whin Hill: Player-Initiated Dialogues for the optional companion - Afu-Zuuvi
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/WhinHill v1.3.zip
+  - name: Eilistraee # ok
+    description: Eilistraee's Song
+    components:
+      - 0 # Eilistraee's Song -> Yes, but don't patch the existing save games: 7.1
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/Eilistraees Song v7.4.zip
+
+  # acifer
+  - name: Tidings # ok
+    components: ask
+    location:
+      homepage: https://baldurs-gate.de/index.php?resources/dark-tidings.65/
+      path: /home/mick/Games/modda-cache/static/Dark_Tidings_v2.0.rar # 2024-05-16
+      #http: http://america.iegmc.net/g3/Dark_Tidings.rar # 2023-09-24
+      #rename: Dark_Tidings_2.0.rar
+      #https://www.baldurs-gate.de/acifer/Dark_Tidings.rar # 2024-05-16
+  - name: godcall # ok
+    components: ask
+    location:
+      http: https://www.baldurs-gate.de/acifer/Call_of_the_lost_goddess.zip
+      #http: http://america.iegmc.net/g3/Call_of_the_lost_goddess.zip
+      rename: Call_of_the_lost_goddes_1.2.zip # 2024-06-01
+  - name: crucible # ok
+    components: ask
+    location:
+      http: http://america.iegmc.net/morpheus562/Crucible.zip
+      rename: Crucible_2.3.zip
+      replace:
+        - file_globs: ['crucible.tp2']
+          replace: 'REQUIRE_PREDICATE !FILE_EXISTS ~mih_eq/setup-mih_eq.tp2~ @3002'
+          with: ''
+
+  # Glittergear
+  - name: FowlWish # ok
+    description: BG2, one quest mod
+    components: ask
+    location:
+      github_user: Glittergear
+      repository: A-Fowl-Wish
+      release: v1.3
+      asset: FowlWish.v1.3.zip
+  - name: GoneNuts # ok
+    description: BG2, one quest mod
+    components: ask
+    location:
+      github_user: Glittergear
+      repository: GoneNuts
+      release: v1.1
+      asset: Gonenuts.zip
+  - name: DeadGardens # ok
+    description: BG2, one quest mod
+    components: ask
+    location:
+      github_user: Glittergear
+      repository: DeadGardens
+      release: v1.1
+      asset: DeadGardens.zip
+  - name: ErrantJusticeBG2 # ok
+    description: BG2, 10 quests mod
+    components: ask
+    location:
+      github_user: Glittergear
+      repository: ErrantJusticeBG2
+      release: v1.0
+      asset: Errant.Justice.1.0.zip
+
+  - name: BackBrynnlaw # ok
+    description: Back to Brynnlaw - SoA chap 6 - one main quest, 10 subquests
+    components:
+      - 0 # Mod Retour à Brynnlaw mod pour Baldur's Gate II: v9
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Back_to_Brynnlaw
+      release: v9
+      asset: back-to-brynnlaw-mod-for-baldurs-gate-ii-bgii-bgt-bgiiee-and-eet-v9.iemod
+  - name: Sellswords # ok
+    description: SoA mod, ch 6, goes to Menzoberranzan, one major quest , 4 add subquests, 4 miniquests, 9 new maps
+    components: [0] # Mod Mercenaires pour Baldur's Gate II: v9.1
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Sellswords
+      release: v9.1
+      asset: the-sellswords-mod-for-baldurs-gate-ii-v9.1.iemod
+  - name: DC # ok
+    description: Dungeon Crawl - BG2 mod (SoA), humourous, short dungeon
+    components:
+      - 0 # Dungeon Crawl: v13.1
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Dungeon_Crawl
+      release: v13.1
+      asset: DungeonCrawl_v13-1.zip
+  - name: hiddenadventure # ok
     description: Hidden Adventures, bg2, little quests and tweaks
     components:
       - 0  # Lady Elgea's extended plot
@@ -753,27 +842,69 @@ modules:
       repository: hiddenadventure
       release: vBeta_7
       asset: hidden-adventures-beta_7.iemod
-  - name: bst
+  - name: snakes # ok
+    description: The slithering Menace - TOB mod
     components:
-      - 0 # The BS Company presents Balduran's Seatower: vEAOB.6
+      - 0
     location:
-      github_user: Gibberlings3
-      repository: BS_Baldurans_Seatower
-      release: vEAOB.9
-      asset: bs-baldurans-seatower-veaob.9.iemod
-  - name: com_encouters
-    description: Encounters for Baldur's Gate II
-    components: ask
+      github_user: SpellholdStudios
+      repository: TheSlitheringMenace
+      release: v4.0.0
+      asset: the-slithering-menace-v4.0.0.iemod
+  - name: slandor # ok
+    description: The Minotaur and Lilacor - Add backstory (dialog) that explains the situation
+    components:
+      - 0 # Le minotaure et Lilarcor: 2.0
     location:
-      github_user: The-Gate-Project
-      repository: Com_encounters
-      release: v1.22
-      asset: com-encounters-v1.22.iemod
-  - name: TheVanishingOfSkieSilvershield
-    components: ask
+      github_user: SpellholdStudios
+      repository: The_Minotaur_and_Lilacor
+      release: v2.1
+      asset: the-minotaur-and-lilacor-2.1.iemod
+  - name: lucy # ok
+    description: Lucy the Wyvern - alternate resolution to the encounter
+    components: [0] # Lucy la Wiverne: v5.0
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/TheVanishingOfSkieSilvershield v2.4.zip
-  - name: "g3anniversary"
+      github_user: SpellholdStudios
+      repository: Lucy_the_Wyvern
+      release: v5.0
+      asset: lucy-the-wyvern-v5.0.iemod
+  - name: d0questpack # ok
+    description: SimDing0's Quest Pack
+    installation:
+      before: alternatives
+    components: [0, 1, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+    original_location: http://mods.pocketplane.net/questpack-v35-win.zip
+    location:
+    # alternative: http://america.iegmc.net/ppg/questpack-v35-win.zip
+      github_user: mleduque
+      repository: simding0_questpack
+      tag: v3.5-lean
+      layout:
+        layout_type: multi_dir
+        dirs:
+          - questpack
+          - setup-d0questpack.tp2
+
+  # ironmodder 10 entries
+  - name: im10kulyok # ok
+    description: 'Kulyok entry for Iron Modder 10: The Oldest Trick In The Book'
+    components:
+      - 0 # Iron Modder 10, Kulyok's entry
+    location:
+      github_user: Pocket-Plane-Group
+      repository: IronModder10_Kulyok
+      release: v1.1
+      asset: im10kulyok-v1.1.zip
+  - name: voloquest # ok
+    description: 'CMorgan entry for Iron Modder 10: Volo quest'
+    components:
+      - 0
+    location:
+      path: /home/mick/Games/modda-cache/static/im10_voloquest.zip
+
+  # small G3 quest mods
+  - name: g3anniversary # ok
+    description: small joke story quest (pub crawl)
     components:
       - 0 # The Gibberlings Three Anniversary Mod
     location:
@@ -781,17 +912,59 @@ modules:
       repository: g3anniversary
       release: V13
       asset: lin-g3anniversary-v13.tar.gz
-  - name: DC
-    description: Dungeon Crawl
+  - name: emad # ok
+    description: every mod and dog - 5 small quests (im sized)
     components:
-      - 0 # Dungeon Crawl: v13.1
+      - 0 # Une aventure classée Z - Une non-entrée pour l'IM4
+      - 1 # La promesse d'un troll
+      - 2 # Le meilleur ami de l'enfant de Bhaal
+      - 3 # Sous son charme
+      - 5 # Pot-pourri de personnages
+    location:
+      path: /home/mick/Games/modda-cache/static/emad_v11.zip
+  - name: shardsofice # ok
+    description: Reworks of two Ironmodder entries (im2 and im6)
+    components:
+      - 0 # Le prix de l'amitie: v7
+      - 1 # Certains de mes meilleurs amis sont des vases: v7
+      - 2 # Restaurer la convocation de vache ? Mais pourquoi faire ?: v7
+    location:
+      github_user: Gibberlings3
+      repository: Shards_of_Ice
+      release: v7
+      asset: lin-shardsofice-v7.tar.gz
+
+  - name: RE # ok
+    description: BG2 romantic Encounters
+    components: [0, 1, 2, 3, 4, 6, 7, 8, 9, 11, 13, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 38, 39, 41, 42, 43, 45, 46, 47, 50, 52, 53, 54]
+    location:
+      github_user: Gibberlings3
+      repository: Romantic_Encounters_BG2
+      release: v15
+      asset: RE_v15.zip
+
+  - name: reunion # ok
+    description: ToB quest mod - Go back to DeArnise hold, fight demons, learn about mother
+    components:
+      - 0 # Mod Reunion pour Baldur's Gate II: v7
     location:
       github_user: Pocket-Plane-Group
-      repository: Dungeon_Crawl
-      release: v13.1
-      asset: DungeonCrawl_v13-1.zip
-  - name: ToA
-    description: Tales of Anegh
+      repository: Reunion
+      release: v7
+      asset: the-reunion-v7.iemod
+
+    components:
+      - 0 # Aerie for BG:EE
+    location:
+      github_user: The-Gate-Project
+      repository: AerieBG1
+      release: v2.5
+      asset: aerie-in-bgee-2.5.iemod
+  - name: ToA # ok
+    description: |
+      Tales of Anegh - SoA,  large, self-contained adventure
+      Main quest (defend Anegh)
+      Side quests (arounf ten)
     components:
       - 1 # Tales of Anegh (Weidu): v2.6
       - 10 # Creature Balancing: v2.6
@@ -803,17 +976,8 @@ modules:
       github_user: Gitjas
       repository: ToA
       branch: master
-  - name: FishingForTrouble
-    components:
-      - 0 # Fishing for Trouble by Yovaneth: v3.2.8
-      - 1 # Fishing for Trouble - Major character portraits: v3.2.8
-    location:
-      github_user: InfinityMods
-      repository: FishingForTrouble
-      release: v3.2.10
-      asset: fishing-for-trouble-v3.2.10.iemod
-  - name: tod
-    description: Tower Of Deception
+  - name: tod # ok
+    description: Tower Of Deception - BG2 mod, dungeon-style
     components:
       - 0 # Mod Tower of Deception (necessite Throne of Bhaal): v4.0.5
       - 1 # Gardien ameliore de l'Eclat Astral: v4.0.5
@@ -823,42 +987,100 @@ modules:
       repository: TowerOfDeception
       release: v4.0.5
       asset: tower-of-deception-v4.0.5.iemod
-  - name: Tidings
-    components: ask
-    location:
-      homepage: https://baldurs-gate.de/index.php?resources/dark-tidings.65/
-      path: /home/mick/Games/modda-cache/static/Dark_Tidings_v2.0.rar # 2024-05-16
-      #http: http://america.iegmc.net/g3/Dark_Tidings.rar # 2023-09-24
-      #rename: Dark_Tidings_2.0.rar
-      #https://www.baldurs-gate.de/acifer/Dark_Tidings.rar # 2024-05-16
-  - name: godcall
-    components: ask
-    location:
-      http: https://www.baldurs-gate.de/acifer/Call_of_the_lost_goddess.zip
-      #http: http://america.iegmc.net/g3/Call_of_the_lost_goddess.zip
-      rename: Call_of_the_lost_goddes_1.2.zip # 2024-06-01
-  - name: loretaker
-    components: ask
-    location:
-      http: https://www.baldurs-gate.de/acifer/Loretakers.rar
-      rename: Loretakers_1.1.zip # 2024-06-01
-  - name: SOS # Shadows Over Soubar
-    components: ask
+  - name: SOS # ok
+    description: |
+      Shadows Over Soubar - big SoA quest megamod
+      Expands Trademeet 2 major quests and 30 mini quests
+      100 areas, 4 npcs, items, stores
+    components:
+      - 0 # Main component
+      - 1 # Selence arrives to Waukeens Promenade after the meeting with Gaelan in the slums
+      - 4 # Alternative Soubar area
     location:
       github_user: SpellholdStudios
       repository: Shadows_over_Soubar
-      release: "2.0"
-      asset: shadows-over-soubar-2.0.iemod
-  - name: framed
+      release: "2.1"
+      asset: shadows-over-soubar-2.1.iemod
+  - name: JanQuest # ok
+    description: Jan's extended quest - continuation of Jan's personal quest, 2 new quests, more dialogue
+    original_url: https://akadis.baldursgateworld.fr/Jan/JansQuestEn.html
     components:
-      - 0 # FFramed ou Piege: Propose plusieurs versions du chapitre 6 -> LUtilisez des voix personnalisees pour les films des nouveaux chapitres
+      - 0 # Extension de la quete de Jan
     location:
-      github_user:  Gibberlings3
-      repository: framed
-      release: v1.14
-      asset: framed-v1.14.iemod
-  - name: RoT
-    description: Region of Terror
+      http: http://akadis.baldursgateworld.fr/Jan/zip/JansQuest1.5.0.zip
+  - name: HerThiMoney # ok
+    description: Heroes Thieves and Moneylenders - BG2 mod
+    components: ask
+      - 0 # Component 1. Interjections & Mini-quests (by Austin & Arcanecoast Team): 4.2.3
+      - 10 # Component 2. First Calimport Bank Pack (by Scheele & Austin & Arcanecoast Team): 4.2.3
+      - 20 # Component 3. Shadow-Covered Love & Death (by Alisia & Austin): 4.2.3
+      - 30 # Component 4. The Missing Troll Case (by Alisia & Austin): 4.2.3
+      - 40 # Component 5. Unlocked original dialogs of all NPC (by Tipun & Austin): 4.2.3
+    location:
+      github_user: Austin-BG
+      repository: HTaM
+      release: v.4.4.1
+      asset: heroes-thieves-and-moneylenders-4.4.1.iemod
+  - name: Derats_Ogre # ok
+    description: BG2 quest mod - meet an ogre, fetch things around
+    components:
+      - 0 # L'ogre et le gnome, une histoire de bleu
+    location:
+      github_user: Deratiseur
+      repository: Ogre
+      tag: v4
+  - name: alternatives # ok
+    description: "Add 2 options to thieves/vampire routes: paladin route or assissin route + alternative for temple stealing"
+    installation:
+      before: imoen4ever except imoen4ever compatibility (should be after alternative)
+    components:
+      - 0 # Alternatives
+    location:
+      github_user: Gibberlings3
+      repository: Alternatives
+      release: v15
+      asset: Alternatives_v15.zip
+
+  # mods from Chosen of Mystra
+  - name: com_encouters # ok
+    description: |
+      Encounters for Baldur's Gate II
+      Improved Druids, Underdark Adventures, Improved Shagbag, Sewer Encounters, Windspear Ecounter
+      New store, Ring Quest
+    components:
+      - 0 # Rencontres, par Chosen of Mystra (Necessite Throne of Bhaal)
+      - 1 # Rencontres avec les druides ameliorees~
+      - 2 # Rencontres avec Shagbag ameliorees
+    location:
+      github_user: The-Gate-Project
+      repository: Com_encounters
+      release: v1.22
+      asset: com-encounters-v1.22.iemod
+  - name: vampiretales #ok
+    description: BG2 mod - new encounter + improved unseeing eye & improved harpers + upgrade store + new store
+    components:
+      - 0 # Vampire tales
+      # - 1 # Improved cult
+      - 2 # Improved Harpers
+      - 3 # COM store
+    location:
+      github_user: The-Gate-Project
+      repository: VampireTales
+      release: v107
+      asset: vampire-tales-v107.iemod
+  - name: TheUndying # no
+    description : BG2 - 2 joignable npcs, branter/interjections, one major quest, minor quests, stores and items
+    components: ask
+    location:
+      http: http://downloads.chosenofmystra.net/bg2/TheUndying2_53.rar
+
+  - name: rr # ok
+    description: rogue rebalancing - story part only
+    components:
+      - 11    #  Rencontre avec les Elus de Cyric
+      - 12    #  Amelioration des Voleurs de l'Ombre
+  - name: RoT # ok
+    description: Region of Terror - BG2 mod, large quest mod focussed on Drizzt Do'Urden. 35 quests, 160 areas
     components: ask
     location:
       github_user: SpellholdStudio
@@ -867,16 +1089,22 @@ modules:
       asset: region-of-terror-v5.0.iemod
       patch:
         relative: rot-taming-drizzt.diff
-  - name: TDD
+  - name: TDD # ok
+    description: |
+      The Darkest Days - Big old BG2 megamod
+      - Purskal miner village, self contained quest with on side quest
+      - Eshpurta town, acces to Troll Mountains for main quest, with 2 side-quests
+      - Riatavin town, main quest with travel by sea and in the underdark, with 3 side quests
+      - Trollford abandonned village with one quest (dungeon crawl)
+      - Onset of the Darkest Day : quest between end of SoA and ToB
     components: none
-    description: The Darkest Days
     installation:
       general: DO NOT install any component, TDDz needs its mod files but does the installation
     location:
       http: http://europe.iegmc.net/tdd-weidu/TDDv1.14.rar
       layout:
         layout_type: single_dir_plus_tp2
-  - name: TDDz
+  - name: TDDz # ok
     description: TDDz is not a mod, it is just an way to install TDD for BG2EE with Worldmap and Extended Animation.
     components:
       - 0 # TDD - Core: v1.3.1
@@ -890,8 +1118,10 @@ modules:
       github_user: InfinityMods
       repository: TDDz
       tag: v1.3.1
-  - name: AjocMod)
-    description: Ajoc's minimod - actually a composite of original v1.6.5 + BWP patchess + EET patch
+  - name: AjocMod # ok
+    description: |
+      Ajoc's minimod - medium-sized quest, mini-quests, areas, items
+      actually a composite of original v1.6.5 + BWP patchess + EET patch
     sources:
       original: http://www.shsforums.net/files/download/119-ajocs-minimod/
       bwp_patches: https://github.com/BigWorldSetup/BigWorldSetup-Fixpack/tree/master/Big%20World%20Fixpack/AjocMod
@@ -903,95 +1133,10 @@ modules:
       github_user: mleduque
       repository: AjocMod
       tag: v1.6.5-mle # this version has BWS patches applied + ikki EET compat patch
-  - name: RE
-    description: BG2 romantic Encounters
-    components: [0, 1, 2, 3, 4, 6, 7, 8, 9, 11, 13, 15, 16, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 38, 39, 41, 42, 43, 45, 46, 47, 50, 52, 53, 54]
-    location:
-      github_user: Gibberlings3
-      repository: Romantic_Encounters_BG2
-      release: v15
-      asset: RE_v15.zip
-  - name: HerThiMoney
-    description: Heroes Thieves and Moneylenders
-    components:
-      - 0 # Component 1. Interjections & Mini-quests (by Austin & Arcanecoast Team): 4.2.3
-      - 10 # Component 2. First Calimport Bank Pack (by Scheele & Austin & Arcanecoast Team): 4.2.3
-      - 20 # Component 3. Shadow-Covered Love & Death (by Alisia & Austin): 4.2.3
-      - 30 # Component 4. The Missing Troll Case (by Alisia & Austin): 4.2.3
-      - 40 # Component 5. Unlocked original dialogs of all NPC (by Tipun & Austin): 4.2.3
-    location:
-      github_user: Austin-BG
-      repository: HTaM
-      release: v.4.3.3
-      asset: heroes-thieves-and-moneylenders-4.3.3.iemod
-  - name: "snakes"
-    description: The slithering Menace
-    components: [0]
-    location:
-      github_user: SpellholdStudios
-      repository: TheSlitheringMenace
-      release: v4.0.0
-      asset: the-slithering-menace-v4.0.0.iemod
-  - name: SotSC
-    description: Shades of the Sword Coast
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/SotSC v8.6.zip
-    components: [0]
-  - name: JanQuest
-    components: [0]
-    location:
-      http: http://akadis.baldursgateworld.fr/Jan/zip/JansQuest1.5.0.zip
-  - name: "voloquest" # IM10
-    components: [0]
-    location:
-      path: /home/mick/Games/modda-cache/static/im10_voloquest.zip
-  - name: "IM10Kulyok" # IM10
-    components: [0]
-    location:
-      github_user: Pocket-Plane-Group
-      repository: IronModder10_Kulyok
-      release: v1.1
-      asset: im10kulyok-v1.1.zip
-  - name: "emad"
-    description: every mod and dog
-    components:
-      - 0 # Une aventure classée Z - Une non-entrée pour l'IM4
-      - 1 # La promesse d'un troll
-      - 2 # Le meilleur ami de l'enfant de Bhaal
-      - 3 # Sous son charme
-      - 5 # Pot-pourri de personnages
-    location:
-      path: /home/mick/Games/modda-cache/static/emad_v11.zip
-  - name: TGC1e
-    description: the grey clan candelight(part 1)
-    components:
-      - 0 # Le Clan Gris Episode Un : A la Lumiere d'une Bougie, BGT-WeiDU/EET/BG:EE edition v1.9 -> Edition normale
-    location:
-      github_user: K4thos
-      repository: TGC1e
-      branch: master
-      refresh: 10days
-      layout:
-        layout_type: single_dir_plus_tp2
-        tp2: Setup-TGC1E.tp2
-  - name: ExtraExpandedEnhancedEncounters
-    components:
-      - 0 # EEEE: Melia Quicknight, Crossroads: 3.1
-      - 1 # EEEE: Bimmy's Badgering Bandits: 3.1
-      - 2 # EEEE: Reinforced Gnoll Stronghold: 3.1
-      - 3 # EEEE: Bear Encounter near the Gnoll Stronghold: 3.1
-      - 5 # EEEE: Daenni's Bridge Bandits: 3.1
-      - 6 # EEEE: The Fire Drake in the Wyvern Cave: 3.1
-      - 7 # EEEE: Undercity Magma Bulwark Encounter; Red Skeleton-(U.M.B.E.R.S.): 3.1
-    location:
-      github_user: GraionDilach
-      repository: ExtraExpandedEnhancedEncounters
-      release: "4.3"
-      asset: extra-enhanced-expanded-encounters-4.3.iemod
-      patch:
-        relative: patches/ExtraExpandedEnhancedEncouter-reducegnolls.diff
-  - name: gbthfkp
-    description: Expanded Thief Stronghold
+  - name: gbthfkp # ok
+    description: Expanded Thief Stronghold (bg2) - add quests to the thief stringhold
+    installation:
+      before: HerThiMoney
     components:
       - 0 # Expanded Thief Stronghold (Expansion de la Forteresse des voleurs): v3.0.0
     location:
@@ -999,31 +1144,15 @@ modules:
       repository: Expanded_Thief_Stronghold
       release: v3.0.0
       asset: expanded-thief-stronghold-v3.0.0.iemod
-  - name: shardsofice
-    components:
-      - 0 # Le prix de l'amitie: v7
-      - 1 # Certains de mes meilleurs amis sont des vases: v7
-      - 2 # Restaurer la convocation de vache ? Mais pourquoi faire ?: v7
-    location:
-      github_user: Gibberlings3
-      repository: Shards_of_Ice
-      release: v7
-      asset: lin-shardsofice-v7.tar.gz
-  - name: magestronghold_eet
+  - name: magestronghold_eet # ok
+    description: extends the mage strongholdquest line
     components:
       - 0 # Expanded Mage Stronghold EET: 0.5
     location:
       github_user: RoxanneSHS
       repository: Magestronghold
       tag: V0.5
-  - name: Derats_Ogre
-    components:
-      - 0
-    location:
-      github_user: Deratiseur
-      repository: Ogre
-      tag: v4
-  - name: CtB
+  - name: CtB #ok
     description: Check the bodies
     components:
       - 0 # Check The Bodies : main component
@@ -1035,353 +1164,32 @@ modules:
       repository: Check_the_Bodies
       branch: no_spells
       refresh: 3days
-  - name: gorgon
-    components: ask
-    location:
-      github_user: TotalMilk90
-      repository: gorgon
-      release: v4.4
-      asset: gorgon-v4.4.iemod
-  - name: Blackhearts EET
-    components: ask
-    location:
-      github_user: mleduque
-      repository: Black-Hearts-EET
-      branch: fix-wi0004-are
-      # forked because needs-patch #  https://forums.beamdog.com/discussion/comment/1200875/#Comment_1200875
-  - name: TheUndying
-    components: ask
-    location:
-      http: http://downloads.chosenofmystra.net/bg2/TheUndying2_53.rar
-  - name: vampiretales
-    components:
-      - 0 # Vampire tales
-      # - 1 # Improved cult
-      - 2 # Improved Harpers
-      - 3 # COM store
-    location:
-      github_user: The-Gate-Project
-      repository: VampireTales
-      release: v107
-      asset: vampire-tales-v107.iemod
-  - name: rr # rogue rebalancing
-    description: rogue rebalancing - story part
-    components:
-      - 11    #  Rencontre avec les Elus de Cyric
-      - 12    #  Amelioration des Voleurs de l'Ombre
-  - name: FowlWish
-    components: ask
-    location:
-      github_user: Glittergear
-      repository: A-Fowl-Wish
-      release: v1.3
-      asset: FowlWish.v1.3.zip
-  - name: GoneNuts
-    components: ask
-    location:
-      github_user: Glittergear
-      repository: GoneNuts
-      release: v1.1
-      asset: Gonenuts.zip
-  - name: DeadGardens
-    components: ask
-    location:
-      github_user: Glittergear
-      repository: DeadGardens
-      release: v1.1
-      asset: DeadGardens.zip
-  - name: ErrantJusticeBG2
-    components: ask
-    location:
-      github_user: Glittergear
-      repository: ErrantJusticeBG2
-      release: v1.0
-      asset: Errant.Justice.1.0.zip
-  - name: DarkHorizons
-    components: ask
-    location:
-      github_user: The-Gate-project
-      repository: DarkHorizons
-      branch: master
-      refresh: 3days
+
+
+  # According to DW, needs maintenance
+  #- name: wheels
+  #  description: Wheels Of Prophecy
+  #  components:
+  #    - 0 # Les Roues de la Prophetie (The Wheels of Prophecy): v8.5
+  #  location:
+  #    github_user: Gibberlings3
+  #    repository: WheelsOfProphecy
+  #    release: v8.5
+  #    asset: lin-wheels-v8.5.tar.gz
+
 
     ###########################
     ## NPC
-    #########################""
+    ###########################
 
-  - name: bg1npc
-    components: ask
-    location:
-      github_user: Gibberlings3
-      repository: BG1NPC
-      release: v32
-      asset: the-bg1npc-project-v32.iemod
-  - name: BG1Aerie
-    components:
-      - 0 # Aerie for BG:EE
-    location:
-      github_user: The-Gate-Project
-      repository: AerieBG1
-      release: v2.5
-      asset: aerie-in-bgee-2.5.iemod
-  - name: garrick-tt
-    components:
-      - 0 # Garrick : les contes d'un troubadour
-    location:
-      github_user: mleduque
-      repository: garrick-tt
-      branch: k4thos-eet-compat
-  - name: ajantisbg2
-    components:
-      - 0  # Sir Ajantis NPC for BGII
-      - 1  # Install the unique BG(II):EE BAM for Ajantis' Family Shield
-      - 3  # Installation of adult romance content
-      - 42 # Select Ajantis' Friendship Dialogues and Romance Speed: -> Speed: 30 minutes real time minimum between Dialogues
-    location:
-      path: /home/mick/Games/modda-cache/static/lin-ajantisbg2-v20.zip
-  - name: DjinniCompanion
-    description: Afaaq, the Djinni Companion v2.9
-    components:
-      - 0   # Afaaq, le compagnon Djinn -> Version complete (avec quetes, conversations et plus encore)
-      - 103 # Changer la frequence des conversations (n'affecte que le djinn, par defaut : 60 minutes) -> 45 minutes
-      - 300 # Portrait de djinn alternatif par Ulb
-    location:
-      github_user: Argent77
-      repository: DjinniCompanion
-      release: v2.10
-      asset: A7-DjinniCompanion-v2.10.iemod
-  - name: isra
-    components: [0]
-    location:
-      github_user: SpellholdStudios
-      repository: Isra_NPC
-      release: v3.5
-      asset: isra-npc-for-bg-v3.5.iemod
-      patch:
-        relative: patches/isra_bg1_stay_after_mines.diff
-      replace:
-        - file_globs: ["dialogue/rh#israj.d"]
-          replace: 'RealSetGlobalTimer("rh#IsraTalksBG1Timer","GLOBAL",2700)'
-          with: 'RealSetGlobalTimer("rh#IsraTalksBG1Timer","GLOBAL",620)'
-  - name: isra_bg2
-    description: Isra Ghadir, a cavalier paladin of Sune Firehair - soa+tob, friendship, romance, encounters
-    components:
-      - 0 # Isra NPC for BGII
-    location:
-      github_user: SpellholdStudios
-      repository: Isra_NPC_BG2
-      release: v3.1
-      asset: isra-npc-for-bgii-v3.1.iemod
-      patch:
-        relative: patch/isra_bg2.diff
-      replace:
-        - file_globs: ["dialogue/rh#is25j.d", "dialogue/rh#isrj.d", "scripts/rh#isr.baf"]
-          regex: true
-          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",2\d\d\d\)'
-          with: 'RealSetGlobalTimer("${c}","GLOBAL",600)'
-        - file_globs: ["dialogue/rh#is25j.d"]
-          replace: 'RealSetGlobalTimer("rh#IsraTalksToBTimer","GLOBAL",3600)'
-          with: 'RealSetGlobalTimer("rh#IsraTalksToBTimer","GLOBAL",800)'
-        - file_globs: ["dialogue/rh#is25j.d", "dialogue/rh#isrj.d", "scripts/rh#is25.baf", "scripts/rh#isr.baf", "scripts/rh#isree.baf"]
-          regex: true
-          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",1\d\d\d\)'
-          with: 'RealSetGlobalTimer("${c}","GLOBAL",500)'
-        - file_globs: ["dialogue/rh#isrp.d", "scripts/rh#isr.baf"]
-          regex: true
-          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",9\d\d\)'
-          with: 'RealSetGlobalTimer("${c}","GLOBAL",400)'
-  - name: xan
-    description: Xan NPC for BG2 - friendship, romance
-    components:
-      - 0
-      - 2
-    location:
-      github_user: Pocket-Plane-Group
-      repository: Xan_for_BGII
-      release: v19
-      asset: Xan_v19.zip
-      layout:
-        layout_type: multi_dir
-        dirs: [Xan] # xan v.s. Xan :/
-        replace:
-        - file_globs: ["Dialogue/BO#Xan25.d", "Dialogue/O#Xan25J.d", "Dialogue/O#XanJ.d", "Dialogue/BO#Xan.d"]
-          regex: true
-          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",3\d\d\d\)'
-          with: 'RealSetGlobalTimer("${c}","GLOBAL",600)'
-        - file_globs: ["Dialogue/BO#Xan25.d", "Dialogue/O#Xan25J.d", "Dialogue/O#XanJ.d", "Dialogue/BO#Xan.d"]
-          regex: true
-          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",2\d\d\d\)'
-          with: 'RealSetGlobalTimer("${c}","GLOBAL",500)'
-        - file_globs: ["Dialogue/BO#Xan25.d", "Dialogue/O#Xan25J.d", "Dialogue/O#XanJ.d", "Dialogue/BO#Xan.d"]
-          regex: true
-          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",1\d\d\d\)'
-          with: 'RealSetGlobalTimer("${c}","GLOBAL",400)'
 
-  - name: isra_bg2
-    description: Isra Ghadir, a cavalier paladin of Sune Firehair - soa+tob, friendship, romance, encounters
-    components:
-      - 1 # crossmod with Adrian, Coran (Kulyok's mod), Dace, Nephele, Ninde, Tiax (Kulyok's mod) and Xan (Kulyok's mod)
-  - name: yeslicknpc
-    description: transposes bg1 dwarf in bg2 - banters, dialogue
-    components:
-      - 1
-    location:
-      github_user: SpellholdStudios
-      repository: Yeslick_NPC
-      release: v5.0
-      asset: yeslick-npc-v5.0.iemod
-  - name: amber
-    description: tiefling rogue of a chaotic good alignment - friendship, romance, quest
-    components:
-      - 0 # Amber the NPC MOD
-      #- 1 # Multiplayer-friendly flirting for Amber
-    location:
-      path: /home/mick/Games/modda-cache/static/lin-amber-v9.zip
-      patch:
-        relative: patches/amber.diff
-        encoding: LATIN9
-      replace:
-        - file_globs: [ "dialogs/m#amber.d" ]
-          replace: 'RealSetGlobalTimer("M#AmberRomanceTime","GLOBAL",2500)'
-          with: 'RealSetGlobalTimer("M#AmberRomanceTime","GLOBAL",500)'
-        - file_globs: [ "dialogs/m#amber.d" ]
-          replace: 'RealSetGlobalTimer("M#AmberQuestTime","GLOBAL",3600)'
-          with: 'RealSetGlobalTimer("M#AmberQuestTime","GLOBAL",600)'
-        - file_globs: [ "dialogs/m#amber.d" ]
-          replace: 'RealSetGlobalTimer("M#AmberQuestTime","GLOBAL",2500)'
-          with: 'RealSetGlobalTimer("M#AmberQuestTime","GLOBAL",500)'
-  - name: Foundling
-    description: "Colours of Infinity: Foundling"
-    components:
-      - 0   # Foundling
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Foundling v5.4.zip # selectskit
-      patch:
-        relative: patches/foundling-class.diff
-  - name: willowisp
-    components: # 4 later
-      - 0 # Will NPC, shaman stronghold and new shaman kit for BG2EE
-      # would need translation
-      #- 1 # Change shaman .tlk string to remove "Ineligible for any stronghold" line
-      - 2 # New items for shamans and undead NPCs
-      - 3 # Optional: Drider and Dark Treant Enemies
-      # 4 : crossmod banter later after installing other mods
-      - 5 # [CHEAT] Enable shaman stronghold for all classes
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/willowisp v3.0.zip
-      replace:
-        - file_globs: [ "willowisp/baf/l0will.baf" ]
-          replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",2400)'
-          with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",900)'
-        - file_globs: [ "willowisp/baf/l0will.baf" ]
-          replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",1600)'
-          with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",600)'
-        - file_globs: [ "willowisp/baf/l0will.baf" ]
-          replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",6000)'
-          with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",1200)'
-        - file_globs: [ "willowisp/baf/l0will.baf" ]
-          replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",12000)'
-          with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",1500)'
-        - file_globs: [ "willowisp/baf/l0will25.baf" ]
-          replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",1800)'
-          with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",700)'
-  - name: Dvaradime
-    description: BG2 npc - dwarven fighter/mage/thief
-    components: ask
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Dvaradime v1.4.zip
-  - name: paina
-    components:
-      - 0 # Pai'Na NPC for BG:EE
-      - 1 # Alternate Portrait
-    location:
-      github_user: ArtemiusI
-      repository: Pai-Na-NPC-mod-for-BG2-EE
-      tag: v1.8a
-  - name: Sirene_BG2
-    components: ask
-      #- 0   # Sirene NPC for BG2:EE
-      #- 2 # Choose an portrait for Sirene (check mod folder for portraits) -> Alternate Light Armor portrait by Sirick
-    location:
-      github_user: ArtemiusI
-      repository: Sirene-NPC-for-BG2-EE
-      tag: v2.02
-      patch:
-        relative: eet/sirene-bg2.diff
-  - name: quieter_sirene
-    components:
-      - 0
-    location:
-      github_user: mleduque
-      repository: quieter_sirene
-      tag: v0.9
-  - name: ShukBG1EE
-    components:
-      - 0 # Mod de Shuk le gobelin - V 1.0
-    location:
-      github_user: 11jo
-      repository: ShukBGEE
-      branch: master
-      refresh: 1day
-  - name: "c#solaufein"
-    components:
-      - 0 # Solaufein's Rescue: Jastey's Solaufein NPC for BGII: 3.2
-      - 1 # Give Solaufein in Ust Natha the Mod's Portrait: 3.2
-    location:
-      github_user: Gitjas
-      repository: Solaufeins_Rescue_NPC
-      release: v5.0
-      asset:  solaufeins-rescue-jasteys-solaufein-npc-mod-for-bgii-45.0.iemod
-  #- name: MTS_Crappack
-  #  description: soubar fixes
-  #  installation:
-  #    after: Soubar
-  #  components:
-  #    - 22 # Install Charlotte sans Menagerie by Sir BillyBob
-  #    - 23 # Install All Items Identified in Selence's Shop
-  - name: "keldorn_rom"
-    components:
-      - 0
-      - 2
-      - 8
-    location:
-      github_user: Gibberlings3
-      repository: Keldorn_Romance
-      release: v8.1
-      asset: berelindes-keldorn-romance-8.1.iemod
-  - name: edwinromance
-    description: Edwin romance
-    components:
-      - 0 # Edwin Romance
-      - 2 # Edwin flirts
-      - 3 # New ending for Viconia Romance by Laufey
-      # cdtweaks has one too
-      - 4 # Give Edwina a Portrait
-    location:
-      github_user: SpellholdStudios
-      repository: Edwin_Romance
-      release: v4,0
-      asset:  edwin-romance-v4.0.iemod
-  - name: "TheBeaurinLegacy"
-    components:
-      - 1000 # The Beaurin Legacy for BG2:SoA & ToB & BGII:EE
-      - 3010 # Minyae's Portrait -> Change Minyae's portrait to alternative by TamikaProud at DeviantArt
-    location:
-      path: /home/mick/Games/modda-cache/static/lin-TheBeaurinLegacy-v5.3.tar.gz
-  - name: "xulaye"
-    components:
-      - 0 # Xulaye NPC Mod for BG2:SoA
-      - 1 # Xulaye's Player Initiated Dialogues
-      - 2 # Korgan Fights at the Pits
-    location:
-      http: http://europe.iegmc.net/xulaye/Xulaye%20v2.0.zip
-      rename: Xulaye_v2.0.zip
+
   - name: w_packmule
     components:
       - 3 # Mule de bat (bgee) -> Fontes sans fond
     location:
       path: /home/mick/Games/modda-cache/static/w_packmule-v1.4b.zip
-  - name: "butchery"
+  - name: butchery
     description: Butchery - components that must be installed before SCS
     components:
       - 10 # Combat contre Tazok et DigDag revise par DrAzTiK [a installer avant Stratagems]: v5.0.0
@@ -1401,70 +1209,225 @@ modules:
 
 
   #########
-  # Section: NPC
+  # Section: BG1 NPC
   #########
-  - name: npc_tweak
-    comments: also adds an heirloom to anomen
+
+  # Jastey NPCs
+  - name: ACBre
+    description: Ascalon's Breagar - dwarf fighter, long quest
+    installation:
+      general: for crossmod
+      after: >
+        - DSotSC
+        - Amber
+        - aurenaseph
+        - toBR # what?
+        - bgqe
+        - tod # tower of deception
+        - ac_quest
+        - alternatives
+        - imoen4ever
+        - transitions
+        - bst
+        - c#anotherfinehell
+        - endlessbg1
+    components: ask
+      #- 0 # Breagar: Contents
+      #- 2 # Breagar: Crossmods and PID
+      #- 12 # Change Breagar's dialog timer? (Default is 30 minutes between dialogues.) - 15 minutes real time between talks
+      ## - 20 # Install Alternative Portrait from v4.X? (Default is Original Art by Nix)
+    location:
+      github_user: Gitjas
+      repository: Ascalons_Breagar
+      release: v12.2.0
+      asset: ascalons-breagar-12.2.0.iemod
+      patch:
+        relative: eet/breagar-wait-here.diff
+        # components 10-13 change timers
+  - name: c#brandock
+    description: Brandock the mage - male mage, long quest, 7th party member mode
+    installation:
+      after: >
+        (crossmod component) Alternatives, BGQE, BG1NPC, Brage's Redemption, EndlessBG1, EET, Gavin BG1, Imoen4Ever, NPC Strongholds, Solaufein's Rescue, The Calling, The Lure of Sirine's Call, Transitions, Valerie NPC
+        (atweaks compatibility component) after atweaks
+      before: (main component)Grey the Dog
+    components: ask
+      #- 0  # Brandock the Mage, NPC for BG:EE, BGII:EE, EET, and BGT
+      #- 23 # Default Portrait: Insecure, by Acifer (is included in the main component)
+      #- 30 # Use Dialogue Style for SoD Banter
+      #- 50 # Make Cutscene in Thalantyr's Abode Short
+    location:
+      github_user: Gitjas
+      repository: Brandock_the_Mage
+      release: v1.3
+      asset: brandock-the-mage-v1.3.iemod
+      replace:
+        # BrandockNPCBanterTimer3600
+        - file_globs: ["crossmod/bg1npc.baf", "crossmod/brando_crossmod_bg1npc_BG1.d", "dialogue/brandock_sod.d", "dialogue/c#brando.d"]
+          replace: 'RealSetGlobalTimer("C#BrandockNPCBanterTimer","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("C#BrandockNPCBanterTimer","GLOBAL",1200)'
+          comment: Reduce 3600s/1h _real-time_ talks timers to 1200s/20min real-time
+        # 1200
+        - file_globs: ["dialogue/brandock_sod.d"]
+          replace: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",1200)'
+          with: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",600)'
+        # 600
+        - file_globs: ["dialogue/brandock_sod.d", "scripts/c#brando_bg2.baf"]
+          replace: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",600)'
+          with: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",300)'
+        # 1800
+        - file_globs: ["scripts/c#brando_sod.baf"]
+          replace: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",1800)'
+          with: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",900)'
+        # timer constants
+        - file_globs: ["c#brandock.tp2"]
+          replace: 'APPEND ~gtimes.ids~ ~3600 C#BRANDOCK_TIMERLONG~ UNLESS ~C#BRANDOCK_TIMERLONG~'
+          with: 'APPEND ~gtimes.ids~ ~1200 C#BRANDOCK_TIMERLONG~ UNLESS ~C#BRANDOCK_TIMERLONG~'
+        - file_globs: ["c#brandock.tp2"]
+          replace: 'APPEND ~gtimes.ids~ ~1800 C#BRANDOCK_TIMERSHORT~ UNLESS ~C#BRANDOCK_TIMERSHORT~'
+          with: 'APPEND ~gtimes.ids~ ~900 C#BRANDOCK_TIMERSHORT~ UNLESS ~C#BRANDOCK_TIMERSHORT~'
+  - name: "c#brage"
+    description: bg1, brage redemption
+    installation:
+      general: for crossmod content
+      after: AC_QUEST, bg1re, bg1ub, bgqe, bst, endlessbg1, finch, ntotsc, thalantyr, transitions, ajantisbg1, c#sodboabri, imoen4ever
     components:
-    - 0 # Anomen: v6
+      - 0 # Brage's Redemption - Brage Joinable NPC for Baldur's Gate Saga: 8.0
+      - 1 # Assign the mod's portrait and soundset to the original Brage in game: 8.0
+      - 5 # Give Brage unique Two-Handed Sword +1: 9.0
+    location:
+      github_user: Gitjas
+      repository: Brages_Redemption
+      release: v9.1
+      asset: brages-redemption-brage-npc-9.1.iemod
+      replace:
+        - file_globs: ["baf/C#BrageD.baf", "baf/c#brage1.baf"]
+          replace: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",3200)'
+          with: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",420)'
+        - file_globs: ["baf/c#brage2.baf"]
+          replace: 'RealSetGlobalTimer("C#BE_LilarcorEquippedTimer","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("C#BE_LilarcorEquippedTimer","GLOBAL",600)'
+        - file_globs: ["crossmod/*.baf"]
+          replace: 'RealSetGlobalTimer("C#BE_BGQETimer","GLOBAL",1000)'
+          with: 'RealSetGlobalTimer("C#BE_BGQETimer","GLOBAL",120)'
+        - file_globs: ["dialogue/bg1.d", "dialogue/joining_bg1.d"]
+          replace: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",800)'
+          with: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",100)'
+        - file_globs: ["dialogue/joining_bg2.d"]
+          replace: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",1600)'
+          with: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",200)'
+        - file_globs: ["dialogue/joining_tob.d"]
+          replace: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",800)'
+          with: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",200)'
+  - name: c#husam
+    description : sod(+unfinished soa) npc, male shadow thief (LE), friendship, banters, quest, 7th party member mod
+    components:
+      - 0 # Husam NPC for SoD, BGT, BGII:EE, BGII:ToB, and EET
+      - 1 # Assign the mod's portrait and soundset to the original Husam in game
+      - 10 # Husam NPC: Crossmod Content
+      #- 20 # Alternative #1, by Acifer
+      - 21 # Default, by Acifer (included in main component)
+    installation:
+      general: main comp before grey, crossmod after brage
+    location:
+      github_user: Gitjas
+      repository: Husam_NPC
+      release: vBeta_230411
+      asset: husam-npc-for-bgt-bgsod-bgiiee-and-eet-beta_230411.iemod
+      replace:
+        - file_globs: ["scripts/c#husam_sva.baf"]
+          replace: 'RealSetGlobalTimer("C#Husam2_DialogTimer","GLOBAL",1800)'
+          with: 'RealSetGlobalTimer("C#Husam2_DialogTimer","GLOBAL",800)'
+        - file_globs: ["dialogues/husam_pid.d"]
+          replace: 'RealSetGlobalTimer("C#HusamDialogTimer","GLOBAL",2400)'
+          with: 'RealSetGlobalTimer("C#HusamDialogTimer","GLOBAL",600)'
+        - file_globs: ["scripts/c#husam_base.baf"]
+          replace: 'RealSetGlobalTimer("C#HusamDialogTimer","GLOBAL",900)'
+          with: 'RealSetGlobalTimer("C#HusamDialogTimer","GLOBAL",300)'
+        - file_globs: ["scripts/c#husam_base.baf"]
+          replace: 'RealSetGlobalTimer("C#HusamNPCBanterTimer","GLOBAL",1800)'
+          with: 'RealSetGlobalTimer("C#HusamNPCBanterTimer","GLOBAL",800)'
+        - file_globs: ["scripts/c#husam_base.baf"]
+          replace: 'RealSetGlobalTimer("C#HusamNPCBanterTimer","GLOBAL",3000)'
+          with: 'RealSetGlobalTimer("C#HusamNPCBanterTimer","GLOBAL",900)'
+        - file_globs: ["crossmod/husam_alternatives.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("C#Husam(?<c>.*)Timer","GLOBAL",1800\)'
+          with: 'RealSetGlobalTimer("C#Husam${c}Timer","GLOBAL",1800)'
+        - file_globs: ["dialogues/husam_sod.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("C#Husam(?<c>.*)Timer","GLOBAL",900\)'
+          with: 'RealSetGlobalTimer("C#Husam${c}Timer","GLOBAL",400)'
+  - name: c#greythedog
+    description: Grey the dog - BG1 companion, dog (fighter)
+    installation:
+      after: ACBre, ajantisbg1, ajantisbg2, bg1npc, bg2fixpack, bst, c#brage, c#brandock, c#husam, c#sodboabri, EET, JA#BGT_AdvPack, imoen_forever
+    components:
+      - 0 # Grey The Dog NPC
+      - 22 # portrait or 20/21
     location:
       github_user: Gibberlings3
-      repository: NPCTweak
-      release: v7
-      asset: lin-npc_tweak-v7.tar.gz
-  - name: Branwen
-    description: bg2+tob, adds branwen, friendship, romance, pid, banters, interjections
-    components: [0]
+      repository: Grey_The_Dog
+      release: v9
+      asset: grey-the-dog-npc-9.iemod
+  - name: gavin
+    # will prompt for romance timer
+    components:
+      - 0  # Gavin NPC pour Tutu, BGT et BG:EE
+      - 1  # Gavin : Romance (contenu pour adultes)²
+      - 2  # Gavin : Flirts (contenu pour adultes)²
+      - 10 # Gavin : Dialogues inities par le joueur²
+    location:
+      github_user: Gibberlings3
+      repository: Gavin_BG
+      release: v14
+      asset: lin-gavin-v14.tar.gz
+      patch:
+        relative: patches/eet/gavin_bg1-romance-timer-15.diff
+        # there is no need to patch timers
+
+
+  - name: FinchNPC
+    description: BG1 companion, female gnome cleric long quest
+    components:
+      - 0
     location:
       github_user: Pocket-Plane-Group
-      repository: Branwen_for_BGII
-      release: v8
-      asset: branwen-v8pre.iemod
+      repository: Finch_NPC
+      release: v6.0
+      asset: finch-npc-mod-v6.0.iemod
       patch:
-        relative: patches/branwen_bg2.diff
-      replace:
-        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
-          replace: 'RealSetGlobalTimer("O#BranFlirtTimer","GLOBAL",2500)' # 42 min
-          with: 'RealSetGlobalTimer("O#BranFlirtTimer","GLOBAL",780)' # 13min
-        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
-          replace: 'RealSetGlobalTimer("O#BranTimer","GLOBAL",3600)' # 60 min
-          with: 'RealSetGlobalTimer("O#BranTimer","GLOBAL",1200)' # 20min
-        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
-          replace: 'RealSetGlobalTimer("O#BranFlirtTimerToB","GLOBAL",2500)' # 42 min
-          with: 'RealSetGlobalTimer("O#BranFlirtTimerToB","GLOBAL",780)' # 13min
-        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
-          replace: 'RealSetGlobalTimer("O#BranTimerToB","GLOBAL",3600)' # 60 min
-          with: 'RealSetGlobalTimer("O#BranTimerToB","GLOBAL",1200)' # 20min
-        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
-          replace: 'RealSetGlobalTimer("O#BranTimerToB","GLOBAL",1800)' # 30 min
-          with: 'RealSetGlobalTimer("O#BranTimerToB","GLOBAL",600)' # 10min
-        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
-          replace: 'RealSetGlobalTimer("O#BranLoveTimer","GLOBAL",3600)' # 60 min
-          with: 'RealSetGlobalTimer("O#BranLoveTimer","GLOBAL",1080)' # 18min
-        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
-          replace: 'RealSetGlobalTimer("O#BranChapter5Timer","GLOBAL",3600)' # 60 min
-          with: 'RealSetGlobalTimer("O#BranChapter5Timer","GLOBAL",300)' # 5min
-        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
-          replace: 'RealSetGlobalTimer("O#BranFlirtTimer","GLOBAL",300)' # 5min
-          with: 'RealSetGlobalTimer("O#BranFlirtTimer","GLOBAL",180)' # 3min
-        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
-          replace: 'RealSetGlobalTimer("O#BranFlirtTimerToB","GLOBAL",300)' # 5min
-          with: 'RealSetGlobalTimer("O#BranFlirtTimerToB","GLOBAL",180)' # 3min
-  - name: ViconiaRevamped
-    components: ask
+        relative: eet/finch-wait-here.diff
+  - name: Ishlilkamod
+    description: bg1/sod - female wizard slayer, good, romance, quest(x2)
+    components:
+      - 0 # Ishlilka mod for BGSoD and EET
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/ViconiaRevamped v7.2.zip
-  #- name: Aura_BG1
-  #  components:
-  #    #- 0 # Aura NPC for Baldur's Gate: Enhanced Edition: 3.3
-  #  location:
-  #    github_user: ArtemiusI
-  #    repository: Aura_BG1
-  #    tag: v3.6
-  #    patch:
-  #      relative: patches/aura_bg1-select-artificer_and_timers.diff
-  #  #prompt for class (1. Artificer)
-  #  #prompt for portrait (2. BG2 style)
+      github_user: The-Gate-Project
+      repository: Ishlilka_The-Wizard-Slayer
+      branch: main
+      refresh: 5days
+      replace:
+        - file_globs: ["Dialogues/ishyJ.d"]
+          replace: 'RealSetGlobalTimer("IshyRomanceTimer","GLOBAL",3000)'
+          with: 'RealSetGlobalTimer("IshyRomanceTimer","GLOBAL",700)'
+        - file_globs: ["Scripts/ishyscrp.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("Ishy(?<t>[^""]+)","GLOBAL",([0-9]{4})\)'
+          with: 'RealSetGlobalTimer("Ishy${t}","GLOBAL",680)'
+        - file_globs: ["Dialogues/bdishy.d"]
+          replace: 'RealSetGlobalTimer("IshyTimer","GLOBAL",5600)'
+          with: 'RealSetGlobalTimer("IshyTimer","GLOBAL",900)'
+        - file_globs: ["Dialogues/ishyD.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("Ishy(?<t>[^""]+)","GLOBAL",([0-9]{4})\)'
+          with: 'RealSetGlobalTimer("Ishy${t}","GLOBAL",690)'
+        - file_globs: ["Scripts/cutcutscene/ishyscrp.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("Ishy(?<t>[^""]+)","GLOBAL",([0-9]{4})\)'
+          with: 'RealSetGlobalTimer("Ishy${t}","GLOBAL",720)'
+
+  # Skitia BG1 npcs
   - name: Emily
     components: ask
     location:
@@ -1514,7 +1477,6 @@ modules:
         - file_globs: ["Dialogue/SoD/X32KaleJ.d"]
           replace: 'SetGlobalTimer("X32KaleGameTalkTimer","GLOBAL",THREE_DAYS\)'
           with: 'SetGlobalTimer("X32KaleGameTalkTimer","GLOBAL",ONE_DAY)'
-    #prompt for music (2. No)
   - name: Recorder
     components: ask
     location:
@@ -1527,7 +1489,9 @@ modules:
           replace: 'SetGlobalTimer("X32RecGameTalkTimer","GLOBAL",THREE_DAYS\)'
           with: 'SetGlobalTimer("X32RecGameTalkTimer","GLOBAL",ONE_DAY)'
   - name: Vienxay
-    components: ask
+    description: bg1+sod, elf, female NE shadowmage, quest, approval system
+    components:
+      - 0 # Vienxay NPC for BG1EE
     location:
       github_user: Skitia
       repository: Vienxay-BG1
@@ -1540,7 +1504,159 @@ modules:
         - file_globs: ["Dialogue/SoD/X32VienJ.d"]
           replace: 'SetGlobalTimer("X32VienGameTalkTimer","GLOBAL",THREE_DAYS\)'
           with: 'SetGlobalTimer("X32RecGameTalkTimer","GLOBAL",ONE_DAY)'
+
+  # ArtemiusI NPCs
+  - name: Aura_BG1
+    components:
+      #- 0 # Aura NPC for Baldur's Gate: Enhanced Edition: 3.3
+    location:
+      github_user: ArtemiusI
+      repository: Aura_BG1
+      tag: v3.9a
+      patch:
+        relative: patches/aura_bg1-select-artificer_and_timers.diff
+    #prompt for class (1. Artificer)
+    #prompt for portrait (2. BG2 style)
+    disabled:
+      because : too different
+
+  # Lava NPCs
+  - name: Walahnan
+    description: mage in Ulgoth's beard, with quest, only until chapter 4 (included)
+    components:
+      - 0
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/Walahnan v2.00.zip
+      replace:
+        - file_globs: ["dialogue/L#SWALAJ.d", "dialogue/L#WALAHJ.d"]
+          replace: 'RealSetGlobalTimer("L#WalahnanUniquePIDTIME","GLOBAL",3800)'
+          with: 'RealSetGlobalTimer("L#WalahnanUniquePIDTIME","GLOBAL",800)'
+        - file_globs: ["scripts/L#SWALAH.baf", "scripts/L#WALAH.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("L#WalahnanFriendTime","GLOBAL",\d\d00\)'
+          with: 'RealSetGlobalTimer("L#WalahnanUniquePIDTIME","GLOBAL",800)'
+  - name: Bristlelick
+    description: bg1+sod gnoll npc (fighter kit) with talks and small quest
+    components:
+      - 0 #  Bristlelick the gnoll companion for BGEE: 2.0
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/Bristlelick v2.3.zip
+      replace:
+        - file_globs: ["scripts/l#2brist.baf", "scripts/l#brist.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("L#Bristle(?<c>.*)","GLOBAL",1600\)'
+          with: 'RealSetGlobalTimer("L#Bristle${c}","GLOBAL",700)'
+        - file_globs: ["scripts/l#2brist.baf"]
+          replace: 'RealSetGlobalTimer("L#BristleTimeSoD","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("L#BristleTimeSoD","GLOBAL",1000)'
+        - file_globs: ["scripts/l#brist.baf"]
+          replace: 'RealSetGlobalTimer("L#BristleTime","GLOBAL",2000)'
+          with: 'RealSetGlobalTimer("L#BristleTime","GLOBAL",800)'
+
+  - name: IndiNPC
+    description: bg1 one-day NPC, half-elven, lawful good fighter/mage, banters, small quest
+    components:
+      - 0 # Indira PNJ
+      - 1 # Install Interjections for Indira (BETA)
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Indira_NPC
+      release: v15.1
+      asset: indira-npc-v15.1.iemod
+  - name: valerie
+    description: bg1 cowled wizard npc,friendship, no quest
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: Valerie_NPC
+      release: v1.2
+      asset: valerie-npc-for-bg-v1.2.iemod
+      replace:
+        - file_globs: ["scripts/t2val.baf", "dialogue/t2valj.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("T2Val(?<c>.*)Timer","GLOBAL",2700\)'
+          with: 'RealSetGlobalTimer("T2Val${c}Timer","GLOBAL",900)'
+  - name: GlamNPCPack
+    description: |
+      bg1 npcs
+      - Vynd(drow ass., m)
+      - Littlun(Halfling arch., f)
+      - Moidre(Dwarwen Def, f)
+      - Dave(Talos, m)
+      - Flara(DD, f)
+    components:
+      - 0 # Glam's NPC Pack for BG:EE, BGT and BG TUTU
+    location:
+      github_user: Gibberlings3
+      repository: Glam-NPC-Pack
+      tag: v3.1
+      replace:
+        - file_globs: ["Dialogue/GV#LITT.d"]
+          replace: 'SetGlobalTimer("GV#LITTGnollsTimer","GLOBAL",ONE_DAY)'
+          with: 'SetGlobalTimer("GV#LITTGnollsTimer","GLOBAL",TEN_DAYS)'
+  - name: haiass
+    description: bg1, wolf follower
+    components:
+      - 0 # Haiass le Loup: v2.4
+      - 10 #  Haiass peut être ressuscité -> Pénalisation modérée (-4 Constitution temporairement): v2.4
+    location:
+      path: /home/mick/Games/modda-cache/static/haiass_v2_4.zip
+
+  - name: isra
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: Isra_NPC
+      release: v3.5
+      asset: isra-npc-for-bg-v3.5.iemod
+      patch:
+        relative: patches/isra_bg1_stay_after_mines.diff
+      replace:
+        - file_globs: ["dialogue/rh#israj.d"]
+          replace: 'RealSetGlobalTimer("rh#IsraTalksBG1Timer","GLOBAL",2700)'
+          with: 'RealSetGlobalTimer("rh#IsraTalksBG1Timer","GLOBAL",620)'
+  - name: ShukBG1EE
+    components:
+      - 0 # Mod de Shuk le gobelin - V 1.0
+    location:
+      github_user: 11jo
+      repository: ShukBGEE
+      branch: master
+      refresh: 1day
+
+
+  #########
+  # Section: BG2 NPC
+  #########
+  - name: ImoenIsStone # ok
+    description: SoA -Imoen is turned to stone by the Cowled Wizards to lower pressureto go to Spellhold
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/ImoenIsStone_v1-0.zip
+  - name: Saerileth # ok but disabled
+    components:
+    location:
+      github_user: PaulaMigrate
+      repository: Saerileth
+      tag: V22
+      patch:
+        relative: saerileth-unobnoxiousify.diff
+    disabled:
+      because: Seems obnoxious
+  - name: imoen_forever # ok but disabled
+    installation:
+      after: { name: imoen_forever , component: 0 }
+    components: ask
+      - 0 # Imoen 4 Ever in BGII: Imoen Returns after Talking to Gaelan in Chapter 2: v9
+      - 1 # Imoen 4 Ever in BGII: Give Imoen Dialogue Content in SoA: v9
+      - 2 # Imoen 4 Ever in BGII: Yoshimo Comes to Brynnlaw: v9
+      - 20 # Imoen's chest moves with the campaign, too: v9
+      - 9  # BGII content: ~Compatibility with Alternatives and Saerileth~
+    disabled:
+      because: using ImoenIsStone instead
+
   - name: SkitiaNPCs
+    description: bg2 version of Skitia NPCs
     components: ask
     location:
       github_user: Skitia
@@ -1579,8 +1695,13 @@ modules:
           regex: true
           replace: 'RealSetGlobalTimer\("X3(?<c>.*)Timer","GLOBAL",3\d00\))'
           with: 'RealSetGlobalTimer("X3${c}Timer","GLOBAL",960)'
+
+  # Lava NPCs
   - name: nephele
-    components: [0]
+    description: SoA companion, halfling cleric of Yondalla, dialogues, no quest
+    components:
+      - 0 # Nephele NPC Mod for BGII: SoA & ToB
+      - 2 # Install Haer'Dalis Romance crossmod content
     location:
       github_user: SpellholdStudios
       repository: Nephele_NPC
@@ -1592,6 +1713,7 @@ modules:
           replace: 'RealSetGlobalTimer\("LK#Neph(?<c>.*)TalksTimer","GLOBAL",5400\)'
           with: 'RealSetGlobalTimer("LK#Neph${c}TalksTimer","GLOBAL",900)'
   - name: Petsy
+    description: SoA+ToB(limited) companion, halfling bard, romance
     installation:
       general: must be after nephele for crossmod component
     components: [0, 1]
@@ -1614,7 +1736,7 @@ modules:
           replace: 'RealSetGlobalTimer\("L3(?<c>.*)Time","GLOBAL",1\d00\)'
           with: 'RealSetGlobalTimer("L3${c}Time","GLOBAL",450)'
   - name: Yvette
-    description: "Colours of Infinity: Yvette Romance"
+    description: "Colours of Infinity: Yvette Romance" - SoA+ToB companion, quest, romance
     components:
       - 0 # Yvette Romance - BG2 Romance Character
     location:
@@ -1634,226 +1756,6 @@ modules:
           string: true
           replace: 'RealSetGlobalTimer("YvetteRomanceTime","GLOBAL",1800)'
           with: 'RealSetGlobalTimer("YvetteRomanceTime","GLOBAL",700)'
-  - name: ACBre
-    description: Ascalon's Breagar
-    installation:
-      general: for crossmod
-      after: >
-        - DSotSC
-        - Amber
-        - aurenaseph
-        - toBR # what?
-        - bgqe
-        - tod # tower of deception
-        - ac_quest
-        - alternatives
-        - imoen4ever
-        - transitions
-        - bst
-        - c#anotherfinehell
-        - endlessbg1
-    components: ask
-      #- 0 # Breagar: Contents
-      #- 2 # Breagar: Crossmods and PID
-      #- 12 # Change Breagar's dialog timer? (Default is 30 minutes between dialogues.) - 15 minutes real time between talks
-      ## - 20 # Install Alternative Portrait from v4.X? (Default is Original Art by Nix)
-    location:
-      github_user: Gitjas
-      repository: Ascalons_Breagar
-      release: v12.2.0
-      asset: ascalons-breagar-12.2.0.iemod
-      patch:
-        relative: eet/breagar-wait-here.diff
-        # components 10-13 change timers
-  - name: c#brandock
-    description: Brandock the mage
-    installation:
-      after: >
-        (crossmod component) Alternatives, BGQE, BG1NPC, Brage's Redemption, EndlessBG1, EET, Gavin BG1, Imoen4Ever, NPC Strongholds, Solaufein's Rescue, The Calling, The Lure of Sirine's Call, Transitions, Valerie NPC
-        (atweaks compatibility component) after atweaks
-      before: (main component)Grey the Dog
-    components: ask
-      #- 0  # Brandock the Mage, NPC for BG:EE, BGII:EE, EET, and BGT
-      #- 23 # Default Portrait: Insecure, by Acifer (is included in the main component)
-      #- 30 # Use Dialogue Style for SoD Banter
-      #- 50 # Make Cutscene in Thalantyr's Abode Short
-    location:
-      github_user: Gitjas
-      repository: Brandock_the_Mage
-      release: v1.3
-      asset: brandock-the-mage-v1.3.iemod
-      replace:
-        # BrandockNPCBanterTimer3600
-        - file_globs: ["crossmod/bg1npc.baf", "crossmod/brando_crossmod_bg1npc_BG1.d", "dialogue/brandock_sod.d", "dialogue/c#brando.d"]
-          replace: 'RealSetGlobalTimer("C#BrandockNPCBanterTimer","GLOBAL",3600)'
-          with: 'RealSetGlobalTimer("C#BrandockNPCBanterTimer","GLOBAL",1200)'
-          comment: Reduce 3600s/1h _real-time_ talks timers to 1200s/20min real-time
-        # 1200
-        - file_globs: ["dialogue/brandock_sod.d"]
-          replace: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",1200)'
-          with: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",600)'
-        # 600
-        - file_globs: ["dialogue/brandock_sod.d", "scripts/c#brando_bg2.baf"]
-          replace: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",600)'
-          with: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",300)'
-        # 1800
-        - file_globs: ["scripts/c#brando_sod.baf"]
-          replace: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",1800)'
-          with: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",900)'
-        # timer constants
-        - file_globs: ["c#brandock.tp2"]
-          replace: 'APPEND ~gtimes.ids~ ~3600 C#BRANDOCK_TIMERLONG~ UNLESS ~C#BRANDOCK_TIMERLONG~'
-          with: 'APPEND ~gtimes.ids~ ~1200 C#BRANDOCK_TIMERLONG~ UNLESS ~C#BRANDOCK_TIMERLONG~'
-        - file_globs: ["c#brandock.tp2"]
-          replace: 'APPEND ~gtimes.ids~ ~1800 C#BRANDOCK_TIMERSHORT~ UNLESS ~C#BRANDOCK_TIMERSHORT~'
-          with: 'APPEND ~gtimes.ids~ ~900 C#BRANDOCK_TIMERSHORT~ UNLESS ~C#BRANDOCK_TIMERSHORT~'
-  - name: "c#brage"
-    installation:
-      general: for crossmod content
-      after: AC_QUEST, bg1re, bg1ub, bgqe, bst, endlessbg1, finch, ntotsc, thalantyr, transitions, ajantisbg1, c#sodboabri, imoen4ever
-    components:
-      - 0 # Brage's Redemption - Brage Joinable NPC for Baldur's Gate Saga: 8.0
-      - 1 # Assign the mod's portrait and soundset to the original Brage in game: 8.0
-      - 5 # Give Brage unique Two-Handed Sword +1: 9.0
-    location:
-      github_user: Gitjas
-      repository: Brages_Redemption
-      release: v9.1
-      asset: brages-redemption-brage-npc-9.1.iemod
-      replace:
-        - file_globs: ["baf/C#BrageD.baf", "baf/c#brage1.baf"]
-          replace: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",3200)'
-          with: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",420)'
-        - file_globs: ["baf/c#brage2.baf"]
-          replace: 'RealSetGlobalTimer("C#BE_LilarcorEquippedTimer","GLOBAL",3600)'
-          with: 'RealSetGlobalTimer("C#BE_LilarcorEquippedTimer","GLOBAL",600)'
-        - file_globs: ["crossmod/*.baf"]
-          replace: 'RealSetGlobalTimer("C#BE_BGQETimer","GLOBAL",1000)'
-          with: 'RealSetGlobalTimer("C#BE_BGQETimer","GLOBAL",120)'
-        - file_globs: ["dialogue/bg1.d", "dialogue/joining_bg1.d"]
-          replace: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",800)'
-          with: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",100)'
-        - file_globs: ["dialogue/joining_bg2.d"]
-          replace: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",1600)'
-          with: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",200)'
-        - file_globs: ["dialogue/joining_tob.d"]
-          replace: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",800)'
-          with: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",200)'
-  - name: c#husam
-    components: ask
-    installation:
-      general: main comp before grey, crossmod after brage
-    location:
-      github_user: Gitjas
-      repository: Husam_NPC
-      release: vBeta_230411
-      asset: husam-npc-for-bgt-bgsod-bgiiee-and-eet-beta_230411.iemod
-      replace:
-        - file_globs: ["scripts/c#husam_sva.baf"]
-          replace: 'RealSetGlobalTimer("C#Husam2_DialogTimer","GLOBAL",1800)'
-          with: 'RealSetGlobalTimer("C#Husam2_DialogTimer","GLOBAL",800)'
-        - file_globs: ["dialogues/husam_pid.d"]
-          replace: 'RealSetGlobalTimer("C#HusamDialogTimer","GLOBAL",2400)'
-          with: 'RealSetGlobalTimer("C#HusamDialogTimer","GLOBAL",600)'
-        - file_globs: ["scripts/c#husam_base.baf"]
-          replace: 'RealSetGlobalTimer("C#HusamDialogTimer","GLOBAL",900)'
-          with: 'RealSetGlobalTimer("C#HusamDialogTimer","GLOBAL",300)'
-        - file_globs: ["scripts/c#husam_base.baf"]
-          replace: 'RealSetGlobalTimer("C#HusamNPCBanterTimer","GLOBAL",1800)'
-          with: 'RealSetGlobalTimer("C#HusamNPCBanterTimer","GLOBAL",800)'
-        - file_globs: ["scripts/c#husam_base.baf"]
-          replace: 'RealSetGlobalTimer("C#HusamNPCBanterTimer","GLOBAL",3000)'
-          with: 'RealSetGlobalTimer("C#HusamNPCBanterTimer","GLOBAL",900)'
-        - file_globs: ["crossmod/husam_alternatives.baf"]
-          regex: true
-          replace: 'RealSetGlobalTimer\("C#Husam(?<c>.*)Timer","GLOBAL",1800\)'
-          with: 'RealSetGlobalTimer("C#Husam${c}Timer","GLOBAL",1800)'
-        - file_globs: ["dialogues/husam_sod.d"]
-          regex: true
-          replace: 'RealSetGlobalTimer\("C#Husam(?<c>.*)Timer","GLOBAL",900\)'
-          with: 'RealSetGlobalTimer("C#Husam${c}Timer","GLOBAL",400)'
-  - name: c#greythedog
-    description: Grey the dog
-    installation:
-      after: ACBre, ajantisbg1, ajantisbg2, bg1npc, bg2fixpack, bst, c#brage, c#brandock, c#husam, c#sodboabri, EET, JA#BGT_AdvPack, imoen_forever
-    components:
-      - 0 # Grey The Dog NPC
-      - 22 # portrait or 20/21
-    location:
-      github_user: Gibberlings3
-      repository: Grey_The_Dog
-      release: v9
-      asset: grey-the-dog-npc-9.iemod
-  - name: btl
-    description: Beyond the Law
-    detailed_description: 2 NPCs, Kova (CG half-elf mage/thief) & Kiyone (LG half-elf archer) + quest
-    components:
-      - 0 # Beyond the Law - Kova & Kiyone -> Beyond the Law with Kiyone original sound set: v2.0.0
-      - 2 # Better balanced BTL items: v2.0.0
-    location:
-      github_user: SpellholdStudios
-      repository: Beyond_the_Law
-      release: v2.0.0
-      asset: beyond-the-law-v2.0.0.iemod
-  - name: alora
-    description: alora in bg2, minimal npc with some banter and no quest
-    components:
-      - 0 # Alora PNJ de Chosen of Mystra: 2.0
-    location:
-      github_user: GwendolyneFreddy
-      repository: Alora-NPC-for-BG2
-      release: v2.0
-      asset: alora-npc-for-bg2-2.0.iemod
-  - name: XanBG1Friend
-    components: [0]
-    location:
-      github_user: Pocket-Plane-Group
-      repository: Xan_BG1_Friendship
-      release: v11
-      asset: xanbg1friend_v11.zip
-      replace:
-        - file_globs: ["Dialogue/O#XanBG1.d", "Dialogue/O#XanBGT.d", "Dialogue/O#XanBGEE.d",
-                      "Scripts/xan.baf", "Scripts/xanbgee.baf"]
-          replace: 'RealSetGlobalTimer("O#XanBG1FriendTimer","GLOBAL",3000)'
-          with: 'RealSetGlobalTimer("O#XanBG1FriendTimer","GLOBAL",600)'
-        - file_globs: ["Scripts/_xan.baf", "Scripts/xan.baf", "Scripts/xanbgee.baf"]
-          regex: true
-          replace: 'RealSetGlobalTimer("O#XanBG1FriendTimer(?<c>\d)","GLOBAL",500)'
-          with: 'RealSetGlobalTimer("O#XanBG1FriendTimer${c}","GLOBAL",180)'
-  - name: FinchNPC
-    components:
-      - 0
-    location:
-      github_user: Pocket-Plane-Group
-      repository: Finch_NPC
-      release: v6.0
-      asset: finch-npc-mod-v6.0.iemod
-      patch:
-        relative: eet/finch-wait-here.diff
-  - name: IndiNPC
-    version: "15"
-    components:
-      - 0 # Indira PNJ
-      - 1 # Install Interjections for Indira (BETA)
-    location:
-      github_user: Pocket-Plane-Group
-      repository: Indira_NPC
-      release: v14
-      asset: indira-npc-mod-v14.iemod
-  - name: Walahnan
-    description: mage in Ulgoth's beard, with quest, only until chapter 4 (included)
-    components:
-      - 0
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Walahnan v2.00.zip
-      replace:
-        - file_globs: ["dialogue/L#SWALAJ.d", "dialogue/L#WALAHJ.d"]
-          replace: 'RealSetGlobalTimer("L#WalahnanUniquePIDTIME","GLOBAL",3800)'
-          with: 'RealSetGlobalTimer("L#WalahnanUniquePIDTIME","GLOBAL",800)'
-        - file_globs: ["scripts/L#SWALAH.baf", "scripts/L#WALAH.baf"]
-          regex: true
-          replace: 'RealSetGlobalTimer\("L#WalahnanFriendTime","GLOBAL",\d\d00\)'
-          with: 'RealSetGlobalTimer("L#WalahnanUniquePIDTIME","GLOBAL",800)'
   - name: WalahnanBG2
     components:
       - 0 # Walahnan NPC for BG2EE: 0.92
@@ -1890,21 +1792,150 @@ modules:
         - file_globs: ["baf/wilson25_append.baf"]
           replace: 'RealSetGlobalTimer("L#WilsonFriendTimeToB","GLOBAL",1600)'
           with: 'RealSetGlobalTimer("L#WilsonFriendTimeToB","GLOBAL",800)'
-  - name: gavin
-    # will prompt for romance timer
+  - name: Fhaugy
+    description: Soa+ToB, neutral half-orc monk, personal quests, friendship, romance
     components:
-      - 0  # Gavin NPC pour Tutu, BGT et BG:EE
-      - 1  # Gavin : Romance (contenu pour adultes)²
-      - 2  # Gavin : Flirts (contenu pour adultes)²
-      - 10 # Gavin : Dialogues inities par le joueur²
+      - 0 # Fhaugy - Baldur's Gate 2: EE NPC
+      - 1 # Fhaugy: Player-Initiated Dialogues (PIDs)
     location:
-      github_user: Gibberlings3
-      repository: Gavin_BG
-      release: v14
-      asset: lin-gavin-v14.tar.gz
+      path: /home/mick/Games/modda-cache/static/weaselmods/Fhaugy v1.03.zip
+      replace:
+        - file_globs: ["scripts/L#FHA.baf", "scripts/L#FHA25.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",[23]\d00\)'
+          with: 'RealSetGlobalTimer("${c}","GLOBAL",740)'
+        - file_globs: ["scripts/L#FHA.baf", "scripts/L#FHA25.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",1\d00\)'
+          with: 'RealSetGlobalTimer("${c}","GLOBAL",340)'
+  - name: SkieCost
+    description: >
+      Skie: The Cost of One Girl’s Soul
+      The mod gives the player a chance to continue Skie's plot that began in Siege of Dragonspear.
+      BG2 - 2 quests, 2 npcs Skie, friendship, , Eddard (bard kit), friendship+romance
+    installation:
+      general: late because adds crossmod banters with Yvette & Foundling
+      after: Yvette, Foundling
+    components:
+      - 0 # Skie: The Cost of One Girl's Soul - New quest for Baldur's Gate 2 EE: 4.01
+      - 1 # Skie: The Cost of One Girl's Soul - Allow Skie to return as a joinable NPC: 4.01
+      - 2 # Skie: The Cost of One Girl's Soul - Add Player-Initiated Dialogue (PID) for Skie: 4.01
+      - 3 # Skie: The Cost of One Girl's Soul - The Return of Eddard Silvershield (quest & a joinable NPC): 4.0
+      - 4 # Skie: The Cost of One Girl's Soul - Add Player-Initiated Dialogue (PID) for Eddard: 4.01
+      - 5 # Skie: The Cost of One Girl's Soul - Add brand new SoD-oriented items to BG2: 4.01
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/SkieCost v6.2.zip
+      replace:
+        - file_globs: ["dialogues/pid-*.d"]
+          replace: 'RealSetGlobalTimer("L#SDSkiesNewSeriesTime","GLOBAL",3800)'
+          with: 'RealSetGlobalTimer("L#SDSkiesNewSeriesTime","GLOBAL",800)'
+        - file_globs: ["scripts/L#2ED.baf", "/scripts/L#2ED25.baf", "scripts/l#2sd25.baf", "scripts/L#2SDSKI-EdEnd.baf", "scripts/l#2sdski.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("L#<?<c>[^"]+","GLOBAL",400\)'
+          with: 'RealSetGlobalTimer("L#${c}","GLOBAL",120)'
+        - file_globs: ["scripts/L#2ED.baf", "/scripts/L#2ED25.baf", "scripts/l#2sd25.baf", "scripts/L#2SDSKI-EdEnd.baf", "scripts/l#2sdski.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("L#<?<c>[^"]+","GLOBAL",600\)'
+          with: 'RealSetGlobalTimer("L#${c}","GLOBAL",180)'
+        - file_globs: ["scripts/L#2ED.baf", "/scripts/L#2ED25.baf", "scripts/l#2sd25.baf", "scripts/L#2SDSKI-EdEnd.baf", "scripts/l#2sdski.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("L#<?<c>[^"]+","GLOBAL",2400\)'
+          with: 'RealSetGlobalTimer("L#${c}","GLOBAL",700)'
+        - file_globs: ["scripts/l#2sd25.baf"]
+          replace: 'RealSetGlobalTimer("L#2SDSkieComparisonTime","GLOBAL",8000)'
+          with: 'RealSetGlobalTimer("L#2SDSkieComparisonTime","GLOBAL",1200)'
+  - name: FaldornBG2
+    description: return of faldorn in bg2, after the druid grove part, quests, romance
+    components:
+      - 0 # Faldorn NPC for BG2EE
+      - 1 # Faldorn NPC for BG2EE: Player-Initiated Dialogues (PIDs)
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/FaldornBG2 v1.3.zip
+  - name: Lhannd
+    description: male CG fallen ranger, quest, friendship, romance
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/Lhannd v1.5.zip
+  - name: fyalvara
+    description: female human warrioress (rashemen), friendship, quest
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/fyalvara v1.1.zip
+  - name: verrBG2
+    description: soa, same as above, romance
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/VerrBG2 v2.1.zip
+  - name: Foundling
+    description: "Colours of Infinity: Foundling" - Male ShadowAdpet, NE ; quest, dialogues, no romance
+    components:
+      - 0   # Foundling
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/Foundling v5.4.zip # selectskit
       patch:
-        relative: patches/eet/gavin_bg1-romance-timer-15.diff
-        # there is no need to patch timers
+        relative: patches/foundling-class.diff
+  - name: willowisp
+    description: SoA - Will, the undead witchlight shaman, adds shaman stronghold, shaman kit, mini-quests + stronghold quests
+    components: # 4 later
+      - 0 # Will NPC, shaman stronghold and new shaman kit for BG2EE
+      # would need translation
+      #- 1 # Change shaman .tlk string to remove "Ineligible for any stronghold" line
+      - 2 # New items for shamans and undead NPCs
+      - 3 # Optional: Drider and Dark Treant Enemies
+      # 4 : crossmod banter later after installing other mods
+      - 5 # [CHEAT] Enable shaman stronghold for all classes
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/willowisp v3.0.zip
+      replace:
+        - file_globs: [ "willowisp/baf/l0will.baf" ]
+          replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",2400)'
+          with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",900)'
+        - file_globs: [ "willowisp/baf/l0will.baf" ]
+          replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",1600)'
+          with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",600)'
+        - file_globs: [ "willowisp/baf/l0will.baf" ]
+          replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",6000)'
+          with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",1200)'
+        - file_globs: [ "willowisp/baf/l0will.baf" ]
+          replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",12000)'
+          with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",1500)'
+        - file_globs: [ "willowisp/baf/l0will25.baf" ]
+          replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",1800)'
+          with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",700)'
+  - name: Dvaradime
+    description: BG2 npc - dwarven fighter/mage/thief, quest
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/Dvaradime v1.4.zip
+
+  # ArtemiusI NPCs
+  - name: paina
+    components:
+      - 0 # Pai'Na NPC for BG:EE
+      - 1 # Alternate Portrait
+    location:
+      github_user: ArtemiusI
+      repository: Pai-Na-NPC-mod-for-BG2-EE
+      tag: v1.9
+  - name: Sirene_BG2
+    components: ask
+      #- 0   # Sirene NPC for BG2:EE
+      #- 2 # Choose an portrait for Sirene (check mod folder for portraits) -> Alternate Light Armor portrait by Sirick
+    location:
+      github_user: ArtemiusI
+      repository: Sirene-NPC-for-BG2-EE
+      tag: v2.1
+      patch:
+        relative: eet/sirene-bg2.diff
+  - name: quieter_sirene
+    components:
+      - 0
+    location:
+      github_user: mleduque
+      repository: quieter_sirene
+      tag: v0.9
+
+  # Jastey NPCs
   - name: gavin_bg2
     # will prompt for romance timer
     components:
@@ -1918,6 +1949,16 @@ modules:
       asset: lin-gavin_bg2-v23.tar.gz
       patch:
         relative: patches/eet/gavin_bg2_romance-timer-15.diff
+  - name: "c#solaufein"
+    components:
+      - 0 # Solaufein's Rescue: Jastey's Solaufein NPC for BGII: 3.2
+      - 1 # Give Solaufein in Ust Natha the Mod's Portrait: 3.2
+    location:
+      github_user: Gitjas
+      repository: Solaufeins_Rescue_NPC
+      release: v5.0
+      asset:  solaufeins-rescue-jasteys-solaufein-npc-mod-for-bgii-45.0.iemod
+
   - name: arath
     description: bg2 druid npc with romance+friendship and quest (late  soa)
     components: [0]
@@ -1984,36 +2025,6 @@ modules:
         - file_globs: ["adrian/dialogue/rh#quest.d"]
           replace: 'SetGlobalTimer("rh#DamarovReturnsTimer","GLOBAL",TEN_DAYS)'
           with: 'SetGlobalTimer("rh#DamarovReturnsTimer","GLOBAL",FIVE_DAYS)'
-  - name: valerie
-    description: bg1 cowled wizard npc,friendship, no quest
-    components: [0]
-    location:
-      github_user: SpellholdStudios
-      repository: Valerie_NPC
-      release: v1.2
-      asset: valerie-npc-for-bg-v1.2.iemod
-      replace:
-        - file_globs: ["scripts/t2val.baf", "dialogue/t2valj.d"]
-          regex: true
-          replace: 'RealSetGlobalTimer\("T2Val(?<c>.*)Timer","GLOBAL",2700\)'
-          with: 'RealSetGlobalTimer("T2Val${c}Timer","GLOBAL",900)'
-  - name: Bristlelick
-    description: bg1+sod gnoll npc (fighter kit) with talks and small quest
-    components:
-      - 0 #  Bristlelick the gnoll companion for BGEE: 2.0
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Bristlelick v2.3.zip
-      replace:
-        - file_globs: ["scripts/l#2brist.baf", "scripts/l#brist.baf"]
-          regex: true
-          replace: 'RealSetGlobalTimer\("L#Bristle(?<c>.*)","GLOBAL",1600\)'
-          with: 'RealSetGlobalTimer("L#Bristle${c}","GLOBAL",700)'
-        - file_globs: ["scripts/l#2brist.baf"]
-          replace: 'RealSetGlobalTimer("L#BristleTimeSoD","GLOBAL",3600)'
-          with: 'RealSetGlobalTimer("L#BristleTimeSoD","GLOBAL",1000)'
-        - file_globs: ["scripts/l#brist.baf"]
-          replace: 'RealSetGlobalTimer("L#BristleTime","GLOBAL",2000)'
-          with: 'RealSetGlobalTimer("L#BristleTime","GLOBAL",800)'
   - name: evandra
     description: >
       Illusionist for soa+tob
@@ -2073,27 +2084,6 @@ modules:
       repository: AurenAseph
       release: v12
       asset: lin-aurenaseph-v12.zip
-  - name: GlamNPCPack
-    description: bg1npcs, Vynd(drow ass., m), Littlun(Halfling arch., f), Moidre(Dwarwen Def, f), Dave(Talos, m), Flara(DD, f)
-    components:
-      - 0 # Glam's NPC Pack for BG:EE, BGT and BG TUTU
-    location:
-      github_user: Gibberlings3
-      repository: Glam-NPC-Pack
-      tag: v3.1
-      replace:
-        - file_globs: ["Dialogue/GV#LITT.d"]
-          replace: 'SetGlobalTimer("GV#LITTGnollsTimer","GLOBAL",ONE_DAY)'
-          with: 'SetGlobalTimer("GV#LITTGnollsTimer","GLOBAL",TEN_DAYS)'
-  - name: anishai
-    description: one-day npc, modifies existing npc from Mae'Var's guildhouse, CN female monk
-    components:
-      - 0 # Anishai one-day NPC: v3
-    location:
-      github_user: Gibberlings3
-      repository: Anishai
-      release: v3
-      asset: lin-anishai-v3.zip
   - name: tyrisflare
     description: bg2+tob - female fighter/mage, quest, romance
     components:
@@ -2141,52 +2131,8 @@ modules:
           regex: true
           replace: 'RealSetGlobalTimer\("KK(?<c>[^"]+)","GLOBAL",300\)'
           with: 'RealSetGlobalTimer("KK${c}","GLOBAL",120)'
-  - name: haiass
-    description: wolf follower
-    components:
-      - 0 # Haiass le Loup: v2.4
-      - 10 #  Haiass peut être ressuscité -> Pénalisation modérée (-4 Constitution temporairement): v2.4
-    location:
-      path: /home/mick/Games/modda-cache/static/haiass_v2_4.zip
-  - name: Ishlilkamod
-    description: bg1/sod - female wizard slayer, good, romance, quest(x2)
-    components:
-      - 0 # Ishlilka mod for BGSoD and EET
-    location:
-      github_user: The-Gate-Project
-      repository: Ishlilka_The-Wizard-Slayer
-      branch: main
-      refresh: 5days
-      replace:
-        - file_globs: ["Dialogues/ishyJ.d"]
-          replace: 'RealSetGlobalTimer("IshyRomanceTimer","GLOBAL",3000)'
-          with: 'RealSetGlobalTimer("IshyRomanceTimer","GLOBAL",700)'
-        - file_globs: ["Scripts/ishyscrp.baf"]
-          regex: true
-          replace: 'RealSetGlobalTimer\("Ishy(?<t>[^""]+)","GLOBAL",([0-9]{4})\)'
-          with: 'RealSetGlobalTimer("Ishy${t}","GLOBAL",680)'
-        - file_globs: ["Dialogues/bdishy.d"]
-          replace: 'RealSetGlobalTimer("IshyTimer","GLOBAL",5600)'
-          with: 'RealSetGlobalTimer("IshyTimer","GLOBAL",900)'
-        - file_globs: ["Dialogues/ishyD.d"]
-          regex: true
-          replace: 'RealSetGlobalTimer\("Ishy(?<t>[^""]+)","GLOBAL",([0-9]{4})\)'
-          with: 'RealSetGlobalTimer("Ishy${t}","GLOBAL",690)'
-        - file_globs: ["Scripts/cutcutscene/ishyscrp.baf"]
-          regex: true
-          replace: 'RealSetGlobalTimer\("Ishy(?<t>[^""]+)","GLOBAL",([0-9]{4})\)'
-          with: 'RealSetGlobalTimer("Ishy${t}","GLOBAL",720)'
-  #- name: aurora
-  #  description: Aurora shoes and boots - non-joinable NPC
-  #  components:
-  #    - 0 # Aurora's Shoes and Boots: v5.3 (EE & EET)
-  #    - 20 # Petits portraits pour les PNJs -> Marchands uniquement: v5.3 (EE & EET)
-  #  location:
-  #    github_user: mleduque
-  #    repository: Bookwyrme_Aurora_s_shoes
-  #    tag: "???"
   - name: luxleysoa
-    description: soa - playwright (wiz) + monk npc, both male, quest, friendship, romance
+    description: soa - playwright (wiz) + monk npc, both male, quest, friendship, romance, quest
     components:
       - 0 # Luxley Family Mod for BGII:SoA: v2.0.0
     location:
@@ -2208,8 +2154,11 @@ modules:
           replace: 'RealSetGlobalTimer("FHLAndDarkTime","GLOBAL",900)'
           with: 'RealSetGlobalTimer("FHLAndDarkTime","GLOBAL",470)'
   - name: Fade
-    description: chaotic neutral Fey'ri Shadow Thief, romance
-    components: ask
+    description: chaotic neutral Fey'ri Shadow Thief, romance, 2 quests
+    components:
+      - 0 # Fade: An NPC for Baldur's Gate II: SoA and ToB
+      - 1 # Fade NPC: reactions to Romantic Encounters (RE may be installed before or after this component)
+      - 2 # Fade EE: give Fade Shadowdancer kit
     location:
       github_user: SpellholdStudios
       repository: Fade_NPC
@@ -2278,96 +2227,27 @@ modules:
       repository: Hubelpot_the_Vegetable_Merchant_NPC
       release: v2.1.0
       asset: hubelpot-the-vegetable-merchant-npc-v2.1.0.iemod
-  - name: allison
-    description: bg2 - onedays npc, TN female druid, interjection, banter
-    components:
-      - 0 # Allison (One-Day NPC)
-    location:
-      github_user: SpellholdStudios
-      repository: Allison_One-Day_NPC
-      release: v1.8
-      asset: AllisonV15MacOSX.zip
-  # Will use bg1npcsoa version
-  #- name: Coran
-  #  description: Coran for bg2+tob,
-  #  components: ask
-  #  location:
-  #    github_user: Pocket-Plane-Group
-  #    repository: Coran_for_BGII
-  #    release: v9
-  #    asset: coran-npc-mod-for-baldurs-gate-ii-v9.iemod
-  - name: Fhaugy
-    components:
-      - 0 # Fhaugy - Baldur's Gate 2: EE NPC
-      - 1 # Fhaugy: Player-Initiated Dialogues (PIDs)
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Fhaugy v1.03.zip
-      replace:
-        - file_globs: ["scripts/L#FHA.baf", "scripts/L#FHA25.baf"]
-          regex: true
-          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",[23]\d00\)'
-          with: 'RealSetGlobalTimer("${c}","GLOBAL",740)'
-        - file_globs: ["scripts/L#FHA.baf", "scripts/L#FHA25.baf"]
-          regex: true
-          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",1\d00\)'
-          with: 'RealSetGlobalTimer("${c}","GLOBAL",340)'
-  - name: kivan
-    description: bg2+soa, adds Kivan and possibly Deheriana, friendship, Kivan romance (exclusive with Deheriana)
-    components: ask
-    location:
-      github_user: Gibberlings3
-      repository: Kivan_and_Deheriana
-      release: v18
-      asset:  kivan-and-deheriana-companions-for-bg2-v18.iemod
-  - name: BG1NPCSoA
-    description: More content (dialogues, banters) for Ajantis in BG1
-    components:
-      - 0 # Installs Ajantis BG1 Expansion Modification
-      - 30 # Ajantis SoD NPC: Crossmod Content
-    location:
-      github_user: Gibberlings3
-      repository: Ajantis_BG1_Expansion
-      release: v20
-      asset: ajantis-bg1-expansion-modification-20.iemod
-      replace:
-        - file_globs: ["lib/ajantis_bgt.tpa", "lib/ajantis_tutu.tpa", "lib/ajantis_bgee.tpa"]
-          replace: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",500)'
-          with: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",200)'
-        - file_globs: ["lib/ajantis_bgt.tpa", "lib/ajantis_tutu.tpa", "lib/ajantis_bgee.tpa"]
-          replace: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",3600)'
-          with: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",800)'
-  - name: SkieCost # install late because adds crossmod banters with Yvette & Foundling
-    description: BG1 NPCs in BG2
-    installation:
-      after: other versions of same npcs
-    components: ask
-      #s- 0 # Water Gardens. New Athkatla's district & new quests: 13.5
-      #s- 2 # Shar-Teel NPC in BG2. "Nightbringer of Shar" (SoA): 13.5
-      #s## issues with multibards
-      #s##- 6 # Brave Sir Garrick NPC in BG2 (SoA): 13.5
-      #s- 20 # Coran & Safana Chronicles (SoA & ToB): 13.5
-      #s- 35 # Kagain's Corner (SoA & ToB) -> Store with Vanilla Items Only: 13.5
-      #s- 40 # Faldorn's New Leaf (SoA & ToB): 13.5
-      #s- 45 # Xzar and Monty Murder Mysteries (SoA & ToB): 13.5
-      #s##- 83 # Make Garrick a Skald: 13.5
-      #s#- 85 # Make Safana a Swashbuckler: 13.5
-      #s- 87 # Inter Component Banter Pack: 13.5
-    location:
-      github_user: SpellholdStudios
-      repository: BG1_NPCs_for_SoA_-_ToB
-      reklease: v14.3
-      asset: bg1-npc-in-soatob-14.3.iemod
-  - name: TS_sime
+  - name: vladsime
+    description: Tortured Souls - Sime ; SoA only, female cleric/ranger, banters, romance
     components:
       - 0 # Vlad's Sime NPC: 0.8
       - 10 # TS Sime replaces original Sime in Brynnlaw: 0.8
       - 20 # Sime Portrait -> Sime Default Portrait: 0.8
       - 30 # Sime Soundset -> Sime Default Soundset: 0.8
-      - 50 # Sime Crossmod: 0.8
     location:
       github_user: RealApxu
       repository: TS_Sime
       tag: "0.8"
+      patch:
+        relative: eet/vladsime.diff
+      replace:
+        - file_globs: ['booplot/dialogue/soa_booplot.d', 'booplot/script/append_ttsime.baf', 'main/dialogue/soa_talks.d', 'main/scripts/*.baf']
+          regex: true
+        - replace: 'RealSetGlobalTimer\("(?<c>[^"]*)","GLOBAL",1800\)'
+          with: 'RealSetGlobalTimer("${c}", "GLOBAL",543)'
+        - file_globs: ['main/scripts/*.baf']
+        - replace: 'RealSetGlobalTimer("ttSimeDreamBanterTimer","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("ttSimeDreamBanterTimer","GLOBAL",620)'
   - name: Kelsey
     description: soa+tob, NG male sorcerer, romance, dialogue, imoen/nalia romance, quest
     components:
@@ -2407,33 +2287,6 @@ modules:
         - file_globs: ["d/bfwketo.d"]
           replace: 'RealSetGlobalTimer("PGKetoMockKeldornTimer","GLOBAL",3000)'
           with: 'RealSetGlobalTimer("PGKetoMockKeldornTimer","GLOBAL",470)'
-  - name: FaldornBG2
-    description: return of faldorn in bg2, after the druid grove part, quests, romance
-    components:
-      - 0 # Faldorn NPC for BG2EE
-      - 1 # Faldorn NPC for BG2EE: Player-Initiated Dialogues (PIDs)
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/FaldornBG2 v1.3.zip
-  - name: Lhannd
-    description: male CG fallen ranger, quest, friendship, romance
-    components: ask
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Lhannd v1.5.zip
-  - name: fyalvara
-    description: female human warrioress (rashemen), friendship, quest
-    components: ask
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/fyalvara v1.1.zip
-  - name: verrsza
-    description: bg1+sod, evil ranger, rakshasa, quests, romance
-    components: ask
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/VerrSzaBGEE v6.01.zip
-  - name: verrBG2
-    description: soa, same as above, romance
-    components: ask
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/VerrBG2 v2.1.zip
   - name: Dusk
     description: soa, male wizard slayer, friendship, dialog, quests
     components: ask
@@ -2442,52 +2295,306 @@ modules:
       repository: NPC_Dusk_MOD
       release: v1.5.0
       asset:  NPC_Dusk_MOD.zip
-  # meh
-  #- name: ChaosKnight
-  #  installation:
-  #    before: Askaria
-  #  components:
-  #    - 0 # Installer le Seigneur du Chaos, Kit pour BGT, BGEE, BG2EE, IWDEE ou EET et Jacob, Npc pour BGT, BGEE ou EET
-  #  location:
-  #    github_user: The-Gate-Project
-  #    repository: Askaria-Quest_ChaosKnight-kit
-  #    branch: master
-  #    refresh: 1day
-  #- name: Askaria
-  #  description: bg1 npc
-  #  components:
-  #    - 0 # Askaria Quest pour BGT, BGEE ou EET
-  #  location:
-  #    github_user: The-Gate-Project
-  #    repository: Askaria-Quest_ChaosKnight-kit
-  #    branch: master
-  #    refresh: 1day
-  - name: Ishlilkamod
-    description: bg1+sod, good female wizard slayer, romance, quests (bg1, sod)
+  - name: btl
+    description: Beyond the Law
+    detailed_description: 2 NPCs, Kova (CG half-elf mage/thief) & Kiyone (LG half-elf archer) + quest
     components:
-      - 0 # Ishlilka mod for BGSoD and EET
+      - 0 # Beyond the Law - Kova & Kiyone -> Beyond the Law with Kiyone original sound set: v2.0.0
+      - 2 # Better balanced BTL items: v2.0.0
     location:
-      github_user: The-Gate-Project
-      repository: Ishlilka_The-Wizard-Slayer
-      branch: master
-      refresh: 1day
-  # EET issues
-  #- name: zakrion_bg1
-  #  description: bg1, true neutral male duelist, friendship, dialogues/banters, semi-romance, no sod
-  #  location:
-  #    path: /home/mick/Games/modda-cache/static/lin-Zakrion_BG1-v2.0.zip
-  #- name: zakrion_bg2
-  #  description: friendship, romance, quests, banters
-  #  location:
-  #    http: https://www.gibberlings3.net/files/file/1040-zakrion-for-bg2/?do=download&r=6476&confirm=1&t=1&csrfKey=26496983391408bcb5e250b559da1945
-  #- name: NikitaRdux
-  #  location:
-  #    github_user: The-Gate-Project
-  #    repository: NikitaRedux
+      github_user: SpellholdStudios
+      repository: Beyond_the_Law
+      release: v2.0.0
+      asset: beyond-the-law-v2.0.0.iemod
+      replace:
+        - file_globs: ""
+  - name: TheBeaurinLegacy
+    components:
+      - 1000 # The Beaurin Legacy for BG2:SoA & ToB & BGII:EE
+      - 3010 # Minyae's Portrait -> Change Minyae's portrait to alternative by TamikaProud at DeviantArt
+    location:
+      path: /home/mick/Games/modda-cache/static/lin-TheBeaurinLegacy-v5.3.tar.gz
+      replace:
+        - file_glob: ['Dialogue/SoA/QI#MIJ.d', 'Dialogue/ToB/QI#M25J.d']
+          replace: 'RealSetGlobalTimer("QI#MiTimer","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("QI#MiTimer","GLOBAL",830)'
+        - file_glob: ['Dialogue/ToB/QI#E25J.d', 'Scripts/ToB/QI#E25S.baf']
+          replace: 'RealSetGlobalTimer("QI#ElaTimer","GLOBAL",2100)'
+          with: 'RealSetGlobalTimer("QI#ElaTimer","GLOBAL",600)'
+        - file_glob: ['Scripts/SoA/QI#ElaS.baf']
+          replace: 'RealSetGlobalTimer("QI#ElaTimer","GLOBAL",1800)'
+          with: 'RealSetGlobalTimer("QI#ElaTimer","GLOBAL",500)'
+        - file_glob: ['Scripts/SoA/QI#MIS.baf']
+          replace: 'RealSetGlobalTimer("QI#MiTimer","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("QI#MiTimer","GLOBAL",480)'
+        - file_glob: ['Scripts/ToB/QI#M25S.baf']
+          replace: 'RealSetGlobalTimer("QI#MiTimerToB","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("QI#MiTimerToB","GLOBAL",510)'
+  - name: DjinniCompanion
+    description: Afaaq, the Djinni Companion v2.9
+    components:
+      - 0   # Afaaq, le compagnon Djinn -> Version complete (avec quetes, conversations et plus encore)
+      - 103 # Changer la frequence des conversations (n'affecte que le djinn, par defaut : 60 minutes) -> 45 minutes
+      - 300 # Portrait de djinn alternatif par Ulb
+    location:
+      github_user: Argent77
+      repository: DjinniCompanion
+      release: v2.10
+      asset: A7-DjinniCompanion-v2.10.iemod
+  - name: isra_bg2
+    description: Isra Ghadir, a cavalier paladin of Sune Firehair - soa+tob, friendship, romance, encounters
+    components:
+      - 0 # Isra NPC for BGII
+    location:
+      github_user: SpellholdStudios
+      repository: Isra_NPC_BG2
+      release: v3.1
+      asset: isra-npc-for-bgii-v3.1.iemod
+      patch:
+        relative: patch/isra_bg2.diff
+      replace:
+        - file_globs: ["dialogue/rh#is25j.d", "dialogue/rh#isrj.d", "scripts/rh#isr.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",2\d\d\d\)'
+          with: 'RealSetGlobalTimer("${c}","GLOBAL",600)'
+        - file_globs: ["dialogue/rh#is25j.d"]
+          replace: 'RealSetGlobalTimer("rh#IsraTalksToBTimer","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("rh#IsraTalksToBTimer","GLOBAL",800)'
+        - file_globs: ["dialogue/rh#is25j.d", "dialogue/rh#isrj.d", "scripts/rh#is25.baf", "scripts/rh#isr.baf", "scripts/rh#isree.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",1\d\d\d\)'
+          with: 'RealSetGlobalTimer("${c}","GLOBAL",500)'
+        - file_globs: ["dialogue/rh#isrp.d", "scripts/rh#isr.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",9\d\d\)'
+          with: 'RealSetGlobalTimer("${c}","GLOBAL",400)'
+  - name: amber
+    description: SoA, tiefling rogue of a chaotic good alignment - friendship, romance, 3 mini-quests
+    components:
+      - 0 # Amber the NPC MOD
+      #- 1 # Multiplayer-friendly flirting for Amber
+    location:
+      path: /home/mick/Games/modda-cache/static/lin-amber-v9.zip
+      patch:
+        relative: patches/amber.diff
+        encoding: LATIN9
+      replace:
+        - file_globs: [ "dialogs/m#amber.d" ]
+          replace: 'RealSetGlobalTimer("M#AmberRomanceTime","GLOBAL",2500)'
+          with: 'RealSetGlobalTimer("M#AmberRomanceTime","GLOBAL",500)'
+        - file_globs: [ "dialogs/m#amber.d" ]
+          replace: 'RealSetGlobalTimer("M#AmberQuestTime","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("M#AmberQuestTime","GLOBAL",600)'
+        - file_globs: [ "dialogs/m#amber.d" ]
+          replace: 'RealSetGlobalTimer("M#AmberQuestTime","GLOBAL",2500)'
+          with: 'RealSetGlobalTimer("M#AmberQuestTime","GLOBAL",500)'
+  - name: ninde
+    description: SoA+ToB, Neutral Evil elven necromancer, friendship, romance, encounter
+    components:
+      - 0 # Ninde NPC Mod for BGII
+    location:
+      github_user: SpellholdStudios
+      repository: Ninde_NPC
+      release: v2.2
+      asset:  Ninde_v2.2.rar
+      patch:
+        relative: eet/ninde.diff
+      replace:
+        - file_glob: ['dialogue/*.d', 'scripts/*.baf']
+          regex: true
+          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",1\d\d\d\)'
+          with: 'RealSetGlobalTimer("${c}","GLOBAL", 482)'
+        - file_glob: ['dialogue/*.d', 'scripts/*.baf']
+          regex: true
+          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",2\d\d\d\)'
+          with: 'RealSetGlobalTimer("${c}","GLOBAL", 682)'
+        - file_glob: ['scripts/lk#ni25.baf']
+          replace: 'RealSetGlobalTimer("LK#NindeAmkethranTimer","GLOBAL",900)'
+          with: 'RealSetGlobalTimer("LK#NindeAmkethranTimer","GLOBAL",300)'
+  - name: xulaye
+    components:
+      - 0 # Xulaye NPC Mod for BG2:SoA
+      - 1 # Xulaye's Player Initiated Dialogues
+      - 2 # Korgan Fights at the Pits
+    location:
+      http: http://europe.iegmc.net/xulaye/Xulaye%20v2.0.zip
+      rename: Xulaye_v2.0.zip
+  - name: Tashia
+    components: ask
+    location:
+      file: /home/mick/Games/modda-cache/static/tashia_remix_v1.4.rar
+    disabled:
+      because: no time to examine right now
+  - name: Kitanya
+    components: ask
+    location:
+      github_user: GwendolyneFreddy
+      repository: Kitanya_NPC
+      release: v6.4.1
+      asset:  KitanyaSoAv6-41.zip
+    disabled:
+      because: no time to examine right now
+
+  # one day npcs
+  - name: allison
+    description: bg2 - onedays npc, TN female druid, interjection, banter
+    components:
+      - 0 # Allison (One-Day NPC)
+    location:
+      github_user: SpellholdStudios
+      repository: Allison_One-Day_NPC
+      release: v1.8
+      asset: AllisonV15MacOSX.zip
+  - name: anishai
+    description: SoA, one-day npc, modifies existing npc from Mae'Var's guildhouse, CN female monk
+    components:
+      - 0 # Anishai one-day NPC: v3
+    location:
+      github_user: Gibberlings3
+      repository: Anishai
+      release: v3
+      asset: lin-anishai-v3.zip
+
+  # This block with bg1 imported npcs should be near the endsot bg1npcsoa can
+  # selectively disable those that are already present
+  - name: ajantisbg2
+    components:
+      - 0  # Sir Ajantis NPC for BGII
+      - 1  # Install the unique BG(II):EE BAM for Ajantis' Family Shield
+      - 3  # Installation of adult romance content
+      - 42 # Select Ajantis' Friendship Dialogues and Romance Speed: -> Speed: 30 minutes real time minimum between Dialogues
+    location:
+      path: /home/mick/Games/modda-cache/static/lin-ajantisbg2-v20.zip
+  - name: xan
+    description: Xan NPC for BG2 - friendship, romance
+    components:
+      - 0
+      - 2
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Xan_for_BGII
+      release: v19
+      asset: Xan_v19.zip
+      layout:
+        layout_type: multi_dir
+        dirs: [Xan] # xan v.s. Xan :/
+        replace:
+        - file_globs: ["Dialogue/BO#Xan25.d", "Dialogue/O#Xan25J.d", "Dialogue/O#XanJ.d", "Dialogue/BO#Xan.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",3\d\d\d\)'
+          with: 'RealSetGlobalTimer("${c}","GLOBAL",600)'
+        - file_globs: ["Dialogue/BO#Xan25.d", "Dialogue/O#Xan25J.d", "Dialogue/O#XanJ.d", "Dialogue/BO#Xan.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",2\d\d\d\)'
+          with: 'RealSetGlobalTimer("${c}","GLOBAL",500)'
+        - file_globs: ["Dialogue/BO#Xan25.d", "Dialogue/O#Xan25J.d", "Dialogue/O#XanJ.d", "Dialogue/BO#Xan.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",1\d\d\d\)'
+          with: 'RealSetGlobalTimer("${c}","GLOBAL",400)'
+  - name: yeslicknpc
+    description: transposes bg1 dwarf in bg2 - banters, dialogue, no quest
+    components:
+      - 1
+    location:
+      github_user: SpellholdStudios
+      repository: Yeslick_NPC
+      release: v5.0
+      asset: yeslick-npc-v5.0.iemod
+  - name: Branwen
+    description: bg2+tob, adds branwen, friendship, romance, pid, banters, interjections
+    components: [0]
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Branwen_for_BGII
+      release: v8
+      asset: branwen-v8pre.iemod
+      patch:
+        relative: patches/branwen_bg2.diff
+      replace:
+        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
+          replace: 'RealSetGlobalTimer("O#BranFlirtTimer","GLOBAL",2500)' # 42 min
+          with: 'RealSetGlobalTimer("O#BranFlirtTimer","GLOBAL",780)' # 13min
+        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
+          replace: 'RealSetGlobalTimer("O#BranTimer","GLOBAL",3600)' # 60 min
+          with: 'RealSetGlobalTimer("O#BranTimer","GLOBAL",1200)' # 20min
+        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
+          replace: 'RealSetGlobalTimer("O#BranFlirtTimerToB","GLOBAL",2500)' # 42 min
+          with: 'RealSetGlobalTimer("O#BranFlirtTimerToB","GLOBAL",780)' # 13min
+        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
+          replace: 'RealSetGlobalTimer("O#BranTimerToB","GLOBAL",3600)' # 60 min
+          with: 'RealSetGlobalTimer("O#BranTimerToB","GLOBAL",1200)' # 20min
+        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
+          replace: 'RealSetGlobalTimer("O#BranTimerToB","GLOBAL",1800)' # 30 min
+          with: 'RealSetGlobalTimer("O#BranTimerToB","GLOBAL",600)' # 10min
+        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
+          replace: 'RealSetGlobalTimer("O#BranLoveTimer","GLOBAL",3600)' # 60 min
+          with: 'RealSetGlobalTimer("O#BranLoveTimer","GLOBAL",1080)' # 18min
+        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
+          replace: 'RealSetGlobalTimer("O#BranChapter5Timer","GLOBAL",3600)' # 60 min
+          with: 'RealSetGlobalTimer("O#BranChapter5Timer","GLOBAL",300)' # 5min
+        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
+          replace: 'RealSetGlobalTimer("O#BranFlirtTimer","GLOBAL",300)' # 5min
+          with: 'RealSetGlobalTimer("O#BranFlirtTimer","GLOBAL",180)' # 3min
+        - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
+          replace: 'RealSetGlobalTimer("O#BranFlirtTimerToB","GLOBAL",300)' # 5min
+          with: 'RealSetGlobalTimer("O#BranFlirtTimerToB","GLOBAL",180)' # 3min
+  - name: alora
+    description: alora in bg2, minimal npc with some banter and no quest
+    components:
+      - 0 # Alora PNJ de Chosen of Mystra: 2.0
+    location:
+      github_user: GwendolyneFreddy
+      repository: Alora-NPC-for-BG2
+      release: v2.0
+      asset: alora-npc-for-bg2-2.0.iemod
+    disabled:
+      because: bare-bone npc, will use bg1npcsoa version
+  - name: Coran
+    description: Coran for bg2+tob, male elven fighter/thief, friendship
+    components: ask
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Coran_for_BGII
+      release: v9
+      asset: coran-npc-mod-for-baldurs-gate-ii-v9.iemod
+  - name: kivan
+    description: bg2+soa, adds Kivan and possibly Deheriana, friendship, Kivan romance (exclusive with Deheriana)
+    components: ask
+    location:
+      github_user: Gibberlings3
+      repository: Kivan_and_Deheriana
+      release: v18
+      asset:  kivan-and-deheriana-companions-for-bg2-v18.iemod
+  - name: BG1NPCSoA
+    description: "BG1 NPCs in BG2 plus new Athkatla district: Water Gardens"
+    installation:
+      after: other versions of same npcs
+    components: ask
+    location:
+      github_user: SpellholdStudios
+      repository: BG1_NPCs_for_SoA_-_ToB
+      reklease: v14.3
+      asset: bg1-npc-in-soatob-14.3.iemod
 
   ###########
   # NPC extensions
   ###########
+  - name: ajantisbg1
+    description: More content (dialogues, banters) for Ajantis in BG1
+    components:
+      - 0 # Installs Ajantis BG1 Expansion Modification
+    location:
+      replace:
+        - file_globs: ["lib/ajantis_bgt.tpa", "lib/ajantis_tutu.tpa", "lib/ajantis_bgee.tpa"]
+          replace: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",500)'
+          with: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",200)'
+        - file_globs: ["lib/ajantis_bgt.tpa", "lib/ajantis_tutu.tpa", "lib/ajantis_bgee.tpa"]
+          replace: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",800)'
+  - name: ViconiaRevamped
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/ViconiaRevamped v7.2.zip
   - name: chattyimoen
     description: bg1 - adds banters to Imoen
     components:
@@ -2498,6 +2605,31 @@ modules:
       repository: ChattyImoen
       release: v1.5
       asset: lin-chattyimoen-v1.5.zip
+  - name: npc_tweak
+    comments: also adds an heirloom to anomen
+    components:
+    - 0 # Anomen: v6
+    location:
+      github_user: Gibberlings3
+      repository: NPCTweak
+      release: v7
+      asset: lin-npc_tweak-v7.tar.gz
+  - name: XanBG1Friend
+    components: [0]
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Xan_BG1_Friendship
+      release: v11
+      asset: xanbg1friend_v11.zip
+      replace:
+        - file_globs: ["Dialogue/O#XanBG1.d", "Dialogue/O#XanBGT.d", "Dialogue/O#XanBGEE.d",
+                      "Scripts/xan.baf", "Scripts/xanbgee.baf"]
+          replace: 'RealSetGlobalTimer("O#XanBG1FriendTimer","GLOBAL",3000)'
+          with: 'RealSetGlobalTimer("O#XanBG1FriendTimer","GLOBAL",600)'
+        - file_globs: ["Scripts/_xan.baf", "Scripts/xan.baf", "Scripts/xanbgee.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer("O#XanBG1FriendTimer(?<c>\d)","GLOBAL",500)'
+          with: 'RealSetGlobalTimer("O#XanBG1FriendTimer${c}","GLOBAL",180)'
   - name: neera
     description: bg1 - more diliagues with neera, flirts
     components:
@@ -2800,39 +2932,29 @@ modules:
       - 0
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/lin-YoshimosRemorse-v3.1.1.tar.gz
-  - name: ajantisbg1
-    description: >
-      Skie: The Cost of One Girl’s Soul
-      The mod gives the player a chance to continue Skie's plot that began in Siege of Dragonspear.
-      BG2 - 2 quests, 2 npcs Skie, friendship, , Eddard (bard kit), friendship+romance
+  - name: keldorn_rom
     components:
-      - 0 # Skie: The Cost of One Girl's Soul - New quest for Baldur's Gate 2 EE: 4.01
-      - 1 # Skie: The Cost of One Girl's Soul - Allow Skie to return as a joinable NPC: 4.01
-      - 2 # Skie: The Cost of One Girl's Soul - Add Player-Initiated Dialogue (PID) for Skie: 4.01
-      - 3 # Skie: The Cost of One Girl's Soul - The Return of Eddard Silvershield (quest & a joinable NPC): 4.0
-      - 4 # Skie: The Cost of One Girl's Soul - Add Player-Initiated Dialogue (PID) for Eddard: 4.01
-      - 5 # Skie: The Cost of One Girl's Soul - Add brand new SoD-oriented items to BG2: 4.01
+      - 0
+      - 2
+      - 8
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/SkieCost v6.2.zip
-      replace:
-        - file_globs: ["dialogues/pid-*.d"]
-          replace: 'RealSetGlobalTimer("L#SDSkiesNewSeriesTime","GLOBAL",3800)'
-          with: 'RealSetGlobalTimer("L#SDSkiesNewSeriesTime","GLOBAL",800)'
-        - file_globs: ["scripts/L#2ED.baf", "/scripts/L#2ED25.baf", "scripts/l#2sd25.baf", "scripts/L#2SDSKI-EdEnd.baf", "scripts/l#2sdski.baf"]
-          regex: true
-          replace: 'RealSetGlobalTimer\("L#<?<c>[^"]+","GLOBAL",400\)'
-          with: 'RealSetGlobalTimer("L#${c}","GLOBAL",120)'
-        - file_globs: ["scripts/L#2ED.baf", "/scripts/L#2ED25.baf", "scripts/l#2sd25.baf", "scripts/L#2SDSKI-EdEnd.baf", "scripts/l#2sdski.baf"]
-          regex: true
-          replace: 'RealSetGlobalTimer\("L#<?<c>[^"]+","GLOBAL",600\)'
-          with: 'RealSetGlobalTimer("L#${c}","GLOBAL",180)'
-        - file_globs: ["scripts/L#2ED.baf", "/scripts/L#2ED25.baf", "scripts/l#2sd25.baf", "scripts/L#2SDSKI-EdEnd.baf", "scripts/l#2sdski.baf"]
-          regex: true
-          replace: 'RealSetGlobalTimer\("L#<?<c>[^"]+","GLOBAL",2400\)'
-          with: 'RealSetGlobalTimer("L#${c}","GLOBAL",700)'
-        - file_globs: ["scripts/l#2sd25.baf"]
-          replace: 'RealSetGlobalTimer("L#2SDSkieComparisonTime","GLOBAL",8000)'
-          with: 'RealSetGlobalTimer("L#2SDSkieComparisonTime","GLOBAL",1200)'
+      github_user: Gibberlings3
+      repository: Keldorn_Romance
+      release: v8.1
+      asset: berelindes-keldorn-romance-8.1.iemod
+  - name: edwinromance
+    description: Edwin romance
+    components:
+      - 0 # Edwin Romance
+      - 2 # Edwin flirts
+      - 3 # New ending for Viconia Romance by Laufey
+      # cdtweaks has one too
+      - 4 # Give Edwina a Portrait
+    location:
+      github_user: SpellholdStudios
+      repository: Edwin_Romance
+      release: v4,0
+      asset:  edwin-romance-v4.0.iemod
   - name: Wings
     components:
       - 0 # Wings - Wings for BG2:EE
@@ -2883,15 +3005,18 @@ modules:
       repository: SkitiaBG2RomanceTweaks
       branch: master
       refresh: 7days
+  - name: aurora
+    description: Aurora shoes and boots - non-joinable NPC
+    components:
+      - 0 # Aurora's Shoes and Boots: v5.3 (EE & EET)
+      - 20 # Petits portraits pour les PNJs -> Marchands uniquement: v5.3 (EE & EET)
+    location:
+      github_user: mleduque
+      repository: Bookwyrme_Aurora_s_shoes
+      tag: "???"
+    disabled:
+      because: eet compat issues
 
-  - name: JuniperAndTheStoneLeech
-    components: ask
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/JuniperAndTheStoneLeech v1.5.zip
-  - name: BloodiedStingsOfBarovia
-    components: ask
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/BloodiedStingsOfBarovia v2.1.zip
   # end NPC
 
   #########
@@ -2906,16 +3031,28 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Crossmod_Banter_Pack_for_Baldurs_Gate_II
-      release: v24
-      asset: crossmod-banter-pack-for-baldurs-gate-ii-v24.iemod  # tgz truncates some file names
+      release: v24.1
+      asset: crossmod-banter-pack-for-baldurs-gate-ii-v24.1.iemod  # tgz truncates some file names
   - name: adrian
     description: Adrian crossmod
     components:
       - 20 # Adrian NPC - Crossmod content
+  - name: isra_bg2
+    description: Isra BG2 crossmod
+    components:
+      - 1 # crossmod with Adrian, Coran (Kulyok's mod), Dace, Nephele, Ninde, Tiax (Kulyok's mod) and Xan (Kulyok's mod)
+  - name: ajantisbg1
+    description: Ajantis BG1 crossmod
+    components:
+      - 30 # Ajantis SoD NPC: Crossmod Content
   - name: c#brandock
     description: Brandock the mage - crossmod
     components:
       - 10 # Brandock the Mage: Crossmod Content
+  - name: TS_sime
+    description: Tortured soul's Sime crossmod
+    components:
+      - 50 # Sime Crossmod: 0.8
   - name: SmilingImpCrossBanterMod
     components:
       - 0 # Shar-Teel Banters: 1.4
@@ -2930,11 +3067,44 @@ modules:
   - name: "c#brage"
     components:
       - 10 # Brage's Redemption: Crossmod Content
+  - name: c#husam
+    installation:
+      after: ajantisbg1, ajantis_bg2, alternatives, c#brage, c#brandock, EET, gbthfkp, Imoen4ever, c#sodboabri
+      before: c#greythedog, EET_end
+    description : Husam npc crossmod
+    components:
+      - 10 # Husam NPC: Crossmod Content
   - name: c#greythedog
     description: Grey the dog
     components:
       - 10 # Grey the Dog: Crossmod Content
+  - name: nephele
+    description: nephele crossmod
+    components:
+      - 2 # Install Haer'Dalis Romance crossmod content
+
+
   # end crossmod
+
+
+  - name: sodrtd # ok
+    description: Road To Discovery
+    installation:
+      general: after any mod that adds reply options or transactions to SoD, like NPC mods or story tweak mods.
+      after: themed_tweaks, c#sodtweaks
+    components: ask
+      #- 0 # Composant principal : Systeme de Pistage: 0.4 (Beta)
+      #- 10 # Changements dans les dialogues du jeu pour plus de coherence.: 0.4 (Beta)
+      #- 20 # Les officiers sont plus attentifs: 0.4 (Beta)
+      #- 30 # Donnez au PC des options de reponse avisee: 0.4 (Beta)
+      ## bug, won't install ATM
+      ##-40 # PC Can Tell the Officers
+      #- 60 #Points d'information supplementaires: 0.4 (Beta)
+    location:
+      github_user: Gibberlings3
+      repository: Road_To_Discovery_for_SoD
+      release: v4.0
+      asset: road-to-discovery-for-sod-4.0.iemod
 
   #########
   # Early spells
@@ -3019,17 +3189,6 @@ modules:
     description: Trial of the Luremaster - XP reduction
     components: ask
       #- 30 # Reduire les points d'experience des monstres et des quetes. -> Reduction de 25 pour cent
-  - name: crucible
-    components: ask
-    location:
-      github_user: Gibberlings3
-      repository: Crucible
-      release: "2.0"
-      asset: lin-crucible-v2.0.zip
-      replace:
-        - file_globs: ["crucible.tp2"]
-          replace: 'REQUIRE_PREDICATE !FILE_EXISTS ~mih_eq/setup-mih_eq.tp2~ @3004'
-          with: '' # just remove this
 
   #########
   # Spells
@@ -3078,8 +3237,8 @@ modules:
     location:
       github_user: shohysie
       repository: Isaac-s_Missile_Storm
-      release: v0.4
-      asset: Isaac.s_Missile_Storm.v0.4.zip
+      release: v0.6
+      asset: Isaac.s_Missile_Storm.v0.6.zip
   # #######   compat issues with cowled menace
   #- name: Unofficial Item Pack
   #  original_thread: https://forums.beamdog.com/discussion/56567/mod-bgii-ee-unofficial-item-pack
@@ -3274,7 +3433,7 @@ modules:
     location:
       github_user: ArtemiusI
       repository: Bardic-Wonders
-      tag: v2.71
+      tag: v2.9c
       refresh: 2days
   - name: A7#ImprovedArcher
     description: Improved Archer - items
@@ -3862,7 +4021,7 @@ modules:
     location:
       github_user: ArtemiusI
       repository: House-Rule-Tweaks
-      tag: v2.5
+      tag: v2.5a
   - name: klatu
     description: Klatu Tweaks
     components:
@@ -4071,71 +4230,6 @@ modules:
       tag: v1.12
       patch:
         relative: patches/eet_tweaks-xpbonus.diff
-  - name: mih_eq
-    description: Made In Heaven Encounters and Quests
-    installation:
-      before: SCS
-    ignore_warnings: true
-    location:
-      github_user: mleduque
-      repository: MadeInHeaven_EncountersAndQuests
-      branch: french
-      patch:
-        relative: patches/mih_eq_customize_ini.diff
-    components:
-      #- 0 # Revision des morts-vivants corporels: v6
-      #- 1 # Revision des dragons: v6
-      #- 2 # Revision des Golems: v6
-      #- 3 # Revision des liches: v6
-      #- 5 # Revision des betes magiques: v6
-      #- 6 # Revision des araignees monstrueuses: v6
-      #- 7 # Revision des vases, des limons et des limons: v6
-      - 9 # Batailles ameliorees : Galeries d'Ankheg: v6
-      - 10 # Batailles ameliorees : catacombes de Chateau-Suif: v6
-      - 11 # Batailles ameliorees : Jardin de Mutamin: v6
-      - 12 # Batailles ameliorees : Tour de Ramazith: v6
-      - 13 # Batailles ameliorees : Invasion d'araignees: v6
-      - 14 # Batailles ameliorees : Labyrinthe des voleurs & Cite ensevelie: v6
-      - 15 # Batailles ameliorees : Ruines d'Ulcaster: v6
-      - 16 # Batailles ameliorees : Village xvart: v6
-      - 17 # Batailles ameliorees : Ferme des zombies: v6
-      - 18 # Batailles ameliorees : Tour de Durlag: v6
-      - 19 # La detresse du chirurgien: v6
-      - 20 # Assassins de Sarevok: v6
-      - 21 # Empeche la cinematique du chapitre 6 d'envoyer le groupe Ã  Chateau-Suif: v6
-      - 22 # Ajustement mineurs de quetes (BG1): v6
-      - 23 # Batailles ameliorees : Fort-du-Pont: v6
-      - 24 # Batailles ameliorees : Temple de Cyric: v6
-      - 25 # Batailles ameliorees : Site d'excavation nain: v6
-      - 26 # Batailles ameliorees : Tombe de Korlasz: v6
-      - 27 # Batailles ameliorees : Rencontre de vampires: v6
-      - 28 # Terminer plus de / toutes les rencontres de la Quete de la vision: v6
-      - 29 # Augmenter la taille du groupe d'ennemis: v6
-      - 30 # Batailles ameliorees : Liches d'Athkatla: v6
-      - 31 # Batailles ameliorees : Antre de Firkraag: v6
-      - 32 # Batailles ameliorees : Catacombes du cimetiere: v6
-      - 33 # Batailles ameliorees : Sous-sol des egouts: v6
-      - 34 # Batailles ameliorees : egouts des bas quartiers: v6
-      - 35 # Batailles ameliorees : L'Asile: v6
-      - 36 # Batailles ameliorees : Suldanessenar
-      - 37 # Batailles ameliorees : Ruines du Temple: v6
-      - 38 # Batailles ameliorees : Franc-Marche: v6
-      - 39 # Batailles ameliorees : Ombreterre: v6
-      - 40 # Ajustement mineurs de quetes (SoA): v6
-      - 41 # Batailles ameliorees : Amkethran: v6
-      - 42 # Batailles ameliorees : Forest de Mir: v6
-      - 43 # Batailles ameliorees : Demi-plan: v6
-      - 44 # Batailles ameliorees : Saradush: v6
-      - 45 # Batailles ameliorees : Enclave de Sendai: v6
-      - 46 # Batailles ameliorees : Tour de Garde: v6
-      - 48 # Ajustement mineurs de quetes (ToB): v6
-  - override_file:
-      name: ay_bgeespawn.ini
-      content: |
-        OUTER_SPRINT spawntimer ~-1~
-        OUTER_SPRINT spawnchance ~-1~
-        OUTER_SPRINT spawntype ~-1~
-        OUTER_SET disablevanillaspawns = ~0~
   - name: bgeespawn
     components:
       - 0 # BGEE Leveling Spawns Mod
@@ -4144,6 +4238,10 @@ modules:
       repository: BGEESpawn
       version: "0.7"
       asset: bgee-leveled-spawns-v0.7.iemod
+      replace:
+        - file_globs: ['ini/ay_bgeespawn.ini']
+          replace: 'OUTER_SET disablevanillaspawns = ~1~'
+          with: 'OUTER_SET disablevanillaspawns = ~0~'
   - name: Trap_Overhaul
     description: Kjeron's Trap Overhaul
     original_thread: https://forums.beamdog.com/discussion/71763/trap-detection-recovery-evasion
@@ -4513,7 +4611,7 @@ modules:
     location:
       github_user: subtledoctor
       repository: Combat_Skill_Proficiencies
-      tag: "1.4.4"
+      tag: "1.4.5"
       patch:
         relative: patches/combat-skill-profs-config.diff + extend mage/sorc feats (d5csdlg.2da, weapprof.2da, profs.2da, profsmax.2da)
   - name: SubtleD_Stat_Overhauls
@@ -4861,12 +4959,16 @@ modules:
       path: /home/mick/Games/modda-cache/static/SentrizealAvatarPack.zip
 
   - name: HQ_SoundClips_BG2EE? # no french
-  - name: InfinitySounds?
+
+  - name: infinitysounds
     installation:
-      general: |
-        If possible, try to install this mod dead last before biffing
-        In any case, avoid installing Infinity Sounds before mods which overwrite, add, or modify: spells, items, and/or creatures
-        Component Restored & Tweaked Creature Soundsets [...] has to be installed after any other mods which patch creature weapons.
+      general: If possible, try to install this mod last before biffing. Infinity Sounds does not add any new game content or change any of the game rules; therefore, it will most likely not benefit from patches introduced by other mods
+    components: ask
+    location:
+      github_user: skellytz
+      repository: infinity-sounds
+      release: v2.01
+      asset: infinitysounds-v2.0.1.iemod
   - name: generalized_biffing
     components:
       - 1
@@ -4889,3 +4991,68 @@ modules:
       repository: A7-Achievements
       release: v2.1
       asset:  A7-Achievements-v2.1.iemod
+
+  # Completely at the end because may break things
+
+  # more Ironmodder 10 entries
+  - name: AThousandWords # ok
+    description: 'Berelinde entry for Iron Modder 10: A Thousant Words'
+    components:
+      - 0 # A Thousand Words - v 2 10Dec2007
+    location:
+      path: /home/mick/Games/modda-cache/static/Ironmodder/im10/AThousandWordsV2.zip
+  - name: DaIRon # ok
+    description: 'Deathsangel entry for Iron Modder 10: Volo quest'
+    components:
+      - 0 # A retake on a bible trick
+    location:
+      path: /home/mick/Games/modda-cache/static/Ironmodder/im10/DA-IM.rar
+
+  # ironmodder 9 entries
+  - name: BonsSorry # ok
+    description: "Bons's Iron Modder IX Entry"
+    components:
+      - 0 # Being the Bhaalspawn Means Never Saying You're Sorry - Bons's Iron Modder IX Entry
+    location:
+      path: /home/mick/Games/modda-cache/static/Ironmodder/im9/BonsSorry.rar
+  - name: katiron # ok
+    description: "Katalyn's Iron Modder 9 Entry"
+    components:
+      - 0 # Katalyn's Iron Mod
+    location:
+      path: /home/mick/Games/modda-cache/static/Ironmodder/im9/Katalyn-IM9.rar
+
+  # ironmodder 8 entries
+  - name: greyim8 # ok
+    description: "Ghreyfain's IM8 Entry: Careless Words Cost Lives"
+    components:
+      - 0 # Ghreyfain's IM8 Entry: Careless Words Cost Lives
+    location:
+      path: /home/mick/Games/modda-cache/static/Ironmodder/im8/IronGhrey8.zip
+  - name: BonsCareless # ok
+    description: "Bons's Iron Modder 8 Entry: Careless Words Cost Lives"
+    components:
+      - 0 # Careless Words Cost Lives - Bons's Iron Modder 8 Entry
+    location:
+      path: /home/mick/Games/modda-cache/static/Ironmodder/im8/BonsCareless.rar
+
+  # ironmodder 7 entries
+  - name: im7jc # ok
+    description: "JCompton's entry for IronModder 7"
+    components:
+      - 0 # Compton's Iron Modder 7: Blaze of Glory
+    location:
+      path: /home/mick/Games/modda-cache/static/Ironmodder/im7/im7-jc.rar
+  - name: BonsGlory # ok
+    description: "Bons's entry for IronModder 7"
+    components:
+      - 0 # Blaze of Glory - Bons's Iron Modder VII Entry
+    location:
+      path: /home/mick/Games/modda-cache/static/Ironmodder/im7/BonsGlory.rar
+
+  # Not really IM entry
+  - name: ClifetteIM4 # ok
+    description : A Bee In Your Bonnet. Not submitted to any IM contests
+    components:
+      - 0 # Cliffette's Z-rated Adventure - an IM4 Non-Entry
+    location: /home/mick/Games/modda-cache/static/Ironmodder/CliffetteIMBonus.rar
