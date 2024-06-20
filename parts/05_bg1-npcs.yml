@@ -1,7 +1,423 @@
 
 
 
+  #########
+  # Section: BG1 NPC
+  #########
 
+# Remember: some NPCs are installed directly on bg1
+
+  # Jastey NPCs
+  - name: ACBre
+    description: Ascalon's Breagar - dwarf fighter, long quest
+    installation:
+      general: for crossmod
+      after: >
+        - DSotSC
+        - Amber
+        - aurenaseph
+        - toBR # what?
+        - bgqe
+        - tod # tower of deception
+        - ac_quest
+        - alternatives
+        - imoen4ever
+        - transitions
+        - bst
+        - c#anotherfinehell
+        - endlessbg1
+    components: ask
+      #- 0 # Breagar: Contents
+      #- 2 # Breagar: Crossmods and PID
+      #- 12 # Change Breagar's dialog timer? (Default is 30 minutes between dialogues.) - 15 minutes real time between talks
+      ## - 20 # Install Alternative Portrait from v4.X? (Default is Original Art by Nix)
+    location:
+      github_user: Gitjas
+      repository: Ascalons_Breagar
+      release: v12.2.0
+      asset: ascalons-breagar-12.2.0.iemod
+      patch:
+        relative: eet/breagar-wait-here.diff
+        # components 10-13 change timers
+  - name: c#brandock
+    description: Brandock the mage - male mage, long quest, 7th party member mode
+    installation:
+      after: >
+        (crossmod component) Alternatives, BGQE, BG1NPC, Brage's Redemption, EndlessBG1, EET, Gavin BG1, Imoen4Ever, NPC Strongholds, Solaufein's Rescue, The Calling, The Lure of Sirine's Call, Transitions, Valerie NPC
+        (atweaks compatibility component) after atweaks
+      before: (main component)Grey the Dog
+    components: ask
+      #- 0  # Brandock the Mage, NPC for BG:EE, BGII:EE, EET, and BGT
+      #- 23 # Default Portrait: Insecure, by Acifer (is included in the main component)
+      #- 30 # Use Dialogue Style for SoD Banter
+      #- 50 # Make Cutscene in Thalantyr's Abode Short
+    location:
+      github_user: Gitjas
+      repository: Brandock_the_Mage
+      release: v1.3
+      asset: brandock-the-mage-v1.3.iemod
+      replace:
+        # BrandockNPCBanterTimer3600
+        - file_globs: ["crossmod/bg1npc.baf", "crossmod/brando_crossmod_bg1npc_BG1.d", "dialogue/brandock_sod.d", "dialogue/c#brando.d"]
+          replace: 'RealSetGlobalTimer("C#BrandockNPCBanterTimer","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("C#BrandockNPCBanterTimer","GLOBAL",1200)'
+          comment: Reduce 3600s/1h _real-time_ talks timers to 1200s/20min real-time
+        # 1200
+        - file_globs: ["dialogue/brandock_sod.d"]
+          replace: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",1200)'
+          with: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",600)'
+        # 600
+        - file_globs: ["dialogue/brandock_sod.d", "scripts/c#brando_bg2.baf"]
+          replace: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",600)'
+          with: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",300)'
+        # 1800
+        - file_globs: ["scripts/c#brando_sod.baf"]
+          replace: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",1800)'
+          with: 'RealSetGlobalTimer("C#BrandockDialogTimer","GLOBAL",900)'
+        # timer constants
+        - file_globs: ["c#brandock.tp2"]
+          replace: 'APPEND ~gtimes.ids~ ~3600 C#BRANDOCK_TIMERLONG~ UNLESS ~C#BRANDOCK_TIMERLONG~'
+          with: 'APPEND ~gtimes.ids~ ~1200 C#BRANDOCK_TIMERLONG~ UNLESS ~C#BRANDOCK_TIMERLONG~'
+        - file_globs: ["c#brandock.tp2"]
+          replace: 'APPEND ~gtimes.ids~ ~1800 C#BRANDOCK_TIMERSHORT~ UNLESS ~C#BRANDOCK_TIMERSHORT~'
+          with: 'APPEND ~gtimes.ids~ ~900 C#BRANDOCK_TIMERSHORT~ UNLESS ~C#BRANDOCK_TIMERSHORT~'
+  - name: "c#brage"
+    description: bg1, brage redemption
+    installation:
+      general: for crossmod content
+      after: AC_QUEST, bg1re, bg1ub, bgqe, bst, endlessbg1, finch, ntotsc, thalantyr, transitions, ajantisbg1, c#sodboabri, imoen4ever
+    components:
+      - 0 # Brage's Redemption - Brage Joinable NPC for Baldur's Gate Saga: 8.0
+      - 1 # Assign the mod's portrait and soundset to the original Brage in game: 8.0
+      - 5 # Give Brage unique Two-Handed Sword +1: 9.0
+    location:
+      github_user: Gitjas
+      repository: Brages_Redemption
+      release: v9.1
+      asset: brages-redemption-brage-npc-9.1.iemod
+      replace:
+        - file_globs: ["baf/C#BrageD.baf", "baf/c#brage1.baf"]
+          replace: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",3200)'
+          with: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",420)'
+        - file_globs: ["baf/c#brage2.baf"]
+          replace: 'RealSetGlobalTimer("C#BE_LilarcorEquippedTimer","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("C#BE_LilarcorEquippedTimer","GLOBAL",600)'
+        - file_globs: ["crossmod/*.baf"]
+          replace: 'RealSetGlobalTimer("C#BE_BGQETimer","GLOBAL",1000)'
+          with: 'RealSetGlobalTimer("C#BE_BGQETimer","GLOBAL",120)'
+        - file_globs: ["dialogue/bg1.d", "dialogue/joining_bg1.d"]
+          replace: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",800)'
+          with: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",100)'
+        - file_globs: ["dialogue/joining_bg2.d"]
+          replace: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",1600)'
+          with: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",200)'
+        - file_globs: ["dialogue/joining_tob.d"]
+          replace: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",800)'
+          with: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",200)'
+  - name: c#husam
+    description : sod(+unfinished soa) npc, male shadow thief (LE), friendship, banters, quest, 7th party member mod
+    components:
+      - 0 # Husam NPC for SoD, BGT, BGII:EE, BGII:ToB, and EET
+      - 1 # Assign the mod's portrait and soundset to the original Husam in game
+      - 10 # Husam NPC: Crossmod Content
+      #- 20 # Alternative #1, by Acifer
+      - 21 # Default, by Acifer (included in main component)
+    installation:
+      general: main comp before grey, crossmod after brage
+    location:
+      github_user: Gitjas
+      repository: Husam_NPC
+      release: vBeta_230411
+      asset: husam-npc-for-bgt-bgsod-bgiiee-and-eet-beta_230411.iemod
+      replace:
+        - file_globs: ["scripts/c#husam_sva.baf"]
+          replace: 'RealSetGlobalTimer("C#Husam2_DialogTimer","GLOBAL",1800)'
+          with: 'RealSetGlobalTimer("C#Husam2_DialogTimer","GLOBAL",800)'
+        - file_globs: ["dialogues/husam_pid.d"]
+          replace: 'RealSetGlobalTimer("C#HusamDialogTimer","GLOBAL",2400)'
+          with: 'RealSetGlobalTimer("C#HusamDialogTimer","GLOBAL",600)'
+        - file_globs: ["scripts/c#husam_base.baf"]
+          replace: 'RealSetGlobalTimer("C#HusamDialogTimer","GLOBAL",900)'
+          with: 'RealSetGlobalTimer("C#HusamDialogTimer","GLOBAL",300)'
+        - file_globs: ["scripts/c#husam_base.baf"]
+          replace: 'RealSetGlobalTimer("C#HusamNPCBanterTimer","GLOBAL",1800)'
+          with: 'RealSetGlobalTimer("C#HusamNPCBanterTimer","GLOBAL",800)'
+        - file_globs: ["scripts/c#husam_base.baf"]
+          replace: 'RealSetGlobalTimer("C#HusamNPCBanterTimer","GLOBAL",3000)'
+          with: 'RealSetGlobalTimer("C#HusamNPCBanterTimer","GLOBAL",900)'
+        - file_globs: ["crossmod/husam_alternatives.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("C#Husam(?<c>.*)Timer","GLOBAL",1800\)'
+          with: 'RealSetGlobalTimer("C#Husam${c}Timer","GLOBAL",1800)'
+        - file_globs: ["dialogues/husam_sod.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("C#Husam(?<c>.*)Timer","GLOBAL",900\)'
+          with: 'RealSetGlobalTimer("C#Husam${c}Timer","GLOBAL",400)'
+  - name: c#greythedog
+    description: Grey the dog - BG1 companion, dog (fighter)
+    installation:
+      after: ACBre, ajantisbg1, ajantisbg2, bg1npc, bg2fixpack, bst, c#brage, c#brandock, c#husam, c#sodboabri, EET, JA#BGT_AdvPack, imoen_forever
+    components:
+      - 0 # Grey The Dog NPC
+      - 22 # portrait or 20/21
+    location:
+      github_user: Gibberlings3
+      repository: Grey_The_Dog
+      release: v9
+      asset: grey-the-dog-npc-9.iemod
+  - name: gavin
+    # will prompt for romance timer
+    components:
+      - 0  # Gavin NPC pour Tutu, BGT et BG:EE
+      - 1  # Gavin : Romance (contenu pour adultes)²
+      - 2  # Gavin : Flirts (contenu pour adultes)²
+      - 10 # Gavin : Dialogues inities par le joueur²
+    location:
+      github_user: Gibberlings3
+      repository: Gavin_BG
+      release: v14
+      asset: lin-gavin-v14.tar.gz
+      patch:
+        relative: patches/eet/gavin_bg1-romance-timer-15.diff
+        # there is no need to patch timers
+
+
+  - name: FinchNPC
+    description: BG1 companion, female gnome cleric long quest
+    components:
+      - 0
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Finch_NPC
+      release: v6.0
+      asset: finch-npc-mod-v6.0.iemod
+      patch:
+        relative: eet/finch-wait-here.diff
+  - name: Ishlilkamod
+    description: bg1/sod - female wizard slayer, good, romance, quest(x2)
+    components:
+      - 0 # Ishlilka mod for BGSoD and EET
+    location:
+      github_user: The-Gate-Project
+      repository: Ishlilka_The-Wizard-Slayer
+      branch: main
+      refresh: 5days
+      replace:
+        - file_globs: ["Dialogues/ishyJ.d"]
+          replace: 'RealSetGlobalTimer("IshyRomanceTimer","GLOBAL",3000)'
+          with: 'RealSetGlobalTimer("IshyRomanceTimer","GLOBAL",700)'
+        - file_globs: ["Scripts/ishyscrp.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("Ishy(?<t>[^""]+)","GLOBAL",([0-9]{4})\)'
+          with: 'RealSetGlobalTimer("Ishy${t}","GLOBAL",680)'
+        - file_globs: ["Dialogues/bdishy.d"]
+          replace: 'RealSetGlobalTimer("IshyTimer","GLOBAL",5600)'
+          with: 'RealSetGlobalTimer("IshyTimer","GLOBAL",900)'
+        - file_globs: ["Dialogues/ishyD.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("Ishy(?<t>[^""]+)","GLOBAL",([0-9]{4})\)'
+          with: 'RealSetGlobalTimer("Ishy${t}","GLOBAL",690)'
+        - file_globs: ["Scripts/cutcutscene/ishyscrp.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("Ishy(?<t>[^""]+)","GLOBAL",([0-9]{4})\)'
+          with: 'RealSetGlobalTimer("Ishy${t}","GLOBAL",720)'
+
+  # Skitia BG1 npcs
+  - name: Emily
+    components: ask
+    location:
+      github_user: Skitia
+      repository: Emily-BG1
+      branch: master
+      refresh: 3days
+      replace:
+        - file_globs: ["Dialogue/SoD/X32milyJ.d"]
+          replace: 'RealSetGlobalTimer("X32milyRealTalkTimer","GLOBAL",ONE_HOUR)' # 60 min
+          with: 'RealSetGlobalTimer("X32milyRealTalkTimer","GLOBAL",900)' # 15 min
+        - file_globs: ["Scripts/X3mily.baf", "Dialogue/X3milyJ.d"]
+          replace: 'RealSetGlobalTimer("X3milyTimer","GLOBAL",3200)' # 53 min
+          with: 'RealSetGlobalTimer("X32milyRealTalkTimer","GLOBAL",720)' # 12 min
+  - name: Helga
+    components: ask
+    location:
+      github_user: Skitia
+      repository: Helga-BG1
+      branch: master
+      refresh: 3days
+      patch:
+        relative: patches/eet/helga_bg1-defaultportrait-nomusic.diff
+      replace:
+        - file_globs: ["Dialogue/SoD/X32HelgJ.D"]
+          string: true
+          replace: 'RealSetGlobalTimer("X32HelgaRealTalskTimer","GLOBAL",ONE_HOUR)' # 60 min
+          with: 'RealSetGlobalTimer("X32HelgaRealTalkTimer","GLOBAL",900)' # 15 min
+        - file_globs: ["Dialogue/X3HelgaJ.D"]
+          string: true
+          replace: 'RealSetGlobalTimer("X3HelgaTalkTimer","GLOBAL",3100)' # 51 min
+          with: 'RealSetGlobalTimer("X3HelgaTalkTimer","GLOBAL",720)' # 12 min
+        - file_globs: ["Scripts/X3Helga.baf"]
+          string: true
+          replace: 'SetGlobalTimer("X3HelgaQuestTen","GLOBAL",TEN_DAYS)'
+          with: 'SetGlobalTimer("X3HelgaQuestTen","GLOBAL",FOUR_DAYS)'
+  - name: Kale
+    components: ask
+    location:
+      github_user: Skitia
+      repository: Kale-BG1
+      branch: master
+      refresh: 3days
+      patch:
+        relative: patches/eet/kale_bg1-nomusic.diff
+      replace:
+        - file_globs: ["Dialogue/SoD/X32KaleJ.d"]
+          replace: 'SetGlobalTimer("X32KaleGameTalkTimer","GLOBAL",THREE_DAYS\)'
+          with: 'SetGlobalTimer("X32KaleGameTalkTimer","GLOBAL",ONE_DAY)'
+  - name: Recorder
+    components: ask
+    location:
+      github_user: Skitia
+      repository: Recorder-BG1
+      branch: master
+      refresh: 3days
+      replace:
+        - file_globs: ["Dialogue/SoD/X32RecJ.d"]
+          replace: 'SetGlobalTimer("X32RecGameTalkTimer","GLOBAL",THREE_DAYS\)'
+          with: 'SetGlobalTimer("X32RecGameTalkTimer","GLOBAL",ONE_DAY)'
+  - name: Vienxay
+    description: bg1+sod, elf, female NE shadowmage, quest, approval system
+    components:
+      - 0 # Vienxay NPC for BG1EE
+    location:
+      github_user: Skitia
+      repository: Vienxay-BG1
+      branch: master
+      refresh: 3days
+      patch:
+        #prompt for portrait (1. Default)
+        relative: patches/eet/viexnay_bg1-defaultprotrait-nomusic.diff
+      replace:
+        - file_globs: ["Dialogue/SoD/X32VienJ.d"]
+          replace: 'SetGlobalTimer("X32VienGameTalkTimer","GLOBAL",THREE_DAYS\)'
+          with: 'SetGlobalTimer("X32RecGameTalkTimer","GLOBAL",ONE_DAY)'
+
+  # ArtemiusI NPCs
+  - name: Aura_BG1
+    components:
+      #- 0 # Aura NPC for Baldur's Gate: Enhanced Edition: 3.3
+    location:
+      github_user: ArtemiusI
+      repository: Aura_BG1
+      tag: v3.9a
+      patch:
+        relative: patches/aura_bg1-select-artificer_and_timers.diff
+    #prompt for class (1. Artificer)
+    #prompt for portrait (2. BG2 style)
+    disabled:
+      because : too different
+
+  # Lava NPCs
+  - name: Walahnan
+    description: mage in Ulgoth's beard, with quest, only until chapter 4 (included)
+    components:
+      - 0
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/Walahnan v2.00.zip
+      replace:
+        - file_globs: ["dialogue/L#SWALAJ.d", "dialogue/L#WALAHJ.d"]
+          replace: 'RealSetGlobalTimer("L#WalahnanUniquePIDTIME","GLOBAL",3800)'
+          with: 'RealSetGlobalTimer("L#WalahnanUniquePIDTIME","GLOBAL",800)'
+        - file_globs: ["scripts/L#SWALAH.baf", "scripts/L#WALAH.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("L#WalahnanFriendTime","GLOBAL",\d\d00\)'
+          with: 'RealSetGlobalTimer("L#WalahnanUniquePIDTIME","GLOBAL",800)'
+  - name: Bristlelick
+    description: bg1+sod gnoll npc (fighter kit) with talks and small quest
+    components:
+      - 0 #  Bristlelick the gnoll companion for BGEE: 2.0
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/Bristlelick v2.3.zip
+      replace:
+        - file_globs: ["scripts/l#2brist.baf", "scripts/l#brist.baf"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("L#Bristle(?<c>.*)","GLOBAL",1600\)'
+          with: 'RealSetGlobalTimer("L#Bristle${c}","GLOBAL",700)'
+        - file_globs: ["scripts/l#2brist.baf"]
+          replace: 'RealSetGlobalTimer("L#BristleTimeSoD","GLOBAL",3600)'
+          with: 'RealSetGlobalTimer("L#BristleTimeSoD","GLOBAL",1000)'
+        - file_globs: ["scripts/l#brist.baf"]
+          replace: 'RealSetGlobalTimer("L#BristleTime","GLOBAL",2000)'
+          with: 'RealSetGlobalTimer("L#BristleTime","GLOBAL",800)'
+
+  - name: IndiNPC
+    description: bg1 one-day NPC, half-elven, lawful good fighter/mage, banters, small quest
+    components:
+      - 0 # Indira PNJ
+      - 1 # Install Interjections for Indira (BETA)
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Indira_NPC
+      release: v15.1
+      asset: indira-npc-v15.1.iemod
+  - name: valerie
+    description: bg1 cowled wizard npc,friendship, no quest
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: Valerie_NPC
+      release: v1.2
+      asset: valerie-npc-for-bg-v1.2.iemod
+      replace:
+        - file_globs: ["scripts/t2val.baf", "dialogue/t2valj.d"]
+          regex: true
+          replace: 'RealSetGlobalTimer\("T2Val(?<c>.*)Timer","GLOBAL",2700\)'
+          with: 'RealSetGlobalTimer("T2Val${c}Timer","GLOBAL",900)'
+  - name: GlamNPCPack
+    description: |
+      bg1 npcs
+      - Vynd(drow ass., m)
+      - Littlun(Halfling arch., f)
+      - Moidre(Dwarwen Def, f)
+      - Dave(Talos, m)
+      - Flara(DD, f)
+    components:
+      - 0 # Glam's NPC Pack for BG:EE, BGT and BG TUTU
+    location:
+      github_user: Gibberlings3
+      repository: Glam-NPC-Pack
+      tag: v3.1
+      replace:
+        - file_globs: ["Dialogue/GV#LITT.d"]
+          replace: 'SetGlobalTimer("GV#LITTGnollsTimer","GLOBAL",ONE_DAY)'
+          with: 'SetGlobalTimer("GV#LITTGnollsTimer","GLOBAL",TEN_DAYS)'
+  - name: haiass
+    description: bg1, wolf follower
+    components:
+      - 0 # Haiass le Loup: v2.4
+      - 10 #  Haiass peut être ressuscité -> Pénalisation modérée (-4 Constitution temporairement): v2.4
+    location:
+      path: /home/mick/Games/modda-cache/static/haiass_v2_4.zip
+
+  - name: isra
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: Isra_NPC
+      release: v3.5
+      asset: isra-npc-for-bg-v3.5.iemod
+      patch:
+        relative: patches/isra_bg1_stay_after_mines.diff
+      replace:
+        - file_globs: ["dialogue/rh#israj.d"]
+          replace: 'RealSetGlobalTimer("rh#IsraTalksBG1Timer","GLOBAL",2700)'
+          with: 'RealSetGlobalTimer("rh#IsraTalksBG1Timer","GLOBAL",620)'
+  - name: ShukBG1EE
+    components:
+      - 0 # Mod de Shuk le gobelin - V 1.0
+    location:
+      github_user: 11jo
+      repository: ShukBGEE
+      branch: master
+      refresh: 1day
 
 
   - name: sodrtd
@@ -16,4 +432,4 @@
       release: v4.0
       asset: road-to-discovery-for-sod-4.0.iemod
 
-# end
+# BG1 NPCs end

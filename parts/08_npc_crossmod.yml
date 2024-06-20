@@ -1,0 +1,68 @@
+
+  #########
+  # Section: Crossmod
+  #########
+
+  - name: crossmodbg2
+    description: Crossmod Banter Pack
+    components:
+      - 0 # Crossmod Banter Pack for Shadows of Amn
+      - 1 # Crossmod Banter Pack for Throne of Bhaal
+      # - 2 # Crossmod Romance Conflicts
+    location:
+      github_user: Gibberlings3
+      repository: Crossmod_Banter_Pack_for_Baldurs_Gate_II
+      release: v24.1
+      asset: crossmod-banter-pack-for-baldurs-gate-ii-v24.1.iemod  # tgz truncates some file names
+  - name: adrian
+    description: Adrian crossmod
+    components:
+      - 20 # Adrian NPC - Crossmod content
+  - name: isra_bg2
+    description: Isra BG2 crossmod
+    components:
+      - 1 # crossmod with Adrian, Coran (Kulyok's mod), Dace, Nephele, Ninde, Tiax (Kulyok's mod) and Xan (Kulyok's mod)
+  - name: ajantisbg1
+    description: Ajantis BG1 crossmod
+    components:
+      - 30 # Ajantis SoD NPC: Crossmod Content
+  - name: c#brandock
+    description: Brandock the mage - crossmod
+    components:
+      - 10 # Brandock the Mage: Crossmod Content
+  - name: TS_sime
+    description: Tortured soul's Sime crossmod
+    components:
+      - 50 # Sime Crossmod: 0.8
+  - name: SmilingImpCrossBanterMod
+    components:
+      - 0 # Shar-Teel Banters: 1.4
+      # Garrick not installed
+      #- 2 # Garrick Banters: 1.4
+      - 16 # "Wilson Chonicles" Mod - Cross Banters: 1.4
+    location:
+      github_user: SpellholdStudios
+      repository: SmilingImpCrossBanterMod
+      release: v.1.7
+      asset: smiling-imps-cross-banter-mod-1.7.iemod
+  - name: "c#brage"
+    components:
+      - 10 # Brage's Redemption: Crossmod Content
+  - name: c#husam
+    installation:
+      after: ajantisbg1, ajantis_bg2, alternatives, c#brage, c#brandock, EET, gbthfkp, Imoen4ever, c#sodboabri
+      before: c#greythedog, EET_end
+    description : Husam npc crossmod
+    components:
+      - 10 # Husam NPC: Crossmod Content
+  - name: c#greythedog
+    description: Grey the dog
+    components:
+      - 10 # Grey the Dog: Crossmod Content
+  - name: nephele
+    description: nephele crossmod
+    components:
+      - 2 # Install Haer'Dalis Romance crossmod content
+
+
+  # end crossmod

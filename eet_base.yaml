@@ -113,6 +113,18 @@ modules:
       release: "1.8"
       asset: turnabout-v1.8.iemod
 
+  - name: wheels # nos
+    description: Wheels Of Prophecy
+    components:
+      - 0 # Les Roues de la Prophetie (The Wheels of Prophecy): v8.5
+    location:
+      github_user: Gibberlings3
+      repository: WheelsOfProphecy
+      release: v8.5
+      asset: lin-wheels-v8.5.tar.gz
+    disabled:
+      because: According to DW, needs maintenance
+
   - name: ub # ok
     description: Unfinished Business
     components:
@@ -546,8 +558,8 @@ modules:
     location:
       github_user: TotalMilk90
       repository: gorgon
-      release: v4.4
-      asset: gorgon-v4.4.iemod
+      release: v4.5
+      asset: gorgon-v4.5.iemod
   - name: Blackhearts EET # ok
     components: ask
     location:
@@ -580,15 +592,17 @@ modules:
       branch: main
       refresh: 3days
 
-  #- name: BG_Travel
-  #  description: New travel system between Baldur's Gate City areas
-  #  comment: Original location http://athkatla.cob-bg.pl/download.php?id=1595 (BG_Travel_v2.1.rar)
-  #  components:
-  #    - 66 # New travel system between Baldur's Gate City areas -> Full version of component
-  #  location:
-  #    github_user: mleduque
-  #    repository: BG_Travel
-  #    tag: v2.1
+  - name: BG_Travel
+    description: New travel system between Baldur's Gate City areas
+    comment: Original location http://athkatla.cob-bg.pl/download.php?id=1595 (BG_Travel_v2.1.rar)
+    components:
+      - 66 # New travel system between Baldur's Gate City areas -> Full version of component
+    location:
+      github_user: mleduque
+      repository: BG_Travel
+      tag: v2.1
+    disabled:
+      because: not that good
 
   - name: fadingpromises # ok
     components:
@@ -1165,47 +1179,10 @@ modules:
       branch: no_spells
       refresh: 3days
 
-
-  # According to DW, needs maintenance
-  #- name: wheels
-  #  description: Wheels Of Prophecy
-  #  components:
-  #    - 0 # Les Roues de la Prophetie (The Wheels of Prophecy): v8.5
-  #  location:
-  #    github_user: Gibberlings3
-  #    repository: WheelsOfProphecy
-  #    release: v8.5
-  #    asset: lin-wheels-v8.5.tar.gz
-
-
     ###########################
     ## NPC
     ###########################
 
-
-
-  - name: w_packmule
-    components:
-      - 3 # Mule de bat (bgee) -> Fontes sans fond
-    location:
-      path: /home/mick/Games/modda-cache/static/w_packmule-v1.4b.zip
-  - name: butchery
-    description: Butchery - components that must be installed before SCS
-    components:
-      - 10 # Combat contre Tazok et DigDag revise par DrAzTiK [a installer avant Stratagems]: v5.0.0
-      - 11 # Reequilibrage de certaines creatures generiques [a installer avant Stratagems]: v5.0.0
-      - 12 # Reequilibrage de Tazok et de DigDag [a installer avant Stratagems]: v5.0.0
-      - 20 # Rencontre avec Groumf et Bourrinos devant le donjon de Firkraag [a installer avant Stratagems]: v5.0.0
-      - 21 # Rencontre avec Groumf et Bourrinos a Brynnlaw [a installer avant Stratagems]: v5.0.0
-      - 22 # Rencontre avec Groumf et Bourrinos dans les Trefonds Obscurs [a installer avant Stratagems]: v5.0.0
-      - 30 # Revisited fight against Wraith Sarevok in the Abyss
-      - 32 # Musiques de combat dans les zones sans musique [a installer avant ou apres Stratagems]: v5.0.0
-      - 40 # Creatures de DrAzTiK [a installer avant Stratagems, composant indispensable pour les suivants !]: v5.0.0
-    location:
-      github_user: GwendolyneFreddy
-      repository: butchery
-      release: v5.0.0
-      asset: butchery-v5.0.0.iemod
 
 
   #########
@@ -1213,7 +1190,7 @@ modules:
   #########
 
   # Jastey NPCs
-  - name: ACBre
+  - name: ACBre # OK
     description: Ascalon's Breagar - dwarf fighter, long quest
     installation:
       general: for crossmod
@@ -1244,7 +1221,7 @@ modules:
       patch:
         relative: eet/breagar-wait-here.diff
         # components 10-13 change timers
-  - name: c#brandock
+  - name: c#brandock # OK
     description: Brandock the mage - male mage, long quest, 7th party member mode
     installation:
       after: >
@@ -1286,7 +1263,7 @@ modules:
         - file_globs: ["c#brandock.tp2"]
           replace: 'APPEND ~gtimes.ids~ ~1800 C#BRANDOCK_TIMERSHORT~ UNLESS ~C#BRANDOCK_TIMERSHORT~'
           with: 'APPEND ~gtimes.ids~ ~900 C#BRANDOCK_TIMERSHORT~ UNLESS ~C#BRANDOCK_TIMERSHORT~'
-  - name: "c#brage"
+  - name: "c#brage" # OK
     description: bg1, brage redemption
     installation:
       general: for crossmod content
@@ -1319,7 +1296,7 @@ modules:
         - file_globs: ["dialogue/joining_tob.d"]
           replace: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",800)'
           with: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",200)'
-  - name: c#husam
+  - name: c#husam # OK
     description : sod(+unfinished soa) npc, male shadow thief (LE), friendship, banters, quest, 7th party member mod
     components:
       - 0 # Husam NPC for SoD, BGT, BGII:EE, BGII:ToB, and EET
@@ -1358,7 +1335,7 @@ modules:
           regex: true
           replace: 'RealSetGlobalTimer\("C#Husam(?<c>.*)Timer","GLOBAL",900\)'
           with: 'RealSetGlobalTimer("C#Husam${c}Timer","GLOBAL",400)'
-  - name: c#greythedog
+  - name: c#greythedog # OK
     description: Grey the dog - BG1 companion, dog (fighter)
     installation:
       after: ACBre, ajantisbg1, ajantisbg2, bg1npc, bg2fixpack, bst, c#brage, c#brandock, c#husam, c#sodboabri, EET, JA#BGT_AdvPack, imoen_forever
@@ -1370,7 +1347,7 @@ modules:
       repository: Grey_The_Dog
       release: v9
       asset: grey-the-dog-npc-9.iemod
-  - name: gavin
+  - name: gavin # OK
     # will prompt for romance timer
     components:
       - 0  # Gavin NPC pour Tutu, BGT et BG:EE
@@ -1387,7 +1364,7 @@ modules:
         # there is no need to patch timers
 
 
-  - name: FinchNPC
+  - name: FinchNPC # ok
     description: BG1 companion, female gnome cleric long quest
     components:
       - 0
@@ -1398,7 +1375,7 @@ modules:
       asset: finch-npc-mod-v6.0.iemod
       patch:
         relative: eet/finch-wait-here.diff
-  - name: Ishlilkamod
+  - name: Ishlilkamod # ok
     description: bg1/sod - female wizard slayer, good, romance, quest(x2)
     components:
       - 0 # Ishlilka mod for BGSoD and EET
@@ -1428,7 +1405,7 @@ modules:
           with: 'RealSetGlobalTimer("Ishy${t}","GLOBAL",720)'
 
   # Skitia BG1 npcs
-  - name: Emily
+  - name: Emily # ok
     components: ask
     location:
       github_user: Skitia
@@ -1442,7 +1419,7 @@ modules:
         - file_globs: ["Scripts/X3mily.baf", "Dialogue/X3milyJ.d"]
           replace: 'RealSetGlobalTimer("X3milyTimer","GLOBAL",3200)' # 53 min
           with: 'RealSetGlobalTimer("X32milyRealTalkTimer","GLOBAL",720)' # 12 min
-  - name: Helga
+  - name: Helga # ok
     components: ask
     location:
       github_user: Skitia
@@ -1464,7 +1441,7 @@ modules:
           string: true
           replace: 'SetGlobalTimer("X3HelgaQuestTen","GLOBAL",TEN_DAYS)'
           with: 'SetGlobalTimer("X3HelgaQuestTen","GLOBAL",FOUR_DAYS)'
-  - name: Kale
+  - name: Kale # ok
     components: ask
     location:
       github_user: Skitia
@@ -1477,7 +1454,7 @@ modules:
         - file_globs: ["Dialogue/SoD/X32KaleJ.d"]
           replace: 'SetGlobalTimer("X32KaleGameTalkTimer","GLOBAL",THREE_DAYS\)'
           with: 'SetGlobalTimer("X32KaleGameTalkTimer","GLOBAL",ONE_DAY)'
-  - name: Recorder
+  - name: Recorder # ok
     components: ask
     location:
       github_user: Skitia
@@ -1488,7 +1465,7 @@ modules:
         - file_globs: ["Dialogue/SoD/X32RecJ.d"]
           replace: 'SetGlobalTimer("X32RecGameTalkTimer","GLOBAL",THREE_DAYS\)'
           with: 'SetGlobalTimer("X32RecGameTalkTimer","GLOBAL",ONE_DAY)'
-  - name: Vienxay
+  - name: Vienxay # ok
     description: bg1+sod, elf, female NE shadowmage, quest, approval system
     components:
       - 0 # Vienxay NPC for BG1EE
@@ -1506,7 +1483,7 @@ modules:
           with: 'SetGlobalTimer("X32RecGameTalkTimer","GLOBAL",ONE_DAY)'
 
   # ArtemiusI NPCs
-  - name: Aura_BG1
+  - name: Aura_BG1 # ok but disabled
     components:
       #- 0 # Aura NPC for Baldur's Gate: Enhanced Edition: 3.3
     location:
@@ -1521,7 +1498,7 @@ modules:
       because : too different
 
   # Lava NPCs
-  - name: Walahnan
+  - name: Walahnan # ok
     description: mage in Ulgoth's beard, with quest, only until chapter 4 (included)
     components:
       - 0
@@ -1535,7 +1512,7 @@ modules:
           regex: true
           replace: 'RealSetGlobalTimer\("L#WalahnanFriendTime","GLOBAL",\d\d00\)'
           with: 'RealSetGlobalTimer("L#WalahnanUniquePIDTIME","GLOBAL",800)'
-  - name: Bristlelick
+  - name: Bristlelick # ok
     description: bg1+sod gnoll npc (fighter kit) with talks and small quest
     components:
       - 0 #  Bristlelick the gnoll companion for BGEE: 2.0
@@ -1553,7 +1530,7 @@ modules:
           replace: 'RealSetGlobalTimer("L#BristleTime","GLOBAL",2000)'
           with: 'RealSetGlobalTimer("L#BristleTime","GLOBAL",800)'
 
-  - name: IndiNPC
+  - name: IndiNPC # ok
     description: bg1 one-day NPC, half-elven, lawful good fighter/mage, banters, small quest
     components:
       - 0 # Indira PNJ
@@ -1563,7 +1540,7 @@ modules:
       repository: Indira_NPC
       release: v15.1
       asset: indira-npc-v15.1.iemod
-  - name: valerie
+  - name: valerie # ok
     description: bg1 cowled wizard npc,friendship, no quest
     components: [0]
     location:
@@ -1576,7 +1553,7 @@ modules:
           regex: true
           replace: 'RealSetGlobalTimer\("T2Val(?<c>.*)Timer","GLOBAL",2700\)'
           with: 'RealSetGlobalTimer("T2Val${c}Timer","GLOBAL",900)'
-  - name: GlamNPCPack
+  - name: GlamNPCPack # ok
     description: |
       bg1 npcs
       - Vynd(drow ass., m)
@@ -1594,7 +1571,7 @@ modules:
         - file_globs: ["Dialogue/GV#LITT.d"]
           replace: 'SetGlobalTimer("GV#LITTGnollsTimer","GLOBAL",ONE_DAY)'
           with: 'SetGlobalTimer("GV#LITTGnollsTimer","GLOBAL",TEN_DAYS)'
-  - name: haiass
+  - name: haiass # ok
     description: bg1, wolf follower
     components:
       - 0 # Haiass le Loup: v2.4
@@ -1602,7 +1579,7 @@ modules:
     location:
       path: /home/mick/Games/modda-cache/static/haiass_v2_4.zip
 
-  - name: isra
+  - name: isra # ok
     components: [0]
     location:
       github_user: SpellholdStudios
@@ -1615,7 +1592,7 @@ modules:
         - file_globs: ["dialogue/rh#israj.d"]
           replace: 'RealSetGlobalTimer("rh#IsraTalksBG1Timer","GLOBAL",2700)'
           with: 'RealSetGlobalTimer("rh#IsraTalksBG1Timer","GLOBAL",620)'
-  - name: ShukBG1EE
+  - name: ShukBG1EE # ok
     components:
       - 0 # Mod de Shuk le gobelin - V 1.0
     location:
@@ -1623,6 +1600,27 @@ modules:
       repository: ShukBGEE
       branch: master
       refresh: 1day
+
+
+  - name: sodrtd # ok
+    description: Road To Discovery
+    installation:
+      general: after any mod that adds reply options or transactions to SoD, like NPC mods or story tweak mods.
+      after: themed_tweaks, c#sodtweaks
+    components: ask
+      #- 0 # Composant principal : Systeme de Pistage: 0.4 (Beta)
+      #- 10 # Changements dans les dialogues du jeu pour plus de coherence.: 0.4 (Beta)
+      #- 20 # Les officiers sont plus attentifs: 0.4 (Beta)
+      #- 30 # Donnez au PC des options de reponse avisee: 0.4 (Beta)
+      ## bug, won't install ATM
+      ##-40 # PC Can Tell the Officers
+      #- 60 #Points d'information supplementaires: 0.4 (Beta)
+    location:
+      github_user: Gibberlings3
+      repository: Road_To_Discovery_for_SoD
+      release: v4.0
+      asset: road-to-discovery-for-sod-4.0.iemod
+
 
 
   #########
@@ -1655,7 +1653,7 @@ modules:
     disabled:
       because: using ImoenIsStone instead
 
-  - name: SkitiaNPCs
+  - name: SkitiaNPCs #ok
     description: bg2 version of Skitia NPCs
     components: ask
     location:
@@ -1697,7 +1695,7 @@ modules:
           with: 'RealSetGlobalTimer("X3${c}Timer","GLOBAL",960)'
 
   # Lava NPCs
-  - name: nephele
+  - name: nephele # ok
     description: SoA companion, halfling cleric of Yondalla, dialogues, no quest
     components:
       - 0 # Nephele NPC Mod for BGII: SoA & ToB
@@ -1712,7 +1710,7 @@ modules:
           regex: true
           replace: 'RealSetGlobalTimer\("LK#Neph(?<c>.*)TalksTimer","GLOBAL",5400\)'
           with: 'RealSetGlobalTimer("LK#Neph${c}TalksTimer","GLOBAL",900)'
-  - name: Petsy
+  - name: Petsy # ok
     description: SoA+ToB(limited) companion, halfling bard, romance
     installation:
       general: must be after nephele for crossmod component
@@ -1735,7 +1733,7 @@ modules:
           regex: true
           replace: 'RealSetGlobalTimer\("L3(?<c>.*)Time","GLOBAL",1\d00\)'
           with: 'RealSetGlobalTimer("L3${c}Time","GLOBAL",450)'
-  - name: Yvette
+  - name: Yvette # ok
     description: "Colours of Infinity: Yvette Romance" - SoA+ToB companion, quest, romance
     components:
       - 0 # Yvette Romance - BG2 Romance Character
@@ -1756,7 +1754,7 @@ modules:
           string: true
           replace: 'RealSetGlobalTimer("YvetteRomanceTime","GLOBAL",1800)'
           with: 'RealSetGlobalTimer("YvetteRomanceTime","GLOBAL",700)'
-  - name: WalahnanBG2
+  - name: WalahnanBG2 # ok
     components:
       - 0 # Walahnan NPC for BG2EE: 0.92
     location:
@@ -1771,7 +1769,7 @@ modules:
         - file_globs: ["scripts/L#2WH25.baf"]
           replace: 'RealSetGlobalTimer("L#2WalahToBFT","GLOBAL",3000)'
           with: 'RealSetGlobalTimer("L#2WalahToBFT","GLOBAL",900)'
-  - name: WilsonChronicles
+  - name: WilsonChronicles # ok
     components:
       - 0 # Wilson Chronicles - expansion for our favorite bear companion: 1.9
     location:
@@ -1792,7 +1790,7 @@ modules:
         - file_globs: ["baf/wilson25_append.baf"]
           replace: 'RealSetGlobalTimer("L#WilsonFriendTimeToB","GLOBAL",1600)'
           with: 'RealSetGlobalTimer("L#WilsonFriendTimeToB","GLOBAL",800)'
-  - name: Fhaugy
+  - name: Fhaugy # ok
     description: Soa+ToB, neutral half-orc monk, personal quests, friendship, romance
     components:
       - 0 # Fhaugy - Baldur's Gate 2: EE NPC
@@ -1808,7 +1806,7 @@ modules:
           regex: true
           replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",1\d00\)'
           with: 'RealSetGlobalTimer("${c}","GLOBAL",340)'
-  - name: SkieCost
+  - name: SkieCost # ok
     description: >
       Skie: The Cost of One Girl’s Soul
       The mod gives the player a chance to continue Skie's plot that began in Siege of Dragonspear.
@@ -1844,29 +1842,29 @@ modules:
         - file_globs: ["scripts/l#2sd25.baf"]
           replace: 'RealSetGlobalTimer("L#2SDSkieComparisonTime","GLOBAL",8000)'
           with: 'RealSetGlobalTimer("L#2SDSkieComparisonTime","GLOBAL",1200)'
-  - name: FaldornBG2
+  - name: FaldornBG2 # ok
     description: return of faldorn in bg2, after the druid grove part, quests, romance
     components:
       - 0 # Faldorn NPC for BG2EE
       - 1 # Faldorn NPC for BG2EE: Player-Initiated Dialogues (PIDs)
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/FaldornBG2 v1.3.zip
-  - name: Lhannd
+  - name: Lhannd # ok
     description: male CG fallen ranger, quest, friendship, romance
     components: ask
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/Lhannd v1.5.zip
-  - name: fyalvara
+  - name: fyalvara # ok
     description: female human warrioress (rashemen), friendship, quest
     components: ask
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/fyalvara v1.1.zip
-  - name: verrBG2
+  - name: verrBG2 # ok
     description: soa, same as above, romance
     components: ask
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/VerrBG2 v2.1.zip
-  - name: Foundling
+  - name: Foundling # ok
     description: "Colours of Infinity: Foundling" - Male ShadowAdpet, NE ; quest, dialogues, no romance
     components:
       - 0   # Foundling
@@ -1874,7 +1872,7 @@ modules:
       path: /home/mick/Games/modda-cache/static/weaselmods/Foundling v5.4.zip # selectskit
       patch:
         relative: patches/foundling-class.diff
-  - name: willowisp
+  - name: willowisp # ok
     description: SoA - Will, the undead witchlight shaman, adds shaman stronghold, shaman kit, mini-quests + stronghold quests
     components: # 4 later
       - 0 # Will NPC, shaman stronghold and new shaman kit for BG2EE
@@ -1902,14 +1900,14 @@ modules:
         - file_globs: [ "willowisp/baf/l0will25.baf" ]
           replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",1800)'
           with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",700)'
-  - name: Dvaradime
+  - name: Dvaradime # ok
     description: BG2 npc - dwarven fighter/mage/thief, quest
     components: ask
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/Dvaradime v1.4.zip
 
   # ArtemiusI NPCs
-  - name: paina
+  - name: paina # ok
     components:
       - 0 # Pai'Na NPC for BG:EE
       - 1 # Alternate Portrait
@@ -1917,7 +1915,7 @@ modules:
       github_user: ArtemiusI
       repository: Pai-Na-NPC-mod-for-BG2-EE
       tag: v1.9
-  - name: Sirene_BG2
+  - name: Sirene_BG2 # ok
     components: ask
       #- 0   # Sirene NPC for BG2:EE
       #- 2 # Choose an portrait for Sirene (check mod folder for portraits) -> Alternate Light Armor portrait by Sirick
@@ -1927,7 +1925,7 @@ modules:
       tag: v2.1
       patch:
         relative: eet/sirene-bg2.diff
-  - name: quieter_sirene
+  - name: quieter_sirene # ok
     components:
       - 0
     location:
@@ -1936,7 +1934,7 @@ modules:
       tag: v0.9
 
   # Jastey NPCs
-  - name: gavin_bg2
+  - name: gavin_bg2 # ok
     # will prompt for romance timer
     components:
       - 0 # Gavin for BG2
@@ -1949,7 +1947,7 @@ modules:
       asset: lin-gavin_bg2-v23.tar.gz
       patch:
         relative: patches/eet/gavin_bg2_romance-timer-15.diff
-  - name: "c#solaufein"
+  - name: "c#solaufein" # ok
     components:
       - 0 # Solaufein's Rescue: Jastey's Solaufein NPC for BGII: 3.2
       - 1 # Give Solaufein in Ust Natha the Mod's Portrait: 3.2
@@ -1959,7 +1957,7 @@ modules:
       release: v5.0
       asset:  solaufeins-rescue-jasteys-solaufein-npc-mod-for-bgii-45.0.iemod
 
-  - name: arath
+  - name: arath # ok
     description: bg2 druid npc with romance+friendship and quest (late  soa)
     components: [0]
     location:
@@ -1980,7 +1978,7 @@ modules:
           regex: true
           replace: 'RealSetGlobalTimer\("LK#Arath(?<c>.*)Timer","GLOBAL",900\)'
           with: 'RealSetGlobalTimer("LK#Arath${c}Timer","GLOBAL",300)'
-  - name: adrian
+  - name: adrian # ok
     description: bg2 sorcerer npc with romance+friendship and encounters
     components:
       # - 0 # Adrian is a Sorcerer
@@ -2025,7 +2023,7 @@ modules:
         - file_globs: ["adrian/dialogue/rh#quest.d"]
           replace: 'SetGlobalTimer("rh#DamarovReturnsTimer","GLOBAL",TEN_DAYS)'
           with: 'SetGlobalTimer("rh#DamarovReturnsTimer","GLOBAL",FIVE_DAYS)'
-  - name: evandra
+  - name: evandra # ok
     description: >
       Illusionist for soa+tob
       Alters knights of Solamnia content + quest in underdark
@@ -2057,7 +2055,7 @@ modules:
           regex: true
           replace: 'RealSetGlobalTimer("rh#(?<c>.*)","GLOBAL",300)'
           with: 'RealSetGlobalTimer("rh#${c},"GLOBAL",120)'
-  - name: sarahtob
+  - name: sarahtob # ok
     description: bg2 ranger npc, romance (f/f), friendhsip, quest, encounter
     components:
       - 0 # Mod Sarah NPC Romance pour BG2:ToB: 6
@@ -2075,7 +2073,7 @@ modules:
           regex: true
           replace: 'RealSetGlobalTimer\("K#Sarah(?<c>)","GLOBAL",1500\)'
           with: 'RealSetGlobalTimer("K#Sarah${c}","GLOBAL",540)'
-  - name: aurenaseph
+  - name: aurenaseph # ok
     description: bg2 fighter npc, romance (f/nalia), banters
     components:
       - 0 # Auren Aseph pour BG2:ToB: v12
@@ -2084,7 +2082,7 @@ modules:
       repository: AurenAseph
       release: v12
       asset: lin-aurenaseph-v12.zip
-  - name: tyrisflare
+  - name: tyrisflare # ok
     description: bg2+tob - female fighter/mage, quest, romance
     components:
       - 0 # Tyris Flare NPC: v9
@@ -2102,7 +2100,7 @@ modules:
         - file_globs: ["dialogue/expflirts.d", "dialogue/flirts.d", "scripts/g#tyris.baf", "scripts/g#tyrs25.baf"]
           replace: 'RealSetGlobalTimer("G#TF.TyrisFlirt","LOCALS",900)'
           with: 'RealSetGlobalTimer("G#TF.TyrisFlirt","LOCALS",310)'
-  - name: navarra
+  - name: navarra # ok
     description: bg2 - human, female barb, quest, banters, frienship, romance
     components:
       - 0 # Navarra for BG2
@@ -2131,7 +2129,7 @@ modules:
           regex: true
           replace: 'RealSetGlobalTimer\("KK(?<c>[^"]+)","GLOBAL",300\)'
           with: 'RealSetGlobalTimer("KK${c}","GLOBAL",120)'
-  - name: luxleysoa
+  - name: luxleysoa # ok
     description: soa - playwright (wiz) + monk npc, both male, quest, friendship, romance, quest
     components:
       - 0 # Luxley Family Mod for BGII:SoA: v2.0.0
@@ -2153,7 +2151,7 @@ modules:
         - file_globs: ["dialogues/fhland.d"]
           replace: 'RealSetGlobalTimer("FHLAndDarkTime","GLOBAL",900)'
           with: 'RealSetGlobalTimer("FHLAndDarkTime","GLOBAL",470)'
-  - name: Fade
+  - name: Fade # ok
     description: chaotic neutral Fey'ri Shadow Thief, romance, 2 quests
     components:
       - 0 # Fade: An NPC for Baldur's Gate II: SoA and ToB
@@ -2195,7 +2193,7 @@ modules:
         - file_globs: ["Scripts/E3Fade25.baf"]
           replace: 'RealSetGlobalTimer("E3BABYTALKTIMER","GLOBAL",2000)'
           with: 'RealSetGlobalTimer("E3BABYTALKTIMER","GLOBAL",300)'
-  - name: dace
+  - name: dace # ok
     description: Chaotic Neutral human female bounty hunter, friendship, banters, romance
     components:
       - 0 # Dace Linton NPC Mod for BG2:SoA & ToB: v5
@@ -2218,7 +2216,7 @@ modules:
           regex: true
           replace: 'RealSetGlobalTimer\("T#Dace(?<c>[^"]+")Timer","GLOBAL",900\)'
           with: 'RealSetGlobalTimer("T#Dace${c}Timer","GLOBAL",230)'
-  - name: hubelpot
+  - name: hubelpot # ok
     description: bg2+tob, male druid npc, banters, quest
     components:
       - 1 # Hubelpot Thistledown, the Vegetable Merchant NPC mod -> Hubelpot is a Village Druid (alternate kit): v2.1.0
@@ -2227,7 +2225,7 @@ modules:
       repository: Hubelpot_the_Vegetable_Merchant_NPC
       release: v2.1.0
       asset: hubelpot-the-vegetable-merchant-npc-v2.1.0.iemod
-  - name: vladsime
+  - name: vladsime # ok
     description: Tortured Souls - Sime ; SoA only, female cleric/ranger, banters, romance
     components:
       - 0 # Vlad's Sime NPC: 0.8
@@ -2248,7 +2246,7 @@ modules:
         - file_globs: ['main/scripts/*.baf']
         - replace: 'RealSetGlobalTimer("ttSimeDreamBanterTimer","GLOBAL",3600)'
           with: 'RealSetGlobalTimer("ttSimeDreamBanterTimer","GLOBAL",620)'
-  - name: Kelsey
+  - name: Kelsey # ok
     description: soa+tob, NG male sorcerer, romance, dialogue, imoen/nalia romance, quest
     components:
       - 1 # Kelsey
@@ -2265,7 +2263,7 @@ modules:
         - file_globs: ["baf/soa/j#klsy.baf"]
           replace: 'RealSetGlobalTimer("J#KelseyNonRomance","GLOBAL",2250)'
           with: 'RealSetGlobalTimer("J#KelseyNonRomance","GLOBAL",450)'
-  - name: Keto
+  - name: Keto # ok
     description: soa only, NG female bard, dialongue, banter, quest (no romance)
     installation:
       after: kelsey
@@ -2287,7 +2285,7 @@ modules:
         - file_globs: ["d/bfwketo.d"]
           replace: 'RealSetGlobalTimer("PGKetoMockKeldornTimer","GLOBAL",3000)'
           with: 'RealSetGlobalTimer("PGKetoMockKeldornTimer","GLOBAL",470)'
-  - name: Dusk
+  - name: Dusk # ok
     description: soa, male wizard slayer, friendship, dialog, quests
     components: ask
     location:
@@ -2295,7 +2293,7 @@ modules:
       repository: NPC_Dusk_MOD
       release: v1.5.0
       asset:  NPC_Dusk_MOD.zip
-  - name: btl
+  - name: btl # ok
     description: Beyond the Law
     detailed_description: 2 NPCs, Kova (CG half-elf mage/thief) & Kiyone (LG half-elf archer) + quest
     components:
@@ -2308,7 +2306,7 @@ modules:
       asset: beyond-the-law-v2.0.0.iemod
       replace:
         - file_globs: ""
-  - name: TheBeaurinLegacy
+  - name: TheBeaurinLegacy # ok
     components:
       - 1000 # The Beaurin Legacy for BG2:SoA & ToB & BGII:EE
       - 3010 # Minyae's Portrait -> Change Minyae's portrait to alternative by TamikaProud at DeviantArt
@@ -2330,7 +2328,7 @@ modules:
         - file_glob: ['Scripts/ToB/QI#M25S.baf']
           replace: 'RealSetGlobalTimer("QI#MiTimerToB","GLOBAL",3600)'
           with: 'RealSetGlobalTimer("QI#MiTimerToB","GLOBAL",510)'
-  - name: DjinniCompanion
+  - name: DjinniCompanion # ok
     description: Afaaq, the Djinni Companion v2.9
     components:
       - 0   # Afaaq, le compagnon Djinn -> Version complete (avec quetes, conversations et plus encore)
@@ -2341,7 +2339,7 @@ modules:
       repository: DjinniCompanion
       release: v2.10
       asset: A7-DjinniCompanion-v2.10.iemod
-  - name: isra_bg2
+  - name: isra_bg2 # ok
     description: Isra Ghadir, a cavalier paladin of Sune Firehair - soa+tob, friendship, romance, encounters
     components:
       - 0 # Isra NPC for BGII
@@ -2368,7 +2366,7 @@ modules:
           regex: true
           replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",9\d\d\)'
           with: 'RealSetGlobalTimer("${c}","GLOBAL",400)'
-  - name: amber
+  - name: amber # ok
     description: SoA, tiefling rogue of a chaotic good alignment - friendship, romance, 3 mini-quests
     components:
       - 0 # Amber the NPC MOD
@@ -2388,7 +2386,7 @@ modules:
         - file_globs: [ "dialogs/m#amber.d" ]
           replace: 'RealSetGlobalTimer("M#AmberQuestTime","GLOBAL",2500)'
           with: 'RealSetGlobalTimer("M#AmberQuestTime","GLOBAL",500)'
-  - name: ninde
+  - name: ninde # ok
     description: SoA+ToB, Neutral Evil elven necromancer, friendship, romance, encounter
     components:
       - 0 # Ninde NPC Mod for BGII
@@ -2411,7 +2409,7 @@ modules:
         - file_glob: ['scripts/lk#ni25.baf']
           replace: 'RealSetGlobalTimer("LK#NindeAmkethranTimer","GLOBAL",900)'
           with: 'RealSetGlobalTimer("LK#NindeAmkethranTimer","GLOBAL",300)'
-  - name: xulaye
+  - name: xulaye # ok
     components:
       - 0 # Xulaye NPC Mod for BG2:SoA
       - 1 # Xulaye's Player Initiated Dialogues
@@ -2419,13 +2417,15 @@ modules:
     location:
       http: http://europe.iegmc.net/xulaye/Xulaye%20v2.0.zip
       rename: Xulaye_v2.0.zip
-  - name: Tashia
+  - name: Tashia # ok
     components: ask
     location:
       file: /home/mick/Games/modda-cache/static/tashia_remix_v1.4.rar
+      alt:
+        http: http://america.iegmc.net/tashia/tashia_remix_v1.4.rar
     disabled:
       because: no time to examine right now
-  - name: Kitanya
+  - name: Kitanya # ok
     components: ask
     location:
       github_user: GwendolyneFreddy
@@ -2436,7 +2436,7 @@ modules:
       because: no time to examine right now
 
   # one day npcs
-  - name: allison
+  - name: allison # ok
     description: bg2 - onedays npc, TN female druid, interjection, banter
     components:
       - 0 # Allison (One-Day NPC)
@@ -2445,7 +2445,7 @@ modules:
       repository: Allison_One-Day_NPC
       release: v1.8
       asset: AllisonV15MacOSX.zip
-  - name: anishai
+  - name: anishai # ok
     description: SoA, one-day npc, modifies existing npc from Mae'Var's guildhouse, CN female monk
     components:
       - 0 # Anishai one-day NPC: v3
@@ -2457,7 +2457,7 @@ modules:
 
   # This block with bg1 imported npcs should be near the endsot bg1npcsoa can
   # selectively disable those that are already present
-  - name: ajantisbg2
+  - name: ajantisbg2 # ok
     components:
       - 0  # Sir Ajantis NPC for BGII
       - 1  # Install the unique BG(II):EE BAM for Ajantis' Family Shield
@@ -2465,7 +2465,7 @@ modules:
       - 42 # Select Ajantis' Friendship Dialogues and Romance Speed: -> Speed: 30 minutes real time minimum between Dialogues
     location:
       path: /home/mick/Games/modda-cache/static/lin-ajantisbg2-v20.zip
-  - name: xan
+  - name: xan # ok
     description: Xan NPC for BG2 - friendship, romance
     components:
       - 0
@@ -2491,7 +2491,7 @@ modules:
           regex: true
           replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",1\d\d\d\)'
           with: 'RealSetGlobalTimer("${c}","GLOBAL",400)'
-  - name: yeslicknpc
+  - name: yeslicknpc # ok
     description: transposes bg1 dwarf in bg2 - banters, dialogue, no quest
     components:
       - 1
@@ -2500,7 +2500,7 @@ modules:
       repository: Yeslick_NPC
       release: v5.0
       asset: yeslick-npc-v5.0.iemod
-  - name: Branwen
+  - name: Branwen # ok
     description: bg2+tob, adds branwen, friendship, romance, pid, banters, interjections
     components: [0]
     location:
@@ -2538,7 +2538,7 @@ modules:
         - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
           replace: 'RealSetGlobalTimer("O#BranFlirtTimerToB","GLOBAL",300)' # 5min
           with: 'RealSetGlobalTimer("O#BranFlirtTimerToB","GLOBAL",180)' # 3min
-  - name: alora
+  - name: alora # ok
     description: alora in bg2, minimal npc with some banter and no quest
     components:
       - 0 # Alora PNJ de Chosen of Mystra: 2.0
@@ -2549,7 +2549,7 @@ modules:
       asset: alora-npc-for-bg2-2.0.iemod
     disabled:
       because: bare-bone npc, will use bg1npcsoa version
-  - name: Coran
+  - name: Coran # ok
     description: Coran for bg2+tob, male elven fighter/thief, friendship
     components: ask
     location:
@@ -2557,7 +2557,7 @@ modules:
       repository: Coran_for_BGII
       release: v9
       asset: coran-npc-mod-for-baldurs-gate-ii-v9.iemod
-  - name: kivan
+  - name: kivan # ok
     description: bg2+soa, adds Kivan and possibly Deheriana, friendship, Kivan romance (exclusive with Deheriana)
     components: ask
     location:
@@ -2565,7 +2565,7 @@ modules:
       repository: Kivan_and_Deheriana
       release: v18
       asset:  kivan-and-deheriana-companions-for-bg2-v18.iemod
-  - name: BG1NPCSoA
+  - name: BG1NPCSoA # ok
     description: "BG1 NPCs in BG2 plus new Athkatla district: Water Gardens"
     installation:
       after: other versions of same npcs
@@ -2576,10 +2576,16 @@ modules:
       reklease: v14.3
       asset: bg1-npc-in-soatob-14.3.iemod
 
+  - name: w_packmule # ok
+    components:
+      - 3 # Mule de bat (bgee) -> Fontes sans fond
+    location:
+      path: /home/mick/Games/modda-cache/static/w_packmule-v1.4b.zip
+
   ###########
   # NPC extensions
   ###########
-  - name: ajantisbg1
+  - name: ajantisbg1 # ok
     description: More content (dialogues, banters) for Ajantis in BG1
     components:
       - 0 # Installs Ajantis BG1 Expansion Modification
@@ -2591,11 +2597,11 @@ modules:
         - file_globs: ["lib/ajantis_bgt.tpa", "lib/ajantis_tutu.tpa", "lib/ajantis_bgee.tpa"]
           replace: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",3600)'
           with: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",800)'
-  - name: ViconiaRevamped
+  - name: ViconiaRevamped # ok
     components: ask
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/ViconiaRevamped v7.2.zip
-  - name: chattyimoen
+  - name: chattyimoen # ok
     description: bg1 - adds banters to Imoen
     components:
       - 0 # Chatty Imoen : Repliques audio supplementaires
@@ -2605,7 +2611,7 @@ modules:
       repository: ChattyImoen
       release: v1.5
       asset: lin-chattyimoen-v1.5.zip
-  - name: npc_tweak
+  - name: npc_tweak # ok
     comments: also adds an heirloom to anomen
     components:
     - 0 # Anomen: v6
@@ -2614,7 +2620,7 @@ modules:
       repository: NPCTweak
       release: v7
       asset: lin-npc_tweak-v7.tar.gz
-  - name: XanBG1Friend
+  - name: XanBG1Friend # ok
     components: [0]
     location:
       github_user: Pocket-Plane-Group
@@ -2630,7 +2636,7 @@ modules:
           regex: true
           replace: 'RealSetGlobalTimer("O#XanBG1FriendTimer(?<c>\d)","GLOBAL",500)'
           with: 'RealSetGlobalTimer("O#XanBG1FriendTimer${c}","GLOBAL",180)'
-  - name: neera
+  - name: neera # ok
     description: bg1 - more diliagues with neera, flirts
     components:
       - 0 # Neera Expansion
@@ -2640,7 +2646,7 @@ modules:
       repository: Neera_Expansion
       release: v1.3.1
       asset: neera-expansion-v1.3.1.iemod
-  - name: neerabanters
+  - name: neerabanters # ok
     description: bg1 - add interjections and banters for neera
     components:
       - 10 # Neera Banters: Dialogue Banters and Interjections
@@ -2650,7 +2656,7 @@ modules:
       repository: NeeraBanters
       release: v0.9.2
       asset: win-neerabanters-v0.9.2.zip
-  - name: korganfriendship
+  - name: korganfriendship # ok
     components:
       - 0
     location:
@@ -2658,7 +2664,7 @@ modules:
       repository: KorganFriendship
       release: v1.6
       asset: korgan-friendship-v1.6.iemod
-  - name: korgan
+  - name: korgan # ok
     description: Korgan's Redemption - possibility of redeeming Korgan if Mazzy is in your party
     components:
       - 0
@@ -2674,7 +2680,7 @@ modules:
         - file_globs: ["dlg/korgan.d"]
           replace: 'RealSetGlobalTimer("KorgMaz","GLOBAL",1200)'
           with: 'RealSetGlobalTimer("KorgMaz","GLOBAL",400)'
-  - name: minscfriendship
+  - name: minscfriendship # ok
     description: bg2, friendship path for minsc
     components:
       - 0
@@ -2690,7 +2696,7 @@ modules:
         - file_globs: ["dialogues/misc84.d"]
           replace: 'RealSetGlobalTimer("I#BooTime","GLOBAL",1600)'
           with: 'RealSetGlobalTimer("I#BooTime","GLOBAL",600)'
-  - name: coranbgfriend
+  - name: coranbgfriend # ok
     description: coran bg1 friendship
     components: [0]
     location:
@@ -2702,7 +2708,7 @@ modules:
         - file_globs: ["baf/p#corannobg1npc.baf", "dlg/p#coranft.d", "baf/p#coranbgfriendship.baf"]
           replace: 'RealSetGlobalTimer("P#CoFriendshipNewTimer","GLOBAL",3600)'
           with: 'RealSetGlobalTimer("P#CoFriendshipNewTimer","GLOBAL",600)'
-  - name: haerdalis_friendship
+  - name: haerdalis_friendship # ok
     description: soa+tob - add frienship path for Haer-Dalis
     components:
       - 0
@@ -2718,7 +2724,7 @@ modules:
         - file_globs: ["scripts/haerdali.baf", "dialogues/haerd25j.d", "dialogues/haerdaj.d"]
           replace: 'RealSetGlobalTimer\("I#HaerDalis(?<c>[^"]+)","GLOBAL",3600\)'
           with: 'RealSetGlobalTimer("I#HaerDalis${c}","GLOBAL",900)'
-  - name: valygarfriendship
+  - name: valygarfriendship # ok
     description: soa+tob - add frienship path for Haer-Dalis
     components:
       - 0
@@ -2732,7 +2738,7 @@ modules:
           regex: true
           replace: 'RealSetGlobalTimer\("I#Valygar(?<c>[^"]+)","GLOBAL",1?00\)'
           with: 'RealSetGlobalTimer("I#Valygar${c}","GLOBAL",470)'
-  - name: mazzy
+  - name: mazzy # ok
     description: soa+tob - add frienship path for Mazzy
     components: [0]
     location:
@@ -2757,7 +2763,7 @@ modules:
         - file_globs: ["dialogue/mazzy25j.d"]
           replace: 'RealSetGlobalTimer("I#MazzyToBFriendTalksTimer","GLOBAL",5400)'
           with: 'RealSetGlobalTimer("I#MazzyToBFriendTalksTimer","GLOBAL",910)'
-  - name: cernd
+  - name: cernd # ok
     description: soa+tob - add frienship path for Cernd
     components:
       - 0
@@ -2774,7 +2780,7 @@ modules:
         - file_globs: ["scripts/cernd.baf"]
           replace: 'RealSetGlobalTimer("I#CerndFamiliarTime","GLOBAL",600)'
           with: 'RealSetGlobalTimer("I#CerndFamiliarTime","GLOBAL",300)'
-  - name: viconia
+  - name: viconia # ok
     description: soa+tob - add frienship path for Viconia
     components:
       - 0
@@ -2806,7 +2812,7 @@ modules:
           regex: true
           replace: 'RealSetGlobalTimer("I#Viconia(?<c>[^"]+)","GLOBAL",[23]?00)'
           with: 'RealSetGlobalTimer("I#Viconia${c}","GLOBAL",700)'
-  - name: yoshimo
+  - name: yoshimo # ok
     description: soa+tob - add frienship path for Yoshimo
     components: [0]
     location:
@@ -2821,7 +2827,7 @@ modules:
         - file_globs: ["scripts/yoshimo.baf"]
           replace: 'RealSetGlobalTimer("I#YoshimoFriendTalksTimer","GLOBAL",600)'
           with: 'RealSetGlobalTimer("I#YoshimoFriendTalksTimer","GLOBAL",231)'
-  - name: sarevokfriendship
+  - name: sarevokfriendship # ok
     description: soa+tob - add frienship path for Sarevok
     components: [0]
     location:
@@ -2829,7 +2835,7 @@ modules:
       repository: SarevokFriendship
       release: v2.7
       asset: sarevok-friendship-v2.7.iemod
-  - name: HexxatFriendship
+  - name: HexxatFriendship # ok
     description: soa+tob - add frienship path for Hexxat
     components:
       - 0
@@ -2838,7 +2844,7 @@ modules:
       repository: Hexxat-Friendship
       release: v1.1
       asset:  hexxat-friendship-1.1.iemod
-  - name: deArnise
+  - name: deArnise # ok
     description: romance with Nalia (soa part)
     components:
       - 0
@@ -2865,7 +2871,7 @@ modules:
           - file_globs: ["Scripts/PGNalia.baf"]
             replace: 'RealSetGlobalTimer("PGNaliaLT14Timer","GLOBAL",500)'
             with: 'RealSetGlobalTimer("PGNaliaLT14Timer","GLOBAL",200)'
-  - name: imoenRomance # not compatible with imoen4ever
+  - name: imoenRomance # not compatible with imoen4ever # ok
     components:
       - 0 # Imoen NPC Romance Mod for BG2:SoA TOB (4.1.0 Version!)
       - 1 # Romance Option-> Allow Multiple Romance's~
@@ -2896,7 +2902,7 @@ modules:
         - file_globs: ["dialogues/SOA/Love/pidtree.d"]
           replace: 'RealSetGlobalTimer("MRImoenLovetalkTimer","GLOBAL",3000)'
           with: 'RealSetGlobalTimer("MRImoenLovetalkTimer","GLOBAL",580)'
-  - name: Nalia_at_Last
+  - name: Nalia_at_Last # ok
     description: tob part of Nalia romance(s)
     components:
       - 0 # Nalia at Last: A ToB Romance MoD.
@@ -2926,13 +2932,13 @@ modules:
         - file_globs: ["Scripts/X3Nal25.baf"]
           replace: 'RealSetGlobalTimer("X3NaliaFlirtTimer","GLOBAL",600)'
           with: 'RealSetGlobalTimer("X3NaliaFlirtTimer","GLOBAL",180)'
-  - name: YoshimosRemorse
+  - name: YoshimosRemorse # ok
     description: tob mod, adds Yoshimo as joinable, dialogues, friendship
     components:
       - 0
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/lin-YoshimosRemorse-v3.1.1.tar.gz
-  - name: keldorn_rom
+  - name: keldorn_rom # ok
     components:
       - 0
       - 2
@@ -2942,7 +2948,7 @@ modules:
       repository: Keldorn_Romance
       release: v8.1
       asset: berelindes-keldorn-romance-8.1.iemod
-  - name: edwinromance
+  - name: edwinromance # ok
     description: Edwin romance
     components:
       - 0 # Edwin Romance
@@ -2955,7 +2961,7 @@ modules:
       repository: Edwin_Romance
       release: v4,0
       asset:  edwin-romance-v4.0.iemod
-  - name: Wings
+  - name: Wings # ok
     components:
       - 0 # Wings - Wings for BG2:EE
       - 1 # Wings - Restore missing banters?
@@ -2972,7 +2978,7 @@ modules:
           regex: true
           replace: 'RealSetGlobalTimer\("([^"]+)","GLOBAL",36\d\d\)'
           with: 'RealSetGlobalTimer("${c}","GLOBAL",800)'
-  - name: banterpack
+  - name: banterpack # ok
     components:
       - 0 # Pack de Dialogues du Pocket Plane Group pour BG2 : SoA
       - 1 # Installer le script accelerateur de dialogues de SoA
@@ -2983,7 +2989,7 @@ modules:
       repository: Banter_Pack
       release: v18
       asset: banter-packs-v18.iemod
-  - name: iepbanters
+  - name: iepbanters # ok
     description: IEP Extended Banter - https://github.com/SpellholdStudios/IEP_Extended_Banter#iep-extended-banter
     components:
       - 0 # Extended NPC-NPC Interaction SoA
@@ -2998,14 +3004,14 @@ modules:
       repository: IEP_Extended_Banter
       release: v5.9
       asset: iep-extended-banters-v5.9.iemod
-  - name: SkitiaRomanceTweak
+  - name: SkitiaRomanceTweak # ok
     components: [0]
     location:
       github_user: Skitia
       repository: SkitiaBG2RomanceTweaks
       branch: master
       refresh: 7days
-  - name: aurora
+  - name: aurora # ok but disabled
     description: Aurora shoes and boots - non-joinable NPC
     components:
       - 0 # Aurora's Shoes and Boots: v5.3 (EE & EET)
@@ -3022,7 +3028,7 @@ modules:
   #########
   # Section: Crossmod
   #########
-  - name: crossmodbg2
+  - name: crossmodbg2 # ok
     description: Crossmod Banter Pack
     components:
       - 0 # Crossmod Banter Pack for Shadows of Amn
@@ -3033,27 +3039,27 @@ modules:
       repository: Crossmod_Banter_Pack_for_Baldurs_Gate_II
       release: v24.1
       asset: crossmod-banter-pack-for-baldurs-gate-ii-v24.1.iemod  # tgz truncates some file names
-  - name: adrian
+  - name: adrian # ok
     description: Adrian crossmod
     components:
       - 20 # Adrian NPC - Crossmod content
-  - name: isra_bg2
+  - name: isra_bg2 # ok
     description: Isra BG2 crossmod
     components:
       - 1 # crossmod with Adrian, Coran (Kulyok's mod), Dace, Nephele, Ninde, Tiax (Kulyok's mod) and Xan (Kulyok's mod)
-  - name: ajantisbg1
+  - name: ajantisbg1 # ok
     description: Ajantis BG1 crossmod
     components:
       - 30 # Ajantis SoD NPC: Crossmod Content
-  - name: c#brandock
+  - name: c#brandock # ok
     description: Brandock the mage - crossmod
     components:
       - 10 # Brandock the Mage: Crossmod Content
-  - name: TS_sime
+  - name: TS_sime # ok
     description: Tortured soul's Sime crossmod
     components:
       - 50 # Sime Crossmod: 0.8
-  - name: SmilingImpCrossBanterMod
+  - name: SmilingImpCrossBanterMod # ok
     components:
       - 0 # Shar-Teel Banters: 1.4
       # Garrick not installed
@@ -3064,21 +3070,21 @@ modules:
       repository: SmilingImpCrossBanterMod
       release: v.1.7
       asset: smiling-imps-cross-banter-mod-1.7.iemod
-  - name: "c#brage"
+  - name: "c#brage" # ok
     components:
       - 10 # Brage's Redemption: Crossmod Content
-  - name: c#husam
+  - name: c#husam # ok
     installation:
       after: ajantisbg1, ajantis_bg2, alternatives, c#brage, c#brandock, EET, gbthfkp, Imoen4ever, c#sodboabri
       before: c#greythedog, EET_end
     description : Husam npc crossmod
     components:
       - 10 # Husam NPC: Crossmod Content
-  - name: c#greythedog
+  - name: c#greythedog # ok
     description: Grey the dog
     components:
       - 10 # Grey the Dog: Crossmod Content
-  - name: nephele
+  - name: nephele # ok
     description: nephele crossmod
     components:
       - 2 # Install Haer'Dalis Romance crossmod content
@@ -3086,28 +3092,113 @@ modules:
 
   # end crossmod
 
+  #########
+  # Items
+  #########
 
-  - name: sodrtd # ok
-    description: Road To Discovery
-    installation:
-      general: after any mod that adds reply options or transactions to SoD, like NPC mods or story tweak mods.
-      after: themed_tweaks, c#sodtweaks
-    components: ask
-      #- 0 # Composant principal : Systeme de Pistage: 0.4 (Beta)
-      #- 10 # Changements dans les dialogues du jeu pour plus de coherence.: 0.4 (Beta)
-      #- 20 # Les officiers sont plus attentifs: 0.4 (Beta)
-      #- 30 # Donnez au PC des options de reponse avisee: 0.4 (Beta)
-      ## bug, won't install ATM
-      ##-40 # PC Can Tell the Officers
-      #- 60 #Points d'information supplementaires: 0.4 (Beta)
+  - name: cliffkey
+    components:
+      - 1 # A Mod for the Orderly - Add a Keyring to Faerun!-> Consistency Plus version
+    location:
+      file: /home/mick/Games/modda-cache/static/cliffkey-v7.zip
+  - name: item_rev
+    description: Item revisions ; main component only
+    components:
+      - 0 # Item Revisions by Demivrgvs (main component)
+    location:
+      github_user: subtledoctor
+      repository: ItemRevisions
+      branch: v4b10sd19
+    disabled:
+      because: I want to use item upgrades this time
+  - name: heartwood
+    description: Heart of the Wood
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: HeartOfTheWood
+      release: v7.0.0
+      asset:  heart-of-the-wood-7.0.0.iemod
+  - name: S3DisClubs
+    description: Distinguishable clubs
+    origin: https://forums.beamdog.com/discussion/34524/distinguishable-clubs-weidu-update-1-1
+    components:
+      - 0 # Distinguisable Clubs
+    location: /home/mick/Games/modda-cache/static/Disting_Clubs_Weidu_V1_1.zip
+  - name: valhorn
+    components: [0]
     location:
       github_user: Gibberlings3
-      repository: Road_To_Discovery_for_SoD
-      release: v4.0
-      asset: road-to-discovery-for-sod-4.0.iemod
+      repository: Improved_Horns_of_Valhalla
+      release: v2
+      asset: lin-valhorn-v2.tar.gz
+  - name: OfHeirloomsAndClasses
+    components:
+      - 0 # Of Heirlooms and Classes - new artifacts forgeable by Cromwell: v2.1
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/OfHeirloomsAndClasses v2.1.zip
+  - name: Silver_Staff_of_Aule
+    components:
+      - 101 # Baton argent d'Aule
+    location:
+      github_user: mleduque
+      repository: Silver_Staff_of_Aule
+      branch: french
+  - name: forgotten-armament
+    description: Forgotten armaments
+    components:
+      # se limiter au nouveaux composants et quelques tweaks
+      - 20 # Add New Forgotten Armament Items into the Game
+      - 11 # Add Breach Scrolls to Sorcerous Sundries
+      - 27 # Add Ruby Ray Scrolls to Trademeet Store
+      - 4 # Update Items Setting an Ability Score to Increment the Increase
+    location:
+      http: http://america.iegmc.net/morpheus562/Forgotten-Armament.zip
+      rename: Forgotten-Armament_4.2.zip # 2024-06-03
+      replace:
+        - file_globs: ["components/stat_item_update.tpa"]
+          replace: 'REPLACE_TEXTUALLY ~Set Strength to~ ~Increment Strength by~'
+          with: "REPLACE_TEXTUALLY ~Set Strength to~ ~Increment Strength by~\nREPLACE_TEXTUALLY ~Donne une Force de~ ~Porte la force à~"
+        - file_globs: ["components/stat_item_update.tpa"]
+          replace: 'REPLACE_TEXTUALLY ~Set Constitution to~ ~Increment Constitution by~'
+          with: "REPLACE_TEXTUALLY ~Set Constitution to~ ~Increment Constitution by~\nREPLACE_TEXTUALLY ~Augmente la Constitution à~ ~Augmente la Constitution de~"
+    ignore_warnings: true
+  - name: mih_fr
+    description: Made in Heaven - Fixes & Restorations ; items restorations only
+    components:
+      - 3  # item restorations
+  - name: mih_ip
+    description: Made In Heaven Item Pack
+    components:
+      # many ignored
+      - 0 # Made in Heaven: Item Pack: v7
+      - 2 # Planescape Torment items for Baldur's Gate 1 & 2: v7
+      - 8 # Change item type of Holy Symbols -> Holy Symbols are Belts: v7
+      - 10 # Turn all Dragon Scale Armor into Scale Mail: v7
+      - 13 # Add Potions of Extra Healing in BG1: v7
+      - 15 # Sensible Shops (see readme): v7
+    location:
+      github_user: AngelGryph
+      repository: MadeInHeaven_ItemPack
+      releaqz: v7
+      patch:
+        relative: patches/mih_ip-sod-warnings+config.diff
+  - name: mih_ip
+    description: Made In Heaven Item Pack - components with warning
+    components:
+      - 1 # Icewind Dale items for Baldur's Gate 1 & 2: v7
+    ignore_warnings: true
+  - name: mih_ip
+    description: Made In Heaven Item Pack
+    components:
+      - 2 # Planescape Torment items for Baldur's Gate 1 & 2: v7
+      - 8 # Change item type of Holy Symbols -> Holy Symbols are Belts: v7
+      - 10 # Turn all Dragon Scale Armor into Scale Mail: v7
+      - 13 # Add Potions of Extra Healing in BG1: v7
+      - 15 # Sensible Shops (see readme): v7
 
   #########
-  # Early spells
+  # Early spell mods
   #########
   - name: spell_rev
     components:
@@ -3139,7 +3230,23 @@ modules:
         relative: patches/iwdification-ini.diff
 
   #########
-  # Late Quests
+  # Late Quests - NWN/IWD
+  #########
+
+  - name: cowledmenace
+    installation:
+      general : after npc mods, before tweaks andEET_end
+    components:
+      - 1000 # Main Component - The Cowled Menace
+      - 2100 # Appropriate Items for High-Level Spellcasters
+      - 3000 # Mages cast Gate far from themselves, so they don't end up fighting their own summoned demon
+    location:
+      github_user: Gibberlings3
+      repository: CowledMenace
+      release: "1.0.1"
+      asset: lin-cowledmenace-v1.0.1.zip
+
+  #########
   # Depend on iwdification
   #########
 
@@ -3232,13 +3339,14 @@ modules:
       - 0
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/Weasels! v3.4.zip
-  - name:
+  - name: Isaac's_Missile_Storm
     components: ask
     location:
       github_user: shohysie
       repository: Isaac-s_Missile_Storm
       release: v0.6
       asset: Isaac.s_Missile_Storm.v0.6.zip
+
   # #######   compat issues with cowled menace
   #- name: Unofficial Item Pack
   #  original_thread: https://forums.beamdog.com/discussion/56567/mod-bgii-ee-unofficial-item-pack
@@ -3256,41 +3364,7 @@ modules:
   #    patch:
   #      relative: https://www.gibberlings3.net/forums/topic/35873-incompatibility-with-bgiiee-unofficial-item-pack/
 
-  ##### Will prefer item_upgrades this time
-  #- name: item_rev
-  #  description: Item revisions ; main component only
-  #  components:
-  #    - 0 # Item Revisions by Demivrgvs (main component)
-  #  location: # temporary, hope for maintenance and releases soon
-  #    github_user: subtledoctor
-  #    repository: ItemRevisions
-  #    branch: v4b10sd19
 
-  - name: mih_fr
-    description: Made in Heaven - Fixes & Restorations ; items restorations only
-    components:
-      - 3  # item restorations
-  - name: mih_ip
-    description: Made In Heaven Item Pack
-    components:
-      # many ignored
-      - 0 # Made in Heaven: Item Pack: v7
-      - 2 # Planescape Torment items for Baldur's Gate 1 & 2: v7
-      - 8 # Change item type of Holy Symbols -> Holy Symbols are Belts: v7
-      - 10 # Turn all Dragon Scale Armor into Scale Mail: v7
-      - 13 # Add Potions of Extra Healing in BG1: v7
-      - 15 # Sensible Shops (see readme): v7
-    location:
-      github_user: AngelGryph
-      repository: MadeInHeaven_ItemPack
-      releaqz: v7
-      patch:
-        relative: patches/mih_ip-sod-warnings+config.diff
-  - name: mih_ip
-    description: Made In Heaven Item Pack - components with warning
-    components:
-      - 1 # Icewind Dale items for Baldur's Gate 1 & 2: v7
-    ignore_warnings: true
   - name: thalan
     description: Thalantyr Item Upgrade
     components: [0]
@@ -3314,13 +3388,6 @@ modules:
       repository: zgbg2evermemory
       release: v1
       asset: evermemory-for-bg2ee-1.iemod
-  - name: valhorn
-    components: [0]
-    location:
-      github_user: Gibberlings3
-      repository: Improved_Horns_of_Valhalla
-      release: v2
-      asset: lin-valhorn-v2.tar.gz
   - name: swordap
     description: Improved Haer'Dalis' Swords
     components: [0]
@@ -3419,14 +3486,7 @@ modules:
       repository: A7-MagicStore
       release: v4.1
       asset: A7-MagicStore-v4.1.iemod
-  - name: heartwood
-    description: Heart of the Wood
-    components: [0]
-    location:
-      github_user: SpellholdStudios
-      repository: HeartOfTheWood
-      release: v7.0.0
-      asset:  heart-of-the-wood-7.0.0.iemod
+
   - name: BardicWonders
     components:
       #- 5 # ~Bardic Wonders: Items
@@ -3491,11 +3551,6 @@ modules:
       - 0 # Marchand Mystigan (ToB requis)
     location:
       path: /home/mick/Games/modda-cache/static/Mystigan1.6.zip
-  - name: OfHeirloomsAndClasses
-    components:
-      - 0 # Of Heirlooms and Classes - new artifacts forgeable by Cromwell: v2.1
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/OfHeirloomsAndClasses v2.1.zip
   - name: iiItemMod
     components:
       - 1 # Items [version 5]: v5.2
@@ -3523,19 +3578,7 @@ modules:
         So installing both doesn't get you a soup, it just gives you both Crippling Strike and Cripple. (And it might not even do that - you might end up with just one of them.)
         As has been said elsewhere, RR and Refinements borrowed a lot from each other with regard to thief HLAs, and basically give you two slightly different versions of what is largely the same HLA table. So, decide which version you prefer, and install that mod.
         If you want to add more to the "soup," then you need to find other thief HLA mods. (And I'm not even sure there are any.)
-  - name: S3DisClubs
-    description: Distinguishable clubs
-    origin: https://forums.beamdog.com/discussion/34524/distinguishable-clubs-weidu-update-1-1
-    components:
-      - 0 # Distinguisable Clubs
-    location: /home/mick/Games/modda-cache/static/Disting_Clubs_Weidu_V1_1.zip
-  - name: Silver_Staff_of_Aule
-    components:
-      - 101 # Baton argent d'Aule
-    location:
-      github_user: mleduque
-      repository: Silver_Staff_of_Aule
-      branch: french
+
   - name: MTS_Crappack
     components:
       - 15 # Add a simple pipe to the game
@@ -3604,25 +3647,7 @@ modules:
       github_user: subtledoctor
       repository: ItemRevisions
       branch: v4b10sd19
-  - name: forgotten-armament
-    description: Forgotten armaments
-    components:
-      # se limiter au nouveaux composants et quelques tweaks
-      - 20 # Add New Forgotten Armament Items into the Game
-      - 11 # Add Breach Scrolls to Sorcerous Sundries
-      - 27 # Add Ruby Ray Scrolls to Trademeet Store
-      - 4 # Update Items Setting an Ability Score to Increment the Increase
-    location:
-      http: http://america.iegmc.net/morpheus562/Forgotten-Armament.zip
-      rename: Forgotten-Armament_4.2.zip # 2024-06-03
-      replace:
-        - file_globs: ["components/stat_item_update.tpa"]
-          replace: 'REPLACE_TEXTUALLY ~Set Strength to~ ~Increment Strength by~'
-          with: "REPLACE_TEXTUALLY ~Set Strength to~ ~Increment Strength by~\nREPLACE_TEXTUALLY ~Donne une Force de~ ~Porte la force à~"
-        - file_globs: ["components/stat_item_update.tpa"]
-          replace: 'REPLACE_TEXTUALLY ~Set Constitution to~ ~Increment Constitution by~'
-          with: "REPLACE_TEXTUALLY ~Set Constitution to~ ~Increment Constitution by~\nREPLACE_TEXTUALLY ~Augmente la Constitution à~ ~Augmente la Constitution de~"
-    ignore_warnings: true
+
 
   #########
   # Early tweaks
@@ -4389,16 +4414,7 @@ modules:
       - 2800 # Give Sarevok a Proper Deathbringer Kit
     location:
       http: http://america.iegmc.net/g3/lin-npckit-v5.tar.gz
-  - name: cowledmenace
-    components:
-      - 1000 # Main Component - The Cowled Menace
-      - 2100 # Appropriate Items for High-Level Spellcasters
-      - 3000 # Mages cast Gate far from themselves, so they don't end up fighting their own summoned demon
-    location:
-      github_user: Gibberlings3
-      repository: CowledMenace
-      release: "1.0.1"
-      asset: lin-cowledmenace-v1.0.1.zip
+
   - name: cdlore
     components:
       - 10 # Books Provide Lore Bonuses
@@ -4444,6 +4460,25 @@ modules:
       github_user: subtledoctor
       repository:  IWD_EET_Integration
       tag: "0.12"
+
+
+  - name: butchery
+    description: Butchery - components that must be installed before SCS
+    components:
+      - 10 # Combat contre Tazok et DigDag revise par DrAzTiK [a installer avant Stratagems]: v5.0.0
+      - 11 # Reequilibrage de certaines creatures generiques [a installer avant Stratagems]: v5.0.0
+      - 12 # Reequilibrage de Tazok et de DigDag [a installer avant Stratagems]: v5.0.0
+      - 20 # Rencontre avec Groumf et Bourrinos devant le donjon de Firkraag [a installer avant Stratagems]: v5.0.0
+      - 21 # Rencontre avec Groumf et Bourrinos a Brynnlaw [a installer avant Stratagems]: v5.0.0
+      - 22 # Rencontre avec Groumf et Bourrinos dans les Trefonds Obscurs [a installer avant Stratagems]: v5.0.0
+      - 30 # Revisited fight against Wraith Sarevok in the Abyss
+      - 32 # Musiques de combat dans les zones sans musique [a installer avant ou apres Stratagems]: v5.0.0
+      - 40 # Creatures de DrAzTiK [a installer avant Stratagems, composant indispensable pour les suivants !]: v5.0.0
+    location:
+      github_user: GwendolyneFreddy
+      repository: butchery
+      release: v5.0.0
+      asset: butchery-v5.0.0.iemod
 
   #########
   # EET_end
