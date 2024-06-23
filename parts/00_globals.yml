@@ -24,3 +24,12 @@ locations:
       repository: Imoen4Ever
       release: v11.4
       asset: imoen-4-ever-v11.4.iemod
+    item_rev:
+      github_user: subtledoctor
+      repository: ItemRevision
+      branch: master
+      refresh: 7days
+      replace:
+        - file_globs: ['lib/compatibility.tpa']
+          replace: 'ACTION_IF MOD_IS_INSTALLED ~atweaks/setup-atweaks.tp2~ 600 BEGIN'
+          with: 'ACTION_IF MOD_IS_INSTALLED ~atweaks/setup-atweaks.tp2~ 510 BEGIN'

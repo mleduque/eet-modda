@@ -570,8 +570,10 @@ modules:
   - name: loretaker # ok
     components: ask
     location:
-      http: https://www.baldurs-gate.de/acifer/Loretakers.rar
-      rename: Loretakers_1.1.zip # 2024-06-01
+      file: /home/mick/Games/modda-cache/static/acifer/Loretakers_V_1.2.rar
+      alt:
+        http: https://www.baldurs-gate.de/acifer/Loretakers.rar
+        rename: Loretakers_V_1.2.zip # 2024-06-01
   - name: SotSC # ok
     description: Shades of the Sword Coast
     location:
@@ -757,9 +759,9 @@ modules:
     components: ask
     location:
       homepage: https://baldurs-gate.de/index.php?resources/dark-tidings.65/
-      path: /home/mick/Games/modda-cache/static/Dark_Tidings_v2.0.rar # 2024-05-16
+      path: /home/mick/Games/modda-cache/static/Dark_Tidings_v2.2.rar # 2024-05-16
       #http: http://america.iegmc.net/g3/Dark_Tidings.rar # 2023-09-24
-      #rename: Dark_Tidings_2.0.rar
+      #rename: Dark_Tidings_2.2.rar
       #https://www.baldurs-gate.de/acifer/Dark_Tidings.rar # 2024-05-16
   - name: godcall # ok
     components: ask
@@ -3091,18 +3093,45 @@ modules:
 
 
   # end crossmod
+  #########
+  # Early spell mods
+  #########
+  - name: spell_rev
+    components:
+      - 0   # Spell Revisions
+      - 10  # Deva and Planetar Animations
+      - 20  # Mirror Image Fix
+      - 55  # Spell Deflection blocks AoE spells
+      - 60  # Update Spellbooks of Joinable NPCs
+      #- 65   # Revised Warrior HLAs
+    location:
+      github_user: Gibberlings3
+      repository: SpellRevisions
+      branch: master
+      refresh: 8hours
+    description:  SubtleD Hotfixes - SR 4b19rc1 Sleep fix
+  - name: iwdification
+    description: spell packs of iwdification
+    installation:
+      general: just the spell packs part early, before some stroy mods (TDD, Totlm, dsotsc)
+    components:
+      - 30 # IWD Arcane Spell Pack: Release Candidate 2
+      - 40 # IWD Divine Spell Pack: Release Candidate 2
+    location:
+      github_user: Gibberlings3
+      repository: iwdification
+      release: v5
+      asset: lin-iwdification-v5.tar.gz
+      patch:
+        relative: patches/iwdification-ini.diff
 
   #########
   # Items
   #########
 
-  - name: cliffkey
-    components:
-      - 1 # A Mod for the Orderly - Add a Keyring to Faerun!-> Consistency Plus version
-    location:
-      file: /home/mick/Games/modda-cache/static/cliffkey-v7.zip
-  - name: item_rev
+  - name: item_rev # disabled
     description: Item revisions ; main component only
+    readme: https://raw.githack.com/subtledoctor/ItemRevisions/master/item_rev/readme-item_rev.html
     components:
       - 0 # Item Revisions by Demivrgvs (main component)
     location:
@@ -3111,6 +3140,7 @@ modules:
       branch: v4b10sd19
     disabled:
       because: I want to use item upgrades this time
+
   - name: heartwood
     description: Heart of the Wood
     components: [0]
@@ -3144,6 +3174,11 @@ modules:
       github_user: mleduque
       repository: Silver_Staff_of_Aule
       branch: french
+  - name: cliffkey
+    components:
+      - 1 # A Mod for the Orderly - Add a Keyring to Faerun!-> Consistency Plus version
+    location:
+      file: /home/mick/Games/modda-cache/static/cliffkey-v7.zip
   - name: forgotten-armament
     description: Forgotten armaments
     components:
@@ -3151,7 +3186,6 @@ modules:
       - 20 # Add New Forgotten Armament Items into the Game
       - 11 # Add Breach Scrolls to Sorcerous Sundries
       - 27 # Add Ruby Ray Scrolls to Trademeet Store
-      - 4 # Update Items Setting an Ability Score to Increment the Increase
     location:
       http: http://america.iegmc.net/morpheus562/Forgotten-Armament.zip
       rename: Forgotten-Armament_4.2.zip # 2024-06-03
@@ -3163,71 +3197,408 @@ modules:
           replace: 'REPLACE_TEXTUALLY ~Set Constitution to~ ~Increment Constitution by~'
           with: "REPLACE_TEXTUALLY ~Set Constitution to~ ~Increment Constitution by~\nREPLACE_TEXTUALLY ~Augmente la Constitution à~ ~Augmente la Constitution de~"
     ignore_warnings: true
+  - name: zgbg2evermemory
+    componennts:
+      - 0 # Evermemory for BG2EE
+    location:
+      github_user: mleduque
+      repository: zgbg2evermemory
+      branch: fr
+
+  - name: iiItemMod
+    overview: Aadds several dozen new items, lesser known item types (such as potions, bracers, arrows etc) scattered in creatures and stores
+    readme: https://raw.githubusercontent.com/btigi/iiItem/master/iiItemMod/Readme/English/Readme-iiItemMod.txt
+    components:
+      - 1 # Items [version 5]: v5.2
+    location:
+      github_user: btigi
+      repository: iiItem
+      release: v5.2
+      asset: iiitemmod-v5.2.iemod
+
   - name: mih_fr
     description: Made in Heaven - Fixes & Restorations ; items restorations only
     components:
       - 3  # item restorations
   - name: mih_ip
     description: Made In Heaven Item Pack
-    components:
-      # many ignored
-      - 0 # Made in Heaven: Item Pack: v7
-      - 2 # Planescape Torment items for Baldur's Gate 1 & 2: v7
-      - 8 # Change item type of Holy Symbols -> Holy Symbols are Belts: v7
-      - 10 # Turn all Dragon Scale Armor into Scale Mail: v7
-      - 13 # Add Potions of Extra Healing in BG1: v7
-      - 15 # Sensible Shops (see readme): v7
+    components: ask
     location:
       github_user: AngelGryph
       repository: MadeInHeaven_ItemPack
-      releaqz: v7
+      branch: master
+      refresh: 2days
       patch:
-        relative: patches/mih_ip-sod-warnings+config.diff
-  - name: mih_ip
-    description: Made In Heaven Item Pack - components with warning
+        relative: patches/mih_ip-config.diff
+
+  # new upgrades
+  - name: itemupgrade
+    description: SoA/ToB -  Allows Cromwell and Cespenar to upgrade more items for you
+    readme: https://pocket-plane-group.github.io/readmes/readme-itemupgrade.html
+    installation:
+      general: In terms of install order, because it doesn't interact much with other mods, it can go fairly early in the installation order.
+      before: stratagems, cdtweaks
     components:
-      - 1 # Icewind Dale items for Baldur's Gate 1 & 2: v7
-    ignore_warnings: true
-  - name: mih_ip
-    description: Made In Heaven Item Pack
+      # - 0 # Shadows Of Amn Item Upgrades - Version d'origine (les nouvelles ameliorations sont proposees dans une liste)
+      - 10 #  Shadows Of Amn Item Upgrades - Version revisee (les nouvelles ameliorations sont proposees dans le meme style que les ameliorations du jeu de base)
+      # - 1 # Throne Of Bhaal Item Upgrades - Version d'origine (les nouvelles ameliorations sont proposees dans une liste)
+      - 11 # Throne Of Bhaal Item Upgrades - Version revisee (les nouvelles ameliorations sont proposees dans le meme style que les ameliorations du jeu de base)
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Item_Upgrade
+      release: v52
+      asset: lin-itemupgrade-v52.tar.gz
+  - name: thalan
+    description: Thalantyr Item Upgrade - Thalantyr can make new item and sells more containers
     components:
-      - 2 # Planescape Torment items for Baldur's Gate 1 & 2: v7
-      - 8 # Change item type of Holy Symbols -> Holy Symbols are Belts: v7
-      - 10 # Turn all Dragon Scale Armor into Scale Mail: v7
-      - 13 # Add Potions of Extra Healing in BG1: v7
-      - 15 # Sensible Shops (see readme): v7
+      - 0 # Thalantyr Item Upgrade
+    location:
+      github_user: CrevsDaak
+      repository: thalan
+      release: v4.5.1
+      asset: thalantyr-item-upgrade-v4.5.1.iemod
+  - name: mod-thalantyr-ex
+    description: extends Thalantyr Item Upgrade - more items
+    components: ask
+    location:
+      github_user: BardezAnAvatar
+      repository: BGEE-Thalantyr-Ex
+      release: v1.0.0
+      asset: modthalantyrex-v1.0.0.iemod
+  - name: rr
+    description: additional equipment only - component with WARNING
+    components:
+      - 7     # Equipement supplementaire pour les voleurs et les bardes
+      - 8     # Rogue Rebalancing - Upgradeable Equipment
+    ignore_warn: true # WARNING: no effects altered on MISC2P.ITM
+    location:
+      github_user: FredrikLindgren
+      repository: rr
+      branch: devels
+  - name: swordap
+    description: Improved Haer'Dalis' Swords
+    overview: This mod allows you to upgrade Haer'Dalis' swords in the Underdark.
+    components: [0]
+    location:
+      github_user: SpellholdStudios
+      repository: HaerDalis_Swords
+      release: v3.1.0
+      asset: improved-haerdalis-swords-v3.1.0.iemod
+  - name: customs
+    description: Sword Coast Customs
+    long_description: |
+      Allows the player to commission a weapon from Taerom Fuiruim, at the Thunderhammer Smithy,
+      and then to have that weapon imbued with elemental damage by Thalantyr, at the High Hedge,
+      and Halbazzer, at Sorcerous Sundries. This will allow the player to create a halberd that
+      does frost damage, or a ninja-to with acid damage, for example
+    components:
+      - 0 # Composant principal de Sword Coast Customs
+    location:
+      github_user: cgordon
+      repository: customs
+      branch: master
+      refresh: 1month
+
+  - name: msfm
+    description: add wizard staffs, items, robe tweaks, familiar tweaks
+    components: ask
+    location:
+      github_user: Renegade0
+      repository: msfm
+      tag: "1.57"
+  - name: underrep
+    description: Under-Represented Items
+    overview: |
+      This mod adds items to Baldur's Gate II. The items come from Icewind Dale II. Only certain kinds of items
+      were chosen. Items were selected to flesh out smaller weapon families.
+      List: https://raw.githubusercontent.com/Pocket-Plane-Group/Under-Respresented_Items/master/underrep/docs/readme-underrep.txt
+    readme: https://pocket-plane-group.github.io/readmes/readme-underrep.html
+    installation:
+      general: In terms of install order, because it doesn't interact much with other mods, it can go fairly early in the installation order.
+    components:
+      - 0 # Objets peu representes provenant d'Icewind Dale II
+    location:
+      github_user: Pocket-Plane-Group
+      repository: Under-Respresented_Items
+      release: v11
+      asset: lin-underrep-v11.tar.gz
+  - name: alchemy
+    description: jan's alchemy
+    overview: |
+      Jan's Book of Brewing is a magical tome that will allow Jan to create 8 potions following specific recipes.
+      https://raw.githubusercontent.com/SpellholdStudios/JansAlchemy/master/alchemy/readme/alchemy-readme.txt
+    components:
+      - 0 # Jan's Alchemy
+    location:
+      github_user: SpellholdStudios
+      repository: JansAlchemy
+      release: v8.1.0
+      asset: jans-alchemy-v8.1.0.iemod
+  - name: stuffofthemagi
+    description: Stuff of the Magi
+    overview: "This mod adds a new set of Mage items scattered through the game.
+      Once you gather all the items, the one who equip them all gain an exceptional bonus. Also, if you
+      have all items, you will meet someone in the Pocket Plane who will want to speak with you..."
+    components:
+      - 0 # Stuff of the magi
+    location:
+      github_user: SpellholdStudios
+      repository: StuffofTheMagi
+      release: v6.0.0
+      asset: stuff-of-the-magi-6.0.0.iemod
+  - name: BardicWonders
+    description: Bardic Wonders
+    overview: bard kits( new and tweaks), new bard items, bardic inspiration (new unkitted bard power), armored casting
+    readme: https://artisans-corner.com/bardic-wonders/
+    components:
+      #- 5 # ~Bardic Wonders: Items
+    location:
+      github_user: ArtemiusI
+      repository: Bardic-Wonders
+      tag: v2.9c
+      refresh: 2days
+  - name: A7#ImprovedArcher
+    description: Wares of the Planes
+    overview: "This mod introduces a large number of weapons and accessories from the Planescape universe in
+            the Baldur's Gate series. The items can be purchased from from a travelling merchant who is
+            available throughout the whole game."
+    readme: https://raw.githubusercontent.com/Argent77/A7-WaresOfThePlanes/devel/A7-WaresOfThePlanes/doc/item-descriptions.txt
+    installation:
+      after: ub[25]
+    components:
+      - 0 # Wares of the Planes
+      #- 100 # Tweak: Identify all wares
+      - 200 # Tweak: Alternate merchant portrait
+    location:
+      github_user: Argent77
+      repository: A7-WaresOfThePlanes
+      release: v1.2
+      asset: A7-WaresOfThePlanes-v1.2.iemod
+  - name: Unofficial Item Pack
+    description: BGII:EE - Unofficial Item Pack
+    overview:
+    original_thread: https://forums.beamdog.com/discussion/56567/mod-bgii-ee-unofficial-item-pack
+    components:
+      - 0 # Unofficial Item Pack
+      - 2 # Gourmet d'Outreterre
+      - 4 # Nouveaux objets
+      - 5 # Objets de SoD
+      - 6 # Meilleure boutique d'archerie
+      - 7 # Revision d'Action libre
+    location:
+      github_user: mleduque
+      repository: edvin_unofficial_item_pack
+      branch: v2.7b-french
+      # https://www.gibberlings3.net/forums/topic/35873-incompatibility-with-bgiiee-unofficial-item-pack/
+      replace:
+        - file_globs: ['Setup-Unofficial Item Pack.tp2']
+          replace: 'COPY ~Unofficial Item Pack/new_items/MAGE18Z.CRE~ ~override/MAGE18Z.CRE~'
+          with: '' # delete the line
+
+  # new stores or new inventory
+  - name: Derats_Archery
+    description: Au bonheur du tireur / The shooter's delight
+    overview: A merchant on the Waukyne promenade who sells everything you need for shooters/throwers.
+    components:
+      - 0 # Magasin de projectiles en tout genre
+    location:
+      github_user: Deratiseur
+      repository: Archery
+      tag: v5.00
+  - name: A7-WaresOfThePlanes
+    description: Improved Archer - items
+    overview: archer kit rebalance, new archer kits forother classes, items
+    readme: https://argent77.github.io/A7-ImprovedArcher/index.html
+    components:
+      - 100 # Ajouter des fleches et des carreaux +4, et des arcs puissants et dans le jeu
+    location:
+      github_user: Argent77
+      repository: A7-ImprovedArcher
+      release: v4.3
+      asset: A7-ImprovedArcher-v4.3.iemod
+  - name: ruad
+    description: Ruad Ro'fhessa Item Upgrade
+    overview: This mod adds Ruad, a new smith in Waukeen's Promenade, who improves items as well as forges some quite new ones.
+    readme: https://spellholdstudios.github.io/readmes/ruad-spoilers.txt
+    components:
+      - 0 # Ruad Ro'fhessa (SoA)
+      - 10 # Ruad Ro'fhessa (ToB)
+    location:
+      github_user: SpellholdStudios
+      repository: RuadRofhessaItemUpgrade
+      release: v29.4.0
+      asset: ruad-rofhessa-item-upgrade-v29.4.0.iemod
+  - name: rolles
+    description: Rolles Safyer
+    overview: "adds Rolles, a new smith in Waukeen's Promenade above the entrance to Adventurer Mart, who can
+              upgrade items. He also sells a few scrolls and items."
+    readme: https://raw.githubusercontent.com/SpellholdStudios/Rolles/master/rolles/readme/rolles-readme-english.txt
+    components:
+      - 0 # Rolles Safyer: v5.0.5
+      - 10 # Bag of Holding in Irenicus Dungeon: v5.0.5
+    location:
+      github_user: SpellholdStudios
+      repository: Rolles
+      release: v5.0.5
+      asset: rolles-safyer-v5.0.5.iemod
+  - name: darron
+    description: Darron the BG2 Thief Guild Vendor
+    overview: 'This mod adds Darron, a new merchant who sells special goods created especially for thieves.
+      You can find him in the cellar of the Shadow Thieves guild.'
+    components:
+      - 0 # Darron
+    location:
+      github_user: SpellholdStudios
+      repository: Darron
+      release: v2.0.0
+      asset: darron-v2.0.0.iemod
+  - name: bolsa
+    description: Bolsa (merchant)
+    overview: "This mod adds Bolsa, a new merchant who sells several containers and bags for objects that
+      will not appear in your inventory, ammunition belts and a very useful Staff of the Magi, besides
+      common objects. You can find him in the Five Flagons Inn (2nd Floor)."
+    components:
+      - 0 # Bolda
+    location:
+      github_user: SpellholdStudios
+      repository: Bolsa
+      release: v6.0.0
+      asset: bolsa-v6.0.0.iemod
+  - name: A7-MagicStore
+    description: Magic Store of Vergadain
+    overview: "This mod allows you to acquire a magical artifact that provides the means to visit any
+      store you have visited in the past. Getting your hands on this unique artifact involves a small
+      quest of one kind or another."
+    components: ask
+    location:
+      github_user: Argent77
+      repository: A7-MagicStore
+      release: v4.1
+      asset: A7-MagicStore-v4.1.iemod
+  - name: saradas_magic
+    description: Saradas Magic for BGEE / EET
+    overview: NPC with a store in FAI - items, id, cure, new spells
+    comment: both a spell and items mod but a single component :/
+    components:
+      - 0 # saradas_magic for BGEE / EET
+    location:
+      github_user: The-Gate-Project
+      repository: Saradas_Magic_for_BGEE
+      branch: master
+      refresh: 1day
+  - name: saradas_magic_2
+    description: Saradas Magic for BG2
+    overview: NPC with store in Temple district/SoA ; joignable in ToB ; enchants artifacts (vanilla quest leftover items)
+    readme: https://spellholdstudios.github.io/readmes/saradas_magic_2-readme-english.html
+    components:
+      - 1 # Saradas Magic NPC Mod for BGII -> Saradas has a mage sprite (optional)
+    location:
+      github_user: SpellholdStudios
+      repository: Saradas_Magic_for_BG2
+      release: v2.0.0
+      asset: saradas-magic-for-bg2-v2.0.0.iemod
+  - name: abystore
+    description: The Unusual Oddities Shop
+    overview: |
+      This mod adds a (very unusual) merchant in the Docks district of Athkatla. You can find her
+      in front of the Temple of Ohgma. The store works the same as any other merchant, just talk**
+      to her to get the option of buying her goods.
+      She sells a variety of unusual goods. Some is overpowered, some is impractical.
+    readme: https://spellholdstudios.github.io/readmes/abystore-readme-english.html
+    components:
+      - 0 # Magasin des Curiosites inhabituelles
+    location:
+      github_user: SpellholdStudios
+      repository: The_Unusual_Oddities_Shop
+      release: v5.0
+      asset: the-unusual-oddities-shop-5.0.iemod
+  - name: rttitempack
+    description: Return to Trademeet Item Pack
+    overview: 51 items are added to the "special" store of Ribald OR to multiple stores
+    components:
+      - 200 # add to Ribaldstore only
+      # - 201 # Dispatch on multiple stores
+    location:
+      github_user: The-Gate-Project
+      repository: RTT-ItemPack
+      branch: master
+      refresh: 1week
+  - name: iwditempack
+    descriptin: SoA - adds  twelve Icewind Dale/Icewind Dale II related items to Joluv (Copper Coronet)
+    forum: http://www.shsforums.net/topic/46557-iwd-item-pack-for-bg2/
+    components:
+      - 0 # Talisman du Loup Noir
+      - 1 # Chaine de Fureur de Drakkas
+      - 2 # Insigne de la Maison Despana
+      - 3 # Brise-Barriques du Shaengarne
+      - 4 # Harnois plain de Kresselack
+      - 5 # Manteau de la Tempete Prochaine
+      - 6 # Fleau aux Trois Cranes
+      - 7 # Epieu de Frene Blanc
+      - 8 # Douze Pas
+      - 9 # Torche eternelle de Belib
+      - 10 # Ceinture liante du Corbeau Noir
+      - 11 # Amulette du jeune Ned
+    location:
+      github_user: The-Gate-Project
+      repository: IWD_Item-Pack
+      release: v1.3
+      asset:  iwd-item-pack-1.3.iemod
+  - name: Mystigan
+    description: Merchant in SoA (government district) - containers, projectiles, scrolls
+    readme: https://akadis.baldursgateworld.fr/Mystigan/MystiganFr.html
+    components:
+      - 0 # Marchand Mystigan (ToB requis)
+    location:
+      file: https://akadis.baldursgateworld.fr/Mystigan/zip/Mystigan1.62.zip
+
+  # overpowered item mods
+  - name: DGItems
+    overview: |
+      Customized items collection for Baldur’s Gate 2 Throne of Bhaal, Baldur’s Gate Trilogy,
+      Baldur’s Gate II Enhanced Edition and Enhanced Edition Trilogy - by TDaniel Goodrich - adapted by Prof Errata
+      THE ITEMS ARE VERY POWERFUL AND UNBALANCED, SO YOU'VE BEEN WARNED!
+    components:
+      - 0 # Mod DGItems (Necessite BG2-ToB, BG2EE ou EET)
+    location:
+      github_user: The-Gate-Project
+      repository: DGItems
+      release: v2.0
+      asset:  dgitems-2.0.iemod
+    disabled:
+      because: much overpowered
+  - name: IRStore
+    overview: |
+      Customized items collection for Baldur’s Gate 2 Throne of Bhaal, Baldur’s Gate Trilogy,
+      Baldur’s Gate II Enhanced Edition and Enhanced Edition Trilogy - by Theo de Moree - adapted by Prof Errata
+      THE ITEMS ARE VERY POWERFUL AND UNBALANCED, SO YOU'VE BEEN WARNED!
+    components:
+      - 0 # Mod IRStore (Necessite BG2ToB ou BG2EE)
+    location:
+      github_user: 11jo
+      repository: IRStore
+      branch: master
+      refresh: 1day
+    disabled:
+      because: much overpowered
+
+  - name: item_rev
+    descritpion: Item Revisions - store component
+    installation:
+      general: |
+        Due to the nature of this component, it is conceptually incompatible with mods that add new items
+        into vanilla stores. Nothing drastic will happen, though - you simply may discover that a merchant,
+        who was supposed to sell scrolls, now also offers a sword, even if there is a blacksmith standing nearby.
+        At the moment this component is only fully compatible with Spell Revisions (main component),
+        aTweaks (Expanded Temple Services component) and Rogue Rebalancing (Additional equipment for Thieves
+        and Bards component) if installed after them.
+    components:
+      - 1030 # Store Revisions
 
   #########
-  # Early spell mods
+  # Mass item updates
   #########
-  - name: spell_rev
-    components:
-      - 0   # Spell Revisions
-      - 10  # Deva and Planetar Animations
-      - 20  # Mirror Image Fix
-      - 30  # Dispel Magic Fix    <- must be before TotLM
-      - 55  # Spell Deflection blocks AoE spells
-      - 60  # Update Spellbooks of Joinable NPCs
-      #- 65   # Revised Warrior HLAs
-    location:
-      github_user: Gibberlings3
-      repository: SpellRevisions
-      branch: master
-      refresh: 8hours
-  - name: iwdification
-    description: spell packs of iwdification
-    installation:
-      general: just the spell packs part early, before some stroy mods (TDD, Totlm, dsotsc)
-    components:
-      - 30 # IWD Arcane Spell Pack: Release Candidate 2
-      - 40 # IWD Divine Spell Pack: Release Candidate 2
-    location:
-      github_user: Gibberlings3
-      repository: iwdification
-      release: v5
-      asset: lin-iwdification-v5.tar.gz
-      patch:
-        relative: patches/iwdification-ini.diff
+
 
   #########
   # Late Quests - NWN/IWD
@@ -3251,39 +3622,108 @@ modules:
   #########
 
   - name: NwnForBg
+    description: Neverwinter Nights for Baldur's Gate
+    overview: |
+      The mod repeats, with some minor modifications, the plot of Neverwinter Nights game. Once Gorion's Ward reaches
+      the experience of 1350000 XP, he/she can start Neverwinter Nights. At this moment, a messenger from Neverwinter
+      will approach him/her in any of the Athkatla's Districts and ask for help. However, recommended amount of XP to
+      start NWN content is 1750000.
+    installation:
+      after: iwdification[30, 40]
+      before: bp-bgt-worldmap, EET_end
     components: ask
+      -0 # NWN For BG
+      #- 10 # Place NWN locations on BP-BGT Worldmap
+      - 11 # Use separate worldmap for NWN areas
+      #- 20 # Install NWN as a dedicated campaign
     location:
       github_user: abalabokhin
       repository: NWNForBG
-      tag: "0.97"
+      branch: master
+      refresh: 10days
   - name: IWD1_EET
     installation:
       after: EET
-      before: A7-TotLM-BG2EE
+      before: A7-TotLM-BG2EE, Icewind_EET, EET_end
     components:
+      #- 0 # Use <CHARNAME> instead of <GABBER> etc.
+      - 1 # Icewind Dale: Heart of Winter in Baldur's Gate Enhanced Edition Trilogy
     location:
       github_user: The-Gate-Project
       repository: IWD1_EET
-      release: v4.3
-      asset: lin-A7-TotLM-BG2EE-v4.3.zip
+      branch: master
+      refresh: 10days
+  - name: HOW_EET # disabled
+    description: Heart of Winter for BGEE / EET
+    installation:
+      after: EET
+      before: A7-TotLM-BG2EE, Icewind_EET, EET_end
+    components:
+      - 0 # Heart of Winter in Baldur's Gate Enhanced Edition (Trilogy)
+    location:
+      github_user: The-Gate-Project
+      repository: HOW_EET
+      branch: master
+      refresh: 5days
+      replace:
+        - file_globs: ['setup-how_eet.tp2']
+          replace: 'OUTER_SET ~incl_sv_p~ = 0'
+          with: 'OUTER_SET ~incl_sv_p~ = 1'
+        - file_globs: ['setup-how_eet.tp2']
+          replace: 'ACTION_READLN incl_sv_p'
+          with: '' # just delete
+    disabled:
+      because: will use IWD easter-eggs from SD's IWD_EET_integration
   - name: IWD2_EET
     installation:
       after: EET
-      before: A7-TotLM-BG2EE
+      before: A7-TotLM-BG2EE, Icewind_EET, EET_end
     components:
+      - 0 # Icewind Dale 2 in Baldur's Gate Enhanced Edition Trilogy
     location:
       github_user: The-Gate-Project
       repository: IWD2_EET
       branch: master
-      patch: https://www.gibberlings3.net/forums/topic/36405-discussion-of-tipun%E2%80%99s-iwd-mods-and-their-integration-in-eet-games/?do=findComment&comment=326993
+      refresh: 10days
+      replace:
+        # https://www.gibberlings3.net/forums/topic/37265-my-latest-super-modded-eet-game-with-more-iwd/?do=findComment&comment=338983
+        - file_globs: ['Setup-iwd2_eet.tp2']
+          replace: 'APPEND ~instant.ids~ ~34 UseItem(S:Object*,O:Target*)~    UNLESS ~UseItem~'
+          with: '// APPEND ~instant.ids~ ~34 UseItem(S:Object*,O:Target*)~    UNLESS ~UseItem~'
+        # https://www.gibberlings3.net/forums/topic/36405-discussion-of-tipun%E2%80%99s-iwd-mods-and-their-integration-in-eet-games/?do=findComment&comment=326993
+        - file_globs: ['lib/_spells.tph']
+          replace: |-
+            APPEND ~projectl.ids~ ~%prot%~
+            APPEND ~missile.ids~  ~%misl%~
+          with: '' # just delete
+  - name: Icewind_EET
+    installation:
+      general: as late as possible in your installation, especially after mods that add NPCs, otherwise there may be problems with quests, dialogs, etc.
+      before: EET_end
+    components:
+      - 0 # IceWind_End
+    location:
+      github_user: The-Gate-Project
+      repository: Icewind_EET
+      branch: master
+      refresh: 5days
   - name: A7-TotLM-BG2EE
-    description: Trial of the Luremaster - Main component (warns)
+    description: Trials of the Luremaster for Baldur's Gate
+    overview: |
+      This mod makes the Icewind Dale expansion "Trials of the Luremaster" available to BG2:EE (2.0 or higher),
+      Siege of Dragonspear and EET (Enhanced Edition Trilogy).
+      The quest starts by talking to the halfling Hobart Stubbletoes, who can be found either in the Umar Hills
+      Inn (SoA), Amkethran Inn (ToB) or in the southeastern area of the Coalition Camp (SoD). In the course of
+      the adventure you have the opportunity to explore a haunted castle, test your mettle in challenging combat
+      and lift an ancient curse.
+    installation:
+      after: IWD1_EET, spell_rev[30]
     components:
       - 0  # Trials of the Luremaster for Baldur's Gate
       - 20 # Rebalance weapons and equipment
       #- 30 # Reduce experience from monsters and quests - Reduce by 25 percent
-      - 31 # Reduce experience from monsters and quests - Reduce by 50 percent
-      #- 32 # Reduce experience from monsters and quests - Reduce by 75 percent
+      #- 31 # Reduce experience from monsters and quests - Reduce by 50 percent
+      - 32 # Reduce experience from monsters and quests - Reduce by 75 percent
       #- 33 # Reduce experience from monsters and quests - No XP
       - 40 # Allow to trade with Hobart before starting the adventure
     ignore_warnings: true
@@ -3292,10 +3732,55 @@ modules:
       repository: A7-TotLM-BG2EE
       release: v4.1
       asset: A7-TotLM-BG2EE-v4.1.iemod
-  - name: A7-TotLM-BG2EE
-    description: Trial of the Luremaster - XP reduction
-    components: ask
-      #- 30 # Reduire les points d'experience des monstres et des quetes. -> Reduction de 25 pour cent
+  - name: IWD_EET_integration
+    description: SubtleDoctor's IWD EET Integration
+    overview: Integraties IWD1 and IWD2 in the BG1ee or BG2ee campaigns OR add then to the campaign menu
+    installation:
+      after: Icewind_EET
+      before: EET_end
+    comment: add Hjollder to Bridge District
+    components:
+      #- 100 #  Add IWD Campaigns to the EET Menu
+      #- 110 # Adjust IWD1 XP for Full Campaign
+      #- 115 # Adjust IWD1 Creature Stats for Full Campaign
+      #- 130 # Adjust IWD2 XP for Full Campaign
+      #- 135 # Adjust IWD2 Creature Stats for Full Campaign
+      - 150 # Add HoW access to BG2
+      - 155 # Remove Overpowered Items from HoW
+      - 160 # Add IWD1 Easter Egg Content to BG2
+    location:
+      github_user: subtledoctor
+      repository:  IWD_EET_Integration
+      tag: "0.12.2"
+
+  #########
+  # Mass item updates
+  #########
+  - name: hammers
+    description: Thrown hammers
+    overveiw: Animation for thrown hammers
+    readme: https://raw.githack.com/Sampsca/ThrownHammers/master/hammers/hammers-english.html
+    installation:
+      general: This mod should go after other mods that add or change hammers, including the Spiritual Hammer spell. This includes aTweaks and Spell Revisions
+    components:
+      - 0 # Thrown Hammers: v6.1.0
+      - 15 # Thrown Spiritual Hammers: v6.1.0
+      - 25 # Normal throwing hammers: v6.1.0
+      - 35 # +1 throwing weapons: v6.1.0
+      - 50 # Additional magic items: v6.1.0
+    location:
+      github_user: Sampsca
+      repository: ThrownHammers
+      tag: v6.1.1
+  - name: forgotten-armament
+    description: Forgotten armaments - ability scoress
+    components:
+      - 4 # Update Items Setting an Ability Score to Increment the Increase
+  - name: item_rev
+    description: Item Revisions - item usability
+    components:
+      - 1060 # Les Kensai peuvent porter des bracelets
+      - 1070 # Les Voleurs peuvent utiliser des baguettes
 
   #########
   # Spells
@@ -3319,14 +3804,16 @@ modules:
       - 100 # IWD Class Updates: Paladin: IWD Abilities and Skills: Release Candidate 2
     ignore_warnings: true
   - name: mih_fr
-    description: MadeInHeaven Fixes and restorations -- https://raw.githack.com/AngelGryph/MadeInHeaven_FixesAndRestorations/main/mih_fr/docs/readme-mih_fr.html
+    description: MadeInHeaven Fixes and restorations -- spell restorations
+    readme: https://raw.githack.com/AngelGryph/MadeInHeaven_FixesAndRestorations/main/mih_fr/docs/readme-mih_fr.html
     components:
       - spell restorations
     location:
       github_user: AngelGryph
       repository: MadeInHeaven_FixesAndRestorations
   - name: mih_sp
-    description: MadeInHeaven SpellPack --  https://raw.githack.com/AngelGryph/MadeInHeaven_SpellPack/main/mih_sp/docs/readme-mih_sp.html
+    description: MadeInHeaven SpellPack --
+    readme: https://raw.githack.com/AngelGryph/MadeInHeaven_SpellPack/main/mih_sp/docs/readme-mih_sp.html
     components:
       - monster summoning
       - No Elemental Mind Battle
@@ -3346,308 +3833,6 @@ modules:
       repository: Isaac-s_Missile_Storm
       release: v0.6
       asset: Isaac.s_Missile_Storm.v0.6.zip
-
-  # #######   compat issues with cowled menace
-  #- name: Unofficial Item Pack
-  #  original_thread: https://forums.beamdog.com/discussion/56567/mod-bgii-ee-unofficial-item-pack
-  #  components:
-  #    - 0 # Unofficial Item Pack
-  #    - 2 # Gourmet d'Outreterre
-  #    - 4 # Nouveaux objets
-  #    - 5 # Objets de SoD
-  #    - 6 # Meilleure boutique d'archerie
-  #    - 7 # RÃ©vision d'Action libre
-  #  location:
-  #    github_user: mleduque
-  #    repository: edvin_unofficial_item_pack
-  #    branch: v2.7b-french
-  #    patch:
-  #      relative: https://www.gibberlings3.net/forums/topic/35873-incompatibility-with-bgiiee-unofficial-item-pack/
-
-
-  - name: thalan
-    description: Thalantyr Item Upgrade
-    components: [0]
-    location:
-      github_user: CrevsDaak
-      repository: thalan
-      branch: master
-      refresh: 2days
-  - name: mod-thalantyr-ex
-    components: ask
-    location:
-      github_user: BardezAnAvatar
-      repository: BGEE-Thalantyr-Ex
-      release: v1.0.0
-      asset: modthalantyrex-v1.0.0.iemod
-  - name: zgbg2evermemory
-    componennts:
-      - 0 # Evermemory for BG2EE
-    location:
-      github_user: GraionDilach
-      repository: zgbg2evermemory
-      release: v1
-      asset: evermemory-for-bg2ee-1.iemod
-  - name: swordap
-    description: Improved Haer'Dalis' Swords
-    components: [0]
-    location:
-      github_user: SpellholdStudios
-      repository: HaerDalis_Swords
-      release: v3.1.0
-      asset: improved-haerdalis-swords-v3.1.0.iemod
-  - name: itemupgrade
-    components:
-      - 10
-      - 11
-    location:
-      github_user: Pocket-Plane-Group
-      repository: Item_Upgrade
-      release: v52
-      asset: lin-itemupgrade-v52.tar.gz
-  - name: ruad
-    description: Ruad Ro'fhessa Item Upgrade
-    components: [0, 10]
-    location:
-      github_user: SpellholdStudios
-      repository: RuadRofhessaItemUpgrade
-      release: v29.4.0
-      asset: ruad-rofhessa-item-upgrade-v29.4.0.iemod
-  - name: rolles
-    description: Rolles Safyer
-    components:
-      - 0 # Rolles Safyer: v5.0.5
-      - 10 # Bag of Holding in Irenicus Dungeon: v5.0.5
-    location:
-      github_user: SpellholdStudios
-      repository: Rolles
-      release: v5.0.5
-      asset: rolles-safyer-v5.0.5.iemod
-  - name: abystore
-    description: The Unusual Oddities Shop
-    components: [0]
-    location:
-      github_user: SpellholdStudios
-      repository: The_Unusual_Oddities_Shop
-      release: v5.0
-      asset: the-unusual-oddities-shop-5.0.iemod
-  - name: hammers
-    components:
-      - 0 # Thrown Hammers: v6.1.0
-      - 15 # Thrown Spiritual Hammers: v6.1.0
-      - 25 # Normal throwing hammers: v6.1.0
-      - 35 # +1 throwing weapons: v6.1.0
-      - 50 # Additional magic items: v6.1.0
-    location:
-      github_user: Sampsca
-      repository: ThrownHammers
-      tag: v6.1.1
-  - name: underrep
-    components: [0]
-    location:
-      github_user: Pocket-Plane-Group
-      repository: Under-Respresented_Items
-      release: v11
-      asset: lin-underrep-v11.tar.gz
-  - name: alchemy
-    description: jan's alchemy
-    components: [0]
-    location:
-      github_user: SpellholdStudios
-      repository: JansAlchemy
-      release: v8.1.0
-      asset: jans-alchemy-v8.1.0.iemod
-  - name: darron
-    description: Darron the BG2 Thief Guild Vendor
-    components: [0]
-    location:
-      github_user: SpellholdStudios
-      repository: Darron
-      release: v2.0.0
-      asset: darron-v2.0.0.iemod
-  - name: stuffofthemagi
-    components: [0]
-    location:
-      github_user: SpellholdStudios
-      repository: StuffofTheMagi
-      release: v6.0.0
-      asset: stuff-of-the-magi-6.0.0.iemod
-  - name: bolsa
-    components: [0]
-    location:
-      github_user: SpellholdStudios
-      repository: Bolsa
-      release: v6.0.0
-      asset: bolsa-v6.0.0.iemod
-  - name: A7-MagicStore
-    components: ask
-    location:
-      github_user: Argent77
-      repository: A7-MagicStore
-      release: v4.1
-      asset: A7-MagicStore-v4.1.iemod
-
-  - name: BardicWonders
-    components:
-      #- 5 # ~Bardic Wonders: Items
-    location:
-      github_user: ArtemiusI
-      repository: Bardic-Wonders
-      tag: v2.9c
-      refresh: 2days
-  - name: A7#ImprovedArcher
-    description: Improved Archer - items
-    components:
-      - 100 # Ajouter des fleches et des carreaux +4, et des arcs puissants et dans le jeu
-    location:
-      github_user: Argent77
-      repository: A7-ImprovedArcher
-      release: v4.3
-      asset: A7-ImprovedArcher-v4.3.iemod
-  - name: saradas_magic
-    comment: both a spell and items mod but a single component :/
-    components:
-      - 0 # saradas_magic for BGEE / EET
-    location:
-      github_user: The-Gate-Project
-      repository: Saradas_Magic_for_BGEE
-      branch: master
-      refresh: 1day
-  - name: saradas_magic_2
-    components:
-      - 1 # Saradas Magic NPC Mod for BGII -> Saradas has a mage sprite (optional)
-    location:
-      github_user: SpellholdStudios
-      repository: Saradas_Magic_for_BG2
-      release: v2.0.0
-      asset: saradas-magic-for-bg2-v2.0.0.iemod
-  - name: rttitempack
-    description: Return to Trademeet Item Pack
-    components:
-      - 0
-    location:
-      github_user: The-Gate-Project
-      repository: RTT-ItemPack
-      branch: master
-      refresh: 1week
-  - name: iwditempack
-    components:
-      - 0 # Talisman du Loup Noir
-      - 1 # Chaine de Fureur de Drakkas
-      - 2 # Insigne de la Maison Despana
-      - 3 # Brise-Barriques du Shaengarne
-      - 4 # Harnois plain de Kresselack
-      - 5 # Manteau de la Tempete Prochaine
-      - 6 # Fleau aux Trois Cranes
-      - 7 # Epieu de Frene Blanc
-      - 8 # Douze Pas
-      - 9 # Torche eternelle de Belib
-      - 10 # Ceinture liante du Corbeau Noir
-      - 11 # Amulette du jeune Ned
-    location:
-      path: /home/mick/Games/modda-cache/static/IWD Item Pack.zip
-  - name: Mystigan
-    components:
-      - 0 # Marchand Mystigan (ToB requis)
-    location:
-      path: /home/mick/Games/modda-cache/static/Mystigan1.6.zip
-  - name: iiItemMod
-    components:
-      - 1 # Items [version 5]: v5.2
-    location:
-      github_user: btigi
-      repository: iiItem
-      release: v5.2
-      asset: iiitemmod-v5.2.iemod
-  - name: rr # rogue rebalancing
-    description: additional equipment only - component with WARNING
-    components:
-      - 7     # Equipement supplementaire pour les voleurs et les bardes
-      - 8     # Rogue Rebalancing - Upgradeable Equipment
-    ignore_warn: true # WARNING: no effects altered on MISC2P.ITM
-    location:
-      github_user: FredrikLindgren
-      repository: rr
-      branch: devel
-  - name: rr # rogue rebalancing
-    description: additional equipment upgrade  & story only
-    components:
-      - 8     # Equipement ameliorable
-      - Rogue Rebalancing has "Crippling Strike" and retains vanilla UAI
-        Refinements has "Cripple" and changes UAI to UMD.
-        So installing both doesn't get you a soup, it just gives you both Crippling Strike and Cripple. (And it might not even do that - you might end up with just one of them.)
-        As has been said elsewhere, RR and Refinements borrowed a lot from each other with regard to thief HLAs, and basically give you two slightly different versions of what is largely the same HLA table. So, decide which version you prefer, and install that mod.
-        If you want to add more to the "soup," then you need to find other thief HLA mods. (And I'm not even sure there are any.)
-
-  - name: MTS_Crappack
-    components:
-      - 15 # Add a simple pipe to the game
-  - name: customs
-    components: ask
-    location:
-      github_user: cgordon
-      repository: customs
-  - name: DGItems
-    components:
-      - 0 # Mod DGItems (Necessite BG2-ToB, BG2EE ou EET)
-    location:
-      github_user: 11jo
-      repository: DGItems
-      branch: master
-      refresh: 1day
-  - name: IRStore
-    components:
-      - 0 # Mod IRStore (Necessite BG2ToB ou BG2EE)
-    location:
-      github_user: 11jo
-      repository: IRStore
-      branch: master
-      refresh: 1day
-  - name: customs
-    components:
-      - 0 # Composant principal de Sword Coast Customs
-    location:
-      github_user: cgordon
-      repository: customs
-      branch: master
-      refresh: 2days
-  - name: Derats_Archery
-    components: ask
-    location:
-      github_user: Deratiseur
-      repository: Archery
-      tag: v4
-  - name: A7-WaresOfThePlanes
-    components: ask
-    location:
-      github_user: Argent77
-      repository: A7-WaresOfThePlanes
-      release: v1.2
-      asset: A7-WaresOfThePlanes-v1.2.iemod
-    installation:
-      after: ub
-
-
-  #########
-  # Mass item updates
-  #########
-  - name: item_rev
-    description: Item Revisions (more changes)
-    components:
-      # prefering item upgrades this time
-      #- 0 # main component
-      #- 1030 # Revision des boutiques
-      #- 10   # Bonus des boucliers revus
-      #- 17   # Weapon Changes
-      #- 11   # Le combat a deux armes differe selon le type d'arme, legere ou lourde
-      #- 20   # Attaque sournoise revue (avec et sans penalite) -> Toutes les armes de melee et a projectiles utilisables pour l'attaque sournoise
-      - 1060 # Les Kensai peuvent porter des bracelets
-      - 1070 # Les Voleurs peuvent utiliser des baguettes
-    location: # temporary, hope for maintenance and releases soon
-      github_user: subtledoctor
-      repository: ItemRevisions
-      branch: v4b10sd19
-
 
   #########
   # Early tweaks
@@ -4441,26 +4626,6 @@ modules:
   #########
   # just before EET_end
   #########
-  - name: Icewind_EET
-    installation:
-      general: as late as possible in your installation, especially after mods that add NPCs, otherwise there may be problems with quests, dialogs, etc.
-      before: EET_end
-    components:
-    location:
-      github_user: The-Gate-Project
-      repository: Icewind_EET
-      branch: master
-  - name: d5_iwd_eet_integration
-    installation:
-      after: Icewind_EET
-      before: EET_end
-    comment: add Hjollder to Bridge District
-    components: ask
-    location:
-      github_user: subtledoctor
-      repository:  IWD_EET_Integration
-      tag: "0.12"
-
 
   - name: butchery
     description: Butchery - components that must be installed before SCS
@@ -4737,6 +4902,15 @@ modules:
       release: v3.1a
       asset: jimfix-v3.1a.iemod
   - name: atweaks
+    description:
+    overview: |
+      This mod represents a compilation of various house rules and PnP related tweaks which are designed to
+      change certain aspects of the game.
+      In summary, aTweaks can bring several classes, races, spells, items and creatures closer to their PnP
+      counterparts, add more consistency to the gameplay by making sensible rule adjustments and eliminating
+      exploits, and make it easier to distinguish between creatures with similar avatars through the use of
+      recoloring techniques.
+    readme: https://raw.githack.com/FredrikLindgren/aTweaks/master/atweaks/doc/readme_atweaks.html
     components: # 120 probably already done by iwdificagtion?
       - 100 # Restaurer l'infravision innee des personnages demi-orques
       - 101 # Empecher les morts-vivants squelettiques et desincarnes d'etre affectes par les attaques illithids devorant le cerveau

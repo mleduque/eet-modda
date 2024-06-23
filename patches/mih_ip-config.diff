@@ -1,0 +1,37 @@
+diff --git a/mih_ip/mih_ip.ini b/mih_ip/mih_ip.ini
+index 1f02124..b9506e3 100644
+--- mih_ip/mih_ip/mih_ip.ini
++++ mih_ip/mih_ip/mih_ip.ini
+@@ -9,8 +9,8 @@ implement_lore_changes=1
+ [item_pack]
+ update_itemexcl_2da=1
+ visible_ioun_stones=1
+-brokk_buying_markup=70
+-brokk_selling_markup=130
++brokk_buying_markup=80
++brokk_selling_markup=120
+ 
+ [iwd_items]
+ iwd_to_bg_price_conversion=50
+@@ -19,7 +19,7 @@ iwd_to_bg_price_conversion=50
+ holy_symbol_item_type=0x001c
+ 
+ [item_improvements]
+-baldurans_cloak_magic_resistance=10
++baldurans_cloak_magic_resistance=25
+ 
+ improve_gloves_of_dexterity=1
+ improve_cloak_of_the_wolf=1
+@@ -37,9 +37,9 @@ improve_bards_gloves=1
+ improve_robe_of_vecna=1
+ 
+ [extra_healing_in_bg1]
+-extra_healing_minimum=2
+-extra_healing_maximum=5
+-extra_healing_shops=1
++extra_healing_minimum=8
++extra_healing_maximum=18
++extra_healing_shops=3
+ extra_healing_durlag=1
+ 
+ [Metadata]
