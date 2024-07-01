@@ -14,3 +14,7 @@ no way to read in-game clock?
 SEE G3 discussion for implementation idea
 
 2. compatibility mod between wildmage addition and 5E
+
+3. XP reducer for overpowered bg1 mods
+
+4. Loot reducer for overpowered bg1 mods

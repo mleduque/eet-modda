@@ -10,15 +10,23 @@ global:
 
 locations:
   entries:
+    A7#ImprovedShamanicDance:
+      github_user: Argent77
+      repository: A7-ImprovedShamanicDance
+      release: v4.5
+      asset: A7-ImprovedShamanicDance-v4.5.iemod
     ajantisbg1:
       github_user: Gibberlings3
       repository: Ajantis_BG1_Expansion
       release: v20
       asset: ajantis-bg1-expansion-modification-20.iemod
-    rr:
-      github_user: FredrikLindgren
-      repository: rr
-      branch: devel
+    cdtweaks:
+      github_user: Gibberlings3
+      repository: Tweaks-Anthology
+      branch: master
+      refresh: 3days
+      patch:
+        relative: eet/cdtweaks-config.diff
     Imoen4ever:
       github_user: Gibberlings3
       repository: Imoen4Ever
@@ -33,3 +41,25 @@ locations:
         - file_globs: ['lib/compatibility.tpa']
           replace: 'ACTION_IF MOD_IS_INSTALLED ~atweaks/setup-atweaks.tp2~ 600 BEGIN'
           with: 'ACTION_IF MOD_IS_INSTALLED ~atweaks/setup-atweaks.tp2~ 510 BEGIN'
+    iwdification:
+      github_user: Gibberlings3
+      repository: iwdification
+      release: v5
+      asset: lin-iwdification-v5.tar.gz
+      patch:
+        relative: patches/iwdification-ini.diff
+    rr:
+      github_user: FredrikLindgren
+      repository: rr
+      branch: devel
+    stratagems:
+      github_user: Gibberlings3
+      repository: SwordCoastStratagems
+      release: v35.17
+      asset: lin-stratagems-35.17.zip
+      patch:
+        relative: patches/eet/scs-item-nerf-config.diff
+
+manifest_conditions:
+  prefer_scs_over_iwdification_spells:
+    because: newer at the moment

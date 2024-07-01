@@ -361,9 +361,9 @@ modules:
   - name: Blackhearts EET
     components: ask
     location:
-      github_user: mleduque # forked because needs-patch #  https://forums.beamdog.com/discussion/comment/1200875/#Comment_1200875
+      github_user: 11jo # forked because needs-patch #  https://forums.beamdog.com/discussion/comment/1200875/#Comment_1200875
       repository: Black-Hearts-EET
-      branch: fix-wi0004-are
+      branch: main
   - name: bst
     components:
       - 0 # The BS Company presents Balduran's Seatower: vEAOB.6
@@ -405,7 +405,15 @@ modules:
       repository: DarkHorizons
       branch: main
       refresh: 3days
-
+  - name: candlekeep_revisited
+    description:  Candlekeep Revisited
+    overview: A mod for expanding the content of the BG1 tutorial - dialogue with NPCs, 3 minor side-quests
+    components: ask
+    location:
+      github_user: ArtemiusI
+      repository: Candlekeep-Revisited
+      branch: main
+      refresh: 5days
 
 
 

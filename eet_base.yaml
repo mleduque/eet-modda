@@ -593,6 +593,16 @@ modules:
       repository: DarkHorizons
       branch: main
       refresh: 3days
+  - name: candlekeep_revisited # ok
+    description:  Candlekeep Revisited
+    overview: A mod for expanding the content of the BG1 tutorial - dialogue with NPCs, 3 minor side-quests
+    components: ask
+    location:
+      github_user: ArtemiusI
+      repository: Candlekeep-Revisited
+      branch: main
+      refresh: 5days
+
 
   - name: BG_Travel
     description: New travel system between Baldur's Gate City areas
@@ -1185,6 +1195,17 @@ modules:
     ## NPC
     ###########################
 
+  - name: DruidGroveMakeover # ok
+    description: Druid Grove Area Makeover
+    overview: bg2 - improves the visual esthetic of the druid grove outdoor area
+    insrallation:
+      geenral: after quest mods that touches thearea
+    components:
+      - 0
+    location:
+      github_user: thisisulb
+      repository: DruidGroveMakeover
+      tag: V1.2
 
 
   #########
@@ -3025,6 +3046,45 @@ modules:
     disabled:
       because: eet compat issues
 
+  - name: A7-ConvenientEENPCs
+    description: Convenient Enhanced Edition NPCs
+    overview: "Provides a number of options to adapt the enw EE npcs -make them
+                more passive, remove them, customize portraits, classes, kits."
+    components:
+      - 3   # Modifier les NPJ des Editions Ameliorees -> Decider pour chaque PNJ
+      - 201 # Modification selective : Baeloth -> Rendre Baeloth passif
+      - 203 # Modification selective : Hexxat -> Rendre Hexxat passive
+      - 205 # Modification selective : Rasaad -> Rendre Rasaad passif
+      - 410 # Changer le portrait de Dorn -> Graphisme de BG2
+      - 430 # Changer le portrait de Neera -> Graphisme de BG2
+      - 440 # Changer le portrait de Rasaad -> Graphisme de BG2
+      - 450 # Portrait ameliore pour Wilson
+    location:
+      github_user: Argent77
+      repository: A7-NoEENPCs
+      release: v4.6
+      asset: A7-ConvenientEENPCs-v4.6.iemod
+  - name: S9BGEENPCTweaks
+    description: S9 BGEENPC Tweaks for BGEE / SOD / BG2EE / EET
+    comment: >
+      OP https://forums.beamdog.com/discussion/58941/mod-bgeenpc-tweaks-for-bgee-sod-bg2ee-eet
+      original download https://us.v-cdn.net/5019558/uploads/editor/sd/k7icmh3du8p3.zip
+    components:
+      # Not needed with NPC_EE
+      #- 30 # Convenient NPCs
+      #- 42 # Make Dynaheir a Sorcerer
+      #- 44 # Make Faldorn an Avenger
+      #- 45 # Make Garrick a Skald
+      #- 48 # Make Kivan an Archer
+      #- 49 # Make Safana a Swashbuckler
+      #- 50 # Shar-Teel's Class -> Make Shar-Teel a Berserker
+      #- 52 # Make Skie a Shadowdancer
+      - 60 # Dual Class Friendly Stats for Branwen, Dynaheir, Safana and Xzar
+    location:
+      github_user: mleduque
+      repository: s9-S9BGEENPCTWEAKS
+      branch: master
+
   # end NPC
 
   #########
@@ -3096,7 +3156,7 @@ modules:
   #########
   # Early spell mods
   #########
-  - name: spell_rev
+  - name: spell_rev # ok
     components:
       - 0   # Spell Revisions
       - 10  # Deva and Planetar Animations
@@ -3110,7 +3170,7 @@ modules:
       branch: master
       refresh: 8hours
     description:  SubtleD Hotfixes - SR 4b19rc1 Sleep fix
-  - name: iwdification
+  - name: iwdification # ok
     description: spell packs of iwdification
     installation:
       general: just the spell packs part early, before some stroy mods (TDD, Totlm, dsotsc)
@@ -3124,12 +3184,19 @@ modules:
       asset: lin-iwdification-v5.tar.gz
       patch:
         relative: patches/iwdification-ini.diff
+      disabled:
+        because: SCS is newer
+  - name: stratagems
+    description: iwd spells portion
+    components:
+      - 1500 # Inclure les sorts profanes d'Icewind Dale : Enhanced Edition
+      - 1510 # Inclure les sorts divins/druidiques d'Icewind Dale : Enhanced Edition
 
   #########
   # Items
   #########
 
-  - name: item_rev # disabled
+  - name: item_rev # ok but disabled
     description: Item revisions ; main component only
     readme: https://raw.githack.com/subtledoctor/ItemRevisions/master/item_rev/readme-item_rev.html
     components:
@@ -3141,7 +3208,7 @@ modules:
     disabled:
       because: I want to use item upgrades this time
 
-  - name: heartwood
+  - name: heartwood # ok
     description: Heart of the Wood
     components: [0]
     location:
@@ -3149,37 +3216,37 @@ modules:
       repository: HeartOfTheWood
       release: v7.0.0
       asset:  heart-of-the-wood-7.0.0.iemod
-  - name: S3DisClubs
+  - name: S3DisClubs # ok
     description: Distinguishable clubs
     origin: https://forums.beamdog.com/discussion/34524/distinguishable-clubs-weidu-update-1-1
     components:
       - 0 # Distinguisable Clubs
     location: /home/mick/Games/modda-cache/static/Disting_Clubs_Weidu_V1_1.zip
-  - name: valhorn
+  - name: valhorn # ok
     components: [0]
     location:
       github_user: Gibberlings3
       repository: Improved_Horns_of_Valhalla
       release: v2
       asset: lin-valhorn-v2.tar.gz
-  - name: OfHeirloomsAndClasses
+  - name: OfHeirloomsAndClasses # ok
     components:
       - 0 # Of Heirlooms and Classes - new artifacts forgeable by Cromwell: v2.1
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/OfHeirloomsAndClasses v2.1.zip
-  - name: Silver_Staff_of_Aule
+  - name: Silver_Staff_of_Aule # ok
     components:
       - 101 # Baton argent d'Aule
     location:
       github_user: mleduque
       repository: Silver_Staff_of_Aule
       branch: french
-  - name: cliffkey
+  - name: cliffkey # ok
     components:
       - 1 # A Mod for the Orderly - Add a Keyring to Faerun!-> Consistency Plus version
     location:
       file: /home/mick/Games/modda-cache/static/cliffkey-v7.zip
-  - name: forgotten-armament
+  - name: forgotten-armament # ok
     description: Forgotten armaments
     components:
       # se limiter au nouveaux composants et quelques tweaks
@@ -3197,7 +3264,7 @@ modules:
           replace: 'REPLACE_TEXTUALLY ~Set Constitution to~ ~Increment Constitution by~'
           with: "REPLACE_TEXTUALLY ~Set Constitution to~ ~Increment Constitution by~\nREPLACE_TEXTUALLY ~Augmente la Constitution à~ ~Augmente la Constitution de~"
     ignore_warnings: true
-  - name: zgbg2evermemory
+  - name: zgbg2evermemory # ok
     componennts:
       - 0 # Evermemory for BG2EE
     location:
@@ -3205,7 +3272,7 @@ modules:
       repository: zgbg2evermemory
       branch: fr
 
-  - name: iiItemMod
+  - name: iiItemMod # ok
     overview: Aadds several dozen new items, lesser known item types (such as potions, bracers, arrows etc) scattered in creatures and stores
     readme: https://raw.githubusercontent.com/btigi/iiItem/master/iiItemMod/Readme/English/Readme-iiItemMod.txt
     components:
@@ -3216,11 +3283,11 @@ modules:
       release: v5.2
       asset: iiitemmod-v5.2.iemod
 
-  - name: mih_fr
+  - name: mih_fr # ok
     description: Made in Heaven - Fixes & Restorations ; items restorations only
     components:
       - 3  # item restorations
-  - name: mih_ip
+  - name: mih_ip # ok
     description: Made In Heaven Item Pack
     components: ask
     location:
@@ -3232,7 +3299,7 @@ modules:
         relative: patches/mih_ip-config.diff
 
   # new upgrades
-  - name: itemupgrade
+  - name: itemupgrade # ok
     description: SoA/ToB -  Allows Cromwell and Cespenar to upgrade more items for you
     readme: https://pocket-plane-group.github.io/readmes/readme-itemupgrade.html
     installation:
@@ -3248,7 +3315,7 @@ modules:
       repository: Item_Upgrade
       release: v52
       asset: lin-itemupgrade-v52.tar.gz
-  - name: thalan
+  - name: thalan # ok
     description: Thalantyr Item Upgrade - Thalantyr can make new item and sells more containers
     components:
       - 0 # Thalantyr Item Upgrade
@@ -3257,7 +3324,7 @@ modules:
       repository: thalan
       release: v4.5.1
       asset: thalantyr-item-upgrade-v4.5.1.iemod
-  - name: mod-thalantyr-ex
+  - name: mod-thalantyr-ex # ok
     description: extends Thalantyr Item Upgrade - more items
     components: ask
     location:
@@ -3265,7 +3332,7 @@ modules:
       repository: BGEE-Thalantyr-Ex
       release: v1.0.0
       asset: modthalantyrex-v1.0.0.iemod
-  - name: rr
+  - name: rr # ok
     description: additional equipment only - component with WARNING
     components:
       - 7     # Equipement supplementaire pour les voleurs et les bardes
@@ -3275,7 +3342,7 @@ modules:
       github_user: FredrikLindgren
       repository: rr
       branch: devels
-  - name: swordap
+  - name: swordap # ok
     description: Improved Haer'Dalis' Swords
     overview: This mod allows you to upgrade Haer'Dalis' swords in the Underdark.
     components: [0]
@@ -3284,7 +3351,7 @@ modules:
       repository: HaerDalis_Swords
       release: v3.1.0
       asset: improved-haerdalis-swords-v3.1.0.iemod
-  - name: customs
+  - name: customs # ok
     description: Sword Coast Customs
     long_description: |
       Allows the player to commission a weapon from Taerom Fuiruim, at the Thunderhammer Smithy,
@@ -3299,14 +3366,14 @@ modules:
       branch: master
       refresh: 1month
 
-  - name: msfm
+  - name: msfm # ok
     description: add wizard staffs, items, robe tweaks, familiar tweaks
     components: ask
     location:
       github_user: Renegade0
       repository: msfm
       tag: "1.57"
-  - name: underrep
+  - name: underrep # ok
     description: Under-Represented Items
     overview: |
       This mod adds items to Baldur's Gate II. The items come from Icewind Dale II. Only certain kinds of items
@@ -3322,7 +3389,7 @@ modules:
       repository: Under-Respresented_Items
       release: v11
       asset: lin-underrep-v11.tar.gz
-  - name: alchemy
+  - name: alchemy # ok
     description: jan's alchemy
     overview: |
       Jan's Book of Brewing is a magical tome that will allow Jan to create 8 potions following specific recipes.
@@ -3334,7 +3401,7 @@ modules:
       repository: JansAlchemy
       release: v8.1.0
       asset: jans-alchemy-v8.1.0.iemod
-  - name: stuffofthemagi
+  - name: stuffofthemagi # ok
     description: Stuff of the Magi
     overview: "This mod adds a new set of Mage items scattered through the game.
       Once you gather all the items, the one who equip them all gain an exceptional bonus. Also, if you
@@ -3346,7 +3413,7 @@ modules:
       repository: StuffofTheMagi
       release: v6.0.0
       asset: stuff-of-the-magi-6.0.0.iemod
-  - name: BardicWonders
+  - name: BardicWonders # ok
     description: Bardic Wonders
     overview: bard kits( new and tweaks), new bard items, bardic inspiration (new unkitted bard power), armored casting
     readme: https://artisans-corner.com/bardic-wonders/
@@ -3357,7 +3424,7 @@ modules:
       repository: Bardic-Wonders
       tag: v2.9c
       refresh: 2days
-  - name: A7#ImprovedArcher
+  - name: A7#ImprovedArcher # ok
     description: Wares of the Planes
     overview: "This mod introduces a large number of weapons and accessories from the Planescape universe in
             the Baldur's Gate series. The items can be purchased from from a travelling merchant who is
@@ -3374,7 +3441,7 @@ modules:
       repository: A7-WaresOfThePlanes
       release: v1.2
       asset: A7-WaresOfThePlanes-v1.2.iemod
-  - name: Unofficial Item Pack
+  - name: Unofficial Item Pack # ok
     description: BGII:EE - Unofficial Item Pack
     overview:
     original_thread: https://forums.beamdog.com/discussion/56567/mod-bgii-ee-unofficial-item-pack
@@ -3396,7 +3463,7 @@ modules:
           with: '' # delete the line
 
   # new stores or new inventory
-  - name: Derats_Archery
+  - name: Derats_Archery # ok
     description: Au bonheur du tireur / The shooter's delight
     overview: A merchant on the Waukyne promenade who sells everything you need for shooters/throwers.
     components:
@@ -3405,7 +3472,7 @@ modules:
       github_user: Deratiseur
       repository: Archery
       tag: v5.00
-  - name: A7-WaresOfThePlanes
+  - name: A7-WaresOfThePlanes # ok
     description: Improved Archer - items
     overview: archer kit rebalance, new archer kits forother classes, items
     readme: https://argent77.github.io/A7-ImprovedArcher/index.html
@@ -3416,7 +3483,7 @@ modules:
       repository: A7-ImprovedArcher
       release: v4.3
       asset: A7-ImprovedArcher-v4.3.iemod
-  - name: ruad
+  - name: ruad # ok
     description: Ruad Ro'fhessa Item Upgrade
     overview: This mod adds Ruad, a new smith in Waukeen's Promenade, who improves items as well as forges some quite new ones.
     readme: https://spellholdstudios.github.io/readmes/ruad-spoilers.txt
@@ -3428,7 +3495,7 @@ modules:
       repository: RuadRofhessaItemUpgrade
       release: v29.4.0
       asset: ruad-rofhessa-item-upgrade-v29.4.0.iemod
-  - name: rolles
+  - name: rolles # ok
     description: Rolles Safyer
     overview: "adds Rolles, a new smith in Waukeen's Promenade above the entrance to Adventurer Mart, who can
               upgrade items. He also sells a few scrolls and items."
@@ -3441,7 +3508,7 @@ modules:
       repository: Rolles
       release: v5.0.5
       asset: rolles-safyer-v5.0.5.iemod
-  - name: darron
+  - name: darron # ok
     description: Darron the BG2 Thief Guild Vendor
     overview: 'This mod adds Darron, a new merchant who sells special goods created especially for thieves.
       You can find him in the cellar of the Shadow Thieves guild.'
@@ -3452,7 +3519,7 @@ modules:
       repository: Darron
       release: v2.0.0
       asset: darron-v2.0.0.iemod
-  - name: bolsa
+  - name: bolsa # ok
     description: Bolsa (merchant)
     overview: "This mod adds Bolsa, a new merchant who sells several containers and bags for objects that
       will not appear in your inventory, ammunition belts and a very useful Staff of the Magi, besides
@@ -3464,7 +3531,7 @@ modules:
       repository: Bolsa
       release: v6.0.0
       asset: bolsa-v6.0.0.iemod
-  - name: A7-MagicStore
+  - name: A7-MagicStore # ok
     description: Magic Store of Vergadain
     overview: "This mod allows you to acquire a magical artifact that provides the means to visit any
       store you have visited in the past. Getting your hands on this unique artifact involves a small
@@ -3475,7 +3542,7 @@ modules:
       repository: A7-MagicStore
       release: v4.1
       asset: A7-MagicStore-v4.1.iemod
-  - name: saradas_magic
+  - name: saradas_magic # ok
     description: Saradas Magic for BGEE / EET
     overview: NPC with a store in FAI - items, id, cure, new spells
     comment: both a spell and items mod but a single component :/
@@ -3486,7 +3553,7 @@ modules:
       repository: Saradas_Magic_for_BGEE
       branch: master
       refresh: 1day
-  - name: saradas_magic_2
+  - name: saradas_magic_2 # ok
     description: Saradas Magic for BG2
     overview: NPC with store in Temple district/SoA ; joignable in ToB ; enchants artifacts (vanilla quest leftover items)
     readme: https://spellholdstudios.github.io/readmes/saradas_magic_2-readme-english.html
@@ -3497,7 +3564,7 @@ modules:
       repository: Saradas_Magic_for_BG2
       release: v2.0.0
       asset: saradas-magic-for-bg2-v2.0.0.iemod
-  - name: abystore
+  - name: abystore # ok
     description: The Unusual Oddities Shop
     overview: |
       This mod adds a (very unusual) merchant in the Docks district of Athkatla. You can find her
@@ -3512,7 +3579,7 @@ modules:
       repository: The_Unusual_Oddities_Shop
       release: v5.0
       asset: the-unusual-oddities-shop-5.0.iemod
-  - name: rttitempack
+  - name: rttitempack # ok
     description: Return to Trademeet Item Pack
     overview: 51 items are added to the "special" store of Ribald OR to multiple stores
     components:
@@ -3523,7 +3590,7 @@ modules:
       repository: RTT-ItemPack
       branch: master
       refresh: 1week
-  - name: iwditempack
+  - name: iwditempack # ok
     descriptin: SoA - adds  twelve Icewind Dale/Icewind Dale II related items to Joluv (Copper Coronet)
     forum: http://www.shsforums.net/topic/46557-iwd-item-pack-for-bg2/
     components:
@@ -3544,16 +3611,22 @@ modules:
       repository: IWD_Item-Pack
       release: v1.3
       asset:  iwd-item-pack-1.3.iemod
-  - name: Mystigan
+  - name: Mystigan # ok
     description: Merchant in SoA (government district) - containers, projectiles, scrolls
     readme: https://akadis.baldursgateworld.fr/Mystigan/MystiganFr.html
     components:
       - 0 # Marchand Mystigan (ToB requis)
     location:
       file: https://akadis.baldursgateworld.fr/Mystigan/zip/Mystigan1.62.zip
+  - name: A7#ImprovedShamanicDance
+    description: Improved Shamanic Dance - itrems only
+    overview: "Allows the shaman to move at reduced speed while performing the dance + extends
+              to lv24 + new shaman spell Shamanic Pact + items"
+    components:
+      - 40 # Objets specifiques aux Shamans
 
   # overpowered item mods
-  - name: DGItems
+  - name: DGItems # ok but disbled
     overview: |
       Customized items collection for Baldur’s Gate 2 Throne of Bhaal, Baldur’s Gate Trilogy,
       Baldur’s Gate II Enhanced Edition and Enhanced Edition Trilogy - by TDaniel Goodrich - adapted by Prof Errata
@@ -3567,7 +3640,7 @@ modules:
       asset:  dgitems-2.0.iemod
     disabled:
       because: much overpowered
-  - name: IRStore
+  - name: IRStore # ok but disbled
     overview: |
       Customized items collection for Baldur’s Gate 2 Throne of Bhaal, Baldur’s Gate Trilogy,
       Baldur’s Gate II Enhanced Edition and Enhanced Edition Trilogy - by Theo de Moree - adapted by Prof Errata
@@ -3581,8 +3654,19 @@ modules:
       refresh: 1day
     disabled:
       because: much overpowered
+  - name: d2-workshopkits # ok
+    description: just the items
+    installation:
+      after: rr, class revisions, sphere system
+    components:
+      - 3 # Misc item pack
+    location:
+      github_user: D2-mods
+      repository: The-Workshop-Kitpack
+      release: v5.1
+      asset: the-workshop-kitpack-5.1.iemod
 
-  - name: item_rev
+  - name: item_rev # ok
     descritpion: Item Revisions - store component
     installation:
       general: |
@@ -3596,15 +3680,10 @@ modules:
       - 1030 # Store Revisions
 
   #########
-  # Mass item updates
-  #########
-
-
-  #########
   # Late Quests - NWN/IWD
   #########
 
-  - name: cowledmenace
+  - name: cowledmenace # ok
     installation:
       general : after npc mods, before tweaks andEET_end
     components:
@@ -3621,7 +3700,7 @@ modules:
   # Depend on iwdification
   #########
 
-  - name: NwnForBg
+  - name: NwnForBg # ok
     description: Neverwinter Nights for Baldur's Gate
     overview: |
       The mod repeats, with some minor modifications, the plot of Neverwinter Nights game. Once Gorion's Ward reaches
@@ -3641,7 +3720,7 @@ modules:
       repository: NWNForBG
       branch: master
       refresh: 10days
-  - name: IWD1_EET
+  - name: IWD1_EET # ok
     installation:
       after: EET
       before: A7-TotLM-BG2EE, Icewind_EET, EET_end
@@ -3653,7 +3732,7 @@ modules:
       repository: IWD1_EET
       branch: master
       refresh: 10days
-  - name: HOW_EET # disabled
+  - name: HOW_EET # disabled # ok
     description: Heart of Winter for BGEE / EET
     installation:
       after: EET
@@ -3674,7 +3753,7 @@ modules:
           with: '' # just delete
     disabled:
       because: will use IWD easter-eggs from SD's IWD_EET_integration
-  - name: IWD2_EET
+  - name: IWD2_EET # ok
     installation:
       after: EET
       before: A7-TotLM-BG2EE, Icewind_EET, EET_end
@@ -3696,7 +3775,7 @@ modules:
             APPEND ~projectl.ids~ ~%prot%~
             APPEND ~missile.ids~  ~%misl%~
           with: '' # just delete
-  - name: Icewind_EET
+  - name: Icewind_EET # ok
     installation:
       general: as late as possible in your installation, especially after mods that add NPCs, otherwise there may be problems with quests, dialogs, etc.
       before: EET_end
@@ -3707,7 +3786,7 @@ modules:
       repository: Icewind_EET
       branch: master
       refresh: 5days
-  - name: A7-TotLM-BG2EE
+  - name: A7-TotLM-BG2EE # ok
     description: Trials of the Luremaster for Baldur's Gate
     overview: |
       This mod makes the Icewind Dale expansion "Trials of the Luremaster" available to BG2:EE (2.0 or higher),
@@ -3732,7 +3811,7 @@ modules:
       repository: A7-TotLM-BG2EE
       release: v4.1
       asset: A7-TotLM-BG2EE-v4.1.iemod
-  - name: IWD_EET_integration
+  - name: IWD_EET_integration # ok
     description: SubtleDoctor's IWD EET Integration
     overview: Integraties IWD1 and IWD2 in the BG1ee or BG2ee campaigns OR add then to the campaign menu
     installation:
@@ -3756,7 +3835,7 @@ modules:
   #########
   # Mass item updates
   #########
-  - name: hammers
+  - name: hammers # ok
     description: Thrown hammers
     overveiw: Animation for thrown hammers
     readme: https://raw.githack.com/Sampsca/ThrownHammers/master/hammers/hammers-english.html
@@ -3772,38 +3851,68 @@ modules:
       github_user: Sampsca
       repository: ThrownHammers
       tag: v6.1.1
-  - name: forgotten-armament
+  - name: forgotten-armament # ok
     description: Forgotten armaments - ability scoress
     components:
       - 4 # Update Items Setting an Ability Score to Increment the Increase
-  - name: item_rev
+  - name: item_rev # ok
     description: Item Revisions - item usability
     components:
       - 1060 # Les Kensai peuvent porter des bracelets
       - 1070 # Les Voleurs peuvent utiliser des baguettes
 
   #########
-  # Spells
+  # Spells and abilities
   #########
-  - name: iwdification
+  - name: Trap_Overhaul # ok
+    description: Trap Detection/Recovery/Evasion
+    overview: |
+      - Fast Trap Detection: Any Monk/Thief/Shaman using "Detect Traps" modal with sufficient Find Traps
+        skill will detect traps as soon as they are within detection range. Chance to detect type. Also
+        modifies cleric spell Find Traps
+      - Trap Recovery: Anytime a trap is disarmed, if the thief's Find Traps skill is at least 125% of
+        the removal score then they will recover the trap
+      - Monk Trap Evasion - Monks can bypass (without triggering) traps if their Find Traps skill is
+        high enough to detect the trap
+      - Anyone Unlock - clicking on a locked door or container, while close enough, will have the
+        character attempt to unlock it with the Open Locks skill
+    original_thread: https://forums.beamdog.com/discussion/71763/trap-detection-recovery-evasion
+    original_dl: https://us.v-cdn.net/5019558/uploads/editor/cq/pzpto4fbfcov.zip
+    components:
+      - 1111 # Trap Overhaul -> Monk Evasion, Fast Detection, Recovery, Anyone OpenLocks: 0.20
+    location:
+      github_user: mleduque
+      repository: kjeron_Trap_Overhaul
+      tag: v0.20-french
+  - name: A7#ImprovedShamanicDance # ok
+    description: Improved Shamanic Dance
+    overview: "Allows the shaman to move at reduced speed while performing the dance + extends
+              to lv24 + new shaman spell Shamanic Pact + items"
+    components:
+      - 0  # Danse shamanique amelioree
+      - 10 # Danse shamanique etendue pour les personnages de haut niveau
+      - 20 # Ajouter le sort "Pacte shamanique"
+      - 30 # Appliquer la Danse shamanique amelioree a tous les profils de Shama
+
+  - name: iwdification # ok
     components:
       - 10 # Icewind Dale Casting Graphics (Andyr): Release Candidate 2
       - 60 # Two Handed Axe Item Pack: Release Candidate 2
       - 50 # IWD Class Updates: Bard: Add IWD Bard Songs: Release Candidate 2
+      - 150 # IWD Class Updates: Bard: Use IWD Spell Progression: Release Candidate 2
       - 120 # IWD Class Updates: Thief: Evasion: Release Candidate 2
       - 140 # Randomized Enemy Equipment -> Add High Quality Items: Release Candidate 2
-      - 150 # IWD Class Updates: Bard: Use IWD Spell Progression: Release Candidate 2
       - 70 # IWD Class Updates: Druid: Use IWD Shapeshifting and Ability Progression: Release Candidate 2
       - 71 # IWD Class Updates: Druid: Allow Elves to be Druids: Release Candidate 2
       - 160 # IWD Class Updates: Paladin: Use IWD Spell Progression: Release Candidate 2
       - 170 # IWD Class Updates: Ranger: Use IWD Spell Progression: Release Candidate 2
-  - name: iwdification
+  - name: iwdification # ok
     description: iwdification -components with warnings
     components:
       - 90 # Expanded Polymorph Self: Release Candidate 2
       - 100 # IWD Class Updates: Paladin: IWD Abilities and Skills: Release Candidate 2
     ignore_warnings: true
-  - name: mih_fr
+  - name: mih_fr # no
     description: MadeInHeaven Fixes and restorations -- spell restorations
     readme: https://raw.githack.com/AngelGryph/MadeInHeaven_FixesAndRestorations/main/mih_fr/docs/readme-mih_fr.html
     components:
@@ -3811,7 +3920,7 @@ modules:
     location:
       github_user: AngelGryph
       repository: MadeInHeaven_FixesAndRestorations
-  - name: mih_sp
+  - name: mih_sp # no
     description: MadeInHeaven SpellPack --
     readme: https://raw.githack.com/AngelGryph/MadeInHeaven_SpellPack/main/mih_sp/docs/readme-mih_sp.html
     components:
@@ -3821,12 +3930,24 @@ modules:
     location:
       github_user: AngelGryph
       repository: MadeInHeaven_SpellPack
-  - name : Weasels!
+  - name: SubtleD_Spell_Tweaks # ok
+    description: SubtleD's Spell Tweaks
+    installation:
+      general: probably juste before TnB
+      after: spell_rev, iwdification
+      before: TomeandBlood, faiths_and_powers, will_to_power, might_and_guile, cdtweaks, stratagems
+    components: ask
+    location:
+      github_user: subtledoctor
+      repository: SubtleD_Spell_Tweaks
+      tag: "2.8.3"
+
+  - name : Weasels! # ok
     components:
       - 0
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/Weasels! v3.4.zip
-  - name: Isaac's_Missile_Storm
+  - name: Isaac's_Missile_Storm # ok
     components: ask
     location:
       github_user: shohysie
@@ -3837,7 +3958,7 @@ modules:
   #########
   # Early tweaks
   #########
-  - name: cdtweaks
+  - name: cdtweaks # ok
     description: Tweaks Anthology - only spell progression tables
     components:
       - 2250 # Table de progression des sorts du sorcier debridee
@@ -3845,52 +3966,34 @@ modules:
       - 2270 # Alterer la table de progression des sorts du barde -> Table debridee (Blucher)
       - 2280 # Alterer la table de progression des sorts du clerc -> Table debridee (Blucher)
       - 2293 # Alterer les tables de progression des sorts et de niveaux du druide -> Utiliser la table de progression des clercs et la table debridee des sorts des druides (Blucher)
+      - 2390 # Alter Paladin Spell Progression Table -> Paladins Use Icewind Dale-Heart of Winter Spell Tables [grogerson]: v16
+      - 2400 # Alter Ranger Spell Progression Table -> Rangers Use Icewind Dale-Heart of Winter Spell Tables [grogerson]: v16
+
     location:
       github_user: Gibberlings3
       repository: Tweaks-Anthology
       release: v16
       asset: lin-cdtweaks-v16.zip
-    add_conf:
-      file_name: cdtweaks.txt
-      content: |
-        OUTER_SET romance_speed_use_config_values = 1
-        OUTER_SET romance_speed_factor = 35
-
-        OUTER_SET romance_use_config_values = 1
-        OUTER_SET remove_romance_racial_requirements = 1
-        OUTER_SET remove_romance_gender_requirements = 0
-        OUTER_SET romance_multiple = 1
-        OUTER_SET romance_nothing_kills = 1
-        OUTER_SET romance_starts_in_ToB = 1
-
-        OUTER_SET always_install_unique_icons = 1
-
-        OUTER_SET minimum_stats_use_config_values = 1
-        OUTER_SET minimum_stats_strength     = 11
-        OUTER_SET minimum_stats_constitution = 11
-        OUTER_SET minimum_stats_dexterity    = 11
-        OUTER_SET minimum_stats_intelligence = 11
-        OUTER_SET minimum_stats_wisdom       = 11
-        OUTER_SET minimum_stats_charisma     = 11
-
+      patch:
+        relative: eet/cdtweaks-config.diff
 
   #########
   # Single class kits
   #########
-  - name: A7#ImprovedArcher
-    description: Improved Archer - kist
+  - name: A7#ImprovedArcher # ok
+    description: Improved Archer - kits
     components:
       - 0   # Profil d'Archer ameliore
       - 10  # Ajouter le profil de guerrier : Tireur d'elite
       - 20  # Ajouter le profil de paladin : Chevalier archer
       - 30  # Ajouter le profil de voleur : Tireur de precision
-  - name: MilitiaOfficer
+  - name: MilitiaOfficer # ok
     components: [0]
     location:
       github_user: Raduziel
       repository: MilitiaOfficer-Kit
       tag: "1.8"
-  - name: ArtisansKitpack
+  - name: ArtisansKitpack # ok
     description: ArtisansKitpack - only single-class kits
     components:
       #- 1 # Artisan's Kitpack: Enable All Classes for All Races: 2.5
@@ -3910,8 +4013,8 @@ modules:
     location:
       github_user: ArtemiusI
       repository: The-Artisan-s-Kitpack
-      tag: v4.6
-  - name: A7-ChaosSorcerer
+      tag: v4.81a
+  - name: A7-ChaosSorcerer # ok
     components:
       - 0 # Kit d'Ensorceleur du Chaos
       - 30 # Ajouter des artefacts primordiaux
@@ -3934,7 +4037,7 @@ modules:
       repository: bg2-wildmage
       release: v2.2
       asset: wild-mage-additions-v2.2.iemod
-  - name: shadowadept # will prompt 2 times
+  - name: shadowadept # ok
     description: shadowadept- main component only - because error
     ignore_warnings: true # WARNING: no effects altered on C0SA112.itm
     components:
@@ -3942,20 +4045,21 @@ modules:
     location:
       github_user: ArtemiusI
       repository: Shadow-Magic
-      tag: v3.0.1
+      tag: v3.2
       patch:
-        relative: patches/shadowmagic-condrain.diff
-  - name: shadowadept
+        relative: patches/eet/shadowmagic-noask-condrain.diff
+  - name: shadowadept # ok
     description: shadowadept - components without warning
     components:
       - 1 # Shadow Magic: Shadow Monk monk
       - 2 # Shadow Magic: Quests and Encounters
-  - name: Px_Chantelame # single class fighter kit
+  - name: Px_Chantelame # no
+    description: single class fighter kit
     components:
       #- 0
     location:
       path: /home/mick/Games/modda-cache/static/Chantelame v7.1.zip
-  - name: Derats_kits
+  - name: Derats_kits # no
     components:
       #- 0 # chasseur de vermine, ranger
       #- 1 # PORTEUR DE HAINE, guerrier (demi-orc)
@@ -3972,7 +4076,32 @@ modules:
       layout:
         strip_leading: 1
         layout_type: single_dir
-  - name: song_and_silence
+  - name: divine_remix # ok
+    components:
+      - 11 # Installer les nouveaux sorts -> Ajouter les nouveaux sorts uniquement si d'autres mods ne l'ont pas deja fait: 8.1
+      - 100 # Modification des Clercs: 8.1
+      - 103 # Installer le kit de clerc d'Etoile d'Argent de Selune: 8.1
+      - 106 # Installer le kit de clerc de Manteau de la Nuit de Shar: 8.1
+      - 107 # Installer le kit de clerc de Stratege Divin de la Cavaliere Rouge: 8.1
+      - 112 # Installer le kit de clerc de Noble Martyr d'Ilmater: 8.1
+      #- 115 # Installer le kit de clerc d'Adepte des Flammes de Kossuth: 8.1
+      #- 118 # Installer le kit de clerc de Tyran d'Iyachtu Xvim: 8.1
+      #- 121 # Installer le kit de clerc de Gardien du Savoir d'Oghma: 8.1
+      - 124 # Installer le kit de clerc de Garde du Coeur de Sunie: 8.1
+      - 127 # Installer le kit de clerc de Protecteur Feerique de Corellon: 8.1
+      #- 130 # Installer le kit de clerc de Maitre des Conflits de Cyric: 8.1
+      - 200 # Modification des Druides: 8.1
+      #- 203 # Installer le kit de Druide de Maitre des Vases: 8.1
+      - 403 # Installer le kit de Rodeur d'Archer Sylvain: 8.1
+      #- 406 # Installer le kit de Rodeur Sauvage: 8.1
+      #- 409 # Installer le kit de Rodeur de Coureur des Bois: 8.1
+      #- 412 # Installer le kit de Rodeur de Vengeur: 8.1
+      #- 415 # Installer le kit de Rodeur de Coureur Sauvage: 8.1
+    location:
+      github_user: TotoR115
+      repository: Divine_Remix
+      commit: a443b16
+  - name: song_and_silence # ok
     components:
       - 0  # Changements concernant les bardes et voleurs purs, ainsi que les kits originaux du jeu (necessaire pour les autres composants)
       - 1  # Ajout d'une echoppe pour bardes et voleurs
@@ -3989,7 +4118,14 @@ modules:
       repository: SongAndSilence
       release: v18
       asset: lin-song_and_silence-v18.zip
-  - name: morpheus562-s-kitpack
+  - name: rr # ok
+    description: the rebalancing part
+    components:
+      - 1 # thief kit revisions
+      - 2 # Thief High Level Ability revisions
+      - 3 # Proper racial adjustments for thieving skills
+      - 5 # Bard High Level Ability revisions
+  - name: morpheus562-s-kitpack # no
     description: morpheus562's kitpack - only single-class kits
     components:
       # Fighters
@@ -4022,6 +4158,43 @@ modules:
       asset: lin-morpheus562-s-kitpack-v3.1.zip
       patch:
         relative: patches/morpheus562-s-kitpack.diff
+  - name: npckit
+    description: NPC Kitpack
+    overview: "Gives kits to NPCs, add new kits : Battlrager(cosmetic), Rashemaar Ranger(cosmetic),
+                Red Wizard, Adventurer, Truesword of Arvoreen, Deathbringer"
+    installation:
+      general: among kits
+    components: #[30, 31, 400, 410, 900, 1415, 2100, 2200, 2300, 2500, 2800]
+      #- 30 # Improved Specialist Mage Descriptions
+      - 31 # replace berserker with battlerager for dwarves
+      #- 400 # Anomen Gains Helm Kit on Passing Knighthood Test
+      #- 410 # Anomen Gains Berserker Kit on Failing Knighthood Test
+      #- 420 # Prevent CN Anomen Gaining a Holy Symbol
+      - 900 # Add Red Wizard to Edwin's Kit Description
+      #- 1400 # Give Imoen Adventurer Kit
+      #- 1410 # Give Imoen a Mage Kit -> abjurer
+      #- 1411 # Give Imoen a Mage Kit -> conjurer
+      #- 1412 # Give Imoen a Mage Kit -> diviner
+      #- 1413 # Give Imoen a Mage Kit -> enchanter
+      #- 1414 # Give Imoen a Mage Kit -> illusionist
+      #- 1415 # Give Imoen a Mage Kit -> invoker
+      #- 1416 # Give Imoen a Mage Kit -> necromancer
+      #- 1417 # Give Imoen a Mage Kit -> transmuter
+      - 2100 # Change Korgan's Kit to Battlerager
+      - 2200 # Give Mazzy a Proper Truesword of Arvoreen Kit
+      #- 2300 # Change Minsc's Title to Rashemaar Ranger
+      - 2500 # Give Nalia Adventurer Kit
+      #- 1410 # Give Nalia a Mage Kit -> abjurer
+      #- 1411 # Give Nalia a Mage Kit -> conjurer
+      #- 1412 # Give Nalia a Mage Kit -> diviner
+      #- 1413 # Give Nalia a Mage Kit -> enchanter
+      #- 1414 # Give Nalia a Mage Kit -> illusionist
+      #- 1415 # Give Nalia a Mage Kit -> invoker
+      #- 1416 # Give Nalia a Mage Kit -> necromancer
+      #- 1417 # Give Nalia a Mage Kit -> transmuter
+      - 2800 # Give Sarevok a Proper Deathbringer Kit
+    location:
+      http: http://america.iegmc.net/g3/lin-npckit-v5.tar.gz
 
   #########
   # Kits, mixed single/multi, not separable
@@ -4060,17 +4233,6 @@ modules:
     components:
       - 1103 # Install Stormlord Multiclass Kit for Fighter/Druids - Do NOT assign kit to Jaheira
 
-  - name: SubtleD_Spell_Tweaks
-    description: SubtleD's Spell Tweaks
-    installation:
-      general: probably juste before TnB
-      after: spell_rev, iwdification
-      before: TomeandBlood, faiths_and_powers, will_to_power, might_and_guile, cdtweaks, stratagems
-    components: ask
-    location:
-      github_user: subtledoctor
-      repository: SubtleD_Spell_Tweaks
-      tag: "2.8.3"
   - name: TomeAndBlood
     description: Tome And Blood - main
     components:
@@ -4106,43 +4268,6 @@ modules:
     components:
       - 68 #// Pooky's Mod: Imbue Familiars: 0.9.25
     ignore_warnings: true # no effect altered on... for each component
-  - name: A7#ImprovedShamanicDance
-    components:
-      - 0  # Danse shamanique amelioree
-      - 10 # Danse shamanique etendue pour les personnages de haut niveau
-      - 20 # Ajouter le sort "Pacte shamanique"
-      - 30 # Appliquer la Danse shamanique amelioree a tous les profils de Shama
-      - 40 # Objets specifiques aux Shamans
-    location:
-      github_user: Argent77
-      repository: A7-ImprovedShamanicDance
-      release: v4.5
-      asset: A7-ImprovedShamanicDance-v4.5.iemod
-  - name: divine_remix
-    components:
-      - 11 # Installer les nouveaux sorts -> Ajouter les nouveaux sorts uniquement si d'autres mods ne l'ont pas deja fait: 8.1
-      - 100 # Modification des Clercs: 8.1
-      - 103 # Installer le kit de clerc d'Etoile d'Argent de Selune: 8.1
-      - 106 # Installer le kit de clerc de Manteau de la Nuit de Shar: 8.1
-      - 107 # Installer le kit de clerc de Stratege Divin de la Cavaliere Rouge: 8.1
-      - 112 # Installer le kit de clerc de Noble Martyr d'Ilmater: 8.1
-      #- 115 # Installer le kit de clerc d'Adepte des Flammes de Kossuth: 8.1
-      #- 118 # Installer le kit de clerc de Tyran d'Iyachtu Xvim: 8.1
-      #- 121 # Installer le kit de clerc de Gardien du Savoir d'Oghma: 8.1
-      - 124 # Installer le kit de clerc de Garde du Coeur de Sunie: 8.1
-      - 127 # Installer le kit de clerc de Protecteur Feerique de Corellon: 8.1
-      #- 130 # Installer le kit de clerc de Maitre des Conflits de Cyric: 8.1
-      - 200 # Modification des Druides: 8.1
-      #- 203 # Installer le kit de Druide de Maitre des Vases: 8.1
-      - 403 # Installer le kit de Rodeur d'Archer Sylvain: 8.1
-      #- 406 # Installer le kit de Rodeur Sauvage: 8.1
-      #- 409 # Installer le kit de Rodeur de Coureur des Bois: 8.1
-      #- 412 # Installer le kit de Rodeur de Vengeur: 8.1
-      #- 415 # Installer le kit de Rodeur de Coureur Sauvage: 8.1
-    location:
-      github_user: TotoR115
-      repository: Divine_Remix
-      commit: a443b16
   - name: Faiths_and_Powers
     components:
       #### INI ADDED
@@ -4201,7 +4326,7 @@ modules:
     location:
       github_user: UnearthedArcana
       repository: Will_to_Power
-      branch: "2.6.3"
+      branch: "2.7.0"
       patch:
         relative: patches/will_to_power_tweaks.diff
   - name: Will_to_Power
@@ -4221,6 +4346,8 @@ modules:
       tag: "5.8.2"
       patch:
         relative: patches/mng-multibard-shools.diff
+
+
   - name: HouseTweaks
     description: The Artisan's Tweaks and Overhauls
     components:
@@ -4392,7 +4519,8 @@ modules:
       #- 200  # Make quest experience divided among party members
       - 400  # Remove the limit of two proficiency points in a weapon at character creation
       - 505  # Increase the rate at which warriors get proficiency points -> Fighters, Rangers and Paladins get 1 point per 2 levels
-      - 600  # Allow Shamans to move while dancing
+      # improved shamanic dance does this differently
+      #- 600  # Allow Shamans to move while dancing
       - 900  # Let Rangers and Paladins cast spells at their full caster level
       #- 1000 # Give Monks a cooler Deflect Missiles ability
       # already in iwdification
@@ -4410,13 +4538,6 @@ modules:
       github_user: OlvynChuru
       repository: Olvyn-Tweaks
       commit: 1f59527c14 # EET compat fix by Selphira
-  - name: DruidGroveMakeover
-    components:
-      - 0
-    location:
-      github_user: thisisulb
-      repository: DruidGroveMakeover
-      tag: V1.2
   - name: EET_Tweaks
     components:
       - 1001 # Edwin appearance -> BG2
@@ -4441,6 +4562,10 @@ modules:
       patch:
         relative: patches/eet_tweaks-xpbonus.diff
   - name: bgeespawn
+    description: BGEE Leveled Spawns Mod
+    installation: aflter mods thatchange bg1 areas?
+    overview: "replaces the default spawns with spawns that scale in difficulty with the average
+              level of the party or with the game difficulty setting ; with configurable respawn"
     components:
       - 0 # BGEE Leveling Spawns Mod
     location:
@@ -4452,17 +4577,6 @@ modules:
         - file_globs: ['ini/ay_bgeespawn.ini']
           replace: 'OUTER_SET disablevanillaspawns = ~1~'
           with: 'OUTER_SET disablevanillaspawns = ~0~'
-  - name: Trap_Overhaul
-    description: Kjeron's Trap Overhaul
-    original_thread: https://forums.beamdog.com/discussion/71763/trap-detection-recovery-evasion
-    original_dl: https://us.v-cdn.net/5019558/uploads/editor/cq/pzpto4fbfcov.zip
-    components:
-      - 1111 # Trap Overhaul -> Monk Evasion, Fast Detection, Recovery, Anyone OpenLocks: 0.20
-    location:
-      github_user: mleduque
-      repository: kjeron_Trap_Overhaul
-      tag: v0.20-french
-      patch: trap_overhaul-bonus.diff
   - name: enchant
     description: "Dee's 'Enchant the Missile Launchers: A Small Ranged Weapon Tweak'"
     original_thread: https://forums.beamdog.com/discussion/58374/enchant-the-missile-launchers-ranged-weapon-tweak
@@ -4531,76 +4645,14 @@ modules:
       release: v0.7.1
       asset: The.Picture.Standard-9-0-7-1.7z
       auth: PAT xxx
-  - name: A7-ConvenientEENPCs
-    description: Convenient Enhanced Edition NPCs
-    components:
-      - 3   # Modifier les NPJ des Editions Ameliorees -> Decider pour chaque PNJ
-      - 201 # Modification selective : Baeloth -> Rendre Baeloth passif
-      - 203 # Modification selective : Hexxat -> Rendre Hexxat passive
-      - 205 # Modification selective : Rasaad -> Rendre Rasaad passif
-      - 410 # Changer le portrait de Dorn -> Graphisme de BG2
-      - 430 # Changer le portrait de Neera -> Graphisme de BG2
-      - 440 # Changer le portrait de Rasaad -> Graphisme de BG2
-      - 450 # Portrait ameliore pour Wilson
-      - 542 # Modifier la classe et le profil de Neera -> Ensorceleur du Chaos
-    location:
-      github_user: Argent77
-      repository: A7-NoEENPCs
-      release: v4.6
-      asset: A7-ConvenientEENPCs-v4.6.iemod
-  - name: S9BGEENPCTweaks
-    description: S9 BGEENPC Tweaks for BGEE / SOD / BG2EE / EET
-    comment: >
-      OP https://forums.beamdog.com/discussion/58941/mod-bgeenpc-tweaks-for-bgee-sod-bg2ee-eet
-      original download https://us.v-cdn.net/5019558/uploads/editor/sd/k7icmh3du8p3.zip
-    components:
-      - 30 # Convenient NPCs
-      - 42 # Make Dynaheir a Sorcerer
-      - 44 # Make Faldorn an Avenger
-      #- 45 # Make Garrick a Skald
-      - 48 # Make Kivan an Archer
-      - 49 # Make Safana a Swashbuckler
-      - 50 # Shar-Teel's Class -> Make Shar-Teel a Berserker
-      - 52 # Make Skie a Shadowdancer
-      - 60 # Dual Class Friendly Stats for Branwen, Dynaheir, Safana and Xzar
-    location:
-      github_user: mleduque
-      repository: s9-S9BGEENPCTWEAKS
-      branch: master
-  - name: npckit
-    components: #[30, 31, 400, 410, 900, 1415, 2100, 2200, 2300, 2500, 2800]
-      #- 30 # Improved Specialist Mage Descriptions
-      - 31 # replace berserker with battlerager for dwarves
-      - 400 # Anomen Gains Helm Kit on Passing Knighthood Test
-      #- 410 # Anomen Gains Berserker Kit on Failing Knighthood Test
-      #- 420 # Prevent CN Anomen Gaining a Holy Symbol
-      - 900 # Add Red Wizard to Edwin's Kit Description
-      #- 1400 # Give Imoen Adventurer Kit
-      #- 1410 # Give Imoen a Mage Kit -> abjurer
-      #- 1411 # Give Imoen a Mage Kit -> conjurer
-      #- 1412 # Give Imoen a Mage Kit -> diviner
-      #- 1413 # Give Imoen a Mage Kit -> enchanter
-      #- 1414 # Give Imoen a Mage Kit -> illusionist
-      #- 1415 # Give Imoen a Mage Kit -> invoker
-      #- 1416 # Give Imoen a Mage Kit -> necromancer
-      #- 1417 # Give Imoen a Mage Kit -> transmuter
-      - 2100 # Change Korgan's Kit to Battlerager
-      - 2200 # Give Mazzy a Proper Truesword of Arvoreen Kit
-      #- 2300 # Change Minsc's Title to Rashemaar Ranger
-      - 2500 # Give Nalia Adventurer Kit
-      #- 1410 # Give Nalia a Mage Kit -> abjurer
-      #- 1411 # Give Nalia a Mage Kit -> conjurer
-      #- 1412 # Give Nalia a Mage Kit -> diviner
-      #- 1413 # Give Nalia a Mage Kit -> enchanter
-      #- 1414 # Give Nalia a Mage Kit -> illusionist
-      #- 1415 # Give Nalia a Mage Kit -> invoker
-      #- 1416 # Give Nalia a Mage Kit -> necromancer
-      #- 1417 # Give Nalia a Mage Kit -> transmuter
-      - 2800 # Give Sarevok a Proper Deathbringer Kit
-    location:
-      http: http://america.iegmc.net/g3/lin-npckit-v5.tar.gz
 
   - name: cdlore
+    description: Lore_From_Learning
+    overview: "adds lore bonuses to your main character as you learn and adventure throughout the
+                game. The bonuses (and the stimuli that provide them) are, by design, meant to be
+                minor and enhance the role-playing aspect of the game."
+    installation:
+      general: after npc mods (use of dreams)
     components:
       - 10 # Books Provide Lore Bonuses
       - 20 # Weapon Knowledge Provides Lore Bonuses

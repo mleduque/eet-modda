@@ -1,0 +1,40 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+
+  - name: EET  # needs EET/bgee_dir.txt with path to bg1 /game subdirectory inside
+    version: v13.4
+    location:
+      github_user: Gibberlings3
+      repository: EET
+      tag:  V13.4
+      layout:
+          layout_type: multi_dir
+          dirs:
+            - EET
+            - EET_end
+    components:
+      - 0 # EET core (importation de ressource)
+    add_conf:
+      file_name: bgee_dir.txt
+      content: ../../bg1/game
+  - name: DSotSC
+    description: Dark Side of the Sword Coast
+    installation:
+      general: NTotSC is no longer dependent on DSotSC. If you want to play the two mods together, install DSotSC first
+      before: ntotsc
+    components:
+      - 0 # Dark Side of the Sword Coast (DSotSC)
+      #- 1, # DSotSC Wizard spells
+      #- 2, # DSotSC Priest spells
+      #- 3 # More common encounters in vanilla areas
+      #- 4  # Distribute DSotSC items also in vanilla content
+    location:
+      github_user: SpellholdStudios
+      repository: DSotSC
+      branch: master
+      refresh: 7days

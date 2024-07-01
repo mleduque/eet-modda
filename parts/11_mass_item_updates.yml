@@ -1,0 +1,31 @@
+
+
+  #########
+  # Mass item updates
+  #########
+
+  - name: hammers
+    description: Thrown hammers
+    overveiw: Animation for thrown hammers
+    readme: https://raw.githack.com/Sampsca/ThrownHammers/master/hammers/hammers-english.html
+    installation:
+      general: This mod should go after other mods that add or change hammers, including the Spiritual Hammer spell. This includes aTweaks and Spell Revisions
+    components:
+      - 0 # Thrown Hammers: v6.1.0
+      - 15 # Thrown Spiritual Hammers: v6.1.0
+      - 25 # Normal throwing hammers: v6.1.0
+      - 35 # +1 throwing weapons: v6.1.0
+      - 50 # Additional magic items: v6.1.0
+    location:
+      github_user: Sampsca
+      repository: ThrownHammers
+      tag: v6.1.1
+  - name: forgotten-armament
+    description: Forgotten armaments - ability scoress
+    components:
+      - 4 # Update Items Setting an Ability Score to Increment the Increase
+  - name: item_rev
+    description: Item Revisions - item usability
+    components:
+      - 1060 # Les Kensai peuvent porter des bracelets
+      - 1070 # Les Voleurs peuvent utiliser des baguettes

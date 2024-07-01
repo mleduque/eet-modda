@@ -1,5 +1,4 @@
 
-  # end crossmod
   #########
   # Early spell mods
   #########
@@ -17,20 +16,26 @@
       branch: master
       refresh: 8hours
     description:  SubtleD Hotfixes - SR 4b19rc1 Sleep fix
+
+  ## One and only one of the two next ones ##
   - name: iwdification
     description: spell packs of iwdification
     installation:
-      general: just the spell packs part early, before some stroy mods (TDD, Totlm, dsotsc)
+      general: just the spell packs part early, before some story mods (TDD, Totlm, dsotsc)
     components:
       - 30 # IWD Arcane Spell Pack: Release Candidate 2
       - 40 # IWD Divine Spell Pack: Release Candidate 2
-    location:
-      github_user: Gibberlings3
-      repository: iwdification
-      release: v5
-      asset: lin-iwdification-v5.tar.gz
-      patch:
-        relative: patches/iwdification-ini.diff
+    disabled:
+      manifest_condition: prefer_scs_over_iwdification_spells
+  - name: stratagems
+    description: iwd spell packs part
+    components:
+      - 1500 # iwd arcane
+      - 1510 # iwd divine
+    disabled:
+      not:
+        manifest_condition: prefer_scs_over_iwdification_spells
+
 
   #########
   # Items
@@ -458,6 +463,12 @@
       - 0 # Marchand Mystigan (ToB requis)
     location:
       file: https://akadis.baldursgateworld.fr/Mystigan/zip/Mystigan1.62.zip
+  - name: A7#ImprovedShamanicDance
+    description: Improved Shamanic Dance - itrems only
+    overview: "Allows the shaman to move at reduced speed while performing the dance + extends
+              to lv24 + new shaman spell Shamanic Pact + items"
+    components:
+      - 40 # Objets specifiques aux Shamans
 
   # overpowered item mods
   - name: DGItems
@@ -488,6 +499,17 @@
       refresh: 1day
     disabled:
       because: much overpowered
+  - name: d2-workshopkits
+    description: just the items
+    installation:
+      after: rr, class revisions, sphere system
+    components:
+      - 3 # Misc item pack
+    location:
+      github_user: D2-mods
+      repository: The-Workshop-Kitpack
+      release: v5.1
+      asset: the-workshop-kitpack-5.1.iemod
 
   - name: item_rev
     descritpion: Item Revisions - store component
@@ -501,33 +523,3 @@
         and Bards component) if installed after them.
     components:
       - 1030 # Store Revisions
-
-  #########
-  # Mass item updates
-  #########
-
-  - name: hammers
-    description: Thrown hammers
-    overveiw: Animation for thrown hammers
-    readme: https://raw.githack.com/Sampsca/ThrownHammers/master/hammers/hammers-english.html
-    installation:
-      general: This mod should go after other mods that add or change hammers, including the Spiritual Hammer spell. This includes aTweaks and Spell Revisions
-    components:
-      - 0 # Thrown Hammers: v6.1.0
-      - 15 # Thrown Spiritual Hammers: v6.1.0
-      - 25 # Normal throwing hammers: v6.1.0
-      - 35 # +1 throwing weapons: v6.1.0
-      - 50 # Additional magic items: v6.1.0
-    location:
-      github_user: Sampsca
-      repository: ThrownHammers
-      tag: v6.1.1
-  - name: forgotten-armament
-    description: Forgotten armaments - ability scoress
-    components:
-      - 4 # Update Items Setting an Ability Score to Increment the Increase
-  - name: item_rev
-    description: Item Revisions - item usability
-    components:
-      - 1060 # Les Kensai peuvent porter des bracelets
-      - 1070 # Les Voleurs peuvent utiliser des baguettes

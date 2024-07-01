@@ -1,0 +1,84 @@
+
+  - name: A7#ImprovedArcher
+    description: Improved Archer - kits
+    components:
+      - 0   # Profil d'Archer ameliore
+      - 10  # Ajouter le profil de guerrier : Tireur d'elite
+      - 20  # Ajouter le profil de paladin : Chevalier archer
+      - 30  # Ajouter le profil de voleur : Tireur de precision
+  - name: MilitiaOfficer
+    components: [0]
+    location:
+      github_user: Raduziel
+      repository: MilitiaOfficer-Kit
+      tag: "1.8"
+  - name: ArtisansKitpack
+    description: ArtisansKitpack
+    components: ask
+    location:
+      github_user: ArtemiusI
+      repository: The-Artisan-s-Kitpack
+      tag: v4.81a
+
+  # mostly for the extra quest
+  - name: shadowadept # will prompt 2 times
+    description: shadowadept- main component only - because error
+    ignore_warnings: true # WARNING: no effects altered on C0SA112.itm
+    components: ask
+    location:
+      github_user: ArtemiusI
+      repository: Shadow-Magic
+      tag: v3.2
+      patch:
+        relative: patches/eet/shadowmagic-noask-condrain.diff
+
+  - name: divine_remix
+    components:
+      - 11 # Installer les nouveaux sorts -> Ajouter les nouveaux sorts uniquement si d'autres mods ne l'ont pas deja fait: 8.1
+      - 100 # Modification des Clercs: 8.1
+      - 103 # Installer le kit de clerc d'Etoile d'Argent de Selune: 8.1
+      - 106 # Installer le kit de clerc de Manteau de la Nuit de Shar: 8.1
+      - 107 # Installer le kit de clerc de Stratege Divin de la Cavaliere Rouge: 8.1
+      - 112 # Installer le kit de clerc de Noble Martyr d'Ilmater: 8.1
+      #- 115 # Installer le kit de clerc d'Adepte des Flammes de Kossuth: 8.1
+      #- 118 # Installer le kit de clerc de Tyran d'Iyachtu Xvim: 8.1
+      #- 121 # Installer le kit de clerc de Gardien du Savoir d'Oghma: 8.1
+      - 124 # Installer le kit de clerc de Garde du Coeur de Sunie: 8.1
+      - 127 # Installer le kit de clerc de Protecteur Feerique de Corellon: 8.1
+      #- 130 # Installer le kit de clerc de Maitre des Conflits de Cyric: 8.1
+      - 200 # Modification des Druides: 8.1
+      #- 203 # Installer le kit de Druide de Maitre des Vases: 8.1
+      - 403 # Installer le kit de Rodeur d'Archer Sylvain: 8.1
+      #- 406 # Installer le kit de Rodeur Sauvage: 8.1
+      #- 409 # Installer le kit de Rodeur de Coureur des Bois: 8.1
+      #- 412 # Installer le kit de Rodeur de Vengeur: 8.1
+      #- 415 # Installer le kit de Rodeur de Coureur Sauvage: 8.1
+    location:
+      github_user: TotoR115
+      repository: Divine_Remix
+      branch: master
+      refresh: 10days
+  - name: song_and_silence
+    components:
+      - 0  # Changements concernant les bardes et voleurs purs, ainsi que les kits originaux du jeu (necessaire pour les autres composants)
+      - 1  # Ajout d'une echoppe pour bardes et voleurs
+      - 2  # Installer l'Acrobate (kit de barde)
+      - 3  # Installer le Choriste (kit de barde)
+      - 4  # Installer le Chanteur Funebre (kit de barde)
+      - 5  # Installer le Gitan (kit de barde)
+      - 6  # Installer l'Aventurier (kit de voleur)
+      - 7  # Installer le Cambrioleur (kit de voleur)
+      - 8  # Installer le Lamesprit (kit de voleur)
+      - 9  # Installer le Tireur d'Elite (kit de voleur)
+    location:
+      github_user: Gibberlings3
+      repository: SongAndSilence
+      release: v18
+      asset: lin-song_and_silence-v18.zip
+  - name: rr
+    description: the rebalancing part
+    components:
+      - 1 # thief kit revisions
+      - 2 # Thief High Level Ability revisions
+      - 3 # Proper racial adjustments for thieving skills
+      - 5 # Bard High Level Ability revisions

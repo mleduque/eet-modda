@@ -1,5 +1,7 @@
---- Will_to_Power/components/200_thief_psion.tpa
-+++ Will_to_Power/components/200_thief_psion.tpa
+diff --git a/Will_to_Power/components/200_thief_psion.tpa b/Will_to_Power/components/200_thief_psion.tpa
+index fb93cf8..3b4bbc7 100755
+--- a/Will_to_Power/components/200_thief_psion.tpa
++++ b/Will_to_Power/components/200_thief_psion.tpa
 @@ -51,7 +51,7 @@ ADD_KIT ~D5_PSION~
  
  //ALIGNMENT RESTRICTIONS______________________________________________________________
@@ -9,12 +11,9 @@
  
  //DUAL CLASS OPTIONS__________________________________________________________________
  //                 FT CL MA TH DR RA
-@@ -89,10 +89,10 @@ ACTION_IF GAME_IS ~bgee bg2ee eet iwdee~ THEN BEGIN
- 			briefdesc = RESOLVE_STR_REF (@203)
- 		STR_VAR
+@@ -91,8 +91,8 @@ ACTION_IF GAME_IS ~bgee bg2ee eet iwdee~ THEN BEGIN
  			kit_name = D5_PSION
--			backstab = ~1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2~
-+			backstab = ~1 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3~
+ 			backstab = ~1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2~
  			clswpbon = ~0 0 3~
 -			thiefskl = ~30 15~
 -			thiefscl = ~0 100 100 100 100 100 0 0~
@@ -23,7 +22,7 @@
  			clsrcreq = ~1 1 1 1 1 1 1~
  	END
  END
-@@ -181,7 +181,7 @@ ADD_KIT ~D5_PSION_MENU~
+@@ -192,7 +192,7 @@ ADD_KIT ~D5_PSION_MENU~
  
  //ALIGNMENT RESTRICTIONS______________________________________________________________
  //                 LG LN LE NG TN NE CG CN CE
@@ -32,31 +31,21 @@
  
  //DUAL CLASS OPTIONS__________________________________________________________________
  //                 FT CL MA TH DR RA
-@@ -220,10 +220,10 @@ ACTION_IF GAME_IS ~bgee bg2ee eet iwdee~ THEN BEGIN
- 		STR_VAR
- 			kit_name = D5_PSION_MENU
+@@ -233,8 +233,8 @@ ACTION_IF GAME_IS ~bgee bg2ee eet iwdee~ THEN BEGIN
  			hpclass = ~HPWIZ~
--			backstab = ~1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2~
-+			backstab = ~1 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3~
+ 			backstab = ~1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2~
  			clswpbon = ~0 0 3~
 -			thiefskl = ~30 15~
 -			thiefscl = ~0 100 100 100 100 100 0 0~
-+			thiefskl = ~30 2à~
++			thiefskl = ~30 20~
 +			thiefscl = ~100 100 100 100 100 100 0 0~
  			clsrcreq = ~1 1 1 1 1 1 1~
  	END
  END
-@@ -370,7 +370,7 @@ LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~GA_SPCL912
- LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~GA_RR#THL04~ END
- LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~GA_RR#ALCHT~ END
- LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~GA_TG#BRPO~ END
--LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~AP_SPCL915~ END
-+//LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~AP_SPCL915~ END
- LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~GA_SPCL916~ END
- LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~GA_SPCL918~ END
- LAF action_remove_hla STR_VAR kit_name = ~D5_PSION~ remove_ability = ~GA_SPCL919~ END
---- Will_to_Power/components/300_fighter_psion.tpa
-+++ Will_to_Power/components/300_fighter_psion.tpa
+diff --git a/Will_to_Power/components/300_fighter_psion.tpa b/Will_to_Power/components/300_fighter_psion.tpa
+index 0cb0858..ea188eb 100755
+--- a/Will_to_Power/components/300_fighter_psion.tpa
++++ b/Will_to_Power/components/300_fighter_psion.tpa
 @@ -47,7 +47,7 @@ ADD_KIT ~D5_SOULBLADE~
  
  //ALIGNMENT RESTRICTIONS______________________________________________________________
@@ -66,7 +55,7 @@
  
  //DUAL CLASS OPTIONS__________________________________________________________________
  //                 	  FT CL MA TH DR RA
-@@ -174,7 +174,7 @@ ADD_KIT ~D5_SOULBLADE_MENU~
+@@ -183,7 +183,7 @@ ADD_KIT ~D5_SOULBLADE_MENU~
  
  //ALIGNMENT RESTRICTIONS______________________________________________________________
  //                    LG LN LE NG TN NE CG CN CE
@@ -75,8 +64,10 @@
  
  //DUAL CLASS OPTIONS__________________________________________________________________
  //                    FT CL MA TH DR RA
---- Will_to_Power/components/400_ranger_psion.tpa
-+++ Will_to_Power/components/400_ranger_psion.tpa
+diff --git a/Will_to_Power/components/400_ranger_psion.tpa b/Will_to_Power/components/400_ranger_psion.tpa
+index bbbde22..3c5b2f2 100755
+--- a/Will_to_Power/components/400_ranger_psion.tpa
++++ b/Will_to_Power/components/400_ranger_psion.tpa
 @@ -48,7 +48,7 @@ ADD_KIT ~D5_PSYPHER~
  
  //ALIGNMENT RESTRICTIONS______________________________________________________________
@@ -86,7 +77,7 @@
  
  //DUAL CLASS OPTIONS__________________________________________________________________
  //                  FT CL MA TH DR RA
-@@ -174,7 +174,7 @@ ADD_KIT ~D5_PSYPHER_MENU~
+@@ -183,7 +183,7 @@ ADD_KIT ~D5_PSYPHER_MENU~
  
  //ALIGNMENT RESTRICTIONS______________________________________________________________
  //                  LG LN LE NG TN NE CG CN CE
@@ -95,8 +86,10 @@
  
  //DUAL CLASS OPTIONS__________________________________________________________________
  //                  FT CL MA TH DR RA
---- Will_to_Power/components/500_mage_psion.tpa
-+++ Will_to_Power/components/500_mage_psion.tpa
+diff --git a/Will_to_Power/components/500_mage_psion.tpa b/Will_to_Power/components/500_mage_psion.tpa
+index d395bfb..4471a5d 100755
+--- a/Will_to_Power/components/500_mage_psion.tpa
++++ b/Will_to_Power/components/500_mage_psion.tpa
 @@ -48,7 +48,7 @@ ADD_KIT ~D5_CEREBRO~
  
  //ALIGNMENT RESTRICTIONS______________________________________________________________
@@ -106,7 +99,7 @@
  
  //DUAL CLASS OPTIONS__________________________________________________________________
  //                  FT CL MA TH DR RA
-@@ -174,7 +174,7 @@ ADD_KIT ~D5_CEREBRO_MENU~
+@@ -183,7 +183,7 @@ ADD_KIT ~D5_CEREBRO_MENU~
  
  //ALIGNMENT RESTRICTIONS______________________________________________________________
  //                  LG LN LE NG TN NE CG CN CE
@@ -115,32 +108,18 @@
  
  //DUAL CLASS OPTIONS__________________________________________________________________
  //                  FT CL MA TH DR RA
---- Will_to_Power/components/900_dark_sun_mode.tpa
-+++ Will_to_Power/components/900_dark_sun_mode.tpa
-@@ -9,9 +9,9 @@
- DEFINE_ACTION_FUNCTION dark_sun_mode BEGIN
- 
- COPY_EXISTING ~d5pswt0.spl~ ~override~
--  LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 146 probability1 = 93 probability2 = 0 STR_VAR match_resource = ~d5pswt1~ END
--  LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 146 probability1 = 96 probability2 = 89 STR_VAR match_resource = ~d5pswt2~ END
--  LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 146 probability1 = 100 probability2 = 94 STR_VAR match_resource = ~d5pswt3~ END
-+  LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 146 probability1 = 100 probability2 = 0 STR_VAR match_resource = ~d5pswt1~ END
-+  LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 146 probability1 = 100 probability2 = 59 STR_VAR match_resource = ~d5pswt2~ END
-+  LPF ALTER_EFFECT INT_VAR silent = 1 match_opcode = 146 probability1 = 100 probability2 = 80 STR_VAR match_resource = ~d5pswt3~ END
- IF_EXISTS BUT_ONLY
- 
- END 	//	end define function
---- Will_to_Power/language/french/setup.tra
-+++ Will_to_Power/language/french/setup.tra
+diff --git a/Will_to_Power/language/french/setup.tra b/Will_to_Power/language/french/setup.tra
+index b39bddc..7bbc44d 100755
+--- a/Will_to_Power/language/french/setup.tra
++++ b/Will_to_Power/language/french/setup.tra
 @@ -56,9 +56,8 @@ CAPACITÉS :
  - Les psionistes commencent avec 25 points de force psionique (PFP). Ils gagnent 5 PFP supplémentaires chaque niveau jusqu'au niveau 20.
  
  Restrictions :
 -- Ne dispose que de 15 points par niveau pour les compétences de voleur.
--- Ne peut utiliser Pickpocket ou Pose de pièges.
--- Ne peut être d'alignement chaotique.
 +- Ne dispose que de 20 points par niveau pour les compétences de voleur.
-+- Ne peut utiliser Pose de pièges.
+ - Ne peut utiliser Pickpocket ou Pose de pièges.
+-- Ne peut être d'alignement chaotique.
  ~
  @301  = ~guerrier psychique~
  @302  = ~Guerrier psychique~
@@ -158,8 +137,8 @@
  - Ne peut lancer de sorts divins.
 -- Ne peut être d'alignement chaotique.
  ~
- @501  = ~cerebromant~
- @502  = ~Cerebromant~
+ @501  = ~cérébromant~
+ @502  = ~Cérébromant~
 @@ -101,7 +98,6 @@ CAPACITÉS :
  
  Restrictions :

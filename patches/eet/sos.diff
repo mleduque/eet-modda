@@ -1,0 +1,44 @@
+diff --git a/SoS/D/CHARLOTP.D b/SoS/D/CHARLOTP.D
+index 71500be..70e1501 100644
+--- SoS/D/CHARLOTP.D
++++ SoS/D/CHARLOTP.D
+@@ -140,8 +140,6 @@ END
+ IF ~~ THEN BEGIN 21 // from: 20.0
+   SAY @7
+   IF ~~ THEN DO ~SetGlobal("KickedOut","LOCALS",1)
+-ActionOverride("NALIA",LeaveParty())
+-ActionOverride("NALIA",EscapeArea())
+ LeaveParty()
+ EscapeArea()~ EXIT
+ END
+@@ -149,6 +147,5 @@ END
+ IF ~~ THEN BEGIN 22 // from: 20.1
+   SAY @8
+   IF ~~ THEN DO ~SetGlobal("KickedOut","LOCALS",1)
+-ActionOverride("NALIA",LeaveParty())
+ LeaveParty()~ EXIT
+ END
+diff --git a/SoS/D/SELENCEP.D b/SoS/D/SELENCEP.D
+index eddb0af..fcb6047 100644
+--- SoS/D/SELENCEP.D
++++ SoS/D/SELENCEP.D
+@@ -81,14 +81,9 @@ IF ~~ THEN BEGIN 12 // from: 9.1
+   IF ~~ THEN DO ~JoinParty()~ EXIT
+ END
+ 
+-IF ~Global("KickedOut","LOCALS",1)
+-GlobalLT("CbSelenceIsPissed","LOCALS",3)~ THEN BEGIN 13
+-  SAY @18
+-  IF ~~ THEN DO ~IncrementGlobal("CbSelenceIsPissed","LOCALS",1)~ EXIT
+-END
+-
+-IF ~Global("KickedOut","LOCALS",1)
+-Global("CbSelenceIsPissed","LOCALS",3)~ THEN BEGIN 14
+-  SAY @19
+-  IF ~~ THEN DO ~Enemy()~ EXIT
++IF ~Global("KickedOut","LOCALS",1)~ THEN BEGIN 13
++  SAY @6
++  IF ~~ THEN DO ~SetGlobal("KickedOut","LOCALS",0)
++JoinParty()
++~ EXIT
+ END

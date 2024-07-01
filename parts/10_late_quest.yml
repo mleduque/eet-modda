@@ -1,0 +1,153 @@
+
+  #########
+  # Late Quests - NWN/IWD
+  #########
+
+  - name: cowledmenace
+    installation:
+      general : after npc mods, before tweaks andEET_end
+    components:
+      - 1000 # Main Component - The Cowled Menace
+      - 2100 # Appropriate Items for High-Level Spellcasters
+      - 3000 # Mages cast Gate far from themselves, so they don't end up fighting their own summoned demon
+    location:
+      github_user: Gibberlings3
+      repository: CowledMenace
+      release: "1.0.1"
+      asset: lin-cowledmenace-v1.0.1.zip
+
+  #########
+  # Depend on iwdification
+  #########
+
+  - name: NwnForBg
+    description: Neverwinter Nights for Baldur's Gate
+    overview: |
+      The mod repeats, with some minor modifications, the plot of Neverwinter Nights game. Once Gorion's Ward reaches
+      the experience of 1350000 XP, he/she can start Neverwinter Nights. At this moment, a messenger from Neverwinter
+      will approach him/her in any of the Athkatla's Districts and ask for help. However, recommended amount of XP to
+      start NWN content is 1750000.
+    installation:
+      after: iwdification[30, 40]
+      before: bp-bgt-worldmap, EET_end
+    components: ask
+      -0 # NWN For BG
+      #- 10 # Place NWN locations on BP-BGT Worldmap
+      - 11 # Use separate worldmap for NWN areas
+      #- 20 # Install NWN as a dedicated campaign
+    location:
+      github_user: abalabokhin
+      repository: NWNForBG
+      branch: master
+      refresh: 10days
+  - name: IWD1_EET
+    installation:
+      after: EET
+      before: A7-TotLM-BG2EE, Icewind_EET, EET_end
+    components:
+      #- 0 # Use <CHARNAME> instead of <GABBER> etc.
+      - 1 # Icewind Dale: Heart of Winter in Baldur's Gate Enhanced Edition Trilogy
+    location:
+      github_user: The-Gate-Project
+      repository: IWD1_EET
+      branch: master
+      refresh: 10days
+  - name: HOW_EET # disabled
+    description: Heart of Winter for BGEE / EET
+    installation:
+      after: EET
+      before: A7-TotLM-BG2EE, Icewind_EET, EET_end
+    components:
+      - 0 # Heart of Winter in Baldur's Gate Enhanced Edition (Trilogy)
+    location:
+      github_user: The-Gate-Project
+      repository: HOW_EET
+      branch: master
+      refresh: 5days
+      replace:
+        - file_globs: ['setup-how_eet.tp2']
+          replace: 'OUTER_SET ~incl_sv_p~ = 0'
+          with: 'OUTER_SET ~incl_sv_p~ = 1'
+        - file_globs: ['setup-how_eet.tp2']
+          replace: 'ACTION_READLN incl_sv_p'
+          with: '' # just delete
+    disabled:
+      because: will use IWD easter-eggs from SD's IWD_EET_integration
+  - name: IWD2_EET
+    installation:
+      after: EET
+      before: A7-TotLM-BG2EE, Icewind_EET, EET_end
+    components:
+      - 0 # Icewind Dale 2 in Baldur's Gate Enhanced Edition Trilogy
+    location:
+      github_user: The-Gate-Project
+      repository: IWD2_EET
+      branch: master
+      refresh: 10days
+      replace:
+        # https://www.gibberlings3.net/forums/topic/37265-my-latest-super-modded-eet-game-with-more-iwd/?do=findComment&comment=338983
+        - file_globs: ['Setup-iwd2_eet.tp2']
+          replace: 'APPEND ~instant.ids~ ~34 UseItem(S:Object*,O:Target*)~    UNLESS ~UseItem~'
+          with: '// APPEND ~instant.ids~ ~34 UseItem(S:Object*,O:Target*)~    UNLESS ~UseItem~'
+        # https://www.gibberlings3.net/forums/topic/36405-discussion-of-tipun%E2%80%99s-iwd-mods-and-their-integration-in-eet-games/?do=findComment&comment=326993
+        - file_globs: ['lib/_spells.tph']
+          replace: |-
+            APPEND ~projectl.ids~ ~%prot%~
+            APPEND ~missile.ids~  ~%misl%~
+          with: '' # just delete
+  - name: Icewind_EET
+    installation:
+      general: as late as possible in your installation, especially after mods that add NPCs, otherwise there may be problems with quests, dialogs, etc.
+      before: EET_end
+    components:
+      - 0 # IceWind_End
+    location:
+      github_user: The-Gate-Project
+      repository: Icewind_EET
+      branch: master
+      refresh: 5days
+  - name: A7-TotLM-BG2EE
+    description: Trials of the Luremaster for Baldur's Gate
+    overview: |
+      This mod makes the Icewind Dale expansion "Trials of the Luremaster" available to BG2:EE (2.0 or higher),
+      Siege of Dragonspear and EET (Enhanced Edition Trilogy).
+      The quest starts by talking to the halfling Hobart Stubbletoes, who can be found either in the Umar Hills
+      Inn (SoA), Amkethran Inn (ToB) or in the southeastern area of the Coalition Camp (SoD). In the course of
+      the adventure you have the opportunity to explore a haunted castle, test your mettle in challenging combat
+      and lift an ancient curse.
+    installation:
+      after: IWD1_EET, spell_rev[30]
+    components:
+      - 0  # Trials of the Luremaster for Baldur's Gate
+      - 20 # Rebalance weapons and equipment
+      #- 30 # Reduce experience from monsters and quests - Reduce by 25 percent
+      #- 31 # Reduce experience from monsters and quests - Reduce by 50 percent
+      - 32 # Reduce experience from monsters and quests - Reduce by 75 percent
+      #- 33 # Reduce experience from monsters and quests - No XP
+      - 40 # Allow to trade with Hobart before starting the adventure
+    ignore_warnings: true
+    location:
+      github_user: Argent77
+      repository: A7-TotLM-BG2EE
+      release: v4.1
+      asset: A7-TotLM-BG2EE-v4.1.iemod
+  - name: IWD_EET_integration
+    description: SubtleDoctor's IWD EET Integration
+    overview: Integraties IWD1 and IWD2 in the BG1ee or BG2ee campaigns OR add then to the campaign menu
+    installation:
+      after: Icewind_EET
+      before: EET_end
+    comment: add Hjollder to Bridge District
+    components:
+      #- 100 #  Add IWD Campaigns to the EET Menu
+      #- 110 # Adjust IWD1 XP for Full Campaign
+      #- 115 # Adjust IWD1 Creature Stats for Full Campaign
+      #- 130 # Adjust IWD2 XP for Full Campaign
+      #- 135 # Adjust IWD2 Creature Stats for Full Campaign
+      - 150 # Add HoW access to BG2
+      - 155 # Remove Overpowered Items from HoW
+      - 160 # Add IWD1 Easter Egg Content to BG2
+    location:
+      github_user: subtledoctor
+      repository:  IWD_EET_Integration
+      tag: "0.12.2"

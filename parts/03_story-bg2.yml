@@ -502,6 +502,8 @@ modules:
       repository: Shadows_over_Soubar
       release: "2.1"
       asset: shadows-over-soubar-2.1.iemod
+      patch:
+        relative: eet/sos.diff
   - name: JanQuest
     description: Jan's extended quest - continuation of Jan's personal quest, 2 new quests, more dialogue
     original_url: https://akadis.baldursgateworld.fr/Jan/JansQuestEn.html
@@ -659,3 +661,15 @@ modules:
       repository: Check_the_Bodies
       branch: no_spells
       refresh: 3days
+
+  - name: DruidGroveMakeover
+    description: Druid Grove Area Makeover
+    overview: bg2 - improves the visual esthetic of the druid grove outdoor area
+    insrallation:
+      geenral: after quest mods that touches thearea
+    components:
+      - 0
+    location:
+      github_user: thisisulb
+      repository: DruidGroveMakeover
+      tag: V1.2
