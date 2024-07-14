@@ -4195,11 +4195,29 @@ modules:
       - 2800 # Give Sarevok a Proper Deathbringer Kit
     location:
       http: http://america.iegmc.net/g3/lin-npckit-v5.tar.gz
+  - name: BardicWonders # ok
+    description: Bardic Wonders
+    overview: bard kits( new and tweaks), new bard items, bardic inspiration (new unkitted bard power), armored casting
+    readme: https://artisans-corner.com/bardic-wonders/
+    components:
+      - 1 # Bardic Wonders: Dancer Kit
+      - 3 # Bardic Wonders: Troubadour Kit
+  - name: MonasticOrders # ok
+    components:
+      - 0 # Core Monk Revisions: 0.3
+      - 3 # Shining Hand Monk: 0.3
+      - 4 # Broken One Monk: 0.3
+      - 5 # Long Death Monk: 0.3
+      - 6 # Old Order Monk: 0.3
+    location:
+      github_user: aquadrizzt
+      repository: MonasticOrders
+      tag: v0.42
 
   #########
   # Kits, mixed single/multi, not separable
   #########
-  - name: d2-workshopkits
+  - name: d2-workshopkits # no
     installation:
       after: rr, class revisions, sphere system
     components:
@@ -4233,7 +4251,7 @@ modules:
     components:
       - 1103 # Install Stormlord Multiclass Kit for Fighter/Druids - Do NOT assign kit to Jaheira
 
-  - name: TomeAndBlood
+  - name: TomeAndBlood # ok
     description: Tome And Blood - main
     components:
       - redo
@@ -4263,7 +4281,7 @@ modules:
       github_user: UnearthedArcana
       repository: TomeAndBlood
       branch: "1.1.2"
-  - name: TomeAndBlood
+  - name: TomeAndBlood # ok bis
     description: Tome And Blood (warning components)
     components:
       - 68 #// Pooky's Mod: Imbue Familiars: 0.9.25
@@ -4319,7 +4337,7 @@ modules:
       github_user: mleduque
       repository: sword_and_fist
       branch: main
-  - name: Will_to_Power
+  - name: Will_to_Power # ok
     description: Will to power - the first component warns
     components: ask
     ignore_warnings: true
@@ -4329,7 +4347,7 @@ modules:
       branch: "2.7.0"
       patch:
         relative: patches/will_to_power_tweaks.diff
-  - name: Will_to_Power
+  - name: Will_to_Power # ok bis
     description: Will to power - the rest
     components:
       - 300 # Ajouter le Guerrier Psychique, guerrier/psion: 2.0

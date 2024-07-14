@@ -64,12 +64,13 @@
       release: v0.6
       asset: Isaac.s_Missile_Storm.v0.6.zip
 
-
-
-
+  - name: stratagems
+    components:
+      - 2000 # Install all spelltweaks
 
 
   # spell progression before kits
+  # 5E *should* use these tables by default
   - name: cdtweaks #ok
     description: Tweaks Anthology - only spell progression tables
     components:

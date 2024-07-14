@@ -58,7 +58,7 @@ locations:
       release: v35.17
       asset: lin-stratagems-35.17.zip
       patch:
-        relative: patches/eet/scs-item-nerf-config.diff
+        relative: patches/eet/scs-config.diff
 
 manifest_conditions:
   prefer_scs_over_iwdification_spells:

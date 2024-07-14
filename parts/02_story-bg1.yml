@@ -381,10 +381,12 @@ modules:
         rename: Loretakers_V_1.2.zip # 2024-06-01
   - name: SotSC
     description: Shades of the Sword Coast
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/SotSC v8.7.zip
     components:
       - 0
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/SotSC v8.7.zip
+      patches:
+        - relative: patches/eet/sotsc-faster-hideout.diff
   - name: TheVanishingOfSkieSilvershield
     components: ask
     location:
