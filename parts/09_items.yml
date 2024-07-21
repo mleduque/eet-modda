@@ -269,10 +269,11 @@
       repository: Bardic-Wonders
       tag: v2.9c
       refresh: 2days
-  - name: A7#ImprovedArcher
+  - name: A7-WaresOfThePlanes
     description: Wares of the Planes
-    overview: "This mod introduces a large number of weapons and accessories from the Planescape universe in
-            the Baldur's Gate series. The items can be purchased from from a travelling merchant who is
+    overview: "This mod introduces a large number of weapons and accessories
+              from the Planescape universe in the Baldur's Gate series. The items
+              can be purchased from from a travelling merchant who is
             available throughout the whole game."
     readme: https://raw.githubusercontent.com/Argent77/A7-WaresOfThePlanes/devel/A7-WaresOfThePlanes/doc/item-descriptions.txt
     installation:
@@ -284,8 +285,8 @@
     location:
       github_user: Argent77
       repository: A7-WaresOfThePlanes
-      release: v1.2
-      asset: A7-WaresOfThePlanes-v1.2.iemod
+      release: v1.3
+      asset: A7-WaresOfThePlanes-v1.3.iemod
   - name: Unofficial Item Pack
     description: BGII:EE - Unofficial Item Pack
     overview:
@@ -317,7 +318,7 @@
       github_user: Deratiseur
       repository: Archery
       tag: v5.00
-  - name: A7-WaresOfThePlanes
+  - name: A7#ImprovedArcher
     description: Improved Archer - items
     overview: archer kit rebalance, new archer kits forother classes, items
     readme: https://argent77.github.io/A7-ImprovedArcher/index.html

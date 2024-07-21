@@ -1,0 +1,58 @@
+diff --git a/faiths_and_powers/lib/kits_multi_druids_shamans.tpa b/faiths_and_powers/lib/kits_multi_druids_shamans.tpa
+index a2ce635..2ac0263 100644
+--- faiths_and_powers/lib/kits_multi_druids_shamans.tpa
++++ faiths_and_powers/lib/kits_multi_druids_shamans.tpa
+@@ -1331,7 +1331,7 @@ LAF action_add_hla STR_VAR kit_name = ~D5_DR_MAGE~ ability = ~GA_TG#SPIR~ num_al
+ 	u_daggers 			= 1
+ 	u_short_swords		= 0
+ 	u_long_swords		= 0
+-	u_scimitars 		= 0
++	u_scimitars 		= 1
+ 	u_katanas 			= 0
+ 	u_bastard_swords 	= 0
+ 	u_2hand_swords 		= 0
+@@ -1612,7 +1612,7 @@ LAF action_add_hla STR_VAR kit_name = ~D5_DR_SORC~ ability = ~GA_TG#SPIR~ num_al
+ 	u_daggers 			= 1
+ 	u_short_swords		= 0
+ 	u_long_swords		= 0
+-	u_scimitars 		= 0
++	u_scimitars 		= 1
+ 	u_katanas 			= 0
+ 	u_bastard_swords 	= 0
+ 	u_2hand_swords 		= 0
+@@ -1885,7 +1885,7 @@ LAF action_add_hla STR_VAR kit_name = ~D5_DR_MONK~ ability = ~GA_TG#SPIR~ num_al
+ 	u_daggers 			= 1
+ 	u_short_swords		= 0
+ 	u_long_swords		= 0
+-	u_scimitars 		= 0
++	u_scimitars 		= 1
+ 	u_katanas 			= 0
+ 	u_bastard_swords 	= 0
+ 	u_2hand_swords 		= 0
+@@ -2650,7 +2650,7 @@ END
+ 	u_daggers 			= 1
+ 	u_short_swords		= 0
+ 	u_long_swords		= 0
+-	u_scimitars 		= 0
++	u_scimitars 		= 1
+ 	u_katanas 			= 0
+ 	u_bastard_swords 	= 0
+ 	u_2hand_swords 		= 0
+@@ -2852,7 +2852,7 @@ END
+ 	u_daggers 			= 2
+ 	u_short_swords		= 0
+ 	u_long_swords		= 0
+-	u_scimitars 		= 0
++	u_scimitars 		= 1
+ 	u_katanas 			= 0
+ 	u_bastard_swords 	= 0
+ 	u_2hand_swords 		= 0
+@@ -3219,7 +3219,7 @@ END
+ 	u_daggers 			= 1
+ 	u_short_swords		= 0
+ 	u_long_swords		= 0
+-	u_scimitars 		= 0
++	u_scimitars 		= 1
+ 	u_katanas 			= 0
+ 	u_bastard_swords 	= 0
+ 	u_2hand_swords 		= 0

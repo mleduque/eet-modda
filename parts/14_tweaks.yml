@@ -1,0 +1,272 @@
+
+  - name: 5E_spellcasting
+    installation:
+      after: Tome & Blood and Faiths & Powers
+      general: >
+        1. Casting slots are determined at install time
+        2. Memorization slots are determined at runtime
+        3. Ability score-based bonuses are determined at install time AND they only work perfectly if they know
+            what the spell table is at install time.
+        3rd means you really should not change the spell table after installing ability score-based bonuses.
+        Memorization slots will naturally adjust, but the stat-based bonuses may get (slightly) out of whack.
+    components: ask
+    location:
+      github_user: UnearthedArcana
+      repository: 5E_spellcasting
+      branch: master
+      refresh: 3days
+  - name: cdtweaks
+    description: Tweaks Anthology - only spell progression tables
+    components: ask
+  - name: item_rev
+    description: the tweaks
+    components:
+      - 10 # revised shield bonuses
+      - 17 # weapon changes
+      - 20 # revised backstabbing -> All Melee and Ranged Weapons Usable For Backstabbing
+  - name: SubtleD_Item_Tweaks
+    installation:
+      after: spell_rev, cdtweaks
+      before: NPC_EE
+    components: ask
+    location:
+      github_user:  subtledoctor
+      repository: SubtleD_Item_Tweaks
+      tag: "1.3.4"
+      replace:
+        - file_globs: ['ini/d5_YARAS_default.ini']
+          replace: 'SET leather_speed =		1'
+          with: 'SET leather_speed =		0'
+          check: true
+  - name: HouseTweaks
+    description: The Artisan's Tweaks and Overhauls
+    components:
+      - 8 # House Tweaks: Monk Can Use Quarterstaves
+      - 14 # House Tweaks: Improved dialogues
+      - 15 # House Tweaks: Not-So-Indestructible Rats: 1.91
+      - 16 # House Tweaks: Good-Aligned Roleplay Rewards (BG2:EE): 1.91
+      #- 17 # House Tweaks: Cloak of Dragomir only decreases stats in daylight: 1.91
+      - 18 # House Tweaks: Give Stat Bonuses to EENPCs in BG2 (except Hexxat)
+      - 19 # House Tweaks: Useful Plot Items
+    location:
+      github_user: ArtemiusI
+      repository: House-Rule-Tweaks
+      branch: master
+      refresh: 2days
+  - name: polyvorp
+    components:
+      - 10 # Rebalanced Vorpal Weapons (affects enemies and players)
+      # - 20 # Make all Dragons immune to Vorpal hits (previously some were, with default rebalancing none are)
+    location:
+      github_user: mleduque
+      repository: polytope_rebalanced_vorpal
+      tag: v1.00
+  - name: jtweaks
+    components: ask
+      #- 60 # NPCs don't go in inaccessible locations: 2.2
+      #- 150 # Temple cures work better: 2.2
+      #- 160 # Bala's Axe dispels reasonably well: 2.2
+      #- 170 # Celestials cast all of their spells at high levels: 2.2
+      #- 182 # Antimagic Ray and Spell Shield -> Spell Shield blocks one antimagic ray: 2.2
+      #- 200 # Elemental protection spells increment resistances: 2.2
+      #- 210 # Vorpal weapons don't chunk: 2.2
+      # - 220
+      #- 230 # Loosen restrictions on what clones can do: 2.2
+      #- 240 # Undead Hunters are better at Turn Undead: 2.2
+      #- 250 # Loosen NPC item restrictions: 2.2
+      #- 280 # Allies against Bodhi are better prepared for vampires: 2.2
+      #- 300 # Slightly improved party AI: 2.2
+      #- 310 # Map notes for BGEE quests: 2.2
+      #- 320 # Standardize inn and tavern music: 2.2
+      #- 350 # Bigger random spawns: 2.2
+    location:
+      github_user: mleduque
+      repository: jmerry_jtweaks
+      tag: v3.1
+  - name: enchant
+    description: "Dee's 'Enchant the Missile Launchers: A Small Ranged Weapon Tweak'"
+    original_thread: https://forums.beamdog.com/discussion/58374/enchant-the-missile-launchers-ranged-weapon-tweak
+    original_dl: https://us.v-cdn.net/5019558/uploads/editor/hc/n0q8dnnbhnsc.zip
+    components:
+      - 0 # Enchant the Missile Launchers
+    location:
+      github_user: mleduque
+      repository: dee_enchant
+      tag: v1
+  - name: ammoless
+    components:
+      - 0 # Ammoless Launchers do not add their ammo's effects when using real ammo
+    location:
+      github_user: mleduque
+      repository: kjeron_ammoless
+      branch: fr
+      auth: PAT my_repositories
+  - name: POISON_NO_BYPASS
+    components:
+      - 3 # Limited Exclusions(Anti-magic, AoE, Gaze): Mirror Image or Stoneskin
+    location:
+      github_user: mleduque
+      repository: kjeron_poison_no_bypass
+      branch: workaround_greythedog
+      layout:
+        layout_type: single_dir_plus_tp2
+        tp2: Setup-POISON_NO_BYPASS.tp2
+  - name: METweaks
+    description: Olvyn's Tweaks
+    components:
+      #- 200  # Make quest experience divided among party members
+      #- 400  # Remove the limit of two proficiency points in a weapon at character creation
+      #- 505  # Increase the rate at which warriors get proficiency points -> Fighters, Rangers and Paladins get 1 point per 2 levels
+      # improved shamanic dance does this differently
+      #- 600  # Allow Shamans to move while dancing
+      - 900  # Let Rangers and Paladins cast spells at their full caster level
+      - 1000 # Give Monks a cooler Deflect Missiles ability
+      # already in iwdification
+      #- 1200 # Give Rangers the Tracking ability (from Throne of Bhaal) starting at level 1
+      - 1400 # Power Up Ranger Charm Animal
+      #- 1500 # Turn Paladin Detect Evil into a passive ability that can be toggled on and off
+      - 2000 # Allow cursed scrolls to be used on enemies
+      - 2200 # Make creatures take up less space
+      #- 2400 # Make enemies change their attack targets more quickly
+      - 3100 # Make it so the Jacil and Wiven encounters aren't replaced by other quests
+      - 3150 # Give Belhifet more reasonable immunities
+      #- 3205 # Make Infravision actually do something -> Creatures without infravision have reduced visual range at night or in dark places
+      - 3805 # Modify Sneak Attack and Crippling Strike -> Reduce the delay before a creature can be sneak-attacked again to 1 round
+    location:
+      github_user: OlvynChuru
+      repository: Olvyn-Tweaks
+      commit: 1f59527c14 # EET compat fix by Selphira
+  - name: A7-ConvenientEENPCs
+    description: Convenient Enhanced Edition NPCs
+    overview: "Provides a number of options to adapt the enw EE npcs -make them
+                more passive, remove them, customize portraits, classes, kits."
+    components:
+      - 3   # Modifier les NPJ des Editions Ameliorees -> Decider pour chaque PNJ
+      - 201 # Modification selective : Baeloth -> Rendre Baeloth passif
+      - 203 # Modification selective : Hexxat -> Rendre Hexxat passive
+      - 205 # Modification selective : Rasaad -> Rendre Rasaad passif
+      - 410 # Changer le portrait de Dorn -> Graphisme de BG2
+      - 430 # Changer le portrait de Neera -> Graphisme de BG2
+      - 440 # Changer le portrait de Rasaad -> Graphisme de BG2
+      - 450 # Portrait ameliore pour Wilson
+    location:
+      github_user: Argent77
+      repository: A7-NoEENPCs
+      release: v4.6
+      asset: A7-ConvenientEENPCs-v4.6.iemod
+  - name: S9BGEENPCTweaks
+    description: S9 BGEENPC Tweaks for BGEE / SOD / BG2EE / EET
+    comment: >
+      OP https://forums.beamdog.com/discussion/58941/mod-bgeenpc-tweaks-for-bgee-sod-bg2ee-eet
+      original download https://us.v-cdn.net/5019558/uploads/editor/sd/k7icmh3du8p3.zip
+    components:
+      # Not needed with NPC_EE
+      #- 30 # Convenient NPCs
+      #- 42 # Make Dynaheir a Sorcerer
+      #- 44 # Make Faldorn an Avenger
+      #- 45 # Make Garrick a Skald
+      #- 48 # Make Kivan an Archer
+      #- 49 # Make Safana a Swashbuckler
+      #- 50 # Shar-Teel's Class -> Make Shar-Teel a Berserker
+      #- 52 # Make Skie a Shadowdancer
+      - 60 # Dual Class Friendly Stats for Branwen, Dynaheir, Safana and Xzar
+    location:
+      github_user: mleduque
+      repository: s9-S9BGEENPCTWEAKS
+      branch: master
+  - name: bgeespawn
+    description: BGEE Leveled Spawns Mod
+    installation: aflter mods that change bg1 areas?
+    overview: "replaces the default spawns with spawns that scale in difficulty with the average
+              level of the party or with the game difficulty setting ; with configurable respawn"
+    components:
+      - 0 # BGEE Leveling Spawns Mod
+    location:
+      github_user: GraionDilach
+      repository: BGEESpawn
+      version: "0.7"
+      asset: bgee-leveled-spawns-v0.7.iemod
+      replace:
+        - file_globs: ['ini/ay_bgeespawn.ini']
+          replace: 'OUTER_SET disablevanillaspawns = ~1~'
+          with: 'OUTER_SET disablevanillaspawns = ~0~'
+  - name: cdlore
+    description: Lore_From_Learning
+    overview: "adds lore bonuses to your main character as you learn and adventure throughout the
+                game. The bonuses (and the stimuli that provide them) are, by design, meant to be
+                minor and enhance the role-playing aspect of the game."
+    installation:
+      general: after npc mods (use of dreams)
+    components:
+      - 10 # Books Provide Lore Bonuses
+      - 20 # Weapon Knowledge Provides Lore Bonuses
+      - 30 # Party Members Provide Lore Bonuses
+      - 40 # Defeating Monsters Provides Lore Bonuses
+    location:
+      github_user: Gibberlings3
+      repository: Lore_From_Learning
+      release: v6
+      asset: lin-cdlore-v6.tar.gz
+  - name: cd_appraiser
+    description: Bardic Appraisal
+    overview: "Adds a single, at-will ability for any bard, kitted or unkitted. The ability
+              will prompt a dialogue which will allow you to appraise any identified item in
+              the party's possession.\n
+              Note that the prices reported by the skill will likely
+              not reflect the actual value you can sell an item for "
+    installtion:
+      general : after mods that add items
+    components:
+      - 0 # Bardic Appraisal
+    location:
+      github_user: Gibberlings3
+      repository: Bardic_Appraisal
+      branch: master
+      refresh: 2days
+  - name: klatu
+    description: Klatu Tweaks
+    components:
+      ### Content changes ###
+      - 1000 # The Gloves of Goodman Hayes
+      - 1010 # The manual of war
+      - 1020 # Prepared Wishes
+      - 1030 # Romance Cheat: Isra will Romance Neutral Characters
+      #- 1040 # Give Hexxat an Inactive Fighter Class
+      - 1050 # Appropriate XP Rewards for Cowled Enforcers
+
+      # CtB-specific
+      #- 1060 # Skip Candlekeep Chores and CtB intro cutscenes
+      - 1070 # CtB: Remove Venereal Disease
+      - 1080 # CtB: Fixed Harp of Myth Drannor
+
+      ### Gameplay Tweaks and Fixes ###
+      #- 2000 # Streamlined Wizard Spell Progression
+      #- 2010 # Streamlined Sorcerer Spell Progression
+      - 2020 # No Item Deprecation
+      #- 2030 # Identify all store items
+      - 2040 # Fix Wild Mage Items and Spells
+      - 2050 # Prevent Wish Spells from Interrupting Caster
+      - 2060 # Standardize Poison Immunity
+      - 2070 # Free Action does not prevent Haste or Movement Rate Bonus
+      #     This is a PSA: if you use Spell Revisions, then you should NOT install Klatus
+      #     Drop Equipment On Disintegration/Petrification/Freezing components.
+      #     Spell Revisions already includes that functionality; installing it from Klatus
+      #     in such a case will not help you and could cause problems.
+      #     http://www.shsforums.net/topic/57873-mod-klatu-tweaks-and-fixes/page-3#entry612667
+      #- 2080 # Drop Equipment on Disintegration
+      #- 2090 # Drop Equipment on Petrification
+      #- 2100 # Drop Equipment on Imprisonment
+      - 2110 # Treat all Innate Abilities as Non-Magical
+      - 2120 # Treat all Psionic Abilities as Non-Magical
+      #- 2130 # Treat all Bardsong Effects as Non-Magical
+      #- 2140 # Allow Arcane Spellcasting in Armor
+      #- 2150 # Allow Thievery in Armor
+      - 2160 # Remove Delay from Improved Haste Spells
+      - 2170 # Reputation has no Effect on Store Prices
+      - 2180 # Charisma has a stronger Effect on Store Prices
+      - 2200 # Familiars can sort magical scrolls
+    location:
+      github_user: The-Gate-Project
+      repository: klatu-tweaks-and-fixes
+      branch: master
+      refresh: 1day

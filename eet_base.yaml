@@ -3046,7 +3046,7 @@ modules:
     disabled:
       because: eet compat issues
 
-  - name: A7-ConvenientEENPCs
+  - name: A7-ConvenientEENPCs # ok
     description: Convenient Enhanced Edition NPCs
     overview: "Provides a number of options to adapt the enw EE npcs -make them
                 more passive, remove them, customize portraits, classes, kits."
@@ -3064,7 +3064,7 @@ modules:
       repository: A7-NoEENPCs
       release: v4.6
       asset: A7-ConvenientEENPCs-v4.6.iemod
-  - name: S9BGEENPCTweaks
+  - name: S9BGEENPCTweaks # ok
     description: S9 BGEENPC Tweaks for BGEE / SOD / BG2EE / EET
     comment: >
       OP https://forums.beamdog.com/discussion/58941/mod-bgeenpc-tweaks-for-bgee-sod-bg2ee-eet
@@ -3439,8 +3439,8 @@ modules:
     location:
       github_user: Argent77
       repository: A7-WaresOfThePlanes
-      release: v1.2
-      asset: A7-WaresOfThePlanes-v1.2.iemod
+      release: v1.3
+      asset: A7-WaresOfThePlanes-v1.3.iemod
   - name: Unofficial Item Pack # ok
     description: BGII:EE - Unofficial Item Pack
     overview:
@@ -4286,7 +4286,7 @@ modules:
     components:
       - 68 #// Pooky's Mod: Imbue Familiars: 0.9.25
     ignore_warnings: true # no effect altered on... for each component
-  - name: Faiths_and_Powers
+  - name: Faiths_and_Powers # ok
     components:
       #### INI ADDED
       #- 25 # Créer un système de sphères -> Nouveau FnP(nuFnP) : un nouveau système de sphères (moins de sphères, plus équilibré globalement, plus proche du PnP): 0.83.6
@@ -4304,10 +4304,9 @@ modules:
       tag: "0.90"
       patch:
         relative: patches/fnp_configure.diff
-  - name: 5E_spellcasting
+  - name: 5E_spellcasting # ok
     installation:
       after: Tome & Blood and Faiths & Powers
-      before: Might & Guile
       general: >
         1. Casting slots are determined at install time
         2. Memorization slots are determined at runtime
@@ -4327,7 +4326,7 @@ modules:
       patch:
         # configure "lose spell on interrupted" and "int bonus slots"
         relative: patches/spellcasting-5e-config.diff
-  - name: sword_and_fist
+  - name: sword_and_fist # ok
     components:
       #- 30 # Installer le kit de guerrier : Champion Occultiste
       - 31 # Installer le kit de guerrier : Duelliste
@@ -4354,7 +4353,7 @@ modules:
       - 400 # Ajouter le Psypher, rôdeur/psion: 2.0
       #- 500 # Ajouter le Cerebromant, mage/psion: 2.0
       - 900 # Mode Dark Sun : Tout le monde est un talent natif: 2.0
-  - name: might_and_guile
+  - name: might_and_guile # ok
     description: Might And Guile - Main component (warns)
     components: ask
     ignore_warnings: true
@@ -4366,7 +4365,7 @@ modules:
         relative: patches/mng-multibard-shools.diff
 
 
-  - name: HouseTweaks
+  - name: HouseTweaks # ok
     description: The Artisan's Tweaks and Overhauls
     components:
       # TWO PARTS!
@@ -4377,7 +4376,7 @@ modules:
       github_user: ArtemiusI
       repository: House-Rule-Tweaks
       tag: v2.5a
-  - name: klatu
+  - name: klatu # ok
     description: Klatu Tweaks
     components:
       - 1000 # The Gloves of Goodman Hayes
@@ -4411,7 +4410,7 @@ modules:
       refresh: 1day
       patch:
         relative: patches/klatu-fix-manual_of_war.diff
-  - name: klatu
+  - name: klatu # ok
     description: Klatu Tweaks
     components:
       - 1090 # RoT: Remove cutscenes from Chateau Irenicus
@@ -4531,7 +4530,7 @@ modules:
       - 4160 # Permettre a Yeslick d'utiliser les haches: v14
       - 4170 # S'assurer que Shar-Teel ne meurt pas lors du defi originel: v14
       - 4180 # Objets detachables des PNJ: v14
-  - name: METweaks
+  - name: METweaks # ok
     description: Olvyn's Tweaks
     components:
       #- 200  # Make quest experience divided among party members
@@ -4579,9 +4578,9 @@ modules:
       tag: v1.12
       patch:
         relative: patches/eet_tweaks-xpbonus.diff
-  - name: bgeespawn
+  - name: bgeespawn # ko
     description: BGEE Leveled Spawns Mod
-    installation: aflter mods thatchange bg1 areas?
+    installation: aflter mods that change bg1 areas?
     overview: "replaces the default spawns with spawns that scale in difficulty with the average
               level of the party or with the game difficulty setting ; with configurable respawn"
     components:
@@ -4595,7 +4594,7 @@ modules:
         - file_globs: ['ini/ay_bgeespawn.ini']
           replace: 'OUTER_SET disablevanillaspawns = ~1~'
           with: 'OUTER_SET disablevanillaspawns = ~0~'
-  - name: enchant
+  - name: enchant # ok
     description: "Dee's 'Enchant the Missile Launchers: A Small Ranged Weapon Tweak'"
     original_thread: https://forums.beamdog.com/discussion/58374/enchant-the-missile-launchers-ranged-weapon-tweak
     original_dl: https://us.v-cdn.net/5019558/uploads/editor/hc/n0q8dnnbhnsc.zip
@@ -4608,7 +4607,7 @@ modules:
       github_user: mleduque
       repository: dee_enchant
       tag: v1
-  - name: PPE
+  - name: PPE # no
     description: Portraits, Portraits Everywhere
     installation:
       general: very late, so mod-added npcs have portraits
@@ -4629,7 +4628,7 @@ modules:
       github_user: mleduque
       repository: Portraits-Portraits-Everywhere
       branch: npc-fixes
-  - name: thepicturestandard
+  - name: thepicturestandard # no
     components:
       - 1500 # Main -> Lore Alternative
       - 2000 # Followers -> Vanilla
@@ -4664,7 +4663,7 @@ modules:
       asset: The.Picture.Standard-9-0-7-1.7z
       auth: PAT xxx
 
-  - name: cdlore
+  - name: cdlore # ok
     description: Lore_From_Learning
     overview: "adds lore bonuses to your main character as you learn and adventure throughout the
                 game. The bonuses (and the stimuli that provide them) are, by design, meant to be
@@ -4681,7 +4680,7 @@ modules:
       repository: Lore_From_Learning
       release: v6
       asset: lin-cdlore-v6.tar.gz
-  - name: polyvorp
+  - name: polyvorp # ok
     components:
       - 10 # Rebalanced Vorpal Weapons (affects enemies and players)
       # - 20 # Make all Dragons immune to Vorpal hits (previously some were, with default rebalancing none are)
@@ -4864,7 +4863,7 @@ modules:
   #########
   # Final Tweaks
   #########
-  - name: SubtleD_Item_Tweaks
+  - name: SubtleD_Item_Tweaks # ok
     installation:
       after: spell_rev, cdtweaks
       before: NPC_EE
@@ -4981,7 +4980,7 @@ modules:
       exploits, and make it easier to distinguish between creatures with similar avatars through the use of
       recoloring techniques.
     readme: https://raw.githack.com/FredrikLindgren/aTweaks/master/atweaks/doc/readme_atweaks.html
-    components: # 120 probably already done by iwdificagtion?
+    components: # 120 probably already done by iwdification?
       - 100 # Restaurer l'infravision innee des personnages demi-orques
       - 101 # Empecher les morts-vivants squelettiques et desincarnes d'etre affectes par les attaques illithids devorant le cerveau
       - 115 # Autoriser les mages a retranscrire des sorts memorises sur des parchemins -> Les parchemins peuvent etre retranscrits partout depuis le livre de sorts
@@ -5059,7 +5058,7 @@ modules:
       github_user: subtledoctor
       repository: NPC_EE
       commit: "6.5.1"
-  - name: POISON_NO_BYPASS
+  - name: POISON_NO_BYPASS # ok
     components:
       - 3 # Limited Exclusions(Anti-magic, AoE, Gaze): Mirror Image or Stoneskin
     location:
@@ -5119,10 +5118,10 @@ modules:
     location:
       github_user: GraionDilach
       repository: RandomGraionTweaks
-      release: version-1.12
-      asset: random-graion-tweaks-1.12.iemod
+      release: version-1.14
+      asset: random-graion-tweaks-1.14.iemod
     ignore_warnings: true
-  - name: jtweaks
+  - name: jtweaks # ok
     components:
       #- 60 # NPCs don't go in inaccessible locations: 2.2
       #- 150 # Temple cures work better: 2.2
@@ -5165,8 +5164,9 @@ modules:
       github_user: vbigiani
       repository: tb-tweaks
       branch: master
-  - name: cd_appraiser
-    components: [ 0 ]
+  - name: cd_appraiser # ok
+    components:
+      - 0 # Bardic Appraisal
     location:
       github_user: Gibberlings3
       repository: Bardic_Appraisal

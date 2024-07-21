@@ -1,0 +1,61 @@
+diff --git a/faiths_and_powers/d5_fnp_settings.ini b/faiths_and_powers/d5_fnp_settings.ini
+index d37f402..bbe54a5 100644
+--- faiths_and_powers/d5_fnp_settings.ini
++++ faiths_and_powers/d5_fnp_settings.ini
+@@ -44,18 +44,18 @@ DEFINE_ACTION_MACRO d5_kit_choices BEGIN
+ // CLERICS:
+ 
+   OUTER_SET cleric_azuth 			=	1
+-  OUTER_SET cleric_beshaba 			=	1
+-  OUTER_SET scion_bhaal  			=	1
+-  OUTER_SET cleric_cyric 			=	1 // set value to "2" if you also want this kit to install in IWDEE
++  OUTER_SET cleric_beshaba 			=	0
++  OUTER_SET scion_bhaal  			=	0
++  OUTER_SET cleric_cyric 			=	0 // set value to "2" if you also want this kit to install in IWDEE
+   OUTER_SET cleric_deneir 			=	1
+   OUTER_SET cleric_helm 			=	1
+   OUTER_SET cleric_ilmater 			=	1
+   OUTER_SET cleric_kelemvor 		=	1 // set value to "2" if you also want this kit to install in IWDEE
+   OUTER_SET cleric_lathander		=	1
+   OUTER_SET cleric_leira 			=	1
+-  OUTER_SET cleric_loviatar 		=	1
+-  OUTER_SET cleric_malar 			=	1
+-  OUTER_SET cleric_moander 			=	1
++  OUTER_SET cleric_loviatar 		=	0
++  OUTER_SET cleric_malar 			=	0
++  OUTER_SET cleric_moander 			=	0
+   OUTER_SET cleric_mystra 			=	1
+   OUTER_SET cleric_oghma 			=	1
+   OUTER_SET cleric_shar 			=	1
+@@ -72,10 +72,10 @@ DEFINE_ACTION_MACRO d5_kit_choices BEGIN
+   OUTER_SET cleric_moradin 			=	1
+   OUTER_SET cleric_baervan 			=	1
+   OUTER_SET cleric_baravar 			=	1
+-  OUTER_SET cleric_urdlen 			=	1
++  OUTER_SET cleric_urdlen 			=	0
+   OUTER_SET cleric_arvoreen 		=	1
+   OUTER_SET cleric_yondalla 		=	1 
+-  OUTER_SET ur_priest 				=	1
++  OUTER_SET ur_priest 				=	0
+ 
+ // DRUIDS:
+ 
+@@ -106,14 +106,14 @@ DEFINE_ACTION_MACRO d5_kit_choices BEGIN
+   OUTER_SET champion_azuth 			=	1
+   OUTER_SET champion_red 			=	1
+   OUTER_SET champion_talos 			=	1
+-  OUTER_SET champion_kossuth 		=	1
+-  OUTER_SET champion_garagos 		=	1
+-  OUTER_SET champion_bane 			=	1
++  OUTER_SET champion_kossuth 		=	0
++  OUTER_SET champion_garagos 		=	0
++  OUTER_SET champion_bane 			=	0
+   OUTER_SET champion_eilistraee		=	1
+   OUTER_SET champion_corellon 		=	1
+   OUTER_SET champion_moradin 		=	1
+   OUTER_SET champion_arvoreen 		=	1
+-  OUTER_SET champion_gruumsh 		=	1
++  OUTER_SET champion_gruumsh 		=	0
+ 
+ // MULTICLASS:
+ 

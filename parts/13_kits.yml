@@ -30,6 +30,12 @@
       asset: A7-ChaosSorcerer-v2.9.iemod
       patch:
         relative: patches/A7-ChaosSorcerer-remove_str_con_malus.diff
+  - name: sword_and_fist
+    components: ask
+    location:
+      github_user: mleduque
+      repository: sword_and_fist
+      branch: main
 
   # mostly for the extra quest
   - name: shadowadept # will prompt 2 times
@@ -162,3 +168,24 @@
       github_user: UnearthedArcana
       repository: Might_and_Guile
       tag: "5.8.2"
+  - name: Faiths_and_Powers
+    components:
+      #### INI ADDED
+      #- 25 # Créer un système de sphères -> Nouveau FnP(nuFnP) : un nouveau système de sphères (moins de sphères, plus équilibré globalement, plus proche du PnP): 0.83.6
+      #- 31 # Installer les kits de clerc: 0.83.6
+      #- 33 # Installer les kits de druide: 0.83.6
+      #- 35 # Installer les kits de paladin: 0.83.6
+      #- 37 # Installer les kits de rôdeur: 0.83.6
+      #- 75 # Modifier l'utilisabilité des armes et les compétences d'armes des prêtres: 0.83.6
+      #- 80 # Appliquer le système de sphères (REQUIS pour que le système de sphères fonctionne): 0.83.6
+      #- 85 # Appliquer les kits de FnP aux PNJ: 0.83.6
+    ignore_warnings: true # all except 31 emit no effect changed/added
+    location:
+      github_user: UnearthedArcana
+      repository: Faiths_and_Powers
+      branch: master
+      refresh: 2days
+      patches:
+        - relative: patches/eet/fnp_configure.diff
+        - relative: patches/eet/fnp_druidd_scimitars.diff
+        - relative: patches/eet/fnp_fix_install_bug.diff

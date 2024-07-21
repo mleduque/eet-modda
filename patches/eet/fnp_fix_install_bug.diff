@@ -1,0 +1,16 @@
+diff --git a/faiths_and_powers/lib/system_fnp_spontaneous.tpa b/faiths_and_powers/lib/system_fnp_spontaneous.tpa
+index 9832c86..930e857 100644
+--- faiths_and_powers/lib/system_fnp_spontaneous.tpa
++++ faiths_and_powers/lib/system_fnp_spontaneous.tpa
+@@ -1581,11 +1581,6 @@ APPEND ~d5sham.2da~ ~NO_SPELL    AP_D5YOSPL  ****        ****        ****
+ //LAF divine_spont_items END
+ 
+ 
+-// bonus WIS casting slots____________________________________________________________
+-//
+-ACTION_IF (MOD_IS_INSTALLED ~tomeandblood.tp2~ ~95~) BEGIN
+-  LAM semi_wis_slots
+-END
+ 
+ 
+ // general casting slots______________________________________________________________
