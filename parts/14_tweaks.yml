@@ -270,3 +270,20 @@
       repository: klatu-tweaks-and-fixes
       branch: master
       refresh: 1day
+  - name: tb#tweaks
+    components:
+      #- 150 # Imprisonment Fix.: TB#Tweaks, V 2.99
+      - 300 # Drop Weapons in Panic Effect Removal.: TB#Tweaks, V 2.99
+      #- 1200 # More cheating Wishes: -> Convenient Wish.: TB#Tweaks, V 2.99
+      # prefer cdtweaks version
+      #- 2550 # Faster Romances: -> Medium.: TB#Tweaks, V 2.99
+      # perfer other versions
+      #- 4000 # 3rd edition style Strength: TB#Tweaks, V 2.99
+      #- 4500 # 3rd edition style Dexterity: TB#Tweaks, V 2.99
+      #- 5000 # 3rd edition style Constitution: TB#Tweaks, V 2.99
+      #- 7000 # Druids can wear metal items: TB#Tweaks, V 2.99
+      - 7600 # Gain stats as you level up -> 5 points for a full BGT game; everybody can advance over their racial maximum.: TB#Tweaks, V 2.99
+    location:
+      github_user: mleduque
+      repository: tb-tweaks
+      branch: fr

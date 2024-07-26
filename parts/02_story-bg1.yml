@@ -317,7 +317,8 @@ modules:
     location:
       github_user: subtledoctor
       repository: Reflections-of-Destiny
-      tag: "0.3"
+      branch: master
+      refresh: 4days
 
   - name: bg1npc
     components: ask

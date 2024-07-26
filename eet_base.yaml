@@ -511,7 +511,8 @@ modules:
     location:
       github_user: subtledoctor
       repository: Reflections-of-Destiny
-      tag: "0.3"
+      branch: master
+      refresh: 4days
   - name: bst # ok
     components:
       - 0 # The BS Company presents Balduran's Seatower: vEAOB.6
@@ -725,7 +726,7 @@ modules:
     components:
       - 0 # Les terres d'Athkatlan : Le Bloc du Pont: 1.3
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/BridgesBlock v1.91.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/BridgesBlock v2.0.zip
   - name: AlabasterSands # ok
     description: "Athkatlan Grounds: Alabaster Sands"
     components:
@@ -782,8 +783,10 @@ modules:
   - name: crucible # ok
     components: ask
     location:
-      http: http://america.iegmc.net/morpheus562/Crucible.zip
-      rename: Crucible_2.3.zip
+      file: /home/mick/Games/modda-cache/static/acifer/Crucible_2.4.zip
+      alt:
+        http: http://america.iegmc.net/morpheus562/Crucible.zip
+        rename: Crucible_2.4.zip
       replace:
         - file_globs: ['crucible.tp2']
           replace: 'REQUIRE_PREDICATE !FILE_EXISTS ~mih_eq/setup-mih_eq.tp2~ @3002'
@@ -4945,7 +4948,7 @@ modules:
         - file_globs: ["tactics-remix.tp2"]
           replace: 'REQUIRE_PREDICATE !FILE_EXISTS ~mih_eq/setup-mih_eq.tp2~ @3004'
           with: '' # just remove this
-  - name: "butchery"
+  - name: butchery
     components: #components installé avant SCS, deuxèmeliste pour après SCS
       - 41 # Boucherie de nains dans le donjon d'Irenicus [a installer apres Stratagems]: v5.0.0
       - 44 # Boucherie de demons dans la Sphere planaire [a installer apres Stratagems]: v5.0.0
@@ -5148,7 +5151,7 @@ modules:
     comment: put before tb_tweaks cCON component so regen is changed (house) and the rest comes from tb_tweaks
     components:
       #- 5  # House Tweaks: Increased Constitution Bonuses
-  - name: tb#tweaks
+  - name: tb#tweaks # ok
     components:
       - 150 # Imprisonment Fix.: TB#Tweaks, V 2.99
       - 300 # Drop Weapons in Panic Effect Removal.: TB#Tweaks, V 2.99
@@ -5174,6 +5177,13 @@ modules:
       refresh: 2days
   - name: DUAL_TO_KIT
     description: "Kjeron's 'Dual to Kit'"
+    installation:
+      general: |
+        * This mod should NOT be installed BEFORE any mod that adds new kits.
+        * This mod should NOT be installed BEFORE any mod that alters race (MGSRCREQ.2da/CLSRCREQ.2da) or dualclass (DUALCLAS.2da/ABDCDSRQ.2da) restrictions.
+        * This mod should NOT be installed BEFORE any mod that alters string references in CLASTEXT.2da, KITLIST.2da, or RACETEXT.2da/SODRACE.2da.
+        * This mod should NOT be installed BEFORE any mod that alters alignment (ALIGNMNT.2da) restrictions.
+        * The third component(proficiency) should also NOT be installed BEFORE any mod that alters or reads (WEAPPROF.2da).
     original_thread: https://forums.beamdog.com/discussion/comment/985679#Comment_985679
     original_dl: https://us.v-cdn.net/5019558/uploads/editor/m1/4sxyexv1ptj0.zip
     components:

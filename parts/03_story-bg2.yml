@@ -203,7 +203,7 @@ modules:
     components:
       - 0 # Les terres d'Athkatlan : Le Bloc du Pont: 1.3
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/BridgesBlock v1.91.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/BridgesBlock v2.0.zip
   - name: AlabasterSands
     description: "Athkatlan Grounds: Alabaster Sands"
     components:
