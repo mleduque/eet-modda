@@ -129,8 +129,8 @@ modules:
     location:
       github_user: Argent77
       repository: A7-GolemConstruction
-      release: v6.3
-      asset:  A7-GolemConstruction-v6.3.iemod
+      release: v6.4
+      asset:  A7-GolemConstruction-v6.4.iemod
   - name: FishingForTrouble
     description: |
       Large quest, which leads you to multiple new and existing locations in Shadows of Amn

@@ -420,8 +420,8 @@
     location:
       github_user: SpellholdStudios
       repository: IEP_Extended_Banter
-      release: v5.9
-      asset: iep-extended-banters-v5.9.iemod
+      release: v6
+      asset: iep-extended-banters-v6.iemod
   - name: SkitiaRomanceTweak
     components: [0]
     location:

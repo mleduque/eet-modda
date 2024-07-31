@@ -652,8 +652,8 @@ modules:
     location:
       github_user: Argent77
       repository: A7-GolemConstruction
-      release: v6.3
-      asset:  A7-GolemConstruction-v6.3.iemod
+      release: v6.4
+      asset:  A7-GolemConstruction-v6.4.iemod
   - name: FishingForTrouble # ok
     description: |
       Large quest, which leads you to multiple new and existing locations in Shadows of Amn
@@ -3028,8 +3028,8 @@ modules:
     location:
       github_user: SpellholdStudios
       repository: IEP_Extended_Banter
-      release: v5.9
-      asset: iep-extended-banters-v5.9.iemod
+      release: v6
+      asset: iep-extended-banters-v6.iemod
   - name: SkitiaRomanceTweak # ok
     components: [0]
     location:
@@ -3696,8 +3696,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: CowledMenace
-      release: "1.0.1"
-      asset: lin-cowledmenace-v1.0.1.zip
+      release: "1.0.2"
+      asset: lin-cowledmenace-v1.0.2.zip
 
   #########
   # Depend on iwdification
@@ -4024,8 +4024,8 @@ modules:
     location:
       github_user: Argent77
       repository: A7-ChaosSorcerer
-      release: v2.9
-      asset: A7-ChaosSorcerer-v2.9.iemod
+      release: v2.10
+      asset: A7-ChaosSorcerer-v2.;10.iemod
       patch:
         relative: patches/A7-ChaosSorcerer-remove_str_con_malus.diff
   - name: wildmage

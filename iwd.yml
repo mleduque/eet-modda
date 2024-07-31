@@ -313,8 +313,8 @@ modules:
     location:
       github_user: Argent77
       repository: A7-GolemConstruction
-      release: v6.3
-      asset: A7-GolemConstruction-v6.3.iemod
+      release: v6.4
+      asset: A7-GolemConstruction-v6.4.iemod
   - name: wildmage
     components:
       # Rhialto's death gives way too much XP
@@ -518,8 +518,8 @@ modules:
     location:
       github_user: Argent77
       repository: A7-ChaosSorcerer
-      branch: devel
-      refresh: 2days
+      release: v2.10
+      asset: A7-ChaosSorcerer-v2.;10.iemod
   - name: A7-CustomKits
     components:
       - 1 # Kit de Magelame -> Version originale: v1.6
