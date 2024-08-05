@@ -181,9 +181,9 @@
       #- 85 # Appliquer les kits de FnP aux PNJ: 0.83.6
     ignore_warnings: true # all except 31 emit no effect changed/added
     location:
-      github_user: UnearthedArcana
+      github_user: mleduque
       repository: Faiths_and_Powers
-      branch: master
+      branch: 0.91-fr
       refresh: 2days
       patches:
         - relative: patches/eet/fnp_configure.diff

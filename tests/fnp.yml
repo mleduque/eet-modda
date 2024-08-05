@@ -7,21 +7,23 @@ global:
 modules:
   - name: Faiths_and_Powers
     components:
-      - 25 # Choisir un systeme de spheres -> nuFnp (Nouveau FnP) : un nouveau système de spheres (moins de spheres, plus equilibre globalement, plus proche du PnP): 0.86sd5
-      - 30 # Donner l'option de lancer les sorts comme les Ensorceleurs (ne pas installer si l'utilisation du lancer 5E est prevue): 0.86sd5
-      - 31 # Installer les kits de clerc: 0.86sd5
-      - 33 # Installer les kits de druide: 0.86sd5
-      - 36 # Installer les kits de paladin -> ...pour ceux ci-dessus, PLUS les divinites Neutres/Mauvaises/demi-humaines: 0.86sd5
-      - 45 # Revision de la table de sorts des paladins: 0.86sd5
-      - 75 # Modifier l'utilisabilite des armes et armures pour les pretres: 0.86sd5
-      - 80 # Appliquer le systeme de spheres (REQUIS pour que le systeme de spheres fonctionne): 0.86sd5
-      - 91 # Druides multiclasses: 0.86sd5
-      - 92 # Chamans multiclasses: 0.86sd5
-      - 95 # Kits de clerc multiclasses (installer apres les autres mods de kits !!): 0.86sd5
-      - 99 # Appliquer les kits multiclasses de FnP aux PNJ: 0.86sd5
+    - 13 # 'Table revisee des sorts de Clerc -> Table debridee: 0.91'
+    - 15 # 'Les Druides utilisent la table des sorts et la progression d''XP des Clercs: 0.91'
+    - 25 # 'Choisir un systeme de spheres -> nuFnp (Nouveau FnP) : un nouveau système de spheres (moins de spheres, plus equilibre globalement, plus proche du PnP): 0.91'
+    - 30 # 'Donner l''option de lancer les sorts comme les Ensorceleurs (ne pas installer si l''utilisation du lancer 5E est prevue): 0.91'
+    - 31 # 'Installer les kits de clerc: 0.91'
+    - 33 # 'Installer les kits de druide: 0.91'
+    - 36 # 'Installer les kits de paladin -> ...pour ceux ci-dessus, PLUS les divinites Neutres/Mauvaises/demi-humaines: 0.91'
+    - 45 # 'Revision de la table de sorts des paladins: 0.91'
+    - 75 # 'Modifier l''utilisabilite des armes et armures pour les pretres: 0.91'
+    - 80 # 'Appliquer le systeme de spheres (REQUIS pour que le systeme de spheres fonctionne): 0.91'
+    - 91 # 'Druides multiclasses: 0.91'
+    - 92 # 'Chamans multiclasses: 0.91'
+    - 95 # 'Kits de clerc multiclasses (installer apres les autres mods de kits !!): 0.91'
+    - 99 # 'Appliquer les kits multiclasses de FnP aux PNJ: 0.91'
     location:
       github_user: mleduque
       repository: Faiths_and_Powers
-      branch: 0.86sd5-fr
-      refresh: always
+      branch: 0.91-fr
+      refresh: ask
 

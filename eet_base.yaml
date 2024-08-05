@@ -4716,6 +4716,26 @@ modules:
       repository: butchery
       release: v5.0.0
       asset: butchery-v5.0.0.iemod
+  - name: Tactics-Remix
+    description: Tactic remix - components that must be before SCS
+    overview: "Tactics Remix adds quite a few optional, but difficult, encounters to BG2:EE
+                and EET aims to make the game more challenging and rewarding"
+    installation:
+      general: |
+        - the 'Add New Encounters' group components should be before SCS
+        - the 'Update existing encouters' group components should be after SCS
+    components:
+      - 2 # "Kuroisan", the Acid Kensai
+      - 1 # The Ritual
+      - 3 # "Red Badge" Poison-Based Encounte
+      - 4 #  Gebhard Blucher's Lich in the Docks
+      - 5 # Kensai Ryu's Gnome Fighter/Illusionist in the Docks
+    location:
+      path: /home/mick/Games/modda-cache/static/Tactics-Remix_0.8-beta.zip
+      replace:
+        - file_globs: ["tactics-remix.tp2"]
+          replace: 'REQUIRE_PREDICATE !FILE_EXISTS ~mih_eq/setup-mih_eq.tp2~ @3004'
+          with: '' # just remove this
 
   #########
   # EET_end
