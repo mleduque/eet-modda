@@ -184,8 +184,7 @@
       github_user: mleduque
       repository: Faiths_and_Powers
       branch: 0.91-fr
-      refresh: 2days
       patches:
         - relative: patches/eet/fnp_configure.diff
-        - relative: patches/eet/fnp_druidd_scimitars.diff
+        - relative: patches/eet/fnp_druid_scimitars.diff
         - relative: patches/eet/fnp_fix_install_bug.diff

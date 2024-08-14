@@ -1048,8 +1048,8 @@ modules:
     location:
       github_user: Austin-BG
       repository: HTaM
-      release: v.4.4.1
-      asset: heroes-thieves-and-moneylenders-4.4.1.iemod
+      release: v.4.5
+      asset: heroes-thieves-and-moneylenders-4.5.iemod
   - name: Derats_Ogre # ok
     description: BG2 quest mod - meet an ogre, fetch things around
     components:
@@ -4699,7 +4699,7 @@ modules:
   # just before EET_end
   #########
 
-  - name: butchery
+  - name: butchery # ok
     description: Butchery - components that must be installed before SCS
     components:
       - 10 # Combat contre Tazok et DigDag revise par DrAzTiK [a installer avant Stratagems]: v5.0.0
@@ -4716,7 +4716,7 @@ modules:
       repository: butchery
       release: v5.0.0
       asset: butchery-v5.0.0.iemod
-  - name: Tactics-Remix
+  - name: Tactics-Remix # ok
     description: Tactic remix - components that must be before SCS
     overview: "Tactics Remix adds quite a few optional, but difficult, encounters to BG2:EE
                 and EET aims to make the game more challenging and rewarding"
@@ -4740,7 +4740,7 @@ modules:
   #########
   # EET_end
   #########
-  - name: EET_end
+  - name: EET_end # ok
     components:
       - 0 # Standard installation
     location:
@@ -4748,7 +4748,7 @@ modules:
       repository: EET
       tag: v13.4
 
-  - name: normalize_kit_table_cols
+  - name: normalize_kit_table_cols # ok
     description: SCS refusess to process some tables, normalize them before
     components:
       - 0 # Make Kit Ability Tables Uniform

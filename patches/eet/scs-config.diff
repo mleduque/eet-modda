@@ -1,0 +1,47 @@
+diff --git a/stratagems/stratagems.ini b/stratagems/stratagems.ini
+index dd374462..1f7a6bb6 100644
+--- a/stratagems/stratagems.ini
++++ b/stratagems/stratagems.ini
+@@ -86,10 +86,10 @@ auras_are_party_friendly=1
+ 
+ no_item_nerf_balduran_shield=1
+ no_item_nerf_magi_staff=0
+-no_item_nerf_mirror_cloak = 0
+-no_item_nerf_carsomyr = 0
+-no_item_nerf_resurrection_rod = 0
+-no_item_nerf_vhailor_helm = 0
++no_item_nerf_mirror_cloak = 1
++no_item_nerf_carsomyr = 1
++no_item_nerf_resurrection_rod = 1
++no_item_nerf_vhailor_helm = 1
+ no_item_nerf_vecna = 0
+ no_initial_change_elemental_arrows = 0
+ 
+@@ -110,8 +110,8 @@ Sendai_Component_Is_Sendai_Only = 0
+ force_old_assassin_spawn = 0
+ no_spirit_troll_magic = 0
+ no_swift_shapeshift = 1
+-potion_version=6
+-dispel_arrow_maximum=5
++potion_version=4
++dispel_arrow_maximum=8
+ do_not_lose_soul=0
+ keep_cause_wounds_alignment_restrictions = 0
+ troll_regen_multiplication=2
+@@ -122,12 +122,12 @@ teleport_maze_number=0
+ hitpoint_percentage=0
+ no_nabassu_color_change=0
+ no_kahrk_treasure=0
+-resurrection_requires_diamond=1
+-resurrection_rod_cost_per_charge=5000
+-resurrection_spell_cost_uptick=1000
++resurrection_requires_diamond=0
++resurrection_rod_cost_per_charge=3000
++resurrection_spell_cost_uptick=800
+ imprisonment_end_duration=3600
+ slayer_change_on_imprisonment_end=1
+-resurrection_rod_max_charges=3
++resurrection_rod_max_charges=6
+ always_hide_triggers_in_ui=0
+ provisions_reset_after_sea_voyage=1
+ provisions_reset_in_stronghold=1

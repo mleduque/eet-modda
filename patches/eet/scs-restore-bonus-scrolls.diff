@@ -1,0 +1,38 @@
+diff --git a/stratagems/setup-stratagems.tp2 b/stratagems/setup-stratagems.tp2
+index f2f54ab0..87644a2e 100644
+--- a/stratagems/setup-stratagems.tp2
++++ b/stratagems/setup-stratagems.tp2
+@@ -382,6 +382,21 @@ FORBID_COMPONENT "spell_rev/setup-spell_rev.tp2" 0 @234
+ 
+ LAF run STR_VAR file=elemental_cre location=elemental_cre END
+ 
++// Added MLE
++BEGIN ~Freedom scrolls available earlier~ DESIGNATED 101023 GROUP @1000
++REQUIRE_PREDICATE (GAME_IS ~bg2ee eet~) @1091
++
++LAF run STR_VAR file=freedom_scrolls location=freedom_scrolls END
++
++
++// Added MLE
++BEGIN ~Add extra spell scrolls for hard-to-find spells~ DESIGNATED 101024 GROUP @1000
++REQUIRE_PREDICATE (GAME_IS ~bg2ee eet~) @1091
++
++// twice
++LAF run STR_VAR file=bonus_spell_scrolls location=bonus_spell_scrolls END
++LAF run STR_VAR file=bonus_spell_scrolls location=bonus_spell_scrolls END
++
+ ////////////////////////////////////////////////////////////
+ /// end of Stratagems of Mystra shared section
+ /////////////////////////////////////////////////////////////
+diff --git a/stratagems/spell/freedom_scrolls.tpa b/stratagems/spell/freedom_scrolls.tpa
+index fe576756..577d4f39 100644
+--- a/stratagems/spell/freedom_scrolls.tpa
++++ b/stratagems/spell/freedom_scrolls.tpa
+@@ -3,4 +3,6 @@ DEFINE_ACTION_FUNCTION freedom_scrolls BEGIN
+     COPY_EXISTING shop08.sto override
+ 		ADD_STORE_ITEM scrl9z AFTER scrla5 #1 #0 #0 IDENTIFIED #5
+ 
++    COPY_EXISTING "bernard2.sto" override
++		ADD_STORE_ITEM scrl9z FIRST #1 #0 #0 IDENTIFIED #5
+ END
+\ No newline at end of file

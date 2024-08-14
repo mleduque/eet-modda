@@ -1,0 +1,57 @@
+
+## Things that must be installed just before SCS
+
+  - name: butchery
+    description: Butchery - components that must be installed before SCS
+    components:
+      - 10 # Combat contre Tazok et DigDag revise par DrAzTiK [a installer avant Stratagems]: v5.0.0
+      - 11 # Reequilibrage de certaines creatures generiques [a installer avant Stratagems]: v5.0.0
+      - 12 # Reequilibrage de Tazok et de DigDag [a installer avant Stratagems]: v5.0.0
+      - 20 # Rencontre avec Groumf et Bourrinos devant le donjon de Firkraag [a installer avant Stratagems]: v5.0.0
+      - 21 # Rencontre avec Groumf et Bourrinos a Brynnlaw [a installer avant Stratagems]: v5.0.0
+      - 22 # Rencontre avec Groumf et Bourrinos dans les Trefonds Obscurs [a installer avant Stratagems]: v5.0.0
+      - 30 # Revisited fight against Wraith Sarevok in the Abyss
+      - 32 # Musiques de combat dans les zones sans musique [a installer avant ou apres Stratagems]: v5.0.0
+      - 40 # Creatures de DrAzTiK [a installer avant Stratagems, composant indispensable pour les suivants !]: v5.0.0
+    location:
+      github_user: GwendolyneFreddy
+      repository: butchery
+      release: v5.0.0
+      asset: butchery-v5.0.0.iemod
+  - name: Tactics-Remix
+    description: Tactic remix - components that must be before SCS
+    overview: "Tactics Remix adds quite a few optional, but difficult, encounters to BG2:EE
+                and EET aims to make the game more challenging and rewarding"
+    installation:
+      general: |
+        - the 'Add New Encounters' group components should be before SCS
+        - the 'Update existing encouters' group components should be after SCS
+    components:
+      - 2 # "Kuroisan", the Acid Kensai
+      - 1 # The Ritual
+      - 3 # "Red Badge" Poison-Based Encounte
+      - 4 #  Gebhard Blucher's Lich in the Docks
+      - 5 # Kensai Ryu's Gnome Fighter/Illusionist in the Docks
+    location:
+      path: /home/mick/Games/modda-cache/static/Tactics-Remix_0.8-beta.zip
+      replace:
+        - file_globs: ["tactics-remix.tp2"]
+          replace: 'REQUIRE_PREDICATE !FILE_EXISTS ~mih_eq/setup-mih_eq.tp2~ @3004'
+          with: '' # just remove this
+
+  - name: EET_end
+    components:
+      - 0 # Standard installation
+    location:
+      github_user: Gibberlings3
+      repository: EET
+      tag: v13.4
+
+  - name: normalize_kit_table_cols
+    description: SCS refusess to process some tables, normalize them before
+    components:
+      - 0 # Make Kit Ability Tables Uniform
+    location:
+      github_user: subtledoctor
+      repository: SubtleD_hotfixes
+      tag: v17

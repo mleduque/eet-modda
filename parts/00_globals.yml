@@ -62,10 +62,11 @@ locations:
     stratagems:
       github_user: Gibberlings3
       repository: SwordCoastStratagems
-      release: v35.17
-      asset: lin-stratagems-35.17.zip
-      patch:
-        relative: patches/eet/scs-config.diff
+      release: v35.18
+      asset: lin-stratagems-35.18.zip
+      patches:
+        - relative: patches/eet/scs-config.diff
+        - relative: patches/eet/scs-restore-bonus-scrolls.diff
 
 manifest_conditions:
   prefer_scs_over_iwdification_spells:
