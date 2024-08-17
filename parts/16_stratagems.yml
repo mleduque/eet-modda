@@ -1,0 +1,8 @@
+
+
+  #########
+  # SCS
+  #########
+  - name: stratagems
+    description: Sword Coast Stratagems
+    components: ask

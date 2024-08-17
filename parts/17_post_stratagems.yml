@@ -1,0 +1,17 @@
+
+  - name: butchery
+    components: #components installé avant SCS, deuxèmeliste pour après SCS
+      - 41 # Boucherie de nains dans le donjon d'Irenicus [a installer apres Stratagems]: v5.0.0
+      - 44 # Boucherie de demons dans la Sphere planaire [a installer apres Stratagems]: v5.0.0
+      - 45 # 3 boucheries dans Spellhold (golems, vampires et trolls) [a installer apres Stratagems]: v5.0.0
+      - 46 # Boucherie de trolls a l'exterieur du Chateau de'Arnise [a installer apres Stratagems]: v5.0.0
+      - 47 # Boucherie d'orques dans les Collines de Lancevent [a installer apres Stratagems]: v5.0.0
+      - 48 # Boucherie de loups dans les Collines d'Umar [a installer apres Stratagems]: v5.0.0
+      - 49 # 2 boucheries d'animaux sauvages : Franc-Marche et Tour de Garde [a installer apres Stratagems]: v5.0.0
+      - 52 # Boucherie d'animaux/druides dans le Bosquet aux druides [a installer apres Stratagems]: v5.0.0
+      - 53 # Boucherie de fanatiques dans l'antre de l'Oeil aveugle [a installer apres Stratagems]: v5.0.0
+      - 56 # 2 boucheries de sahuagins (Cite sous-marine et campement githyanki dans la Tour de Garde) [a installer apres Stratagems]: v5.0.0
+      - 57 # 4 boucheries d'araignees : entree de l'antre de Pai'Na, Temple d'Amaunator (Oeil aveugle), 1er etage de la Tour de Garde et devant l'Enclave de Sendai [a installer apres Stratagems]: v5.0.0
+      - 58 # 6 boucheries de squelettes (catacombes d'Atkthtla, Ruine du Temple, Spellhold, Tour de Garde et 2 dans le temple de Nyalee) [a installer apres Stratagems]: v5.0.0
+  - name: Tactics-Remix
+    components: ask

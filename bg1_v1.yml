@@ -30,7 +30,8 @@ modules:
     location:
       github_user: Pocket-Plane-Group
       repository: bg1ub
-      commit: f957a5e273 # from 16.4, last checked 2024-06-17
+      commit: master
+      refresh: 7days
     components:
       - 0  # Ice Island Level Two Restoration
       - 11 # Scar and the Sashenstar's Daughter

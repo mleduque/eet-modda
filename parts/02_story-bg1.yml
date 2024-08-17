@@ -417,7 +417,15 @@ modules:
       repository: Candlekeep-Revisited
       branch: main
       refresh: 5days
-
+  - name: Kara-Tur
+    description: "T'was a Slow Boat from Kara-Tur"
+    overview: BG1 Quest/Store/New Items
+    components: ask
+    location:
+      github_user: The-Gate-Project
+      repository: Kara-Tur
+      branch: master
+      refresh: 10days
 
 
 #

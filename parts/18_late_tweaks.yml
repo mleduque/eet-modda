@@ -1,0 +1,387 @@
+  - name: Combat_Skill_Proficiencies
+    installation:
+      after: [stratagems, atweaks, cdtweaks]
+      before: [ npc_ee ]
+    components: ask
+    location:
+      github_user: subtledoctor
+      repository: Combat_Skill_Proficiencies
+      tag: "1.4.5"
+      patch:
+        relative: patches/combat-skill-profs-config.diff + extend mage/sorc feats (d5csdlg.2da, weapprof.2da, profs.2da, profsmax.2da)
+  - name: SubtleD_Stat_Overhauls
+    components: ask
+    location:
+      github_user: subtledoctor
+      repository: SubtleD_Stat_Overhauls
+      branch: "1.5.5"
+      patch: config
+  - name: Magic_Battles_Revised
+    installation:
+      after: stratagems
+    components: ask
+    location:
+      github_user: mleduque
+      repository: magic_battles_revised
+      branch: 1.9-fr
+      patch:
+        relative: patches/mbr_spell_thrust_lv2.diff
+
+  - name: atweaks
+    description:
+    overview: |
+      This mod represents a compilation of various house rules and PnP related tweaks which are designed to
+      change certain aspects of the game.
+      In summary, aTweaks can bring several classes, races, spells, items and creatures closer to their PnP
+      counterparts, add more consistency to the gameplay by making sensible rule adjustments and eliminating
+      exploits, and make it easier to distinguish between creatures with similar avatars through the use of
+      recoloring techniques.
+    readme: https://raw.githack.com/FredrikLindgren/aTweaks/master/atweaks/doc/readme_atweaks.html
+    components: # 120 probably already done by iwdification?
+      - 100 # Restaurer l'infravision innee des personnages demi-orques
+      - 101 # Empecher les morts-vivants squelettiques et desincarnes d'etre affectes par les attaques illithids devorant le cerveau
+      - 115 # Autoriser les mages a retranscrire des sorts memorises sur des parchemins -> Les parchemins peuvent etre retranscrits partout depuis le livre de sorts
+      #- 120 # Retablir l'immunite naturelle des paladins aux maladies
+      - 125 # L'Empathie animale des rodeurs s'ameliore avec l'experience
+      - 130 # Caracteristiques raciales supplementaires pour les nains
+      - 140 # Caracteristiques raciales supplementaires pour les gnomes
+      - 180 # Mephites version papier
+      - 185 # Creatures feeriques version papier
+      - 186 # Sort Appel des creatures des bois revise
+      #- 190 # Elementaires version papier
+      - 191 # Augmenter le nombre de DV des princes elementaires
+      #- 200 # Permettre a Breche de dissiper les effets de Peau de Pierre conferes par des objets
+      - 201 # Incantation immediate pour les capacites innees du guerrier
+      - 202 # Pouvoirs de Bhaal revises -> Ameliorer les pouvoirs de Bhaal et standardiser leur temps d'incantation
+      - 218 # Recuperer les pouvoirs de Bhaal dans ToB
+      - 203 # Rendre la metamorphose druidique impossible a interrompre
+      - 210 # Restaurer la vulnerabilite a la Dissipation de la Magie des Nishruu et Hakeashar
+      - 212 # Rendre les sorts de detection des alignements plus precis
+      #- 213 # Tables des bonus aux jets de sauvegardes etendus pour les nains, les gnomes et les halfelins
+      - 270 # Recompenses de quetes impartiales
+      #- 220 # Script simple du voleur
+      #- 230 # Script simple du Barde (chante Chant du Barde quand inactif)
+      #- 239 # Script simple pour clerc/paladin
+      - 300 # Utiliser l'animation de Porte Dimensionnelle issue d'Icewind Dale -> Rythme d'animation eleve (equivalent a IWD)
+      - 301 # Changer l'apparence de l'armure de Valygar
+      - 302 # Changer l'apparence de la Robe de Vecna -> item_rev removes it
+      - 310 # Coloration distinctive des creatures
+      - 315 # Jeux de sons de crÃ©atures distincts
+      - 500 # Capacite de stockage des contenants legerement etendue -> Utiliser la capacite de stockage recommandee (999)
+      #- 510 # Services etendus des temples
+      #- 999 # Icones du style de BG2 pour le contenu d'aTweaks
+    location:
+      # github_user: TotoR115
+      # commit: 00c1388
+      github_user: TotoR115 # canonical version: FredrikLindgren/aTweaks
+      repository: aTweaks
+      branch: master
+      refresh: 1week
+  - name: c#brandock
+    description: Brandock the mage - atweak compat
+    installation:
+      general: see first installation of the mod for details
+    components:
+      - 41 # Crossmod with aTweaks "Allow Mages to scribe memorized spells onto scrolls" -> Integrate aTweak's scribe scroll ability into Brandock's original one
+
+  - name: EET_Tweaks
+    description: "Baldur's Gate: Enhanced Edition Trilogy Tweaks (EET Tweaks)"
+    overview: optional tweaks for Infinity Engine games
+    installation:
+      general: after any mods which add or alter CRE, BCS, DLG, ITM, SPL, EFF files
+    components:
+      # duplicates cdtweaks and convenientEE NPCs
+      #- 1001 # Edwin appearance -> BG2
+      #- 1011 # Imoen appearance -> BG2
+      #- 1021 # Jaheira appearance -> BG2
+      #- 1031 # Minsc appearance -> BG2
+      #- 1041 # Viconia appearance -> BG2
+      - 1050 # Cameo NPCs appearance
+      #- 1060 # NPCs voices
+      - 2002 # Total XP CAP -> Disabled
+      - 2042 # XP for Traps, Spells and Lockpicking -> Vanilla friendly progressive
+      - 3000 # Disable hostile reaction after charm
+      - 3010 # PnP spell scroll caster levels
+      - 3022 # Familiar death consequences -> Disabled
+      - 4040 # Import party items to SoA
+      - 4050 # Books/Scrolls categorization
+      - 4060 # Wand Case
+      - 4070 # Key Ring
+    location:
+      github_user: mleduque
+      repository: EET_Tweaks
+      branch: fr
+      patches:
+        - relative: patches/eet/eet_tweaks-xpbonus.diff
+          comment: continue distributing XP (plateau)
+  - name: EEUITweaks
+    components:
+      #- 1000 # Mods Options: 3.9
+      #- 1040 # Portrait Selectors -> Mr2150's Portrait Picker (Scaleable UI): 3.9
+      #- 1042 # Mr2150's Backup M_BG.lua: 3.9
+      #- 1044 # Mr2150's Update Portraits: 3.9
+      #- 1050 # Adul's Unhide Chargen Options: 3.9
+      #- 1070 # Faydark's Abilities Auto-Roller/GrimLefourbe's BG2 UI: 3.9
+      #- 2000 # Transparent Sidebars: 3.9
+      #- 2030 # Adul's Better Quick Loot: 3.9
+      #- 3000 # Leveling Progress Bars Tweaks: 3.9
+    location:
+      github_user: r-e-d
+      repository: EEUITweaks
+      release: v4.0.2
+      asset: eeuitweaks-4.0.2.iemod
+  - name: HiddenGameplayOptions
+    installation:
+      after: LeUI, cdtweaks
+    components:
+      - 0 # Install all Hidden Gameplay Options at once
+    location:
+      github_user: Argent77
+      repository: A7-HiddenGameplayOptions
+      release: v4.7
+      asset: A7-HiddenGameplayOptions-v4.7.iemod
+
+  - name: jimfix
+    description: Fixes and convenience tweaks aimed at an Ascension + SCS v33 install
+    components:
+      - 300 # Add expiration notifications for buffs
+      - 600 # Add expiration notifications for item buffs
+      #- 700 # Make Spell Shield block Wish Breach and Mordenkainen's Disjunction
+    location:
+      github_user: mleduque
+      repository: Jimfix
+      branch: partial-fr
+
+    description: Tweaks and Tricks mod for Baldur's Gate 2
+    components: ask # avoid 34 (d5 random tweaks instead)
+      #- 0 # Smarter familiars: v8.19
+      #- 1 # More resilient familiars: v8.19
+      #- 3 # Improved trap detection: increase trap sense range: v8.19
+      #- 4 # Trap reminders -> disclose trap type: v8.19
+      #- 20 # Compliments and insults -> Reintroduce: v8.19
+      #- 24 # Hassle-free ammo: v8.19
+      #- 27 # Throwing weapons damage type -> Both of the above options: v8.19
+      #- 29 # Sensible Cloak of Mirroring: v8.19
+      #- 32 # Sensible wand of frost -> AoE: v8.19
+      #- 33 # Potion of Really Mirrored Eyes: v8.19
+      #- 35 # Improved Shandalar's cloak: v8.19
+      #- 36 # Algernon's cloak: usable once per day: v8.19
+      #- 37 # Improved Equalizer: v8.19
+      #- 39 # Working protection from poison: v8.19
+      #- 41 # Spider form ignores web: v8.19
+      #- 44 # Cheesy Slayer: reputation -> reduced loss: v8.19
+      #- 46 # Sensible Otiluke's Resilient Sphere: v8.19
+      #- 47 # Greater Command AoE: v8.19
+      #- 48 # Working Non-Detection: v8.19
+      #- 52 # Sensible Blade spins: v8.19
+      #- 56 # More ankheg armors by Taerom: v8.19
+      #- 65 # Improved strongholds: v8.19
+      #- 66 # Save Melicamp: v8.19
+      #- 68 # More map notes: v8.19
+      #- 70 # Mod romance cheats | POWER USER component, consult readme: v8.19
+      #- 74 # Add BG1 tomes stats bonuses to new BG2 characters -> Each stat except Wisdom gets +1, Wisdom gets +3: v8.19
+      #- 76 # Starting bags -> GSPA + holding: v8.19
+    location:
+      github_user: BGforgeNet
+      repository: bg2-tweaks-and-tricks
+      release: v8.33
+      asset: tweaks-and-tricks-v8.33.iemod
+  - name: zgtweaks
+    components: ask
+      ## Scroll drops
+      #- 10 # one arcane scroll on the level of the highest arcane level memorized
+      #- 11 # one arcane scroll up to the level of the highest arcane level memorized
+      #- 12 # one arcane scroll on the level above 4 of the highest arcane level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive level 2 scroll etc.)
+      #- 13 # one arcane scroll up to the level above 4 of the highest arcane level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive up to level 2 scroll etc.)
+      #- 20 # one arcane scroll on the level of the highest divine level memorized
+      #- 21 # one arcane scroll up to the level of the highest divine level memorized
+      #- 22 # one arcane scroll on the level above 4 of the highest divine level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive level 2 scroll etc.)
+      #- 23 # one arcane scroll up to the level above 4 of the highest divine level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive up to level 2 scroll etc.)
+      ## Replace non-droppable arrows with droppable ones
+      # - 31 # Replace nondroppable magic arrow clones with droppable counterparts -> Do not change amounts in affected stacks
+      # - 32 # Replace nondroppable magic arrow clones with droppable counterparts -> Decrease affected arrow stacks to 75%
+      # - 33 # Replace nondroppable magic arrow clones with droppable counterparts -> Decrease affected arrow stacks to 66%
+      # - 34 # Replace nondroppable magic arrow clones with droppable counterparts -> Decrease affected arrow stacks to 50%
+      # - 35 # Replace nondroppable magic arrow clones with droppable counterparts -> Decrease affected arrow stacks to 33%
+      # - 36 # Replace nondroppable magic arrow clones with droppable counterparts -> Decrease affected arrow stacks to 25%
+      ## Change amount of gold carried by creatures
+      # - 41 # Change gold -> Increase to 200%
+      # - 42 # Change gold -> Increase to 150%
+      # - 43 # Change gold -> Decrease to 83%
+      # - 44 # Change gold -> Decrease to 75%
+      # - 45 # Change gold -> Decrease to 66%
+      # - 46 # Change gold -> Decrease to 50%
+      # - 47 # Change gold -> Decrease to 33%
+      # - 48 # Change gold -> Decrease to25%
+      ## 51-58 change valueof jewellry
+      ## 61-69 Change merchant prices when party buys
+      ## 71-78 Change merchant prices when party sells
+      #- 100 # Mixed PnP-BG wisdom-based bonus spells table
+      #- 101 # Grant Ranger spell slots to Cleric-Ranger multiclasses
+      #- 1000 # Change Worgs to use IWD2 artwork
+      # - 1001 # Change Planetars to use their SoD solar-based artwork
+      # - 1002 # Use NWN Basilisk artwork from Infinity Animations for Made in Heaven Dracolisk
+      # - 9999 # Equip items from inventory to fill empty slots
+      #- 10000 #  Bag of Spilling
+    location:
+      github_user: GraionDilach
+      repository: RandomGraionTweaks
+      release: version-1.14
+      asset: random-graion-tweaks-1.14.iemod
+    ignore_warnings: true
+  - name: tnt
+    description: Tweaks and Tricks mod for Baldur's Gate 2
+    components: ask # avoid 34 (d5 random tweaks instead)
+      #- 0 # Smarter familiars: v8.19
+      #- 1 # More resilient familiars: v8.19
+      #- 3 # Improved trap detection: increase trap sense range: v8.19
+      #- 4 # Trap reminders -> disclose trap type: v8.19
+      #- 20 # Compliments and insults -> Reintroduce: v8.19
+      #- 24 # Hassle-free ammo: v8.19
+      #- 27 # Throwing weapons damage type -> Both of the above options: v8.19
+      #- 29 # Sensible Cloak of Mirroring: v8.19
+      #- 32 # Sensible wand of frost -> AoE: v8.19
+      #- 33 # Potion of Really Mirrored Eyes: v8.19
+      #- 35 # Improved Shandalar's cloak: v8.19
+      #- 36 # Algernon's cloak: usable once per day: v8.19
+      #- 37 # Improved Equalizer: v8.19
+      #- 39 # Working protection from poison: v8.19
+      #- 41 # Spider form ignores web: v8.19
+      #- 44 # Cheesy Slayer: reputation -> reduced loss: v8.19
+      #- 46 # Sensible Otiluke's Resilient Sphere: v8.19
+      #- 47 # Greater Command AoE: v8.19
+      #- 48 # Working Non-Detection: v8.19
+      #- 52 # Sensible Blade spins: v8.19
+      #- 56 # More ankheg armors by Taerom: v8.19
+      #- 65 # Improved strongholds: v8.19
+      #- 66 # Save Melicamp: v8.19
+      #- 68 # More map notes: v8.19
+      #- 70 # Mod romance cheats | POWER USER component, consult readme: v8.19
+      #- 74 # Add BG1 tomes stats bonuses to new BG2 characters -> Each stat except Wisdom gets +1, Wisdom gets +3: v8.19
+      #- 76 # Starting bags -> GSPA + holding: v8.19
+    location:
+      github_user: BGforgeNet
+      repository: bg2-tweaks-and-tricks
+      release: v8.33
+      asset: tweaks-and-tricks-v8.33.iemod
+
+  - name: npc_ee
+    installation:
+      general: towards the end, after mods that change profs (skills-and-abilities?)
+      before: install NPC_EE before Dual-to-Kit
+    components:
+      #- 1010 #/ Retirer l'indicateur de classe jumelee pour Imoen (attention, lire le fichier Readme): 5.2
+      - 2000 #/ Choix des classes/caracteristiques/kits des PNJ: 5.2
+    location:
+      github_user: subtledoctor
+      repository: NPC_EE
+      commit: "6.5.1"
+  - name: DUAL_TO_KIT
+    description: "Kjeron's 'Dual to Kit'"
+    installation:
+      general: |
+        * This mod should NOT be installed BEFORE any mod that adds new kits.
+        * This mod should NOT be installed BEFORE any mod that alters race (MGSRCREQ.2da/CLSRCREQ.2da) or dualclass (DUALCLAS.2da/ABDCDSRQ.2da) restrictions.
+        * This mod should NOT be installed BEFORE any mod that alters string references in CLASTEXT.2da, KITLIST.2da, or RACETEXT.2da/SODRACE.2da.
+        * This mod should NOT be installed BEFORE any mod that alters alignment (ALIGNMNT.2da) restrictions.
+        * The third component(proficiency) should also NOT be installed BEFORE any mod that alters or reads (WEAPPROF.2da).
+    original_thread: https://forums.beamdog.com/discussion/comment/985679#Comment_985679
+    original_dl: https://us.v-cdn.net/5019558/uploads/editor/m1/4sxyexv1ptj0.zip
+    components:
+      - 0 # DUAL_TO_KIT_MENU -> Enable Dualclassing into Kits
+      - 1 # Grant second-class Specialists their Bonus Spell Slots
+      - 2 # Grant second-class Kits their Proper Proficiency Selection
+    location:
+      github_user: mleduque
+      repository: kjeron_DUAL_TO_KIT
+      tag: v0.35
+
+
+  - name: 35thac0
+    components: ask
+    location:
+      github_user: mleduque
+      repository: ie-mods-35
+      branch: main
+  - name: PathfinderHitDice
+    components: ask
+    location:
+      github_user: mleduque
+      repository: ie-mods-35
+      branch: main
+
+  - name: fix_temple_restoration
+    description: Fix for missing spell file - may be fixes by jtweaks (or item_rev?)
+    components:
+    location:
+      github_user: subtledoctor
+      repository: SubtleD_hotfixes
+      tag: v20
+  - name: fix_cre_script_names
+    description: Some mod out there is altering various creatures' script names to "cre_strref." This hotfix changes the script name of all such creatures from "cre_strref" to their filename.
+    components:
+    location:
+      github_user: subtledoctor
+      repository: SubtleD_hotfixes
+      tag: v29
+
+
+  - name: LightingPack
+    components:
+      - 2 # Shader script files for lighting control -> Moderately increased contrast, brightness and gamma (recommended)
+    location:
+      github_user: Argent77
+      repository: A7-LightingPackEE
+      release: v3.1
+      asset: lin-A7-LightingPackEE-v3.1.zip
+  - name: Sentrizeal_AA_Pack
+    description: Sentrizeal's Alternate Avatar Pack
+    components:
+    location:
+      path: /home/mick/Games/modda-cache/static/SentrizealAvatarPack.zip
+
+  - name: PPE # ok
+    description: Portraits, Portraits Everywhere
+    installation:
+      general: very late, so mod-added npcs have portraits
+    components:
+      - 0   # Portraits Portraits Everywhere (PPE) - Composant principal
+      - 100 # Categorie de portraits (Recommande) -> Sequenced
+      - 10  # Utiliser les portraits d'Isandir pour le CHARNAME
+      - 20  # Replacer les portraits en basse qualite de TOB & SOA
+      - 302 # Change Imoen portraits -> BG2 Portrait
+      - 312 # Change Viconia portraits -> BG2 Portrait
+      - 322 # Change Jaheira portraits -> BG2 Portrait
+      - 332 # Change Minsc portraits -> BG2 Portrait
+      - 342 # Change Edwin portraits -> BG2 Portrait
+      - 30  # Ust Natha Drow NPCs
+      - 40  # Vampire NPCs
+    location:
+      #github_user: DaftHunk # canonical:smeagolheart
+      github_user: mleduque
+      repository: Portraits-Portraits-Everywhere
+      branch: npc-fixes
+
+  - name: cd_icpp
+    components: ask
+    location:
+      github_user: Gibberlings3
+      repository: Infinity_Collection_Portrait_Pack
+      release: v2
+      asset: infinity-collection-portrait-pack-v2.iemod
+  - name: A7-Achievements
+    components: ask
+    location:
+      github_user: Argent77
+      repository: A7-Achievements
+      release: v2.1
+      asset:  A7-Achievements-v2.1.iemod
+
+  - name: generalized_biffing
+    components:
+      - 1
+    location:
+      github_user: SpellholdStudios
+      repository: generalized_biffing
+      release: v2.6
+      asset: generalized-biffing-v2.6.iemods

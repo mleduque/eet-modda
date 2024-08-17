@@ -1,0 +1,9 @@
+diff --git a/EET/base/2da/K#IMPORT.2DA b/EET/base/2da/K#IMPORT.2DA
+index a2fd74f..cecce1a 100644
+--- a/EET/base/2da/K#IMPORT.2DA
++++ b/EET/base/2da/K#IMPORT.2DA
+@@ -5,3 +5,4 @@
+ 1     CHAN06
+ 1     SW1H15
+ 1     SW1H16
++1     L#HNDST

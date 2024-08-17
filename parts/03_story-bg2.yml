@@ -615,6 +615,18 @@ modules:
       github_user: InfinityMods
       repository: TDDz
       tag: v1.3.1
+  - name: TDD_Hall-of-Knowledge
+    description: Hall-of-Knowledge
+    overview: |
+      This mod use official TDD ressources not implemented by TDDz :
+      It add a little NPC Avaunis (no banter) at the Order of The Radiant Heart who
+      will lead you to the Hall of Knowledge mini quest.
+      Hint : After talking to Avaunis and accept the quest go to the city gate.
+    location:
+      github_user: The-Gate-Project
+      repsitory: TDD_Hall-of-Knowledge
+      branch: master
+      refresh: 10days
   - name: AjocMod
     description: |
       Ajoc's minimod - medium-sized quest, mini-quests, areas, items

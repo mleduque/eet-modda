@@ -29,6 +29,8 @@ modules:
           dirs:
             - EET
             - EET_end
+      patches:
+        - relative: patches/eet/eet-import-items.diff
     components:
       - 0 # EET core (importation de ressource)
     add_conf:

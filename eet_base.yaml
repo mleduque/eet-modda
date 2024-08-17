@@ -3833,7 +3833,8 @@ modules:
     location:
       github_user: subtledoctor
       repository:  IWD_EET_Integration
-      tag: "0.12.2"
+      branch: master
+      refresh: 7days
 
   #########
   # Mass item updates
@@ -4558,7 +4559,7 @@ modules:
       github_user: OlvynChuru
       repository: Olvyn-Tweaks
       commit: 1f59527c14 # EET compat fix by Selphira
-  - name: EET_Tweaks
+  - name: EET_Tweaks # ok
     components:
       - 1001 # Edwin appearance -> BG2
       - 1011 # Imoen appearance -> BG2
@@ -4610,7 +4611,7 @@ modules:
       github_user: mleduque
       repository: dee_enchant
       tag: v1
-  - name: PPE # no
+  - name: PPE # ok
     description: Portraits, Portraits Everywhere
     installation:
       general: very late, so mod-added npcs have portraits
@@ -4895,7 +4896,7 @@ modules:
       github_user:  subtledoctor
       repository: SubtleD_Item_Tweaks
       tag: "1.3.4"
-  - name: Combat_Skill_Proficiencies
+  - name: Combat_Skill_Proficiencies # ok
     installation:
       after: [stratagems, atweaks, cdtweaks]
       before: [ npc_ee ]
@@ -4906,14 +4907,14 @@ modules:
       tag: "1.4.5"
       patch:
         relative: patches/combat-skill-profs-config.diff + extend mage/sorc feats (d5csdlg.2da, weapprof.2da, profs.2da, profsmax.2da)
-  - name: SubtleD_Stat_Overhauls
+  - name: SubtleD_Stat_Overhauls # ok
     components: ask
     location:
       github_user: subtledoctor
       repository: SubtleD_Stat_Overhauls
       branch: "1.5.5"
       patch: config
-  - name: Magic_Battles_Revised
+  - name: Magic_Battles_Revised # ok
     installation:
       after: stratagems
     components:
@@ -4924,14 +4925,14 @@ modules:
       branch: 1.9-fr
       patch:
         relative: patches/mbr_spell_thrust_lv2.diff
-  - name: forgotten-armament
+  - name: forgotten-armament # ok
     description: forgotten-armament - stat increasing items
     installation:
       general: these two components go after SCS which adds items
     components: # only stat increase items
       #- 10 # Armes dans le style de NWN2: v0.7.1-beta
       #- 4 # Mise a jour des statistiques et scores de capacite des objets ameliores pour une meilleur integration: v0.7.1-beta
-  - name: EEUITweaks
+  - name: EEUITweaks # ok
     components:
       #- 1000 # Mods Options: 3.9
       #- 1040 # Portrait Selectors -> Mr2150's Portrait Picker (Scaleable UI): 3.9
@@ -4947,7 +4948,7 @@ modules:
       repository: EEUITweaks
       release: v4.0.2
       asset: eeuitweaks-4.0.2.iemod
-  - name: HiddenGameplayOptions
+  - name: HiddenGameplayOptions # ok
     installation:
       after: LeUI, cdtweaks
     components:
@@ -4957,7 +4958,7 @@ modules:
       repository: A7-HiddenGameplayOptions
       release: v4.7
       asset: A7-HiddenGameplayOptions-v4.7.iemod
-  - name: Tactics-Remix
+  - name: Tactics-Remix # ok
     components:
     location:
       github_user: Gibberlings3
@@ -4968,7 +4969,7 @@ modules:
         - file_globs: ["tactics-remix.tp2"]
           replace: 'REQUIRE_PREDICATE !FILE_EXISTS ~mih_eq/setup-mih_eq.tp2~ @3004'
           with: '' # just remove this
-  - name: butchery
+  - name: butchery # ok
     components: #components installé avant SCS, deuxèmeliste pour après SCS
       - 41 # Boucherie de nains dans le donjon d'Irenicus [a installer apres Stratagems]: v5.0.0
       - 44 # Boucherie de demons dans la Sphere planaire [a installer apres Stratagems]: v5.0.0
@@ -4982,18 +4983,17 @@ modules:
       - 56 # 2 boucheries de sahuagins (Cite sous-marine et campement githyanki dans la Tour de Garde) [a installer apres Stratagems]: v5.0.0
       - 57 # 4 boucheries d'araignees : entree de l'antre de Pai'Na, Temple d'Amaunator (Oeil aveugle), 1er etage de la Tour de Garde et devant l'Enclave de Sendai [a installer apres Stratagems]: v5.0.0
       - 58 # 6 boucheries de squelettes (catacombes d'Atkthtla, Ruine du Temple, Spellhold, Tour de Garde et 2 dans le temple de Nyalee) [a installer apres Stratagems]: v5.0.0
-  - name: jimfix
+  - name: jimfix # ok
     description: Fixes and convenience tweaks aimed at an Ascension + SCS v33 install
     components:
       - 300 # Add expiration notifications for buffs
       - 600 # Add expiration notifications for item buffs
       #- 700 # Make Spell Shield block Wish Breach and Mordenkainen's Disjunction
     location:
-      github_user: Banananaut
+      github_user: mleduque
       repository: Jimfix
-      release: v3.1a
-      asset: jimfix-v3.1a.iemod
-  - name: atweaks
+      branch: partial-fr
+  - name: atweaks # ok
     description:
     overview: |
       This mod represents a compilation of various house rules and PnP related tweaks which are designed to
@@ -5043,7 +5043,7 @@ modules:
       repository: aTweaks
       branch: ???
       refresh: 1week
-  - name: c#brandock
+  - name: c#brandock # ok
     description: Brandock the mage - atweak compat
     installation:
       general: see first installation of the mod for details
@@ -5070,7 +5070,7 @@ modules:
       asset: lin-skills-and-abilities-v2.3.zip
       patch:
         relative: patches/skills-and-abilities-prof-points.diff
-  - name: npc_ee
+  - name: npc_ee #ok
     installation:
       general: towards theend, after mods that change profs (skills-and-abilities?)
       before: install NPC_EE before Dual-to-Kit
@@ -5091,7 +5091,7 @@ modules:
       layout:
         layout_type: single_dir_plus_tp2
         tp2: Setup-POISON_NO_BYPASS.tp2
-  - name: tnt
+  - name: tnt # ok
     description: Tweaks and Tricks mod for Baldur's Gate 2
     components: ask # avoid 34 (d5 random tweaks instead)
       #- 0 # Smarter familiars: v8.19
@@ -5124,19 +5124,44 @@ modules:
     location:
       github_user: BGforgeNet
       repository: bg2-tweaks-and-tricks
-      release: v8.31
-      asset: tweaks-and-tricks-v8.29.iemod
-  - name: zgtweaks
+      release: v8.33
+      asset: tweaks-and-tricks-v8.33.iemod
+  - name: zgtweaks # ok
     components:
+      ## Scroll drops
       #- 10 # one arcane scroll on the level of the highest arcane level memorized
       #- 11 # one arcane scroll up to the level of the highest arcane level memorized
       #- 12 # one arcane scroll on the level above 4 of the highest arcane level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive level 2 scroll etc.)
       #- 13 # one arcane scroll up to the level above 4 of the highest arcane level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive up to level 2 scroll etc.)
       #- 20 # one arcane scroll on the level of the highest divine level memorized
-      ##- 21 # one arcane scroll up to the level of the highest divine level memorized
+      #- 21 # one arcane scroll up to the level of the highest divine level memorized
       #- 22 # one arcane scroll on the level above 4 of the highest divine level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive level 2 scroll etc.)
       #- 23 # one arcane scroll up to the level above 4 of the highest divine level memorized (so if it's a level 5 spell, the scroll will be level 1, level 6 will receive up to level 2 scroll etc.)
+      ## Replace non-droppable arrows with droppable ones
+      # - 31 # Replace nondroppable magic arrow clones with droppable counterparts -> Do not change amounts in affected stacks
+      # - 32 # Replace nondroppable magic arrow clones with droppable counterparts -> Decrease affected arrow stacks to 75%
+      # - 33 # Replace nondroppable magic arrow clones with droppable counterparts -> Decrease affected arrow stacks to 66%
+      # - 34 # Replace nondroppable magic arrow clones with droppable counterparts -> Decrease affected arrow stacks to 50%
+      # - 35 # Replace nondroppable magic arrow clones with droppable counterparts -> Decrease affected arrow stacks to 33%
+      # - 36 # Replace nondroppable magic arrow clones with droppable counterparts -> Decrease affected arrow stacks to 25%
+      ## Change amount of gold carried by creatures
+      # - 41 # Change gold -> Increase to 200%
+      # - 42 # Change gold -> Increase to 150%
+      # - 43 # Change gold -> Decrease to 83%
+      # - 44 # Change gold -> Decrease to 75%
+      # - 45 # Change gold -> Decrease to 66%
+      # - 46 # Change gold -> Decrease to 50%
+      # - 47 # Change gold -> Decrease to 33%
+      # - 48 # Change gold -> Decrease to25%
+      ## 51-58 change valueof jewellry
+      ## 61-69 Change merchant prices when party buys
+      ## 71-78 Change merchant prices when party sells
       #- 100 # Mixed PnP-BG wisdom-based bonus spells table
+      #- 101 # Grant Ranger spell slots to Cleric-Ranger multiclasses
+      #- 1000 # Change Worgs to use IWD2 artwork
+      # - 1001 # Change Planetars to use their SoD solar-based artwork
+      # - 1002 # Use NWN Basilisk artwork from Infinity Animations for Made in Heaven Dracolisk
+      # - 9999 # Equip items from inventory to fill empty slots
       #- 10000 #  Bag of Spilling
     location:
       github_user: GraionDilach
@@ -5195,7 +5220,7 @@ modules:
       repository: Bardic_Appraisal
       branch: master
       refresh: 2days
-  - name: DUAL_TO_KIT
+  - name: DUAL_TO_KIT #ok
     description: "Kjeron's 'Dual to Kit'"
     installation:
       general: |
@@ -5214,7 +5239,7 @@ modules:
       github_user: mleduque
       repository: kjeron_DUAL_TO_KIT
       tag: v0.35
-  - name: d2-script
+  - name: d2-script # no
     components:
     location:
     github_user: D2-mods
@@ -5225,26 +5250,28 @@ modules:
     components: ask
     location:
       http: https://forums.beamdog.com/uploads/editor/cw/zu3604sk4p36.zip
-  - name: 35thac0
-    components: [0]
+
+  - name: 35thac0 # ok
+    components: ask
     location:
       github_user: mleduque
       repository: ie-mods-35
       branch: main
-  - name: PathfinderHitDice
-    components: [0]
+  - name: PathfinderHitDice # ok
+    components: ask
     location:
       github_user: mleduque
       repository: ie-mods-35
       branch: main
-  - name: fix_temple_restoration
+
+  - name: fix_temple_restoration # ok
     description: Fix for missing spell file - may be fixes by jtweaks (or item_rev?)
     components:
     location:
       github_user: subtledoctor
       repository: SubtleD_hotfixes
       tag: v20
-  - name: fix_cre_script_names
+  - name: fix_cre_script_names # ok
     description: Some mod out there is altering various creatures' script names to "cre_strref." This hotfix changes the script name of all such creatures from "cre_strref" to their filename.
     components:
     location:
@@ -5253,7 +5280,7 @@ modules:
       tag: v29
 
 
-  - name: LightingPack
+  - name: LightingPack # ok
     components:
       - 2 # Shader script files for lighting control -> Moderately increased contrast, brightness and gamma (recommended)
     location:
@@ -5261,7 +5288,7 @@ modules:
       repository: A7-LightingPackEE
       release: v3.1
       asset: lin-A7-LightingPackEE-v3.1.zip
-  - name: Sentrizeal_AA_Pack
+  - name: Sentrizeal_AA_Pack # ok
     description: Sentrizeal's Alternate Avatar Pack
     components:
     location:
@@ -5278,7 +5305,7 @@ modules:
       repository: infinity-sounds
       release: v2.01
       asset: infinitysounds-v2.0.1.iemod
-  - name: generalized_biffing
+  - name: generalized_biffing # ok
     components:
       - 1
     location:
@@ -5286,14 +5313,15 @@ modules:
       repository: generalized_biffing
       release: v2.6
       asset: generalized-biffing-v2.6.iemods
-  - name: cd_icpp
+
+  - name: cd_icpp # ok
     components: ask
     location:
       github_user: Gibberlings3
       repository: Infinity_Collection_Portrait_Pack
       release: v2
       asset: infinity-collection-portrait-pack-v2.iemod
-  - name: A7-Achievements
+  - name: A7-Achievements # ok
     components: ask
     location:
       github_user: Argent77
