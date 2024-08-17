@@ -29,3 +29,16 @@
     components:
       - 1060 # Les Kensai peuvent porter des bracelets
       - 1070 # Les Voleurs peuvent utiliser des baguettes
+  - name: ItemRandomizer
+    description: Item Randomizer
+    overview: |
+      Item Randomiser is a large-scale random treasure mod for Baldur's Gate and Baldur's Gate II.
+      The mod can randomise up to several hundred items in Baldur's Gate (including TotSC) and up
+      to several hundred more in Baldur's Gate II (including ToB). The randomised items can be
+      found throughout the game world over the course of the game.
+    components: ask
+    location:
+      github_user: FredrikLindgren
+      repository: randomiser
+      branch: devel
+      refresh: 10days
