@@ -314,6 +314,36 @@
     #prompt for portrait (2. BG2 style)
     disabled:
       because : too different
+  - name: Drake
+    overview: BG1+SoD, Humal Priest of Tyr, Male, friendship, flirt, one quest each in BG1 and SoD, only join after Bassilus
+    components:
+    - 0 # Drake NPC for Baldur''s Gate: Enhanced Edition: 1.7
+    - 1 # Choose a portrait for Drake: -> Default Portrait (The Artisan): 1.7
+    - 4 # OPTIONAL: Install Universal Crossbows, Crossbow Proficiency for Drake?: 1.7
+    - 5 # OPTIONAL: Original Soundset by BillyYank: 1.7
+    location:
+      github_user: ArtemiusI
+      repository: Drake
+      branch: master
+      refresh: 15days
+      replace:
+        - file_globs: ['dialogue/c0drakej.d']
+          replace: 'RealSetGlobalTimer("C0DrakeTalkTimer","GLOBAL",2700)'
+          with: 'RealSetGlobalTimer("C0DrakeTalkTimer","GLOBAL",600)'
+        - file_globs: ['scripts/SoD/c02drakd.baf']
+          replace: 'RealSetGlobalTimer("C02DrakeTalkTimer","GLOBAL",THIRTY_MINUTES)'
+          with: 'RealSetGlobalTimer("C02DrakeTalkTimer","GLOBAL",400)'
+        - file_globs: ['scripts/SoD/c02drake.baf']
+          replace: 'RealSetGlobalTimer("C02DrakeTalkTimer","GLOBAL",ONE_HOUR)'
+          with: 'RealSetGlobalTimer("C02DrakeTalkTimer","GLOBAL",800)'
+  - name: Kvel_BG1
+    description: K’Vel NPC for BG:EE
+    overview: BG1+SoD, Drow FMT, male, LE, banters, no quest, no romance, joins after ch5
+    location:
+      github_user: ArtemiusI
+      repository: Kvel_BG1
+      banch: main
+      refresh: 7days
 
   # Lava NPCs
   - name: Walahnan
@@ -347,6 +377,11 @@
         - file_globs: ["scripts/l#brist.baf"]
           replace: 'RealSetGlobalTimer("L#BristleTime","GLOBAL",2000)'
           with: 'RealSetGlobalTimer("L#BristleTime","GLOBAL",800)'
+  - name: verrsza
+    description: bg1+sod, evil ranger, rakshasa, quests, romance
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/static/weaselmods/VerrSzaBGEE v6.01.zip
 
   - name: IndiNPC
     description: bg1 one-day NPC, half-elven, lawful good fighter/mage, banters, small quest
@@ -418,7 +453,6 @@
       repository: ShukBGEE
       branch: master
       refresh: 1day
-
 
   - name: sodrtd
     description: Road To Discovery

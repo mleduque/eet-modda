@@ -21,7 +21,6 @@ modules:
       branch: master
       refresh: 4days
 
-    # maybe?
   - name: DSotSC
     description: Dark Side of the Sword Coast
     installation:
@@ -68,6 +67,13 @@ modules:
       layout:
         layout_type: single_dir_plus_tp2
         tp2: Setup-TGC1E.tp2
+  - name: DarkHorizonsBGee
+    components: ask
+    location:
+      github_user: The-Gate-Project
+      repository: DarkHorizonsBGee
+      branch: main
+      refresh: 5days
 
   - name: "c#endlessbg1"
     components:
@@ -426,6 +432,17 @@ modules:
       repository: Kara-Tur
       branch: master
       refresh: 10days
-
+  - name: ArtisansCaravans
+    description: Caravans of Faerun
+    overview: |
+      A mod for Baldur's Gate: Enhanced Edition that implements a faster and safer way to travel the Sword Coast... at a price.
+      This mod adds a new way to travel across the Sword Coast in Baldur's Gate: Enhanced Edition, adding
+      Caravan Masters who you may hire to bring you to certain places on the map at only half the travel
+      time and no danger of random encounters
+    location:
+      github_user: ArtemiusI
+      repository: Caravans-of-Faerun
+      branch: main
+      refresh: 10days
 
 #
