@@ -6,7 +6,7 @@ global:
   lang_dir: "fr_FR"
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
   local_mods: mods
-  local_patches: patches
+  local_patches: ../..
 
 locations:
   entries:
