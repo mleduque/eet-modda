@@ -302,7 +302,7 @@
 
   # ArtemiusI NPCs
   - name: Aura_BG1
-    components:
+    components: ask
       #- 0 # Aura NPC for Baldur's Gate: Enhanced Edition: 3.3
     location:
       github_user: ArtemiusI
@@ -339,10 +339,11 @@
   - name: Kvel_BG1
     description: K’Vel NPC for BG:EE
     overview: BG1+SoD, Drow FMT, male, LE, banters, no quest, no romance, joins after ch5
+    components: ask
     location:
       github_user: ArtemiusI
       repository: Kvel_BG1
-      banch: main
+      branch: main
       refresh: 7days
 
   # Lava NPCs

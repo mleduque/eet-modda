@@ -31,10 +31,10 @@
       after: iwdification[30, 40]
       before: bp-bgt-worldmap, EET_end
     components: ask
-      -0 # NWN For BG
-      #- 10 # Place NWN locations on BP-BGT Worldmap
-      - 11 # Use separate worldmap for NWN areas
-      #- 20 # Install NWN as a dedicated campaign
+      #- 0 # NWN For BG
+      ##- 10 # Place NWN locations on BP-BGT Worldmap
+      #- 11 # Use separate worldmap for NWN areas
+      ##- 20 # Install NWN as a dedicated campaign
     location:
       github_user: abalabokhin
       repository: NWNForBG

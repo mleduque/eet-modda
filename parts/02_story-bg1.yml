@@ -1,10 +1,8 @@
 
-modules:
-
   - name: BP_in_BG
     description: Black Pits in BGEE
     installation:
-      general: 'This mod should be installed VERY early since it (currently) overwrites several dialogue files: Baeloth's dialogues in BGEE and Sod, and the BP shop vendors' dialogues. It should be installed after EET if you are installing this in an EET game. In that case probably best to install it immediately after EET.'
+      general: "This mod should be installed VERY early since it (currently) overwrites several dialogue files: Baeloth's dialogues in BGEE and Sod, and the BP shop vendors' dialogues. It should be installed after EET if you are installing this in an EET game. In that case probably best to install it immediately after EET."
       after: EET
     components:
       - 0 # BP_in_BG: add access to the Black Pits in BGEE/EET
@@ -382,7 +380,7 @@ modules:
   - name: loretaker
     components: ask
     location:
-      file: /home/mick/Games/modda-cache/static/acifer/Loretakers_V_1.2.rar
+      path: /home/mick/Games/modda-cache/static/acifer/Loretakers_V_1.2.rar
       alt:
         http: https://www.baldurs-gate.de/acifer/Loretakers.rar
         rename: Loretakers_V_1.2.zip # 2024-06-01
@@ -439,6 +437,7 @@ modules:
       This mod adds a new way to travel across the Sword Coast in Baldur's Gate: Enhanced Edition, adding
       Caravan Masters who you may hire to bring you to certain places on the map at only half the travel
       time and no danger of random encounters
+    components: ask
     location:
       github_user: ArtemiusI
       repository: Caravans-of-Faerun

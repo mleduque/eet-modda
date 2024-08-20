@@ -1,10 +1,9 @@
 
-modules:
-
   - name: mih_eq
     description: Made In Heaven Encounters and Quests
     installation:
       before: SCS
+    components: ask
     ignore_warnings: true
     location:
       github_user: mleduque
@@ -292,14 +291,11 @@ modules:
       repository: DeadGardens
       release: v1.1
       asset: DeadGardens.zip
-  - name: ErrantJusticeBG2
+  - name: ErrantJustice
     description: BG2, 10 quests mod
     components: ask
     location:
-      github_user: Glittergear
-      repository: ErrantJusticeBG2
-      release: v1.0
-      asset: Errant.Justice.1.0.zip
+      path: /home/mick/Games/modda-cache/static/Errant.Justice.1.0.zip
 
   - name: BackBrynnlaw
     description: Back to Brynnlaw - SoA chap 6 - one main quest, 10 subquests
@@ -401,7 +397,6 @@ modules:
       asset: im10kulyok-v1.1.zip
   - name: voloquest
     description: 'CMorgan entry for Iron Modder 10: Volo quest'
-    description:
     components:
       - 0
     location:
@@ -457,13 +452,6 @@ modules:
       release: v7
       asset: the-reunion-v7.iemod
 
-    components:
-      - 0 # Aerie for BG:EE
-    location:
-      github_user: The-Gate-Project
-      repository: AerieBG1
-      release: v2.5
-      asset: aerie-in-bgee-2.5.iemod
   - name: ToA
     description: Tales of Anegh
     components:
@@ -514,11 +502,11 @@ modules:
   - name: HerThiMoney
     description: Heroes Thieves and Moneylenders - BG2 mod
     components: ask
-      - 0 # Component 1. Interjections & Mini-quests (by Austin & Arcanecoast Team): 4.2.3
-      - 10 # Component 2. First Calimport Bank Pack (by Scheele & Austin & Arcanecoast Team): 4.2.3
-      - 20 # Component 3. Shadow-Covered Love & Death (by Alisia & Austin): 4.2.3
-      - 30 # Component 4. The Missing Troll Case (by Alisia & Austin): 4.2.3
-      - 40 # Component 5. Unlocked original dialogs of all NPC (by Tipun & Austin): 4.2.3
+      #- 0 # Component 1. Interjections & Mini-quests (by Austin & Arcanecoast Team): 4.2.3
+      #- 10 # Component 2. First Calimport Bank Pack (by Scheele & Austin & Arcanecoast Team): 4.2.3
+      #- 20 # Component 3. Shadow-Covered Love & Death (by Alisia & Austin): 4.2.3
+      #- 30 # Component 4. The Missing Troll Case (by Alisia & Austin): 4.2.3
+      #- 40 # Component 5. Unlocked original dialogs of all NPC (by Tipun & Austin): 4.2.3
     location:
       github_user: Austin-BG
       repository: HTaM
@@ -622,9 +610,10 @@ modules:
       It add a little NPC Avaunis (no banter) at the Order of The Radiant Heart who
       will lead you to the Hall of Knowledge mini quest.
       Hint : After talking to Avaunis and accept the quest go to the city gate.
+    components: ask
     location:
       github_user: The-Gate-Project
-      repsitory: TDD_Hall-of-Knowledge
+      repository: TDD_Hall-of-Knowledge
       branch: master
       refresh: 10days
   - name: AjocMod

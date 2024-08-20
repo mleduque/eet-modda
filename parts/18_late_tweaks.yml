@@ -7,15 +7,22 @@
       github_user: subtledoctor
       repository: Combat_Skill_Proficiencies
       tag: "1.4.5"
-      patch:
-        relative: patches/combat-skill-profs-config.diff + extend mage/sorc feats (d5csdlg.2da, weapprof.2da, profs.2da, profsmax.2da)
+      patches:
+        # Allow a little more profs for wiz/sorc
+        # 1. edit profs.2da to have 1 prof/8 levels
+        # 2. edit (generator for) weapprof.2da to add feat categories
+        # categories: 115(postures) / 124(fitness) / 127(misc) / 110(magic)
+        # Add 1 posture (2 choices each), 1 misc(+1 choice each), 1 magic (2 choices) 1 dodge,
+        # and allow 1 add point in hurled (5 choices added, unlocks  up to 8*5=lv40)
+        - relative: patches/eet/subtled-combat-skill-profs-wizsorc-profs.diff
   - name: SubtleD_Stat_Overhauls
     components: ask
     location:
       github_user: subtledoctor
       repository: SubtleD_Stat_Overhauls
       branch: "1.5.5"
-      patch: config
+      patches:
+        - relative: patches/eet/subtled-stat-overhaul-config.diff
   - name: Magic_Battles_Revised
     installation:
       after: stratagems
@@ -25,7 +32,8 @@
       repository: magic_battles_revised
       branch: 1.9-fr
       patch:
-        relative: patches/mbr_spell_thrust_lv2.diff
+      # align STR damage bonus on fighter for everyone + slight regen
+        relative: patches/eet/mbr_spell_thrust_lv2.diff
 
   - name: atweaks
     description:
@@ -115,7 +123,7 @@
         - relative: patches/eet/eet_tweaks-xpbonus.diff
           comment: continue distributing XP (plateau)
   - name: EEUITweaks
-    components:
+    components: ask
       #- 1000 # Mods Options: 3.9
       #- 1040 # Portrait Selectors -> Mr2150's Portrait Picker (Scaleable UI): 3.9
       #- 1042 # Mr2150's Backup M_BG.lua: 3.9
@@ -151,7 +159,7 @@
       github_user: mleduque
       repository: Jimfix
       branch: partial-fr
-
+  - name: tnt
     description: Tweaks and Tricks mod for Baldur's Gate 2
     components: ask # avoid 34 (d5 random tweaks instead)
       #- 0 # Smarter familiars: v8.19
@@ -312,14 +320,14 @@
 
   - name: fix_temple_restoration
     description: Fix for missing spell file - may be fixes by jtweaks (or item_rev?)
-    components:
+    components: ask
     location:
       github_user: subtledoctor
       repository: SubtleD_hotfixes
       tag: v20
   - name: fix_cre_script_names
     description: Some mod out there is altering various creatures' script names to "cre_strref." This hotfix changes the script name of all such creatures from "cre_strref" to their filename.
-    components:
+    components: ask
     location:
       github_user: subtledoctor
       repository: SubtleD_hotfixes
@@ -336,7 +344,7 @@
       asset: lin-A7-LightingPackEE-v3.1.zip
   - name: Sentrizeal_AA_Pack
     description: Sentrizeal's Alternate Avatar Pack
-    components:
+    components: ask
     location:
       path: /home/mick/Games/modda-cache/static/SentrizealAvatarPack.zip
 

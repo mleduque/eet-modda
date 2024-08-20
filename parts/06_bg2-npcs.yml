@@ -9,7 +9,7 @@
     location:
       path: /home/mick/Games/modda-cache/static/ImoenIsStone_v1-0.zip
   - name: Saerileth # ok but disabled
-    components:
+    components: ask
     location:
       github_user: PaulaMigrate
       repository: Saerileth
@@ -22,11 +22,11 @@
     installation:
       after: { name: imoen_forever , component: 0 }
     components: ask
-      - 0 # Imoen 4 Ever in BGII: Imoen Returns after Talking to Gaelan in Chapter 2: v9
-      - 1 # Imoen 4 Ever in BGII: Give Imoen Dialogue Content in SoA: v9
-      - 2 # Imoen 4 Ever in BGII: Yoshimo Comes to Brynnlaw: v9
-      - 20 # Imoen's chest moves with the campaign, too: v9
-      - 9  # BGII content: ~Compatibility with Alternatives and Saerileth~
+      #- 0 # Imoen 4 Ever in BGII: Imoen Returns after Talking to Gaelan in Chapter 2: v9
+      #- 1 # Imoen 4 Ever in BGII: Give Imoen Dialogue Content in SoA: v9
+      #- 2 # Imoen 4 Ever in BGII: Yoshimo Comes to Brynnlaw: v9
+      #- 20 # Imoen's chest moves with the campaign, too: v9
+      #- 9  # BGII content: ~Compatibility with Alternatives and Saerileth~
     disabled:
       because: using ImoenIsStone instead
 
@@ -111,7 +111,8 @@
           replace: 'RealSetGlobalTimer\("L3(?<c>.*)Time","GLOBAL",1\d00\)'
           with: 'RealSetGlobalTimer("L3${c}Time","GLOBAL",450)'
   - name: Yvette
-    description: "Colours of Infinity: Yvette Romance" - SoA+ToB companion, quest, romance
+    description: "Colours of Infinity: Yvette Romance"
+    overview: SoA+ToB companion, quest, romance
     components:
       - 0 # Yvette Romance - BG2 Romance Character
     location:
@@ -242,7 +243,8 @@
     location:
       path: /home/mick/Games/modda-cache/static/weaselmods/VerrBG2 v2.1.zip
   - name: Foundling
-    description: "Colours of Infinity: Foundling" - Male ShadowAdpet, NE ; quest, dialogues, no romance
+    description: "Colours of Infinity: Foundling"
+    overview: Male ShadowAdpet, NE ; quest, dialogues, no romance
     components:
       - 0   # Foundling
     location:
@@ -618,10 +620,10 @@
       replace:
         - file_globs: ['booplot/dialogue/soa_booplot.d', 'booplot/script/append_ttsime.baf', 'main/dialogue/soa_talks.d', 'main/scripts/*.baf']
           regex: true
-        - replace: 'RealSetGlobalTimer\("(?<c>[^"]*)","GLOBAL",1800\)'
+          replace: 'RealSetGlobalTimer\("(?<c>[^"]*)","GLOBAL",1800\)'
           with: 'RealSetGlobalTimer("${c}", "GLOBAL",543)'
         - file_globs: ['main/scripts/*.baf']
-        - replace: 'RealSetGlobalTimer("ttSimeDreamBanterTimer","GLOBAL",3600)'
+          replace: 'RealSetGlobalTimer("ttSimeDreamBanterTimer","GLOBAL",3600)'
           with: 'RealSetGlobalTimer("ttSimeDreamBanterTimer","GLOBAL",620)'
   - name: Kelsey
     description: soa+tob, NG male sorcerer, romance, dialogue, imoen/nalia romance, quest
@@ -681,8 +683,6 @@
       repository: Beyond_the_Law
       release: v2.0.0
       asset: beyond-the-law-v2.0.0.iemod
-      replace:
-        - file_globs: ""
   - name: TheBeaurinLegacy
     components:
       - 1000 # The Beaurin Legacy for BG2:SoA & ToB & BGII:EE
@@ -690,19 +690,19 @@
     location:
       path: /home/mick/Games/modda-cache/static/lin-TheBeaurinLegacy-v5.3.tar.gz
       replace:
-        - file_glob: ['Dialogue/SoA/QI#MIJ.d', 'Dialogue/ToB/QI#M25J.d']
+        - file_globs: ['Dialogue/SoA/QI#MIJ.d', 'Dialogue/ToB/QI#M25J.d']
           replace: 'RealSetGlobalTimer("QI#MiTimer","GLOBAL",3600)'
           with: 'RealSetGlobalTimer("QI#MiTimer","GLOBAL",830)'
-        - file_glob: ['Dialogue/ToB/QI#E25J.d', 'Scripts/ToB/QI#E25S.baf']
+        - file_globs: ['Dialogue/ToB/QI#E25J.d', 'Scripts/ToB/QI#E25S.baf']
           replace: 'RealSetGlobalTimer("QI#ElaTimer","GLOBAL",2100)'
           with: 'RealSetGlobalTimer("QI#ElaTimer","GLOBAL",600)'
-        - file_glob: ['Scripts/SoA/QI#ElaS.baf']
+        - file_globs: ['Scripts/SoA/QI#ElaS.baf']
           replace: 'RealSetGlobalTimer("QI#ElaTimer","GLOBAL",1800)'
           with: 'RealSetGlobalTimer("QI#ElaTimer","GLOBAL",500)'
-        - file_glob: ['Scripts/SoA/QI#MIS.baf']
+        - file_globs: ['Scripts/SoA/QI#MIS.baf']
           replace: 'RealSetGlobalTimer("QI#MiTimer","GLOBAL",3600)'
           with: 'RealSetGlobalTimer("QI#MiTimer","GLOBAL",480)'
-        - file_glob: ['Scripts/ToB/QI#M25S.baf']
+        - file_globs: ['Scripts/ToB/QI#M25S.baf']
           replace: 'RealSetGlobalTimer("QI#MiTimerToB","GLOBAL",3600)'
           with: 'RealSetGlobalTimer("QI#MiTimerToB","GLOBAL",510)'
   - name: DjinniCompanion
@@ -775,15 +775,15 @@
       patch:
         relative: eet/ninde.diff
       replace:
-        - file_glob: ['dialogue/*.d', 'scripts/*.baf']
+        - file_globs: ['dialogue/*.d', 'scripts/*.baf']
           regex: true
           replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",1\d\d\d\)'
           with: 'RealSetGlobalTimer("${c}","GLOBAL", 482)'
-        - file_glob: ['dialogue/*.d', 'scripts/*.baf']
+        - file_globs: ['dialogue/*.d', 'scripts/*.baf']
           regex: true
           replace: 'RealSetGlobalTimer\("(?<c>[^"]+)","GLOBAL",2\d\d\d\)'
           with: 'RealSetGlobalTimer("${c}","GLOBAL", 682)'
-        - file_glob: ['scripts/lk#ni25.baf']
+        - file_globs: ['scripts/lk#ni25.baf']
           replace: 'RealSetGlobalTimer("LK#NindeAmkethranTimer","GLOBAL",900)'
           with: 'RealSetGlobalTimer("LK#NindeAmkethranTimer","GLOBAL",300)'
   - name: xulaye
@@ -797,7 +797,7 @@
   - name: Tashia
     components: ask
     location:
-      file: /home/mick/Games/modda-cache/static/tashia_remix_v1.4.rar
+      path: /home/mick/Games/modda-cache/static/tashia_remix_v1.4.rar
       alt:
         http: http://america.iegmc.net/tashia/tashia_remix_v1.4.rar
     disabled:

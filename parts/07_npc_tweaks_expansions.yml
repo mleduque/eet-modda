@@ -7,14 +7,6 @@
     description: More content (dialogues, banters) for Ajantis in BG1
     components:
       - 0 # Installs Ajantis BG1 Expansion Modification
-    location:
-      replace:
-        - file_globs: ["lib/ajantis_bgt.tpa", "lib/ajantis_tutu.tpa", "lib/ajantis_bgee.tpa"]
-          replace: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",500)'
-          with: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",200)'
-        - file_globs: ["lib/ajantis_bgt.tpa", "lib/ajantis_tutu.tpa", "lib/ajantis_bgee.tpa"]
-          replace: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",3600)'
-          with: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",800)'
   - name: ViconiaRevamped
     components: ask
     location:

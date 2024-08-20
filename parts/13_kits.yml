@@ -169,7 +169,7 @@
       repository: Might_and_Guile
       tag: "5.8.2"
   - name: Faiths_and_Powers
-    components:
+    components: ask
       #### INI ADDED
       #- 25 # Créer un système de sphères -> Nouveau FnP(nuFnP) : un nouveau système de sphères (moins de sphères, plus équilibré globalement, plus proche du PnP): 0.83.6
       #- 31 # Installer les kits de clerc: 0.83.6

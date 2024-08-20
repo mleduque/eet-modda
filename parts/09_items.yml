@@ -90,7 +90,7 @@
     components:
       - 1 # A Mod for the Orderly - Add a Keyring to Faerun!-> Consistency Plus version
     location:
-      file: /home/mick/Games/modda-cache/static/cliffkey-v7.zip
+      path: /home/mick/Games/modda-cache/static/cliffkey-v7.zip
   - name: forgotten-armament
     description: Forgotten armaments
     components:
@@ -110,7 +110,7 @@
           with: "REPLACE_TEXTUALLY ~Set Constitution to~ ~Increment Constitution by~\nREPLACE_TEXTUALLY ~Augmente la Constitution à~ ~Augmente la Constitution de~"
     ignore_warnings: true
   - name: zgbg2evermemory
-    componennts:
+    components:
       - 0 # Evermemory for BG2EE
     location:
       github_user: mleduque
@@ -262,7 +262,7 @@
     description: Bardic Wonders
     overview: bard kits( new and tweaks), new bard items, bardic inspiration (new unkitted bard power), armored casting
     readme: https://artisans-corner.com/bardic-wonders/
-    components:
+    components: ask
       #- 5 # ~Bardic Wonders: Items
     location:
       github_user: ArtemiusI
@@ -463,7 +463,7 @@
     components:
       - 0 # Marchand Mystigan (ToB requis)
     location:
-      file: https://akadis.baldursgateworld.fr/Mystigan/zip/Mystigan1.62.zip
+      path: https://akadis.baldursgateworld.fr/Mystigan/zip/Mystigan1.62.zip
   - name: A7#ImprovedShamanicDance
     description: Improved Shamanic Dance - itrems only
     overview: "Allows the shaman to move at reduced speed while performing the dance + extends
