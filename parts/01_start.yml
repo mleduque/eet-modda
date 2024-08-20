@@ -20,7 +20,7 @@ modules:
   #####################
   - name: EET  # needs EET/bgee_dir.txt with path to bg1 /game subdirectory inside
     location:
-      github_user: mleduque
+      github_user: Gibberlings3
       repository: EET
       branch: master
       refresh: 2days

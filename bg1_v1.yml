@@ -6,13 +6,13 @@ global:
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
 modules:
   - name: DlcMerger
+    components:
+      - 1 # Merge DLC into game -> Merge "Siege of Dragonspear"
     location:
       github_user: Argent77
       repository: A7-DlcMerger
       release: v1.6
       asset: lin-A7-DlcMerger-v1.6.zip
-    components:
-      - 1 # Merge DLC into game -> Merge "Siege of Dragonspear"
   # EET can't merge EEFixpack right
   #- name: eefixpack
   #  components:
@@ -21,9 +21,15 @@ modules:
   #    repository: EE_Fixpack
   #    commit: 089f5297b4 # french branch
   - name: correctfrbg1ee
+    components:
+    - 10 # Correction de la traduction de Baldur''s Gate : Enhanced Edition: 0.9
+    - 20 # Patch audio francais: 0.9
+    - 40 # Suppression des ensembles de voix en anglais: 0.9
+    - 50 # Restauration des cinematiques classiques: 0.9
+    location:
       github_user: r-e-d
       repository: correctfrBG1EE
-      branch: master
+      branch: main
       refresh: 3days
   - name: bg1ub
     description: BG1 Unfinished Business
@@ -54,38 +60,42 @@ modules:
       - 0 # Tenya Thermidor for BG:EE
     location:
       http: https://coutelier.org.uk/Files/BGEETenya15c.rar
+      layout:
+        layout_type: single_dir_plus_tp2
+        tp2: setup-TenyaThermidor.tp2
       alt:
         - file: /home/mick/Games/modda-cache/static/BGEETenya15c.rar
   - name: drizztsaga
+    description: Drizzt Saga
+    overview: "This mod brings Drizzt and his companions into the game as joinable characters with their
+              own major quests and side quests, numerous new areas, items (some to be forged) and creatures.
+              Also, two secret joinable NPCs to discover for those of evil alignment a bit further into the story."
     components:
-      - 0 # The Drizzt Saga pour BGEE/Tutu/BGT -> Version par defaut : zones connectees par des declencheurs de voyage
-      - 3  # Debut repousse : Drizzt revient apres la Tour de Durlag
+    - 0 # The Drizzt Saga pour BGEE / Tutu / BGT -> Version par defaut : zones connectees par des declencheurs de voyage: pre-v4.00
+    - 3 # Debut repousse : Drizzt revient apres la Tour de Durlag: pre-v4.00
+    - 5 # Reduire la puissance de certains objets: pre-v4.00
+    - 6 # XP recue pour les creatures reduite au 3/4: pre-v4.00
     location:
-      github_user: ??
-      repository: DrizztSaga
-      tag: V3.03
+      github_user: Black-Wyrm-Lair
+      repository: Drizzt-Saga
+      branch: master
+      refresh: 10days
   - name: soa
     description: The Stone of Askavar
-    components: ask
+    components:
+      - 0 # The Stone of Askavar pour TotSC/Tutu/BGT/BGEE -> Version par defaut : zones reliees par des declencheurs de voyage: 2.6
     location:
       github_user: red-carnelian
       repository: The-Stone-of-Askavar
-      release: "2.4"
-      asset: tsoaV2_4.zip
-  - name: DarkHorizonsBGee
-    components:
-    location:
-      github_user: The-Gate-Project
-      repository: DarkHorizonsBGee
-      branch: master
-      refresh: 5days
+      release: "2.6"
+      asset: tsoaV2_6.zip
   - name: saradas_magic
     components:
       - 0 # Saradas magic
     location:
       github_user: The-Gate-Project
       repository: Saradas_Magic_for_BGEE
-      branch: master
+      branch: main
       refresh: 5days
   - name: Sirene
     components:
@@ -94,22 +104,17 @@ modules:
     location:
       github_user: ArtemiusI
       repository: Sirene-NPC
-      tag: v3.1
+      branch: master
+      refresh: 10days
+      replace:
+        - file_globs: ['dialogue/c0sirenj.d']
+          replace: 'RealSetGlobalTimer("C0SireneTalksBG1Timer","GLOBAL",2700)'
+          with: 'RealSetGlobalTimer("C0SireneTalksBG1Timer","GLOBAL",600)'
+        - file_globs: ['scripts/c02siren.baf']
+          replace: 'RealSetGlobalTimer("C02SireneRomanceTimer","GLOBAL",ONE_DAY)'
+          with: 'RealSetGlobalTimer("C02SireneRomanceTimer","GLOBAL",1200)'
       patch:
-        relative: patches/sirene-bg1-wait-here.diff
-  - name: Drake
-    components: ask
-    location:
-      github_user: ArtemiusI
-      repository: Drake
-      tag: v1.7a
-      patch:
-        relative: patches/something-will-probably-need-patching.diff
-  - name: verrsza
-    description: bg1+sod, evil ranger, rakshasa, quests, romance
-    components: ask
-    location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/VerrSzaBGEE v6.01.zip
+        relative: patches/eet/sirene-bg1-wait-here.diff
 
 #  - name: BGEE_AI_Denoised_Areas
 #    components:
