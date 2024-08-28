@@ -218,6 +218,16 @@
       github_user: Renegade0
       repository: msfm
       tag: "1.57"
+  - name: remastered_spell_icons
+    installation:
+      after: [msfm, spontaneous_casting, pocket_play_ui, infinity_ui]
+    components:
+    - 0 # Install Remastered Spell Icons Core Component: v1.0
+    - 1 # Use IWD:EE Colors (Green icons for summoning spells): v1.0
+    location:
+      github_user: Renegade0
+      repository: RemasteredSpellIcons
+      tag: v1.2
   - name: underrep
     description: Under-Represented Items
     overview: |

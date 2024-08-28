@@ -5,19 +5,11 @@
       general: "This mod should be installed VERY early since it (currently) overwrites several dialogue files: Baeloth's dialogues in BGEE and Sod, and the BP shop vendors' dialogues. It should be installed after EET if you are installing this in an EET game. In that case probably best to install it immediately after EET."
       after: EET
     components:
-      - 0 # BP_in_BG: add access to the Black Pits in BGEE/EET
+      - 100 # BP_in_BG: add access to the Black Pits in BGEE/EET
     location:
       github_user: UnearthedArcana
       repository: BP_in_BG
       tag: "1.0"
-
-  - name: JA#BGT_AdvPack
-    components: ask
-    location:
-      github_user: TotoR115
-      repository: JA-AdventurePack
-      branch: master
-      refresh: 4days
 
   - name: DSotSC
     description: Dark Side of the Sword Coast
@@ -38,21 +30,25 @@
   - name: ntotsc
     description: Northern Tales of the Sword Coast
     components:
-      - 0 # Northern Tales of the Sword Coast (NTotSC) for BGT-Weidu, BG:EE, and EET: 5.0.0
-      - 1 # Spawn less Monsters depending on Game Difficulty: 5.0.0
-      - 2 # Keelor the Dwarf: 5.0.0
-      - 3 # Llindellyn's Lucky Arrow: 5.0.0
-      - 5 # Pilar and Gheldehar: 5.0.0
-      - 9 # Fighting Encounters: 5.0.0
-      - 10 # Improved Lesser Fiends: 5.0.0
-      - 11 # Improved Haeball: 5.0.0
-      - 12 # Improved Ghotal: 5.0.0
-      - 15 # Spell scrolls : Revised Version (level 6 spells)
+      - 0 # Histoires du Nord de la Cote des Epees (NTotSC) pour BGT-Weidu, BG:EE et EET: 5.0.0
+      - 1 # Créer moins de monstres en fonction de la difficulté du jeu: 5.0.0
+      - 2 # Keelor le Nain: 5.0.0
+      - 3 # Fleche porte-bonheur de Llindellyn: 5.0.0
+      - 5 # Pilar et Gheldehar: 5.0.0
+      - 9 # Rencontres de combats: 5.0.0
+      - 10 # Demons mineurs ameliores: 5.0.0
+      - 11 # Haeball ameliore: 5.0.0
+      - 12 # Ghotal ameliore: 5.0.0
+      - 13 # Reduire le nombre de capes de chaman -> Supprimer les capes generiques des pretres orques: 5.0.0
+      - 15 # Parchemins de sort -> Version revisee (Sorts de niveau 6): 5.0.0
     location:
       github_user: SpellholdStudios
       repository: NTotSC
-      release: v5.0.0
-      asset: northern-tales-of-the-sword-coast-5.0.0.iemod
+      branch: master
+      refresh: 10days
+      patches:
+        - relative: patches/eet/ntotsc-fix-fr.diff
+          encoding: WIN1252
   - name: TGC1e
     description: the grey clan candelight(part 1) - BG1 mod
     components:
@@ -340,6 +336,17 @@
       repository: garrick-tt
       branch: k4thos-eet-compat
 
+
+  - name: JA#BGT_AdvPack
+    installation:
+      after: [bgqe, bg1npc, bg1re, garrick-tt, bg1ub]
+    components: ask
+    location:
+      github_user: TotoR115
+      repository: JA-AdventurePack
+      branch: master
+      refresh: 4days
+
   - name: ExtraExpandedEnhancedEncounters
     components:
       - 0 # EEEE: Melia Quicknight, Crossroads: 3.1
@@ -363,11 +370,11 @@
       repository: gorgon
       release: v4.5
       asset: gorgon-v4.5.iemod
-  - name: Blackhearts EET
+  - name: Blackhearts
     components: ask
     location:
       github_user: 11jo # forked because needs-patch #  https://forums.beamdog.com/discussion/comment/1200875/#Comment_1200875
-      repository: Black-Hearts-EET
+      repository: Black-Hearts
       branch: main
   - name: bst
     components:

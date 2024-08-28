@@ -23,7 +23,7 @@ modules:
       github_user: Gibberlings3
       repository: EET
       branch: master
-      refresh: 2days
+      refresh: 10days
       layout:
           layout_type: multi_dir
           dirs:
@@ -40,32 +40,48 @@ modules:
   #####################
   #### Full UI overwrite
   #####################
-  - name: LeUI
-    components: ask
+  - name: LeUI-SoD
+    components:
+      - 0 # lefreut''s Enhanced UI (SoD skin) - Core component: 4.8
     location:
       github_user: r-e-d
       repository: LeUI-SoD
-      release: v4.8
-      asset:  lefreuts-enhanced-ui-sod-skin-4.8.iemod
-  - name: remastered_spell_icons
-    components: ask
-    location:
-      github_user: Renegade0
-      repository: RemasteredSpellIcons
-      tag: v1.2
+      branch: master
+      refresh: 10days
   - name: EEUITweaks
-    components: ask
+    components:
+    - 1000 #  Mods Options: 4.0.6
+    - 1010 #  Hidden Game Options: 4.0.6
+    - 1040 #  Portrait Selectors -> Mr2150''s Portrait Picker (Scaleable UI): 4.0.6
+    - 1042 #  Mr2150''s Backup M_BG.lua: 4.0.6
+    - 1044 # Mr2150''s Update Portraits: 4.0.6
+    - 1050 # Adul''s Unhide Chargen Options: 4.0.6
+    - 1070 # Faydark''s Abilities Auto-Roller/GrimLefourbe''s BG2 UI: 4.0.6
+    - 1100 # Display max proficiency limits: 4.0.6
+    - 2000 # Transparent Sidebars: 4.0.6
+    - 2010 # Feedback Message Box Re-sizers -> Feedback Message Box Buttons Hack: 4.0.6
+    - 2030 # Adul''s Better Quick Loot: 4.0.6
+    - 2070 # Dee''s Permanent Thieving Button: 4.0.6
+    - 2130 # Clickable dialog box: 4.0.6
+    - 4040 # Spell Books -> Kilivitz''s Classic Spellbooks: 4.0.6
+    - 5020 # lefreut''s Box 5 (Dialog Box) Override: 4.0.6
     location:
       github_user: r-e-d
       repository: EEUITweaks
-      release: v4.0.2
-      asset: eeuitweaks-4.0.2.iemod
+      release: v4.0.6
+      asset: eeuitweaks-4.0.6.iemod
+  - name: EEUITweaks
+    components: # because some components are ordered
+      - 2050 # Simple Centered Dialog: 4.0.6
+      - 3000 # Leveling Progress Bars Tweaks: 4.0.6
+      - 3010 # Leveling Progress Bars Options: 4.0.6
 
   #####################
   #### Resource overwrite
   #####################
-  - name: bggoEET
-    components: ask
+  - name: bggo
+    components:
+      - 0 # BGGO for EET, BGT, BGEE, BG2EE, ToB and Tutu: v3.1
     location:
       github_user: SpellholdStudios
       repository: BGGOEET

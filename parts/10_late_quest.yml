@@ -95,7 +95,7 @@
             APPEND ~projectl.ids~ ~%prot%~
             APPEND ~missile.ids~  ~%misl%~
           with: '' # just delete
-  - name: Icewind_EET
+  - name: IWD_EET_End
     installation:
       general: as late as possible in your installation, especially after mods that add NPCs, otherwise there may be problems with quests, dialogs, etc.
       before: EET_end
@@ -103,7 +103,7 @@
       - 0 # IceWind_End
     location:
       github_user: The-Gate-Project
-      repository: Icewind_EET
+      repository: IWD_EET_End
       branch: master
       refresh: 5days
   - name: A7-TotLM-BG2EE
