@@ -61,11 +61,12 @@
       layout:
         layout_type: single_dir_plus_tp2
         tp2: Setup-TGC1E.tp2
-  - name: DarkHorizonsBGee
-    components: ask
+  - name: DarkHorizons
+    components:
+      - 0 # Mod "Dark Horizons": 3.01
     location:
       github_user: The-Gate-Project
-      repository: DarkHorizonsBGee
+      repository: DarkHorizons
       branch: main
       refresh: 5days
 
@@ -109,7 +110,7 @@
       - 1 # Get the Hells Out( Mettre l'enfer a la porte ) - Option de quete et contenu etendu pour BGII: Alpha_220123
       - 2 # Le coffre du PC et d'Imoen dans le Palais devraient garder leur contenu.: Alpha_220123
     location:
-      github_user: Gitjas
+      github_user: Gibberlings3
       repository: Another_Fine_Hell
       release: vAlpha_230919
       asset: another-fine-hell-for-sod-alpha_230919.iemod
@@ -130,23 +131,9 @@
       release: v7.0
       asset: the-boareskyr-bridge-scene-v7.iemod
   - name: c#sodtweaks
-    components: ask
-      ##- 1  # Ending Independent on PC Replies
-      ## - 2 # Ne manquez pas de dialogues entre NPC-PC -> For NPCs in Party Only
-      #- 3 # Ne manquez pas de dialogues entre NPC-PC -> Toujours activer tous les dialogues entre PNJ-PC: v8.1
-      ## - 4 # Skip Korlasz's Dungeon
-      #- 5 # Plus de choix de dialogue et eviter les situations sans issue: v8.1
-      ##- 6  # Use Imoen's SoD Portrait for BGII in EET & BGT
-      ## - 7 # restore scripted abductino scene fight - This component is only compatible with SoD, as EET already restores this scene by default.
-      ##- 8  # Adjust PC's Starting XP at Beginning of SoD, by subtledoctor -> Set Starting XP to 65,000
-      ##- 9  # Adjust PC's Starting XP at Beginning of SoD, by subtledoctor -> Set Starting XP to 90,000
-      ##- 10  # Adjust PC's Starting XP at Beginning of SoD, by subtledoctor -> Set Starting XP to 125,000
-      #- 11 # Ajuster l'experience de depart du PC au debut de SoD, par Subtledoctor -> Regler l'experience de depart a 161,000: v8.1
-      #- 20 # Fermer le portail depuis le Chateau Paldragon (Aun Argent survit toujours).: v8.1
-      #- 21 # Hephernaan prend la cle de la crypte du Chateau Paldragon.: v8.1
-      #        ##   it's either one of the soD Tweakpack new/revised SoD endings OR Another fine Hell. - jastey
-      #        ##   https://www.gibberlings3.net/forums/topic/36469-eet-end-error/?do=findComment&comment=321536
-      ##- 12, 13, 14, 15 # SoD Ending: jastey's Tweaks -> Revised Full Version # overwrittern by afh if installed
+    components:
+      - 2 # Ne manquez pas de dialogues entre NPC-PC -> Pour les PNJ du groupe uniquement: v12.1
+      - 5 # Plus de choix de dialogue et eviter les situations sans issue: v12.1
     location:
       github_user: Gibberlings3
       repository: Jasteys_SoD_Tweakpack
@@ -168,7 +155,7 @@
     location:
       github_user: Gibberlings3
       repository: Imoen4Ever
-      release: v11.4
+      release: v11-4
       asset: imoen-4-ever-v11.4.iemod
   - name: themed_tweaks
     components:
@@ -182,7 +169,7 @@
     location:
       github_user: lzenner
       repository: themed_tweaks
-      release: v.0.4
+      release: v0.4
       asset:  themed-tweaks-v0.4.iemod
 
   - name: bgqe
@@ -209,7 +196,7 @@
       github_user: Gibberlings3
       repository: BG_Quests_And_Encounters
       release: v27
-      asset: baldurs-gate-mini-quests-and-encounters-modification-v27.iemod
+      asset: baldurs-gate-mini-quests-and-encounters-modification-27.iemod
   - name: bg1re
     description: Baldur's Gate Romantic Encounters
     comment: did a "install all" this time
@@ -267,16 +254,16 @@
   - name: AC_QUEST
     description: Ascalon's Questpack
     components:
-      - 0 # Un travail bien paye: 4.2
-      - 1 # Un festin pour les gnolls: 4.2
-      - 2 # A la recherche de Ricochet: 4.2
-      - 3 # A la recherche de Perwell: 4.2
-      - 4 # Des loups et des hommes -> Quete qui utilise une hutte pres de Thalantyr a Haute Haie.: 4.2
-      - 6 # Le grand Carlini: 4.2
-      - 7 # Elevage de grouilleux: 4.2
-      - 8 # Les groupies: 4.2
-      - 9 # Les Serpents d'Abbathor: 4.2
-      - 10 # Un petit-homme parmi les sans-yeux: 4.2
+      - 0 # Un travail bien paye: 5.2
+      - 1 # Un festin pour les gnolls: 5.2
+      - 3 # A la recherche de Ricochet -> Alternative pour la compatibilite : Ugh et Ricochet se trouvent a l'exterieur de la grotte.: 5.2
+      - 4 # A la recherche de Perwell: 5.2
+      - 6 # Des loups et des hommes -> La quete utilise une maison a Beregost.: 5.2
+      - 7 # Le magnifique Karlini: 5.2
+      - 8 # Elevage de grouilleux: 5.2
+      - 9 # Les groupies: 5.2
+      - 11 # Les Serpents d'Abbathor -> Version amelioree : la quete peut etre achevee dans BG1.: 5.2
+      - 12 # Un petit-homme parmi les sans-yeux: 5.2
     location:
       github_user: Gitjas
       repository: Ascalons_Questpack
