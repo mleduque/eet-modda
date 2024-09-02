@@ -9,8 +9,8 @@
  	!See([ENEMY])
  	Global("ACBREPartyBG1","GLOBAL",0)
  THEN
---- a/ACBre/d/bg1/ACBREP.d
-+++ b/ACBre/d/bg1/ACBREP.d
+--- ACBre/d/bg1/ACBREP.d
++++ ACBre/d/bg1/ACBREP.d
 @@ -9,6 +9,7 @@ IF ~%BG1_BEFORE_TRANSITION% Global("ACSTORY","GLOBAL",0)Global("ACBREINPARTY","G
  SAY @1
  ++ @2 + KICKOUT.1a

@@ -159,8 +159,8 @@
  
 diff --git a/Yvette/SCRIPTS/YxYve.baf b/Yvette/SCRIPTS/YxYve.baf
 index 104edb6..70de05d 100644
---- a/Yvette/SCRIPTS/YxYve.baf
-+++ b/Yvette/SCRIPTS/YxYve.baf
+--- Yvette/SCRIPTS/YxYve.baf
++++ Yvette/SCRIPTS/YxYve.baf
 @@ -345,26 +345,6 @@ SetGlobal("YvetteRomanceActive","GLOBAL",3)
  END
  
@@ -201,8 +201,8 @@ index 104edb6..70de05d 100644
  EXTEND_TOP ~AR1514.bcs~ ~Yvette/Scripts/AR1514.baf~
 diff --git a/Yvette/Translations/english/YXYVE.TRA b/Yvette/Translations/english/YXYVE.TRA
 index 0eb6039..e64eeac 100644
---- a/Yvette/Translations/english/YXYVE.TRA
-+++ b/Yvette/Translations/english/YXYVE.TRA
+--- Yvette/Translations/english/YXYVE.TRA
++++ Yvette/Translations/english/YXYVE.TRA
 @@ -36,3 +36,10 @@
  @35   = ~That was a mistake. Of course you should stay with us!~
  @36   = ~Sorry, but I'll try wandering on my own. Fare thee well, my lord.~

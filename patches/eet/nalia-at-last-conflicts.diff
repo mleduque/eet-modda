@@ -1,7 +1,7 @@
 diff --git a/Nalia_at_Last/Dialogue/FATESP.d b/Nalia_at_Last/Dialogue/FATESP.d
 index 7c91b56..fa62fac 100644
---- a/Nalia_at_Last/Dialogue/FATESP.d
-+++ b/Nalia_at_Last/Dialogue/FATESP.d
+--- Nalia_at_Last/Dialogue/FATESP.d
++++ Nalia_at_Last/Dialogue/FATESP.d
 @@ -1,13 +1,13 @@
  EXTEND_TOP FATESP 6
  IF ~%New_ToB_Game%
@@ -20,8 +20,8 @@ index 7c91b56..fa62fac 100644
  SetGlobal("PGNaliaRomanceActive","GLOBAL",2)
 diff --git a/Nalia_at_Last/Scripts/X3Nal25.baf b/Nalia_at_Last/Scripts/X3Nal25.baf
 index 5fad9b7..bb3363a 100644
---- a/Nalia_at_Last/Scripts/X3Nal25.baf
-+++ b/Nalia_at_Last/Scripts/X3Nal25.baf
+--- Nalia_at_Last/Scripts/X3Nal25.baf
++++ Nalia_at_Last/Scripts/X3Nal25.baf
 @@ -14,17 +14,6 @@ IF
  InParty(Myself)
  GlobalLT("NaliaRomanceActive","GLOBAL",2)

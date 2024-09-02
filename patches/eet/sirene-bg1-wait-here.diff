@@ -1,5 +1,5 @@
---- Sirene-NPC/dialogue/c0sirenp.d
-+++ Sirene-NPC/dialogue/c0sirenp.d
+--- Sirene/dialogue/c0sirenp.d
++++ Sirene/dialogue/c0sirenp.d
 @@ -3,6 +3,7 @@ BEGIN C0SIRENP
  IF ~Global("C0SireneJoined","LOCALS",1)~ p1
   SAY ~Do you truly wish me to leave, <CHARNAME>?~

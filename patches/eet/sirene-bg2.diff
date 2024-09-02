@@ -1,7 +1,7 @@
 diff --git a/Sirene_BG2/dialogue/c0sire2j.d b/Sirene_BG2/dialogue/c0sire2j.d
 index 6498a6e..37e9977 100644
---- a/Sirene_BG2/dialogue/c0sire2j.d
-+++ b/Sirene_BG2/dialogue/c0sire2j.d
+--- Sirene_BG2/dialogue/c0sire2j.d
++++ Sirene_BG2/dialogue/c0sire2j.d
 @@ -1278,7 +1278,7 @@ I_C_T UDSVIR03 23 C0SireneUDSVIR0323
  END
  
@@ -108,8 +108,8 @@ index 6498a6e..37e9977 100644
 +END // END for APPEND
 diff --git a/Sirene_BG2/scripts/c0sire2.baf b/Sirene_BG2/scripts/c0sire2.baf
 index 655f5d1..0619787 100644
---- a/Sirene_BG2/scripts/c0sire2.baf
-+++ b/Sirene_BG2/scripts/c0sire2.baf
+--- Sirene_BG2/scripts/c0sire2.baf
++++ Sirene_BG2/scripts/c0sire2.baf
 @@ -1334,103 +1334,4 @@ THEN
  END
  

@@ -1,7 +1,7 @@
 diff --git a/stratagems/stratagems.ini b/stratagems/stratagems.ini
 index dd374462..1f7a6bb6 100644
---- a/stratagems/stratagems.ini
-+++ b/stratagems/stratagems.ini
+--- stratagems/stratagems.ini
++++ stratagems/stratagems.ini
 @@ -86,10 +86,10 @@ auras_are_party_friendly=1
  
  no_item_nerf_balduran_shield=1

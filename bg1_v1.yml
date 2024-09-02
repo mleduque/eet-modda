@@ -4,6 +4,7 @@ global:
   #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
   lang_dir: "fr_FR"
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+  local_patches: patches
 modules:
   - name: DlcMerger
     components:
@@ -114,8 +115,27 @@ modules:
           replace: 'RealSetGlobalTimer("C02SireneRomanceTimer","GLOBAL",ONE_DAY)'
           with: 'RealSetGlobalTimer("C02SireneRomanceTimer","GLOBAL",1200)'
       patch:
-        relative: patches/eet/sirene-bg1-wait-here.diff
+        relative: eet/sirene-bg1-wait-here.diff
 
+  - name: EET_Tweaks
+    description: "Baldur's Gate: Enhanced Edition Trilogy Tweaks (EET Tweaks)"
+    overview: optional tweaks for Infinity Engine games
+    installation:
+      general: after any mods which add or alter CRE, BCS, DLG, ITM, SPL, EFF files
+    components:
+      - 2051 # Decrease to 50% -> Decrease to 75%
+      - 2052 # Decrease to 50% -> Decrease to 50%
+      - 2053 # Decrease to 50% -> Decrease to 25%
+      - 2061 # XP for quests -> Decrease to 75%
+      - 2062 # XP for quests -> Decrease to 50%
+      - 2063 # XP for quests -> Decrease to 25%
+    location:
+      github_user: mleduque
+      repository: EET_Tweaks
+      branch: fr
+      patches:
+        - relative: eet/eet_tweaks-xpbonus.diff
+          comment: continue distributing XP (plateau)
 #  - name: BGEE_AI_Denoised_Areas
 #    components:
 #      - 0

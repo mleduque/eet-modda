@@ -454,6 +454,13 @@
       repository: ShukBGEE
       branch: master
       refresh: 1day
+  - name: k4morgul
+    description: Morg NPC for BG1:EE
+    overview: Dwarven (Duergar) Fighter/Necromancer, dungeon, items, no dialog/banter ; first Cloakwood area, abandoned well on the eastern edge of the map
+    components: ask
+    github_user: toopok4k3
+    repository: Morg_BG1
+    tag: v1.0
 
   - name: sodrtd
     description: Road To Discovery

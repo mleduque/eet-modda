@@ -1,7 +1,7 @@
 diff --git a/Will_to_Power/components/200_thief_psion.tpa b/Will_to_Power/components/200_thief_psion.tpa
 index fb93cf8..3b4bbc7 100755
---- a/Will_to_Power/components/200_thief_psion.tpa
-+++ b/Will_to_Power/components/200_thief_psion.tpa
+--- Will_to_Power/components/200_thief_psion.tpa
++++ Will_to_Power/components/200_thief_psion.tpa
 @@ -51,7 +51,7 @@ ADD_KIT ~D5_PSION~
  
  //ALIGNMENT RESTRICTIONS______________________________________________________________
@@ -44,8 +44,8 @@ index fb93cf8..3b4bbc7 100755
  END
 diff --git a/Will_to_Power/components/300_fighter_psion.tpa b/Will_to_Power/components/300_fighter_psion.tpa
 index 0cb0858..ea188eb 100755
---- a/Will_to_Power/components/300_fighter_psion.tpa
-+++ b/Will_to_Power/components/300_fighter_psion.tpa
+--- Will_to_Power/components/300_fighter_psion.tpa
++++ Will_to_Power/components/300_fighter_psion.tpa
 @@ -47,7 +47,7 @@ ADD_KIT ~D5_SOULBLADE~
  
  //ALIGNMENT RESTRICTIONS______________________________________________________________
@@ -66,8 +66,8 @@ index 0cb0858..ea188eb 100755
  //                    FT CL MA TH DR RA
 diff --git a/Will_to_Power/components/400_ranger_psion.tpa b/Will_to_Power/components/400_ranger_psion.tpa
 index bbbde22..3c5b2f2 100755
---- a/Will_to_Power/components/400_ranger_psion.tpa
-+++ b/Will_to_Power/components/400_ranger_psion.tpa
+--- Will_to_Power/components/400_ranger_psion.tpa
++++ Will_to_Power/components/400_ranger_psion.tpa
 @@ -48,7 +48,7 @@ ADD_KIT ~D5_PSYPHER~
  
  //ALIGNMENT RESTRICTIONS______________________________________________________________
@@ -88,8 +88,8 @@ index bbbde22..3c5b2f2 100755
  //                  FT CL MA TH DR RA
 diff --git a/Will_to_Power/components/500_mage_psion.tpa b/Will_to_Power/components/500_mage_psion.tpa
 index d395bfb..4471a5d 100755
---- a/Will_to_Power/components/500_mage_psion.tpa
-+++ b/Will_to_Power/components/500_mage_psion.tpa
+--- Will_to_Power/components/500_mage_psion.tpa
++++ Will_to_Power/components/500_mage_psion.tpa
 @@ -48,7 +48,7 @@ ADD_KIT ~D5_CEREBRO~
  
  //ALIGNMENT RESTRICTIONS______________________________________________________________
@@ -110,8 +110,8 @@ index d395bfb..4471a5d 100755
  //                  FT CL MA TH DR RA
 diff --git a/Will_to_Power/language/french/setup.tra b/Will_to_Power/language/french/setup.tra
 index b39bddc..7bbc44d 100755
---- a/Will_to_Power/language/french/setup.tra
-+++ b/Will_to_Power/language/french/setup.tra
+--- Will_to_Power/language/french/setup.tra
++++ Will_to_Power/language/french/setup.tra
 @@ -56,9 +56,8 @@ CAPACITÉS :
  - Les psionistes commencent avec 25 points de force psionique (PFP). Ils gagnent 5 PFP supplémentaires chaque niveau jusqu'au niveau 20.
  

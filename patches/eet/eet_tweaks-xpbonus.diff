@@ -1,6 +1,8 @@
+diff --git a/EET_Tweaks/EET_Tweaks.tp2 b/EET_Tweaks/EET_Tweaks.tp2
+index 254f241..3da3409 100644
 --- EET_Tweaks/EET_Tweaks.tp2
 +++ EET_Tweaks/EET_Tweaks.tp2
-@@ -932,9 +932,9 @@ FORBID_COMPONENT ~xpmod/setup-xpmod.tp2~ 12 @990002 /*Similar tweak already inst
+@@ -948,9 +948,9 @@ FORBID_COMPONENT ~xpmod/setup-xpmod.tp2~ 12 @990002 /*Similar tweak already inst
  FORBID_COMPONENT ~xpmod/setup-xpmod.tp2~ 13 @990002 /*Similar tweak already installed*/
  FORBID_COMPONENT ~xpmod/setup-xpmod.tp2~ 14 @990002 /*Similar tweak already installed*/
  

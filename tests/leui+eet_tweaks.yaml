@@ -1,0 +1,52 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+  local_patches: ..
+modules:
+  - name: correctfrbg2ee
+    components:
+      - 10 # Correction de la traduction de Baldur's Gate II : Enhanced Edition: 0.7
+      - 20 # Correction de la description des objets: 0.7
+      - 30 # Patch audio et video francais: 0.7
+    location:
+      github_user: r-e-d
+      repository: correctfrBG2EE
+      branch: master
+      refresh: 4days
+  - name: EET  # needs EET/bgee_dir.txt with path to bg1 /game subdirectory inside
+    location:
+      github_user: Gibberlings3
+      repository: EET
+      branch: master
+      refresh: 10days
+      layout:
+          layout_type: multi_dir
+          dirs:
+            - EET
+            - EET_end
+      patches:
+        - relative: patches/eet/eet-import-items.diff
+    components:
+      - 0 # EET core (importation de ressource)
+    add_conf:
+      file_name: bgee_dir.txt
+      content: ../../bg1/game
+  - name: LeUI-SoD
+    components:
+      - 0 # lefreut''s Enhanced UI (SoD skin) - Core component: 4.8
+    location:
+      github_user: r-e-d
+      repository: LeUI-SoD
+      release: v4.8
+      asset:  lefreuts-enhanced-ui-sod-skin-4.8.iemod
+  - name: EEUITweaks
+    components:
+      - 1070 # Faydark's autoroller
+    location:
+      github_user: r-e-d
+      repository: EEUITweaks
+      release: v4.0.6
+      asset: eeuitweaks-4.0.6.iemod
