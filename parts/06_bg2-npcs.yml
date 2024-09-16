@@ -950,8 +950,8 @@
     location:
       github_user: SpellholdStudios
       repository: BG1_NPCs_for_SoA_-_ToB
-      reklease: v14.3
-      asset: bg1-npc-in-soatob-14.3.iemod
+      reklease: v15.1
+      asset: bg1-npc-in-soatob-15.1.iemod
 
   - name: w_packmule
     components:
