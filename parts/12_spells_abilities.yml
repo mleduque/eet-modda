@@ -49,13 +49,13 @@
     location:
       github_user: subtledoctor
       repository: SubtleD_Spell_Tweaks
-      tag: "2.8.3"
+      tag: "2.8.5-fr"
 
   - name : Weasels!
     components:
       - 0
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/common/Weasels! v3.4.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/common/Weasels! v3.4.zip
   - name: Isaac's_Missile_Storm
     components: ask
     location:

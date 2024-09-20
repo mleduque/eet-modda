@@ -6,7 +6,7 @@
     location:
       github_user: subtledoctor
       repository: Combat_Skill_Proficiencies
-      tag: "1.4.5"
+      tag: "1.4.6"
       patches:
         # Allow a little more profs for wiz/sorc
         # 1. edit profs.2da to have 1 prof/8 levels
@@ -20,7 +20,7 @@
     location:
       github_user: subtledoctor
       repository: SubtleD_Stat_Overhauls
-      branch: "1.5.5"
+      branch: "1.6.2"
       patches:
         - relative: patches/eet/subtled-stat-overhaul-config.diff
   - name: Magic_Battles_Revised
@@ -283,7 +283,7 @@
     location:
       github_user: subtledoctor
       repository: NPC_EE
-      commit: "6.5.1"
+      commit: "6.5.2"
   - name: DUAL_TO_KIT
     description: "Kjeron's 'Dual to Kit'"
     installation:
@@ -348,7 +348,7 @@
     location:
       path: /home/mick/Games/modda-cache/static/SentrizealAvatarPack.zip
 
-  - name: PPE # ok
+  - name: PPE
     description: Portraits, Portraits Everywhere
     installation:
       general: very late, so mod-added npcs have portraits
