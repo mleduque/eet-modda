@@ -567,8 +567,8 @@
     location:
       github_user: The-Gate-Project
       repository: VampireTales
-      release: v107
-      asset: vampire-tales-v107.iemod
+      release: v108
+      asset: vampire-tales-v108.iemod
 
   - name: RoT
     description: Region of Terror - BG2 mod, large quest mod focussed on Drizzt Do'Urden. 35 quests, 160 areas
