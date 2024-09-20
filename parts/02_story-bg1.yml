@@ -383,13 +383,13 @@
     components:
       - 0
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/SotSC v8.7.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/SotSC v8.8.zip
       patches:
         - relative: patches/eet/sotsc-faster-hideout.diff
   - name: TheVanishingOfSkieSilvershield
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/TheVanishingOfSkieSilvershield v2.4.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/TheVanishingOfSkieSilvershield v2.4.zip
   - name: BG1Aerie
     components:
       - 0 # Aerie for BG:EE

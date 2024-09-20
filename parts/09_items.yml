@@ -78,7 +78,7 @@
     components:
       - 0 # Of Heirlooms and Classes - new artifacts forgeable by Cromwell: v2.1
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/OfHeirloomsAndClasses v2.1.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/bg/OfHeirloomsAndClasses v2.1.zip
   - name: Silver_Staff_of_Aule
     components:
       - 101 # Baton argent d'Aule

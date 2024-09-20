@@ -70,8 +70,6 @@
           regex: true
           replace: 'RealSetGlobalTimer\("X3(?<c>.*)Timer","GLOBAL",3\d00\))'
           with: 'RealSetGlobalTimer("X3${c}Timer","GLOBAL",960)'
-
-  # Lava NPCs
   - name: nephele
     description: SoA companion, halfling cleric of Yondalla, dialogues, no quest
     components:
@@ -87,13 +85,15 @@
           regex: true
           replace: 'RealSetGlobalTimer\("LK#Neph(?<c>.*)TalksTimer","GLOBAL",5400\)'
           with: 'RealSetGlobalTimer("LK#Neph${c}TalksTimer","GLOBAL",900)'
+
+  # Lava NPCs
   - name: Petsy
     description: SoA+ToB(limited) companion, halfling bard, romance
     installation:
       general: must be after nephele for crossmod component
     components: [0, 1]
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Petsy v4.2.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/Petsy v4.2.zip
       patch:
         relative: patches/eet/petsy-romance.diff
       replace:
@@ -116,7 +116,7 @@
     components:
       - 0 # Yvette Romance - BG2 Romance Character
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Yvette Romance v5.1.0.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/colours_of_infinity/Yvette Romance v5.1.0.zip
       patch:
         relative: patches/eet/yvette-romance.diff
       replace:
@@ -136,7 +136,7 @@
     components:
       - 0 # Walahnan NPC for BG2EE: 0.92
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/WalahnanBG2 v1.00.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/WalahnanBG2 v1.00.zip
       replace:
         - file_globs: ["dialogue/L#2WH.d"]
           replace: 'SetGlobalTimer("L#2WHTimeToDie","GLOBAL",FIFTEEN_DAYS)'
@@ -151,7 +151,7 @@
     components:
       - 0 # Wilson Chronicles - expansion for our favorite bear companion: 1.9
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Wilson Chronicles v2.4.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/WilsonChronicles v2.4.zip
       replace:
         - file_globs: ["baf/wilson_append.baf"]
           replace: 'RealSetGlobalTimer("L#WilsonFriendTime","GLOBAL",1200)'
@@ -174,7 +174,7 @@
       - 0 # Fhaugy - Baldur's Gate 2: EE NPC
       - 1 # Fhaugy: Player-Initiated Dialogues (PIDs)
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Fhaugy v1.03.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/Fhaugy v1.03.zip
       replace:
         - file_globs: ["scripts/L#FHA.baf", "scripts/L#FHA25.baf"]
           regex: true
@@ -200,7 +200,7 @@
       - 4 # Skie: The Cost of One Girl's Soul - Add Player-Initiated Dialogue (PID) for Eddard: 4.01
       - 5 # Skie: The Cost of One Girl's Soul - Add brand new SoD-oriented items to BG2: 4.01
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/SkieCost v6.2.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/SkieCost v6.2.zip
       replace:
         - file_globs: ["dialogues/pid-*.d"]
           replace: 'RealSetGlobalTimer("L#SDSkiesNewSeriesTime","GLOBAL",3800)'
@@ -226,29 +226,29 @@
       - 0 # Faldorn NPC for BG2EE
       - 1 # Faldorn NPC for BG2EE: Player-Initiated Dialogues (PIDs)
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/FaldornBG2 v1.3.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/FaldornBG2 v1.3.zip
   - name: Lhannd
     description: male CG fallen ranger, quest, friendship, romance
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Lhannd v1.5.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/Lhannd v1.5.zip
   - name: fyalvara
     description: female human warrioress (rashemen), friendship, quest
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/fyalvara v1.1.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/fyalvara v1.1.zip
   - name: verrBG2
     description: soa, same as above, romance
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/VerrBG2 v2.1.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/VerrBG2 v2.1.zip
   - name: Foundling
     description: "Colours of Infinity: Foundling"
     overview: Male ShadowAdpet, NE ; quest, dialogues, no romance
     components:
       - 0   # Foundling
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Foundling v5.4.zip # selectskit
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/colours_of_infinity/Foundling v5.4.zip
       patch:
         relative: patches/foundling-class.diff
   - name: willowisp
@@ -262,7 +262,7 @@
       # 4 : crossmod banter later after installing other mods
       - 5 # [CHEAT] Enable shaman stronghold for all classes
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/willowisp v3.0.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/willowisp v3.0.zip
       replace:
         - file_globs: [ "willowisp/baf/l0will.baf" ]
           replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",2400)'
@@ -283,7 +283,7 @@
     description: BG2 npc - dwarven fighter/mage/thief, quest
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Dvaradime v1.4.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/Dvaradime v1.5.zip
 
   # ArtemiusI NPCs
   - name: paina

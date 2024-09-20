@@ -74,39 +74,39 @@ modules:
     components: # single component
       - 0 # La redecouverte de Kuldahar (IWDEE) -> Oui, mais sans corriger les sauvegarde existantes
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Kuldahar v2.4.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Kuldahar v2.4.zip
   - name: Snowytoes
     components: # single component
       - 0 # Snowytoes Hamlet, a new area (IWD EE) -> Yes, but don't patch existing save games
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Snowytoes v1.4.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Snowytoes v1.4.zip
   - name: BlinkingDead
     components: # single component
       - 0 # Night of the Blinking Dead (IWD) -> Yes, but don't patch existing save games
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/BlinkingDead v3.01.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/BlinkingDead v3.01.zip
   - name: OurLady
     description: Tale of Our Lady Dreamless
     components: # single component
       - 0 # Tale of Our Lady Dreamless (IWD EE) -> Yes, but don't patch existing save games
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Tale of Our Lady Dreamless v2.6.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Tale of Our Lady Dreamless v2.6.zip
   - name: InnBB
     description: Below & Below Inn
     components: # single component
       - 0 # Below & Below Inn (IWD EE) -> Yes, but don't patch existing save games
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/InnBB v2.3.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/InnBB v2.3.zip
   - name: Skineater
     components: # single component
       - 0 # Terror of the Skineater (IWD EE) -> Yes, but don't patch existing save games
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Skineater v2.3.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Skineater v2.3.zip
   - name: GroveOfChaos
     components:
       - 0 # Xikasz's Grove Of Chaos - a quest & companion mod for IWD:EE -> Yes, but don't patch existing save games.: v1.0
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/GroveOfChaos v1.4.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/GroveOfChaos v1.4.zip
 
 
 ##############
@@ -138,7 +138,7 @@ modules:
     components:
       - 0 # Dendjelion NPC for IWD:EE
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/dendjelion v2.0.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/dendjelion v2.0.zip
       replace:
         - file_globs: [ 'dendjelion/scripts/L#dendj.baf' ]
           replace: 'RealSetGlobalTimer("L#DendjelionTime","GLOBAL",2700)'
@@ -151,7 +151,7 @@ modules:
     components:
       - 0 # Dusky NPC for IWD:EE
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Dusky v2.4.1.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Dusky v2.4.1.zip
       replace:
         - file_globs: [ 'Dusky/baf/L#DUSKY.baf' ]
           replace: 'RealSetGlobalTimer("DuskyDontTalkOften","GLOBAL",1200)'
@@ -167,7 +167,7 @@ modules:
     components:
       - 0 # Hommet Shaw for IWD EE
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Hommet v1.1.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Hommet v1.1.zip
       replace:
         - file_globs: [ 'Hommet/scripts/L#HOMM.baf' ]
           replace: 'RealSetGlobalTimer("L#HommetFriendshipTime","GLOBAL",1800)'
@@ -180,47 +180,47 @@ modules:
     components:
       - 0 # Ina NPC for IWD:EE: 2.1
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Ina v2.2.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Ina v2.2.zip
   - name: Lanna
     description: elven paladin, quest, talks, romance
     components:
       - 0 # L'anna - a new IWD EE companion: v1.6
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Lanna v1.8.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Lanna v1.8.zip
   - name: OakMaw
     description: dark fey hunter
     components:
       - 0 # Oak-Maw NPC for IWD:EE: 3.1
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/OakMaw v3.2.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/OakMaw v3.2.zip
   - name: Orra
     description: fighter/mage/cleric.woman + friendship
     components:
       - 0 # Orra NPC for IWD:EE: v2.1
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Orra v2.5.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Orra v2.5.zip
   - name: Tipps
     description: halfling geomantic sorcerer + talks + romance + items
     components:
       - 0 # Tipps NPC for IWD:EE
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Tipps v2.2.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Tipps v2.2.zip
   - name: Tviy
     description: chaotic evil gnome cleric, follows Urdlen
     components:
       - 0 # T'viy NPC for IWD:EE: v2.3
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Tviy v2.3.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Tviy v2.3.zip
   - name: Urchin
     description: urchin(creature) + area=night glade
     components:
       - 0 # Urchin NPC for IWD:EE: 2.3
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Urchin v2.5.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Urchin v2.5.zip
   - name: bethany
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/Bethany v1.01.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Bethany v1.01.zip
   - name: DjinniCompanion
     components:
       - 2 # Afaaq, le compagnon Djinn (version IWD:EE): v2.9
@@ -237,7 +237,7 @@ modules:
       - 2 # Crossmod Content: talks between LavaDelVortel's Dusky and Turald
       - 3 # Player-initiated talks
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/TuraldNPC.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/TuraldNPC.zip
   - name: KarihiNPC
     description: genasi pyromancer + friendship + romance + encounter + spells + crossmod banters support
     components:
@@ -304,7 +304,7 @@ modules:
     components:
       - 0
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Weasels! v3.4.zip
+      path: modda-cache/ie-mods-archive/weaselmods/common/Weasels! v3.4.zip
   - name: A7-GolemConstruction
     components:
       - 0 # Capacite de Fabrication de Golem pour lanceurs de sorts: 6.3
@@ -411,7 +411,7 @@ modules:
     components:
       - 0 # FindIt IWD:EE: v2.6
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/FindIt-IWD v2.6.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/FindIt-IWD v2.6.zip
   #- name: iu_iwd ==> included in EE
   - name: ForgeIt-IWD
     description: new items to create
@@ -419,7 +419,7 @@ modules:
       - 0 # Artefacts forgeables pour IWD EE: v1.8
       - 1 # Armure d'Icasaracht améliorée dans IWD EE: v1.8
     location:
-      path: /home/mick/Games/modda-cache/static-iwd/ForgeIt-IWD v1.8.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/ForgeIt-IWD v1.8.zip
   - name: msfm
     components:
       - 10 # Add circlets: v1.57

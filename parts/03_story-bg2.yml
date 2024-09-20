@@ -158,25 +158,25 @@
     components:
       - 0 # Colours of Infinity: Tales of the Deep Gardens -> Yes, but don't patch the existing save games: 12.7
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Tales of the Deep Gardens v12.91.zip
+      path: modda-cache/ie-mods-archive/weaselmods/bg/colours_of_infinity/Tales of the Deep Gardens v12.91.zip
   - name: Innershade
     description: "Colours of Infinity: Innershade"
     components:
       - 0 # Colours of Infinity: Innershade -> Yes, but don't patch the existing save games: 11.0
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Innershade v11.11.zip
+      path: modda-cache/ie-mods-archive/weaselmods/bg/colours_of_infinity/Innershade v11.12.zip
   - name: WhiteQueen
     description: "Colours of Infinity: The White Queen"
     components:
       - 0 # Colours of Infinity - The White Queen -> Yes, but don't patch the existing save games: 6.9
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/WhiteQueen v7.2.zip
+      path: modda-cache/ie-mods-archive/weaselmods/bg/colours_of_infinity/WhiteQueen v7.3.zip
   - name: ISNF
     description: "Colours of Infinity: I Shall Never Forget"
     components:
       - 0 # Colours of Infinity: I Shall Never Forget: 6.0
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/I Shall Never Forget v6.2.zip
+      path: modda-cache/ie-mods-archive/weaselmods/bg/colours_of_infinity/I Shall Never Forget v6.2.zip
 
   # Athkatlan Grounds series
   - name: SouthernEdge
@@ -184,46 +184,46 @@
     components:
       - 0 # Southern Edge: the new district of Athkatla -> Yes, but don't patch the existing save games: 3.4
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/SouthernEdge v5.1.zip
+      path: modda-cache/ie-mods-archive/weaselmods/bg/athkathlan_grounds/SouthernEdge v5.2.zip
   - name: Ooze
     description: "Athkatlan Grounds: The Ooze’s Lounge"
     components:
       - 0 # Le Salon des vases : une nouvelle zone sous les bas quartiers d'Athkatla: 2.92
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Oozes Lounge v2.94.zip
+      path: modda-cache/ie-mods-archive/weaselmods/bg/athkathlan_grounds/Oozes Lounge v2.95.zip
   - name: TangledIsle
     description: "Athkatlan Grounds: The Tangled Oak Isle"
     components:
       - 0 # L'ile du Chene Enchevetre : une nouvelle zone d'Athkatla -> Oui , mais ne pas patcher les sauvegardes existantes: v2.26
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/TangledIsle v4.3.zip
+      path: modda-cache/ie-mods-archive/weaselmods/bg/athkathlan_grounds/TangledIsle v4.5.1.zip
   - name: BridgesBlock
     description: "Athkatlan Grounds: Bridge’s Block"
     components:
       - 0 # Les terres d'Athkatlan : Le Bloc du Pont: 1.3
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/BridgesBlock v2.0.zip
+      path: modda-cache/ie-mods-archive/weaselmods/bg/athkathlan_grounds/BridgesBlock v2.0.zip
   - name: AlabasterSands
     description: "Athkatlan Grounds: Alabaster Sands"
     components:
       - 0 # Alabaster Sands: the new area of Athkatla -> Yes, but don't patch existing save games: v1.0
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/AlabasterSands v1.7.zip
+      path: modda-cache/ie-mods-archive/weaselmods/bg/athkathlan_grounds/AlabasterSands v1.7.zip
 
   # The Dreadful Tales series
   - name: InLoveUndeath
     description: BG2 npc - Xzelë Melaenitt, the paladin of Evening Glory (beauty in undeath)
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/InLoveUndeath v1.7.1.zip
+      path: modda-cache/ie-mods-archive/weaselmods/bg/the_dreadful_tales/InLoveUndeath v1.8.zip
   - name: JuniperAndTheStoneLeech
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/JuniperAndTheStoneLeech v1.5.zip
+      path: modda-cache/ie-mods-archive/weaselmods/bg/the_dreadful_tales/JuniperAndTheStoneLeech v1.5.zip
   - name: BloodiedStingsOfBarovia
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/BloodiedStingsOfBarovia v2.2.zip
+      path: modda-cache/ie-mods-archive/weaselmods/bg/the_dreadful_tales/BloodiedStingsOfBarovia v2.2.zip
 
   # various Lava
   - name: WhinHill
@@ -233,13 +233,13 @@
       - 2 # The Journey to the Whin Hill: add the optional minor joinable companion - Afu-Zuuvi
       - 3 # The Journey to the Whin Hill: Player-Initiated Dialogues for the optional companion - Afu-Zuuvi
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/WhinHill v1.3.zip
+      path: modda-cache/ie-mods-archive/weaselmods/bg/WhinHill v1.3.zip
   - name: Eilistraee
     description: Eilistraee's Song
     components:
       - 0 # Eilistraee's Song -> Yes, but don't patch the existing save games: 7.1
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Eilistraees Song v7.4.zip
+      path: modda-cache/ie-mods-archive/weaselmods/bg/Eilistraees Song v7.5.zip
 
   # acifer
   - name: Tidings
@@ -275,6 +275,8 @@
       repository: A-Fowl-Wish
       release: v1.3
       asset: FowlWish.v1.3.zip
+      alt:
+        file: /home/mick/Games/modda-cache/ie-mods-archive/glittergear/FowlWish.v1.3.zip
   - name: GoneNuts
     description: BG2, one quest mod
     components: ask
@@ -283,6 +285,8 @@
       repository: GoneNuts
       release: v1.1
       asset: Gonenuts.zip
+      alt:
+        file: /home/mick/Games/modda-cache/ie-mods-archive/glittergear/GoneNuts_v1.1.zip
   - name: DeadGardens
     description: BG2, one quest mod
     components: ask
@@ -291,11 +295,13 @@
       repository: DeadGardens
       release: v1.1
       asset: DeadGardens.zip
-  - name: ErrantJustice
+      alt:
+        file: /home/mick/Games/modda-cache/ie-mods-archive/glittergear/DeadGardens.v1.1.zip
+  - name: BloodAndFaith
     description: BG2, 10 quests mod
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/static/Errant.Justice.1.0.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/glittergear/Blood.and.Faith.0.9.1.zip
 
   - name: BackBrynnlaw
     description: Back to Brynnlaw - SoA chap 6 - one main quest, 10 subquests

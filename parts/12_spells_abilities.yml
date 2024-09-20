@@ -55,7 +55,7 @@
     components:
       - 0
     location:
-      path: /home/mick/Games/modda-cache/static/weaselmods/Weasels! v3.4.zip
+      path: /home/mick/Games/modda-cache/static/weaselmods/common/Weasels! v3.4.zip
   - name: Isaac's_Missile_Storm
     components: ask
     location:
