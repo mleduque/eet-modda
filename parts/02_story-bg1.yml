@@ -291,9 +291,9 @@
     description: The calling
     components: ask
     location:
-      github_user: Camdawg # Gibberlings3
+      github_user: mleduque # Gibberlings3
       repository: The_Calling
-      branch: master
+      branch: french
       refresh: 3days
   - name: Reflections
     description: Reflections of Destiny, an SoD Remix Mod

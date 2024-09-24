@@ -5064,10 +5064,7 @@ modules:
       #- 312 # Revision du Systeme de Competence - Ajout de nouvelles competences et de nouveaux styles de combat -> Progression acceleree des competences: v0.8.1-a
       #- 400 # Bonus de force supplementaire pour les armes a deux mains: v0.8.1-alpha
     location:
-      github_user: Gibberlings3
-      repository: Skills-and-Abilities
-      release: "2.3"
-      asset: lin-skills-and-abilities-v2.3.zip
+      file: /home/mick/Games/modda-cache/ie-mods-archive/morpheus/Skills-and-Abilities_2.4.zip
       patch:
         relative: patches/skills-and-abilities-prof-points.diff
   - name: npc_ee #ok

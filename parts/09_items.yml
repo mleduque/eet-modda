@@ -99,8 +99,7 @@
       - 11 # Add Breach Scrolls to Sorcerous Sundries
       - 27 # Add Ruby Ray Scrolls to Trademeet Store
     location:
-      http: http://america.iegmc.net/morpheus562/Forgotten-Armament.zip
-      rename: Forgotten-Armament_4.2.zip # 2024-06-03
+      file: /home/mick/Games/modda-cache/ie-mods-archive/morpheus/Forgotten-Armament_4.4.zip
       replace:
         - file_globs: ["components/stat_item_update.tpa"]
           replace: 'REPLACE_TEXTUALLY ~Set Strength to~ ~Increment Strength by~'

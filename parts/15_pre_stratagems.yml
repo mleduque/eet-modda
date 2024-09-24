@@ -33,7 +33,7 @@
       - 4 #  Gebhard Blucher's Lich in the Docks
       - 5 # Kensai Ryu's Gnome Fighter/Illusionist in the Docks
     location:
-      path: /home/mick/Games/modda-cache/static/Tactics-Remix_0.8-beta.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/morpheus/Tactics-Remix_0.8-beta.zip
       replace:
         - file_globs: ["tactics-remix.tp2"]
           replace: 'REQUIRE_PREDICATE !FILE_EXISTS ~mih_eq/setup-mih_eq.tp2~ @3004'
