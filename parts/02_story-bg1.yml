@@ -355,8 +355,8 @@
     location:
       github_user: TotalMilk90
       repository: gorgon
-      release: v4.7
-      asset: gorgon-v4.7.iemod
+      release: v4.8
+      asset: gorgon-v4.8.iemod
   - name: Blackhearts
     components: ask
     location:
