@@ -438,4 +438,16 @@
       branch: main
       refresh: 10days
 
+  - name: BloodAndFaith
+    description: BG2, 10 quests mod
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/ie-mods-archive/glittergear/Blood.and.Faith.0.9.1.zip
+      replace:
+        # Brutally force EET compatibility
+        - file_globs: [ 'BloodAndFaith.tp2' ]
+          regex: true
+          replace: 'EXTEND_TOP ~AR(?<t>\d\d\d\d).bcs~'
+          with: 'EXTEND_TOP ~BG${t}.bcs'
+
 #

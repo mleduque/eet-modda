@@ -68,6 +68,25 @@
     components:
       - 2000 # Install all spelltweaks
 
+  - name: wildmage
+    components:
+      # Rhialto's death gives way too much XP
+      - 1 # New Wild Magic Spells -> Haughty pansy
+      - 2 # Retain Rhialto's items
+      #- 3 # Spellshaper Kit -> Original avatar
+      - 5 # Diverses Modifications de Sorts
+    location:
+      github_user: BGforgeNet
+      repository: bg2-wildmage
+      release: v2.3
+      asset: wild-mage-additions-v2.3.iemod
+      replace:
+        - file_globs: ['wild_spells/main.tpa']
+          replace: 'OUTER_SET rhia_xp = 19000'
+          with: 'OUTER_SET rhia_xp = 4000'
+        - file_globs: ['wild_spells/main.tpa']
+          replace: 'OUTER_SET rhia_xp = 2000'
+          with: 'OUTER_SET rhia_xp = 500'
 
   # spell progression before kits
   # 5E *should* use these tables by default

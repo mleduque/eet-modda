@@ -13,8 +13,7 @@
     location:
       github_user: UnearthedArcana
       repository: 5E_spellcasting
-      branch: master
-      refresh: 3days
+      tag: "2.6.1"
   - name: cdtweaks
     description: Tweaks Anthology - only spell progression tables
     components: ask

@@ -297,11 +297,6 @@
       asset: DeadGardens.zip
       alt:
         file: /home/mick/Games/modda-cache/ie-mods-archive/glittergear/DeadGardens.v1.1.zip
-  - name: BloodAndFaith
-    description: BG2, 10 quests mod
-    components: ask
-    location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/glittergear/Blood.and.Faith.0.9.1.zip
 
   - name: BackBrynnlaw
     description: Back to Brynnlaw - SoA chap 6 - one main quest, 10 subquests
