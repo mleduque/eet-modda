@@ -382,7 +382,7 @@
     location:
       github_user: Skitia
       repository: Wings
-      tag: v1.06
+      tag: v1.07
       replace:
         - file_globs: ["Scripts/B2#AERIE.baf"]
           replace: 'RealSetGlobalTimer("B2#AerieFriends","GLOBAL",2500)'
