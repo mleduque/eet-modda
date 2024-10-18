@@ -664,14 +664,6 @@
         - file_globs: ["d/bfwketo.d"]
           replace: 'RealSetGlobalTimer("PGKetoMockKeldornTimer","GLOBAL",3000)'
           with: 'RealSetGlobalTimer("PGKetoMockKeldornTimer","GLOBAL",470)'
-  - name: Dusk
-    description: soa, male wizard slayer, friendship, dialog, quests
-    components: ask
-    location:
-      github_user: RamosPabloA
-      repository: NPC_Dusk_MOD
-      release: v1.5.0
-      asset:  NPC_Dusk_MOD.zip
   - name: btl
     description: Beyond the Law
     detailed_description: 2 NPCs, Kova (CG half-elf mage/thief) & Kiyone (LG half-elf archer) + quest

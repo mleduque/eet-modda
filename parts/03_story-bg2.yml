@@ -255,7 +255,9 @@
     location:
       http: https://www.baldurs-gate.de/acifer/Call_of_the_lost_goddess.zip
       #http: http://america.iegmc.net/g3/Call_of_the_lost_goddess.zip
-      rename: Call_of_the_lost_goddes_1.2.zip # 2024-06-01
+      rename: Call_of_the_lost_goddess_1.3.zip # 2024-06-01
+      alt:
+        file: /home/mick/Games/modda-cache/static/acifer/Call_of_the_lost_goddess_1.3.zip
   - name: crucible
     components: ask
     location:
@@ -386,6 +388,15 @@
           - questpack
           - setup-d0questpack.tp2
 
+  - name: Autumns_Twilight
+    description: Quest(dungeon) + 2 npcs
+    summary: SoA, Dusk (male wizard slayer), Fall (Female beastmaster), 2 other NPCS, quests, one dungeon
+    components: ask
+    location:
+      github_user: evancauteren
+      repository: bg2-autumns-twilight-mod
+      release: v1.0.0
+      asset: bg2-autumns-twilight-mod-1_0.zip # 705Mb
   # some ironmodder entries
   - name: im10kulyok
     description: 'Kulyok entry for Iron Modder 10: The Oldest Trick In The Book'
