@@ -363,6 +363,7 @@
       github_user: 11jo # forked because needs-patch #  https://forums.beamdog.com/discussion/comment/1200875/#Comment_1200875
       repository: Black-Hearts
       branch: main
+      refresh: 5days
   - name: bst
     components:
       - 0 # The BS Company presents Balduran's Seatower: vEAOB.6

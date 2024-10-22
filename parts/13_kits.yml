@@ -150,7 +150,7 @@
     location:
       github_user: UnearthedArcana
       repository: Will_to_Power
-      branch: "2.7.0"
+      branch: "2.7.1"
       patch:
         relative: patches/eet/will_to_power_tweaks.diff
   - name: Will_to_Power
@@ -167,7 +167,7 @@
     location:
       github_user: UnearthedArcana
       repository: Might_and_Guile
-      tag: "5.8.3"
+      tag: "5.8.4"
   - name: Faiths_and_Powers
     components: ask
       #### INI ADDED

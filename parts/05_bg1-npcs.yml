@@ -294,7 +294,7 @@
       refresh: 3days
       patch:
         #prompt for portrait (1. Default)
-        relative: patches/eet/viexnay_bg1-defaultprotrait-nomusic.diff
+        relative: patches/eet/viexnay_bg1-defaultportrait-nomusic.diff
       replace:
         - file_globs: ["Dialogue/SoD/X32VienJ.d"]
           replace: 'SetGlobalTimer("X32VienGameTalkTimer","GLOBAL",THREE_DAYS\)'
