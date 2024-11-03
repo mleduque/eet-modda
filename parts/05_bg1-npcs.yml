@@ -54,8 +54,8 @@
     location:
       github_user: Gitjas
       repository: Brandock_the_Mage
-      release: v1.3
-      asset: brandock-the-mage-v1.3.iemod
+      release: v1.6
+      asset: brandock-the-mage-v1.6.iemod
       replace:
         # BrandockNPCBanterTimer3600
         - file_globs: ["crossmod/bg1npc.baf", "crossmod/brando_crossmod_bg1npc_BG1.d", "dialogue/brandock_sod.d", "dialogue/c#brando.d"]
