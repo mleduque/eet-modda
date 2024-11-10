@@ -163,8 +163,8 @@
     location:
       github_user: Gibberlings3
       repository: Grey_The_Dog
-      release: v9
-      asset: grey-the-dog-npc-9.iemod
+      release: v10
+      asset: grey-the-dog-npc-10.iemod
   - name: gavin
     # will prompt for romance timer
     components:

@@ -486,6 +486,13 @@
     location:
       github_user: ShadowfireAngel
       repository: Aelar-Wares
+  - name: ZS_WeaponOils
+    overview:
+    components: ask
+    location:
+      github_user: szaumoor
+      repository: ZS_WeaponOils
+      tag: "1.0.0"
   # overpowered item mods
   - name: DGItems
     overview: |
