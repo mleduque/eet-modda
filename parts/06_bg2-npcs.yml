@@ -579,8 +579,8 @@
     location:
       github_user: SpellholdStudios
       repository: Dace_NPC
-      release: v5
-      asset: lin-dace-v5.zip
+      release: v5.1
+      asset: lin-dace-v5.1.zip
       patch:
         relative: eet/dace-romance.diff
       replace:
@@ -942,8 +942,8 @@
     location:
       github_user: SpellholdStudios
       repository: BG1_NPCs_for_SoA_-_ToB
-      reklease: v15.1
-      asset: bg1-npc-in-soatob-15.1.iemod
+      reklease: v15.2
+      asset: bg1-npc-in-soatob-15.2.iemod
 
   - name: w_packmule
     components:
