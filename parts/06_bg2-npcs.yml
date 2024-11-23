@@ -789,9 +789,10 @@
   - name: Tashia
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/static/tashia_remix_v1.4.rar
-      alt:
-        http: http://america.iegmc.net/tashia/tashia_remix_v1.4.rar
+      github_user: Spellhold-Studios
+      repositiry: Tashia-NPC
+      release: v1.5
+      asset: tashia-v1.5.iemod
     disabled:
       because: no time to examine right now
   - name: Kitanya
