@@ -190,6 +190,14 @@
         - file_globs: ["scripts/cernd.baf"]
           replace: 'RealSetGlobalTimer("I#CerndFamiliarTime","GLOBAL",600)'
           with: 'RealSetGlobalTimer("I#CerndFamiliarTime","GLOBAL",300)'
+  - name: jaheirafriendship
+    components:
+      - 0 # Jaheira Firendhsip
+    location:
+      github_user: Spellhold-Studios
+      repository: Jaheira-Friendship
+      release: v1.0
+      asset:  jaheirafriendship-v1.0.iemod
   - name: viconia
     description: soa+tob - add frienship path for Viconia
     components:
