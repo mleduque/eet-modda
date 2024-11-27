@@ -6,7 +6,7 @@
     location:
       github_user: subtledoctor
       repository: Combat_Skill_Proficiencies
-      tag: "1.4.6"
+      tag: "1.4.8"
       patches:
         # Allow a little more profs for wiz/sorc
         # 1. edit profs.2da to have 1 prof/8 levels
@@ -20,7 +20,7 @@
     location:
       github_user: subtledoctor
       repository: SubtleD_Stat_Overhauls
-      branch: "1.6.2"
+      branch: "1.6.4"
       patches:
         - relative: patches/eet/subtled-stat-overhaul-config.diff
   - name: Magic_Battles_Revised
@@ -30,7 +30,7 @@
     location:
       github_user: mleduque
       repository: magic_battles_revised
-      branch: 1.9-fr
+      branch: 1.9.4
       patch:
       # align STR damage bonus on fighter for everyone + slight regen
         relative: patches/eet/mbr_spell_thrust_lv2.diff
@@ -283,7 +283,7 @@
     location:
       github_user: subtledoctor
       repository: NPC_EE
-      commit: "6.5.2"
+      commit: "6.5.5"
   - name: DUAL_TO_KIT
     description: "Kjeron's 'Dual to Kit'"
     installation:

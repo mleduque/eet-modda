@@ -49,7 +49,7 @@
     location:
       github_user: subtledoctor
       repository: SubtleD_Spell_Tweaks
-      tag: "2.8.5-fr"
+      tag: "2.8.8-fr"
 
   - name : Weasels!
     components:

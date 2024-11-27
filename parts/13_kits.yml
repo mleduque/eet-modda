@@ -123,7 +123,7 @@
     location:
       github_user: UnearthedArcana
       repository: TomeAndBlood
-      branch: "1.1.3"
+      branch: "1.3.1"
   - name: refinements
     components:
       - 11 # Revised High Level Abilities -> Choose which classes get revised HLAs
@@ -150,7 +150,7 @@
     location:
       github_user: UnearthedArcana
       repository: Will_to_Power
-      branch: "2.7.1"
+      branch: "2.9.1"
       patch:
         relative: patches/eet/will_to_power_tweaks.diff
   - name: Will_to_Power
@@ -167,7 +167,7 @@
     location:
       github_user: UnearthedArcana
       repository: Might_and_Guile
-      tag: "5.8.4"
+      tag: "5.8.8"
   - name: Faiths_and_Powers
     components: ask
       #### INI ADDED
@@ -183,7 +183,7 @@
     location:
       github_user: mleduque
       repository: Faiths_and_Powers
-      branch: 0.91-fr
+      branch: 0.91.3-fr
       patches:
         - relative: patches/eet/fnp_configure.diff
         - relative: patches/eet/fnp_druid_scimitars.diff
