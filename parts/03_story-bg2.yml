@@ -522,8 +522,8 @@
     location:
       github_user: Austin-BG
       repository: HTaM
-      release: v.4.5
-      asset: heroes-thieves-and-moneylenders-4.5.iemod
+      release: v.4.6.2
+      asset: heroes-thieves-and-moneylenders-4.6.2.iemod
   - name: Derats_Ogre
     description: BG2 quest mod - meet an ogre, fetch things around
     components:
