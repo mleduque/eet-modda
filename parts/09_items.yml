@@ -336,8 +336,8 @@
     location:
       github_user: Argent77
       repository: A7-ImprovedArcher
-      release: v4.3
-      asset: A7-ImprovedArcher-v4.3.iemod
+      release: v4.4
+      asset: A7-ImprovedArcher-v4.4.iemod
   - name: ruad
     description: Ruad Ro'fhessa Item Upgrade
     overview: This mod adds Ruad, a new smith in Waukeen's Promenade, who improves items as well as forges some quite new ones.
@@ -395,8 +395,8 @@
     location:
       github_user: Argent77
       repository: A7-MagicStore
-      release: v4.1
-      asset: A7-MagicStore-v4.1.iemod
+      release: v4.2
+      asset: A7-MagicStore-v4.2.iemod
   - name: saradas_magic
     description: Saradas Magic for BGEE / EET
     overview: NPC with a store in FAI - items, id, cure, new spells

@@ -706,8 +706,8 @@
     location:
       github_user: Argent77
       repository: DjinniCompanion
-      release: v2.10
-      asset: A7-DjinniCompanion-v2.10.iemod
+      release: v2.11
+      asset: A7-DjinniCompanion-v2.11.iemod
   - name: isra_bg2
     description: Isra Ghadir, a cavalier paladin of Sune Firehair - soa+tob, friendship, romance, encounters
     components:

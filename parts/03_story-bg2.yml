@@ -111,8 +111,8 @@
     location:
       github_user: Argent77
       repository: A7-TestYourMettle
-      release: v1.5
-      asset: A7-TestYourMettle-v1.5.iemod
+      release: v1.6
+      asset: A7-TestYourMettle-v1.6.iemod
   - name: A7-GolemConstruction
     components:
       - 0   # Capacite de Fabrication de Golem pour lanceurs de sorts
