@@ -196,8 +196,8 @@
     location:
       github_user: Spellhold-Studios
       repository: Jaheira-Friendship
-      release: v1.0
-      asset:  jaheirafriendship-v1.0.iemod
+      release: v1.3
+      asset:  jaheirafriendship-v1.3.iemod
   - name: viconia
     description: soa+tob - add frienship path for Viconia
     components:
