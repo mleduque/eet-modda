@@ -64,8 +64,8 @@
     location:
       github_user: The-Gate-Project
       repository: NeeraBanters
-      release: v0.9.2
-      asset: win-neerabanters-v0.9.2.zip
+      release: v0.9.3
+      asset: neera-banters-v0.9.3.iemod
   - name: korganfriendship
     components:
       - 0
