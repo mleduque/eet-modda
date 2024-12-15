@@ -272,6 +272,12 @@
       repository: bg2-tweaks-and-tricks
       release: v8.33
       asset: tweaks-and-tricks-v8.33.iemod
+  - name: ZS_CanIStabYou
+    components: ask
+    location:
+      github_user: szaumoor
+      repository: ZS_CanIStabYou-Mod
+      tag: "1.0.1"
 
   - name: npc_ee
     installation:
