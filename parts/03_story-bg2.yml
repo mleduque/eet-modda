@@ -255,9 +255,9 @@
     location:
       http: https://www.baldurs-gate.de/acifer/Call_of_the_lost_goddess.zip
       #http: http://america.iegmc.net/g3/Call_of_the_lost_goddess.zip
-      rename: Call_of_the_lost_goddess_1.3.zip # 2024-06-01
+      rename: Call_of_the_lost_goddess_1.4.zip # 2024-06-01
       alt:
-        file: /home/mick/Games/modda-cache/static/acifer/Call_of_the_lost_goddess_1.3.zip
+        file: /home/mick/Games/modda-cache/static/acifer/Call_of_the_lost_goddess_1.4.zip
   - name: crucible
     components: ask
     location:
