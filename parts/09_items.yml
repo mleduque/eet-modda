@@ -546,3 +546,9 @@
         and Bards component) if installed after them.
     components:
       - 1030 # Store Revisions
+  - name: bg1_ipm
+    description: unique icons for BG1 quest items
+    components: ask
+    location:
+      github_user: Alexander12-creator
+      repository: bg1_icons_pack_mod
