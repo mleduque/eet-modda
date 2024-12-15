@@ -346,8 +346,8 @@
     location:
       github_user: Argent77
       repository: A7-LightingPackEE
-      release: v3.1
-      asset: lin-A7-LightingPackEE-v3.1.zip
+      release: v3.2
+      asset: lin-A7-LightingPackEE-v3.2.zip
   - name: Sentrizeal_AA_Pack
     description: Sentrizeal's Alternate Avatar Pack
     components: ask
