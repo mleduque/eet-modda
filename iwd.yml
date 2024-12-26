@@ -246,6 +246,30 @@ modules:
       github_user: ArtemiusI
       repository: KarihiNPC
       tag: v1.01
+  - name: AthanasiosNPC
+    description: chaotic good halfling, an aged priest of Tempus, always ready for a fight
+    components: ask
+    location:
+      github_user: ArtemiusI
+      repository: IWD-Athanasios-NPC
+      branch: main
+      refresh: 7days
+  - name: NirikNPC
+    description: neutral dwarf, an avenger determined to become a capable druid
+    components: ask
+    location:
+      github_user: ArtemiusI
+      repository: IWD-Nirik-NPC
+      branch: main
+      refresh: 7days
+  - name: GuldrukNPC
+    description: LG half-orc kensai
+    components: ask
+    location:
+      github_user: ArtemiusI
+      repository: IWD-Guldruk-NPC
+      branch: main
+      refresh: 7days
   - name: MinervaNPC
     components:
       - 0 # Minerva NPC for Icewind Dale: Enhanced Edition: 1.0
