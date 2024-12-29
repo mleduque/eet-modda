@@ -329,7 +329,7 @@
       after: [bgqe, bg1npc, bg1re, garrick-tt, bg1ub]
     components: ask
     location:
-      github_user: TotoR115
+      github_user: YChap # or TotoR115
       repository: JA-AdventurePack
       branch: master
       refresh: 4days
