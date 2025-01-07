@@ -150,7 +150,7 @@
     location:
       github_user: UnearthedArcana
       repository: Will_to_Power
-      branch: "2.10"
+      branch: "2.10.1"
       patch:
         relative: patches/eet/will_to_power_tweaks.diff
   - name: Will_to_Power
