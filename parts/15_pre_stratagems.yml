@@ -26,7 +26,10 @@
       general: |
         - the 'Add New Encounters' group components should be before SCS
         - the 'Update existing encouters' group components should be after SCS
+        - Choose either SCS or Tactics Remix for the ai and tactical components.
+        
     components: ask
+      # Choose either SCS or Tactics Remix for the ai and tactical components.
     location:
       path: /home/mick/Games/modda-cache/ie-mods-archive/morpheus/Tactics-Remix-0.9.8.8-alpha.zip
       replace:
