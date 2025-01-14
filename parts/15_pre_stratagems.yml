@@ -27,7 +27,7 @@
         - the 'Add New Encounters' group components should be before SCS
         - the 'Update existing encouters' group components should be after SCS
         - Choose either SCS or Tactics Remix for the ai and tactical components.
-        
+
     components: ask
       # Choose either SCS or Tactics Remix for the ai and tactical components.
     location:
@@ -36,6 +36,18 @@
         - file_globs: ["tactics-remix.tp2"]
           replace: 'REQUIRE_PREDICATE !FILE_EXISTS ~mih_eq/setup-mih_eq.tp2~ @3004'
           with: '' # just remove this
+
+  - name: BP-BGT-Worldmap
+    installation:
+      general: |
+        "install Worldmap after all quest mods (and even better at the end of mod list)""
+        (https://www.gibberlings3.net/forums/topic/37267-neverwinter-night-for-baldurs-gate-mod/page/14/#findComment-344752)
+    components: ask
+    location:
+      github_user: SpellholdStudios
+      repository: BP-BGT-Worldmap
+      release: v13.1.1
+      asset: worldmap-v13.1.1.iemod
 
   - name: EET_end
     components:
