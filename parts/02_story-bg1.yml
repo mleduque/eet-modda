@@ -323,6 +323,15 @@
       repository: garrick-tt
       branch: k4thos-eet-compat
 
+  - name: candlekeep_revisited
+    description:  Candlekeep Revisited
+    overview: A mod for expanding the content of the BG1 tutorial - dialogue with NPCs, 3 minor side-quests
+    components: ask
+    location:
+      github_user: ArtemiusI
+      repository: Candlekeep-Revisited
+      branch: main
+      refresh: 5days
 
   - name: JA#BGT_AdvPack
     installation:
@@ -407,15 +416,6 @@
       repository: DarkHorizons
       branch: main
       refresh: 3days
-  - name: candlekeep_revisited
-    description:  Candlekeep Revisited
-    overview: A mod for expanding the content of the BG1 tutorial - dialogue with NPCs, 3 minor side-quests
-    components: ask
-    location:
-      github_user: ArtemiusI
-      repository: Candlekeep-Revisited
-      branch: main
-      refresh: 5days
   - name: Kara-Tur
     description: "T'was a Slow Boat from Kara-Tur"
     overview: BG1 Quest/Store/New Items
