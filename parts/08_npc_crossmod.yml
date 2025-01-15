@@ -12,8 +12,8 @@
     location:
       github_user: Gibberlings3
       repository: Crossmod_Banter_Pack_for_Baldurs_Gate_II
-      release: v24.1
-      asset: crossmod-banter-pack-for-baldurs-gate-ii-v24.1.iemod  # tgz truncates some file names
+      release: v25
+      asset: crossmod-banter-pack-for-baldurs-gate-ii-v25.iemod  # tgz truncates some file names
   - name: adrian
     description: Adrian crossmod
     components:
