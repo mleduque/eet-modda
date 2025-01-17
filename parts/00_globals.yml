@@ -58,8 +58,8 @@ locations:
     iwdification:
       github_user: Gibberlings3
       repository: iwdification
-      release: v5
-      asset: lin-iwdification-v5.tar.gz
+      release: v6
+      asset: lin-iwdification-v6.zip
       patch:
         relative: patches/iwdification-ini.diff
     rr:
@@ -77,4 +77,5 @@ locations:
 
 manifest_conditions:
   prefer_scs_over_iwdification_spells:
-    because: newer at the moment
+    not:
+      because: newer at the moment

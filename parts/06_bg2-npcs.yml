@@ -934,8 +934,8 @@
     location:
       github_user: Gibberlings3
       repository: Kivan_and_Deheriana
-      release: v18
-      asset:  kivan-and-deheriana-companions-for-bg2-v18.iemod
+      release: v19
+      asset: lin-kivan-v19.zip
   - name: BG1NPCSoA
     description: "BG1 NPCs in BG2 plus new Athkatla district: Water Gardens"
     installation:

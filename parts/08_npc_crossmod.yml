@@ -13,7 +13,7 @@
       github_user: Gibberlings3
       repository: Crossmod_Banter_Pack_for_Baldurs_Gate_II
       release: v25
-      asset: crossmod-banter-pack-for-baldurs-gate-ii-v25.iemod  # tgz truncates some file names
+      asset: lin-crossmodbg2-v25.zip
   - name: adrian
     description: Adrian crossmod
     components:
