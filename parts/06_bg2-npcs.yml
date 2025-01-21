@@ -464,7 +464,10 @@
     components:
       - 0 # Tyris Flare NPC: v9
     location:
-      http: http://europe.iegmc.net/g3/tyrisflare-v11.zip
+      github_user: Gibberlings3
+      repository: TyrisFlare
+      release: v12
+      asset:  lin-tyrisflare-v12.zip
       patch:
         relative: patches/eet/tyris-romance.diff
       replace:
