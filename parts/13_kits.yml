@@ -90,8 +90,8 @@
     location:
       github_user: Gibberlings3
       repository: SongAndSilence
-      release: v18
-      asset: lin-song_and_silence-v18.zip
+      release: v19
+      asset: lin-song_and_silence-v19.zip
   - name: rr
     description: the rebalancing part
     components:
