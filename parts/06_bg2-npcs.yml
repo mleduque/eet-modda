@@ -316,10 +316,7 @@
   # Jastey NPCs
   - name: gavin_bg2
     # will prompt for romance timer
-    components:
-      - 0 # Gavin for BG2
-      - 1 # Gavin heals the PC when below 50% health   (Can be disabled or enabled via player-initiated dialogue)
-      - 3 # Multi-romance cheat -> No romance kills
+    components: ask
     location:
       github_user: Gibberlings3
       repository: Gavin_BG2
