@@ -175,8 +175,8 @@
     location:
       github_user: Gibberlings3
       repository: Gavin_BG
-      release: v14
-      asset: lin-gavin-v14.tar.gz
+      release: v15
+      asset: lin-gavin-v15.zip
       patch:
         relative: patches/eet/gavin_bg1-romance-timer-15.diff
         # there is no need to patch timers
