@@ -390,12 +390,14 @@
   - name: Autumns_Twilight
     description: Quest(dungeon) + 2 npcs
     summary: SoA, Dusk (male wizard slayer), Fall (Female beastmaster), 2 other NPCS, quests, one dungeon
+    installation:
+      after: hiddenadventure
     components: ask
     location:
       github_user: evancauteren
       repository: bg2-autumns-twilight-mod
-      release: v1.0.0
-      asset: bg2-autumns-twilight-mod-1_0.zip # 705Mb
+      release: v1.2.2
+      asset: bg2-autumns-twilight-mod-1_2_2.zip #710Mb
   # some ironmodder entries
   - name: im10kulyok
     description: 'Kulyok entry for Iron Modder 10: The Oldest Trick In The Book'
