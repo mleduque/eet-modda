@@ -380,6 +380,14 @@
     location:
       path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/VerrSzaBGEE v6.01.zip
 
+  - name: OphysiaBG1
+    description: chaotic good half-elven bard, friendship, banters
+    components: ask
+    location:
+      github_user: Llewren
+      repository: OphysiaBG1
+      release: v1.1
+      asset: OphysiaBG1.V.1.1.zip
   - name: IndiNPC
     description: bg1 one-day NPC, half-elven, lawful good fighter/mage, banters, small quest
     components:
