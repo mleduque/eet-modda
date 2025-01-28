@@ -79,7 +79,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: IWD2_NPC_Project
-      tag: Test_Build_1_for_v7
+      release: v7
+      asset: lin-iwd2npc-v7.zip
   - name: merchant
     components:
     - 0 # 'Bonus Merchant for IWD2: v5'
