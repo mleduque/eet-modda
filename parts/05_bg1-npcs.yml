@@ -424,7 +424,8 @@
     location:
       github_user: Gibberlings3
       repository: Glam-NPC-Pack
-      tag: v3.1
+      release: v4
+      asset: lin-glamnpcpack-v4.zip
       replace:
         - file_globs: ["Dialogue/GV#LITT.d"]
           replace: 'SetGlobalTimer("GV#LITTGnollsTimer","GLOBAL",ONE_DAY)'
