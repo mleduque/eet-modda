@@ -34,8 +34,8 @@
     location:
       github_user: Gitjas
       repository: Ascalons_Breagar
-      release: v12.2.0
-      asset: ascalons-breagar-12.2.0.iemod
+      release: v12.2.1
+      asset: ascalons-breagar-12.2.1.iemod
       patch:
         relative: eet/breagar-wait-here.diff
         # components 10-13 change timers
