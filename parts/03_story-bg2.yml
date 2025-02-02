@@ -149,8 +149,8 @@
     location:
       github_user: Gitjas
       repository: Adalons_Blood
-      release: "16"
-      asset: adalons-blood-16.iemod
+      release: v17
+      asset: adalons-blood-17.iemod
 
   # Color of Infinity series
   - name: TotDG
