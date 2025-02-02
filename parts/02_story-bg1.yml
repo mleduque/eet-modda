@@ -128,8 +128,8 @@
     location:
       github_user: Gibberlings3
       repository: The_Boareskyr_Bridge_Scene
-      release: v7.0
-      asset: the-boareskyr-bridge-scene-v7.iemod
+      release: v8
+      asset: the-boareskyr-bridge-scene-v8.iemod
   - name: c#sodtweaks
     components:
       - 2 # Ne manquez pas de dialogues entre NPC-PC -> Pour les PNJ du groupe uniquement: v12.1
