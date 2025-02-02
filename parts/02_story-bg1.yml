@@ -137,8 +137,8 @@
     location:
       github_user: Gibberlings3
       repository: Jasteys_SoD_Tweakpack
-      release: v12.1
-      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v12.1.iemod
+      release: v13
+      asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v13.iemod
   - name: imoen_forever
     installation:
       after: { name: imoen_forever , component: 0 }
