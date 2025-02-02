@@ -153,7 +153,8 @@ modules:
   location:
     github_user: Gibberlings3
     repository: EndlessBG1
-    tag: v16
+    release: v20
+    asset: endless-bg1-mod-20.iemod
 - name: transitions
   components:
   - 0 # Main component: Allow continued play after Sarevok and/or Irenicus is defeated: v2.4
