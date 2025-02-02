@@ -195,8 +195,8 @@
     location:
       github_user: Gibberlings3
       repository: BG_Quests_And_Encounters
-      release: v27
-      asset: baldurs-gate-mini-quests-and-encounters-modification-27.iemod
+      release: v28
+      asset: baldurs-gate-mini-quests-and-encounters-modification-28.iemod
   - name: bg1re
     description: Baldur's Gate Romantic Encounters
     comment: did a "install all" this time
