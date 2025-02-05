@@ -267,8 +267,8 @@
     location:
       github_user: Gitjas
       repository: Ascalons_Questpack
-      release: v6.0
-      asset: ascalons-questpack-6.0.iemod
+      release: v6.1
+      asset: ascalons-questpack-6.1.iemod
   - name: SirinesCall
     description: The Lure of the Sirine's Call
     components:
