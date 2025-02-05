@@ -946,6 +946,25 @@
       repository: BG1_NPCs_for_SoA_-_ToB
       reklease: v15.2
       asset: bg1-npc-in-soatob-15.2.iemod
+  - name: SearchGuild
+    description: '"Detective Guild of Athkatla" mod'
+    installation:
+      after: [BG1NPCSoA, Coran]
+    overview: >
+      Adds a new Detective Guild building in the Slums area, which CAN become an additional
+      stronghold for a player of any class.
+        * new areawith 2 floors
+        * stronghold
+        * non joinable characters
+        * one long quest
+        * small quests and events in the stronghold
+    components:
+      - 0 # Detective Guild of Athkatla (by Scheele, Austin & Arcanecoast Team)
+    location:
+      github_user: Austin-BG
+      repository: SearchGuild
+      release: v.1.2
+      asset: detective-guild-of-athkatla-1.2.iemod
 
   - name: w_packmule
     components:
