@@ -481,7 +481,7 @@
           replace: 'RealSetGlobalTimer("G#TF.TyrisFlirt","LOCALS",900)'
           with: 'RealSetGlobalTimer("G#TF.TyrisFlirt","LOCALS",310)'
   - name: navarra
-    description: bg2 - human, female barb, quest, banters, frienship, romance
+    description: bg2 - human, female barb, quest, banters, friendship, romance
     components:
       - 0 # Navarra for BG2
     location:
