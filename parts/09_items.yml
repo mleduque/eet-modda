@@ -57,7 +57,7 @@
     description: Heart of the Wood
     components: [0]
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: HeartOfTheWood
       release: v7.0.0
       asset:  heart-of-the-wood-7.0.0.iemod
@@ -191,7 +191,7 @@
     overview: This mod allows you to upgrade Haer'Dalis' swords in the Underdark.
     components: [0]
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: HaerDalis_Swords
       release: v3.1.0
       asset: improved-haerdalis-swords-v3.1.0.iemod
@@ -251,7 +251,7 @@
     components:
       - 0 # Jan's Alchemy
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: JansAlchemy
       release: v8.1.0
       asset: jans-alchemy-v8.1.0.iemod
@@ -263,7 +263,7 @@
     components:
       - 0 # Stuff of the magi
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: StuffofTheMagi
       release: v6.0.0
       asset: stuff-of-the-magi-6.0.0.iemod
@@ -346,7 +346,7 @@
       - 0 # Ruad Ro'fhessa (SoA)
       - 10 # Ruad Ro'fhessa (ToB)
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: RuadRofhessaItemUpgrade
       release: v29.4.0
       asset: ruad-rofhessa-item-upgrade-v29.4.0.iemod
@@ -359,7 +359,7 @@
       - 0 # Rolles Safyer: v5.0.5
       - 10 # Bag of Holding in Irenicus Dungeon: v5.0.5
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Rolles
       release: v5.0.5
       asset: rolles-safyer-v5.0.5.iemod
@@ -370,7 +370,7 @@
     components:
       - 0 # Darron
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Darron
       release: v2.0.0
       asset: darron-v2.0.0.iemod
@@ -382,7 +382,7 @@
     components:
       - 0 # Bolda
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Bolsa
       release: v6.0.0
       asset: bolsa-v6.0.0.iemod
@@ -415,7 +415,7 @@
     components:
       - 1 # Saradas Magic NPC Mod for BGII -> Saradas has a mage sprite (optional)
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Saradas_Magic_for_BG2
       release: v2.0.0
       asset: saradas-magic-for-bg2-v2.0.0.iemod
@@ -430,7 +430,7 @@
     components:
       - 0 # Magasin des Curiosites inhabituelles
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: The_Unusual_Oddities_Shop
       release: v5.0
       asset: the-unusual-oddities-shop-5.0.iemod

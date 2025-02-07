@@ -972,7 +972,7 @@ modules:
     components:
       - 1
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: generalized_biffing
       release: v2.6
       asset: generalized-biffing-v2.6.iemods

@@ -395,7 +395,7 @@
     components:
       - 1
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: generalized_biffing
       release: v2.9
       asset: generalized-biffing-v2.9.iemods

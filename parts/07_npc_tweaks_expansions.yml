@@ -52,7 +52,7 @@
       - 0 # Neera Expansion
       - 1 # How much time would you like between talks (approximately)? -> 15 minutes
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Neera_Expansion
       release: v1.3.1
       asset: neera-expansion-v1.3.1.iemod
@@ -70,7 +70,7 @@
     components:
       - 0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: KorganFriendship
       release: v1.6
       asset: korgan-friendship-v1.6.iemod
@@ -79,7 +79,7 @@
     components:
       - 0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: KorgansRedemption
       release: v10.0.1
       asset: korgans-redemption-v10.0.1.iemod
@@ -95,7 +95,7 @@
     components:
       - 0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: MinscFriendship
       release: v1.3
       asset: minsc-friendship-v1.3.iemod
@@ -123,7 +123,7 @@
     components:
       - 0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: HaerdalisFriendship
       release: v1.2
       asset: haerdalis-friendship-v1.2.iemod
@@ -139,7 +139,7 @@
     components:
       - 0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: ValygarFriendship
       release: v1.5
       asset: valygar-friendship-v1.5.iemod
@@ -152,7 +152,7 @@
     description: soa+tob - add frienship path for Mazzy
     components: [0]
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: MazzyFriendship
       release: v3.5
       asset: mazzy-friendship-v3.5.iemod
@@ -178,7 +178,7 @@
     components:
       - 0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: CerndFriendship
       release: v1.3
       asset: Cernd-Friendship-v1.3.iemod
@@ -203,7 +203,7 @@
     components:
       - 0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: ViconiaFriendship
       release: v4.5
       asset: Viconia-Friendship-v4.5.iemod
@@ -234,7 +234,7 @@
     description: soa+tob - add frienship path for Yoshimo
     components: [0]
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: YoshimoFriendship
       release: v5.0
       asset: yoshimo-friendship-v5.0.iemod
@@ -249,7 +249,7 @@
     description: soa+tob - add frienship path for Sarevok
     components: [0]
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: SarevokFriendship
       release: v2.7
       asset: sarevok-friendship-v2.7.iemod
@@ -258,7 +258,7 @@
     components:
       - 0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Hexxat-Friendship
       release: v1.1
       asset:  hexxat-friendship-1.1.iemod
@@ -378,7 +378,7 @@
       # cdtweaks has one too
       - 4 # Give Edwina a Portrait
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Edwin_Romance
       release: v4,0
       asset:  edwin-romance-v4.0.iemod
@@ -421,7 +421,7 @@
       - 5 # Restored Aerie/Jaheira/Anomen interjection in Underdark
       - 6 # Banter Accelerator -> 10 minutes  -- same as banterpack accelerator, more configurable, overrides
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: IEP_Extended_Banter
       release: v6
       asset: iep-extended-banters-v6.iemod

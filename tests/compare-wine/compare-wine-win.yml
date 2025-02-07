@@ -87,7 +87,7 @@ modules:
   - 11 # Restored Final Slayer Dream: v10.0
   - 13 # Restored Waukeen''s Promenade Cutscene: v10.0
   location:
-    github_user: SpellholdStudios
+    github_user: Spellhold-Studios
     repository: Almaterias_Restoration_Project
     release: v10.0
     asset: almaterias-restoration-project-v10.0.iemod
@@ -890,6 +890,6 @@ modules:
   components:
   - 1 # Generalized Biffing -> Biff all files (recommended by the Big World Dudes): v2.6
   location:
-    github_user: SpellholdStudios
+    github_user: Spellhold-Studios
     repository: generalized_biffing
     tag: v2.6

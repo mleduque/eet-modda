@@ -402,7 +402,7 @@
     description: bg1 cowled wizard npc,friendship, no quest
     components: [0]
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Valerie_NPC
       release: v1.2
       asset: valerie-npc-for-bg-v1.2.iemod
@@ -441,7 +441,7 @@
   - name: isra
     components: [0]
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Isra_NPC
       release: v3.5
       asset: isra-npc-for-bg-v3.5.iemod

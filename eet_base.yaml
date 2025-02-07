@@ -54,7 +54,7 @@ modules:
   - name: bggoEET
     components: ask
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: BGGOEET
       branch: master
       refresh: 1day
@@ -174,7 +174,7 @@ modules:
       #- 12 # Transformation en Ecorcheur alternative: v8.4
       #- 13 # Restauration de la cinematique de la Promenade de Waukyne: v8.4
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Almaterias_Restoration_Project
       branch: master
       refresh: 7days
@@ -295,7 +295,7 @@ modules:
       #- 3 # More common encounters in vanilla areas
       #- 4  # Distribute DSotSC items also in vanilla content
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: DSotSC
       branch: master
       refresh: 7days
@@ -313,7 +313,7 @@ modules:
       - 12 # Improved Ghotal: 5.0.0
       - 15 # Spell scrolls : Revised Version (level 6 spells)
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: NTotSC
       release: v5.0.0
       asset: northern-tales-of-the-sword-coast-5.0.0.iemod
@@ -621,7 +621,7 @@ modules:
     components:
       - 0 # Fading Promises: v9
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Fading_Promises
       release: v9
       asset: fading-promises-v9.iemod
@@ -876,7 +876,7 @@ modules:
     components:
       - 0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: TheSlitheringMenace
       release: v4.0.0
       asset: the-slithering-menace-v4.0.0.iemod
@@ -885,7 +885,7 @@ modules:
     components:
       - 0 # Le minotaure et Lilarcor: 2.0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: The_Minotaur_and_Lilacor
       release: v2.1
       asset: the-minotaur-and-lilacor-2.1.iemod
@@ -893,7 +893,7 @@ modules:
     description: Lucy the Wyvern - alternate resolution to the encounter
     components: [0] # Lucy la Wiverne: v5.0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Lucy_the_Wyvern
       release: v5.0
       asset: lucy-the-wyvern-v5.0.iemod
@@ -1026,7 +1026,7 @@ modules:
       - 1 # Selence arrives to Waukeens Promenade after the meeting with Gaelan in the slums
       - 4 # Alternative Soubar area
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Shadows_over_Soubar
       release: "2.1"
       asset: shadows-over-soubar-2.1.iemod
@@ -1169,7 +1169,7 @@ modules:
     components:
       - 0 # Expanded Thief Stronghold (Expansion de la Forteresse des voleurs): v3.0.0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Expanded_Thief_Stronghold
       release: v3.0.0
       asset: expanded-thief-stronghold-v3.0.0.iemod
@@ -1570,7 +1570,7 @@ modules:
     description: bg1 cowled wizard npc,friendship, no quest
     components: [0]
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Valerie_NPC
       release: v1.2
       asset: valerie-npc-for-bg-v1.2.iemod
@@ -1608,7 +1608,7 @@ modules:
   - name: isra # ok
     components: [0]
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Isra_NPC
       release: v3.5
       asset: isra-npc-for-bg-v3.5.iemod
@@ -1727,7 +1727,7 @@ modules:
       - 0 # Nephele NPC Mod for BGII: SoA & ToB
       - 2 # Install Haer'Dalis Romance crossmod content
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Nephele_NPC
       release: v.2.7
       asset:  nephele-npc-v2.7.iemod
@@ -1987,7 +1987,7 @@ modules:
     description: bg2 druid npc with romance+friendship and quest (late  soa)
     components: [0]
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Arath_NPC
       release: v6
       asset: arath-npc-mod-for-baldurs-gate-2-soa-tob-v6.iemod
@@ -2015,7 +2015,7 @@ modules:
       - 30 # Adrian Tolerates High Reputation - Always
       # - 31 # Adrian Tolerates High Reputation - For Active Romance or Friendship
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Adrian_NPC
       release: v6.0
       asset: adrian-npc-for-bgii-v6.iemod
@@ -2160,7 +2160,7 @@ modules:
     components:
       - 0 # Luxley Family Mod for BGII:SoA: v2.0.0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: The_Luxley_Family
       release: v2.0.0
       asset: the-luxley-family-v2.0.0.iemod
@@ -2184,7 +2184,7 @@ modules:
       - 1 # Fade NPC: reactions to Romantic Encounters (RE may be installed before or after this component)
       - 2 # Fade EE: give Fade Shadowdancer kit
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Fade_NPC
       release: v5.6
       asset: Fade_v5-6.zip
@@ -2224,7 +2224,7 @@ modules:
     components:
       - 0 # Dace Linton NPC Mod for BG2:SoA & ToB: v5
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Dace_NPC
       release: v5
       asset: lin-dace-v5.zip
@@ -2247,7 +2247,7 @@ modules:
     components:
       - 1 # Hubelpot Thistledown, the Vegetable Merchant NPC mod -> Hubelpot is a Village Druid (alternate kit): v2.1.0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Hubelpot_the_Vegetable_Merchant_NPC
       release: v2.1.0
       asset: hubelpot-the-vegetable-merchant-npc-v2.1.0.iemod
@@ -2326,7 +2326,7 @@ modules:
       - 0 # Beyond the Law - Kova & Kiyone -> Beyond the Law with Kiyone original sound set: v2.0.0
       - 2 # Better balanced BTL items: v2.0.0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Beyond_the_Law
       release: v2.0.0
       asset: beyond-the-law-v2.0.0.iemod
@@ -2370,7 +2370,7 @@ modules:
     components:
       - 0 # Isra NPC for BGII
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Isra_NPC_BG2
       release: v3.1
       asset: isra-npc-for-bgii-v3.1.iemod
@@ -2417,7 +2417,7 @@ modules:
     components:
       - 0 # Ninde NPC Mod for BGII
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Ninde_NPC
       release: v2.2
       asset:  Ninde_v2.2.rar
@@ -2467,7 +2467,7 @@ modules:
     components:
       - 0 # Allison (One-Day NPC)
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Allison_One-Day_NPC
       release: v1.8
       asset: AllisonV15MacOSX.zip
@@ -2522,7 +2522,7 @@ modules:
     components:
       - 1
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Yeslick_NPC
       release: v5.0
       asset: yeslick-npc-v5.0.iemod
@@ -2597,7 +2597,7 @@ modules:
       after: other versions of same npcs
     components: ask
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: BG1_NPCs_for_SoA_-_ToB
       reklease: v14.3
       asset: bg1-npc-in-soatob-14.3.iemod
@@ -2668,7 +2668,7 @@ modules:
       - 0 # Neera Expansion
       - 1 # How much time would you like between talks (approximately)? -> 15 minutes
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Neera_Expansion
       release: v1.3.1
       asset: neera-expansion-v1.3.1.iemod
@@ -2686,7 +2686,7 @@ modules:
     components:
       - 0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: KorganFriendship
       release: v1.6
       asset: korgan-friendship-v1.6.iemod
@@ -2695,7 +2695,7 @@ modules:
     components:
       - 0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: KorgansRedemption
       release: v10.0.1
       asset: korgans-redemption-v10.0.1.iemod
@@ -2711,7 +2711,7 @@ modules:
     components:
       - 0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: MinscFriendship
       release: v1.3
       asset: minsc-friendship-v1.3.iemod
@@ -2739,7 +2739,7 @@ modules:
     components:
       - 0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: HaerdalisFriendship
       release: v1.2
       asset: haerdalis-friendship-v1.2.iemod
@@ -2755,7 +2755,7 @@ modules:
     components:
       - 0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: ValygarFriendship
       release: v1.5
       asset: valygar-friendship-v1.5.iemod
@@ -2768,7 +2768,7 @@ modules:
     description: soa+tob - add frienship path for Mazzy
     components: [0]
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: MazzyFriendship
       release: v3.5
       asset: mazzy-friendship-v3.5.iemod
@@ -2794,7 +2794,7 @@ modules:
     components:
       - 0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: CerndFriendship
       release: v1.3
       asset: Cernd-Friendship-v1.3.iemod
@@ -2811,7 +2811,7 @@ modules:
     components:
       - 0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: ViconiaFriendship
       release: v4.5
       asset: Viconia-Friendship-v4.5.iemod
@@ -2842,7 +2842,7 @@ modules:
     description: soa+tob - add frienship path for Yoshimo
     components: [0]
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: YoshimoFriendship
       release: v5.0
       asset: yoshimo-friendship-v5.0.iemod
@@ -2857,7 +2857,7 @@ modules:
     description: soa+tob - add frienship path for Sarevok
     components: [0]
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: SarevokFriendship
       release: v2.7
       asset: sarevok-friendship-v2.7.iemod
@@ -2866,7 +2866,7 @@ modules:
     components:
       - 0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Hexxat-Friendship
       release: v1.1
       asset:  hexxat-friendship-1.1.iemod
@@ -2983,7 +2983,7 @@ modules:
       # cdtweaks has one too
       - 4 # Give Edwina a Portrait
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Edwin_Romance
       release: v4,0
       asset:  edwin-romance-v4.0.iemod
@@ -3026,7 +3026,7 @@ modules:
       - 5 # Restored Aerie/Jaheira/Anomen interjection in Underdark
       - 6 # Banter Accelerator -> 10 minutes  -- same as banterpack accelerator, more configurable, overrides
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: IEP_Extended_Banter
       release: v6
       asset: iep-extended-banters-v6.iemod
@@ -3131,7 +3131,7 @@ modules:
       #- 2 # Garrick Banters: 1.4
       - 16 # "Wilson Chonicles" Mod - Cross Banters: 1.4
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: SmilingImpCrossBanterMod
       release: v.1.7
       asset: smiling-imps-cross-banter-mod-1.7.iemod
@@ -3215,7 +3215,7 @@ modules:
     description: Heart of the Wood
     components: [0]
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: HeartOfTheWood
       release: v7.0.0
       asset:  heart-of-the-wood-7.0.0.iemod
@@ -3350,7 +3350,7 @@ modules:
     overview: This mod allows you to upgrade Haer'Dalis' swords in the Underdark.
     components: [0]
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: HaerDalis_Swords
       release: v3.1.0
       asset: improved-haerdalis-swords-v3.1.0.iemod
@@ -3400,7 +3400,7 @@ modules:
     components:
       - 0 # Jan's Alchemy
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: JansAlchemy
       release: v8.1.0
       asset: jans-alchemy-v8.1.0.iemod
@@ -3412,7 +3412,7 @@ modules:
     components:
       - 0 # Stuff of the magi
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: StuffofTheMagi
       release: v6.0.0
       asset: stuff-of-the-magi-6.0.0.iemod
@@ -3494,7 +3494,7 @@ modules:
       - 0 # Ruad Ro'fhessa (SoA)
       - 10 # Ruad Ro'fhessa (ToB)
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: RuadRofhessaItemUpgrade
       release: v29.4.0
       asset: ruad-rofhessa-item-upgrade-v29.4.0.iemod
@@ -3507,7 +3507,7 @@ modules:
       - 0 # Rolles Safyer: v5.0.5
       - 10 # Bag of Holding in Irenicus Dungeon: v5.0.5
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Rolles
       release: v5.0.5
       asset: rolles-safyer-v5.0.5.iemod
@@ -3518,7 +3518,7 @@ modules:
     components:
       - 0 # Darron
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Darron
       release: v2.0.0
       asset: darron-v2.0.0.iemod
@@ -3530,7 +3530,7 @@ modules:
     components:
       - 0 # Bolda
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Bolsa
       release: v6.0.0
       asset: bolsa-v6.0.0.iemod
@@ -3563,7 +3563,7 @@ modules:
     components:
       - 1 # Saradas Magic NPC Mod for BGII -> Saradas has a mage sprite (optional)
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Saradas_Magic_for_BG2
       release: v2.0.0
       asset: saradas-magic-for-bg2-v2.0.0.iemod
@@ -3578,7 +3578,7 @@ modules:
     components:
       - 0 # Magasin des Curiosites inhabituelles
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: The_Unusual_Oddities_Shop
       release: v5.0
       asset: the-unusual-oddities-shop-5.0.iemod
@@ -5306,7 +5306,7 @@ modules:
     components:
       - 1
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: generalized_biffing
       release: v2.6
       asset: generalized-biffing-v2.6.iemods

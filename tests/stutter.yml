@@ -9,7 +9,7 @@ modules:
     components:
     ignore_warnings: true # no effect altered on... for each component
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Stutter_Debug_Tool
       release: v4.0
       asset: stutterdebug-4.0.iemod

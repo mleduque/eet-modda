@@ -23,7 +23,7 @@
       #- 3 # More common encounters in vanilla areas
       #- 4  # Distribute DSotSC items also in vanilla content
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: DSotSC
       branch: master
       refresh: 7days
@@ -42,7 +42,7 @@
       - 13 # Reduire le nombre de capes de chaman -> Supprimer les capes generiques des pretres orques: 5.0.0
       - 15 # Parchemins de sort -> Version revisee (Sorts de niveau 6): 5.0.0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: NTotSC
       branch: master
       refresh: 10days

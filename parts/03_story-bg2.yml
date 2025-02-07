@@ -61,7 +61,7 @@
       #- 12 # Transformation en Ecorcheur alternative: v8.4
       #- 13 # Restauration de la cinematique de la Promenade de Waukyne: v8.4
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Almaterias_Restoration_Project
       branch: master
       refresh: 7days
@@ -97,7 +97,7 @@
     components:
       - 0 # Fading Promises: v9
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Fading_Promises
       release: v9
       asset: fading-promises-v9.iemod
@@ -349,7 +349,7 @@
     components:
       - 0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: TheSlitheringMenace
       release: v4.0.0
       asset: the-slithering-menace-v4.0.0.iemod
@@ -358,7 +358,7 @@
     components:
       - 0 # Le minotaure et Lilarcor: 2.0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: The_Minotaur_and_Lilacor
       release: v2.1
       asset: the-minotaur-and-lilacor-2.1.iemod
@@ -366,7 +366,7 @@
     description: Lucy the Wyvern - alternate resolution to the encounter
     components: [0] # Lucy la Wiverne: v5.0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Lucy_the_Wyvern
       release: v5.0
       asset: lucy-the-wyvern-v5.0.iemod
@@ -499,7 +499,7 @@
       - 1 # Selence arrives to Waukeens Promenade after the meeting with Gaelan in the slums
       - 4 # Alternative Soubar area
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Shadows_over_Soubar
       release: "2.1"
       asset: shadows-over-soubar-2.1.iemod
@@ -651,7 +651,7 @@
     components:
       - 0 # Expanded Thief Stronghold (Expansion de la Forteresse des voleurs): v3.0.0
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Expanded_Thief_Stronghold
       release: v3.0.0
       asset: expanded-thief-stronghold-v3.0.0.iemod

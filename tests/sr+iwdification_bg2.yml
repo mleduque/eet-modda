@@ -13,7 +13,7 @@ modules:
       #- 2 # Candlekeep Chores Fast Forward
       #- 3 # CtB other improvements
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: Check_the_Bodies
       release: v3.0
       asset: check-the-bodies-3.0.iemod

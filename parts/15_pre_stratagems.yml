@@ -44,7 +44,7 @@
         (https://www.gibberlings3.net/forums/topic/37267-neverwinter-night-for-baldurs-gate-mod/page/14/#findComment-344752)
     components: ask
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: BP-BGT-Worldmap
       release: v13.1.1
       asset: worldmap-v13.1.1.iemod

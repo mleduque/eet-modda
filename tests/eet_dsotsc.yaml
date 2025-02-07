@@ -34,7 +34,7 @@ modules:
       #- 3 # More common encounters in vanilla areas
       #- 4  # Distribute DSotSC items also in vanilla content
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: DSotSC
       branch: master
       refresh: 7days

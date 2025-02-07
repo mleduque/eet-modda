@@ -82,7 +82,7 @@ modules:
     components:
       - 0 # BGGO for EET, BGT, BGEE, BG2EE, ToB and Tutu: v3.1
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: BGGOEET
       branch: master
       refresh: 1day

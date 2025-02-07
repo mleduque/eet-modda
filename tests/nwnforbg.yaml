@@ -46,7 +46,7 @@ modules:
   - name: bp-bgt-worldmap
     components: ask
     location:
-      github_user: SpellholdStudios
+      github_user: Spellhold-Studios
       repository: BP-BGT-Worldmap
       release: v13.1.1
       asset: worldmap-v13.1.1.iemod
