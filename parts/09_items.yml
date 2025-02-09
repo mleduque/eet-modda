@@ -159,6 +159,14 @@
       repository: Item_Upgrade
       release: v53
       asset: lin-itemupgrade-v53.zip
+  - name: Item_Pack
+    description: new items to Baldur's Gate II, Tutu, BGT and Planescape:Torment, as well as plenty of item-related tweaks
+    components: ask
+    location:
+      github_user: Dau1makan
+      repository: Item-Pack
+      release: v2.1_itempack
+      asset: Item_Pack_v2.1.zip
   - name: thalan
     description: Thalantyr Item Upgrade - Thalantyr can make new item and sells more containers
     components:
