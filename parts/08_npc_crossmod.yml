@@ -12,8 +12,8 @@
     location:
       github_user: Gibberlings3
       repository: Crossmod_Banter_Pack_for_Baldurs_Gate_II
-      release: v27
-      asset: lin-crossmodbg2-v27.zip
+      release: v28
+      asset: crossmod-banter-pack-for-baldurs-gate-ii-v28.iemod
   - name: adrian
     description: Adrian crossmod
     components:
