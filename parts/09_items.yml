@@ -157,8 +157,8 @@
     location:
       github_user: Pocket-Plane-Group
       repository: Item_Upgrade
-      release: v53
-      asset: lin-itemupgrade-v53.zip
+      release: v54
+      asset: lin-itemupgrade-v54.zip
   - name: Item_Pack
     description: new items to Baldur's Gate II, Tutu, BGT and Planescape:Torment, as well as plenty of item-related tweaks
     components: ask
