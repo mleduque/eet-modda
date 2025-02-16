@@ -440,7 +440,7 @@
       github_user: Gibberlings3
       repository: Sarah
       release: v7
-      asset: lin-sarahtob-v7.zip 
+      asset: lin-sarahtob-v7.zip
       replace:
         - file_globs: ["dialogues/k#sarahb.d", "dialogues/k#sar25b.d"]
           regex: true
@@ -963,8 +963,8 @@
     location:
       github_user: Austin-BG
       repository: SearchGuild
-      release: v.1.2
-      asset: detective-guild-of-athkatla-1.2.iemod
+      release: v.1.3
+      asset: detective-guild-of-athkatla-1.3.iemod
 
   - name: w_packmule
     components:
