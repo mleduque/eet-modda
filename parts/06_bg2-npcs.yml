@@ -439,8 +439,8 @@
     location:
       github_user: Gibberlings3
       repository: Sarah
-      release: v7
-      asset: lin-sarahtob-v7.zip
+      release: v8
+      asset: lin-sarahtob-v8.zip
       replace:
         - file_globs: ["dialogues/k#sarahb.d", "dialogues/k#sar25b.d"]
           regex: true
