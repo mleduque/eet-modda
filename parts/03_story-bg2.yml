@@ -261,7 +261,7 @@
   - name: crucible
     components: ask
     location:
-      http: https://america.iegmc.com/morpheus562/crucible-3.0.zip
+      http: https://america.iegmc.com/morpheus562/crucible-3.1.zip
       replace:
         - file_globs: ['crucible.tp2']
           replace: 'REQUIRE_PREDICATE !FILE_EXISTS ~mih_eq/setup-mih_eq.tp2~ @3002'

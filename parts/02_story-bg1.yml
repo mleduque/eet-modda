@@ -443,7 +443,7 @@
     description: BG2, 10 quests mod
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/glittergear/Blood.and.Faith.0.9.3.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/glittergear/BloodAndFaith.v1.1.zip
       replace:
         # Brutally force EET compatibility
         - file_globs: [ 'BloodAndFaith.tp2' ]
