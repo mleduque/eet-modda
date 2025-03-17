@@ -165,8 +165,8 @@
     location:
       github_user: Dau1makan
       repository: Item-Pack
-      release: v2.1_itempack
-      asset: Item_Pack_v2.1.zip
+      release: v2.2_itempack
+      asset: Item_Pack_v2.2.zip
   - name: thalan
     description: Thalantyr Item Upgrade - Thalantyr can make new item and sells more containers
     components:
