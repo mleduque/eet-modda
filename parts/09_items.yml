@@ -539,8 +539,8 @@
     location:
       github_user: D2-mods
       repository: The-Workshop-Kitpack
-      release: v5.1
-      asset: the-workshop-kitpack-5.1.iemod
+      release: v5.20
+      asset: the-workshop-kitpack-5.20.iemod
 
   - name: item_rev
     descritpion: Item Revisions - store component
