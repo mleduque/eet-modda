@@ -158,25 +158,25 @@
     components:
       - 0 # Colours of Infinity: Tales of the Deep Gardens -> Yes, but don't patch the existing save games: 12.7
     location:
-      path: modda-cache/ie-mods-archive/weaselmods/bg/colours_of_infinity/Tales of the Deep Gardens v12.91.zip
+      path: modda-cache/ie-mods-archive/weaselmods/bg/colours_of_infinity/Tales of the Deep Gardens v12.94.zip
   - name: Innershade
     description: "Colours of Infinity: Innershade"
     components:
       - 0 # Colours of Infinity: Innershade -> Yes, but don't patch the existing save games: 11.0
     location:
-      path: modda-cache/ie-mods-archive/weaselmods/bg/colours_of_infinity/Innershade v11.12.zip
+      path: modda-cache/ie-mods-archive/weaselmods/bg/colours_of_infinity/Innershade v11.13.zip
   - name: WhiteQueen
     description: "Colours of Infinity: The White Queen"
     components:
       - 0 # Colours of Infinity - The White Queen -> Yes, but don't patch the existing save games: 6.9
     location:
-      path: modda-cache/ie-mods-archive/weaselmods/bg/colours_of_infinity/WhiteQueen v7.3.zip
+      path: modda-cache/ie-mods-archive/weaselmods/bg/colours_of_infinity/WhiteQueen v7.3.1.zip
   - name: ISNF
     description: "Colours of Infinity: I Shall Never Forget"
     components:
       - 0 # Colours of Infinity: I Shall Never Forget: 6.0
     location:
-      path: modda-cache/ie-mods-archive/weaselmods/bg/colours_of_infinity/I Shall Never Forget v6.2.zip
+      path: modda-cache/ie-mods-archive/weaselmods/bg/colours_of_infinity/I Shall Never Forget v6.3.zip
 
   # Athkatlan Grounds series
   - name: SouthernEdge
