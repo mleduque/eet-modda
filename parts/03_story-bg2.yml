@@ -258,6 +258,22 @@
       rename: Call_of_the_lost_goddess_1.4.zip # 2024-06-01
       alt:
         file: /home/mick/Games/modda-cache/static/acifer/Call_of_the_lost_goddess_1.4.zip
+  - name: ThroneoftheMadGod
+    description: Throne of the Mad God
+    summary: >
+      quest mod for BG2EE and EET and adds new areas, new enemies and a new questline to the game
+      Engaging new storyline based on Forgotten Realms lore
+      16 newly designed 3D areas, including a vast dwarven dungeon
+      Explore the depths beneath the Troll Mountains in northern Amn
+      New enemies with custom animations never seen before
+      Intriguing puzzles and mysteries
+      Unique magical items to discover and wield
+    components: ask
+    location:
+      github_user: AciferBG
+      repository: Throne-of-the-Mad-God
+      release: v1.1
+      asset: Throne_of_the_Mad_God.zip
   - name: crucible
     components: ask
     location:
