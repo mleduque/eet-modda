@@ -22,8 +22,7 @@ modules:
     location:
       github_user: Gibberlings3
       repository: EET
-      branch: master
-      refresh: 10days
+      tag: v14.0
       layout:
           layout_type: multi_dir
           dirs:
