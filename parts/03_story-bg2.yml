@@ -233,7 +233,7 @@
       - 2 # The Journey to the Whin Hill: add the optional minor joinable companion - Afu-Zuuvi
       - 3 # The Journey to the Whin Hill: Player-Initiated Dialogues for the optional companion - Afu-Zuuvi
     location:
-      path: modda-cache/ie-mods-archive/weaselmods/bg/WhinHill v1.3.zip
+      path: modda-cache/ie-mods-archive/weaselmods/bg/WhinHill v1.3.1.zip
   - name: Eilistraee
     description: Eilistraee's Song
     components:
