@@ -106,7 +106,7 @@ modules:
     components:
       - 0 # Xikasz's Grove Of Chaos - a quest & companion mod for IWD:EE -> Yes, but don't patch existing save games.: v1.0
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/GroveOfChaos v1.4.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/GroveOfChaos v1.5.zip
 
 
 ##############
