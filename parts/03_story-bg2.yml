@@ -215,11 +215,11 @@
     description: BG2 npc - Xzelë Melaenitt, the paladin of Evening Glory (beauty in undeath)
     components: ask
     location:
-      path: modda-cache/ie-mods-archive/weaselmods/bg/the_dreadful_tales/InLoveUndeath v1.8.zip
+      path: modda-cache/ie-mods-archive/weaselmods/bg/the_dreadful_tales/InLoveUndeath v1.8.2.zip
   - name: JuniperAndTheStoneLeech
     components: ask
     location:
-      path: modda-cache/ie-mods-archive/weaselmods/bg/the_dreadful_tales/JuniperAndTheStoneLeech v1.5.zip
+      path: modda-cache/ie-mods-archive/weaselmods/bg/the_dreadful_tales/JuniperAndTheStoneLeech v1.7.zip
   - name: BloodiedStingsOfBarovia
     components: ask
     location:
