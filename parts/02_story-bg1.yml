@@ -399,7 +399,7 @@
   - name: TheVanishingOfSkieSilvershield
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/TheVanishingOfSkieSilvershield v2.4.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/TheVanishingOfSkieSilvershield v2.5.zip
   - name: BG1Aerie
     components:
       - 0 # Aerie for BG:EE
