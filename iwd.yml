@@ -180,7 +180,7 @@ modules:
     components:
       - 0 # Ina NPC for IWD:EE: 2.1
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Ina v2.2.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Ina v2.4.zip
   - name: Lanna
     description: elven paladin, quest, talks, romance
     components:
