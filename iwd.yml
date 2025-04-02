@@ -198,7 +198,7 @@ modules:
     components:
       - 0 # Orra NPC for IWD:EE: v2.1
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Orra v2.5.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Orra v2.6.zip
   - name: Tipps
     description: halfling geomantic sorcerer + talks + romance + items
     components:
