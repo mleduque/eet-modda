@@ -151,7 +151,7 @@ modules:
     components:
       - 0 # Dusky NPC for IWD:EE
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Dusky v2.4.1.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Dusky v2.5.zip
       replace:
         - file_globs: [ 'Dusky/baf/L#DUSKY.baf' ]
           replace: 'RealSetGlobalTimer("DuskyDontTalkOften","GLOBAL",1200)'

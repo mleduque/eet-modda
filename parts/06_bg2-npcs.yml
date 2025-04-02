@@ -284,7 +284,7 @@
     description: BG2 npc - dwarven fighter/mage/thief, quest
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/Dvaradime v1.5.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/Dvaradime v1.6.zip
 
   # ArtemiusI NPCs
   - name: paina
