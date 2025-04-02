@@ -263,7 +263,7 @@
       # 4 : crossmod banter later after installing other mods
       - 5 # [CHEAT] Enable shaman stronghold for all classes
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/willowisp v3.0.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/willowisp v3.2.zip
       replace:
         - file_globs: [ "willowisp/baf/l0will.baf" ]
           replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",2400)'
