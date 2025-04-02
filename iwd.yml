@@ -204,13 +204,13 @@ modules:
     components:
       - 0 # Tipps NPC for IWD:EE
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Tipps v2.2.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Tipps v2.3.zip
   - name: Tviy
     description: chaotic evil gnome cleric, follows Urdlen
     components:
       - 0 # T'viy NPC for IWD:EE: v2.3
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Tviy v2.3.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/Tviy v2.4.zip
   - name: Urchin
     description: urchin(creature) + area=night glade
     components:
