@@ -393,7 +393,7 @@
     components:
       - 0
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/SotSC v8.8.zip
+      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/SotSC v8.9.zip
       patches:
         - relative: patches/eet/sotsc-faster-hideout.diff
   - name: TheVanishingOfSkieSilvershield
