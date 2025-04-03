@@ -2161,9 +2161,9 @@ modules:
       - 0 # Luxley Family Mod for BGII:SoA: v2.0.0
     location:
       github_user: Spellhold-Studios
-      repository: The_Luxley_Family
-      release: v2.0.0
-      asset: the-luxley-family-v2.0.0.iemod
+      repository: Luxley-Family
+      release: v2.1
+      asset: luxleysoa-v2.1.iemod
       replace:
         - file_globs: ["dialogues/fhlseb.d"]
           replace: 'RealSetGlobalTimer("FHLAndDarkTime","GLOBAL",1500)'
