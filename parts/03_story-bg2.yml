@@ -394,9 +394,10 @@
     original_location: http://mods.pocketplane.net/questpack-v35-win.zip
     location:
     # alternative: http://america.iegmc.net/ppg/questpack-v35-win.zip
-      github_user: mleduque
-      repository: simding0_questpack
-      tag: v3.5-lean
+      github_user: Pocket-Plane-Group
+      repository: QuestPack
+      branch: master
+      refresh: 7days
       layout:
         layout_type: multi_dir
         dirs:
