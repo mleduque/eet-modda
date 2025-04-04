@@ -297,6 +297,24 @@
           with: 'SetGlobalTimer("X32RecGameTalkTimer","GLOBAL",ONE_DAY)'
 
   # ArtemiusI NPCs
+  - name: Sirene
+    components:
+      - 0   # Sirene NPC for Baldur's Gate: Enhanced Edition
+      - 2 # ~Choose an portrait for Sirene (check mod folder for portraits): Alternate Light Armor portrait by Sirick
+    location:
+      github_user: ArtemiusI
+      repository: Sirene-NPC
+      branch: master
+      refresh: 10days
+      replace:
+        - file_globs: ['dialogue/c0sirenj.d']
+          replace: 'RealSetGlobalTimer("C0SireneTalksBG1Timer","GLOBAL",2700)'
+          with: 'RealSetGlobalTimer("C0SireneTalksBG1Timer","GLOBAL",600)'
+        - file_globs: ['scripts/c02siren.baf']
+          replace: 'RealSetGlobalTimer("C02SireneRomanceTimer","GLOBAL",ONE_DAY)'
+          with: 'RealSetGlobalTimer("C02SireneRomanceTimer","GLOBAL",1200)'
+      patch:
+        relative: eet/sirene-bg1-wait-here.diff
   - name: Aura_BG1
     components: ask
       #- 0 # Aura NPC for Baldur's Gate: Enhanced Edition: 3.3
@@ -425,7 +443,7 @@
       github_user: Gibberlings3
       repository: Glam-NPC-Pack
       release: v5
-      asset: lin-glamnpcpack-v5.zip 
+      asset: lin-glamnpcpack-v5.zip
       replace:
         - file_globs: ["Dialogue/GV#LITT.d"]
           replace: 'SetGlobalTimer("GV#LITTGnollsTimer","GLOBAL",ONE_DAY)'

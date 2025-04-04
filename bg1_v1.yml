@@ -98,25 +98,6 @@ modules:
       repository: Saradas_Magic_for_BGEE
       branch: main
       refresh: 5days
-  - name: Sirene
-    components:
-      - 0   # Sirene NPC for Baldur's Gate: Enhanced Edition
-      - 2 # ~Choose an portrait for Sirene (check mod folder for portraits): Alternate Light Armor portrait by Sirick
-    location:
-      github_user: ArtemiusI
-      repository: Sirene-NPC
-      branch: master
-      refresh: 10days
-      replace:
-        - file_globs: ['dialogue/c0sirenj.d']
-          replace: 'RealSetGlobalTimer("C0SireneTalksBG1Timer","GLOBAL",2700)'
-          with: 'RealSetGlobalTimer("C0SireneTalksBG1Timer","GLOBAL",600)'
-        - file_globs: ['scripts/c02siren.baf']
-          replace: 'RealSetGlobalTimer("C02SireneRomanceTimer","GLOBAL",ONE_DAY)'
-          with: 'RealSetGlobalTimer("C02SireneRomanceTimer","GLOBAL",1200)'
-      patch:
-        relative: eet/sirene-bg1-wait-here.diff
-
   - name: EET_Tweaks
     description: "Baldur's Gate: Enhanced Edition Trilogy Tweaks (EET Tweaks)"
     overview: optional tweaks for Infinity Engine games
