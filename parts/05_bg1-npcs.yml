@@ -185,8 +185,8 @@
     location:
       github_user: Pocket-Plane-Group
       repository: Finch_NPC
-      release: v6.0
-      asset: finch-npc-mod-v6.0.iemod
+      branch: master
+      refresh: 10days
       patch:
         relative: eet/finch-wait-here.diff
   - name: Ishlilkamod
