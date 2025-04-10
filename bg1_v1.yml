@@ -111,9 +111,10 @@ modules:
       - 2062 # XP for quests -> Decrease to 50%
       - 2063 # XP for quests -> Decrease to 25%
     location:
-      github_user: mleduque
+      github_user: K4thos
       repository: EET_Tweaks
-      branch: fr
+      branch: master
+      refresh: 10days
       patches:
         - relative: eet/eet_tweaks-xpbonus.diff
           comment: continue distributing XP (plateau)
