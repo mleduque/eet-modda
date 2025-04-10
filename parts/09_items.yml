@@ -190,10 +190,6 @@
       - 7     # Equipement supplementaire pour les voleurs et les bardes
       - 8     # Rogue Rebalancing - Upgradeable Equipment
     ignore_warn: true # WARNING: no effects altered on MISC2P.ITM
-    location:
-      github_user: FredrikLindgren
-      repository: rr
-      branch: devels
   - name: swordap
     description: Improved Haer'Dalis' Swords
     overview: This mod allows you to upgrade Haer'Dalis' swords in the Underdark.

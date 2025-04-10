@@ -459,10 +459,6 @@ modules:
       - 0 # Rogue Rebalancing - Proper dual-wielding implementation for Thieves and Bards
       - 3 # Rogue Rebalancing - Proper racial adjustments for thieving skills
       - 7 # Equipement supplementaire pour les voleurs et les bardes
-    location:
-      github_user: FredrikLindgren
-      repository: rr
-      branch: devel
   - name: forgotten-armament
     description: Forgotten armament
     components:

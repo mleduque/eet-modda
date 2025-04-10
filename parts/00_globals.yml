@@ -63,9 +63,10 @@ locations:
       patch:
         relative: patches/iwdification-ini.diff
     rr:
-      github_user: FredrikLindgren
+      github_user: TotoR115
       repository: rr
-      branch: devel
+      branch: master
+      refresh: 10days
     stratagems:
       github_user: Gibberlings3
       repository: SwordCoastStratagems
