@@ -238,6 +238,7 @@
       #- 1060 # Skip Candlekeep Chores and CtB intro cutscenes
       - 1070 # CtB: Remove Venereal Disease
       - 1080 # CtB: Fixed Harp of Myth Drannor
+      - 1090 # ToT : remove cutscenes
 
       ### Gameplay Tweaks and Fixes ###
       #- 2000 # Streamlined Wizard Spell Progression
@@ -262,7 +263,7 @@
       #- 2140 # Allow Arcane Spellcasting in Armor
       #- 2150 # Allow Thievery in Armor
       - 2160 # Remove Delay from Improved Haste Spells
-      - 2170 # Reputation has no Effect on Store Prices
+      #- 2170 # Reputation has no Effect on Store Prices
       - 2180 # Charisma has a stronger Effect on Store Prices
       - 2200 # Familiars can sort magical scrolls
     location:
