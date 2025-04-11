@@ -272,8 +272,8 @@
     location:
       github_user: AciferBG
       repository: Throne-of-the-Mad-God
-      release: v1.1
-      asset: Throne_of_the_Mad_God.zip
+      release: v1.2
+      asset: Throne_of_the_Mad_God_v1.2.zip
   - name: crucible
     components: ask
     location:
