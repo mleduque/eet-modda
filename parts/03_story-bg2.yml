@@ -689,10 +689,12 @@
       - 2 # Candlekeep Chores Fast Forward
       - 3 # CtB other improvements
     location:
-      github_user: mleduque
+      github_user: Spellhold-Studios
       repository: Check_the_Bodies
-      branch: no_spells
+      branch: master
       refresh: 3days
+      patches:
+        - relative: patches/eet/ctb-more-quests.diff
 
   - name: DruidGroveMakeover
     description: Druid Grove Area Makeover

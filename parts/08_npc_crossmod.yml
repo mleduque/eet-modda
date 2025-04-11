@@ -26,10 +26,21 @@
     description: Ajantis BG1 crossmod
     components:
       - 30 # Ajantis SoD NPC: Crossmod Content
+  - name: ACBre
+    description: Breagar crossmod
+    components:
+      - 2 # Breagar: Crossmods and PID
   - name: c#brandock
     description: Brandock the mage - crossmod
     components:
       - 10 # Brandock the Mage: Crossmod Content
+  - name: "c#brage"
+    components:
+      - 10 # Brage's Redemption: Crossmod Content
+  - name: evandra
+    description: Evandra crossmod
+    components:
+      - 1 # Crossmod Content: v2.2
   - name: TS_sime
     description: Tortured soul's Sime crossmod
     components:
@@ -45,9 +56,6 @@
       repository: SmilingImpCrossBanterMod
       release: v.1.7
       asset: smiling-imps-cross-banter-mod-1.7.iemod
-  - name: "c#brage"
-    components:
-      - 10 # Brage's Redemption: Crossmod Content
   - name: c#husam
     installation:
       after: ajantisbg1, ajantis_bg2, alternatives, c#brage, c#brandock, EET, gbthfkp, Imoen4ever, c#sodboabri

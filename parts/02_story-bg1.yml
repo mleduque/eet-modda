@@ -62,6 +62,7 @@
         layout_type: single_dir_plus_tp2
         tp2: Setup-TGC1E.tp2
   - name: DarkHorizons
+    description: old BG1 mod - one major quest, multiple minor quests
     components:
       - 0 # Mod "Dark Horizons": 3.01
     location:
@@ -69,6 +70,8 @@
       repository: DarkHorizons
       branch: main
       refresh: 5days
+    disabled:
+      because: too much XP, too many OP items
 
   - name: "c#endlessbg1"
     components:
@@ -367,6 +370,8 @@
       release: v4.8
       asset: gorgon-v4.8.iemod
   - name: Blackhearts
+    installation:
+      before: ['c#brandock' ]
     components: ask
     location:
       github_user: 11jo # forked because needs-patch #  https://forums.beamdog.com/discussion/comment/1200875/#Comment_1200875
@@ -408,14 +413,6 @@
       repository: AerieBG1
       release: v2.5
       asset: aerie-in-bgee-2.5.iemod
-  - name: DarkHorizons
-    description: old BG1 mod - one major quest, multiple minor quests
-    components: ask
-    location:
-      github_user: The-Gate-project
-      repository: DarkHorizons
-      branch: main
-      refresh: 3days
   - name: Kara-Tur
     description: "T'was a Slow Boat from Kara-Tur"
     overview: BG1 Quest/Store/New Items

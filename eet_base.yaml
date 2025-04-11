@@ -1112,10 +1112,10 @@ modules:
     description: Region of Terror - BG2 mod, large quest mod focussed on Drizzt Do'Urden. 35 quests, 160 areas
     components: ask
     location:
-      github_user: SpellholdStudio
-      repository: Region_of_Terror
-      release: v5.0
-      asset: region-of-terror-v5.0.iemod
+      github_user: Spellhold-Studios
+      repository: Region-of-Terror
+      branch: master
+      refresh: 7days
       patch:
         relative: rot-taming-drizzt.diff
   - name: TDD # ok

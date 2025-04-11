@@ -407,7 +407,7 @@
       Friendship stops at chapter 4 / trip to spellhold, romance for male elven npc
     components:
       - 0 #/ Evandra NPC: v2.2
-      - 1 # Crossmod Content: v2.2
+      #- 1 # Crossmod Content: v2.2
     location:
       http: http://america.iegmc.net/g3/lin-evandra-v2.2.zip
       # also path: /home/mick/Games/modda-cache/static/lin-evandra-v2.2.zip
