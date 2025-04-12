@@ -336,9 +336,18 @@
       branch: main
       refresh: 5days
 
+  - name: Loretakers
+    components: ask
+    location:
+      github_user: AciferBG
+      repository: Loretakers
+      release: v1.5
+      asset: Loretakers.V1.5.zip
+
+  # must be after Loretakers
   - name: JA#BGT_AdvPack
     installation:
-      after: [bgqe, bg1npc, bg1re, garrick-tt, bg1ub]
+      after: [bgqe, bg1npc, bg1re, garrick-tt, bg1ub, loretakers]
     components: ask
     location:
       github_user: YChap # or TotoR115
@@ -386,13 +395,7 @@
       repository: BS_Baldurans_Seatower
       release: vEAOB.9
       asset: bs-baldurans-seatower-veaob.9.iemod
-  - name: Loretakers
-    components: ask
-    location:
-      github_user: AciferBG
-      repository: Loretakers
-      release: v1.5
-      asset: Loretakers.V1.5.zip
+
   - name: SotSC
     description: Shades of the Sword Coast
     components:
