@@ -31,7 +31,10 @@
       because: using ImoenIsStone instead
 
   - name: SkitiaNPCs
-    description: bg2 version of Skitia NPCs
+    description: BG2 version of Skitia NPCs
+    overview: Emily, Helga, Kale, Recorder and Vienxay, each with a quest and relationship system
+    installation:
+      after: [Petsy, Yvette, Sirene_BG2, WilsonChronicles]
     components: ask
     location:
       github_user: Skitia

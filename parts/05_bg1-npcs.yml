@@ -6,26 +6,35 @@
   #########
 
 # Remember: some NPCs are installed directly on bg1
+  - name: GlamNPCPack
+    description: |
+      bg1 npcs
+      - Vynd(drow ass., m)
+      - Littlun(Halfling arch., f)
+      - Moidre(Dwarwen Def, f)
+      - Dave(Talos, m)
+      - Flara(DD, f)
+    installation:
+      general: better put it early, no requirement by itself but many NPC mods will have crossmod with this one
+    components:
+      - 0 # Glam's NPC Pack for BG:EE, BGT and BG TUTU
+    location:
+      github_user: Gibberlings3
+      repository: Glam-NPC-Pack
+      release: v5
+      asset: lin-glamnpcpack-v5.zip
+      replace:
+        - file_globs: ["Dialogue/GV#LITT.d"]
+          replace: 'SetGlobalTimer("GV#LITTGnollsTimer","GLOBAL",ONE_DAY)'
+          with: 'SetGlobalTimer("GV#LITTGnollsTimer","GLOBAL",TEN_DAYS)'
 
   # Jastey NPCs
   - name: ACBre
     description: Ascalon's Breagar - dwarf fighter, long quest
     installation:
       general: for crossmod
-      after: >
-        - DSotSC
-        - Amber
-        - aurenaseph
-        - toBR # what?
-        - bgqe
-        - tod # tower of deception
-        - ac_quest
-        - alternatives
-        - imoen4ever
-        - transitions
-        - bst
-        - c#anotherfinehell
-        - endlessbg1
+      after: [AC_QUEST, alternatives, amber, aurenaseph, bgqe, bst, c#anotherfinehell, c#endlessbg1, DSotSC,
+              EET, imoen_forever, transitions, tod, tobr]
     components: ask
       #- 0 # Breagar: Contents
       #- 2 # Breagar: Crossmods and PID
@@ -81,7 +90,7 @@
         - file_globs: ["c#brandock.tp2"]
           replace: 'APPEND ~gtimes.ids~ ~1800 C#BRANDOCK_TIMERSHORT~ UNLESS ~C#BRANDOCK_TIMERSHORT~'
           with: 'APPEND ~gtimes.ids~ ~900 C#BRANDOCK_TIMERSHORT~ UNLESS ~C#BRANDOCK_TIMERSHORT~'
-  - name: "c#brage"
+  - name: c#brage
     description: bg1, brage redemption
     installation:
       general: for crossmod content
@@ -166,6 +175,8 @@
       release: v10
       asset: grey-the-dog-npc-10.iemod
   - name: gavin
+    description: Gavin NPC
+    overview: bg1, nNG Dawnbringer of Lathander (human, male), quest, friendship, romance, flirt, pid
     # will prompt for romance timer
     components: ask
     location:
@@ -220,6 +231,10 @@
 
   # Skitia BG1 npcs
   - name: Emily
+    description: Emily, half-elf archer
+    overview: Bg1+SoD, half-elf NG archer, quest, friendship (BG1), romance (SoD), banters, crossmod
+    installation:
+      after: [ Kale, Vienxay, Aura, Helga, Recorder, Drake ]
     components: ask
     location:
       github_user: Skitia
@@ -233,7 +248,13 @@
         - file_globs: ["Scripts/X3mily.baf", "Dialogue/X3milyJ.d"]
           replace: 'RealSetGlobalTimer("X3milyTimer","GLOBAL",3200)' # 53 min
           with: 'RealSetGlobalTimer("X32milyRealTalkTimer","GLOBAL",720)' # 12 min
+      patches:
+        - relative: patches/eet/emily-multi-romance.diff
   - name: Helga
+    description: Helga, dwarven priest of Haela
+    overview: bg1+SoD, dwarf (f) CN cleric (kit), small quest, friendship+banters (no romance),crossmod
+    installation:
+      after: [ Aura, Emily, Helga, Kale, Recorder, Vienxay ]
     components: ask
     location:
       github_user: Skitia
@@ -256,6 +277,10 @@
           replace: 'SetGlobalTimer("X3HelgaQuestTen","GLOBAL",TEN_DAYS)'
           with: 'SetGlobalTimer("X3HelgaQuestTen","GLOBAL",FOUR_DAYS)'
   - name: Kale
+    description: Kale NPC
+    overview: hafling (m) CN Barbarian/Warden from Gullykin, quest, frienship+banters, romance (sod), crossmod
+    installation:
+      after: [Aura, Sirene, Drake, Recorder, Emily, Viexnay]
     components: ask
     location:
       github_user: Skitia
@@ -269,6 +294,10 @@
           replace: 'SetGlobalTimer("X32KaleGameTalkTimer","GLOBAL",THREE_DAYS\)'
           with: 'SetGlobalTimer("X32KaleGameTalkTimer","GLOBAL",ONE_DAY)'
   - name: Recorder
+    description: Recorder NPC for BG1
+    overview: bg1+sod, bard (f), Lorekeeper kit, NG, 2 small quests (bg1,sod), friendship+banters, romance (sod), crossmod
+    installation:
+      after: [Emily, Vienxay, Helga, Kale, Aura, Drake]
     components: ask
     location:
       github_user: Skitia
@@ -279,8 +308,13 @@
         - file_globs: ["Dialogue/SoD/X32RecJ.d"]
           replace: 'SetGlobalTimer("X32RecGameTalkTimer","GLOBAL",THREE_DAYS\)'
           with: 'SetGlobalTimer("X32RecGameTalkTimer","GLOBAL",ONE_DAY)'
+      patches:
+        - relative: patches/eet/recorder-multiple-romance.diff
   - name: Vienxay
-    description: bg1+sod, elf, female NE shadowmage, quest, approval system
+    description: Vienxay NPC (shadowmage)
+    overview: bg1+sod, elf, female NE shadowmage, quest, approval system
+    installation:
+      after: [Aura, Sirene, Drake, Helga, Recorder, Kale, Emily]
     components:
       - 0 # Vienxay NPC for BG1EE
     location:
@@ -288,34 +322,21 @@
       repository: Vienxay-BG1
       branch: master
       refresh: 3days
-      patch:
-        #prompt for portrait (1. Default)
-        relative: patches/eet/viexnay_bg1-defaultportrait-nomusic.diff
+      patches:
+        # prompt for portrait (1. Default)
+        - relative: patches/eet/viexnay_bg1-defaultportrait-nomusic.diff
+        # ATM vienxay doesn't auto-break romances on conflict
       replace:
         - file_globs: ["Dialogue/SoD/X32VienJ.d"]
           replace: 'SetGlobalTimer("X32VienGameTalkTimer","GLOBAL",THREE_DAYS\)'
           with: 'SetGlobalTimer("X32RecGameTalkTimer","GLOBAL",ONE_DAY)'
 
   # ArtemiusI NPCs
-  - name: Sirene
-    components:
-      - 0   # Sirene NPC for Baldur's Gate: Enhanced Edition
-      - 2 # ~Choose an portrait for Sirene (check mod folder for portraits): Alternate Light Armor portrait by Sirick
-    location:
-      github_user: ArtemiusI
-      repository: Sirene-NPC
-      branch: master
-      refresh: 10days
-      replace:
-        - file_globs: ['dialogue/c0sirenj.d']
-          replace: 'RealSetGlobalTimer("C0SireneTalksBG1Timer","GLOBAL",2700)'
-          with: 'RealSetGlobalTimer("C0SireneTalksBG1Timer","GLOBAL",600)'
-        - file_globs: ['scripts/c02siren.baf']
-          replace: 'RealSetGlobalTimer("C02SireneRomanceTimer","GLOBAL",ONE_DAY)'
-          with: 'RealSetGlobalTimer("C02SireneRomanceTimer","GLOBAL",1200)'
-      patch:
-        relative: eet/sirene-bg1-wait-here.diff
   - name: Aura_BG1
+    description: Aura NPC
+    overview: bg1+soa, Gnome (f) artificer (thief kit), quest, romance (f/f)
+    installation:
+      after: [GlamNPCPack, Sirene, Drake, verrsza, White, isra, Emily, Helga, Kale, Recorder, Vienxay, Sotsc]
     components: ask
       #- 0 # Aura NPC for Baldur's Gate: Enhanced Edition: 3.3
     location:
@@ -327,9 +348,11 @@
     #prompt for class (1. Artificer)
     #prompt for portrait (2. BG2 style)
     disabled:
-      because : too different
+      because : setting mismatch
   - name: Drake
-    overview: BG1+SoD, Humal Priest of Tyr, Male, friendship, flirt, one quest each in BG1 and SoD, only join after Bassilus
+    overview: BG1+SoD, Human Priest of Tyr, Male, friendship, flirt, one quest each in BG1 and SoD, only join after Bassilus
+    installation:
+      after: [GlamNPCPack, Sirene, White, verrsza, Aura, Sotsc]
     components:
     - 0 # Drake NPC for Baldur''s Gate: Enhanced Edition: 1.7
     - 1 # Choose a portrait for Drake: -> Default Portrait (The Artisan): 1.7
@@ -350,9 +373,32 @@
         - file_globs: ['scripts/SoD/c02drake.baf']
           replace: 'RealSetGlobalTimer("C02DrakeTalkTimer","GLOBAL",ONE_HOUR)'
           with: 'RealSetGlobalTimer("C02DrakeTalkTimer","GLOBAL",800)'
+  - name: Sirene
+    description: tiefling paladin of Ilmater, custom Martyr kit, friendship, no quest
+    installation:
+      after: [Aura, Drake, ~Emily~, GlamNPCPack, Helga, Kale, verrsza, Vienxay, White]
+    components:
+      - 0   # Sirene NPC for Baldur's Gate: Enhanced Edition
+      - 2 # ~Choose an portrait for Sirene (check mod folder for portraits): Alternate Light Armor portrait by Sirick
+    location:
+      github_user: ArtemiusI
+      repository: Sirene-NPC
+      branch: master
+      refresh: 10days
+      replace:
+        - file_globs: ['dialogue/c0sirenj.d']
+          replace: 'RealSetGlobalTimer("C0SireneTalksBG1Timer","GLOBAL",2700)'
+          with: 'RealSetGlobalTimer("C0SireneTalksBG1Timer","GLOBAL",600)'
+        - file_globs: ['scripts/c02siren.baf']
+          replace: 'RealSetGlobalTimer("C02SireneRomanceTimer","GLOBAL",ONE_DAY)'
+          with: 'RealSetGlobalTimer("C02SireneRomanceTimer","GLOBAL",1200)'
+      patch:
+        relative: eet/sirene-bg1-wait-here.diff
   - name: Kvel_BG1
     description: K’Vel NPC for BG:EE
     overview: BG1+SoD, Drow FMT, male, LE, banters, no quest, no romance, joins after ch5
+    installation:
+      after: [Emily, Helga, Kale, Recorder, Vienxay]
     components: ask
     location:
       github_user: ArtemiusI
@@ -394,6 +440,8 @@
           with: 'RealSetGlobalTimer("L#BristleTime","GLOBAL",800)'
   - name: verrsza
     description: bg1+sod, evil ranger, rakshasa, quests, romance
+    installation:
+      after: [ Aura_BG1, Drake, isra, Sirene, white ]
     components: ask
     location:
       path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/VerrSzaBGEE v6.01.zip
@@ -429,25 +477,6 @@
           regex: true
           replace: 'RealSetGlobalTimer\("T2Val(?<c>.*)Timer","GLOBAL",2700\)'
           with: 'RealSetGlobalTimer("T2Val${c}Timer","GLOBAL",900)'
-  - name: GlamNPCPack
-    description: |
-      bg1 npcs
-      - Vynd(drow ass., m)
-      - Littlun(Halfling arch., f)
-      - Moidre(Dwarwen Def, f)
-      - Dave(Talos, m)
-      - Flara(DD, f)
-    components:
-      - 0 # Glam's NPC Pack for BG:EE, BGT and BG TUTU
-    location:
-      github_user: Gibberlings3
-      repository: Glam-NPC-Pack
-      release: v5
-      asset: lin-glamnpcpack-v5.zip
-      replace:
-        - file_globs: ["Dialogue/GV#LITT.d"]
-          replace: 'SetGlobalTimer("GV#LITTGnollsTimer","GLOBAL",ONE_DAY)'
-          with: 'SetGlobalTimer("GV#LITTGnollsTimer","GLOBAL",TEN_DAYS)'
   - name: haiass
     description: bg1, wolf follower
     components:

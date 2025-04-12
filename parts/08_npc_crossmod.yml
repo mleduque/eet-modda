@@ -34,7 +34,8 @@
     description: Brandock the mage - crossmod
     components:
       - 10 # Brandock the Mage: Crossmod Content
-  - name: "c#brage"
+  - name: c#brage
+    description: brage redemption crossmod
     components:
       - 10 # Brage's Redemption: Crossmod Content
   - name: evandra
@@ -57,14 +58,14 @@
       release: v.1.7
       asset: smiling-imps-cross-banter-mod-1.7.iemod
   - name: c#husam
-    installation:
-      after: ajantisbg1, ajantis_bg2, alternatives, c#brage, c#brandock, EET, gbthfkp, Imoen4ever, c#sodboabri
-      before: c#greythedog, EET_end
     description : Husam npc crossmod
+    installation:
+      after: [ajantisbg1, ajantis_bg2, alternatives, c#brage, c#brandock, EET, gbthfkp, Imoen4ever, c#sodboabri]
+      before: [c#greythedog, EET_end]
     components:
       - 10 # Husam NPC: Crossmod Content
   - name: c#greythedog
-    description: Grey the dog
+    description: Grey the dog crossmod
     components:
       - 10 # Grey the Dog: Crossmod Content
   - name: nephele

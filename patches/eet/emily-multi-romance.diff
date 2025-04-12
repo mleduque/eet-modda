@@ -1,0 +1,149 @@
+diff --git a/Emily/Scripts/SoD/X32mily.baf b/Emily/Scripts/SoD/X32mily.baf
+index 6442462..e549fb8 100644
+--- a/Emily/Scripts/SoD/X32mily.baf
++++ b/Emily/Scripts/SoD/X32mily.baf
+@@ -191,142 +191,10 @@ THEN
+ END
+ 
+ // Auto-kill romance if another reaches 2
+-
+-IF
+-	Global("X32milyRomanceActive","GLOBAL",1)
+-	OR(10)
+-	Global("bd_neera_romanceactive","global",2)
+-	Global("bd_rasaad_romanceactive","global",2)
+-	Global("bd_dorn_romanceactive","global",2)
+-	Global("bd_corwin_romanceactive","global",2)
+-	Global("bd_glint_romanceactive","global",2)
+-	Global("bd_voghiln_romanceactive","global",2)
+-	Global("bd_viconia_romanceactive","global",2)
+-	Global("bd_safana_romanceactive","global",2)
+-	Global("C02SireneRomanceActive","GLOBAL",2)
+-	Global("C02DrakeRomanceActive","GLOBAL",2)
+-	Global("C02AuraRomanceActive","GLOBAL",2)
+-	Global("X32KaleRomanceActive","GLOBAL",2)
+-	Global("X32VienRomanceActive","GLOBAL",2)
+-	Global("X32RecRomanceActive","GLOBAL",2)
+-THEN
+-  RESPONSE #100
+-	SetGlobal("X32milyRomanceActive","GLOBAL",3)
+-END
++// removed
+ 
+ // Auto-kill all other romances
+-
+-IF
+-	Global("X32milyRomanceActive","GLOBAL",2)
+-	Global("bd_neera_romanceactive","global",1)
+-THEN
+-  RESPONSE #100
+-	SetGlobal("bd_neera_romanceactive","global",3)
+-END
+-
+-IF
+-	Global("X32milyRomanceActive","GLOBAL",2)
+-	Global("bd_rasaad_romanceactive","global",1)
+-THEN
+-  RESPONSE #100
+-	SetGlobal("bd_rasaad_romanceactive","global",3)
+-END
+-
+-IF
+-	Global("X32milyRomanceActive","GLOBAL",2)
+-	Global("bd_dorn_romanceactive","global",1)
+-THEN
+-  RESPONSE #100
+-	SetGlobal("bd_dorn_romanceactive","global",3)
+-END
+-
+-IF
+-	Global("X32milyRomanceActive","GLOBAL",2)
+-	Global("bd_corwin_romanceactive","global",1)
+-THEN
+-  RESPONSE #100
+-	SetGlobal("bd_corwin_romanceactive","global",3)
+-END
+-
+-IF
+-	Global("X32milyRomanceActive","GLOBAL",2)
+-	Global("bd_glint_romanceactive","global",1)
+-THEN
+-  RESPONSE #100
+-	SetGlobal("bd_glint_romanceactive","global",3)
+-END
+-
+-IF
+-	Global("X32milyRomanceActive","GLOBAL",2)
+-	Global("bd_voghiln_romanceactive","global",1)
+-THEN
+-  RESPONSE #100
+-	SetGlobal("bd_voghiln_romanceactive","global",3)
+-END
+-
+-IF
+-	Global("X32milyRomanceActive","GLOBAL",2)
+-	Global("bd_viconia_romanceactive","global",1)
+-THEN
+-  RESPONSE #100
+-	SetGlobal("bd_viconia_romanceactive","global",3)
+-END
+-
+-IF
+-	Global("X32milyRomanceActive","GLOBAL",2)
+-	Global("bd_safana_romanceactive","global",1)
+-THEN
+-  RESPONSE #100
+-	SetGlobal("bd_safana_romanceactive","global",3)
+-END
+-
+-IF
+-	Global("X32milyRomanceActive","GLOBAL",2)
+-	Global("C02Sireneromanceactive","global",1)
+-THEN
+-  RESPONSE #100
+-	SetGlobal("C02Sireneromanceactive","global",3)
+-END
+-
+-IF
+-	Global("X32milyRomanceActive","GLOBAL",2)
+-	Global("C02Drakeromanceactive","global",1)
+-THEN
+-  RESPONSE #100
+-	SetGlobal("C02Drakeromanceactive","global",3)
+-END
+-
+-IF
+-	Global("X32milyRomanceActive","GLOBAL",2)
+-	Global("C02Auraromanceactive","global",1)
+-THEN
+-  RESPONSE #100
+-	SetGlobal("C02Auraromanceactive","global",3)
+-END
+-
+-IF
+-	Global("X32milyRomanceActive","GLOBAL",2)
+-	Global("X32KaleRomanceactive","global",1)
+-THEN
+-  RESPONSE #100
+-	SetGlobal("X32KaleRomanceactive","global",3)
+-END
+-
+-IF
+-	Global("X32milyRomanceActive","GLOBAL",2)
+-	Global("X32VienRomanceactive","global",1)
+-THEN
+-  RESPONSE #100
+-	SetGlobal("X32VienRomanceactive","global",3)
+-END
+-
+-IF
+-	Global("X32milyRomanceActive","GLOBAL",2)
+-	Global("X32RecRomanceactive","global",1)
+-THEN
+-  RESPONSE #100
+-	SetGlobal("X32RecRomanceactive","global",3)
+-END
++// removed
+ 
+ // BANTERS
+ 
