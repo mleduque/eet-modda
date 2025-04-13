@@ -496,7 +496,7 @@
     location:
       github_user: szaumoor
       repository: ZS_WeaponOils
-      tag: "1.2"
+      tag: "1.3"
   # overpowered item mods
   - name: DGItems
     overview: |
