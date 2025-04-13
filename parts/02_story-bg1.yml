@@ -305,6 +305,19 @@
       repository: The_Calling
       branch: french
       refresh: 3days
+
+  - name: candlekeep_revisited
+    description:  Candlekeep Revisited
+    overview: A mod for expanding the content of the BG1 tutorial - dialogue with NPCs, 3 minor side-quests
+    installation:
+      before: [ Reflections ]
+    components: ask
+    location:
+      github_user: ArtemiusI
+      repository: Candlekeep-Revisited
+      branch: main
+      refresh: 5days
+
   - name: Reflections
     description: Reflections of Destiny, an SoD Remix Mod
     installation:
@@ -322,7 +335,22 @@
       refresh: 4days
 
   - name: bg1npc
-    components: ask
+    components:
+      - 0 # BG1 NPC Project : modifications necessaires: v32
+      - 10 # BG1 NPC Project : bavardages, quetes et interjections: v32
+      - 23 # BG1 NPC Project : romance d'Ajantis, elements de base (contenu adolescent) -> Rythme : 15 minutes de temps reel entre les dialogues de romance: v32
+      - 33 # BG1 NPC Project : romance de Branwen, elements de base (contenu adolescent) -> Rythme : 15 minutes de temps reel entre les dialogues de romance: v32
+      - 43 # BG1 NPC Project : romance de Coran, elements de base (contenu adulte) -> Rythme : 15 minutes de temps reel entre les dialogues de romance: v32
+      - 53 # BG1 NPC Project : romance de Dynaheir, elements de base (contenu adolescent) -> Rythme : 15 minutes de temps reel entre les dialogues de romance: v32
+      - 63 # BG1 NPC Project : relation avec Shar-Teel, elements de base (contenu adulte) -> Rythme : 15 minutes de temps reel entre les dialogues de romance: v32
+      - 73 # BG1 NPC Project : romance de Xan, elements de base (contenu adolescent) -> Rythme : 15 minutes de temps reel entre les dialogues de romance: v32
+      - 112 # Ajustement du rythme des bavardages pour BG:EE -> Rythme des bavardages : tres frequents: v32
+      - 130 # BG1 NPC Project : ajustements du journal de Sarevok -> Journal de Sarevok enrichi par SixofSpades: v32
+      - 240 # The BG1 NPC Project: Kivan's Proficiency -> Kivan utilise des lances: v32
+      - 150 # BG1 NPC Project : donner a Kivan son portait issu du mod "Kivan and Deheriana Companions": v32
+      - 155 # BG1 NPC Project : donner a Coran son portrait de "Murder in Baldur's Gate": v32
+      - 160 # BG1 NPC Project : ajouter des portraits de PNJs non-recrutables pour les dialogues et les quetes: v32
+      - 200 # BG1 NPC Project : dialogues inities par le joueur: v32
     location:
       github_user: Gibberlings3
       repository: BG1NPC
@@ -336,16 +364,6 @@
       github_user: mleduque
       repository: garrick-tt
       branch: k4thos-eet-compat
-
-  - name: candlekeep_revisited
-    description:  Candlekeep Revisited
-    overview: A mod for expanding the content of the BG1 tutorial - dialogue with NPCs, 3 minor side-quests
-    components: ask
-    location:
-      github_user: ArtemiusI
-      repository: Candlekeep-Revisited
-      branch: main
-      refresh: 5days
 
   - name: Loretakers
     components: ask
