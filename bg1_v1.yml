@@ -96,12 +96,12 @@ modules:
     installation:
       general: after any mods which add or alter CRE, BCS, DLG, ITM, SPL, EFF files
     components:
-      - 2051 # Decrease to 50% -> Decrease to 75%
-      - 2052 # Decrease to 50% -> Decrease to 50%
-      - 2053 # Decrease to 50% -> Decrease to 25%
-      - 2061 # XP for quests -> Decrease to 75%
-      - 2062 # XP for quests -> Decrease to 50%
-      - 2063 # XP for quests -> Decrease to 25%
+      - 2051 # Decrease to 75%
+      #- 2052 # Decrease to 50%
+      #- 2053 # Decrease to 25%
+      #- 2061 # XP for quests -> Decrease to 75%
+      #- 2062 # XP for quests -> Decrease to 50%
+      #- 2063 # XP for quests -> Decrease to 25%
     location:
       github_user: K4thos
       repository: EET_Tweaks
