@@ -10,9 +10,10 @@
     components:
       - 1111 # Trap Overhaul -> Monk Evasion, Fast Detection, Recovery, Anyone OpenLocks: 0.20
     location:
-      github_user: mleduque
-      repository: kjeron_Trap_Overhaul
-      tag: v0.20-french
+      github_user: Plutonium-X
+      repository: MISC_Traps
+      tag: 0.20_fr
+
   - name: A7#ImprovedShamanicDance
     description: Improved Shamanic Dance
     overview: "Allows the shaman to move at reduced speed while performing the dance + extends
