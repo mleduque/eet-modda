@@ -490,6 +490,8 @@
     location:
       github_user: ShadowfireAngel
       repository: Aelar-Wares
+      release: v1.4
+      asset: Aelar-Wares-v1.4.zip
   - name: ZS_WeaponOils
     overview:
     components: ask
@@ -556,3 +558,4 @@
     location:
       github_user: Alexander12-creator
       repository: bg1_icons_pack_mod
+      tag: "1.0"
