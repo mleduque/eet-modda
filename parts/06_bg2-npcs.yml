@@ -794,7 +794,7 @@
     components: ask
     location:
       github_user: Spellhold-Studios
-      repositiry: Tashia-NPC
+      repository: Tashia-NPC
       release: v1.5
       asset: tashia-v1.5.iemod
     disabled:
