@@ -144,7 +144,8 @@
       asset: jasteys-tweaks-for-sod-and-eet-and-bgt-v13.iemod
   - name: imoen_forever
     installation:
-      after: { name: imoen_forever , component: 0 }
+      before: atweaks, cdtweaks, EET_end
+      after: c#anotherfinehell, c#sodboabri, c#sodtweaks, bg2fixpack, EET
     components:
       #- 0 # Imoen 4 Ever in BGII: Imoen Returns after Talking to Gaelan in Chapter 2: v9
       #- 1 # Imoen 4 Ever in BGII: Give Imoen Dialogue Content in SoA: v9
@@ -177,32 +178,91 @@
 
   - name: bgqe
     description: Baldur's Gate Mini Quests and Encounters
-    components:
-      - 0 # Installation de la quete de la vase...: v25.3
-      - 1 # Installation de la quete de famille a Beregost...: v25.3
-      - 2 # Installation de la quete de la garde d'enfants, y compris la rencontre au festival...: v25.3
-      - 3 # Installation de la quete du monstre de Nashkel...: v25.3
-      - 4 # Installation de la quete du paladin dechu...: v25.3
-      - 5 # Installation de la quete de l'amour eternel...: v25.3
-      - 6 # Installation de la rencontre de l'orque amoureux...: v25.3
-      - 7 # Installation de la quete une aide inattendue...: v25.3
-      - 8 # Installation de la quete du hamster...: v25.3
-      - 9 # Installation de la quete de l'ivrogne pres du temple de Beregost...: v25.3
-      - 10 # Installation de la quete un endroit douillet pour Noober...: v25.3
-      - 11 # Installation de la quete de l'epee de Brage...: v25.3
-      - 12 # Installation de la quete sources legales des cartes maritimes...: v25.3
-      - 13 # Installation de la quete additions a la Maison de la Dame et du Temple de la Reine Garce...: v25.3
-      - 14 # Installation de la quete un fermier inquiet...: v25.3
-      - 15 # Installation de la quete des corps pour une bonne cause...: v25.3
-      - 16 # Installation de la quete terminer la quete de Cordyr sans tuer Sil...: v25.3
+    installation:
+      before: bg1npc, EET_end
+      after: EET
+    components: all
     location:
       github_user: Gibberlings3
       repository: BG_Quests_And_Encounters
       release: v29
       asset: baldurs-gate-mini-quests-and-encounters-modification-29.iemod
+
+  - name: Loretakers
+    components:
+      - 0 # Loretakers V 1.5: V 1.5
+    location:
+      github_user: AciferBG
+      repository: Loretakers
+      release: v1.5
+      asset: Loretakers.V1.5.zip
+
+  # must be after Loretakers
+  - name: JA#BGT_AdvPack
+    installation:
+      after: [bg1ub, EET, BGEEClassicMovies, c#endlessbg1, ntotsc, Loretakers, bgqe]
+      before: [bg1re, bg1npc, garrick-tt, c#greythedog, stratagems, EET_End]
+    components:
+      - 2 # Ramazith: 1.0
+      - 3 # Jopi and his uncle Ragefast: 1.0
+      - 4 # Yuxi - Ragefast's imp: 1.0
+      - 5 # Husam's story line finished: 1.0
+      - 6 # IMPROVED/RESTORED: Ducal Palace: 1.0
+      - 7 # Gervisse & Voltine: 1.0
+      - 8 # Seven Suns: 1.0
+      - 9 # Arkhstuff: 1.0
+      - 10 # Iron Throne Guard: 1.0
+      - 13 # RESTORED: Nashkel Garrison soldier: 1.0
+      - 14 # RESTORED: Velvet - Cockfight: 1.0
+      - 16 # RESTORED: Caravan merchant: 1.0
+      - 17 # RESTORED: Galtoth - the fence: 1.0
+      - 18 # Phandalyn waits in Elfsong Tavern: 1.0
+      - 20 # RESTORED: Warehouse Workers: 1.0
+      - 21 # RESTORED: Nobles: 1.0
+      - 22 # RESTORED: Yago's guard in Low Lantern: 1.0
+      - 23 # RESTORED: Ignatio Phleed - the invitation seller: 1.0
+      - 24 # RESTORED: Shalasin: 1.0
+      - 25 # RESTORED: Sir Artolas: 1.0
+      - 30 # RESTORED: Marl - Tavern brawl at Feldepost's Inn: 1.0
+      - 31 # RESTORED: Beregost guards: 1.0
+      - 32 # RESTORED ITEM: Rythe's Last Arrow: 1.0
+      - 33 # RESTORED ITEM: The Protector of the Unworthy: 1.0
+      - 34 # IMPROVED/FIXED: Counting House: 1.0
+      - 35 # Merchants' League investigations: 1.0
+      - 36 # Aldeth & Seniyad: 1.0
+      - 37 # Aldeth's betrayal and remorse: 1.0
+      - 38 # Tenya and the fishermen: 1.0
+      - 39 # Tenya's quest in Temple of Umberlee: 1.0
+      - 40 # Nashkel: 1.0
+      - 41 # Stationary soldiers in Nashkel: 1.0
+      - 42 # Imoen at Winthrop's inn: 1.0
+      - 43 # Priest of Oghma, Gond and Ilmater in Baldur's Gate: 1.0
+      - 44 # Extended/Improved dialogues: 1.0
+      - 45 # Caldo can be charmed: 1.0
+      - 46 # Hulrik and his cows: 1.0
+      - 47 # Improved Shop of Silence: 1.0
+      - 48 # Ender Sai in Baldur's Gate: 1.0
+      - 49 # Sorcerous Sundries: 1.0
+      - 50 # RESTORED: Elfsong Tavern Movie: 1.0
+      - 51 # Mini-Quest: "The mystery of the silent ghostly voice": 1.0
+      - 52 # Special keg in Elfsong Tavern: 1.0
+      - 53 # Black Alaric's Cave: 1.0
+      - 54 # RESTORED: Cloakwood druid: 1.0
+      - 55 # Extended meeting between Xzar and Niemain: 1.0
+      - 101 # Backdoor to Gellana's temple: 1.0
+      - 102 # Backdoor to Waterqueen's House: 1.0
+    location:
+      github_user: YChap # or TotoR115
+      repository: JA-AdventurePack
+      branch: master
+      refresh: 4days
+
   - name: bg1re
     description: Baldur's Gate Romantic Encounters
     comment: did a "install all" this time
+    installation:
+      before: cdtweaks, EET_End
+      after: c#endlessbg1, EET, transitions
     components:
       - 103 # Composant principal : quantite de... hum... details croustillants, et style BG ou textes explicites ! (necessaire) -> Version "style BG"  [contenu adulte] et faire apparaitre/installer les composants avec avertissement.: 9.0
       - 1 # Le briefing de Bardolan, par berelinde: 9.0
@@ -256,6 +316,9 @@
       asset: baldurs-gate-romantic-encounters-modification-bg1re-13.iemod
   - name: AC_QUEST
     description: Ascalon's Questpack
+    installation:
+      before: ACBre, c#brandock, EET_end
+      after: EET
     components:
       - 0 # Un travail bien paye: 5.2
       - 1 # Un festin pour les gnolls: 5.2
@@ -274,6 +337,9 @@
       asset: ascalons-questpack-6.1.iemod
   - name: SirinesCall
     description: The Lure of the Sirine's Call
+    installation:
+      before: c#brandock, EET_end
+      after: EET
     components:
       - 0 # Le Chant des Sirènes: v16.3
       - 1 # Extended Lighthouse Area: v16.3
@@ -283,6 +349,11 @@
       branch: master
       refresh: 7days
   - name: framed
+    description: 'Framed: Alternate Chapter 6 for BGEE and EET'
+    overview: provides 2 different versions of Chapter 6 and makes going to Candlekeep a possible side quest not involving the Iron Throne
+    installation:
+      before: c#brandock, c#greythedog, EET_end
+      after: EET, bg1re, bg1npc, bgqe
     components:
       - 0 # FFramed ou Piege: Propose plusieurs versions du chapitre 6 -> LUtilisez des voix personnalisees pour les films des nouveaux chapitres
     location:
@@ -290,7 +361,7 @@
       repository: framed
       release: v1.14
       asset: framed-v1.14.iemod
-  - name: thecalling
+  - name: thecallingc
     description: The calling
     components:
       - 0 # The Calling (L'appel): v6_WIP_test_build_06242024
@@ -310,8 +381,13 @@
     description:  Candlekeep Revisited
     overview: A mod for expanding the content of the BG1 tutorial - dialogue with NPCs, 3 minor side-quests
     installation:
+      general: declare a cnoflict with Reflections, probably spurious
       before: [ Reflections ]
-    components: ask
+    components:
+      - 0 # Candlekeep Revisited: BG1 Prologue Expansion
+      - 1 # Candlekeep Revisited: BG1 Expanded Starting Sequence
+      - 2 # Candlekeep Revisited: Osprey joinable NPC for SoD
+      - 3 # Candlekeep Revisited: New Portraits for Arkanis, Canderous, Deder, Mordaine, Osprey
     location:
       github_user: ArtemiusI
       repository: Candlekeep-Revisited
@@ -365,25 +441,6 @@
       repository: garrick-tt
       branch: k4thos-eet-compat
 
-  - name: Loretakers
-    components: ask
-    location:
-      github_user: AciferBG
-      repository: Loretakers
-      release: v1.5
-      asset: Loretakers.V1.5.zip
-
-  # must be after Loretakers
-  - name: JA#BGT_AdvPack
-    installation:
-      after: [bgqe, bg1npc, bg1re, garrick-tt, bg1ub, loretakers]
-    components: ask
-    location:
-      github_user: YChap # or TotoR115
-      repository: JA-AdventurePack
-      branch: master
-      refresh: 4days
-
   - name: ExtraExpandedEnhancedEncounters
     components:
       - 0 # EEEE: Melia Quicknight, Crossroads: 3.1
@@ -399,18 +456,26 @@
       release: "4.3"
       asset: extra-enhanced-expanded-encounters-4.3.iemod
       patch:
-        relative: patches/ExtraExpandedEnhancedEncouter-reducegnolls.diff
+        relative: patches/eet/ExtraExpandedEnhancedEncouter-reducegnolls.diff
   - name: gorgon
-    components: ask
+    description: Gorgon's Eye
+    overview: adds an underground thieves den into the town of Beregost - quests, characters, stores and items
+    components:
+      - 0 # Install The Gorgon's Eye: v4.8
+      - 1 # NPC Character Portraits -> Give portraits to all characters added from this mod: v4.8
+      - 4 # Add More Pickpocketable Items: v4.8
     location:
       github_user: TotalMilk90
       repository: gorgon
       release: v4.8
       asset: gorgon-v4.8.iemod
   - name: Blackhearts
+    overview: Quest mod for Baldurs Gate Enhanced Edition that follows a plotline involving a character from Throne of Bhaal, Illasera, and a Red Wizard plot involving a dangerous new ally that has joined Sarevoks cause.
     installation:
-      before: ['c#brandock' ]
-    components: ask
+      before: ['c#brandock', EET_end]
+      after: [EET]
+    components:
+      - 1 # Install Blackhearts for "BGEE only" or "EET including BGEE and BG2EE": v1.3
     location:
       github_user: 11jo # forked because needs-patch #  https://forums.beamdog.com/discussion/comment/1200875/#Comment_1200875
       repository: Black-Hearts
