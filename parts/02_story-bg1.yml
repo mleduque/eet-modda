@@ -292,7 +292,14 @@
       asset: framed-v1.14.iemod
   - name: thecalling
     description: The calling
-    components: ask
+    components:
+      - 0 # The Calling (L'appel): v6_WIP_test_build_06242024
+      - 10 # Forteresse gnoll amelioree: v6_WIP_test_build_06242024
+      - 61 # The Calling (L'Appel) : Chaman - Le RÃªve -> Utiliser des couleurs dans les dialogues: v6_WIP_test_build_06242024
+      - 70 # The Calling (L'Appel) : Moine - Restaurer Saiai no Hito: v6_WIP_test_build_06242024
+      - 50 # Rendre toutes les quetes de Calling accessibles a toutes les classes: v6_WIP_test_build_06242024
+      - 20 # Resolution pacifique a l'ile des loups-garous: v6_WIP_test_build_06242024
+      - 40 # Pack d'objets exotiques: v6_WIP_test_build_06242024
     location:
       github_user: mleduque # Gibberlings3
       repository: The_Calling
@@ -303,7 +310,11 @@
     installation:
       after: EET, c#endless, thecalling
       before: EET_end
-    components: ask
+    components:
+      - 110 # Reflections of Destiny BG1: The Mirror Shard: 0.9
+      - 220 # Reflections of Destiny SoD: Magical Realism: 0.9
+      - 230 # Reflections of Destiny SoD: Nothing to Fear but Feyr Itself: 0.9
+      - 240 # Reflections of Destiny SoD: The Precipice of Death: 0.9
     location:
       github_user: subtledoctor
       repository: Reflections-of-Destiny
