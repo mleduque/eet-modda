@@ -361,7 +361,7 @@
       repository: framed
       release: v1.14
       asset: framed-v1.14.iemod
-  - name: thecallingc
+  - name: thecalling
     description: The calling
     components:
       - 0 # The Calling (L'appel): v6_WIP_test_build_06242024
