@@ -1,5 +1,5 @@
---- ExtraExpandedEnhancedEncounters/OL5100.baf        2021-09-11 22:20:51.894963652 +0200
-+++ ExtraExpandedEnhancedEncounters/OL5100.baf  2021-09-11 22:24:11.701247053 +0200
+--- ExtraExpandedEnhancedEncounters/OL5100.baf
++++ ExtraExpandedEnhancedEncounters/OL5100.baf
 @@ -4,178 +4,124 @@
    RESPONSE #100
      SetGlobal("OL_EEEE_GNOLLS","MYAREA",1)

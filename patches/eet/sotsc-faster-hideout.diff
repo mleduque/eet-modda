@@ -1,7 +1,7 @@
 diff --git a/scripts/L#HNDT1.baf b/scripts/L#HNDT1.baf
 index 658d7d3..d176928 100644
---- scripts/L#HNDT1.baf
-+++ scripts/L#HNDT1.baf
+--- SotSC/scripts/L#HNDT1.baf
++++ SotSC/scripts/L#HNDT1.baf
 @@ -6,28 +6,25 @@ THEN
      ClearAllActions()
      StartCutSceneMode()
