@@ -470,7 +470,7 @@
       release: v4.8
       asset: gorgon-v4.8.iemod
   - name: Blackhearts
-    overview: Quest mod for Baldurs Gate Enhanced Edition that follows a plotline involving a character from Throne of Bhaal, Illasera, and a Red Wizard plot involving a dangerous new ally that has joined Sarevoks cause.
+    overview: Quest mod for Baldur's Gate Enhanced Edition that follows a plotline involving a character from Throne of Bhaal, Illasera, and a Red Wizard plot involving a dangerous new ally that has joined Sarevok's cause.
     installation:
       before: ['c#brandock', EET_end]
       after: [EET]
