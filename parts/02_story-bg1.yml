@@ -495,9 +495,11 @@
     components:
       - 0
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/SotSC v8.9.zip
-      patches:
-        - relative: patches/eet/sotsc-faster-hideout.diff
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/SotSC.zip
+      precopy:
+        command: bash
+        subdir: SotSC
+        args: ['-c', 'rm -Rf informacje*']
   - name: TheVanishingOfSkieSilvershield
     components: ask
     location:
