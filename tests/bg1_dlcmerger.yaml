@@ -1,0 +1,16 @@
+version: "1"
+global:
+  lang_dir: "en_US"
+  lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  #lang_dir: "fr_FR"
+  #lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+  local_patches: ../..
+modules:
+  - name: DlcMerger
+    location:
+      github_user: Argent77
+      repository: A7-DlcMerger
+      release: v1.3
+      asset: lin-A7-DlcMerger-v1.3.zip
+    components:
+      - 1 # Merge DLC into game -> Merge "Siege of Dragonspear"  - name: iwdification
