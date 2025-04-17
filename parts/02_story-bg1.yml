@@ -194,8 +194,8 @@
     location:
       github_user: AciferBG
       repository: Loretakers
-      release: v1.5
-      asset: Loretakers.V1.5.zip
+      release: v1.6
+      asset: Loretakers.V1.6.zip
 
   # must be after Loretakers
   - name: JA#BGT_AdvPack
