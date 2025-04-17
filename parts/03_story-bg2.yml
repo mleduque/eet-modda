@@ -6,11 +6,11 @@
     components: ask
     ignore_warnings: true
     location:
-      github_user: mleduque
+      github_user: AngelGryph
       repository: MadeInHeaven_EncountersAndQuests
-      branch: french
+      branch: master
       patch:
-        relative: patches/mih_eq_customize_ini.diff
+        relative: patches/mih_eq_customize_ini.diff-----
 
   - name: ub
     description: Unfinished Business
