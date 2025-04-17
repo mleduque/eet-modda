@@ -54,19 +54,18 @@
           with: ""
   - name: arestorationp
     description: Almateria's Restoration Project
-    components: ask
-      # new version with components added
-      #- 0 # Restauration de lieux: v8.4
-      #- 1 # Restauration de personnages et de dialogues: v8.4
-      #- 2 # Restauration de sons: v8.4
-      #- 3 # Restauration d'objets: v8.4
-      #- 4 # Restauration d'options de souhait: v8.4
-      #- 5 # Restauration de table d'XP dans ToB: v8.4
-      #- 6 # Liche Deril: v8.4
-      #- 8 # Restaurations mineures: v8.4
-      #- 11 # Restauration du reve de fin avec l'Ecorcheur: v8.4
-      #- 12 # Transformation en Ecorcheur alternative: v8.4
-      #- 13 # Restauration de la cinematique de la Promenade de Waukyne: v8.4
+    components:
+      - 0 # Restauration de lieux: v10.1
+      - 1 # Restauration de personnages et de dialogues: v10.1
+      - 2 # Restauration de sons: v10.1
+      - 3 # Restauration d'objets: v10.1
+      - 4 # Restauration d'options de souhait: v10.1
+      - 5 # Restauration de table d'XP dans ToB: v10.1
+      - 6 # Liche Deril: v10.1
+      - 7 # Restauration de rencontres aleatoires: v10.1
+      - 8 # Restaurations mineures: v10.1
+      - 11 # Restauration du reve de fin avec l'Ecorcheur: v10.1
+      - 13 # Restauration de la cinematique de la Promenade de Waukyne: v10.1
     location:
       github_user: Spellhold-Studios
       repository: Almaterias-Restoration-Project
@@ -78,22 +77,32 @@
     installation:
       general: at least component 5 must be after ub
       after: ub
-    components: ask
-      #- 0 # BG1 Fixpack
-      #- 1 # SoD Fixpack
-      #- 2 # BG2 Fixpack
-      #- 5 # Restaurations de rencontres pour BG2: v1
-      #- 6 # Restaurations de dialogues BG2: v1
-      #- 7 # Artemis Entreri dans l'antre de Bodhi: v1
-      #- 8 # Allies are Better Prepared
-    branch: master
-    refresh: 7days
+    components:
+      - 4 # Item Restorations: v1
+      - 6 # Store Restorations (BG1): v1
+      - 7 # Quest Restorations (BG1): v1
+      - 12 # Artemis Entreri Encounter: v1
+      - 14 # Better Prepared Allies: v1
+      - 15 # Obtain Obscure Items: v1
+    location:
+      github_user: AngelGryph
+      repository: MadeInHeaven_FixesAndRestorations
+      branch: main
+      refresh: 7days
   - name: oversight
-    components: ask
+    components:
+      - 0 # Sendai plus coriace (requiert ToB)
+      - 1 # Correction d'alignements
+      - 4 # Continuite amelioree
+      - 7 # Liberateur Sacre
+      - 8 # Expanded Brynnlaw
     location:
       http: http://america.iegmc.net/g3/lin-oversight-v16.zip
+      layout:
+        layout_type: single_dir_plus_tp2
   - name: dw_lanthorn
-    components: ask
+    components:
+      - 0 #20 # Restored Rhynn Lanthorn lens quest -> Expanded Version (adds four new locations where lenses can be found): Beta 3
     location:
       github_user: Gibberlings3
       repository: Restored-Rhynn-Lanthorn
@@ -105,7 +114,7 @@
       - 0 # Fading Promises: v9
     location:
       github_user: Spellhold-Studios
-      repository: Fading_Promises
+      repository: Fading-Promises
       release: v9
       asset: fading-promises-v9.iemod
   - name: A7-TestYourMettle
