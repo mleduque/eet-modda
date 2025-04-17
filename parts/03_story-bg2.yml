@@ -273,7 +273,10 @@
       release: v2.6
       asset: Dark_Tidings_v2.6.zip
   - name: godcall
-    components: ask
+    components:
+      - 0 # Call Of The Lost Goddess V 2.1
+      - 50 # Install portraits for the major NPCs of the mod
+      - 200 # Install AI voiceover for major NPCs of the mod (mostly in English)
     location:
       github_user: AciferBG
       repository: Call-of-the-Lost-Goddess
@@ -289,7 +292,8 @@
       New enemies with custom animations never seen before
       Intriguing puzzles and mysteries
       Unique magical items to discover and wield
-    components: ask
+    components:
+      - 0 # Throne of the Mad God V 1.2: V 1.2
     location:
       github_user: AciferBG
       repository: Throne-of-the-Mad-God
