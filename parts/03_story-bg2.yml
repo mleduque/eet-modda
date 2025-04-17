@@ -3,14 +3,21 @@
     description: Made In Heaven Encounters and Quests
     installation:
       before: SCS
-    components: ask
+    components:
+      - 0 # Sarevok's Assassins: v6
+      - 1 # The Surgeon's Plight: v6
+      - 2 # Hunted or Hunter?: v6
+      - 3 # Enhanced Candlekeep Catacombs: v6
+      - 6 # Enhanced Zombie Farm: v6
+      - 14 # Tougher Spiders: v6
+      - 16 # Ulcaster Stays Put: v6
     ignore_warnings: true
     location:
       github_user: AngelGryph
       repository: MadeInHeaven_EncountersAndQuests
       branch: master
       patch:
-        relative: patches/mih_eq_customize_ini.diff-----
+        relative: patches/mih_eq_customize_ini.diff
 
   - name: ub
     description: Unfinished Business
@@ -62,8 +69,8 @@
       #- 13 # Restauration de la cinematique de la Promenade de Waukyne: v8.4
     location:
       github_user: Spellhold-Studios
-      repository: Almaterias_Restoration_Project
-      branch: master
+      repository: Almaterias-Restoration-Project
+      branch: main
       refresh: 7days
 
   - name: mih_fr
