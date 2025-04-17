@@ -495,31 +495,34 @@
     components:
       - 0
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/SotSC.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/SotSC v8.9
       precopy:
         command: bash
         subdir: SotSC
         args: ['-c', 'rm -Rf informacje*']
   - name: TheVanishingOfSkieSilvershield
-    components: ask
+    components:
+      - 0 # The Vanishing of Skie Silvershield a new quest for BGEE that lets Eldoth and Skie join your party sooner: v2.5
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/TheVanishingOfSkieSilvershield v2.5.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/TheVanishingOfSkieSilvershield v2.5
   - name: BG1Aerie
     components:
-      - 0 # Aerie for BG:EE
+      - 5000 # Aerie dans BG: EE: 2.5
+      #- 5001 # Installer une version plus éclaircie du portrait d'Aerie ? (Modifie aussi son portrait dans BG2 avec EET).
     location:
       github_user: The-Gate-Project
       repository: AerieBG1
       release: v2.5
       asset: aerie-in-bgee-2.5.iemod
-  - name: Kara-Tur
+  - name: karatur
     description: "T'was a Slow Boat from Kara-Tur"
     overview: BG1 Quest/Store/New Items
-    components: ask
+    components:
+      - 0 # T'Was a Slow Boat from Kara-Tur: 2.0.1
     location:
       github_user: The-Gate-Project
       repository: Kara-Tur
-      branch: master
+      branch: main
       refresh: 10days
   - name: ArtisansCaravans
     description: Caravans of Faerun
@@ -528,7 +531,8 @@
       This mod adds a new way to travel across the Sword Coast in Baldur's Gate: Enhanced Edition, adding
       Caravan Masters who you may hire to bring you to certain places on the map at only half the travel
       time and no danger of random encounters
-    components: ask
+    components:
+      - 0 # "Caravans of Faerun: A Better Way to Travel"
     location:
       github_user: ArtemiusI
       repository: Caravans-of-Faerun
@@ -536,17 +540,14 @@
       refresh: 10days
 
   - name: BloodAndFaith
-    description: BG2, 10 quests mod
-    components: ask
+    description: bg1, 10 quests mod
+    components:
+      - 0 # Blood and Faith Installation: 1.0
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/glittergear/BloodAndFaith.v1.1.zip
-      replace:
-        # Brutally force EET compatibility
-        - file_globs: [ 'BloodAndFaith.tp2' ]
-          regex: true
-          replace: 'EXTEND_TOP ~AR(?<t>\d\d\d\d).bcs~'
-          with: 'EXTEND_TOP ~BG${t}.bcs'
+      path: /home/mick/Games/modda-cache/iemods-archive/glittergear/BloodAndFaith v1.1/BloodAndFaith
       alt:
-        http: http://america.iegmc.net/g3/BF.0.9.3.zip
-
+        http: https://america.iegmc.com/g3/BloodAndFaith.v1.1.zip
+      layout:
+        strip_leading: 1
+        layout_type: single_dir
 #
