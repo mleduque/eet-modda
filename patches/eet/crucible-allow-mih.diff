@@ -1,0 +1,20 @@
+diff --git a/crucible.tp2 b/crucible.tp2
+index e25f87c..636af70 100644
+--- crucible/crucible.tp2
++++ crucible/crucible.tp2
+@@ -86,7 +86,6 @@ LANGUAGE ~Russian~
+ // Add the Final Assault                                                 //
+ ///////////////////////////////////////////////////////////////////////////
+ BEGIN @2 DESIGNATED 1 SUBCOMPONENT @1 LABEL Crucible-FinalAssaultAI
+-REQUIRE_PREDICATE !FILE_EXISTS ~mih_eq/setup-mih_eq.tp2~ @3002
+ 
+ REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ @3000
+ 
+@@ -95,7 +94,6 @@ INCLUDE ~crucible/components/crucible.tpa~
+ 
+ ////////////////////////////////////////////////////
+ BEGIN @3 DESIGNATED 3 SUBCOMPONENT @1 LABEL Crucible-FinalAssault
+-REQUIRE_PREDICATE !FILE_EXISTS ~mih_eq/setup-mih_eq.tp2~ @3002
+ 
+ REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ @3000
+ 
