@@ -495,11 +495,7 @@
     components:
       - 0
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/SotSC v8.9
-      precopy:
-        command: bash
-        subdir: SotSC
-        args: ['-c', 'rm -Rf informacje*']
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/SotSC v9.0
   - name: TheVanishingOfSkieSilvershield
     components:
       - 0 # The Vanishing of Skie Silvershield a new quest for BGEE that lets Eldoth and Skie join your party sooner: v2.5
