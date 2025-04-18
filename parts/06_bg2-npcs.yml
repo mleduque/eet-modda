@@ -307,7 +307,7 @@
       repository: Sirene-NPC-for-BG2-EE
       tag: v2.1
       patch:
-        relative: eet/sirene-bg2.diff
+        relative: patches/eet/sirene-bg2.diff
   - name: quieter_sirene
     components:
       - 0
@@ -586,7 +586,7 @@
       release: v5.1
       asset: lin-dace-v5.1.zip
       patch:
-        relative: eet/dace-romance.diff
+        relative: patches/eet/dace-romance.diff
       replace:
         - file_globs: ["scripts/t#dace.baf"]
           regex: true
@@ -620,7 +620,7 @@
       repository: TS_Sime
       tag: "0.8"
       patch:
-        relative: eet/vladsime.diff
+        relative: patches/eet/vladsime.diff
       replace:
         - file_globs: ['booplot/dialogue/soa_booplot.d', 'booplot/script/append_ttsime.baf', 'main/dialogue/soa_talks.d', 'main/scripts/*.baf']
           regex: true
@@ -641,7 +641,7 @@
       release: v6
       asset:  KelseyV6.zip
       patch:
-        relative: eet/kelsey.diff
+        relative: patches/eet/kelsey.diff
       replace:
         - file_globs: ["baf/soa/j#klsy.baf"]
           replace: 'RealSetGlobalTimer("J#KelseyNonRomance","GLOBAL",2250)'
@@ -769,7 +769,7 @@
       release: v2.2
       asset:  Ninde_v2.2.rar
       patch:
-        relative: eet/ninde.diff
+        relative: patches/eet/ninde.diff
       replace:
         - file_globs: ['dialogue/*.d', 'scripts/*.baf']
           regex: true

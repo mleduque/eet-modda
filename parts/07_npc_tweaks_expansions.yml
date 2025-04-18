@@ -330,7 +330,7 @@
       repository: Nalia_At_Last
       tag: v1.12
       patch:
-        relative: eet/nalia-at-last-conflicts.diff
+        relative: patches/eet/nalia-at-last-conflicts.diff
       replace:
         - file_globs: ["Dialogue/Original.d", "Dialogue/X3Nal25.d"]
           regex: true

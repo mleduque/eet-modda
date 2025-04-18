@@ -33,7 +33,7 @@ locations:
       branch: master
       refresh: 3days
       patch:
-        relative: eet/cdtweaks-config.diff
+        relative: patches/eet/cdtweaks-config.diff
     Imoen4ever:
       github_user: Gibberlings3
       repository: Imoen4Ever
