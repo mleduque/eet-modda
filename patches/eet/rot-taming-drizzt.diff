@@ -10,8 +10,8 @@
  END
 diff --git a/RoT/D/DRIZ2.d b/RoT/D/DRIZ2.d
 index 80bd16a8..130b1e68 100644
---- a/RoT/D/DRIZ2.d
-+++ b/RoT/D/DRIZ2.d
+--- RoT/D/DRIZ2.d
++++ RoT/D/DRIZ2.d
 @@ -170,6 +170,7 @@ IF ~~ THEN BEGIN 47 // from: 46.0
    IF ~~ THEN REPLY @63 GOTO 48
    IF ~~ THEN REPLY @64 GOTO 48

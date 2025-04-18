@@ -560,7 +560,7 @@
       release: v2.1.3
       asset: shadows-over-soubar-2.1.3.iemod
       patch:
-        relative: eet/sos.diff
+        relative: patches/eet/sos.diff
   - name: JanQuest
     description: Jan's extended quest - continuation of Jan's personal quest, 2 new quests, more dialogue
     original_url: https://akadis.baldursgateworld.fr/Jan/JansQuestEn.html
@@ -606,7 +606,7 @@
       - 11    #  Rencontre avec les Elus de Cyric
       - 12    #  Amelioration des Voleurs de l'Ombre
   # mods from Chosen of Mystra
-  - name: com_encouters
+  - name: com_encounters
     description: |
       Encounters for Baldur's Gate II
       Improved Druids, Underdark Adventures, Improved Shagbag, Sewer Encounters, Windspear Ecounter
@@ -641,9 +641,8 @@
       repository: Region_of_Terror
       branch: master
       refresh: 10days
-      asset: region-of-terror-v5.0.iemod
       patch:
-        relative: rot-taming-drizzt.diff
+        relative: patches/eet/rot-taming-drizzt.diff
   - name: TDD
     description: |
       The Darkest Days - Big old BG2 megamod
