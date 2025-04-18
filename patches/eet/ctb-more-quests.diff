@@ -1,7 +1,7 @@
 diff --git a/CtB/dialogs/translate/CB510BRD.D b/CtB/dialogs/translate/CB510BRD.D
 index c65bf73..cc99d01 100644
---- a/CtB/dialogs/translate/CB510BRD.D
-+++ b/CtB/dialogs/translate/CB510BRD.D
+--- CtB/dialogs/translate/CB510BRD.D
++++ CtB/dialogs/translate/CB510BRD.D
 @@ -3,12 +3,12 @@ BEGIN ~CB510BRD~
  IF ~Class(LastTalkedToBy(Myself),BARD)
  Global("CbMasterBardWantsHarp","GLOBAL",0)
@@ -19,8 +19,8 @@ index c65bf73..cc99d01 100644
  END
 diff --git a/CtB/dialogs/translate/CB585RNG.D b/CtB/dialogs/translate/CB585RNG.D
 index cd26b89..20ba8c6 100644
---- a/CtB/dialogs/translate/CB585RNG.D
-+++ b/CtB/dialogs/translate/CB585RNG.D
+--- CtB/dialogs/translate/CB585RNG.D
++++ CtB/dialogs/translate/CB585RNG.D
 @@ -3,12 +3,12 @@ BEGIN ~CB585RNG~
  IF ~Global("CbRangerDeadDear","GLOBAL",0)
  Class(LastTalkedToBy(Myself),RANGER)
@@ -38,8 +38,8 @@ index cd26b89..20ba8c6 100644
  END
 diff --git a/CtB/dialogs/translate/CB587DR1.D b/CtB/dialogs/translate/CB587DR1.D
 index adbdac0..03d8fa4 100644
---- a/CtB/dialogs/translate/CB587DR1.D
-+++ b/CtB/dialogs/translate/CB587DR1.D
+--- CtB/dialogs/translate/CB587DR1.D
++++ CtB/dialogs/translate/CB587DR1.D
 @@ -3,12 +3,12 @@ BEGIN ~CB587DR1~
  IF ~Global("CbDruidTeachingSeeds","GLOBAL",0)
  Class(LastTalkedToBy(Myself),DRUID)
@@ -57,8 +57,8 @@ index adbdac0..03d8fa4 100644
  END
 diff --git a/CtB/dialogs/translate/CBCWLTCH.D b/CtB/dialogs/translate/CBCWLTCH.D
 index 3359b75..5276bce 100644
---- a/CtB/dialogs/translate/CBCWLTCH.D
-+++ b/CtB/dialogs/translate/CBCWLTCH.D
+--- CtB/dialogs/translate/CBCWLTCH.D
++++ CtB/dialogs/translate/CBCWLTCH.D
 @@ -6,12 +6,12 @@ Gender(LastTalkedToBy(Myself),FEMALE)
  OR(2)
  	Class(LastTalkedToBy(Myself),SORCERER)
@@ -76,8 +76,8 @@ index 3359b75..5276bce 100644
    IF ~~ THEN REPLY @3 GOTO 4
 diff --git a/CtB/dialogs/translate/CBEM25T1.D b/CtB/dialogs/translate/CBEM25T1.D
 index 3663e94..165fe34 100644
---- a/CtB/dialogs/translate/CBEM25T1.D
-+++ b/CtB/dialogs/translate/CBEM25T1.D
+--- CtB/dialogs/translate/CBEM25T1.D
++++ CtB/dialogs/translate/CBEM25T1.D
 @@ -2,12 +2,12 @@ BEGIN ~CBEM25T1~
  
  IF ~Global("CbElvenSorceressWantsSeeds","GLOBAL",0)
@@ -95,8 +95,8 @@ index 3663e94..165fe34 100644
  END
 diff --git a/CtB/dialogs/translate/CBNRT020.D b/CtB/dialogs/translate/CBNRT020.D
 index df947b2..ba2328a 100644
---- a/CtB/dialogs/translate/CBNRT020.D
-+++ b/CtB/dialogs/translate/CBNRT020.D
+--- CtB/dialogs/translate/CBNRT020.D
++++ CtB/dialogs/translate/CBNRT020.D
 @@ -5,12 +5,12 @@ IsGabber(Player1)
  Class(Player1,FIGHTER)
  Kit(Player1,0)

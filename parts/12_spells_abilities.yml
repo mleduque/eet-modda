@@ -40,6 +40,15 @@
       - 100 # IWD Class Updates: Paladin: IWD Abilities and Skills
     ignore_warnings: true
 
+  - name: RoT
+    description: Region of Terror - wizard spells
+    components:
+      - 4 # Region Of Terror Wizard Spell
+  - name: CtB
+    description: Check the bodies - spells
+    components:
+      - 5 # Ctb spells
+
   - name: SubtleD_Spell_Tweaks
     description: SubtleD's Spell Tweaks
     installation:

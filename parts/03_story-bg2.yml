@@ -635,7 +635,9 @@
 
   - name: RoT
     description: Region of Terror - BG2 mod, large quest mod focussed on Drizzt Do'Urden. 35 quests, 160 areas
-    components: ask
+    components:
+      - 0 # Region Of Terror: pre-v6.0
+      - 3 # Alternative Maribur area (by Cuttooth): pre-v6.0
     location:
       github_user: Spellhold-Studios
       repository: Region_of_Terror
@@ -679,11 +681,12 @@
       It add a little NPC Avaunis (no banter) at the Order of The Radiant Heart who
       will lead you to the Hall of Knowledge mini quest.
       Hint : After talking to Avaunis and accept the quest go to the city gate.
-    components: ask
+    components:
+      - 0 # TDD Hall of Knowledge, mini quest and NPC: v1.0
     location:
       github_user: The-Gate-Project
       repository: TDD_Hall-of-Knowledge
-      branch: master
+      branch: main
       refresh: 10days
   - name: AjocMod
     description: |
@@ -695,7 +698,8 @@
       eet_patch: http://www.shsforums.net/index.php?app=core&module=attach&section=attach&attach_id=29207
     installation:
       general: needs TDD installed
-    components: ask
+    components:
+      - 0 # AjocMod Weidu: v1.6.5
     location:
       github_user: mleduque
       repository: AjocMod
