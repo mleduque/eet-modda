@@ -181,7 +181,24 @@
     installation:
       before: bg1npc, EET_end
       after: EET
-    components: all
+    components:
+      - 0 # Installation de la quete de la vase...: 29
+      - 1 # Installation de la quete de famille a Beregost...: 29
+      - 2 # Installation de la quete de la garde d'enfants, y compris la rencontre au festival...: 29
+      - 3 # Installation de la quete du monstre de Nashkel...: 29
+      - 4 # Installation de la quete du paladin dechu...: 29
+      - 5 # Installation de la quete de l'amour eternel...: 29
+      - 6 # Installation de la rencontre de l'orque amoureux...: 29
+      - 7 # Installation de la quete une aide inattendue...: 29
+      - 8 # Installation de la quete du hamster...: 29
+      - 9 # Installation de la quete de l'ivrogne pres du temple de Beregost...: 29
+      - 10 # Installation de la quete un endroit douillet pour Noober...: 29
+      #- 11 # Installation de la quete de l'epee de Brage...: 29
+      - 12 # Installation de la quete sources legales des cartes maritimes...: 29
+      - 13 # Installation de la quete additions a la Maison de la Dame et du Temple de la Reine Garce...: 29
+      - 14 # Installation de la quete un fermier inquiet...: 29
+      - 15 # Installation de la quete des corps pour une bonne cause...: 29
+      - 16 # Installation de la quete terminer la quete de Cordyr sans tuer Sil...: 29
     location:
       github_user: Gibberlings3
       repository: BG_Quests_And_Encounters
