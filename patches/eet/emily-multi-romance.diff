@@ -1,7 +1,7 @@
 diff --git a/Emily/Scripts/SoD/X32mily.baf b/Emily/Scripts/SoD/X32mily.baf
 index 6442462..e549fb8 100644
---- a/Emily/Scripts/SoD/X32mily.baf
-+++ b/Emily/Scripts/SoD/X32mily.baf
+--- Emily/Scripts/SoD/X32mily.baf
++++ Emily/Scripts/SoD/X32mily.baf
 @@ -191,142 +191,10 @@ THEN
  END
  

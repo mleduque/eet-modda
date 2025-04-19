@@ -204,7 +204,7 @@
   - name: Ishlilkamod
     description: bg1/sod - female wizard slayer, good, romance, quest(x2)
     components:
-      - 0 # Ishlilka mod for BGSoD and EET
+      - 500 # Ishlilka mod for BGSoD and EET
     location:
       github_user: The-Gate-Project
       repository: Ishlilka_The-Wizard-Slayer
@@ -236,7 +236,9 @@
     overview: Bg1+SoD, half-elf NG archer, quest, friendship (BG1), romance (SoD), banters, crossmod
     installation:
       after: [ Kale, Vienxay, Aura, Helga, Recorder, Drake ]
-    components: ask
+    components:
+      - 0 # Emily NPC for BG1EE: 1.65
+      - 1 # Choose whether or not to have Emily's custom soundtrack play during timed talks. -> Emily's Music: 1.65
     location:
       github_user: Skitia
       repository: Emily-BG1
@@ -256,7 +258,8 @@
     overview: bg1+SoD, dwarf (f) CN cleric (kit), small quest, friendship+banters (no romance),crossmod
     installation:
       after: [ Aura, Emily, Helga, Kale, Recorder, Vienxay ]
-    components: ask
+    components:
+      - 0 # Helga NPC Mod: 1.56
     location:
       github_user: Skitia
       repository: Helga-BG1

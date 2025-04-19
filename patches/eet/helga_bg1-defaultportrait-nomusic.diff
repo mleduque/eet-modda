@@ -1,6 +1,8 @@
---- Helga/Setup-Helga.tp2
-+++ Helga/Setup-Helga.tp2
-@@ -275,14 +275,7 @@ THEN BEGIN
+diff --git a/Helga/setup-Helga.TP2 b/Helga/setup-Helga.TP2
+index 8911701..71e0f7b 100644
+--- Helga/setup-Helga.TP2
++++ Helga/setup-Helga.TP2
+@@ -328,14 +328,7 @@ THEN BEGIN
  COMPILE ~Helga/Dialogue/Crossmod/Aura.d~
  END 
  
@@ -16,7 +18,7 @@
        ACTION_IF ("portrait" = 1) THEN BEGIN
  		COPY ~%MOD_FOLDER%/Portraits/HelgaL.bmp~ ~override/HelgaL.bmp~
  		COPY ~%MOD_FOLDER%/Portraits/HelgaM.bmp~ ~override/HelgaM.bmp~
-@@ -296,15 +289,7 @@ END
+@@ -349,15 +342,7 @@ END
        PRINT @65
  	  END
  		
