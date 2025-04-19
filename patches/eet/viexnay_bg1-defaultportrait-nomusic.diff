@@ -1,6 +1,8 @@
+diff --git a/Vienxay/Vienxay.tp2 b/Vienxay/Vienxay.tp2
+index e778250..1dc4c0f 100644
 --- Vienxay/Vienxay.tp2
 +++ Vienxay/Vienxay.tp2
-@@ -60,14 +60,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bdcaelar.cre~ THEN BEGIN
+@@ -59,14 +59,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bdcaelar.cre~ THEN BEGIN
  INCLUDE ~Vienxay/library/vien_sod.tpa~ 
  END
  
@@ -16,10 +18,11 @@
        ACTION_IF ("portrait" = 1) THEN BEGIN
  		COPY ~%MOD_FOLDER%/Portraits/VienxayL.bmp~ ~override/VienxayL.bmp~
  		COPY ~%MOD_FOLDER%/Portraits/VienxayM.bmp~ ~override/VienxayM.bmp~
-@@ -88,15 +81,7 @@ END
+@@ -86,16 +79,7 @@ END
+       PRINT @13
  	  END
  
- 		
+-		
 -PRINT @14
 -
 -PRINT @15
@@ -29,7 +32,7 @@
 -  PRINT @16
 -  ACTION_READLN ~music~
 -END
-+    OUTER_SPRINT ~music~ 1
++OUTER_SPRINT ~music~ 1
        ACTION_IF ("music" = 1) THEN BEGIN
  	COPY_EXISTING ~sw1h01.itm~ ~override/bg1npcmusic.g3~
  

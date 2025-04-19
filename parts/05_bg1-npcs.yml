@@ -355,7 +355,7 @@
         relative: patches/aura_bg1-select-artificer_and_timers.diff
     #prompt for class (1. Artificer)
     #prompt for portrait (2. BG2 style)
-    disabled:
+    disabled_if:
       because : setting mismatch
   - name: Drake
     overview: BG1+SoD, Human Priest of Tyr, Male, friendship, flirt, one quest each in BG1 and SoD, only join after Bassilus
@@ -381,6 +381,8 @@
         - file_globs: ['scripts/SoD/c02drake.baf']
           replace: 'RealSetGlobalTimer("C02DrakeTalkTimer","GLOBAL",ONE_HOUR)'
           with: 'RealSetGlobalTimer("C02DrakeTalkTimer","GLOBAL",800)'
+    disabled_if:
+      because: installation errors on interjectionss
   - name: Sirene
     description: tiefling paladin of Ilmater, custom Martyr kit, friendship, no quest
     installation:
@@ -407,10 +409,11 @@
     overview: BG1+SoD, Drow FMT, male, LE, banters, no quest, no romance, joins after ch5
     installation:
       after: [Emily, Helga, Kale, Recorder, Vienxay]
-    components: ask
+    components:
+      - 0 # Kvel NPC for Baldur's Gate: Enhanced Edition
     location:
       github_user: ArtemiusI
-      repository: Kvel_BG1
+      repository: Kvel-BG1
       branch: main
       refresh: 7days
 
