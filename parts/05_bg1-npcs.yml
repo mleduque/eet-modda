@@ -285,7 +285,9 @@
     overview: hafling (m) CN Barbarian/Warden from Gullykin, quest, frienship+banters, romance (sod), crossmod
     installation:
       after: [Aura, Sirene, Drake, Recorder, Emily, Viexnay]
-    components: ask
+    components:
+      - 0 # Kale NPC for BG1EE and SoD: 1.69
+      - 1 # Give Kale the Warden Class? (Recommended) -> Warden(Fighter Kit): 1.69
     location:
       github_user: Skitia
       repository: Kale-BG1
