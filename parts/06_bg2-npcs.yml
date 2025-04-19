@@ -325,8 +325,6 @@
       repository: Gavin_BG2
       release: v24
       asset: lin-gavin_bg2-v24.zip
-      patch:
-        relative: patches/eet/gavin_bg2_romance-timer-15.diff
   - name: "c#solaufein"
     components:
       - 0 # Solaufein's Rescue: Jastey's Solaufein NPC for BGII: 3.2

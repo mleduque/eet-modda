@@ -1,0 +1,16 @@
+diff --git a/finchnpc/tra/french/sufinch.tra b/finchnpc/tra/french/sufinch.tra
+index c1ea898..53445ef 100644
+--- finchnpc/tra/french/sufinch.tra
++++ finchnpc/tra/french/sufinch.tra
+@@ -179,9 +179,11 @@ Nous devrions aller au manoir au nord de Nashkel une fois que nous aurons tous l
+ @156	= ~J'accepte vos excuses avec joie ! Je n'ai pas l'habitude d'être en conflit avec les gens -- c'est si peu agréable ! J'en deviens nerveuse !~
+ @157	= ~Vous... Vous voulez mettre fin à notre association ? Quoi, mon journal est loin d'être terminé ! S'il vous plaît, repensez-y.~ [SUFINC55]
+ @158	= ~Vous avez raison. Nous ne pouvons arrêter avant que votre journal ne soit empli d'aventures !~
++@158001	= ~J'ai juste besoin que vous m'attendiez ici. Nous pourrons reprendre notre recherche quand je reviendrai vous chercher.~
+ @159	= ~Non, j'en ai assez de vos manières littéraires. J'ai besoin de quelqu'un de plus excitant dans ce groupe.~
+ @160	= ~Oh, je suis si heureuse que vous soyez d'accord, <CHARNAME> !~
+ @161	= ~Oh. Et dire que je pensais que je sortais de ma coquille... Que c'est triste !~
++@161001 = ~Vraiment ? Je vais réorganiser mes trouvailles en attendant, mais ne tardez pas trop !~
+ @162	= ~Quoi, <CHARNAME> ! J'espérais vous rencontrer de nouveau ! Voulez-vous que nous voyagions ensemble une fois de plus ?~ [SUFINC56]
+ @163	= ~Certainement ! Ce n'était plus la même chose sans le grattement permanent d'une plume !~
+ @164	= ~Non, j'ai besoin de quelqu'un d'autre que vous en ce moment.~

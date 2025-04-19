@@ -94,10 +94,10 @@
     installation:
       general: crossmod component after AC_QUEST, bg1re, bg1ub, bgqe, bst, endlessbg1, finch, ntotsc, thalantyr, transitions, ajantisbg1, c#sodboabri, imoen4ever
       after: EET
-    components: ask
-      #- 0 # Brage's Redemption - Brage Joinable NPC for Baldur's Gate Saga: 8.0
-      #- 1 # Assign the mod's portrait and soundset to the original Brage in game: 8.0
-      #- 5 # Give Brage unique Two-Handed Sword +1: 9.0
+    components: # all except crossmod, kept for later
+      - 0 # Brage's Redemption - Brage Joinable NPC for Baldur's Gate Saga: 8.0
+      - 1 # Assign the mod's portrait and soundset to the original Brage in game: 8.0
+      - 5 # Give Brage unique Two-Handed Sword +1: 9.0
     location:
       github_user: Gitjas
       repository: Brages_Redemption
@@ -124,10 +124,10 @@
           with: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",200)'
   - name: c#husam
     description : sod(+unfinished soa) npc, male shadow thief (LE), friendship, banters, quest, 7th party member mod
-    components:
+    components: # except crossmod
       - 0 # Husam NPC for SoD, BGT, BGII:EE, BGII:ToB, and EET
       - 1 # Assign the mod's portrait and soundset to the original Husam in game
-      - 10 # Husam NPC: Crossmod Content
+      #- 10 # Husam NPC: Crossmod Content
       #- 20 # Alternative #1, by Acifer
       - 21 # Default, by Acifer (included in main component)
     installation:
@@ -177,16 +177,16 @@
     description: Gavin NPC
     overview: bg1, nNG Dawnbringer of Lathander (human, male), quest, friendship, romance, flirt, pid
     # will prompt for romance timer
-    components: ask
+    components:
+      - 0 # Gavin NPC pour Tutu, BGT et BG:EE: v15
+      - 13 # Gavin : Romance (contenu pour adultes) -> Vitesse : 15 minutes en temps reel minimum entre les dialogues de romance: v15
+      - 2 # Gavin : Flirts (contenu pour adultes): v15
+      - 10 # Gavin : Dialogues inities par le joueur: v15
     location:
       github_user: Gibberlings3
       repository: Gavin_BG
       release: v15
       asset: lin-gavin-v15.zip
-      patch:
-        relative: patches/eet/gavin_bg1-romance-timer-15.diff
-        # there is no need to patch timers
-
 
   - name: FinchNPC
     description: BG1 companion, female gnome cleric long quest
@@ -195,10 +195,12 @@
     location:
       github_user: Pocket-Plane-Group
       repository: Finch_NPC
-      branch: master
+      branch: main
       refresh: 10days
-      patch:
-        relative: patches/eet/finch-wait-here.diff
+      patches:
+        - relative: patches/eet/finch-wait-here-win1252.diff
+          encoding: WIN1252
+        - relative: patches/eet/finch-wait-here-utf8.diff
   - name: Ishlilkamod
     description: bg1/sod - female wizard slayer, good, romance, quest(x2)
     components:
