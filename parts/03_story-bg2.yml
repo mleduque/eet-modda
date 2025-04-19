@@ -16,8 +16,6 @@
       github_user: AngelGryph
       repository: MadeInHeaven_EncountersAndQuests
       branch: master
-      patch:
-        relative: patches/mih_eq_customize_ini.diff
 
   - name: ub
     description: Unfinished Business
@@ -39,8 +37,8 @@
       - 19 # Restored Bhaalspawn Powers, by David Gaider: v28
       - 20 # Extended ToB Item Descriptions: v28
       - 21 # Throne of Bhaal Minor Restorations: v28
-      - 22 # Justifier Kit: v28
-      - 23 # Feralan Kit: v28
+      #- 22 # Justifier Kit: v28
+      #- 23 # Feralan Kit: v28
       - 24 # Sarevok's Remorse: v28
       - 25 # The Murder of Acton Balthis, by Kulyok: v28
     location:
@@ -102,7 +100,7 @@
         layout_type: single_dir_plus_tp2
   - name: dw_lanthorn
     components:
-      - 0 #20 # Restored Rhynn Lanthorn lens quest -> Expanded Version (adds four new locations where lenses can be found): Beta 3
+      - 20 # Restored Rhynn Lanthorn lens quest -> Expanded Version (adds four new locations where lenses can be found): Beta 3
     location:
       github_user: Gibberlings3
       repository: Restored-Rhynn-Lanthorn
@@ -318,7 +316,7 @@
       release: v1.3
       asset: FowlWish.v1.3.zip
       alt:
-        file: /home/mick/Games/modda-cache/ie-mods-archive/glittergear/FowlWish.v1.3.zip
+        file: /home/mick/Games/modda-cache/iemods-archive/glittergear/FowlWish.v1.3
       layout:
         layout_type: single_dir
         strip_leading: 1
@@ -333,10 +331,10 @@
       release: v1.1
       asset: GoneNuts.zip
       alt:
-        file: /home/mick/Games/modda-cache/ie-mods-archive/glittergear/GoneNuts_v1.1.zip
+        file: /home/mick/Games/modda-cache/iemods-archive/glittergear/GoneNuts_v1.1
       layout:
         layout_type: single_dir
-        strip_leading: 1
+        strip_leading: 2
   - name: DeadGardens
     description: BG2, one quest mod
     components:
@@ -570,7 +568,7 @@
       http: http://akadis.baldursgateworld.fr/Jan/zip/JansQuest1.5.0.zip
   - name: HerThiMoney
     description: Heroes Thieves and Moneylenders - BG2 mod
-    components: ask
+    components: all
       #- 0 # Component 1. Interjections & Mini-quests (by Austin & Arcanecoast Team): 4.2.3
       #- 10 # Component 2. First Calimport Bank Pack (by Scheele & Austin & Arcanecoast Team): 4.2.3
       #- 20 # Component 3. Shadow-Covered Love & Death (by Alisia & Austin): 4.2.3
