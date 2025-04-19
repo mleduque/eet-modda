@@ -304,7 +304,9 @@
     overview: bg1+sod, bard (f), Lorekeeper kit, NG, 2 small quests (bg1,sod), friendship+banters, romance (sod), crossmod
     installation:
       after: [Emily, Vienxay, Helga, Kale, Aura, Drake]
-    components: ask
+    components:
+      - 0 # Recorder NPC MoD: 1.51
+      - 1 # Choose whether or not to have Recorder's custom soundtrack play during timed talks. -> Recorder's Music: 1.51
     location:
       github_user: Skitia
       repository: Recorder-BG1
