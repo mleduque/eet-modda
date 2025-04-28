@@ -453,18 +453,21 @@
     description: bg1+sod, evil ranger, rakshasa, quests, romance
     installation:
       after: [ Aura_BG1, Drake, isra, Sirene, white ]
-    components: ask
+    components:
+      - 0 # Verr'Sza - the rakshasa NPC for BG1EE: 6.01
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/VerrSzaBGEE v6.01.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/VerrSzaBGEE v6.01
 
-  - name: OphysiaBG1
+  - name: OphysiaBG1)
     description: chaotic good half-elven bard, friendship, banters
-    components: ask
+    components:
+      - 0 # Ophysia, a Skald companion for BG:EE and SoD
+      - 1 # Optional: Give Ophysia interjections throughout BG1 content?
     location:
       github_user: Llewren
       repository: OphysiaBG1
       release: v1.2
-      asset: OphysiaBG1.V.1.2.zip
+      asset: OphysiaBG1.v1.2.zip
   - name: IndiNPC
     description: bg1 one-day NPC, half-elven, lawful good fighter/mage, banters, small quest
     components:
@@ -515,15 +518,18 @@
     location:
       github_user: 11jo
       repository: ShukBGEE
-      branch: master
+      branch: main
       refresh: 1day
+    disabled_if:
+      because: not ready yet
   - name: k4morgul
     description: Morg NPC for BG1:EE
     overview: Dwarven (Duergar) Fighter/Necromancer, dungeon, items, no dialog/banter ; first Cloakwood area, abandoned well on the eastern edge of the map
     components: ask
-    github_user: toopok4k3
-    repository: Morg_BG1
-    tag: v1.1
+    location:
+      github_user: toopok4k3
+      repository: Morg_BG1
+      tag: v1.1
 
   - name: sodrtd
     description: Road To Discovery
