@@ -423,7 +423,7 @@
     components:
       - 0
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/WalahnanBG1 v2.00.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/WalahnanBG1 v2.00
       replace:
         - file_globs: ["dialogue/L#SWALAJ.d", "dialogue/L#WALAHJ.d"]
           replace: 'RealSetGlobalTimer("L#WalahnanUniquePIDTIME","GLOBAL",3800)'
@@ -437,7 +437,7 @@
     components:
       - 0 #  Bristlelick the gnoll companion for BGEE: 2.0
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/Bristlelick v2.3.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Bristlelick v2.3
       replace:
         - file_globs: ["scripts/l#2brist.baf", "scripts/l#brist.baf"]
           regex: true
