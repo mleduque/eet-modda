@@ -71,10 +71,10 @@
       #- 412 # Installer le kit de Rodeur de Vengeur: 8.1
       #- 415 # Installer le kit de Rodeur de Coureur Sauvage: 8.1
     location:
-      github_user: TotoR115
+      github_user: Gibberlings3
       repository: Divine_Remix
       branch: master
-      refresh: 10days
+      refresh: 5days
   - name: song_and_silence
     components:
       - 0  # Changements concernant les bardes et voleurs purs, ainsi que les kits originaux du jeu (necessaire pour les autres composants)
