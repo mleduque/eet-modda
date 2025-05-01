@@ -5,7 +5,8 @@
 
   - name: ImoenIsStone # ok
     description: SoA -Imoen is turned to stone by the Cowled Wizards to lower pressureto go to Spellhold
-    components: ask
+    components:
+      - 0 # Imoen gets turned to stone in Promenade fight: 1.0
     location:
       path: /home/mick/Games/modda-cache/static/ImoenIsStone_v1-0.zip
   - name: Saerileth # ok but disabled

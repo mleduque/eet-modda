@@ -548,5 +548,13 @@
     installation:
       general: after any mod that adds reply options or transactions to SoD, like NPC mods or story tweak mods.
       after: themed_tweaks, c#sodtweaks
-    components: ask
+    components:
+      - 0 # Composant principal : Systeme de Pistage: 5.0
+      - 10 # Changements dans les dialogues du jeu pour plus de coherence.: 5.0
+      - 20 # Les officiers sont plus attentifs: 5.0
+      - 30 # Donnez au PC des options de reponse avisee: 5.0
+      - 40 # Le PC peut informer les officiers: 5.0
+      - 50 # Ajouter des interactions aux officiers: 5.0
+      - 60 # Points d'information supplementaires: 5.0
+      - 70 # Ajouter de nouvelles discussions avec les officiers: 5.0
 # BG1 NPCs end
