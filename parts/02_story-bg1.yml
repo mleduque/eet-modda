@@ -165,7 +165,8 @@
     components:
       - 60  # SoD - Give Imoen a special wand for palace attack scene
       - 70  # SoD - Allow PC to give aid to Imoen after attack in palace
-      - 80  # SoD - Stat-based observations and quest options
+      # issue with sodrt 40 (PC Can Tell the Officers)
+      #- 80  # SoD - Stat-based observations and quest options
       - 90  # SoD - Ditch Tour-Guide Corwin Schael
       - 100 # SoD - Quest: Scouting the Coast Way Crossing
       - 140 # SoD/BG2EE - Add a little snark to dialogues
