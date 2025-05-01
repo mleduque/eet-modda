@@ -204,7 +204,7 @@
     components:
       - 0 # Le Salon des vases : une nouvelle zone sous les bas quartiers d'Athkatla: 2.92
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/Oozes Lounge v2.97
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/Oozes Lounge v2.98
   - name: TangledIsle
     description: "Athkatlan Grounds: The Tangled Oak Isle"
     components:
@@ -237,12 +237,12 @@
       - 0 # The Dreadful Tales: Juniper and the Stone Leech - companion and a quest mod for BG2EE ToB: v1.7
       - 1 # The Dreadful Tales: Juniper and the Stone Leech - Player-Initiated Dialogues for Juniper: v1.7
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/the_dreadful_tales/JuniperAndTheStoneLeech v1.7
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/the_dreadful_tales/JuniperAndTheStoneLeech v1.8.1
   - name: BloodiedStingsOfBarovia
     components:
       - 0 # The Bloodied Stings of Barovia - a dark Ravenloft adventure for Baldur's Gate 2 EE: v2.2
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/the_dreadful_tales/BloodiedStingsOfBarovia v2.2
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/the_dreadful_tales/BloodiedStingsOfBarovia v2.5
 
   # various Lava
   - name: WhinHill

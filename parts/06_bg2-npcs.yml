@@ -155,7 +155,7 @@
     components:
       - 0 # Wilson Chronicles - expansion for our favorite bear companion: 1.9
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/WilsonChronicles v2.4.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Wilson Chronicles v2.4.1
       replace:
         - file_globs: ["baf/wilson_append.baf"]
           replace: 'RealSetGlobalTimer("L#WilsonFriendTime","GLOBAL",1200)'
@@ -204,7 +204,7 @@
       - 4 # Skie: The Cost of One Girl's Soul - Add Player-Initiated Dialogue (PID) for Eddard: 4.01
       - 5 # Skie: The Cost of One Girl's Soul - Add brand new SoD-oriented items to BG2: 4.01
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/SkieCost v6.2.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/SkieTheCost v6.2.2
       replace:
         - file_globs: ["dialogues/pid-*.d"]
           replace: 'RealSetGlobalTimer("L#SDSkiesNewSeriesTime","GLOBAL",3800)'
@@ -266,7 +266,7 @@
       # 4 : crossmod banter later after installing other mods
       - 5 # [CHEAT] Enable shaman stronghold for all classes
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/willowisp v3.2.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/willowisp v3.3
       replace:
         - file_globs: [ "willowisp/baf/l0will.baf" ]
           replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",2400)'
