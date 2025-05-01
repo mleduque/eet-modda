@@ -36,15 +36,17 @@
     overview: Emily, Helga, Kale, Recorder and Vienxay, each with a quest and relationship system
     installation:
       after: [Petsy, Yvette, Sirene_BG2, WilsonChronicles]
-    components: ask
+    components: #component warns
+      - 0 # Skitia NPCs for Baldur's Gate 2: 1.1
+    ignore_warnings: true
     location:
       github_user: Skitia
       repository: SkitiaNPCs
       branch: master
       refresh: 3days
-      patch:
+      patches:
         # Note: ACTION_READLN appear in _commented-out_ code
-        relative: patches/eet/skitia-npc-bg2-romance-conflicts.diff
+        - relative: patches/eet/skitia-npc-bg2-romance-conflicts.diff
       replace:
         - file_globs: ["Scripts/*.baf"]
           regex: true
@@ -72,16 +74,27 @@
           with: 'RealSetGlobalTimer("X3${c}Timer","GLOBAL",900)'
         - file_globs: ["Dialogue/*.d"]
           regex: true
-          replace: 'RealSetGlobalTimer\("X3(?<c>.*)Timer","GLOBAL",3\d00\))'
+          replace: 'RealSetGlobalTimer\("X3(?<c>.*)Timer","GLOBAL",3\d00\)'
           with: 'RealSetGlobalTimer("X3${c}Timer","GLOBAL",960)'
+  - name: SkitiaNPCs
+    description: BG2 version of Skitia NPCs - components thatdon't warn
+    components:
+      - 1 # Helga Alternate Class: Fighter/Priest of Haelga -> Priest of Haelga (Fighter Multi-class): 1.1
+      - 2 # Skitia NPCs: Romance Theme Soundtrack -> Romance Theme Music: 1.1
+      - 4 # Helga Portrait -> Helga Alt Portrait By Acifer: 1.1
+      - 6 # Kale Portrait -> Kale Alt Portrait By Acifer: 1.1
+      - 8 # Vienxay Portrait -> Vienxay Default Portrait by Crisshasart: 1.1
+      - 11 # Choose an alternate class for Kale? -> Vanguard (Requires Vanguard Kit to be installed): 1.1
+      - 13 # Choose an alternate class for Recorder? -> Kapellmeister (Requires the Kapellmeister Kit to be installed): 1.1
+      - 14 # Lorekeeper tweak: Extend Mmnemonic Retrieval to match IWD Spell Progression? -> IWD Progression: 1.1
+
   - name: nephele
     description: SoA companion, halfling cleric of Yondalla, dialogues, no quest
     components:
       - 0 # Nephele NPC Mod for BGII: SoA & ToB
-      - 2 # Install Haer'Dalis Romance crossmod content
     location:
       github_user: Spellhold-Studios
-      repository: Nephele_NPC
+      repository: Nephele-NPC
       release: v.2.7
       asset:  nephele-npc-v2.7.iemod
       replace:
@@ -97,7 +110,7 @@
       general: must be after nephele for crossmod component
     components: [0, 1]
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/Petsy v4.2.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Petsy v4.2
       patch:
         relative: patches/eet/petsy-romance.diff
       replace:
