@@ -129,7 +129,7 @@
       - 1 # Assign the mod's portrait and soundset to the original Husam in game
       #- 10 # Husam NPC: Crossmod Content
       #- 20 # Alternative #1, by Acifer
-      - 21 # Default, by Acifer (included in main component)
+      #- 21 # Default, by Acifer (included in main component)
     installation:
       general: main comp before grey, crossmod after brage
     location:
@@ -458,7 +458,7 @@
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/VerrSzaBGEE v6.01
 
-  - name: OphysiaBG1)
+  - name: OphysiaBG1
     description: chaotic good half-elven bard, friendship, banters
     components:
       - 0 # Ophysia, a Skald companion for BG:EE and SoD
@@ -466,8 +466,8 @@
     location:
       github_user: Llewren
       repository: OphysiaBG1
-      release: v1.2
-      asset: OphysiaBG1.v1.2.zip
+      release: v1.2.1
+      asset: OphysiaBG1.zip
   - name: IndiNPC
     description: bg1 one-day NPC, half-elven, lawful good fighter/mage, banters, small quest
     components:
