@@ -35,7 +35,7 @@
         - file_globs: ["tactics-remix.tp2"]
           replace: 'REQUIRE_PREDICATE !FILE_EXISTS ~mih_eq/setup-mih_eq.tp2~ @3004'
           with: '' # just remove this
-    disabled:
+    disabled_if:
       because: not compatible with SCS
 
   - name: BP-BGT-Worldmap

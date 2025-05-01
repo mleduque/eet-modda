@@ -441,7 +441,7 @@
       github_user: mleduque
       repository: Bookwyrme_Aurora_s_shoes
       tag: "???"
-    disabled:
+    disabled_if:
       because: eet compat issues
 
   # end NPC extensions

@@ -71,7 +71,7 @@
         - file_globs: ['setup-how_eet.tp2']
           replace: 'ACTION_READLN incl_sv_p'
           with: '' # just delete
-    disabled:
+    disabled_if:
       because: will use IWD easter-eggs from SD's IWD_EET_integration
   - name: IWD2_EET
     installation:

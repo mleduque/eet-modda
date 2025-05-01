@@ -15,9 +15,9 @@
       github_user: PaulaMigrate
       repository: Saerileth
       tag: V22
-      patch:
-        relative: saerileth-unobnoxiousify.diff
-    disabled:
+      #patch:
+      #  relative: saerileth-unobnoxiousify.diff
+    disabled_if:
       because: Seems obnoxious
   - name: imoen_forever # ok but disabled
     installation:
@@ -28,7 +28,7 @@
       #- 2 # Imoen 4 Ever in BGII: Yoshimo Comes to Brynnlaw: v9
       #- 20 # Imoen's chest moves with the campaign, too: v9
       #- 9  # BGII content: ~Compatibility with Alternatives and Saerileth~
-    disabled:
+    disabled_if:
       because: using ImoenIsStone instead
 
   - name: SkitiaNPCs
@@ -796,7 +796,7 @@
       repository: Tashia-NPC
       release: v1.5
       asset: tashia-v1.5.iemod
-    disabled:
+    disabled_if:
       because: no time to examine right now
   - name: Kitanya
     components: ask
@@ -805,7 +805,7 @@
       repository: Kitanya_NPC
       release: v6.4.1
       asset:  KitanyaSoAv6-41.zip
-    disabled:
+    disabled_if:
       because: no time to examine right now
 
   # one day npcs
@@ -920,7 +920,7 @@
       repository: Alora-NPC-for-BG2
       release: v2.0
       asset: alora-npc-for-bg2-2.0.iemod
-    disabled:
+    disabled_if:
       because: bare-bone npc, will use bg1npcsoa version
   - name: Coran
     description: Coran for bg2+tob, male elven fighter/thief, friendship

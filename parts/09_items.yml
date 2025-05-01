@@ -25,14 +25,14 @@
     components:
       - 30 # IWD Arcane Spell Pack: Release Candidate 2
       - 40 # IWD Divine Spell Pack: Release Candidate 2
-    disabled:
+    disabled_if:
       manifest_condition: prefer_scs_over_iwdification_spells
   - name: stratagems
     description: iwd spell packs part
     components:
       - 1500 # iwd arcane
       - 1510 # iwd divine
-    disabled:
+    disabled_if:
       not:
         manifest_condition: prefer_scs_over_iwdification_spells
 
@@ -50,7 +50,7 @@
       github_user: subtledoctor
       repository: ItemRevisions
       branch: v4b10sd19
-    disabled:
+    disabled_if:
       because: I want to use item upgrades this time
 
   - name: heartwood
@@ -512,7 +512,7 @@
       repository: DGItems
       release: v2.0
       asset:  dgitems-2.0.iemod
-    disabled:
+    disabled_if:
       because: much overpowered
   - name: IRStore
     overview: |
@@ -526,7 +526,7 @@
       repository: IRStore
       branch: master
       refresh: 1day
-    disabled:
+    disabled_if:
       because: much overpowered
   - name: d2-workshopkits
     description: just the items
