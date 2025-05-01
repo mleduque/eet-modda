@@ -268,8 +268,8 @@
       homepage: https://baldurs-gate.de/index.php?resources/dark-tidings.65/
       github_user: AciferBG
       repository: Dark-Tidings
-      release: v2.6
-      asset: Dark_Tidings_v2.6.zip
+      release: v2.7
+      asset: Dark_Tidings_v2.7.zip
   - name: godcall
     components:
       - 0 # Call Of The Lost Goddess V 2.1
@@ -278,8 +278,8 @@
     location:
       github_user: AciferBG
       repository: Call-of-the-Lost-Goddess
-      release: v2.1
-      asset: Call_of_the_lost_goddess_V_2.1.zip
+      release: v2.2
+      asset: Call_of_the_lost_goddess_V_2.2.zip
   - name: ThroneoftheMadGod
     description: Throne of the Mad God
     summary: >
