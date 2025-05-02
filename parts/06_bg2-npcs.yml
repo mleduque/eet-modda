@@ -327,7 +327,8 @@
     location:
       github_user: ArtemiusI
       repository: Sirene-NPC-for-BG2-EE
-      tag: v2.1
+      branch: master
+      refresh: 1week
       patch:
         relative: patches/eet/sirene-bg2.diff
   - name: quieter_sirene
