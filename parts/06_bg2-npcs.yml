@@ -280,14 +280,12 @@
         relative: patches/foundling-class.diff
   - name: willowisp
     description: SoA - Will, the undead witchlight shaman, adds shaman stronghold, shaman kit, mini-quests + stronghold quests
-    components: # 4 later
-      - 0 # Will NPC, shaman stronghold and new shaman kit for BG2EE
-      # would need translation
-      #- 1 # Change shaman .tlk string to remove "Ineligible for any stronghold" line
-      - 2 # New items for shamans and undead NPCs
-      - 3 # Optional: Drider and Dark Treant Enemies
-      # 4 : crossmod banter later after installing other mods
-      - 5 # [CHEAT] Enable shaman stronghold for all classes
+    components:
+      - 0 # Will NPC, shaman stronghold and new shaman kit for BG2EE: v3.3
+      - 3 # Town Medium (Shaman) Kit: v3.3
+      - 4 # New items for shamans and undead NPCs: v3.3
+      - 5 # Optional: Drider, Dark Treant, Will-o'-wisp Enemies: v3.3
+      - 6 # [CHEAT] Enable shaman stronghold for all classes: v3.3
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/willowisp v3.3
       replace:
@@ -308,7 +306,9 @@
           with: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",700)'
   - name: Dvaradime
     description: BG2 npc - dwarven fighter/mage/thief, quest
-    components: ask
+    components:
+      - 0 # Dvaradime - Baldur's Gate 2: EE NPC: v1.6
+      - 1 # Dvaradime - Player-Initiated Dialogue: v1.6
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Dvaradime v1.6
 
