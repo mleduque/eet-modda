@@ -2,15 +2,6 @@ diff --git a/Sirene_BG2/dialogue/c0sire2j.d b/Sirene_BG2/dialogue/c0sire2j.d
 index 6498a6e..37e9977 100644
 --- Sirene_BG2/dialogue/c0sire2j.d
 +++ Sirene_BG2/dialogue/c0sire2j.d
-@@ -1278,7 +1278,7 @@ I_C_T UDSVIR03 23 C0SireneUDSVIR0323
- END
- 
- I_C_T UDSILVER 0 C0SireneUDSILVER0
--== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Oh... oh, my.Å She is so beautiful... I cannot even describe it.~
-+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Oh... oh, my.ÔøΩ She is so beautiful... I cannot even describe it.~
- END
- 
- I_C_T UDSILVER 53 C0SireneUDSILVER53
 @@ -4652,86 +4652,7 @@ IF ~~ EXIT
  END
  
@@ -95,17 +86,9 @@ index 6498a6e..37e9977 100644
 -IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3) SetGlobal("C0SireneRomanceConflict","GLOBAL",2)~ EXIT
 -END
 -END
-+// deleted
  
  // Low Reputation
  
-@@ -6288,4 +6209,4 @@ SAY ~I cannot deny that I am wary of her origins... yet I do enjoy her company.
- IF ~~ EXIT
- END
- 
--END // END for APPEND
-\ No newline at end of file
-+END // END for APPEND
 diff --git a/Sirene_BG2/scripts/c0sire2.baf b/Sirene_BG2/scripts/c0sire2.baf
 index 655f5d1..0619787 100644
 --- Sirene_BG2/scripts/c0sire2.baf

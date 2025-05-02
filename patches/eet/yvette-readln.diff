@@ -1,0 +1,26 @@
+diff --git a/Setup-Yvette.tp2 b/Setup-Yvette.tp2
+index 10d7b26..87e83dd 100644
+--- Yvette/Setup-Yvette.tp2
++++ Yvette/Setup-Yvette.tp2
+@@ -205,8 +205,6 @@ COMPILE EVALUATE_BUFFER ~Yvette/Scripts/YxYve.baf~
+ 
+ EXTEND_TOP ~Baldur.bcs~ ~Yvette/Scripts/Player.baf~ EVALUATE_BUFFER
+ EXTEND_TOP ~AR0700.bcs~ ~Yvette/Scripts/AR0700.baf~
+-EXTEND_TOP ~Jaheira.bcs~ ~Yvette/Scripts/Jaheira.baf~
+-EXTEND_TOP ~Aerie.bcs~ ~Yvette/Scripts/Aerie.baf~
+ EXTEND_TOP ~Edwin.bcs~ ~Yvette/Scripts/Edwin.baf~
+ EXTEND_TOP ~Imoen2.bcs~ ~Yvette/Scripts/Imoen2.baf~
+ EXTEND_TOP ~AR1514.bcs~ ~Yvette/Scripts/AR1514.baf~
+@@ -536,11 +534,7 @@ Dash 1 to install original dialogues
+ Dash 2 to install dialogues without action text/descriptions */
+ 
+ 
+-OUTER_SPRINT ~yvettedialogues~ ~placeholder_value~
+-OUTER_WHILE (!(IS_AN_INT ~yvettedialogues~) OR (~yvettedialogues~ > 0x2) OR (~yvettedialogues~ < 0x1)) BEGIN
+-  PRINT @100 /* Choose 1 or 2 and confirm by "enter" */
+-  ACTION_READLN ~yvettedialogues~
+-END
++OUTER_SPRINT ~yvettedialogues~ 1
+ 
+ ACTION_IF ("yvettedialogues" = 1) THEN BEGIN
+   PRINT @101 /* Installing original dialogues */
