@@ -157,7 +157,7 @@
     components:
       - 0 # Walahnan NPC for BG2EE: 0.92
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/WalahnanBG2 v1.00.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/WalahnanBG2 v1.00
       replace:
         - file_globs: ["dialogue/L#2WH.d"]
           replace: 'SetGlobalTimer("L#2WHTimeToDie","GLOBAL",FIFTEEN_DAYS)'
@@ -195,7 +195,7 @@
       - 0 # Fhaugy - Baldur's Gate 2: EE NPC
       - 1 # Fhaugy: Player-Initiated Dialogues (PIDs)
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/Fhaugy v1.03.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Fhaugy v1.03
       replace:
         - file_globs: ["scripts/L#FHA.baf", "scripts/L#FHA25.baf"]
           regex: true
@@ -247,29 +247,33 @@
       - 0 # Faldorn NPC for BG2EE
       - 1 # Faldorn NPC for BG2EE: Player-Initiated Dialogues (PIDs)
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/FaldornBG2 v1.3.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/FaldornBG2 v1.3
   - name: Lhannd
     description: male CG fallen ranger, quest, friendship, romance
-    components: ask
+    components:
+      - 0 #/ Lhannd - Baldur's Gate 2: EE NPC: v1.5
+      - 1 #/ Lhannd: Player-Initiated Dialogues (PIDs): v1.5
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/Lhannd v1.5.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Lhannd v1.5
   - name: fyalvara
     description: female human warrioress (rashemen), friendship, quest
-    components: ask
+    components:
+      - 0 # Fyalvara - Baldur's Gate 2: EE NPC -> Make Fyalvara a kitless fighter.: v1.1
+      - 3 # Fyalvara - install Player-Initiated Dialogues?: v1.1
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/fyalvara v1.1.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/fyalvara v1.1
   - name: verrBG2
     description: soa, same as above, romance
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/VerrBG2 v2.2.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/VerrBG2 v2.2
   - name: Foundling
     description: "Colours of Infinity: Foundling"
     overview: Male ShadowAdpet, NE ; quest, dialogues, no romance
     components:
       - 0   # Foundling
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/colours_of_infinity/Foundling v5.5.1.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/colours_of_infinity/Foundling v5.5.1
       patch:
         relative: patches/foundling-class.diff
   - name: willowisp
@@ -304,7 +308,7 @@
     description: BG2 npc - dwarven fighter/mage/thief, quest
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/bg/Dvaradime v1.6.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Dvaradime v1.6
 
   # ArtemiusI NPCs
   - name: paina
