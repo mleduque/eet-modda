@@ -1,11 +1,11 @@
---- SkitiaNPCs/SkitiaNPCs/Dialogue/X3EmiJ.d
-+++ SkitiaNPCs/SkitiaNPCs/Dialogue/X3EmiJ.d
-@@ -3934,81 +3934,8 @@ CHAIN X3EmiJ 11.8
- DO ~SetGlobal("X3EmiRomanceActive","GLOBAL",3)~
- EXIT 
+diff --git a/SkitiaNPCs/Dialogue/X3EmiJ.d b/SkitiaNPCs/Dialogue/X3EmiJ.d
+index 5e5e646..7d012df 100644
+--- SkitiaNPCs/Dialogue/X3EmiJ.d
++++ SkitiaNPCs/Dialogue/X3EmiJ.d
+@@ -3936,78 +3936,6 @@ EXIT
  
--// Romance conflict
--
+ // Romance conflict
+ 
 -CHAIN IF ~Global("X3EmiRomanceConflict","GLOBAL",1)~ THEN X3EmiJ X3EmiRomanceConflict
 -@1157
 -== X3EmiJ @1158
@@ -73,24 +73,22 @@
 -SetGlobal("X3EmiRomanceConflict","GLOBAL",2)~ 
 -EXIT
 -
-+// Romance conflict- deleted
- 
+-
 -CHAIN X3EmiJ RC.2
 -@1177
 -DO ~SetGlobal("X3EmiRomanceActive","GLOBAL",3) SetGlobal("X3EmiRomanceConflict","GLOBAL",2)~ 
 -EXIT
-- 
+  
  // Post Rest 
  CHAIN IF ~Global("X3EmiLoveTalk","LOCALS",24)~ THEN X3EmiJ LoveTalk12 
- @1178
---- SkitiaNPCs/SkitiaNPCs/Dialogue/X3KalJ.d
-+++ SkitiaNPCs/SkitiaNPCs/Dialogue/X3KalJ.d
-@@ -3061,59 +3061,7 @@ CHAIN X3KalJ 10.11
- EXIT 
- // Other NPC Conflicts here 
+diff --git a/SkitiaNPCs/Dialogue/X3KalJ.d b/SkitiaNPCs/Dialogue/X3KalJ.d
+index 5fc6876..9b27e3b 100644
+--- SkitiaNPCs/Dialogue/X3KalJ.d
++++ SkitiaNPCs/Dialogue/X3KalJ.d
+@@ -3063,58 +3063,6 @@ EXIT
  
--// Romance conflict
--
+ // Romance conflict
+ 
 -CHAIN IF ~Global("X3KalRomanceConflict","GLOBAL",1)~ THEN X3KalJ X3VieRomanceConflict
 -@919
 -DO ~SetGlobal("X3KalRomanceConflict","GLOBAL",2)~
@@ -142,18 +140,18 @@
 -SetGlobal("L3PetsyRomanceActive","GLOBAL",3)
 -SetGlobal("X3VieRomanceConflict","GLOBAL",2)~ 
 -EXIT
-+// Romance conflict - deleted
- 
+-
  
  //Love Talk #11
---- SkitiaNPCs/SkitiaNPCs/Dialogue/X3RebJ.d
-+++ SkitiaNPCs/SkitiaNPCs/Dialogue/X3RebJ.d
-@@ -3478,104 +3478,7 @@ CHAIN X3RebJ 11.19
- EXTERN X3RebJ 11.16 
+ CHAIN IF ~Global("X3KalLoveTalk","LOCALS",22)~ THEN X3KalJ LoveTalk11 
+diff --git a/SkitiaNPCs/Dialogue/X3RebJ.d b/SkitiaNPCs/Dialogue/X3RebJ.d
+index 7ebe5a6..2abe9ed 100644
+--- SkitiaNPCs/Dialogue/X3RebJ.d
++++ SkitiaNPCs/Dialogue/X3RebJ.d
+@@ -3480,102 +3480,6 @@ EXTERN X3RebJ 11.16
  
+ // Romance conflict
  
--// Romance conflict
--
 -CHAIN IF ~Global("X3RebRomanceConflict","GLOBAL",1)~ THEN X3RebJ X3RebRomanceConflict
 -@1050
 -== X3RebJ @1051 
@@ -250,18 +248,17 @@
 -DO ~SetGlobal("X3RebRomanceActive","GLOBAL",3) SetGlobal("X3RebRomanceConflict","GLOBAL",2)~ 
 -EXIT
 - 
-+// Romance conflict - deleted
  
  CHAIN IF ~Global("X3RebLoveTalk","LOCALS",24)~ THEN X3RebJ LoveTalk12
  @1080
---- SkitiaNPCs/SkitiaNPCs/Dialogue/X3VieJ.d
-+++ SkitiaNPCs/SkitiaNPCs/Dialogue/X3VieJ.d
-@@ -3639,68 +3639,7 @@ CHAIN X3VieJ 11.8
- DO ~SetGlobal("X3VieRomanceActive","GLOBAL",3)~
- EXIT 
+diff --git a/SkitiaNPCs/Dialogue/X3VieJ.d b/SkitiaNPCs/Dialogue/X3VieJ.d
+index 39e4945..b8269fa 100644
+--- SkitiaNPCs/Dialogue/X3VieJ.d
++++ SkitiaNPCs/Dialogue/X3VieJ.d
+@@ -3641,68 +3641,6 @@ EXIT
  
--// Romance conflict
--
+ // Romance conflict
+ 
 -CHAIN IF ~Global("X3VieRomanceConflict","GLOBAL",1)~ THEN X3VieJ X3VieRomanceConflict
 -@1101
 -== X3VieJ @1102
@@ -322,18 +319,18 @@
 -SetGlobal("L3PetsyRomanceActive","GLOBAL",3)
 -SetGlobal("X3VieRomanceConflict","GLOBAL",2)~ 
 -EXIT
-+// Romance conflict -deleted
+-
+-
  
- 
- 
---- SkitiaNPCs/SkitiaNPCs/Scripts/X3Emi.baf
-+++ SkitiaNPCs/SkitiaNPCs/Scripts/X3Emi.baf
-@@ -680,188 +680,9 @@ THEN RESPONSE #100
- SetGlobal("X3EmiHexxatConflict","LOCALS",1) 
- StartDialogueNoSet(Player1)
+ CHAIN IF ~Global("X3VieLoveTalk","LOCALS",24)~ THEN X3VieJ LoveTalk12 // Happens at rest.
+ @1123
+diff --git a/SkitiaNPCs/Scripts/X3Emi.baf b/SkitiaNPCs/Scripts/X3Emi.baf
+index 1aefb44..e22ce69 100644
+--- SkitiaNPCs/Scripts/X3Emi.baf
++++ SkitiaNPCs/Scripts/X3Emi.baf
+@@ -682,187 +682,6 @@ StartDialogueNoSet(Player1)
  END 
--// Romance Conflicts
-+// Romance Conflicts - deleted
+ // Romance Conflicts
  
 -IF
 -InParty(Myself)
@@ -515,26 +512,19 @@
 -RESPONSE #100
 -SetGlobal("C0SireneRomanceActive","GLOBAL",3)
 -END
-+//Auto Break Romances  - deleted
- 
+-
  // Flirts
  IF
-@@ -915,4 +736,4 @@ Global("X3EmiRomanceActive","GLOBAL",1)
- THEN
- RESPONSE #100
- RealSetGlobalTimer("X3EmiFlirtTimer","GLOBAL",600)
--END
-\ No newline at end of file
-+END
---- SkitiaNPCs/SkitiaNPCs/Scripts/X3Kal.baf
-+++ SkitiaNPCs/SkitiaNPCs/Scripts/X3Kal.baf
-@@ -661,185 +661,6 @@ THEN RESPONSE #100
- SetGlobal("X3BreakUp","LOCALS",0)
+ InParty(Myself)
+diff --git a/SkitiaNPCs/Scripts/X3Kal.baf b/SkitiaNPCs/Scripts/X3Kal.baf
+index b396514..e5f31e9 100644
+--- SkitiaNPCs/Scripts/X3Kal.baf
++++ SkitiaNPCs/Scripts/X3Kal.baf
+@@ -662,184 +662,3 @@ SetGlobal("X3BreakUp","LOCALS",0)
  END 
  
--// Romance Conflicts
-+// Romance Conflicts - deleted
- 
+ // Romance Conflicts
+-
 -IF
 -InParty(Myself)
 -Global("X3KalRomanceActive","GLOBAL",1)
@@ -715,15 +705,14 @@
 -RESPONSE #100
 -SetGlobal("C0SireneRomanceActive","GLOBAL",3)
 -END
-+//Auto Break Romances - deleted
---- SkitiaNPCs/SkitiaNPCs/Scripts/X3Reb.baf
-+++ SkitiaNPCs/SkitiaNPCs/Scripts/X3Reb.baf
-@@ -141,53 +141,7 @@ THEN RESPONSE #100
- 	StartDialogueNoSet(Player1)
- END 
+diff --git a/SkitiaNPCs/Scripts/X3Reb.baf b/SkitiaNPCs/Scripts/X3Reb.baf
+index 0c5ab98..ca78d9f 100644
+--- SkitiaNPCs/Scripts/X3Reb.baf
++++ SkitiaNPCs/Scripts/X3Reb.baf
+@@ -143,51 +143,6 @@ END
  
--// Romance Conflicts
--
+ // Romance Conflicts
+ 
 -IF
 -InParty(Myself)
 -Global("X3RebRomanceActive","GLOBAL",1)
@@ -769,160 +758,17 @@
 -RESPONSE #100
 -StartDialogueNoSet(Player1)
 -END
-+// Romance Conflicts - deleted
  
  //Friendship Talk Checkers
  
-@@ -669,140 +623,7 @@ THEN RESPONSE #100
- SetGlobal("X3BreakUp","LOCALS",0)
- END 
+diff --git a/SkitiaNPCs/Scripts/X3Vie.baf b/SkitiaNPCs/Scripts/X3Vie.baf
+index 7c48b3b..677eaae 100644
+--- SkitiaNPCs/Scripts/X3Vie.baf
++++ SkitiaNPCs/Scripts/X3Vie.baf
+@@ -583,52 +583,6 @@ END
  
--//Auto Break Romances 
--IF
--Global("X3RebRomanceActive","GLOBAL",1)
--OR(14)
--Global("AerieRomanceActive","GLOBAL",2)
--Global("JaheiraRomanceActive","GLOBAL",2)
--Global("AnomenRomanceActive","GLOBAL",2)
--Global("ViconiaRomanceActive","GLOBAL",2)
--Global("RasaadRomanceActive","GLOBAL",2)
--Global("NeeraRomanceActive","GLOBAL",2)
--Global("X3KalRomanceActive","GLOBAL",2)
--Global("X3VieRomanceActive","GLOBAL",2)
--Global("X3EmiRomanceActive","GLOBAL",2)
--Global("DornRomanceActive","GLOBAL",2)
--Global("HexxatRomanceActive","GLOBAL",2)
--Global("L3PetsyRomanceActive","GLOBAL",2)
--Global("YvetteRomanceActive","GLOBAL",2)
--Global("C0SireneRomanceActive","GLOBAL",2)
--THEN
--RESPONSE #100
--SetGlobal("X3RebRomanceActive","GLOBAL",3)
--END
--
--IF
--Global("X3RebRomanceActive","GLOBAL",2)
--Global("AerieRomanceActive","GLOBAL",1)
--THEN
--RESPONSE #100
--SetGlobal("AerieRomanceActive","GLOBAL",3)
--END
--
--IF
--Global("X3RebRomanceActive","GLOBAL",2)
--Global("JaheiraRomanceActive","GLOBAL",1)
--THEN
--RESPONSE #100
--SetGlobal("JaheiraRomanceActive","GLOBAL",3)
--END
--
--IF
--Global("X3RebRomanceActive","GLOBAL",2)
--Global("AnomenRomanceActive","GLOBAL",1)
--THEN
--RESPONSE #100
--SetGlobal("AnomenRomanceActive","GLOBAL",3)
--END
--
--IF
--Global("X3RebRomanceActive","GLOBAL",2)
--Global("ViconiaRomanceActive","GLOBAL",1)
--THEN
--RESPONSE #100
--SetGlobal("ViconiaRomanceActive","GLOBAL",3)
--END
--
--IF
--Global("X3RebRomanceActive","GLOBAL",2)
--Global("RasaadRomanceActive","GLOBAL",1)
--THEN
--RESPONSE #100
--SetGlobal("RasaadRomanceActive","GLOBAL",3)
--END
--
--IF
--Global("X3RebRomanceActive","GLOBAL",2)
--Global("NeeraRomanceActive","GLOBAL",1)
--THEN
--RESPONSE #100
--SetGlobal("NeeraRomanceActive","GLOBAL",3)
--END
--
--IF
--Global("X3RebRomanceActive","GLOBAL",2)
--Global("DornRomanceActive","GLOBAL",1)
--THEN
--RESPONSE #100
--SetGlobal("DornRomanceActive","GLOBAL",3)
--END
--
--IF
--Global("X3RebRomanceActive","GLOBAL",2)
--Global("HexxatRomanceActive","GLOBAL",1)
--THEN
--RESPONSE #100
--SetGlobal("HexxatRomanceActive","GLOBAL",3)
--END
--
--IF
--Global("X3RebRomanceActive","GLOBAL",2)
--Global("L3PetsyRomanceActive","GLOBAL",1)
--THEN
--RESPONSE #100
--SetGlobal("L3PetsyRomanceActive","GLOBAL",3)
--END
--
--IF
--Global("X3RebRomanceActive","GLOBAL",2)
--Global("YvetteRomanceActive","GLOBAL",1)
--THEN
--RESPONSE #100
--SetGlobal("YvetteRomanceActive","GLOBAL",3)
--END
--
--IF
--Global("X3RebRomanceActive","GLOBAL",2)
--Global("X3EmiRomanceActive","GLOBAL",1)
--THEN
--RESPONSE #100
--SetGlobal("X3EmiRomanceActive","GLOBAL",3)
--END
--
--IF
--Global("X3RebRomanceActive","GLOBAL",2)
--Global("X3VieRomanceActive","GLOBAL",1)
--THEN
--RESPONSE #100
--SetGlobal("X3VieRomanceActive","GLOBAL",3)
--END
--
--IF
--Global("X3RebRomanceActive","GLOBAL",2)
--Global("X3KalRomanceActive","GLOBAL",1)
--THEN
--RESPONSE #100
--SetGlobal("X3KalRomanceActive","GLOBAL",3)
--END
--
--IF
--Global("X3RebRomanceActive","GLOBAL",2)
--Global("C0SireneRomanceActive","GLOBAL",1)
--THEN
--RESPONSE #100
--SetGlobal("C0SireneRomanceActive","GLOBAL",3)
--END
-+//Auto Break Romances - deleted
+ // Romance Conflicts
  
- IF 
- AreaCheck("AR2402")
---- SkitiaNPCs/SkitiaNPCs/Scripts/X3Vie.baf
-+++ SkitiaNPCs/SkitiaNPCs/Scripts/X3Vie.baf
-@@ -581,53 +581,7 @@ THEN RESPONSE #100
- SetGlobal("X3BreakUp","LOCALS",0)
- END 
- 
--// Romance Conflicts
--
 -IF
 -InParty(Myself)
 -Global("X3VieRomanceActive","GLOBAL",1)
@@ -968,15 +814,14 @@
 -RESPONSE #100
 -StartDialogueNoSet(Player1)
 -END
-+// Romance Conflicts - deleted
- 
+-
  
  //Experience
-@@ -776,138 +730,4 @@ RESPONSE #100
- RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",600)
+ 
+@@ -777,137 +731,3 @@ RealSetGlobalTimer("X3VieFlirtTimer","GLOBAL",600)
  END
  
--// Auto-kill romances
+ // Auto-kill romances
 -
 -IF
 -Global("X3VieRomanceActive","GLOBAL",1)
@@ -1111,4 +956,3 @@
 -RESPONSE #100
 -SetGlobal("C0SireneRomanceActive","GLOBAL",3)
 -END
-+// Auto-kill romances - deleted

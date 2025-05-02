@@ -136,6 +136,7 @@
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/colours_of_infinity/Yvette Romance v5.1.0
       patches:
         - relative: patches/eet/yvette-romance.diff
+          encoding: WIN1252
         - relative: patches/eet/yvette-readln.diff
       replace:
         - file_globs: ["DIALOGUES/*.d"]

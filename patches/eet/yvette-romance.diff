@@ -1,26 +1,11 @@
---- Yvette/Setup-Yvette.tp2
-+++ Yvette/Setup-Yvette.tp2
-@@ -535,11 +535,7 @@ Dash 1 to install original dialogues
- Dash 2 to install dialogues without action text/descriptions */
+diff --git a/DIALOGUES/YveJNAT.d b/DIALOGUES/YveJNAT.d
+index 3399180..7cdb08c 100644
+--- Yvette/DIALOGUES/YveJNAT.d
++++ Yvette/DIALOGUES/YveJNAT.d
+@@ -146,35 +146,6 @@ END
  
+ ///////Viconia Conflict
  
--OUTER_SPRINT ~yvettedialogues~ ~placeholder_value~
--OUTER_WHILE (!(IS_AN_INT ~yvettedialogues~) OR (~yvettedialogues~ > 0x2) OR (~yvettedialogues~ < 0x1)) BEGIN
--  PRINT @100 /* Choose 1 or 2 and confirm by "enter" */
--  ACTION_READLN ~yvettedialogues~
--END
-+OUTER_SPRINT ~yvettedialogues~ 1
- 
- ACTION_IF ("yvettedialogues" = 1) THEN BEGIN
-   PRINT @101 /* Installing original dialogues */
---- Yvette/Yvette/DIALOGUES/YveJNAT.d
-+++ Yvette/Yvette/DIALOGUES/YveJNAT.d
-@@ -144,38 +144,6 @@ SAY @44 /* I thought you'd say something different... */
- IF~~THEN DO ~SetGlobal("YvetteTurnUndead","GLOBAL",3) SetGlobal("YvetteRomanceActive","GLOBAL",3)~ EXIT
- END
- 
--///////Viconia Conflict
--
 -IF~InParty(Myself) InParty("Viconia") Global("YvetteViconia","GLOBAL",0)~THEN BEGIN Yve0Vx00
 -SAY @45 /* This drow - she's a priestess of Shar! I'm sorry, but I can't travel with such a creature. I understand you may not know of it, but Sune and Shar are the greatest of enemies. She--this drow--is probably like her goddess: vicious, treacherous and unpredictable. */
 -IF~~THEN REPLY @46 /* Please, don't go. Eh, I knew this would cause trouble. Viconia, you should leave. */ GOTO Yve0Vx01
@@ -50,11 +35,13 @@
 -SAY @54 /* I'm sorry, but I told you how I felt about Viconia and traveling with her. But it would seem you've made your decision. Fare thee well. I wish you luck on the road. */
 -IF~~THEN DO ~SetGlobal("YvetteViconia","GLOBAL",2) SetGlobal("YvetteRomanceActive","GLOBAL",3) LeaveParty() EscapeArea()~ EXIT
 -END
--
+ 
  /////////////////////////////////Romance
  //////////////////1
---- Yvette/Yvette/DIALOGUES/YveNAT.d
-+++ Yvette/Yvette/DIALOGUES/YveNAT.d
+diff --git a/DIALOGUES/YveNAT.d b/DIALOGUES/YveNAT.d
+index 9a29f0f..f25f514 100644
+--- Yvette/DIALOGUES/YveNAT.d
++++ Yvette/DIALOGUES/YveNAT.d
 @@ -37,7 +37,7 @@ END
  
  IF~~THEN BEGIN Yvette006
@@ -95,17 +82,10 @@
 +IF~~THEN BEGIN YvetteWaitMore
 +SAY @305 /* Aww... Ok, Please be quick! */
 +END 
---- Yvette/Yvette/DIALOGUES/YxYve.d
-+++ Yvette/Yvette/DIALOGUES/YxYve.d
-@@ -39,7 +39,7 @@ END
- 
- IF~~THEN BEGIN Yvette006
- SAY @16 /* Lovely! I'm glad I can stay, dear lord. Come then! I shall support you with my prayers. */
--IF~~THEN DO ~SetGlobal("YvetteJoin","GLOBAL",1) TakePartyItem("YxDraw") DestroyItem("YxDraw") JoinParty()~ EXIT
-+IF~~THEN DO ~SetGlobal("YvetteJoin","GLOBAL",1) TakePartyItem("YxDraw") DestroyItem("YxDraw") SetGlobal("YvetteWasInParty","GLOBAL",1) JoinParty()~ EXIT
- END
- 
- IF~~THEN BEGIN Yvette003
+diff --git a/DIALOGUES/YxYve.d b/DIALOGUES/YxYve.d
+index 0ad8ccb..58267fa 100644
+--- Yvette/DIALOGUES/YxYve.d
++++ Yvette/DIALOGUES/YxYve.d
 @@ -128,6 +128,7 @@ END
  IF~Global("YvetteJoin","GLOBAL",1) !Global("YvetteRomanceActive","GLOBAL",4)~THEN BEGIN YvetteKickOut000
  SAY @33 /* So, you want me to leave? I'd prefer to stay with you, good lord, but if I must...I...I will leave, then, and serch for my home... */
@@ -127,7 +107,6 @@
  SAY @37 /* It's so good to hear that. Let's go, then! */
  IF~~THEN DO ~JoinParty()~ EXIT
 -END
-\ No newline at end of file
 +END
 +
 +IF~Global("YvetteWasInParty","GLOBAL",1) !InParty(Myself)~ YvetteCameSeeAgain
@@ -139,14 +118,14 @@
 +IF~~THEN BEGIN YvetteWaitMore
 +SAY @305 /* Aww... Ok, Please be quick! */
 +END 
---- Yvette/Yvette/SCRIPTS/Player.baf
-+++ Yvette/Yvette/SCRIPTS/Player.baf
-@@ -34,15 +34,6 @@ ActionOverride("YxYve",StartDialogueNoSet(Player1))
- Continue()
- END
+diff --git a/SCRIPTS/Player.baf b/SCRIPTS/Player.baf
+index 3e4de52..432cd71 100644
+--- Yvette/SCRIPTS/Player.baf
++++ Yvette/SCRIPTS/Player.baf
+@@ -36,14 +36,6 @@ END
  
--////////////Viconia and Yvette
--
+ ////////////Viconia and Yvette
+ 
 -IF
 -Global("YvetteViconia","GLOBAL",2)
 -THEN
@@ -154,19 +133,18 @@
 -SetGlobal("YvetteViconia","GLOBAL",3)
 -SetGlobal("YvetteRomanceActive","GLOBAL",3)
 -END
- 
+-
  /////////////Yvette spellhold
  
-diff --git a/Yvette/SCRIPTS/YxYve.baf b/Yvette/SCRIPTS/YxYve.baf
-index 104edb6..70de05d 100644
+ IF
+diff --git a/SCRIPTS/YxYve.baf b/SCRIPTS/YxYve.baf
+index 104edb6..51a56c7 100644
 --- Yvette/SCRIPTS/YxYve.baf
 +++ Yvette/SCRIPTS/YxYve.baf
-@@ -345,26 +345,6 @@ SetGlobal("YvetteRomanceActive","GLOBAL",3)
- END
+@@ -347,24 +347,6 @@ END
  
+ //////////////Viconia Conflict
  
--//////////////Viconia Conflict
--
 -IF
 -InParty(Myself)
 -InParty("Viconia")
@@ -188,18 +166,7 @@ index 104edb6..70de05d 100644
  ///////////////Lathander
  
  IF
---- Yvettea/Yvette/Setup-Yvette.tp2
-+++ Yvette/Yvette/Setup-Yvette.tp2
-@@ -205,8 +205,6 @@ COMPILE EVALUATE_BUFFER ~Yvette/Scripts/YxYve.baf~
- 
- EXTEND_TOP ~Baldur.bcs~ ~Yvette/Scripts/Player.baf~ EVALUATE_BUFFER
- EXTEND_TOP ~AR0700.bcs~ ~Yvette/Scripts/AR0700.baf~
--EXTEND_TOP ~Jaheira.bcs~ ~Yvette/Scripts/Jaheira.baf~
--EXTEND_TOP ~Aerie.bcs~ ~Yvette/Scripts/Aerie.baf~
- EXTEND_TOP ~Edwin.bcs~ ~Yvette/Scripts/Edwin.baf~
- EXTEND_TOP ~Imoen2.bcs~ ~Yvette/Scripts/Imoen2.baf~
- EXTEND_TOP ~AR1514.bcs~ ~Yvette/Scripts/AR1514.baf~
-diff --git a/Yvette/Translations/english/YXYVE.TRA b/Yvette/Translations/english/YXYVE.TRA
+diff --git a/Translations/english/YXYVE.TRA b/Translations/english/YXYVE.TRA
 index 0eb6039..e64eeac 100644
 --- Yvette/Translations/english/YXYVE.TRA
 +++ Yvette/Translations/english/YXYVE.TRA
