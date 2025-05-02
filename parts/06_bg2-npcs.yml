@@ -264,7 +264,9 @@
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/fyalvara v1.1
   - name: verrBG2
     description: soa, same as above, romance
-    components: ask
+    components:
+      - 0 # Verr'Sza the rakshasa NPC for BG2EE: v2.2
+
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/VerrBG2 v2.2
   - name: Foundling
