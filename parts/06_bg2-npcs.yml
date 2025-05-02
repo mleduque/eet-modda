@@ -398,9 +398,9 @@
       # - 31 # Adrian Tolerates High Reputation - For Active Romance or Friendship
     location:
       github_user: Spellhold-Studios
-      repository: Adrian_NPC
-      release: v6.0
-      asset: adrian-npc-for-bgii-v6.iemod
+      repository: Adrian-NPC
+      release: v6.1
+      asset: adrian-npc-for-bgii-v6.1.iemod
       replace:
         # faster mini-quest start, Soa & TOB talks
         - file_globs: ["adrian/dialogue/rh#adrj.d", "adrian/dialogue/rh#adrj.d", "adrian/dialogue/rh#ad25j.d"]
