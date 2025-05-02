@@ -442,8 +442,8 @@
     location:
       http: http://america.iegmc.net/g3/lin-evandra-v2.2.zip
       # also path: /home/mick/Games/modda-cache/static/lin-evandra-v2.2.zip
-      patch:
-        relative: patches/eet/evandra-romance.diff
+      patches:
+        - relative: patches/eet/evandra-romance.diff
       replace:
         - file_globs: ["crossmod/adrian.d", "dialogue/talks.d", "dialogue/talkstob.d", "scripts/rh#ev25.baf"]
           regex: true

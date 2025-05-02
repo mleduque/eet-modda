@@ -1,7 +1,7 @@
 diff --git a/scripts/bgee.baf b/scripts/bgee.baf
 index 6e5edbe..2c77d15 100644
---- scripts/bgee.baf
-+++ scripts/bgee.baf
+--- evandra/scripts/bgee.baf
++++ evandra/scripts/bgee.baf
 @@ -1,36 +1,5 @@
  // Romance Kills
 -
@@ -41,8 +41,8 @@ index 6e5edbe..2c77d15 100644
  // Experience
 diff --git a/scripts/rh#eva.baf b/scripts/rh#eva.baf
 index b23d558..c79b402 100644
---- scripts/rh#eva.baf
-+++ scripts/rh#eva.baf
+--- evandra/scripts/rh#eva.baf
++++ evandra/scripts/rh#eva.baf
 @@ -135,7 +135,6 @@ END
  IF
      Global("rh#EvaRomanceCheck","GLOBAL",0)
