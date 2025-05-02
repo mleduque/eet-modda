@@ -216,18 +216,18 @@
           with: 'RealSetGlobalTimer("IshyRomanceTimer","GLOBAL",700)'
         - file_globs: ["Scripts/ishyscrp.baf"]
           regex: true
-          replace: 'RealSetGlobalTimer\("Ishy(?<t>[^""]+)","GLOBAL",([0-9]{4})\)'
+          replace: 'RealSetGlobalTimer\("Ishy(?<t>[^"]+)","GLOBAL",([0-9]{4})\)'
           with: 'RealSetGlobalTimer("Ishy${t}","GLOBAL",680)'
         - file_globs: ["Dialogues/bdishy.d"]
           replace: 'RealSetGlobalTimer("IshyTimer","GLOBAL",5600)'
           with: 'RealSetGlobalTimer("IshyTimer","GLOBAL",900)'
         - file_globs: ["Dialogues/ishyD.d"]
           regex: true
-          replace: 'RealSetGlobalTimer\("Ishy(?<t>[^""]+)","GLOBAL",([0-9]{4})\)'
+          replace: 'RealSetGlobalTimer\("Ishy(?<t>[^"]+)","GLOBAL",([0-9]{4})\)'
           with: 'RealSetGlobalTimer("Ishy${t}","GLOBAL",690)'
         - file_globs: ["Scripts/cutcutscene/ishyscrp.baf"]
           regex: true
-          replace: 'RealSetGlobalTimer\("Ishy(?<t>[^""]+)","GLOBAL",([0-9]{4})\)'
+          replace: 'RealSetGlobalTimer\("Ishy(?<t>[^"]+)","GLOBAL",([0-9]{4})\)'
           with: 'RealSetGlobalTimer("Ishy${t}","GLOBAL",720)'
 
   # Skitia BG1 npcs

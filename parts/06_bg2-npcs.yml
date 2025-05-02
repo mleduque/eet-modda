@@ -321,7 +321,9 @@
       repository: Pai-Na-NPC-mod-for-BG2-EE
       tag: v1.9
   - name: Sirene_BG2
-    components: ask
+    components:
+      - 0 # Sirene NPC for BG2:EE
+      - 2 # Choose an alternate portrait for Sirene? -> Alternate 1 (Sirick, Light Armor)
       #- 0   # Sirene NPC for BG2:EE
       #- 2 # Choose an portrait for Sirene (check mod folder for portraits) -> Alternate Light Armor portrait by Sirick
     location:
@@ -329,20 +331,24 @@
       repository: Sirene-NPC-for-BG2-EE
       branch: master
       refresh: 1week
-      patch:
-        relative: patches/eet/sirene-bg2.diff
-  - name: quieter_sirene
-    components:
-      - 0
-    location:
-      github_user: mleduque
-      repository: quieter_sirene
-      tag: v0.9
+      patches:
+        - relative: patches/eet/sirene-bg2.diff
+      replace:
+        - file_globs: ['dialogue/c0sire2j.d', 'dialogue/c0sir25j.d', 'dialogue/bc0sire2.d', 'scripts/c0sire2.baf']
+          regex: true
+          replace: 'RealSetGlobalTimer\("C0Sirene(?<t>[^"]+)","GLOBAL",2\d\d\d\)'
+          with: 'RealSetGlobalTimer("C0Sirene${t}","GLOBAL",600)'
+        - file_globs: ['dialogue/c0sire2j.d', 'scripts/c0sire2.baf']
+          regex: true
+          replace: 'RealSetGlobalTimer\("C0Sirene(?<t>[^"]+)","GLOBAL",3\d\d\d\)'
+          with: 'RealSetGlobalTimer("C0Sirene${t}","GLOBAL",800)'
 
   # Jastey NPCs
   - name: gavin_bg2
     # will prompt for romance timer
-    components: ask
+    components:
+      - 12 # Gavin for BG2 -> Speed: 15 minutes real time minimum between dialogues: v24
+      - 3 # Multi-romance cheat: v24
     location:
       github_user: Gibberlings3
       repository: Gavin_BG2
