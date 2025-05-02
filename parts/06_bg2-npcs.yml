@@ -361,17 +361,18 @@
     location:
       github_user: Gitjas
       repository: Solaufeins_Rescue_NPC
-      release: v5.0
-      asset:  solaufeins-rescue-jasteys-solaufein-npc-mod-for-bgii-45.0.iemod
+      release: v5
+      asset: solaufeins-rescue-jasteys-solaufein-npc-mod-for-bgii-5.0.iemod
 
   - name: arath
     description: bg2 druid npc with romance+friendship and quest (late  soa)
-    components: [0]
+    components:
+      - 0 # Arath NPC for BGII: SoA & ToB: v6
     location:
       github_user: Spellhold-Studios
-      repository: Arath_NPC
+      repository: Arath-NPC
       release: v6
-      asset: arath-npc-mod-for-baldurs-gate-2-soa-tob-v6.iemod
+      asset: arath-v6.iemod
       replace:
         - file_globs: ["dialogue/lk#ar25j.d", "dialogue/lk#aratj.d"]
           regex: true
