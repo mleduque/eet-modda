@@ -72,6 +72,10 @@
     description: nephele crossmod
     components:
       - 2 # Install Haer'Dalis Romance crossmod content
+  - name: Petsy
+    description: Petsy corssmod
+    components:
+      - 1 # Petsy/Nephele crossmod banters: 4.2
 
   - name: iwd_eet-party-banter
     description: Icewind Dale in EET Party Banter

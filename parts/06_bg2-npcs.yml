@@ -108,7 +108,9 @@
     description: SoA+ToB(limited) companion, halfling bard, romance
     installation:
       general: must be after nephele for crossmod component
-    components: [0, 1]
+    components:
+      - 0 # Petsy Chattertone: 4.2
+      #- 1 # Petsy/Nephele crossmod banters: 4.2
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Petsy v4.2
       patch:
