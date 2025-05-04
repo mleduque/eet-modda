@@ -547,9 +547,9 @@
       - 0 # Luxley Family Mod for BGII:SoA: v2.0.0
     location:
       github_user: Spellhold-Studios
-      repository: The_Luxley_Family
-      release: v2.0.0
-      asset: the-luxley-family-v2.0.0.iemod
+      repository: Luxley-Family
+      release: v2.1
+      asset: luxleysoa-v2.1.iemod
       replace:
         - file_globs: ["dialogues/fhlseb.d"]
           replace: 'RealSetGlobalTimer("FHLAndDarkTime","GLOBAL",1500)'
@@ -571,7 +571,7 @@
       - 2 # Fade EE: give Fade Shadowdancer kit
     location:
       github_user: Spellhold-Studios
-      repository: Fade_NPC
+      repository: Fade-NPC
       release: v5.6
       asset: Fade_v5-6.zip
       patch:
@@ -611,7 +611,7 @@
       - 0 # Dace Linton NPC Mod for BG2:SoA & ToB: v5
     location:
       github_user: Spellhold-Studios
-      repository: Dace_NPC
+      repository: Dace-NPC
       release: v5.1
       asset: lin-dace-v5.1.zip
       patch:
@@ -634,7 +634,7 @@
       - 1 # Hubelpot Thistledown, the Vegetable Merchant NPC mod -> Hubelpot is a Village Druid (alternate kit): v2.1.0
     location:
       github_user: Spellhold-Studios
-      repository: Hubelpot_the_Vegetable_Merchant_NPC
+      repository: Hubelpot-NPC
       release: v2.1.0
       asset: hubelpot-the-vegetable-merchant-npc-v2.1.0.iemod
   - name: vladsime
