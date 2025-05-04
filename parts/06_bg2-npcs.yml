@@ -573,7 +573,7 @@
       github_user: Spellhold-Studios
       repository: Fade-NPC
       release: v5.6
-      asset: Fade_v5-6.zip
+      asset: Fade-v5.6.zip
       patch:
         relative: patches/eet/fade-romance.diff
       replace:
