@@ -137,5 +137,3 @@
  COMPILE ~tyrisflare/scripts/vampirescripts/g#tfvamp.baf~
          ~tyrisflare/scripts/vampirescripts/g#tfcutv.baf~
  EXTEND_BOTTOM ~bodhiamb.bcs~ ~tyrisflare/scripts/vampirescripts/bodhiamb.baf~
-diff --git a/setup-tyrisflare.tp2 b/setup-tyrisflare.tp2
-index 650799f..a354455 100644
