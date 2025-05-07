@@ -35,8 +35,8 @@
     location:
       github_user: Gibberlings3
       repository: sword_and_fist
-      release: v11
-      asset: lin-sword_and_fist-v11.zip
+      release: v12
+      asset: lin-sword_and_fist-v12.zip
 
   # mostly for the extra quest
   - name: shadowadept # will prompt 2 times

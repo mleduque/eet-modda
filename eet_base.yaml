@@ -960,8 +960,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Shards_of_Ice
-      release: v7
-      asset: lin-shardsofice-v7.tar.gz
+      release: v8
+      asset: lin-shardsofice-v8.tar.gz
 
   - name: RE # ok
     description: BG2 romantic Encounters

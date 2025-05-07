@@ -245,8 +245,8 @@
     location:
       github_user: Pocket-Plane-Group
       repository: Under-Respresented_Items
-      release: v11
-      asset: lin-underrep-v11.tar.gz
+      release: v13
+      asset: lin-underrep-v13.tar.gz
   - name: alchemy
     description: jan's alchemy
     overview: |
