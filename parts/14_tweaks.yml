@@ -205,8 +205,8 @@
     location:
       github_user: Gibberlings3
       repository: Lore_From_Learning
-      release: v7
-      asset: lin-cdlore-v7.zip
+      release: v8
+      asset: lin-cdlore-v8.zip
   - name: cd_appraiser
     description: Bardic Appraisal
     overview: "Adds a single, at-will ability for any bard, kitted or unkitted. The ability

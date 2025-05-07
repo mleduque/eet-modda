@@ -574,8 +574,8 @@
       repository: Fade-NPC
       release: v5.6
       asset: Fade-v5.6.zip
-      patch:
-        relative: patches/eet/fade-romance.diff
+      patches:
+        - relative: patches/eet/fade-romance.diff
       replace:
         - file_globs: ["Dialogues/FADE.d"]
           replace: 'RealSetGlobalTimer("E3FADEFRIEND","GLOBAL",2600)'
