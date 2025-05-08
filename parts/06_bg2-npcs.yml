@@ -774,7 +774,7 @@
       - 0 # Amber the NPC MOD
       #- 1 # Multiplayer-friendly flirting for Amber
     location:
-      path: /home/mick/Games/modda-cache/static/lin-amber-v9.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/g3/lin-amber-v10
       patch:
         relative: patches/amber.diff
         encoding: LATIN9
