@@ -271,9 +271,9 @@
       repository: deArnise_Romance
       release: v7
       asset: deArnise_v7.zip
-      patch:
-        relative: patches/eet/dearnise-romance.diff
-        replace:
+      patches:
+        # multi-romance is handled by bg2-tweaks-and-tricks
+      replace:
           - file_globs: ["Dialogue/PGNalLT.d"]
             replace: 'RealSetGlobalTimer("PGNaliaRomanceTimer","GLOBAL",2700)' # 45min
             with: 'RealSetGlobalTimer("PGNaliaRomanceTimer","GLOBAL",600)'    # 10min
