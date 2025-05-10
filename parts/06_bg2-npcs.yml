@@ -775,9 +775,10 @@
       #- 1 # Multiplayer-friendly flirting for Amber
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/g3/lin-amber-v10
-      patch:
-        relative: patches/amber.diff
-        encoding: LATIN9
+      patches:
+        # multi-romance stuff is handled in bg2-tweaks-and-tricks
+        - relative: patches/eet/amber.diff
+          encoding: LATIN9
       replace:
         - file_globs: [ "dialogs/m#amber.d" ]
           replace: 'RealSetGlobalTimer("M#AmberRomanceTime","GLOBAL",2500)'
