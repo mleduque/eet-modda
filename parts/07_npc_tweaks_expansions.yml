@@ -299,7 +299,7 @@
       github_user: mleduque
       repository: ImoenRomance
       branch: main
-      # no need to patch out romance conflicts
+      # no need to patch out romance conflicts because os component #1
       replace:
         - file_globs: ["dialogues/SOA/Love/RomanceContent.d", "scripts/SOA/misc/imoen2.baf"]
           replace: 'RealSetGlobalTimer("MRAerieFriendshipTimer","GLOBAL",800)'
