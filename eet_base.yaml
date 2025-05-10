@@ -85,8 +85,8 @@ modules:
     location:
       github_user:  InfinityMods
       repository: Ascension
-      release: "2.0.28"
-      asset: ascension-2.0.28.iemod
+      release: "2.0.29"
+      asset: ascension-2.0.29.iemod
     ignore_warnings: true
   - name: ascension # no
     description: ascension - the other components

@@ -27,6 +27,11 @@ locations:
         - file_globs: ["lib/ajantis_bgt.tpa", "lib/ajantis_tutu.tpa", "lib/ajantis_bgee.tpa"]
           replace: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",3600)'
           with: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",800)'
+    ascension:
+      github_user:  InfinityMods
+      repository: Ascension
+      release: "2.0.29"
+      asset: ascension-2.0.29.iemod
     cdtweaks:
       github_user: Gibberlings3
       repository: Tweaks-Anthology
