@@ -429,6 +429,9 @@
       refresh: 4days
 
   - name: bg1npc
+    description: The BG1NPC Project
+    overview: The BG1 NPC Project adds a great deal of content by expanding the depth of character and levels of interaction with the NPCs from the Baldur's Gate game.
+    comment: see bg2-tweaks-and-tricks component "romance cheats"
     components:
       - 0 # BG1 NPC Project : modifications necessaires: v32
       - 10 # BG1 NPC Project : bavardages, quetes et interjections: v32
