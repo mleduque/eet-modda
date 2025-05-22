@@ -178,10 +178,10 @@
       - 0 # Fishing for Trouble by Yovaneth: v3.2.8
       - 1 # Fishing for Trouble - Major character portraits: v3.2.8
     location:
-      github_user: InfinityMods
+      github_user: Spellhold-Studios
       repository: FishingForTrouble
-      release: v3.2.10
-      asset: fishing-for-trouble-v3.2.10.iemod
+      release: v3.2.11
+      asset: fishing-for-trouble-v3.2.11.iemod
   - name: c#sb_silber
     description: Adalon's blood
     components:
