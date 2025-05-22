@@ -1,3 +1,29 @@
+  - name: ascension
+    installation:
+      before: longerroad, spell_rev, stratagems, wheels, EET_end, Ilyos
+      after: EET
+    description: ascension - main component -> WARNs no effects added to SPPR403.spl | SPWI306.spl | spermel.itm
+    components:
+      - 0     # Rewritten Final Chapter of Throne of Bhaal
+    location:
+      github_user: Gibberlings3
+      repository: Ascension
+      tag: "2.1.0"
+    ignore_warnings: true
+  - name: ascension
+    description: ascension - the other components
+    components:
+      - 10    # Balthazar can be redeemed
+      - 20    # Improved Sarevok-Player Interactions
+      - 30    # Improved Imoen-Player Interactions in Throne of Bhaal
+      - 40    # Restored Bhaalspawn Powers
+      # issue with eefixpack - 22-05-08
+      #- 50    # Improved Slayer Transformation
+      - 60    # Expanded Epilogues for Bioware NPCs -> David Gaider's expanded epilogues for Bioware NPCs
+      - 2000  # Full-body portrait for Bodhi
+      - 2200  # Extended Epilogues for additional Beamdog NPCs, by shawne
+      - 2300  # Sharper portraits of Abazigal and Gromnir for the Enhanced Edition, by DavidW
+      - 2400  # Slightly improved cutscenes, by DavidW
 
   - name: mih_eq
     description: Made In Heaven Encounters and Quests
