@@ -6,7 +6,7 @@
     location:
       github_user: subtledoctor
       repository: Combat_Skill_Proficiencies
-      tag: "1.4.8"
+      tag: "1.5"
       patches:
         # Allow a little more profs for wiz/sorc
         # 1. edit profs.2da to have 1 prof/8 levels
@@ -20,7 +20,7 @@
     location:
       github_user: subtledoctor
       repository: SubtleD_Stat_Overhauls
-      branch: "1.6.4"
+      branch: "1.8"
       patches:
         - relative: patches/eet/subtled-stat-overhaul-config.diff
   - name: Magic_Battles_Revised

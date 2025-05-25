@@ -14,19 +14,14 @@ modules:
       - 900 # Mode Dark Sun : Tout le monde est un talent natif: 2.6
       - 950 # Permettre aux clercs multiclasses d'utiliser plus d'armes: 2.6
     location:
-      github_user: mleduque
+      github_user: UnearthedArcana
       repository: Will_to_Power
-      branch: 2.6-fr
+      branch: master
       refresh: always
-  - name: npc_ee
-    components:
-      - 1010 # Retirer l'indicateur de classe jumelee pour Imoen (attention, lire le fichier Readme): 6.4.1
-      - 1020 # Retirer l'indicateur de classe jumelee pour Nalia (attention, lire le fichier Readme): 6.4.1
-      - 1030 # Retirer l'indicateur de classe jumelee pour Anomen (attention, lire le fichier Readme): 6.4.1
-      - 1200 # Retirer l'indicateur de classe jumelee pour tous les autres PNJ (attention, lire le fichier Readme): 6.4.1
-      - 2000 # Choix des classes/caracteristiques/kits des PNJ: 6.4.1
+  - name: TomeAndBlood
+    description: Tome And Blood - main
+    components: ask
     location:
       github_user: UnearthedArcana
-      repository: NPC_EE
-      branch: master # contains french!
-      refresh: always
+      repository: TomeAndBlood
+      branch: "1.4"
