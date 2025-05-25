@@ -106,8 +106,12 @@ modules:
     components:
       - 0 # Xikasz's Grove Of Chaos - a quest & companion mod for IWD:EE -> Yes, but don't patch existing save games.: v1.0
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/weaselmods/iwd/GroveOfChaos v1.5.zip
-
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/GroveOfChaos v1.5
+  - name: ArszyksWonderfulDecay
+    components:
+      - 0 # Arszyk's Wonderful Decay - NPC and a late-game quest for IWD EE
+    location:
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/ArszyksWonderfulDecay-vBETA1
 
 ##############
 # Kit(s) erquierd by NPCs
