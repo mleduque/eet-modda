@@ -560,15 +560,15 @@
       branch: master
   - name: tod
     description: Tower Of Deception - BG2 mod, dungeon-style
-    components:
-      - 0 # Mod Tower of Deception (necessite Throne of Bhaal): v4.0.5
-      - 1 # Gardien ameliore de l'Eclat Astral: v4.0.5
-      - 2 # Rencontre avec Ustrain: v4.0.5
+    components: ask
+      #- 0 # Mod Tower of Deception (necessite Throne of Bhaal): v4.0.5
+      #- 1 # Gardien ameliore de l'Eclat Astral: v4.0.5
+      #- 2 # Rencontre avec Ustrain: v4.0.5
     location:
-      github_user: InfinityMods
+      github_user: Black-Wyrm-Lair
       repository: TowerOfDeception
-      release: v4.0.5
-      asset: tower-of-deception-v4.0.5.iemod
+      release: v4.1.0
+      asset: tower-of-deception-v4.1.0.iemod
   - name: SOS
     description: |
       Shadows Over Soubar - big SoA quest megamod
