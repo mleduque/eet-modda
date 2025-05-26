@@ -695,7 +695,7 @@
       - 5 # TDD - l'Avènement du Jour le plus Sombre: v1.3.1
       - 6 # TDD - Robilard: v1.3.1
     location:
-      github_user: InfinityMods
+      github_user: SpellHold-Studios
       repository: TDDz
       tag: v1.3.1
   - name: TDD_Hall-of-Knowledge
