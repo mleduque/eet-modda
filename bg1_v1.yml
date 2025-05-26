@@ -37,8 +37,8 @@ modules:
     location:
       github_user: Pocket-Plane-Group
       repository: bg1ub
-      release: v16.7
-      asset: bg1-unfinished-business-v16.7.iemod
+      release: v17
+      asset: bg1-unfinished-business-v17.iemod
     components:
       - 0  # Ice Island Level Two Restoration
       - 11 # Scar and the Sashenstar's Daughter
