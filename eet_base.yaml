@@ -561,13 +561,6 @@ modules:
       repository: gorgon
       release: v4.5
       asset: gorgon-v4.5.iemod
-  - name: Blackhearts EET # ok
-    components: ask
-    location:
-      github_user: mleduque
-      repository: Black-Hearts-EET
-      branch: fix-wi0004-are
-      # forked because needs-patch #  https://forums.beamdog.com/discussion/comment/1200875/#Comment_1200875
   - name: loretaker # ok
     components: ask
     location:

@@ -498,10 +498,10 @@
     components:
       - 1 # Install Blackhearts for "BGEE only" or "EET including BGEE and BG2EE": v1.3
     location:
-      github_user: 11jo # forked because needs-patch #  https://forums.beamdog.com/discussion/comment/1200875/#Comment_1200875
+      github_user: AWizardDidIt # forked because needs-patch #  https://forums.beamdog.com/discussion/comment/1200875/#Comment_1200875
       repository: Black-Hearts
-      branch: main
-      refresh: 5days
+      reelase: v2.1
+      asset: blackhearts-v2.03.iemod
   - name: bst
     components:
       - 0 # The BS Company presents Balduran's Seatower: vEAOB.6
