@@ -500,7 +500,7 @@
     location:
       github_user: AWizardDidIt # forked because needs-patch #  https://forums.beamdog.com/discussion/comment/1200875/#Comment_1200875
       repository: Black-Hearts
-      reelase: v2.1
+      reelase: v2.03
       asset: blackhearts-v2.03.iemod
   - name: bst
     components:
