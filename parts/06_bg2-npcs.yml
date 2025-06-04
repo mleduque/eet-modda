@@ -221,7 +221,7 @@
       - 4 # Skie: The Cost of One Girl's Soul - Add Player-Initiated Dialogue (PID) for Eddard: 4.01
       - 5 # Skie: The Cost of One Girl's Soul - Add brand new SoD-oriented items to BG2: 4.01
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/SkieTheCost v6.2.2
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/SkieTheCost v6.2.3
       replace:
         - file_globs: ["dialogues/pid-*.d"]
           replace: 'RealSetGlobalTimer("L#SDSkiesNewSeriesTime","GLOBAL",3800)'
