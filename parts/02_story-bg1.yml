@@ -330,8 +330,8 @@
     location:
       github_user: Gibberlings3
       repository: BG1_Romantic_Encounters
-      release: v13
-      asset: baldurs-gate-romantic-encounters-modification-bg1re-13.iemod
+      release: v14
+      asset: baldurs-gate-romantic-encounters-modification-bg1re-14.iemod
   - name: AC_QUEST
     description: Ascalon's Questpack
     installation:
