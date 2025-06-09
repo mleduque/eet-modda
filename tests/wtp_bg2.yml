@@ -5,6 +5,13 @@ global:
   lang_dir: "fr_FR"
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
 modules:
+  - name: TomeAndBlood
+    description: Tome And Blood - main
+    components: ask
+    location:
+      github_user: UnearthedArcana
+      repository: TomeAndBlood
+      branch: "1.4"
   - name: Will_to_Power
     components:
       - 200 # Ajouter le Psioniste, voleur/psion: 2.6
@@ -18,10 +25,3 @@ modules:
       repository: Will_to_Power
       branch: master
       refresh: always
-  - name: TomeAndBlood
-    description: Tome And Blood - main
-    components: ask
-    location:
-      github_user: UnearthedArcana
-      repository: TomeAndBlood
-      branch: "1.4"
