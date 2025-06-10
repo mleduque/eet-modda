@@ -34,28 +34,11 @@ modules:
       refresh: 3days
   - name: bg1ub
     description: BG1 Unfinished Business
+    components: all
     location:
       github_user: Pocket-Plane-Group
       repository: bg1ub
-      release: v17
-      asset: bg1-unfinished-business-v17.iemod
-    components:
-      - 0  # Ice Island Level Two Restoration
-      - 11 # Scar and the Sashenstar's Daughter
-      - 12 # Quoningar, the Cleric
-      - 13 # Shilo Chen and the Ogre-Magi
-      - 14 # Edie, the Merchant League Applicant
-      - 16 # Creature Corrections
-      - 17 # Creature Restorations
-      - 18 # Creature Name Restorations
-      - 19 # Minor Dialogue Restorations
-      - 21 # Store, Tavern and Inn Fixes and Restorations
-      - 22 # Item Corrections and Restorations
-      - 29 # Duke Eltan in the Harbor Master's Building
-      - 30 # Nim Furlwing Encounter
-      - 32 # Svlast, the Fallen Paladin Encounter
-      - 33 # Mal-Kalen, the Ulcaster Ghost
-      - 34 # Chapter 6 Dialogue Restorations
+      commit: 135f093 # One commit ahead of v17 because MODDER flag removal
   - name: TenyaThermidor
     components:
       - 0 # Tenya Thermidor for BG:EE
