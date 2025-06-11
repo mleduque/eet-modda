@@ -496,11 +496,11 @@
       before: ['c#brandock', EET_end]
       after: [EET]
     components:
-      - 1 # Install Blackhearts for "BGEE only" or "EET including BGEE and BG2EE": v1.3
+      - 1 # IInstall Blackhearts for "BGEE" or "EET including BGEE and BG2EE"
     location:
-      github_user: AWizardDidIt # forked because needs-patch #  https://forums.beamdog.com/discussion/comment/1200875/#Comment_1200875
+      github_user: A-Wizard-Did-It
       repository: Black-Hearts
-      reelase: v2.03
+      release: v2.03
       asset: blackhearts-v2.03.iemod
   - name: bst
     components:
