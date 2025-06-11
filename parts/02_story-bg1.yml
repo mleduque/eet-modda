@@ -412,7 +412,7 @@
       branch: main
       refresh: 5days
 
-  - name: Reflections
+  - name: Reflections_Of_Destiny
     description: Reflections of Destiny, an SoD Remix Mod
     installation:
       after: EET, c#endless, thecalling
