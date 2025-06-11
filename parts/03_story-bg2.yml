@@ -345,7 +345,7 @@
         file: /home/mick/Games/modda-cache/iemods-archive/glittergear/FowlWish.v1.3
       layout:
         layout_type: single_dir
-        strip_leading: 1
+        strip_leading: 2
 
   - name: GoneNuts
     description: BG2, one quest mod
