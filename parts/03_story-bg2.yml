@@ -447,8 +447,8 @@
       repository: Lucy_the_Wyvern
       release: v5.0
       asset: lucy-the-wyvern-v5.0.iemod
-  - name: d0questpack
-    description: SimDing0's Quest Pack
+  - name: questpack
+    description: SimDing0's Quest Pack, previously d0questpack
     installation:
       before: alternatives
     components: [0, 1, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
@@ -459,11 +459,6 @@
       repository: QuestPack
       branch: master
       refresh: 7days
-      layout:
-        layout_type: multi_dir
-        dirs:
-          - questpack
-          - setup-d0questpack.tp2
 
   - name: Autumns_Twilight
     description: Quest(dungeon) + 2 npcs
