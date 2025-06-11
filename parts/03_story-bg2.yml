@@ -555,10 +555,11 @@
       branch: master
   - name: tod
     description: Tower Of Deception - BG2 mod, dungeon-style
-    components: ask
-      #- 0 # Mod Tower of Deception (necessite Throne of Bhaal): v4.0.5
-      #- 1 # Gardien ameliore de l'Eclat Astral: v4.0.5
-      #- 2 # Rencontre avec Ustrain: v4.0.5
+    components:
+      - 0 # Tower of Deception: v4.1.0
+      - 1 # Gardien ameliore de l'Eclat Astral: v4.1.0
+      - 2 # Rencontre avec Ustrain: v4.1.0
+      - 3 # Reparation de l'etat d'acceleration de la Lame guerriere du crepuscule.: v4.1.0
     location:
       github_user: Black-Wyrm-Lair
       repository: TowerOfDeception
