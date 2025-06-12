@@ -24,16 +24,16 @@
       - 20 # Ajouter le sort "Pacte shamanique"
       - 30 # Appliquer la Danse shamanique amelioree a tous les profils de Shama
 
-  # rest of idwification
+  # rest of iwdification
   - name: iwdification
-    components:
-      - 10 # Icewind Dale Casting Graphics (Andyr)
-      - 60 # Two Handed Axe Item Pack
-      - 50 # IWD Class Updates: Bard: Add IWD Bard Songs
-      # Added elsewhere
-      #- 120 # IWD Class Updates: Thief: Evasion
-      - 140 # Randomized Enemy Equipment -> Add High Quality Items
-      - 71 # IWD Class Updates: Druid: Allow Elves to be Druids
+    components: ask
+      #- 10 # Icewind Dale Casting Graphics (Andyr)
+      #- 60 # Two Handed Axe Item Pack
+      #- 50 # IWD Class Updates: Bard: Add IWD Bard Songs
+      ## Added elsewhere
+      ##- 120 # IWD Class Updates: Thief: Evasion
+      #- 140 # Randomized Enemy Equipment -> Add High Quality Items
+      #- 71 # IWD Class Updates: Druid: Allow Elves to be Druids
   - name: iwdification
     description: iwdification -components with warnings
     components:
