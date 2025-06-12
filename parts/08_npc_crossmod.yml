@@ -77,6 +77,28 @@
     components:
       - 1 # Petsy/Nephele crossmod banters: 4.2
 
+  - name: Kale
+    description: Kale crossmod
+    components:
+      - 10000 # kale Crossmod
+  - name: Helga
+    description: Helga crossmod
+    components:
+      - 10000 # Helga Crossmod
+  - name: Emily
+    description: Emily crossmod
+    components:
+      - 10000 # Emily Crossmod
+  - name: Vienxay
+    description: Vienxay crossmod
+    components:
+      - 10000 # Vienxay Crossmod
+  - name: Recorder
+    description: Recorder crossmod
+    components:
+      - 10000 # Recorder Crossmod
+
+
   - name: iwd_eet-party-banter
     description: Icewind Dale in EET Party Banter
     overview: |

@@ -418,30 +418,6 @@
       branch: main
       refresh: 7days
 
-  # TO move in crossmod after testing
-  - name: Kale
-    description: Kale crossmod
-    components:
-      - 10000 # kale Crossmod
-  - name: Helga
-    description: Helga crossmod
-    components:
-      - 10000 # Helga Crossmod
-  - name: Emily
-    description: Emily crossmod
-    components:
-      - 10000 # Emily Crossmod
-  - name: Vienxay
-    description: Vienxay crossmod
-    components:
-      - 10000 # Vienxay Crossmod
-  - name: Recorder
-    description: Recorder crossmod
-    components:
-      - 10000 # Recorder Crossmod
-
-
-
   # Lava NPCs
   - name: Walahnan
     description: mage in Ulgoth's beard, with quest, only until chapter 4 (included)
