@@ -253,6 +253,7 @@
           with: 'RealSetGlobalTimer("X32milyRealTalkTimer","GLOBAL",720)' # 12 min
       patches:
         - relative: patches/eet/emily-multi-romance.diff
+        - relative: patches/eet/emily-crossmod.diff
   - name: Helga
     description: Helga, dwarven priest of Haela
     overview: bg1+SoD, dwarf (f) CN cleric (kit), small quest, friendship+banters (no romance),crossmod
@@ -265,8 +266,9 @@
       repository: Helga-BG1
       branch: master
       refresh: 3days
-      patch:
-        relative: patches/eet/helga_bg1-defaultportrait-nomusic.diff
+      patches:
+        - relative: patches/eet/helga_bg1-defaultportrait-nomusic.diff
+        - relative: patches/eet/helga-crossmod.diff
       replace:
         - file_globs: ["Dialogue/SoD/X32HelgJ.D"]
           string: true
@@ -291,10 +293,9 @@
     location:
       github_user: Skitia
       repository: Kale-BG1
-      branch: master
-      refresh: 3days
-      patch:
-        relative: patches/eet/kale_bg1-nomusic.diff
+      tag: v1.70
+      patches:
+        - relative: patches/eet/kale-crossmod.diff
       replace:
         - file_globs: ["Dialogue/SoD/X32KaleJ.d"]
           replace: 'SetGlobalTimer("X32KaleGameTalkTimer","GLOBAL",THREE_DAYS\)'
@@ -318,6 +319,7 @@
           with: 'SetGlobalTimer("X32RecGameTalkTimer","GLOBAL",ONE_DAY)'
       patches:
         - relative: patches/eet/recorder-multiple-romance.diff
+        - relative: patches/eet/recorder-crossmod.diff
   - name: Vienxay
     description: Vienxay NPC (shadowmage)
     overview: bg1+sod, elf, female NE shadowmage, quest, approval system
@@ -333,6 +335,7 @@
       patches:
         # prompt for portrait (1. Default)
         - relative: patches/eet/viexnay_bg1-defaultportrait-nomusic.diff
+        - relative: patches/eet/vienxay-crossmod.diff
         # ATM vienxay doesn't auto-break romances on conflict
       replace:
         - file_globs: ["Dialogue/SoD/X32VienJ.d"]
@@ -416,6 +419,30 @@
       repository: Kvel-BG1
       branch: main
       refresh: 7days
+
+  # TO move in crossmod after testing
+  - name: Kale
+    description: Kale crossmod
+    components:
+      - 10000 # kale Crossmod
+  - name: Helga
+    description: Helga crossmod
+    components:
+      - 10000 # Helga Crossmod
+  - name: Emily
+    description: Emily crossmod
+    components:
+      - 10000 # Emily Crossmod
+  - name: Vienxay
+    description: Vienxay crossmod
+    components:
+      - 10000 # Vienxay Crossmod
+  - name: Recorder
+    description: Recorder crossmod
+    components:
+      - 10000 # Recorder Crossmod
+
+
 
   # Lava NPCs
   - name: Walahnan

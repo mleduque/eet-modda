@@ -1,37 +1,14 @@
-diff --git a/Helga/setup-Helga.TP2 b/Helga/setup-Helga.TP2
-index 8911701..71e0f7b 100644
 --- Helga/setup-Helga.TP2
 +++ Helga/setup-Helga.TP2
-@@ -328,14 +328,7 @@ THEN BEGIN
- COMPILE ~Helga/Dialogue/Crossmod/Aura.d~
- END 
+@@ -332,10 +332,7 @@ PRINT @61
  
--PRINT @61
--
--PRINT @62
--
+ PRINT @62
+ 
 -OUTER_SPRINT ~portrait~ @63
 -OUTER_WHILE (!(IS_AN_INT ~portrait~) OR (~portrait~ > 0x2) OR (~portrait~ < 0x1)) BEGIN
 -  ACTION_READLN ~portrait~
 -END
 +OUTER_SPRINT ~portrait~ 1
        ACTION_IF ("portrait" = 1) THEN BEGIN
- 		COPY ~%MOD_FOLDER%/Portraits/HelgaL.bmp~ ~override/HelgaL.bmp~
- 		COPY ~%MOD_FOLDER%/Portraits/HelgaM.bmp~ ~override/HelgaM.bmp~
-@@ -349,15 +342,7 @@ END
-       PRINT @65
- 	  END
- 		
--PRINT @66
--
--PRINT @67
--
--OUTER_SPRINT ~music~ @63
--OUTER_WHILE (!(IS_AN_INT ~music~) OR (~music~ > 0x2) OR (~music~ < 0x1)) BEGIN
--  PRINT @68
--  ACTION_READLN ~music~
--END
-+    OUTER_SPRINT ~music~ 2
-       ACTION_IF ("music" = 1) THEN BEGIN
- 	COPY_EXISTING ~sw1h01.itm~ ~override/bg1npcmusic.g3~
- 
+                COPY ~%MOD_FOLDER%/Portraits/HelgaL.bmp~ ~override/HelgaL.bmp~
+                COPY ~%MOD_FOLDER%/Portraits/HelgaM.bmp~ ~override/HelgaM.bmp~

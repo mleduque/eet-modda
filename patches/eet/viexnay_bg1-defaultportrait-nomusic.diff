@@ -1,15 +1,11 @@
 diff --git a/Vienxay/Vienxay.tp2 b/Vienxay/Vienxay.tp2
-index e778250..1dc4c0f 100644
+index e778250..2ecf858 100644
 --- Vienxay/Vienxay.tp2
 +++ Vienxay/Vienxay.tp2
-@@ -59,14 +59,7 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bdcaelar.cre~ THEN BEGIN
- INCLUDE ~Vienxay/library/vien_sod.tpa~ 
- END
+@@ -63,10 +63,7 @@ PRINT @9
  
--PRINT @9
--
--PRINT @10
--
+ PRINT @10
+ 
 -OUTER_SPRINT ~portrait~ ~placeholder_value~
 -OUTER_WHILE (!(IS_AN_INT ~portrait~) OR (~portrait~ > 0x3) OR (~portrait~ < 0x1)) BEGIN
 -  ACTION_READLN ~portrait~
@@ -18,15 +14,10 @@ index e778250..1dc4c0f 100644
        ACTION_IF ("portrait" = 1) THEN BEGIN
  		COPY ~%MOD_FOLDER%/Portraits/VienxayL.bmp~ ~override/VienxayL.bmp~
  		COPY ~%MOD_FOLDER%/Portraits/VienxayM.bmp~ ~override/VienxayM.bmp~
-@@ -86,16 +79,7 @@ END
-       PRINT @13
- 	  END
+@@ -91,11 +88,7 @@ PRINT @14
  
--		
--PRINT @14
--
--PRINT @15
--
+ PRINT @15
+ 
 -OUTER_SPRINT ~music~ ~placeholder_value~
 -OUTER_WHILE (!(IS_AN_INT ~music~) OR (~music~ > 0x2) OR (~music~ < 0x1)) BEGIN
 -  PRINT @16
