@@ -1,8 +1,8 @@
 diff --git a/Vienxay/Vienxay.tp2 b/Vienxay/Vienxay.tp2
-index e778250..2ecf858 100644
+index e778250..7141c94 100644
 --- Vienxay/Vienxay.tp2
 +++ Vienxay/Vienxay.tp2
-@@ -63,10 +63,7 @@ PRINT @9
+@@ -63,10 +63,10 @@ PRINT @9
  
  PRINT @10
  
@@ -11,10 +11,13 @@ index e778250..2ecf858 100644
 -  ACTION_READLN ~portrait~
 -END
 +OUTER_SPRINT ~portrait~ 1
++
++
++
        ACTION_IF ("portrait" = 1) THEN BEGIN
  		COPY ~%MOD_FOLDER%/Portraits/VienxayL.bmp~ ~override/VienxayL.bmp~
  		COPY ~%MOD_FOLDER%/Portraits/VienxayM.bmp~ ~override/VienxayM.bmp~
-@@ -91,11 +88,7 @@ PRINT @14
+@@ -91,11 +91,11 @@ PRINT @14
  
  PRINT @15
  
@@ -24,6 +27,10 @@ index e778250..2ecf858 100644
 -  ACTION_READLN ~music~
 -END
 +OUTER_SPRINT ~music~ 1
++
++
++
++
        ACTION_IF ("music" = 1) THEN BEGIN
  	COPY_EXISTING ~sw1h01.itm~ ~override/bg1npcmusic.g3~
  
