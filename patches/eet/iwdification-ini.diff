@@ -1,0 +1,8 @@
+--- iwdification/iwdspells/iwdspells.ini
++++ iwdification/iwdspells/iwdspells.ini
+@@ -1,3 +1,3 @@
+ [iwdspells]
+-overwrite_old_spells=0
+-no_cap_at_level_20=0
++overwrite_old_spells=1
++no_cap_at_level_20=1

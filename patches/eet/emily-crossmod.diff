@@ -1,0 +1,49 @@
+diff --git a/Emily/lib/emil_bg1.tpa b/Emily/lib/emil_bg1.tpa
+index 3869a37..5a1ec8b 100644
+--- Emily/lib/emil_bg1.tpa
++++ Emily/lib/emil_bg1.tpa
+@@ -342,4 +342,43 @@ COMPILE ~Emily/dialogue/CrossMod/Drake.d~
+ END  
+ 
+ 
+-LOAD_TRA ~Emily/tra/English/Emily.tra~
++LOAD_TRA ~Emily/tra/English/Emily.tra~
++
++BEGIN ~Emily crossmod~
++DESIGNATED 10000
++
++ACTION_IF FILE_EXISTS_IN_GAME ~x3KaleB.dlg~
++THEN BEGIN
++  PRINT @48 // Adding crossmod banter between Kale and Emily
++COMPILE ~Emily/dialogue/CrossMod/Kale.d~
++END 
++
++ACTION_IF FILE_EXISTS_IN_GAME ~x3VienB.dlg~
++THEN BEGIN
++  PRINT @49 // Adding crossmod banter between Emily and Vienxay
++COMPILE ~Emily/dialogue/CrossMod/Vienxay.d~
++END   
++
++ACTION_IF FILE_EXISTS_IN_GAME ~BC0AURA.dlg~
++THEN BEGIN
++  PRINT @110 // Adding crossmod banter between Aura and Emily
++COMPILE ~Emily/dialogue/CrossMod/Aura.d~
++END  
++
++ACTION_IF FILE_EXISTS_IN_GAME ~X3HelgaB.dlg~
++THEN BEGIN
++  PRINT @111 // Adding crossmod banter between Helga and Emily
++COMPILE ~Emily/dialogue/CrossMod/Helga.d~
++END  
++
++ACTION_IF FILE_EXISTS_IN_GAME ~X3RecB.dlg~
++THEN BEGIN
++  PRINT @112 // Adding crossmod banter between Recorder and Emily
++COMPILE ~Emily/dialogue/CrossMod/Recorder.d~
++END  
++
++ACTION_IF FILE_EXISTS_IN_GAME ~BC0Drake.dlg~
++THEN BEGIN
++  PRINT @113 // Adding crossmod banter between Drake and Emily
++COMPILE ~Emily/dialogue/CrossMod/Drake.d~
++END  

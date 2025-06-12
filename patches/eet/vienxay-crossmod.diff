@@ -1,0 +1,107 @@
+diff --git a/Vienxay/Vienxay.tp2 b/Vienxay/Vienxay.tp2
+index e778250..78fa01a 100644
+--- Vienxay/Vienxay.tp2
++++ Vienxay/Vienxay.tp2
+@@ -126,3 +126,48 @@ ACTION_IF ("music" = 2) THEN BEGIN
+ PRINT @18
+ END 
+ 		
++BEGIN ~Vienxay crossmod~
++DESIGNATED 10000
++
++ACTION_IF FILE_EXISTS_IN_GAME ~x3milyB.dlg~
++THEN BEGIN
++  PRINT @47 // Adding crossmod banter between Emily and Vienxay
++COMPILE ~Vienxay/dialogue/CrossMod/Emily.d~
++END 
++
++ACTION_IF FILE_EXISTS_IN_GAME ~x3KaleB.dlg~
++THEN BEGIN
++  PRINT @48 // Adding crossmod banter between Vienxay and Kale
++COMPILE ~Vienxay/dialogue/CrossMod/Kale.d~
++END 
++
++ACTION_IF FILE_EXISTS_IN_GAME ~x3RecB.dlg~
++THEN BEGIN
++  PRINT @52 // Adding crossmod banter between Vienxay and Recorder
++COMPILE ~Vienxay/dialogue/CrossMod/Recorder.d~
++END 
++
++ACTION_IF FILE_EXISTS_IN_GAME ~x3HelgaB.dlg~
++THEN BEGIN
++  PRINT @53 // Adding crossmod banter between Vienxay and Helga
++COMPILE ~Vienxay/dialogue/CrossMod/Helga.d~
++END 
++
++ACTION_IF FILE_EXISTS_IN_GAME ~BC0Drake.dlg~
++THEN BEGIN
++  PRINT @57 // Adding crossmod banter between Vienxay and Drake
++COMPILE ~Vienxay/dialogue/CrossMod/Drake.d~
++END 
++
++
++ACTION_IF FILE_EXISTS_IN_GAME ~BC0Siren.dlg~
++THEN BEGIN
++  PRINT @58 // Adding crossmod banter between Vienxay and Sirene
++COMPILE ~Vienxay/dialogue/CrossMod/Sirene.d~
++END 
++
++ACTION_IF FILE_EXISTS_IN_GAME ~BC0Aura.dlg~
++THEN BEGIN
++  PRINT @59 // Adding crossmod banter between Vienxay and Aura
++COMPILE ~Vienxay/dialogue/CrossMod/Aura.d~
++END 
+diff --git a/Vienxay/library/vien_bg1.tpa b/Vienxay/library/vien_bg1.tpa
+index 1218087..50ffaf0 100644
+--- Vienxay/library/vien_bg1.tpa
++++ Vienxay/library/vien_bg1.tpa
+@@ -289,49 +289,6 @@ COPY ~%MOD_FOLDER%/cre/X3VMAS.cre~ ~override/X3VMAS.cre~
+   WRITE_ASCII 0x2cc ~X3VMAS~ #8   //pre-joining dialogue file
+ // Cross Mod, currently we have none, below is example template if Vienxay was a seperate mod and not with Vienxay.
+ 
+-ACTION_IF FILE_EXISTS_IN_GAME ~x3milyB.dlg~
+-THEN BEGIN
+-  PRINT @47 // Adding crossmod banter between Emily and Vienxay
+-COMPILE ~Vienxay/dialogue/CrossMod/Emily.d~
+-END 
+-
+-ACTION_IF FILE_EXISTS_IN_GAME ~x3KaleB.dlg~
+-THEN BEGIN
+-  PRINT @48 // Adding crossmod banter between Vienxay and Kale
+-COMPILE ~Vienxay/dialogue/CrossMod/Kale.d~
+-END 
+-
+-ACTION_IF FILE_EXISTS_IN_GAME ~x3RecB.dlg~
+-THEN BEGIN
+-  PRINT @52 // Adding crossmod banter between Vienxay and Recorder
+-COMPILE ~Vienxay/dialogue/CrossMod/Recorder.d~
+-END 
+-
+-ACTION_IF FILE_EXISTS_IN_GAME ~x3HelgaB.dlg~
+-THEN BEGIN
+-  PRINT @53 // Adding crossmod banter between Vienxay and Helga
+-COMPILE ~Vienxay/dialogue/CrossMod/Helga.d~
+-END 
+-
+-ACTION_IF FILE_EXISTS_IN_GAME ~BC0Drake.dlg~
+-THEN BEGIN
+-  PRINT @57 // Adding crossmod banter between Vienxay and Drake
+-COMPILE ~Vienxay/dialogue/CrossMod/Drake.d~
+-END 
+-
+-
+-ACTION_IF FILE_EXISTS_IN_GAME ~BC0Siren.dlg~
+-THEN BEGIN
+-  PRINT @58 // Adding crossmod banter between Vienxay and Sirene
+-COMPILE ~Vienxay/dialogue/CrossMod/Sirene.d~
+-END 
+-
+-ACTION_IF FILE_EXISTS_IN_GAME ~BC0Aura.dlg~
+-THEN BEGIN
+-  PRINT @59 // Adding crossmod banter between Vienxay and Aura
+-COMPILE ~Vienxay/dialogue/CrossMod/Aura.d~
+-END 
+-
+ //TO MAKE IT DISPLAY RIGHT IN WEIDU
+ 
+ LOAD_TRA ~Vienxay/translations/English/Vienxay.tra~

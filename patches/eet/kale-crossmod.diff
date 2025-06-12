@@ -1,0 +1,122 @@
+diff --git a/Kale/Kale.tp2 b/Kale/Kale.tp2
+index 4f5546a..fe02593 100644
+--- Kale/Kale.tp2
++++ Kale/Kale.tp2
+@@ -407,4 +407,57 @@ COPY ~Kale/cre/SoD/X32Kale3.cre~ ~override/X32Kale.cre~
+ END 
+ 
+ BEGIN @58
+-SUBCOMPONENT @54 
++SUBCOMPONENT @54 
++
++BEGIN ~Kale crossmod~
++DESIGNATED 10000
++
++LOAD_TRA ~Kale/translations/English/Kale_bg1.tra~
++
++ACTION_IF FILE_EXISTS_IN_GAME ~x3milyB.dlg~
++THEN BEGIN
++  PRINT @47 // Adding crossmod banter between Kale and Emily
++COMPILE ~Kale/dialogue/CrossMod/Emily.d~
++END 
++
++ACTION_IF FILE_EXISTS_IN_GAME ~x3VienB.dlg~
++THEN BEGIN
++  PRINT @48 // Adding crossmod banter between Kale and Vienxay
++COMPILE ~Kale/dialogue/CrossMod/Vienxay.d~
++END 
++
++ACTION_IF FILE_EXISTS_IN_GAME ~x3HelgaB.dlg~
++THEN BEGIN
++  PRINT @490 // Adding crossmod banter between Kale and Helga
++COMPILE ~Kale/dialogue/CrossMod/Helga.d~
++END 
++
++ACTION_IF FILE_EXISTS_IN_GAME ~x3RecB.dlg~
++THEN BEGIN
++  PRINT @500 // Adding crossmod banter between Kale and Recorder
++COMPILE ~Kale/dialogue/CrossMod/Recorder.d~
++END
++
++ACTION_IF FILE_EXISTS_IN_GAME ~BC0Aura.dlg~
++THEN BEGIN
++  PRINT @501 // Adding crossmod banter between Kale and Aura
++COMPILE ~Kale/dialogue/CrossMod/Aura.d~
++END  
++
++ACTION_IF FILE_EXISTS_IN_GAME ~BC0Drake.dlg~
++THEN BEGIN
++  PRINT @502 // Adding crossmod banter between Kale and Drake 
++COMPILE ~Kale/dialogue/CrossMod/Drake.d~
++END  
++
++ACTION_IF FILE_EXISTS_IN_GAME ~BC0Siren.dlg~
++THEN BEGIN
++  PRINT @503 // Adding crossmod banter between Kale and Sirene
++COMPILE ~Kale/dialogue/CrossMod/Sirene.d~
++END  
++
++ACTION_IF FILE_EXISTS_IN_GAME ~bsufinch.dlg~
++THEN BEGIN
++  PRINT @504 // Adding crossmod banter between Kale and Finch
++COMPILE ~Kale/dialogue/CrossMod/Finch.d~
++END  
+diff --git a/Kale/library/Kale_bg1.tpa b/Kale/library/Kale_bg1.tpa
+index ebb20a8..f85ff45 100644
+--- Kale/library/Kale_bg1.tpa
++++ Kale/library/Kale_bg1.tpa
+@@ -245,54 +245,6 @@ COPY ~%MOD_FOLDER%/cre/X3KIRK.cre~ ~override/X3KIRK.cre~
+ 
+ /////////////////////////////////////////////////
+ 
+-ACTION_IF FILE_EXISTS_IN_GAME ~x3milyB.dlg~
+-THEN BEGIN
+-  PRINT @47 // Adding crossmod banter between Kale and Emily
+-COMPILE ~Kale/dialogue/CrossMod/Emily.d~
+-END 
+-
+-ACTION_IF FILE_EXISTS_IN_GAME ~x3VienB.dlg~
+-THEN BEGIN
+-  PRINT @48 // Adding crossmod banter between Kale and Vienxay
+-COMPILE ~Kale/dialogue/CrossMod/Vienxay.d~
+-END 
+-
+-ACTION_IF FILE_EXISTS_IN_GAME ~x3HelgaB.dlg~
+-THEN BEGIN
+-  PRINT @490 // Adding crossmod banter between Kale and Helga
+-COMPILE ~Kale/dialogue/CrossMod/Helga.d~
+-END 
+-
+-ACTION_IF FILE_EXISTS_IN_GAME ~x3RecB.dlg~
+-THEN BEGIN
+-  PRINT @500 // Adding crossmod banter between Kale and Recorder
+-COMPILE ~Kale/dialogue/CrossMod/Recorder.d~
+-END
+-
+-ACTION_IF FILE_EXISTS_IN_GAME ~BC0Aura.dlg~
+-THEN BEGIN
+-  PRINT @501 // Adding crossmod banter between Kale and Aura
+-COMPILE ~Kale/dialogue/CrossMod/Aura.d~
+-END  
+-
+-ACTION_IF FILE_EXISTS_IN_GAME ~BC0Drake.dlg~
+-THEN BEGIN
+-  PRINT @502 // Adding crossmod banter between Kale and Drake 
+-COMPILE ~Kale/dialogue/CrossMod/Drake.d~
+-END  
+-
+-ACTION_IF FILE_EXISTS_IN_GAME ~BC0Siren.dlg~
+-THEN BEGIN
+-  PRINT @503 // Adding crossmod banter between Kale and Sirene
+-COMPILE ~Kale/dialogue/CrossMod/Sirene.d~
+-END  
+-
+-ACTION_IF FILE_EXISTS_IN_GAME ~bsufinch.dlg~
+-THEN BEGIN
+-  PRINT @504 // Adding crossmod banter between Kale and Finch
+-COMPILE ~Kale/dialogue/CrossMod/Finch.d~
+-END  
+-
+ //TO MAKE IT DISPLAY RIGHT IN WEIDU
+ 
+ LOAD_TRA ~Kale/translations/English/Kale.tra~

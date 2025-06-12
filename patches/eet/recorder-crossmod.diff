@@ -1,0 +1,89 @@
+diff --git a/Recorder/Setup-Recorder.tp2 b/Recorder/Setup-Recorder.tp2
+index e1db529..6bee17c 100644
+--- Recorder/Setup-Recorder.tp2
++++ Recorder/Setup-Recorder.tp2
+@@ -392,41 +392,6 @@ ACTION_IF FILE_EXISTS_IN_GAME ~bdcaelar.cre~ THEN BEGIN
+ INCLUDE ~Recorder/Lib/Recorder_sod.tpa~ 
+ END  
+  
+- ACTION_IF FILE_EXISTS_IN_GAME ~x3milyB.dlg~
+-THEN BEGIN
+-  PRINT @95
+-COMPILE ~Recorder/dialogue/CrossMod/Emily.d~
+-END 
+-
+- ACTION_IF FILE_EXISTS_IN_GAME ~x3VienB.dlg~
+-THEN BEGIN
+-  PRINT @96
+-COMPILE ~Recorder/dialogue/CrossMod/Vienxay.d~
+-END 
+-
+- ACTION_IF FILE_EXISTS_IN_GAME ~x3HelgaB.dlg~
+-THEN BEGIN
+-  PRINT @97
+-COMPILE ~Recorder/dialogue/CrossMod/Helga.d~
+-END 
+-
+- ACTION_IF FILE_EXISTS_IN_GAME ~x3KaleB.dlg~
+-THEN BEGIN
+-  PRINT @98
+-COMPILE ~Recorder/dialogue/CrossMod/Kale.d~
+-END 
+-
+-ACTION_IF FILE_EXISTS_IN_GAME ~BC0Aura.dlg~
+-THEN BEGIN
+-  PRINT @99
+-COMPILE ~Recorder/dialogue/CrossMod/Aura.d~
+-END 
+-
+-ACTION_IF FILE_EXISTS_IN_GAME ~BC0Drake.dlg~
+-THEN BEGIN
+-  PRINT @100
+-COMPILE ~Recorder/dialogue/CrossMod/Drake.d~
+-END 
+ 
+ BEGIN @101
+ SUBCOMPONENT @102
+@@ -564,3 +529,42 @@ COPY ~Recorder/cre/X32RecB.cre~ ~override/X32RecB.cre~
+   SAY HIDDEN_IN_SHADOWS ~~ []
+   SAY PICKED_POCKET ~~ []
+ */
++
++BEGIN ~Recorder crossmod~
++DESIGNATED 10000
++
++ ACTION_IF FILE_EXISTS_IN_GAME ~x3milyB.dlg~
++THEN BEGIN
++  PRINT @95
++COMPILE ~Recorder/dialogue/CrossMod/Emily.d~
++END 
++
++ ACTION_IF FILE_EXISTS_IN_GAME ~x3VienB.dlg~
++THEN BEGIN
++  PRINT @96
++COMPILE ~Recorder/dialogue/CrossMod/Vienxay.d~
++END 
++
++ ACTION_IF FILE_EXISTS_IN_GAME ~x3HelgaB.dlg~
++THEN BEGIN
++  PRINT @97
++COMPILE ~Recorder/dialogue/CrossMod/Helga.d~
++END 
++
++ ACTION_IF FILE_EXISTS_IN_GAME ~x3KaleB.dlg~
++THEN BEGIN
++  PRINT @98
++COMPILE ~Recorder/dialogue/CrossMod/Kale.d~
++END 
++
++ACTION_IF FILE_EXISTS_IN_GAME ~BC0Aura.dlg~
++THEN BEGIN
++  PRINT @99
++COMPILE ~Recorder/dialogue/CrossMod/Aura.d~
++END 
++
++ACTION_IF FILE_EXISTS_IN_GAME ~BC0Drake.dlg~
++THEN BEGIN
++  PRINT @100
++COMPILE ~Recorder/dialogue/CrossMod/Drake.d~
++END 
