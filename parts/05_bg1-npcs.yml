@@ -384,6 +384,8 @@
         - file_globs: ['scripts/SoD/c02drake.baf']
           replace: 'RealSetGlobalTimer("C02DrakeTalkTimer","GLOBAL",ONE_HOUR)'
           with: 'RealSetGlobalTimer("C02DrakeTalkTimer","GLOBAL",800)'
+    disabled_if:
+      because: installation failure
   - name: Sirene
     description: tiefling paladin of Ilmater, custom Martyr kit, friendship, no quest
     installation:
