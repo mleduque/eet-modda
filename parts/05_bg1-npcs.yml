@@ -360,32 +360,6 @@
     #prompt for portrait (2. BG2 style)
     disabled_if:
       because : setting mismatch
-  - name: Drake
-    overview: BG1+SoD, Human Priest of Tyr, Male, friendship, flirt, one quest each in BG1 and SoD, only join after Bassilus
-    installation:
-      after: [GlamNPCPack, Sirene, White, verrsza, Aura, Sotsc]
-    components:
-    - 0 # Drake NPC for Baldur''s Gate: Enhanced Edition: 1.7
-    - 1 # Choose a portrait for Drake: -> Default Portrait (The Artisan): 1.7
-    - 4 # OPTIONAL: Install Universal Crossbows, Crossbow Proficiency for Drake?: 1.7
-    - 5 # OPTIONAL: Original Soundset by BillyYank: 1.7
-    location:
-      github_user: ArtemiusI
-      repository: Drake
-      branch: master
-      refresh: 15days
-      replace:
-        - file_globs: ['dialogue/c0drakej.d']
-          replace: 'RealSetGlobalTimer("C0DrakeTalkTimer","GLOBAL",2700)'
-          with: 'RealSetGlobalTimer("C0DrakeTalkTimer","GLOBAL",600)'
-        - file_globs: ['scripts/SoD/c02drakd.baf']
-          replace: 'RealSetGlobalTimer("C02DrakeTalkTimer","GLOBAL",THIRTY_MINUTES)'
-          with: 'RealSetGlobalTimer("C02DrakeTalkTimer","GLOBAL",400)'
-        - file_globs: ['scripts/SoD/c02drake.baf']
-          replace: 'RealSetGlobalTimer("C02DrakeTalkTimer","GLOBAL",ONE_HOUR)'
-          with: 'RealSetGlobalTimer("C02DrakeTalkTimer","GLOBAL",800)'
-    disabled_if:
-      because: installation failure
   - name: Sirene
     description: tiefling paladin of Ilmater, custom Martyr kit, friendship, no quest
     installation:
