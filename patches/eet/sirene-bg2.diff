@@ -85,7 +85,7 @@ index 6498a6e..37e9977 100644
 -SAY ~I see. That is... disappointing, I suppose. I thought that perhaps... no, never mind. That is your decision to make.~
 -IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3) SetGlobal("C0SireneRomanceConflict","GLOBAL",2)~ EXIT
 -END
--END
+ END
  
  // Low Reputation
  
