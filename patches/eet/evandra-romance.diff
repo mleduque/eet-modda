@@ -111,7 +111,7 @@ index b23d558..c79b402 100644
 -
 -IF
 -  Global("rh#EvaRomanceActive","GLOBAL",2)
-+  Global("rh#EvaRomanceActive","GLOBAL",3)
++  False()
    OR(2)
      Global("DornRomanceActive","GLOBAL",1)
      Global("DornRomanceActive","GLOBAL",2)
