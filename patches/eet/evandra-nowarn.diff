@@ -1,0 +1,11 @@
+--- evandra/setup-evandra.tp2
++++ evandra/setup-evandra.tp2
+@@ -145,7 +145,7 @@ ACTION_IF GAME_IS ~EET~ BEGIN
+       dialog_ToB = "rh#Ev25a" // joining dialogue for ToB
+       traFile = EVAL "Evandra/translations/%LANGUAGE%/fatespirit.tra"
+       string = "@0"
+-      stringPosDV = "Faldorn"
++
+   END
+ END ELSE BEGIN
+   COMPILE ~evandra/dialogue/fatespirit.d~ USING ~evandra/translations/%LANGUAGE%/fatespirit.tra~

@@ -445,6 +445,7 @@
       # also path: /home/mick/Games/modda-cache/static/lin-evandra-v2.2.zip
       patches:
         - relative: patches/eet/evandra-romance.diff
+        - relative: patches/eet/evandra-nowarn.diff
       replace:
         - file_globs: ["crossmod/adrian.d", "dialogue/talks.d", "dialogue/talkstob.d", "scripts/rh#ev25.baf"]
           regex: true
