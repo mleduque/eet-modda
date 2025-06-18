@@ -38,10 +38,3 @@ index c0240c7..6240d77 100644
  THEN
    RESPONSE #100
      PlaySong(0)
-@@ -42,4 +38,4 @@ THEN
-     IncrementGlobal("T#DaceEdwin","GLOBAL",1)
-     MoveToObject("Edwin")
-     Interact("Edwin")
--END
-\ No newline at end of file
-+END

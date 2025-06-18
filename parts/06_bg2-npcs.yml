@@ -614,9 +614,9 @@
       github_user: Spellhold-Studios
       repository: Dace-NPC
       release: v5.1
-      asset: lin-dace-v5.1.zip
-      patch:
-        relative: patches/eet/dace-romance.diff
+      asset: dace-v5.1.iemod
+      patches:
+        - relative: patches/eet/dace-romance.diff
       replace:
         - file_globs: ["scripts/t#dace.baf"]
           regex: true
