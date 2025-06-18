@@ -638,7 +638,7 @@
       repository: Hubelpot-NPC
       release: v2.1.0
       asset: hubelpot-the-vegetable-merchant-npc-v2.1.0.iemod
-  - name: vladsime
+  - name: TS_Sime
     description: Tortured Souls - Sime ; SoA only, female cleric/ranger, banters, romance
     components:
       - 0 # Vlad's Sime NPC: 0.8
@@ -649,8 +649,8 @@
       github_user: RealApxu
       repository: TS_Sime
       tag: "0.8"
-      patch:
-        relative: patches/eet/vladsime.diff
+      patches:
+        - relative: patches/eet/ts-sime.diff
       replace:
         - file_globs: ['booplot/dialogue/soa_booplot.d', 'booplot/script/append_ttsime.baf', 'main/dialogue/soa_talks.d', 'main/scripts/*.baf']
           regex: true

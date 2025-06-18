@@ -1,0 +1,210 @@
+diff --git a/TS_Sime/dialogue/vpsimej.d b/TS_Sime/dialogue/vpsimej.d
+index 6900045..fc2ff40 100644
+--- TS_Sime/dialogue/vpsimej.d
++++ TS_Sime/dialogue/vpsimej.d
+@@ -2625,119 +2625,10 @@ END
+ 
+ // Aerie Romance
+ 
+-CHAIN IF WEIGHT #-75 ~Global("VP_Sime_vs_Aerie","GLOBAL",1)~ THEN VPSIMEJ SimeAerieRomCon0
+-@729 DO ~SetGlobal("VP_Sime_vs_Aerie","GLOBAL",2)~
+-== AERIEJ @730
+-== VPSIMEJ @731
+-== AERIEJ @732
+-== VPSIMEJ @733
+-== AERIEJ @734
+-== VPSIMEJ @735
+-END
+-IF ~~ THEN REPLY @736 GOTO SimeAerieRomCon1
+-IF ~~ THEN REPLY @737 GOTO SimeAerieRomCon1
+-
+-APPEND VPSIMEJ
+-
+-IF ~~ THEN BEGIN SimeAerieRomCon1
+-  SAY @738
+-  IF ~~ THEN REPLY @739 GOTO SimeAerieRomCon2
+-  IF ~~ THEN REPLY @740 GOTO SimeAerieRomCon3
+-  IF ~~ THEN REPLY @741 GOTO SimeAerieRomCon2
+-END
+-
+-IF ~~ THEN BEGIN SimeAerieRomCon2
+-  SAY @742
+-  IF ~~ THEN REPLY @743 GOTO SimeAerieRomCon4
+-  IF ~~ THEN REPLY @744 GOTO SimeAerieRomCon5
+-END
+-
+-IF ~~ THEN BEGIN SimeAerieRomCon3
+-  SAY @745
+-  IF ~~ THEN REPLY @743 GOTO SimeAerieRomCon4
+-  IF ~~ THEN REPLY @744 GOTO SimeAerieRomCon5
+-END
+-
+-IF ~~ THEN BEGIN SimeAerieRomCon4
+-  SAY @746
+-  IF ~~ THEN DO ~SetGlobal("AerieRomanceActive","GLOBAL",3)~ EXIT
+-END
+-
+-IF ~~ THEN BEGIN SimeAerieRomCon5
+-  SAY @747
+-  IF ~~ THEN DO ~SetGlobal("VP_SimeRomanceActive","GLOBAL",3)
+-SetGlobal("VP_Sime_vs_Aerie","GLOBAL",3)~ EXIT
+-END
+-END
+-
+ //Jaheira Romance
+ 
+-CHAIN IF WEIGHT #-49 ~Global("VP_Sime_vs_Jaheira","GLOBAL",1)~ THEN VPSIMEJ SimeJaheiraRomcon0
+-@748 DO ~SetGlobal("VP_Sime_vs_Jaheira","GLOBAL",2)~
+-== JAHEIRAJ @749
+-== VPSIMEJ @750
+-== JAHEIRAJ @751
+-== VPSIMEJ @752
+-END
+-IF ~~ THEN REPLY @753 EXTERN ~JAHEIRAJ~ SimeJaheiraRomcon1
+-IF ~~ THEN REPLY @754 EXTERN ~JAHEIRAJ~ SimeJaheiraRomcon2
+-IF ~~ THEN REPLY @755 EXTERN ~JAHEIRAJ~ SimeJaheiraRomcon3
+-
+-CHAIN JAHEIRAJ SimeJaheiraRomcon1
+-@756
+-== VPSIMEJ @757 DO ~SetGlobal("JaheiraRomanceActive","GLOBAL",3)~
+-EXIT
+-
+-CHAIN JAHEIRAJ SimeJaheiraRomcon2
+-@758
+-== VPSIMEJ @759
+-= @760 DO ~SetGlobal("VP_SimeRomanceActive","GLOBAL",3)~
+-EXIT
+-
+-CHAIN JAHEIRAJ SimeJaheiraRomcon3
+-@761
+-== VPSIMEJ @762
+-DO ~SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+-ActionOverride("Jaheira",LeaveParty())
+-ActionOverride("Jaheira",EscapeArea())~
+-EXIT
+-
+ //Viconia Romance
+ 
+-CHAIN IF WEIGHT #-56 ~Global("VP_Sime_vs_Viconia","GLOBAL",1)~ THEN VPSIMEJ SimeViconiaRomcon0
+-@763 DO ~SetGlobal("VP_Sime_vs_Viconia","GLOBAL",2)~
+-== VICONIJ @764
+-END
+-IF ~~ THEN REPLY @765 EXTERN VPSIMEJ SimeViconiaRomcon1
+-IF ~~ THEN REPLY @766 EXTERN VPSIMEJ SimeViconiaRomcon1
+-IF ~~ THEN REPLY @767 EXTERN VPSIMEJ SimeViconiaRomcon1
+-
+-CHAIN VPSIMEJ SimeViconiaRomcon1
+-@768
+-== VICONIJ @769
+-END
+-IF ~~ THEN REPLY @770 EXTERN VICONIJ SimeViconiaRomcon2
+-IF ~~ THEN REPLY @771 EXTERN VICONIJ SimeViconiaRomcon3
+-
+-CHAIN VICONIJ SimeViconiaRomcon2
+-@772
+-END
+-++ @773 EXTERN VPSIMEJ SimeViconiaRomcon4
+-++ @774 EXTERN VPSIMEJ SimeViconiaRomcon5
+-
+-CHAIN VICONIJ SimeViconiaRomcon3
+-@775
+-DO ~SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+-LeaveParty()
+-EscapeArea()~ EXIT
+-
+-CHAIN VPSIMEJ SimeViconiaRomcon4
+-@776
+-DO ~SetGlobal("VP_SimeRomanceActive","GLOBAL",3)~ EXIT
+-
+-CHAIN VPSIMEJ SimeViconiaRomcon5
+-@777
+-DO ~SetGlobal("ViconiaRomanceActive","GLOBAL",3)~ EXIT
+ 
+ ////FLIRTS
+ 
+diff --git a/TS_Sime/scripts/VPSime.baf b/TS_Sime/scripts/VPSime.baf
+index 8be5ac8..9cf73c1 100644
+--- TS_Sime/scripts/VPSime.baf
++++ TS_Sime/scripts/VPSime.baf
+@@ -95,12 +95,6 @@ IF
+ 	InParty(Myself)
+ 	Global("VP_SimeMatch","GLOBAL",0)
+ 	!Alignment(Player1,MASK_EVIL)
+-	!Global("AerieRomanceActive","GLOBAL",2)
+-	!Global("JaheiraRomanceActive","GLOBAL",2)
+-	!Global("ViconiaRomanceActive","GLOBAL",2)
+-	!Global("AnomenRomanceActive","GLOBAL",2)
+-	!Global("RasaadRomanceActive","GLOBAL",2)
+-	!Global("NeeraRomanceActive","GLOBAL",2)
+ THEN
+   RESPONSE #100
+ 	SetGlobal("VP_SimeMatch","GLOBAL",1)
+@@ -895,68 +889,6 @@ END
+ 
+ //Romance Autokills
+ 
+-IF
+-Global("VP_SimeRomanceActive","GLOBAL",1)
+-OR(6)
+-Global("AerieRomanceActive","GLOBAL",2)
+-Global("JaheiraRomanceActive","GLOBAL",2)
+-Global("AnomenRomanceActive","GLOBAL",2)
+-Global("ViconiaRomanceActive","GLOBAL",2)
+-Global("RasaadRomanceActive","GLOBAL",2)
+-Global("NeeraRomanceActive","GLOBAL",2)
+-THEN
+-RESPONSE #100
+-SetGlobal("VP_SimeRomanceActive","GLOBAL",3)
+-END
+-
+-/*IF
+-Global("VP_SimeRomanceActive","GLOBAL",2)
+-Global("AerieRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("AerieRomanceActive","GLOBAL",3)
+-END*/
+-
+-/*IF
+-Global("VP_SimeRomanceActive","GLOBAL",2)
+-Global("JaheiraRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("JaheiraRomanceActive","GLOBAL",3)
+-END*/
+-
+-IF
+-Global("VP_SimeRomanceActive","GLOBAL",2)
+-Global("AnomenRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("AnomenRomanceActive","GLOBAL",3)
+-END
+-
+-/*IF
+-Global("VP_SimeRomanceActive","GLOBAL",2)
+-Global("ViconiaRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("ViconiaRomanceActive","GLOBAL",3)
+-END*/
+-
+-IF
+-Global("VP_SimeRomanceActive","GLOBAL",2)
+-Global("RasaadRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("RasaadRomanceActive","GLOBAL",3)
+-END
+-
+-IF
+-Global("VP_SimeRomanceActive","GLOBAL",2)
+-Global("NeeraRomanceActive","GLOBAL",1)
+-THEN
+-RESPONSE #100
+-SetGlobal("NeeraRomanceActive","GLOBAL",3)
+-END
+-
+ 
+ // Veter related blocks
+ // 1. Check for presence of the figurine - "VP_Veter" = 1
