@@ -108,32 +108,35 @@
    Global("G#TF.ExpLovetalk","LOCALS",0)
 --- tyrisflare/setup-tyrisflare.tp2
 +++ tyrisflare/setup-tyrisflare.tp2
-@@ -45,9 +45,6 @@ ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
-   ADD_JOURNAL EXISTING @4 @11 @26 USING ~tyrisflare/languages/%LANGUAGE%/bodhiabduction.tra~
+@@ -69,8 +69,8 @@ ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
    
    COPY ~tyrisflare/bams/cg#tfamr.bmp~ ~override~
--  
+   
 -  EXTEND_TOP ~neera.bcs~ ~tyrisflare/scripts/biowarenpcs/neera.baf~
 -  EXTEND_TOP ~dorn.bcs~ ~tyrisflare/scripts/biowarenpcs/dorn.baf~
++
++
  
  END ELSE BEGIN
- 
-@@ -160,7 +157,6 @@ COMPILE ~tyrisflare/dialogue/g#tyris.d~
+@@ -183,7 +183,7 @@ COMPILE ~tyrisflare/dialogue/g#tyris.d~
          ~tyrisflare/dialogue/bg#tyris.d~
          ~tyrisflare/dialogue/interjections.d~
          ~tyrisflare/dialogue/lovetalks.d~
 -        ~tyrisflare/dialogue/romanceconflicts.d~
++        //~tyrisflare/dialogue/romanceconflicts.d~
          ~tyrisflare/dialogue/bodhiabduction.d~
          ~tyrisflare/dialogue/flirts.d~
  
-@@ -214,10 +210,6 @@ EXTEND_TOP    ~ar0809.bcs~ ~tyrisflare/scripts/areascripts/ar0809.baf~
+@@ -237,9 +237,9 @@ EXTEND_TOP    ~ar0809.bcs~ ~tyrisflare/scripts/areascripts/ar0809.baf~
  EXTEND_TOP    ~ar1100.bcs~ ~tyrisflare/scripts/areascripts/ar1100.baf~
  EXTEND_TOP    ~ar1105.bcs~ ~tyrisflare/scripts/areascripts/ar1105.baf~
  
 -EXTEND_TOP ~aerie.bcs~   ~tyrisflare/scripts/biowarenpcs/aerie.baf~
 -EXTEND_TOP ~jaheira.bcs~ ~tyrisflare/scripts/biowarenpcs/jaheira.baf~
 -EXTEND_TOP ~viconia.bcs~ ~tyrisflare/scripts/biowarenpcs/viconia.baf~
--
++//EXTEND_TOP ~aerie.bcs~   ~tyrisflare/scripts/biowarenpcs/aerie.baf~
++//EXTEND_TOP ~jaheira.bcs~ ~tyrisflare/scripts/biowarenpcs/jaheira.baf~
++//EXTEND_TOP ~viconia.bcs~ ~tyrisflare/scripts/biowarenpcs/viconia.baf~
+ 
  COMPILE ~tyrisflare/scripts/vampirescripts/g#tfvamp.baf~
          ~tyrisflare/scripts/vampirescripts/g#tfcutv.baf~
- EXTEND_BOTTOM ~bodhiamb.bcs~ ~tyrisflare/scripts/vampirescripts/bodhiamb.baf~
