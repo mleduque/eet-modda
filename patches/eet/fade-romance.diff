@@ -207,13 +207,6 @@ index f6c3c9d..f0b1303 100644
  END
  
  IF ~~ THEN BEGIN fadedorn_dontask
-@@ -641,4 +641,4 @@ DO ~SetGlobal("E3FADEDORNTALKTOB","GLOBAL",2)~
-   ==BE3FAD25 @6984
-   ==BDORN25 @6985
-   ==BE3FAD25 @6986
--  EXIT
-\ No newline at end of file
-+  EXIT
 diff --git Fade/Dialogues/FADE.d Fade/Dialogues/FADE.d
 index 77a81ca..1e94a35 100644
 --- Fade/Dialogues/FADE.d
@@ -240,13 +233,6 @@ index a4585ba..7615059 100644
  END
  
  IF ~~ THEN BEGIN fade_TALMISS_getout
-@@ -249,4 +249,4 @@ END
- 
- 
- 
--END
-\ No newline at end of file
-+END
 diff --git Fade/Scripts/E3Aerie.baf Fade/Scripts/E3Aerie.baf
 index 7dd9969..0276cd6 100644
 --- Fade/Scripts/E3Aerie.baf
@@ -459,10 +445,4 @@ index be8a47d..73669cf 100644
  OR(2)
  Global("E3FADEROMANCEACTIVE","GLOBAL",1)
  Global("E3FADEROMANCEACTIVE","GLOBAL",2)
-@@ -250,4 +250,4 @@ Global("E3FadeDORNCon","GLOBAL",2)
- THEN
- RESPONSE #100
- StartDialogue("E3FADEJ",Player1)
--END
-\ No newline at end of file
-+END
+
