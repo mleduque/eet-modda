@@ -981,8 +981,8 @@
     components: ask
     location:
       github_user: Spellhold-Studios
-      repository: BG1_NPCs_for_SoA_-_ToB
-      reklease: v15.4
+      repository: BG1-NPCs-for-SoA-ToB
+      release: v.15.4
       asset: bg1-npc-in-soatob-15.4.iemod
   - name: SearchGuild
     description: '"Detective Guild of Athkatla" mod'
