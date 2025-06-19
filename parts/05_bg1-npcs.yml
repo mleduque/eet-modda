@@ -483,8 +483,8 @@
       repository: Isra_NPC
       release: v3.5
       asset: isra-npc-for-bg-v3.5.iemod
-      patch:
-        relative: patches/isra_bg1_stay_after_mines.diff
+      patches:
+        - relative: patches/eet/isra_bg1_stay_after_mines.diff
       replace:
         - file_globs: ["dialogue/rh#israj.d"]
           replace: 'RealSetGlobalTimer("rh#IsraTalksBG1Timer","GLOBAL",2700)'

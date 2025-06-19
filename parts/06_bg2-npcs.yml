@@ -751,8 +751,8 @@
       repository: Isra_NPC_BG2
       release: v3.1
       asset: isra-npc-for-bgii-v3.1.iemod
-      patch:
-        relative: patch/isra_bg2.diff
+      patches:
+        - relative: patches/eet/isra_bg2.diff
       replace:
         - file_globs: ["dialogue/rh#is25j.d", "dialogue/rh#isrj.d", "scripts/rh#isr.baf"]
           regex: true

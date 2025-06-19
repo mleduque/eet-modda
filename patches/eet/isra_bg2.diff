@@ -1,7 +1,7 @@
 diff --git a/isra_bg2/dialogue/bgee.d b/isra_bg2/dialogue/bgee.d
 index 26b9373..3a3dcbb 100644
---- Isra_NPC_BG2/isra_bg2/dialogue/bgee.d
-+++ Isra_NPC_BG2/isra_bg2/dialogue/bgee.d
+--- isra_bg2/dialogue/bgee.d
++++ isra_bg2/dialogue/bgee.d
 @@ -335,7 +335,7 @@ EXIT
  
  // romance conflict
@@ -13,8 +13,8 @@ index 26b9373..3a3dcbb 100644
  END
 diff --git a/isra_bg2/dialogue/rh#isrj.d b/isra_bg2/dialogue/rh#isrj.d
 index 8bad6bf..702615d 100644
---- Isra_NPC_BG2/isra_bg2/dialogue/rh#isrj.d
-+++ Isra_NPC_BG2/isra_bg2/dialogue/rh#isrj.d
+--- isra_bg2/dialogue/rh#isrj.d
++++ isra_bg2/dialogue/rh#isrj.d
 @@ -6981,215 +6981,6 @@ EXIT
  // Romance Conflicts
  // ---------------------------------------------
@@ -233,8 +233,8 @@ index 8bad6bf..702615d 100644
  // Flirts
 diff --git a/isra_bg2/dialogue/rh#isrp.d b/isra_bg2/dialogue/rh#isrp.d
 index 7d9b388..a97c5ea 100644
---- Isra_NPC_BG2/isra_bg2/dialogue/rh#isrp.d
-+++ Isra_NPC_BG2/isra_bg2/dialogue/rh#isrp.d
+--- isra_bg2/dialogue/rh#isrp.d
++++ isra_bg2/dialogue/rh#isrp.d
 @@ -4,6 +4,7 @@ IF ~Global("rh#IsraJoined","GLOBAL",1)~ p1
   SAY @0 /* You truly wish to part company, <CHARNAME>? */
   	+ ~!Global("Chapter","GLOBAL",%bg2_chapter_4%) !Global("Chapter","GLOBAL",%bg2_chapter_5%) !Global("Chapter","GLOBAL",%bg2_chapter_7%)~ + @1 /* For the moment, yes. */ + p2
@@ -256,8 +256,8 @@ index 7d9b388..a97c5ea 100644
  IF ~~ DO ~JoinParty()~ EXIT
 diff --git a/isra_bg2/lib/main_component.tpa b/isra_bg2/lib/main_component.tpa
 index 6b82f89..e1f9985 100644
---- Isra_NPC_BG2/isra_bg2/lib/main_component.tpa
-+++ Isra_NPC_BG2/isra_bg2/lib/main_component.tpa
+--- isra_bg2/lib/main_component.tpa
++++ isra_bg2/lib/main_component.tpa
 @@ -118,9 +118,7 @@ EXTEND_BOTTOM ~aerie.bcs~	 ~isra_bg2/scripts/aerie.baf~
  EXTEND_BOTTOM ~anomen.bcs~	 ~isra_bg2/scripts/anomen.baf~
  EXTEND_BOTTOM ~bodhiamb.bcs~ ~isra_bg2/scripts/bodhiamb.baf~
@@ -278,8 +278,8 @@ index 6b82f89..e1f9985 100644
  	ADD_JOURNAL @19 @22 @33 @36 @63 @81 @113 @124 @129 @155 @168 @175 @191 USING ~isra_bg2/translations/%LANGUAGE%/rh#isr.tra~
 diff --git a/isra_bg2/scripts/aerie.baf b/isra_bg2/scripts/aerie.baf
 index 9ca0b2a..e4999a8 100644
---- Isra_NPC_BG2/isra_bg2/scripts/aerie.baf
-+++ Isra_NPC_BG2/isra_bg2/scripts/aerie.baf
+--- isra_bg2/scripts/aerie.baf
++++ isra_bg2/scripts/aerie.baf
 @@ -50,37 +50,6 @@ END
  
  // romance conflict
@@ -329,8 +329,8 @@ index 9ca0b2a..e4999a8 100644
  	RESPONSE #100
 diff --git a/isra_bg2/scripts/rh#isr.baf b/isra_bg2/scripts/rh#isr.baf
 index 4dc17e4..3bf06de 100644
---- Isra_NPC_BG2/isra_bg2/scripts/rh#isr.baf
-+++ Isra_NPC_BG2/isra_bg2/scripts/rh#isr.baf
+--- isra_bg2/scripts/rh#isr.baf
++++ isra_bg2/scripts/rh#isr.baf
 @@ -1084,82 +1084,6 @@ END
  // Romance Conflicts
  // ---------------------------------------------
@@ -416,8 +416,8 @@ index 4dc17e4..3bf06de 100644
  // ---------
 diff --git a/isra_bg2/translations/english/rh#isrp.tra b/isra_bg2/translations/english/rh#isrp.tra
 index 19be2a1..7abc8db 100644
---- Isra_NPC_BG2/isra_bg2/translations/english/rh#isrp.tra
-+++ Isra_NPC_BG2/isra_bg2/translations/english/rh#isrp.tra
+--- isra_bg2/translations/english/rh#isrp.tra
++++ isra_bg2/translations/english/rh#isrp.tra
 @@ -4,6 +4,8 @@
  @3    = ~I see. Should you change your mind, I intend to visit the Temple of Lathander at least briefly before leaving the city. Perhaps you can find me there.~
  @4    = ~I see. I've no wish to remain here in the meantime, I'm afraid. Perhaps we shall meet again.~
