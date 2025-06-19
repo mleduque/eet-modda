@@ -8,7 +8,10 @@
     components:
       - 0 # Installs Ajantis BG1 Expansion Modification
   - name: ViconiaRevamped
-    components: ask
+    components:
+      - 0 # Viconia Revamped -> Dual-class: Thief/Cleric: v7.3
+      - 54 # Portraits for Viconia -> Use recolored Baldur's Gate 2 portrait (partially blue clothing): v7.3
+      - 60 # Add special ability: Embrace of Shar: v7.3
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/ViconiaRevamped v7.3
   - name: chattyimoen
@@ -20,7 +23,7 @@
       github_user: The-Gate-Project
       repository: ChattyImoen
       release: v1.5
-      asset: lin-chattyimoen-v1.5.zip
+      asset: chatty-imoen-1.5.iemod
   - name: npc_tweak
     comments: also adds an heirloom to anomen
     components:
