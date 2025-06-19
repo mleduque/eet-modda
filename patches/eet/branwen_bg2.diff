@@ -1,5 +1,5 @@
---- Branwen_for_BGII/Branwen/Scripts/O#BranS.baf
-+++ Branwen_for_BGII/Branwen/Scripts/O#BranS.baf
+--- Branwen/Scripts/O#BranS.baf
++++ Branwen/Scripts/O#BranS.baf
 @@ -368,51 +368,10 @@ END
  
  // What else are we missing? Romance!

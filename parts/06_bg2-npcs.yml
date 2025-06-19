@@ -913,8 +913,8 @@
       repository: Branwen_for_BGII
       release: v8
       asset: branwen-v8pre.iemod
-      patch:
-        relative: patches/branwen_bg2.diff
+      patches:
+        - relative: patches/eet/branwen_bg2.diff
       replace:
         - file_globs: ["Scripts/*.baf", "Dialogue/*.d"]
           replace: 'RealSetGlobalTimer("O#BranFlirtTimer","GLOBAL",2500)' # 42 min
