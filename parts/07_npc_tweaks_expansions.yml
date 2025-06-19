@@ -263,8 +263,8 @@
     location:
       github_user: Spellhold-Studios
       repository: Hexxat-Friendship
-      release: v1.1
-      asset:  hexxat-friendship-1.1.iemod
+      release: v1.2
+      asset: HexxatFriendship-v1.2.iemod
   - name: deArnise
     description: romance with Nalia (soa part)
     components:
