@@ -182,9 +182,9 @@
       - 0
     location:
       github_user: Spellhold-Studios
-      repository: CerndFriendship
-      release: v1.3
-      asset: Cernd-Friendship-v1.3.iemod
+      repository: Cernd-Friendship
+      release: v1.4
+      asset: cernd-friendship-v1.4.iemod
       replace:
         - file_globs: ["scripts/cernd.baf", "scripts/cern25.baf"]
           regex: true
