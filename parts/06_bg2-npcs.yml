@@ -956,7 +956,9 @@
       because: bare-bone npc, will use bg1npcsoa version
   - name: Coran
     description: Coran for bg2+tob, male elven fighter/thief, friendship
-    components: ask
+    components:
+      - 0 # Coran NPC MOD for Baldur's Gate II: v9
+      - 1 # Delete old Coran from the Forest of Tethyr (RECOMMENDED): v9
     location:
       github_user: Pocket-Plane-Group
       repository: Coran_for_BGII
@@ -964,7 +966,9 @@
       asset: coran-npc-mod-for-baldurs-gate-ii-v9.iemod
   - name: kivan
     description: bg2+soa, adds Kivan and possibly Deheriana, friendship, Kivan romance (exclusive with Deheriana)
-    components: ask
+    components:
+      - 100 # Kivan of Shilmista: v19
+      - 300 # Install Herd's Alternative Portrait for Kivan.: v19
     location:
       github_user: Gibberlings3
       repository: Kivan_and_Deheriana
