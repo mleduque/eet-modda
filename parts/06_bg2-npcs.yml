@@ -978,12 +978,30 @@
     description: "BG1 NPCs in BG2 plus new Athkatla district: Water Gardens"
     installation:
       after: other versions of same npcs
-    components: ask
+    components:
+      - 0 # Water Gardens. New Athkatla's district & new quests: 15.4
+      - 2 # Shar-Teel NPC in BG2. "Nightbringer of Shar" (SoA): 15.4
+      - 3 # New portrait of Shar-Teel (blonde, slightly older): 15.4
+      - 6 # Brave Sir Garrick NPC in BG2 (SoA): 15.4
     location:
       github_user: Spellhold-Studios
       repository: BG1-NPCs-for-SoA-ToB
       release: v.15.4
       asset: bg1-npc-in-soatob-15.4.iemod
+  - name: BG1NPCSoA
+    description: component that warns
+    components:
+      - 11 # ToB-part for Shar-Teel or/and Yeslick, Garrick, Branwen, Skie, Eldoth: 15.4
+    ignore_warnings: true
+  - name: BG1NPCSoA
+    components:
+      - 25 # Alora (SoA & ToB): 15.4
+      - 35 # Kagain's Corner (SoA & ToB) -> Store with Vanilla Items Only: 15.4
+      - 40 # Faldorn's New Leaf (SoA & ToB): 15.4
+      - 45 # Xzar and Monty Murder Mysteries (SoA & ToB) (R, 18+!): 15.4
+      - 50 # Gnomes in the City: Quayle & Tiax (SoA & ToB): 15.4
+      - 55 # Expanded cirqus quest -> Expanded cirqus quest (Standard difficulty): 15.4
+      - 87 # Inter Component Banter Pack: 15.4
   - name: SearchGuild
     description: '"Detective Guild of Athkatla" mod'
     installation:
