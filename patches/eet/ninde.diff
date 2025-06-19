@@ -1,7 +1,7 @@
 diff --git a/ninde/dialogue/lk#nindp.d b/ninde/dialogue/lk#nindp.d
 index f59ab4e..d3f1986 100644
---- ninde/ninde/dialogue/lk#nindp.d
-+++ ninde/ninde/dialogue/lk#nindp.d
+--- ninde/dialogue/lk#nindp.d
++++ ninde/dialogue/lk#nindp.d
 @@ -9,6 +9,7 @@ IF ~Global("LK#NindeJoined","LOCALS",1) !Global("LK#NindeAbducted","GLOBAL",1)~
    SAY @0 /* My father, bless his senile heart, used to say that even the sweetest apples rot. Perhaps... yes, I could certainly do with a break from the road. My feet must be restored to their former, delicate selves. Speak plain, <CHARNAME>, do you desire my company any longer? */
    ++ @1 /* Well your little break from adventuring will have to wait for a while, Ninde. We still have need of you yet. */ DO ~JoinParty()~ EXIT

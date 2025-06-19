@@ -796,11 +796,11 @@
       - 0 # Ninde NPC Mod for BGII
     location:
       github_user: Spellhold-Studios
-      repository: Ninde_NPC
-      release: v2.2
-      asset:  Ninde_v2.2.rar
-      patch:
-        relative: patches/eet/ninde.diff
+      repository: Ninde-NPC
+      release: v3.0
+      asset: ninde-npc-for-bgii-v3.0.iemod
+      patches:
+        - relative: patches/eet/ninde.diff
       replace:
         - file_globs: ['dialogue/*.d', 'scripts/*.baf']
           regex: true
