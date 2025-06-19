@@ -358,7 +358,7 @@
     components:
       - 0
     location:
-      path: /home/mick/Games/modda-cache/ie-mods-archive/g3/lin-YoshimosRemorse-v3.1.1.tar.gz
+      path: /home/mick/Games/modda-cache/iemods-archive/g3/lin-YoshimosRemorse-v3.1.1.tar.gz
       alt:
         http: http://america.iegmc.net/g3/lin-YoshimosRemorse-v3.1.tar.gz
         # http: https://www.gibberlings3.net/files/file/1012-yoshimos-remorse/
