@@ -327,13 +327,13 @@
     description: tob part of Nalia romance(s)
     components:
       - 0 # Nalia at Last: A ToB Romance MoD.
-      - 8 # Romance theme usic
+      - 1 # Romance theme usic
     location:
       github_user: Skitia
       repository: Nalia_At_Last
-      tag: v1.12
-      patch:
-        relative: patches/eet/nalia-at-last-conflicts.diff
+      tag: v1.14
+      patches:
+        - relative: patches/eet/nalia-at-last-conflicts.diff
       replace:
         - file_globs: ["Dialogue/Original.d", "Dialogue/X3Nal25.d"]
           regex: true
