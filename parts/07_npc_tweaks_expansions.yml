@@ -382,9 +382,9 @@
       - 4 # Give Edwina a Portrait
     location:
       github_user: Spellhold-Studios
-      repository: Edwin_Romance
-      release: v4,0
-      asset:  edwin-romance-v4.0.iemod
+      repository: Edwin-Romance
+      release: v4.0
+      asset: edwin-romance-v4.0.iemod
   - name: Wings
     components:
       - 0 # Wings - Wings for BG2:EE
