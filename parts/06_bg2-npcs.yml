@@ -662,16 +662,16 @@
   - name: Kelsey
     description: soa+tob, NG male sorcerer, romance, dialogue, imoen/nalia romance, quest
     components:
-      - 1 # Kelsey
-      - 88 # Solaufein interaction
+      - 0 # Kelsey
+      - 1 # Solaufein interaction
       - 4 # ascension specific dialogue
     location:
       github_user: Pocket-Plane-Group
       repository: Kelsey
       release: v6
       asset:  KelseyV6.zip
-      patch:
-        relative: patches/eet/kelsey.diff
+      patches:
+        - relative: patches/eet/kelsey.diff
       replace:
         - file_globs: ["baf/soa/j#klsy.baf"]
           replace: 'RealSetGlobalTimer("J#KelseyNonRomance","GLOBAL",2250)'
@@ -682,7 +682,7 @@
       after: kelsey
     components:
       - 0 # Keto SOA NPC
-      - 84 # Keto/Kelsey Interaction (Requires Kelsey-SOA)
+      - 1 # Keto/Kelsey Interaction (Requires Kelsey-SOA)
     location:
       github_user: Pocket-Plane-Group
       repository: Keto
