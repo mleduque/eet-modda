@@ -425,9 +425,9 @@
       - 6 # Banter Accelerator -> 10 minutes  -- same as banterpack accelerator, more configurable, overrides
     location:
       github_user: Spellhold-Studios
-      repository: IEP_Extended_Banter
-      release: v6
-      asset: iep-extended-banters-v6.iemod
+      repository: IEP-Extended-Banter
+      release: v5.9
+      asset: iep-extended-banters-v5.9.iemod
   - name: SkitiaRomanceTweak
     components: [0]
     location:
