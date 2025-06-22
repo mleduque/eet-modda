@@ -489,7 +489,7 @@ modules:
       asset:  themed-tweaks-v0.4.iemod
   - name: framed # ok
     components:
-      - 0 # FFramed ou Piege: Propose plusieurs versions du chapitre 6 -> LUtilisez des voix personnalisees pour les films des nouveaux chapitres
+      - 0 # Framed ou Piege: Propose plusieurs versions du chapitre 6 -> LUtilisez des voix personnalisees pour les films des nouveaux chapitres
     location:
       github_user:  Gibberlings3
       repository: framed
