@@ -433,8 +433,10 @@
     location:
       github_user: Skitia
       repository: SkitiaBG2RomanceTweaks
-      branch: master
+      branch: main
       refresh: 7days
+    disabled_if:
+      because: nothing kills romance
   - name: aurora
     description: Aurora shoes and boots - non-joinable NPC
     components:
