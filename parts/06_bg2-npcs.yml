@@ -1026,6 +1026,8 @@
     components:
       - 3 # Mule de bat (bgee) -> Fontes sans fond
     location:
-      path: /home/mick/Games/modda-cache/static/w_packmule-v1.4b.zip
+      github_user: mleduque
+      repository: W_PackMule
+      tag: v1.4b
 
   # BG2 NPCs end
