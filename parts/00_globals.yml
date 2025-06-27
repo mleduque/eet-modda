@@ -63,8 +63,8 @@ locations:
     iwdification:
       github_user: Gibberlings3
       repository: iwdification
-      release: v8
-      asset: lin-iwdification-v8.zip
+      release: v9
+      asset: lin-iwdification-v9.zip
       patches:
         - relative: patches/eet/iwdification-ini.diff
     rr:
