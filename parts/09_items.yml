@@ -552,6 +552,16 @@
         and Bards component) if installed after them.
     components:
       - 1030 # Store Revisions
+  - name: cd_project_javelin
+    description: Project Javelin
+    overview: Adds short javelins, one handed melee and ranged
+    components: ask
+    location:
+      github_user: Gibberlings3
+      repository: Project_Javelin
+      release: Beta1
+      asset: lin-cd_project_javelin-Beta_1.zip
+
   - name: bg1_ipm
     description: unique icons for BG1 quest items
     components: ask
