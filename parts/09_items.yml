@@ -539,6 +539,15 @@
       repository: The-Workshop-Kitpack
       release: v5.20
       asset: the-workshop-kitpack-5.20.iemod
+  - name: g3cip
+    description: The G3 Community Item Pack
+    overview: WeiDU compilation of items submitted by players, and created (for the most part) live on stream to showcase how to make Infinity Engine mods. The items are intended for Baldur's Gate II, original or Enhanced Edition.
+    component:s: ask
+    location:
+      github_user: Gibberlings3
+      repository: G3_Community_Item_Pack
+      release: v1
+      asset: lin-g3cip-v1.zip
 
   - name: item_rev
     descritpion: Item Revisions - store component
