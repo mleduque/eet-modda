@@ -663,7 +663,8 @@
     description: soa+tob, NG male sorcerer, romance, dialogue, imoen/nalia romance, quest
     components:
       - 0 # Kelsey
-      - 1 # Solaufein interaction
+      # This isw Weimer's Solaufein, not Jastey's Solaufein's Rescue
+      #- 1 # Solaufein interaction
       - 4 # ascension specific dialogue
     location:
       github_user: Pocket-Plane-Group
