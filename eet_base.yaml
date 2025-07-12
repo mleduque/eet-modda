@@ -5291,10 +5291,10 @@ modules:
       general: If possible, try to install this mod last before biffing. Infinity Sounds does not add any new game content or change any of the game rules; therefore, it will most likely not benefit from patches introduced by other mods
     components: ask
     location:
-      github_user: skellytz
-      repository: infinity-sounds
-      release: v2.01
-      asset: infinitysounds-v2.0.1.iemod
+      github_user: Spellhold-Studios
+      repository: Infinity-Sounds
+      release: v2.2
+      asset: infinitysounds-v2.2.iemod
   - name: generalized_biffing # ok
     components:
       - 1
