@@ -1,0 +1,11 @@
+--- c#brandock/c#brandock.tp2
++++ c#brandock/c#brandock.tp2
+@@ -3069,7 +3069,7 @@ EXTEND_BOTTOM ~c#brando.bcs~   ~C#Brandock/crossmod/brando_crossmod_finch.baf~ E
+ END /* Finch */
+ 
+ /* Framed */
+-ACTION_IF FILE_EXISTS_IN_GAME ~#LF_CKWO.ITM~ THEN BEGIN 
++ACTION_IF FILE_EXISTS_IN_GAME ~#LF_CKWO.ITM~ AND 0 THEN BEGIN 
+ PRINT @55578 /* ~Framed Mod detected.~ */
+ /* @1097 = ~And now we are here, in front of these impressive walls.~ */
+ OUTER_SET brandj_1097 = STATE_WHICH_SAYS 1097 IN ~C#Brandock/tra/autotra/%s/C#BRAND_DIALOGUES.TRA~ FROM ~c#brandj~

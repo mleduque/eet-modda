@@ -64,6 +64,8 @@
       repository: Brandock_the_Mage
       release: v1.6
       asset: brandock-the-mage-v1.6.iemod
+      patches:
+        - relative: patches/eet/brandock-crossmod-workaround.diff
       replace:
         # BrandockNPCBanterTimer3600
         - file_globs: ["crossmod/bg1npc.baf", "crossmod/brando_crossmod_bg1npc_BG1.d", "dialogue/brandock_sod.d", "dialogue/c#brando.d"]
