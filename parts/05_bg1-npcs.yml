@@ -232,31 +232,7 @@
           replace: 'RealSetGlobalTimer\("Ishy(?<t>[^"]+)","GLOBAL",([0-9]{4})\)'
           with: 'RealSetGlobalTimer("Ishy${t}","GLOBAL",720)'
 
-  # Skitia BG1 npcs
-  - name: Emily
-    description: Emily, half-elf archer
-    overview: Bg1+SoD, half-elf NG archer, quest, friendship (BG1), romance (SoD), banters, crossmod
-    installation:
-      after: [ Kale, Vienxay, Aura, Helga, Recorder, Drake ]
-    components:
-      - 0 # Emily NPC for BG1EE: 1.65
-      - 1 # Choose whether or not to have Emily's custom soundtrack play during timed talks. -> Emily's Music: 1.65
-    location:
-      github_user: Skitia
-      repository: Emily-BG1
-      branch: master
-      refresh: 3days
-      replace:
-        - file_globs: ["Dialogue/SoD/X32milyJ.d"]
-          replace: 'RealSetGlobalTimer("X32milyRealTalkTimer","GLOBAL",ONE_HOUR)' # 60 min
-          with: 'RealSetGlobalTimer("X32milyRealTalkTimer","GLOBAL",900)' # 15 min
-        - file_globs: ["Scripts/X3mily.baf", "Dialogue/X3milyJ.d"]
-          replace: 'RealSetGlobalTimer("X3milyTimer","GLOBAL",3200)' # 53 min
-          with: 'RealSetGlobalTimer("X32milyRealTalkTimer","GLOBAL",720)' # 12 min
-      patches:
-        - relative: patches/eet/emily-multi-romance.diff
-        - relative: patches/eet/emily-crossmod.diff
-  - name: Helga
+  # Skitia BG1 npcs  - name: Helga
     description: Helga, dwarven priest of Haela
     overview: bg1+SoD, dwarf (f) CN cleric (kit), small quest, friendship+banters (no romance),crossmod
     installation:
@@ -343,6 +319,29 @@
         - file_globs: ["Dialogue/SoD/X32VienJ.d"]
           replace: 'SetGlobalTimer("X32VienGameTalkTimer","GLOBAL",THREE_DAYS\)'
           with: 'SetGlobalTimer("X32RecGameTalkTimer","GLOBAL",ONE_DAY)'
+  - name: Emily
+    description: Emily, half-elf archer
+    overview: Bg1+SoD, half-elf NG archer, quest, friendship (BG1), romance (SoD), banters, crossmod
+    installation:
+      after: [ Kale, Vienxay, Aura, Helga, Recorder, Drake ]
+    components:
+      - 0 # Emily NPC for BG1EE: 1.65
+      - 1 # Choose whether or not to have Emily's custom soundtrack play during timed talks. -> Emily's Music: 1.65
+    location:
+      github_user: Skitia
+      repository: Emily-BG1
+      branch: master
+      refresh: 3days
+      replace:
+        - file_globs: ["Dialogue/SoD/X32milyJ.d"]
+          replace: 'RealSetGlobalTimer("X32milyRealTalkTimer","GLOBAL",ONE_HOUR)' # 60 min
+          with: 'RealSetGlobalTimer("X32milyRealTalkTimer","GLOBAL",900)' # 15 min
+        - file_globs: ["Scripts/X3mily.baf", "Dialogue/X3milyJ.d"]
+          replace: 'RealSetGlobalTimer("X3milyTimer","GLOBAL",3200)' # 53 min
+          with: 'RealSetGlobalTimer("X32milyRealTalkTimer","GLOBAL",720)' # 12 min
+      patches:
+        - relative: patches/eet/emily-multi-romance.diff
+        - relative: patches/eet/emily-crossmod.diff
 
   # ArtemiusI NPCs
   - name: Aura_BG1
