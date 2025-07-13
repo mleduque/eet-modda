@@ -220,60 +220,60 @@
     installation:
       after: [bg1ub, EET, BGEEClassicMovies, c#endlessbg1, ntotsc, Loretakers, bgqe]
       before: [bg1re, bg1npc, garrick-tt, c#greythedog, stratagems, EET_End]
-    components:
-      - 2 # Ramazith: 1.0
-      - 3 # Jopi and his uncle Ragefast: 1.0
-      - 4 # Yuxi - Ragefast's imp: 1.0
-      - 5 # Husam's story line finished: 1.0
-      - 6 # IMPROVED/RESTORED: Ducal Palace: 1.0
-      - 7 # Gervisse & Voltine: 1.0
-      - 8 # Seven Suns: 1.0
-      - 9 # Arkhstuff: 1.0
-      - 10 # Iron Throne Guard: 1.0
-      - 13 # RESTORED: Nashkel Garrison soldier: 1.0
-      - 14 # RESTORED: Velvet - Cockfight: 1.0
-      - 16 # RESTORED: Caravan merchant: 1.0
-      - 17 # RESTORED: Galtoth - the fence: 1.0
-      - 18 # Phandalyn waits in Elfsong Tavern: 1.0
-      - 20 # RESTORED: Warehouse Workers: 1.0
-      - 21 # RESTORED: Nobles: 1.0
-      - 22 # RESTORED: Yago's guard in Low Lantern: 1.0
-      - 23 # RESTORED: Ignatio Phleed - the invitation seller: 1.0
-      - 24 # RESTORED: Shalasin: 1.0
-      - 25 # RESTORED: Sir Artolas: 1.0
-      - 30 # RESTORED: Marl - Tavern brawl at Feldepost's Inn: 1.0
-      - 31 # RESTORED: Beregost guards: 1.0
-      - 32 # RESTORED ITEM: Rythe's Last Arrow: 1.0
-      - 33 # RESTORED ITEM: The Protector of the Unworthy: 1.0
-      - 34 # IMPROVED/FIXED: Counting House: 1.0
-      - 35 # Merchants' League investigations: 1.0
-      - 36 # Aldeth & Seniyad: 1.0
-      - 37 # Aldeth's betrayal and remorse: 1.0
-      - 38 # Tenya and the fishermen: 1.0
-      - 39 # Tenya's quest in Temple of Umberlee: 1.0
-      - 40 # Nashkel: 1.0
-      - 41 # Stationary soldiers in Nashkel: 1.0
-      - 42 # Imoen at Winthrop's inn: 1.0
-      - 43 # Priest of Oghma, Gond and Ilmater in Baldur's Gate: 1.0
-      - 44 # Extended/Improved dialogues: 1.0
-      - 45 # Caldo can be charmed: 1.0
-      - 46 # Hulrik and his cows: 1.0
-      - 47 # Improved Shop of Silence: 1.0
-      - 48 # Ender Sai in Baldur's Gate: 1.0
-      - 49 # Sorcerous Sundries: 1.0
-      - 50 # RESTORED: Elfsong Tavern Movie: 1.0
-      - 51 # Mini-Quest: "The mystery of the silent ghostly voice": 1.0
-      - 52 # Special keg in Elfsong Tavern: 1.0
-      - 53 # Black Alaric's Cave: 1.0
-      - 54 # RESTORED: Cloakwood druid: 1.0
-      - 55 # Extended meeting between Xzar and Niemain: 1.0
-      - 101 # Backdoor to Gellana's temple: 1.0
-      - 102 # Backdoor to Waterqueen's House: 1.0
+    components: ask
+      #- 2 # Ramazith: 1.0
+      #- 3 # Jopi and his uncle Ragefast: 1.0
+      #- 4 # Yuxi - Ragefast's imp: 1.0
+      #- 5 # Husam's story line finished: 1.0
+      #- 6 # IMPROVED/RESTORED: Ducal Palace: 1.0
+      #- 7 # Gervisse & Voltine: 1.0
+      #- 8 # Seven Suns: 1.0
+      #- 9 # Arkhstuff: 1.0
+      #- 10 # Iron Throne Guard: 1.0
+      #- 13 # RESTORED: Nashkel Garrison soldier: 1.0
+      #- 14 # RESTORED: Velvet - Cockfight: 1.0
+      #- 16 # RESTORED: Caravan merchant: 1.0
+      #- 17 # RESTORED: Galtoth - the fence: 1.0
+      #- 18 # Phandalyn waits in Elfsong Tavern: 1.0
+      #- 20 # RESTORED: Warehouse Workers: 1.0
+      #- 21 # RESTORED: Nobles: 1.0
+      #- 22 # RESTORED: Yago's guard in Low Lantern: 1.0
+      #- 23 # RESTORED: Ignatio Phleed - the invitation seller: 1.0
+      #- 24 # RESTORED: Shalasin: 1.0
+      #- 25 # RESTORED: Sir Artolas: 1.0
+      #- 30 # RESTORED: Marl - Tavern brawl at Feldepost's Inn: 1.0
+      #- 31 # RESTORED: Beregost guards: 1.0
+      #- 32 # RESTORED ITEM: Rythe's Last Arrow: 1.0
+      #- 33 # RESTORED ITEM: The Protector of the Unworthy: 1.0
+      #- 34 # IMPROVED/FIXED: Counting House: 1.0
+      #- 35 # Merchants' League investigations: 1.0
+      #- 36 # Aldeth & Seniyad: 1.0
+      #- 37 # Aldeth's betrayal and remorse: 1.0
+      #- 38 # Tenya and the fishermen: 1.0
+      #- 39 # Tenya's quest in Temple of Umberlee: 1.0
+      #- 40 # Nashkel: 1.0
+      #- 41 # Stationary soldiers in Nashkel: 1.0
+      #- 42 # Imoen at Winthrop's inn: 1.0
+      #- 43 # Priest of Oghma, Gond and Ilmater in Baldur's Gate: 1.0
+      #- 44 # Extended/Improved dialogues: 1.0
+      #- 45 # Caldo can be charmed: 1.0
+      #- 46 # Hulrik and his cows: 1.0
+      #- 47 # Improved Shop of Silence: 1.0
+      #- 48 # Ender Sai in Baldur's Gate: 1.0
+      #- 49 # Sorcerous Sundries: 1.0
+      #- 50 # RESTORED: Elfsong Tavern Movie: 1.0
+      #- 51 # Mini-Quest: "The mystery of the silent ghostly voice": 1.0
+      #- 52 # Special keg in Elfsong Tavern: 1.0
+      #- 53 # Black Alaric's Cave: 1.0
+      #- 54 # RESTORED: Cloakwood druid: 1.0
+      #- 55 # Extended meeting between Xzar and Niemain: 1.0
+      #- 101 # Backdoor to Gellana's temple: 1.0
+      #- 102 # Backdoor to Waterqueen's House: 1.0
     location:
-      github_user: YChap # or TotoR115
+      github_user: Gitjas
       repository: JA-AdventurePack
-      branch: master
-      refresh: 4days
+      release: v1.0
+      asset: JA.BGT_AdvPack-v1.0.iemod
 
   - name: bg1re
     description: Baldur's Gate Romantic Encounters
