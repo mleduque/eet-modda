@@ -100,8 +100,8 @@
     location:
       github_user: Gibberlings3
       repository: EndlessBG1
-      release: v19
-      asset: endless-bg1-mod-19.iemod
+      release: v20.1
+      asset: endless-bg1-mod-20.1.iemod
   - name: c#anotherfinehell
     installation:
       general: Install Another fine Hell as an early quest mod, before NPC mods
