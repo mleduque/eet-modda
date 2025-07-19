@@ -157,8 +157,8 @@
     location:
       github_user: Pocket-Plane-Group
       repository: Item_Upgrade
-      release: v54
-      asset: lin-itemupgrade-v54.zip
+      release: v55
+      asset: lin-itemupgrade-v55.zip
   - name: Item_Pack
     description: new items to Baldur's Gate II, Tutu, BGT and Planescape:Torment, as well as plenty of item-related tweaks
     components: ask
@@ -245,8 +245,8 @@
     location:
       github_user: Pocket-Plane-Group
       repository: Under-Respresented_Items
-      release: v13
-      asset: lin-underrep-v13.tar.gz
+      release: v14
+      asset: lin-underrep-v14.tar.gz
   - name: alchemy
     description: jan's alchemy
     overview: |

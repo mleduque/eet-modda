@@ -46,17 +46,6 @@
     description: Tortured soul's Sime crossmod
     components:
       - 50 # Sime Crossmod: 0.8
-  - name: SmilingImpCrossBanterMod
-    components:
-      - 0 # Shar-Teel Banters: 1.4
-      # Garrick not installed
-      #- 2 # Garrick Banters: 1.4
-      - 16 # "Wilson Chonicles" Mod - Cross Banters: 1.4
-    location:
-      github_user: Spellhold-Studios
-      repository: SmilingImpCrossBanterMod
-      release: v.1.7
-      asset: smiling-imps-cross-banter-mod-1.7.iemod
   - name: c#husam
     description : Husam npc crossmod
     installation:

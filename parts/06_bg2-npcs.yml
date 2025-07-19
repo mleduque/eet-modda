@@ -987,8 +987,8 @@
     location:
       github_user: Spellhold-Studios
       repository: BG1-NPCs-for-SoA-ToB
-      release: v.15.4.1
-      asset: bg1-npc-in-soatob-15.4.1.iemod
+      release: v.15.4.2
+      asset: bg1-npc-in-soatob-15.4.2.iemod
   - name: BG1NPCSoA
     description: component that warns
     components:
@@ -998,7 +998,8 @@
     components:
       - 25 # Alora (SoA & ToB): 15.4
       - 35 # Kagain's Corner (SoA & ToB) -> Store with Vanilla Items Only: 15.4
-      - 40 # Faldorn's New Leaf (SoA & ToB): 15.4
+      # Lava's Faldorn is installed
+      #- 40 # Faldorn's New Leaf (SoA & ToB): 15.4
       - 45 # Xzar and Monty Murder Mysteries (SoA & ToB) (R, 18+!): 15.4
       - 50 # Gnomes in the City: Quayle & Tiax (SoA & ToB): 15.4
       - 55 # Expanded cirqus quest -> Expanded cirqus quest (Standard difficulty): 15.4

@@ -9,3 +9,12 @@
  PRINT @55578 /* ~Framed Mod detected.~ */
  /* @1097 = ~And now we are here, in front of these impressive walls.~ */
  OUTER_SET brandj_1097 = STATE_WHICH_SAYS 1097 IN ~C#Brandock/tra/autotra/%s/C#BRAND_DIALOGUES.TRA~ FROM ~c#brandj~
+@@ -3115,7 +3115,7 @@ END //SoA
+ ACTION_IF FILE_EXISTS_IN_GAME ~cdbracer.itm~ THEN BEGIN
+ PRINT @55563 /* ~The Calling detected.~ */
+ /* @1032 = ~Then I wish you well in your task. Good day.~ */
+-OUTER_SET thecalling_1032 = STATE_WHICH_SAYS 1032 IN ~thecalling/languages/%s/mage.TRA~ FROM ~THALAN~
++OUTER_SET thecalling_1032 = STATE_WHICH_SAYS 1032 IN ~thecalling/languages/%s/game.TRA~ FROM ~THALAN~
+   COMPILE EVALUATE_BUFFER ~C#Brandock/crossmod/the_calling.d~
+   EXTEND_BOTTOM ~c#brando.bcs~   ~C#Brandock/crossmod/the_calling.baf~
+ EVALUATE_BUFFER

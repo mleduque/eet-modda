@@ -9,6 +9,7 @@ modules:
       - 10 # Correction de la traduction de Baldur's Gate II : Enhanced Edition: 0.7
       - 20 # Correction de la description des objets: 0.7
       - 30 # Patch audio et video francais: 0.7
+      - 40 # Suppression des ensembles de voix en anglais: 0.23
     location:
       github_user: r-e-d
       repository: correctfrBG2EE

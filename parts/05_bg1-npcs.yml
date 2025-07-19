@@ -137,8 +137,8 @@
     location:
       github_user: Gitjas
       repository: Husam_NPC
-      release: vBeta_230411
-      asset: husam-npc-for-bgt-bgsod-bgiiee-and-eet-beta_230411.iemod
+      release: vBeta_231118
+      asset: husam-npc-beta_231118.iemod
       replace:
         - file_globs: ["scripts/c#husam_sva.baf"]
           replace: 'RealSetGlobalTimer("C#Husam2_DialogTimer","GLOBAL",1800)'
@@ -232,7 +232,8 @@
           replace: 'RealSetGlobalTimer\("Ishy(?<t>[^"]+)","GLOBAL",([0-9]{4})\)'
           with: 'RealSetGlobalTimer("Ishy${t}","GLOBAL",720)'
 
-  # Skitia BG1 npcs  - name: Helga
+  # Skitia BG1 npcs
+  - name: Helga
     description: Helga, dwarven priest of Haela
     overview: bg1+SoD, dwarf (f) CN cleric (kit), small quest, friendship+banters (no romance),crossmod
     installation:
