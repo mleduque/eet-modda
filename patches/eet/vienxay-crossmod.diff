@@ -1,13 +1,15 @@
 diff --git a/Vienxay/Vienxay.tp2 b/Vienxay/Vienxay.tp2
-index e778250..78fa01a 100644
+index e778250..65e3c6c 100644
 --- Vienxay/Vienxay.tp2
 +++ Vienxay/Vienxay.tp2
-@@ -126,3 +126,48 @@ ACTION_IF ("music" = 2) THEN BEGIN
+@@ -126,3 +126,50 @@ ACTION_IF ("music" = 2) THEN BEGIN
  PRINT @18
  END 
  		
 +BEGIN ~Vienxay crossmod~
 +DESIGNATED 10000
++
++LOAD_TRA ~Vienxay/translations/English/vien_bg1.tra~
 +
 +ACTION_IF FILE_EXISTS_IN_GAME ~x3milyB.dlg~
 +THEN BEGIN
