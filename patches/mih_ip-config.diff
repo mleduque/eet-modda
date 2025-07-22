@@ -1,7 +1,7 @@
 diff --git a/mih_ip/mih_ip.ini b/mih_ip/mih_ip.ini
 index 1f02124..b9506e3 100644
---- mih_ip/mih_ip/mih_ip.ini
-+++ mih_ip/mih_ip/mih_ip.ini
+--- mih_ip/mih_ip.ini
++++ mih_ip/mih_ip.ini
 @@ -9,8 +9,8 @@ implement_lore_changes=1
  [item_pack]
  update_itemexcl_2da=1
