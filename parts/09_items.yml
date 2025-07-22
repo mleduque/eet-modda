@@ -130,14 +130,20 @@
       - 4 # Item Restorations: v1
   - name: mih_ip
     description: Made In Heaven Item Pack
-    components: ask
+    components:
+      - 0 # Made in Heaven: Item Pack: v8
+      - 1 # Personal Items for NPCs: v8
+      - 8 # Improved Tome of Golems: v8
+      - 10 # Add Potions of Extra Healing in BG1: v8
+    ignore_warnings: true
     location:
       github_user: AngelGryph
       repository: MadeInHeaven_ItemPack
       branch: master
       refresh: 2days
-      patch:
-        relative: patches/mih_ip-config.diff
+      patches:
+        - relative: patches/mih_ip-config.diff
+        - relative: patches/mih_ip-workaround.diff
 
   # new upgrades
   - name: itemupgrade

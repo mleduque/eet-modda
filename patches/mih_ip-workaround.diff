@@ -1,0 +1,40 @@
+diff --git a/mih_ip/item_pack/include/bg2_item_pack.tpa b/mih_ip/item_pack/include/bg2_item_pack.tpa
+index 01362ca..c79c27e 100644
+--- mih_ip/item_pack/include/bg2_item_pack.tpa
++++ mih_ip/item_pack/include/bg2_item_pack.tpa
+@@ -247,7 +247,7 @@ BEGIN
+ 
+     cre.edit[jagalvar]
+     [
+-      m.cre_add_items{mh#belt3(belt,x1.1.1)}
++      m.cre_add_items{mh#belt3(belt)}
+     ]
+ 
+ 
+@@ -358,7 +358,7 @@ BEGIN
+ 
+     cre.edit[firban02]
+     [
+-      m.cre_add_items{mh#hide2(armor,x1)}
++      m.cre_add_items{mh#hide2(armor)}
+     ]
+ 
+     cre.edit[firmag01]
+@@ -584,7 +584,7 @@ BEGIN
+ 
+     cre.edit[gromg08]
+     [
+-      m.cre_add_items{mh#staf4(weapon1) mh#belt5(belt,x3)}
++      m.cre_add_items{mh#staf4(weapon1) mh#belt5(belt)}
+     ]
+ 
+ 
+@@ -606,7 +606,7 @@ BEGIN
+     cre.edit[hgnya01]
+     [
+       m.cre_remove_items{brac15 ring03}
+-      m.cre_add_items{mh#robe5(armor,x1) mh#ringb(ring)}
++      m.cre_add_items{mh#robe5(armor) mh#ringb(ring)}
+     ]
+ 
+ 
