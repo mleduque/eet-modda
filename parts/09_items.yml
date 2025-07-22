@@ -127,7 +127,7 @@
   - name: mih_fr
     description: Made in Heaven - Fixes & Restorations ; items restorations only
     components:
-      - 3  # item restorations
+      - 4 # Item Restorations: v1
   - name: mih_ip
     description: Made In Heaven Item Pack
     components: ask

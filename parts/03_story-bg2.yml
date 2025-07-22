@@ -102,7 +102,6 @@
       general: at least component 5 must be after ub
       after: ub
     components:
-      - 4 # Item Restorations: v1
       - 6 # Store Restorations (BG1): v1
       - 7 # Quest Restorations (BG1): v1
       - 12 # Artemis Entreri Encounter: v1
