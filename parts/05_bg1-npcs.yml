@@ -435,7 +435,7 @@
     components:
       - 0 # Verr'Sza - the rakshasa NPC for BG1EE: 6.01
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/VerrSzaBGEE v6.01
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/verrsza v6.02
 
   - name: OphysiaBG1
     description: chaotic good half-elven bard, friendship, banters
