@@ -114,7 +114,7 @@ modules:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/ArszyksWonderfulDecay-vBETA1.1
 
 ##############
-# Kit(s) erquierd by NPCs
+# Kit(s) required by NPCs
 ##############
   - name: druidsor
     components:
@@ -122,8 +122,8 @@ modules:
     location:
       github_user: Gibberlings3
       repository: Geomantic_Sorcerer
-      release: v7
-      asset:  lin-druidsor-v7.tar.gz
+      release: v9
+      asset: lin-druidsor-v9.zip
 
 ##############
 # NPC
