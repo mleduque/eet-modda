@@ -64,9 +64,13 @@
   - name: S3DisClubs
     description: Distinguishable clubs
     origin: https://forums.beamdog.com/discussion/34524/distinguishable-clubs-weidu-update-1-1
+    overview: >
+      Make magical clubs icons in bgee distinguishable.
+      New BAM's for Club +1, +2, Night Club and my own Barbed club of Pain.
     components:
       - 0 # Distinguisable Clubs
-    location: /home/mick/Games/modda-cache/static/Disting_Clubs_Weidu_V1_1.zip
+    location:
+      path: /home/mick/Games/modda-cache/iemods-archive/shs/Disting_Clubs_Weidu_V1_1
   - name: valhorn
     components: [0]
     location:
