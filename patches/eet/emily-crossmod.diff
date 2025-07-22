@@ -1,14 +1,15 @@
 diff --git a/Emily/Emily.tp2 b/Emily/Emily.tp2
-index 76662e3..38fcb47 100644
+index 76662e3..f2b8172 100644
 --- Emily/Emily.tp2
 +++ Emily/Emily.tp2
-@@ -316,3 +316,42 @@ SUBCOMPONENT @49
+@@ -316,3 +316,43 @@ SUBCOMPONENT @49
  REQUIRE_COMPONENT ~ArtisansKitpack.tp2~ ~0~ @50
  
  */
 +BEGIN ~Emily crossmod~
 +DESIGNATED 10000
 +
++LOAD_TRA ~Emily/tra/English/Emil_bg1.tra~
 +
 +ACTION_IF FILE_EXISTS_IN_GAME ~x3KaleB.dlg~
 +THEN BEGIN
