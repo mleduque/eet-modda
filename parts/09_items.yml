@@ -83,13 +83,6 @@
       - 0 # Of Heirlooms and Classes - new artifacts forgeable by Cromwell: v2.1
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/OfHeirloomsAndClasses v2.2/
-  - name: Silver_Staff_of_Aule
-    components:
-      - 101 # Baton argent d'Aule
-    location:
-      github_user: mleduque
-      repository: Silver_Staff_of_Aule
-      branch: french
   - name: cliffkey
     components:
       - 1 # A Mod for the Orderly - Add a Keyring to Faerun!-> Consistency Plus version
