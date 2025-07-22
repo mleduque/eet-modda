@@ -463,6 +463,15 @@ modules:
       - 0 # Rogue Rebalancing - Proper dual-wielding implementation for Thieves and Bards
       - 3 # Rogue Rebalancing - Proper racial adjustments for thieving skills
       - 7 # Equipement supplementaire pour les voleurs et les bardes
+  - name: Derats_IWD_Bonus
+    description: This module places the two merchants Deirdre and Joluv in IWDEE. Deirdre is in Gerth's shop and Joluv is in the tavern.
+    components:
+      - 0 # Marchands bonus pour IWD
+    location:
+      github_user: Deratiseur
+      repository: IWD_Bonus
+      release: v1
+      asset: Derats_IWD_Bonus-v1.iemod
   - name: forgotten-armament
     description: Forgotten armament
     components:
