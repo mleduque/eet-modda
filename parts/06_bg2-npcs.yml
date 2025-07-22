@@ -1021,8 +1021,8 @@
     location:
       github_user: Austin-BG
       repository: SearchGuild
-      release: v.1.4.3
-      asset: detective-guild-of-athkatla-1.4.3.iemod
+      release: v.1.5.1
+      asset: detective-guild-of-athkatla-1.5.1.iemod
 
   - name: w_packmule
     components:
