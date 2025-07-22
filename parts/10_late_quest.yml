@@ -150,3 +150,17 @@
       github_user: subtledoctor
       repository:  IWD_EET_Integration
       tag: "1.2.1"
+
+  - name: iwd_eet-party-banter
+    description: Icewind Dale in EET Party Banter
+    overview: |
+      This mod adds interjections and area comments to every base companion in
+      both BG1 and BG2 (including Beamdog NPCs) to the IWD campaign. This should
+      make the IWD campaign much more lively for those playing it as part of
+      their EET playthroughs.
+    components: ask
+    location:
+      github_user: The-Gate-Project
+      repository: iwd_eet-party-banter
+      branch: main
+      refresh: 7days
