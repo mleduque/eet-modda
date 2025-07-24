@@ -571,7 +571,16 @@
     overview: "This mod allows you to acquire a magical artifact that provides the means to visit any
       store you have visited in the past. Getting your hands on this unique artifact involves a small
       quest of one kind or another."
-    components: ask
+    components:
+      - 1 # Magasin magique de Vergadain -> Frais requis: 4.2
+      #- 2 # free of charge
+      #- 21# prohibit resting
+      #- 22# prohibit resting and curing
+      #- 23# Prohibit resting, curing, donating and drinking
+      - 24 # Limiter les services disponibles dans les magasins convoques -> Autoriser les echanges commerciaux uniquement: 4.2
+      - 31 # Modifier le nombre de charges du Magasin Magique (par defaut : 3x/jour) -> Une fois par jour: 4.2
+      #- 32 # 10 times per day
+      # etc.
     location:
       github_user: Argent77
       repository: A7-MagicStore
