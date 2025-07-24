@@ -499,15 +499,15 @@
               to lv24 + new shaman spell Shamanic Pact + items"
     components:
       - 40 # Objets specifiques aux Shamans
-  - name: _SAelar
+  - name: Aelar-Wares
     description: Aelar's Emporium of Magical Wares
     overview: shop within Athkatla at Waukeen's Promenade. Only by day. weapons, armour, accessories and potions
-    components: ask
+    components:
+      - 0 # Aelar's Emporium of Magical Wonders: v1.4.1
     location:
       github_user: ShadowfireAngel
       repository: Aelar-Wares
-      release: v1.4
-      asset: Aelar-Wares-v1.4.zip
+      commit: fd94110 # 1.4.1
   - name: ZS_WeaponOils
     overview:
     components: ask
