@@ -510,7 +510,8 @@
       commit: fd94110 # 1.4.1
   - name: ZS_WeaponOils
     overview:
-    components: ask
+    components:
+      - 100 # Install oils and insert them into the world: v1.4.3
     location:
       github_user: szaumoor
       repository: ZS_WeaponOils
@@ -549,12 +550,12 @@
     installation:
       after: rr, class revisions, sphere system
     components:
-      - 3 # Misc item pack
+      - 10001 # The Workshop Kitpack / Les Kits de l'Atelier -> Pack d'objets divers (Pas de kits ou d'insignes de chasseur): 5.27
     location:
       github_user: D2-mods
       repository: The-Workshop-Kitpack
-      release: v5.20
-      asset: the-workshop-kitpack-5.20.iemod
+      release: v5.27
+      asset: the-workshop-kitpack-v5.27.iemod
   - name: g3cip
     description: The G3 Community Item Pack
     overview: WeiDU compilation of items submitted by players, and created (for the most part) live on stream to showcase how to make Infinity Engine mods. The items are intended for Baldur's Gate II, original or Enhanced Edition.
