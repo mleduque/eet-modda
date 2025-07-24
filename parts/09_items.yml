@@ -559,7 +559,8 @@
   - name: g3cip
     description: The G3 Community Item Pack
     overview: WeiDU compilation of items submitted by players, and created (for the most part) live on stream to showcase how to make Infinity Engine mods. The items are intended for Baldur's Gate II, original or Enhanced Edition.
-    components: ask
+    components:
+      - 2 # G3 Community Item Pack -> Items do not summon Cowled Wizards: v1
     location:
       github_user: Gibberlings3
       repository: G3_Community_Item_Pack
