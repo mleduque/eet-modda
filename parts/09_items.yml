@@ -422,9 +422,9 @@
       - 0 # saradas_magic for BGEE / EET
     location:
       github_user: The-Gate-Project
-      repository: Saradas_Magic_for_BGEE
-      branch: master
-      refresh: 1day
+      repository: Saradas_Magic
+      release: v1.2
+      asset: saradas-magic-for-bgee-eet-1.2.iemod
   - name: saradas_magic_2
     description: Saradas Magic for BG2
     overview: NPC with store in Temple district/SoA ; joignable in ToB ; enchants artifacts (vanilla quest leftover items)
@@ -460,24 +460,25 @@
     location:
       github_user: The-Gate-Project
       repository: RTT-ItemPack
-      branch: master
-      refresh: 1week
+      release: v1.4
+      asset: return-to-trademeet-item-pack-v1.4.iemod
   - name: iwditempack
     descriptin: SoA - adds  twelve Icewind Dale/Icewind Dale II related items to Joluv (Copper Coronet)
     forum: http://www.shsforums.net/topic/46557-iwd-item-pack-for-bg2/
     components:
-      - 0 # Talisman du Loup Noir
-      - 1 # Chaine de Fureur de Drakkas
-      - 2 # Insigne de la Maison Despana
-      - 3 # Brise-Barriques du Shaengarne
-      - 4 # Harnois plain de Kresselack
-      - 5 # Manteau de la Tempete Prochaine
-      - 6 # Fleau aux Trois Cranes
-      - 7 # Epieu de Frene Blanc
-      - 8 # Douze Pas
-      - 9 # Torche eternelle de Belib
-      - 10 # Ceinture liante du Corbeau Noir
-      - 11 # Amulette du jeune Ned
+      - 100 # installall components at once
+      #- 0 # Talisman du Loup Noir
+      #- 1 # Chaine de Fureur de Drakkas
+      #- 2 # Insigne de la Maison Despana
+      #- 3 # Brise-Barriques du Shaengarne
+      #- 4 # Harnois plain de Kresselack
+      #- 5 # Manteau de la Tempete Prochaine
+      #- 6 # Fleau aux Trois Cranes
+      #- 7 # Epieu de Frene Blanc
+      #- 8 # Douze Pas
+      #- 9 # Torche eternelle de Belib
+      #- 10 # Ceinture liante du Corbeau Noir
+      #- 11 # Amulette du jeune Ned
     location:
       github_user: The-Gate-Project
       repository: IWD_Item-Pack
@@ -489,7 +490,9 @@
     components:
       - 0 # Marchand Mystigan (ToB requis)
     location:
-      path: https://akadis.baldursgateworld.fr/Mystigan/zip/Mystigan1.62.zip
+      http: https://akadis.baldursgateworld.fr/Mystigan/zip/Mystigan1.62.zip
+      alt:
+        path: /home/mick/Games/modda-cache/iemods-archive/akadis/Mystigan1.62.zip
   - name: A7#ImprovedShamanicDance
     description: Improved Shamanic Dance - itrems only
     overview: "Allows the shaman to move at reduced speed while performing the dance + extends

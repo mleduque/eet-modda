@@ -61,7 +61,7 @@
     description: nephele crossmod
     components:
       - 2 # Install Haer'Dalis Romance crossmod content
-    disabled:
+    disabled_if:
       because: haerdalisromance not installed
   - name: Petsy
     description: Petsy crossmod
