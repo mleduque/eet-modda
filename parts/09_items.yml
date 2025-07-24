@@ -164,12 +164,23 @@
       asset: lin-itemupgrade-v55.zip
   - name: Item_Pack
     description: new items to Baldur's Gate II, Tutu, BGT and Planescape:Torment, as well as plenty of item-related tweaks
-    components: ask
+    components:
+      - 0 # Item Pack: v2.21
+      - 1 # Extra Items: v2.21
+      #- 2 # Tweaked Items: v2.21
+      - 3 # Convenient Free Action Items: v2.21
+      - 4 # More Distinguishable Items: v2.21
+      - 5 # Familiar Faces: v2.21
+      - 6 # More Work for Cromwell: v2.21
+      - 7 # Pocket Store: v2.21
+      - 8 # Item Pack for Tutu/BGT: v2.21
     location:
       github_user: Dau1makan
       repository: Item-Pack
       release: v2.21_itempack
       asset: Item_Pack_v2.21.zip
+      layout:
+        layout_type: single_dir_plus_tp2
   - name: thalan
     description: Thalantyr Item Upgrade - Thalantyr can make new item and sells more containers
     components:
@@ -183,10 +194,11 @@
     description: extends Thalantyr Item Upgrade - more items
     components: ask
     location:
-      github_user: BardezAnAvatar
+      github_user: mleduque
       repository: BGEE-Thalantyr-Ex
-      release: v1.0.0
-      asset: modthalantyrex-v1.0.0.iemod
+      branch: french
+    disabled_if:
+      because: couldn't make it work in french, blame STATE_WHICH_SAYS
   - name: rr
     description: additional equipment only - component with WARNING
     components:
@@ -212,14 +224,22 @@
     components:
       - 0 # Composant principal de Sword Coast Customs
     location:
-      github_user: cgordon
-      repository: customs
-      branch: master
-      refresh: 1month
+      github_user: mleduque
+      repository: cgordon-customs
+      branch: package
+      refresh: always
 
   - name: msfm
     description: add wizard staffs, items, robe tweaks, familiar tweaks
-    components: ask
+    components:
+      - 1 # Add Wizard's Staff -> Add Wizard's Staff with 14 new color sets: v1.57
+      - 2 # Add Staff of Wizardry: v1.57
+      - 3 # Add custom inventory animation to the Staff of Wizardry: v1.57
+      - 10 # Add circlets: v1.57
+      - 11 # Add Circlet of Revelation: v1.57
+      - 12 # Add Wizard's Hat: v1.57
+      - 13 # Add Wand Case: v1.57
+      - 17 # Add Robes of Archimagi with colorsets from Mr. Pennyway's Cosmetic Changes mod: v1.57
     location:
       github_user: mleduque
       repository: msfm
@@ -249,7 +269,7 @@
       github_user: Pocket-Plane-Group
       repository: Under-Respresented_Items
       release: v14
-      asset: lin-underrep-v14.tar.gz
+      asset: lin-underrep-v14.zip
   - name: alchemy
     description: jan's alchemy
     overview: |
@@ -278,12 +298,12 @@
     description: Bardic Wonders
     overview: bard kits( new and tweaks), new bard items, bardic inspiration (new unkitted bard power), armored casting
     readme: https://artisans-corner.com/bardic-wonders/
-    components: ask
-      #- 5 # ~Bardic Wonders: Items
+    components:
+      - 11 # Bardic Wonders: Items
     location:
       github_user: ArtemiusI
       repository: Bardic-Wonders
-      tag: v2.9c
+      branch: master
       refresh: 2days
   - name: A7-WaresOfThePlanes
     description: Wares of the Planes
@@ -318,6 +338,7 @@
       github_user: mleduque
       repository: edvin_unofficial_item_pack
       branch: v2.7b-french
+      auth: PAT my_repositories
       # https://www.gibberlings3.net/forums/topic/35873-incompatibility-with-bgiiee-unofficial-item-pack/
       replace:
         - file_globs: ['Setup-Unofficial Item Pack.tp2']
@@ -393,17 +414,6 @@
       repository: Bolsa
       release: v6.0.0
       asset: bolsa-v6.0.0.iemod
-  - name: A7-MagicStore
-    description: Magic Store of Vergadain
-    overview: "This mod allows you to acquire a magical artifact that provides the means to visit any
-      store you have visited in the past. Getting your hands on this unique artifact involves a small
-      quest of one kind or another."
-    components: ask
-    location:
-      github_user: Argent77
-      repository: A7-MagicStore
-      release: v4.2
-      asset: A7-MagicStore-v4.2.iemod
   - name: saradas_magic
     description: Saradas Magic for BGEE / EET
     overview: NPC with a store in FAI - items, id, cure, new spells
@@ -551,6 +561,17 @@
       repository: G3_Community_Item_Pack
       release: v1
       asset: lin-g3cip-v1.zip
+  - name: A7-MagicStore
+    description: Magic Store of Vergadain
+    overview: "This mod allows you to acquire a magical artifact that provides the means to visit any
+      store you have visited in the past. Getting your hands on this unique artifact involves a small
+      quest of one kind or another."
+    components: ask
+    location:
+      github_user: Argent77
+      repository: A7-MagicStore
+      release: v4.2
+      asset: A7-MagicStore-v4.2.iemod
 
   - name: item_rev
     descritpion: Item Revisions - store component
