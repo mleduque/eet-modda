@@ -613,7 +613,8 @@
 
   - name: bg1_ipm
     description: unique icons for BG1 quest items
-    components: ask
+    components:
+      - 0 # BG1 Icons Pack: 1.0
     location:
       github_user: Alexander12-creator
       repository: bg1_icons_pack_mod
