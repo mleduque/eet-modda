@@ -603,7 +603,8 @@
   - name: cd_project_javelin
     description: Project Javelin
     overview: Adds short javelins, one handed melee and ranged
-    components: ask
+    components:
+      - 1 # Project Javelin: Beta 1
     location:
       github_user: Gibberlings3
       repository: Project_Javelin
