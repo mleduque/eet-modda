@@ -46,16 +46,17 @@ locations:
       asset: imoen-4-ever-v11.4.iemod
     item_rev:
       github_user: subtledoctor
-      repository: ItemRevision
-      branch: master
-      refresh: 7days
+      repository: ItemRevisions
+      tag: v4b10sd19
       replace:
         - file_globs: ['lib/compatibility.tpa']
           replace: 'ACTION_IF MOD_IS_INSTALLED ~atweaks/setup-atweaks.tp2~ 600 BEGIN'
           with: 'ACTION_IF MOD_IS_INSTALLED ~atweaks/setup-atweaks.tp2~ 510 BEGIN'
+          check: true
         - file_globs: ['settings.ini']
           replace: 'halberds_can_slash_too          = 0'
           with: 'halberds_can_slash_too          = 1'
+          check: true
         - file_globs: ['settings.ini']
           replace: 'flails_have_extended_range      = 0'
           with: 'flails_have_extended_range      = 1'

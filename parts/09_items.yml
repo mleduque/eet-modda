@@ -344,6 +344,7 @@
         - file_globs: ['Setup-Unofficial Item Pack.tp2']
           replace: 'COPY ~Unofficial Item Pack/new_items/MAGE18Z.CRE~ ~override/MAGE18Z.CRE~'
           with: '' # delete the line
+          check: true
 
   # new stores or new inventory
   - name: Derats_Archery
