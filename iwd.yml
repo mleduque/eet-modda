@@ -477,9 +477,7 @@ modules:
     components:
       - 4 # Mise a jour des statistiques et scores de capacite des objets ameliores pour une meilleur integratio
     location:
-      github_user:  Gibberlings3
-      repository: Forgotten-Armament
-      tag: "4.1"
+      path: /home/mick/Games/modda-cache/iemods-archive/morpheus/Forgotten-Armament-4.7
 
   - name: cdtweaks
     description: remove kit/class restriction before TnB 95

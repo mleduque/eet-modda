@@ -30,7 +30,7 @@
     components: ask
       # Choose either SCS or Tactics Remix for the ai and tactical components.
     location:
-      http: https://america.iegmc.com/morpheus562/Tactics-Remix-1.2.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/morpheus/Tactics-Remix-3.4
       replace:
         - file_globs: ["tactics-remix.tp2"]
           replace: 'REQUIRE_PREDICATE !FILE_EXISTS ~mih_eq/setup-mih_eq.tp2~ @3004'
