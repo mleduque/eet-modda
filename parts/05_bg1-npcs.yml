@@ -509,6 +509,15 @@
       github_user: toopok4k3
       repository: Morg_BG1
       tag: v1.1
+  - name: KinFriendship
+    description: "M'Khiin-Friendship"
+    overview: Adds a short friendship path for M'Khiin through SoD
+    components: ask
+    location:
+      github_user: dark0dave
+      repository: M-khiin-Friendship
+      release: v1.2
+      asset: KinFriendship-v1.2.iemod
 
   - name: sodrtd
     description: Road To Discovery - component 80 must be installed before the mainsodrt component

@@ -375,6 +375,16 @@
         layout_type: single_dir
         strip_leading: 1
 
+  # bucketfulofsunshine
+  - name: lfgp
+    description: Lunia-For-Good-Parties
+    overview: Allows Lawful Good, Neutral Good, Chaotic Good & Lawful Neutral characters, that have a reputation of 14 or above, to travel to Lunia.
+    components: ask
+    location:
+      github_user: bucketfulofsunshine
+      repository: Lunia-For-Good-Parties
+      commit: 3c4bb66
+
   - name: BackBrynnlaw
     description: Back to Brynnlaw - SoA chap 6 - one main quest, 10 subquests
     components:

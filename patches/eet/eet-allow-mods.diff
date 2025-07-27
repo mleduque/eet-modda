@@ -16,3 +16,5 @@ index d3b215f..5fff214 100644
  VERRSZA 0            //Verr'Sza NPC
  WHITE 0              //White NPC for BGT/Tutu/EE
 +EET_TWEAKS 0    // To allow Dual XP scaling
++REACTIVITYPACK 0
++BALDURIANBARHOP 0

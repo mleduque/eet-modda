@@ -39,6 +39,30 @@ modules:
       github_user: Pocket-Plane-Group
       repository: bg1ub
       commit: 135f093 # One commit ahead of v17 because MODDER flag removal
+
+  - name: reactivitypack
+    description: Reactivity Pack
+    overview: Small dialogue tweaks for class, race and other related flavour text.
+    components:
+      - 0 # Basic BGEE Reactivity Pack
+      - 1 # Silly BGEE Pack
+    location:
+      http: https://github.com/bucketfulofsunshine/bfs-reactivity-pack/releases/download/Nightly/bfs-reactivity-pack.zip
+      layout:
+        layout_type: single_dir
+        strip_leading: 1
+
+  - name: baldurianbarhop
+    description: Baldurian Bar Hop(ping)
+    overview: A short collection of random D&D tavern encounters for BGEE.
+    components:
+      - 0 # Baldurian Bar Hop(ping)
+    location:
+      http: https://github.com/bucketfulofsunshine/baldurian-bar-hop/releases/download/Nightly/baldurian-bar-hop.zip
+      layout:
+        layout_type: single_dir
+        strip_leading: 1
+
   - name: TenyaThermidor
     components:
       - 0 # Tenya Thermidor for BG:EE
