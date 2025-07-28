@@ -512,7 +512,8 @@
   - name: KinFriendship
     description: "M'Khiin-Friendship"
     overview: Adds a short friendship path for M'Khiin through SoD
-    components: ask
+    components:
+      - 0 # M''Khiin Friendship for Siege of Dragonspear: 1.2
     location:
       github_user: dark0dave
       repository: M-khiin-Friendship
