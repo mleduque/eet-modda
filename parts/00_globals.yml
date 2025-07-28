@@ -71,8 +71,7 @@ locations:
     rr:
       github_user: TotoR115
       repository: rr
-      branch: master
-      refresh: 10days
+      commit: 30ab9f7
     stratagems:
       github_user: Gibberlings3
       repository: SwordCoastStratagems
