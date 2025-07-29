@@ -49,8 +49,8 @@
     location:
       github_user: The-Gate-Project
       repository: IWD1_EET
-      branch: master
-      refresh: 10days
+      branch: main
+      refresh: 5days
   - name: HOW_EET # disabled
     description: Heart of Winter for BGEE / EET
     installation:
@@ -61,7 +61,7 @@
     location:
       github_user: The-Gate-Project
       repository: HOW_EET
-      branch: master
+      branch: main
       refresh: 5days
       replace:
         - file_globs: ['setup-how_eet.tp2']
@@ -81,8 +81,8 @@
     location:
       github_user: The-Gate-Project
       repository: IWD2_EET
-      branch: master
-      refresh: 10days
+      branch: main
+      refresh: 5days
       replace:
         # https://www.gibberlings3.net/forums/topic/37265-my-latest-super-modded-eet-game-with-more-iwd/?do=findComment&comment=338983
         - file_globs: ['Setup-iwd2_eet.tp2']
@@ -103,7 +103,7 @@
     location:
       github_user: The-Gate-Project
       repository: IWD_EET_End
-      branch: master
+      branch: main
       refresh: 5days
   - name: A7-TotLM-BG2EE
     description: Trials of the Luremaster for Baldur's Gate
