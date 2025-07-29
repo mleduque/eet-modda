@@ -78,6 +78,7 @@
       before: A7-TotLM-BG2EE, Icewind_EET, EET_end
     components:
       - 0 # Icewind Dale 2 in Baldur's Gate Enhanced Edition Trilogy
+    ignore_warnings: true # two 'no effect...'
     location:
       github_user: The-Gate-Project
       repository: IWD2_EET
@@ -87,6 +88,7 @@
         # https://www.gibberlings3.net/forums/topic/37265-my-latest-super-modded-eet-game-with-more-iwd/?do=findComment&comment=338983
         - file_globs: ['Setup-iwd2_eet.tp2']
           replace: 'APPEND ~instant.ids~ ~34 UseItem(S:Object*,O:Target*)~    UNLESS ~UseItem~'
+          # comment-out
           with: '// APPEND ~instant.ids~ ~34 UseItem(S:Object*,O:Target*)~    UNLESS ~UseItem~'
         # https://www.gibberlings3.net/forums/topic/36405-discussion-of-tipun%E2%80%99s-iwd-mods-and-their-integration-in-eet-games/?do=findComment&comment=326993
         - file_globs: ['lib/_spells.tph']
