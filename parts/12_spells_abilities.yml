@@ -56,16 +56,76 @@
       - 5 # Ctb spells
 
   - name: SubtleD_Spell_Tweaks
-    description: SubtleD's Spell Tweaks
+    description: SubtleD's Spell Tweaks - components that don't warn
     installation:
       general: probably juste before TnB
       after: spell_rev, iwdification
       before: TomeandBlood, faiths_and_powers, will_to_power, might_and_guile, cdtweaks, stratagems
-    components: ask
+    components:
+      - 10 # Re-equilibrage des ecoles de magie: 2.9
+      - 21 # Re-equilibrage des ecoles profanes opposees -> Pas d'ecoles opposees: 2.9
+      - 36 # Effets d'absorption de niveau -> Ajouter un jet de sauvegarde pour l'absorption de niveau: 2.9
+      - 40 # Revision des clones illusoires: 2.9
+      - 45 # Revision des sorts 'Invisibilite' et 'Vision veritable': 2.9
+      - 50 # Modifier 'Rapidite' et 'Lenteur' pour qu'ils s'annulent l'un l'autre: 2.9
+      - 55 # Modifier les sorts de soin pour ignorer les protections contre les sorts: 2.9
+      - 81 # Choisir son familier: 2.9
+      - 1152 # Ameliorer 'Lueur feerique': 2.9
+      - 1151 # Reduire les degats mais ameliorer la cecite pour le 'Soleil ardent' de Spell Revisions: 2.9
+      - 1207 # Modifier 'Baies magiques' pour en faire une regeneration hors combat: 2.9
+      - 1212 # Ajuster 'Ralentissement du Poison': 2.9
+      - 1251 # Ameliorer les degats et modifier le type de degats pour 'Lance d'alicorne': 2.9
+      - 1323 # Ameliorer le temps d'incantation pour 'Exaltation' et 'Clarte spirituelle': 2.9
+      - 1351 # Ajouter des effets de 'Lueur feerique' et 'Lenteur' au toucher de la 'Lame de lune': 2.9
+      - 1404 # Remplacer 'Neutralisation du poison' par 'Suppression des afflictions': 2.9
+      - 1451 # Modifier 'Vague destructrice' pour ne pas affecter le groupe: 2.9
+      - 1603 # Rendre 'Barriere de lames' dissipable par 'Breche': 2.9
+      - 1611 # Modifier 'Souvenir merveilleux' pour restaurer tous les sorts de niveau 1 et 2: 2.9
+      - 1613 # Modifier 'Miroir physique' pour bloquer une attaque toutes les 3 secondes: 2.9
+      - 1614 # Rendre 'Orbe dessechant de Sol' plus facile a lancer: 2.9
+      - 1710 # Ajouter un effet de Lenteur a 'Parole sacree': 2.9
+      - 2105 # Ajouter un effet d'aveuglement pour 1 round a 'Vapeur coloree': 2.9
+      - 2108 # Changer 'Protection contre la petrification' en 'Retrovision': 2.9
+      - 2116 # Autoriser les cibles de 'Sommeil' a se reveiller quand elles sont frappees: 2.9
+      - 2151 # Changer 'Repli expeditif' de Spell Revisions en 'Cameleon': 2.9
+      - 2201 # Ajouter un evitement des projectiles a 'Flou': 2.9
+      - 2209 # Modifier 'Chance' pour affecter tout le groupe: 2.9
+      - 2212 # Deplacer 'Image miroir' au niveau 3: 2.9
+      - 2213 # Ajouter des effets persistants au 'Nuage puant' de 'Spell Revisions': 2.9
+      - 2215 # Modifier 'Toile d'araignee' pour ralentir au lieu d'immobiliser: 2.9
+      - 2217 # Changer 'Incinerateur d'Agannazar' en 'Projectiles ardents de Melf': 2.9
+      - 2224 # Ameliorer 'Poussiere scintillante': 2.9
+      - 2251 # Ajouter un effet de Surdite au toucher a 'Baton decuple': 2.9
+      - 2321 # Deplacer 'Annulation des protections' au niveau 1: 2.9
+      - 2324 # Modifier 'Immobilisation des morts-vivants' et 'Controle des morts-vivants' pour ignorer la resistance a la magie: 2.9
+      - 2352 # Augmenter la portee de 'Lance de glace': 2.9
+      - 2413 # Autoriser la cible de 'Sphere resistante d'Otiluke' a utiliser son inventaire: 2.9
+      - 2418 # Rendre 'Bouclier de feu' et 'Gaine acide de Mestil' dissipables par 'Breche': 2.9
+      - 2451 # Rendre les monstres de 'Convocation d'ombre' plus illusoires: 2.9
+      - 2508 # Ameliorer 'Vagues de fatigue' de Spell Revisions: 2.9
+      - 2514 # Modifier 'Abaissement de la resistance' pour en faire un sort de zone: 2.9
+      - 2518 # Changer le type de degats et l'ecole de 'Lame fantomatique': 2.9
+      - 25231 # Remplacer 'Feu du Soleil' -> Remplacer 'Feu du Soleil' par 'Tempete de Projectiles': 2.9
+      - 2708 # Remplacer Manteau par 'Peau de fer': 2.9
+      - 2711 # Ajuster les effets de 'Chaos': 2.9
+      - 2714 # Modifier les effets de 'Vaporisation prismatique': 2.9
+      - 2808 # Rendre 'Moment de prescience' dissipable par 'Breche': 2.9
+      - 2811 # Deplacer 'Symbole, terreur' au niveau 7: 2.9
+      - 2916 # Deplacer 'Changement de forme' au niveau 8: 2.9
+      - 2915 # Deplacer 'Lame noire du desastre' au niveau 8: 2.9
+      - 2914 # Ajouter un effet de mort instantanee a 'Absorption d'energie': 2.9
+      - 2923 # Remplacer 'Convocation de planetaire' par 'Convocation de djinn noble': 2.9
     location:
-      github_user: subtledoctor
+      github_user: mleduque
       repository: SubtleD_Spell_Tweaks
       tag: "2.9-fr"
+  - name: SubtleD_Spell_Tweaks
+    description: SubtleD's Spell Tweaks - components warn
+    components:
+      - 61 # Tours de magie -> Tours de magie innés: 2.9
+      - 1609 # Modifier 'Aube illusoire' pour ignorer la resistance a la magie: 2.9
+      - 1707 # Modifier 'Rayon de soleil' pour ignorer la resistance a la magie: 2.9
+      - 2110 # Modifier 'Identification' pour que le sort s'ameliore avec le niveau: 2.9
 
   - name : Weasels!
     components:
