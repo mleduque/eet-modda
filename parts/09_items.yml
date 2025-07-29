@@ -3,19 +3,23 @@
   # Early spell mods
   #########
   - name: spell_rev
+    description: spell_rev main component (warns)
     components:
       - 0   # Spell Revisions
-      - 10  # Deva and Planetar Animations
-      - 20  # Mirror Image Fix
-      - 55  # Spell Deflection blocks AoE spells
-      - 60  # Update Spellbooks of Joinable NPCs
-      #- 65   # Revised Warrior HLAs
+    ignore_warnings: true
     location:
       github_user: Gibberlings3
       repository: SpellRevisions
       branch: master
       refresh: 8hours
-    description:  SubtleD Hotfixes - SR 4b19rc1 Sleep fix
+  - name: spell_rev
+    description: spell_rev other components (don't warn)
+    components:
+      - 10  # Deva and Planetar Animations
+      - 20  # Mirror Image Fix
+      - 55  # Spell Deflection blocks AoE spells
+      - 60  # Update Spellbooks of Joinable NPCs
+      #- 65   # Revised Warrior HLAs
 
   ## One and only one of the two next ones ##
   - name: iwdification
