@@ -29,16 +29,31 @@
     components:
       - 1060 # Les Kensai peuvent porter des bracelets
       - 1070 # Les Voleurs peuvent utiliser des baguettes
-  - name: ItemRandomizer
+  - name: randomiser
     description: Item Randomizer
     overview: |
       Item Randomiser is a large-scale random treasure mod for Baldur's Gate and Baldur's Gate II.
       The mod can randomise up to several hundred items in Baldur's Gate (including TotSC) and up
       to several hundred more in Baldur's Gate II (including ToB). The randomised items can be
       found throughout the game world over the course of the game.
-    components: ask
+    components:
+      #- 510 # Randomly not randomise items: 7
+      - 520 # Kangaxx further sealed away: 7
+      - 560 # More Spell Shield scrolls: 7
+      #- 1300 # Randomise items -> Mode 2: Randomise with WeiDU. No items are lost: 7
+      - 5005 # Beholders have no items equipped: 7
+      - 5015 # Demi-liches have no items equipped: 7
+      - 5025 # Dragons have no items equipped: 7
+      - 5035 # Elementals have no items equipped: 7
+      - 5045 # Fiends have no items equipped: 7
+      - 5055 # Golems have no items equipped: 7
+      - 5065 # Master Brains have no items equipped: 7
+      - 5075 # Slimes have no items equipped: 7
+      - 5085 # Trolls have no items equipped: 7
+      - 9000 # Cespenar can forge SoA items: 7
+      - 10210 # Duergar merchants: 7
+      - 10300 # Prevent Watcher's Keep statues from disappearing: 7
     location:
       github_user: FredrikLindgren
       repository: randomiser
-      branch: devel
-      refresh: 10days
+      tag: v7
