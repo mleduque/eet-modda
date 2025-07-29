@@ -96,6 +96,22 @@
             APPEND ~projectl.ids~ ~%prot%~
             APPEND ~missile.ids~  ~%misl%~
           with: '' # just delete
+  - name: iwd_eet-party-banter
+    description: Icewind Dale in EET Party Banter
+    installation:
+      after: IWD1_EET
+      before: IWD_EET_End
+    overview: |
+      This mod adds interjections and area comments to every base companion in
+      both BG1 and BG2 (including Beamdog NPCs) to the IWD campaign. This should
+      make the IWD campaign much more lively for those playing it as part of
+      their EET playthroughs.
+    components: ask
+    location:
+      github_user: The-Gate-Project
+      repository: iwd_eet-party-banter
+      branch: main
+      refresh: 7days
   - name: IWD_EET_End
     installation:
       general: as late as possible in your installation, especially after mods that add NPCs, otherwise there may be problems with quests, dialogs, etc.
@@ -153,16 +169,3 @@
       repository:  IWD_EET_Integration
       tag: "1.2.1"
 
-  - name: iwd_eet-party-banter
-    description: Icewind Dale in EET Party Banter
-    overview: |
-      This mod adds interjections and area comments to every base companion in
-      both BG1 and BG2 (including Beamdog NPCs) to the IWD campaign. This should
-      make the IWD campaign much more lively for those playing it as part of
-      their EET playthroughs.
-    components: ask
-    location:
-      github_user: The-Gate-Project
-      repository: iwd_eet-party-banter
-      branch: main
-      refresh: 7days
