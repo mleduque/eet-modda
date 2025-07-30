@@ -1,5 +1,3 @@
-diff --git a/stratagems/stratagems.ini b/stratagems/stratagems.ini
-index dd374462..1f7a6bb6 100644
 --- stratagems/stratagems.ini
 +++ stratagems/stratagems.ini
 @@ -86,10 +86,10 @@ auras_are_party_friendly=1
@@ -20,7 +18,7 @@ index dd374462..1f7a6bb6 100644
 @@ -110,8 +110,8 @@ Sendai_Component_Is_Sendai_Only = 0
  force_old_assassin_spawn = 0
  no_spirit_troll_magic = 0
- no_swift_shapeshift = 1
+ no_swift_shapeshift = 0
 -potion_version=6
 -dispel_arrow_maximum=5
 +potion_version=4
