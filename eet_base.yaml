@@ -50,6 +50,8 @@ modules:
       github_user: Renegade0
       repository: RemasteredSpellIcons
       tag: v1.2
+    disabled_if:
+      because: compat issues with ui.menu patching (subtled spell tweaks)
 
   - name: bggoEET
     components: ask
