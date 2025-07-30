@@ -46,7 +46,7 @@ modules:
     location:
       github_user: r-e-d
       repository: LeUI-SoD
-      tag: v4.9
+      tag: v4.9.1
   - name: EEUITweaks
     components:
     - 1000 #  Mods Options: 4.0.6
@@ -67,8 +67,8 @@ modules:
     location:
       github_user: r-e-d
       repository: EEUITweaks
-      release: v4.0.6
-      asset: eeuitweaks-4.0.6.iemod
+      release: v4.0.7
+      asset: eeuitweaks-4.0.7.iemod
   - name: EEUITweaks
     components: # because some components are ordered
       - 2050 # Simple Centered Dialog: 4.0.6
