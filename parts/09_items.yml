@@ -559,8 +559,8 @@
     location:
       github_user: D2-mods
       repository: The-Workshop-Kitpack
-      release: v5.27
-      asset: the-workshop-kitpack-v5.27.iemod
+      release: v5.29
+      asset: the-workshop-kitpack-v5.29.iemod
   - name: g3cip
     description: The G3 Community Item Pack
     overview: WeiDU compilation of items submitted by players, and created (for the most part) live on stream to showcase how to make Infinity Engine mods. The items are intended for Baldur's Gate II, original or Enhanced Edition.
