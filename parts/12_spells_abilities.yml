@@ -119,6 +119,9 @@
       github_user: mleduque
       repository: SubtleD_Spell_Tweaks
       tag: "2.9-fr"
+      patches:
+      # fix for compat with eeuitweaks
+        - relative: patches/eet/subtled-spell-tweaks-identify.diff
   - name: SubtleD_Spell_Tweaks
     description: SubtleD's Spell Tweaks - components warn
     components:
