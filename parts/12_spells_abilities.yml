@@ -140,8 +140,7 @@
     location:
       github_user: shohysie
       repository: Isaac-s_Missile_Storm
-      release: v0.8
-      asset: Isaac.s_Missile_Storm.v0.8.zip
+      tag: v0.8
 
   - name: stratagems
     components:
