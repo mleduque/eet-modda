@@ -136,7 +136,8 @@
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/common/Weasels! v3.4
   - name: Isaac's_Missile_Storm
-    components: ask
+    components:
+      - 0 # Isaac's Missile Storm pour BGEE: v0.8
     location:
       github_user: shohysie
       repository: Isaac-s_Missile_Storm
