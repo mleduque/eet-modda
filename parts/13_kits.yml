@@ -63,9 +63,7 @@
     location:
       github_user: ArtemiusI
       repository: Shadow-Magic
-      tag: v3.2
-      patch:
-        relative: patches/eet/shadowmagic-noask-condrain.diff
+      commit: '5997227' # 3.3
 
   - name: divine_remix
     components:
