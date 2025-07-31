@@ -45,8 +45,8 @@
       repository: A7-ChaosSorcerer
       release: v2.10
       asset: A7-ChaosSorcerer-v2.10.iemod
-      patch:
-        relative: patches/A7-ChaosSorcerer-remove_str_con_malus.diff
+      patches:
+        - relative: patches/A7-ChaosSorcerer-remove_str_con_malus.diff
   - name: sword_and_fist
     components: ask
     location:
