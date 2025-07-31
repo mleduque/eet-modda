@@ -36,9 +36,11 @@
       - 180 # Bard Class Update: Selectable Bard Songs for Jesters and Skalds: v11
       - 70 # Druid Class Update: Use IWD Shapeshifting and Ability Progression: v11
       - 100 # Paladin Class Update: IWD Abilities and Skills: v11
-      - 160 # Paladin Class Update: Use IWD Spell Progression: v11
+      # cdtweaks does this
+      #- 160 # Paladin Class Update: Use IWD Spell Progression: v11
       - 110 # Ranger Class Update: Tracking -> Change Tracking for all rangers and ranger kits: v11
-      - 170 # Ranger Class Update: Use IWD Spell Progression: v11
+      # cdtweaks does this
+      #- 170 # Ranger Class Update: Use IWD Spell Progression: v11
       - 120 # Thief Class Update: Evasion -> Add evasion to thieves and all thief kits: v11
   - name: iwdification
     description: iwdification -components with warnings
