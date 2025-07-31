@@ -14,7 +14,24 @@
       tag: "1.8"
   - name: ArtisansKitpack
     description: ArtisansKitpack
-    components: ask
+    components:
+      - 10002 # Artisan's Kitpack: Brawler Kit: 4.8
+      - 1002 # Artisan's Kitpack: Vanguard Fighter Kit: 4.8
+      - 1000 # Artisan's Kitpack: Arcane Archer Fighter Kit: 4.8
+      - 1001 # Artisan's Kitpack: Arcane Archer (Fighter/Mage): 4.8
+      - 1102 # Artisan's Kitpack: (BG:EE) Make Skitia's Emily an -> Arcane Archer: 4.8
+      - 1104 # Artisan's Kitpack: (BG2:EE) Make Skitia's Emily an -> Arcane Archer: 4.8
+      - 2001 # Artisan's Kitpack: Rashemi Berserker Ranger Kit for Minsc: 4.8
+      - 3001 # Artisan's Kitpack: Divine Champion Paladin Kit: 4.8
+      - 3002 # Artisan's Kitpack: Mystic Fire Paladin Kit: 4.8
+      - 3005 # Artisan's Kitpack: Martyr Paladin Kit: 4.8
+      - 5001 # Artisan's Kitpack: Elementalist Druid Kit: 4.8
+      - 5101 # Artisan's Kitpack: Give Cernd the Elementalist Kit: 4.8
+      - 7001 # Artisan's Kitpack: Rogue Archer Thief Kit: 4.8
+      - 7002 # Artisan's Kitpack: Magekiller Thief Kit: 4.8
+      - 7103 # Artisan's Kitpack: Make Montaron an Assassin: 4.8
+      - 9001 # Artisan's Kitpack: Warhorn Shaman Kit: 4.8
+      - 9101 # Artisan's Kitpack: Give M'khiin the Warhorn Shaman Kit: 4.8
     location:
       github_user: ArtemiusI
       repository: The-Artisan-s-Kitpack
