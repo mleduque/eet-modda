@@ -18,7 +18,7 @@
     location:
       github_user: ArtemiusI
       repository: The-Artisan-s-Kitpack
-      tag: v4.81a
+      commit: 7c90bcd6cc2351 # v5.7 - 2025-06-13
   - name: A7-ChaosSorcerer
     components:
       - 0 # Kit d'Ensorceleur du Chaos
