@@ -975,6 +975,19 @@
       repository: Kivan_and_Deheriana
       release: v19
       asset: lin-kivan-v19.zip
+  - name: darian
+    description: Darian NPC
+    overview: |
+      Darian, an aloof warrior from the enigmatic Avariel elves, as a joinable NPC.
+      SoA andToB content, romance for female PC, pid, banters, no quest
+    components: ask
+    location:
+      github_user: Spellhold-Studios
+      repository: Darian-NPC
+      release: v2.5
+      asset: darian-v2.5.iemod
+    disabled_if:
+      because: no content except the romance
   - name: BG1NPCSoA
     description: "BG1 NPCs in BG2 plus new Athkatla district: Water Gardens"
     installation:
