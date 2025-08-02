@@ -48,7 +48,10 @@
       patches:
         - relative: patches/A7-ChaosSorcerer-remove_str_con_malus.diff
   - name: sword_and_fist
-    components: ask
+    components:
+      - 31 # Installer le kit de guerrier : Duelliste: v12
+      - 32 # Installer le kit de guerrier : Poing de l'Ordre: v12
+      - 34 # Installer le kit de guerrier : Magelame (by ronin69hof, ronin69hof@gmail.com): v12
     location:
       github_user: Gibberlings3
       repository: sword_and_fist
