@@ -66,7 +66,7 @@
     location:
       github_user: ArtemiusI
       repository: Shadow-Magic
-      commit: '5997227' # 3.3
+      commit: 'dfab37b9042668d13' # 3.4
 
   - name: divine_remix
     components:
