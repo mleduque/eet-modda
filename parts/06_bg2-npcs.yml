@@ -221,7 +221,7 @@
       - 4 # Skie: The Cost of One Girl's Soul - Add Player-Initiated Dialogue (PID) for Eddard: 4.01
       - 5 # Skie: The Cost of One Girl's Soul - Add brand new SoD-oriented items to BG2: 4.01
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/SkieTheCost v6.2.3
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/SkieCost v6.3
       replace:
         - file_globs: ["dialogues/pid-*.d"]
           replace: 'RealSetGlobalTimer("L#SDSkiesNewSeriesTime","GLOBAL",3800)'
@@ -311,6 +311,39 @@
       - 1 # Dvaradime - Player-Initiated Dialogue: v1.6
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Dvaradime v1.6
+  - name: DynaheirBG2EE
+    description: "Dynaheir fot Baldur's Gate II: EE"
+    overview: |
+      Allows players to decide which of the Rashemaar companions should be
+      available during the Shadows of Amn and Throne of Bhaal campaigns - Minsc or Dynaheir.
+      - Dynaheir as a playable companion
+      - banters, friendhsip, reactions
+      - sisterhood path in SoA, romance path in ToB
+      - 2 major and 2 minor quests (SoA+ToB)
+      - possibility to change Dynaheir's school
+      - new temple in Athkatla, new divination spells, new items
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/DynaheirBG2EE-vBETA1.4
+  - name: KhalidBG2
+    description: Khalid BG2EE
+    overview: |
+      allows players to decide who is going to stay with them for the entire Baldur's Gate 2: EE and ToB game.
+      - friendship path
+      - new version of Baron Ployer and Harpers quests
+      - no romance but deep friendship path
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/LavasKhalidBG2 v1.05
+  - name: Quayle
+    description: QUAYLE BG2(EE)
+    overview: |
+      introduces Quayle from BG1 as a party joinable NPC. But the condition is ... Aerie's death.
+      A mini quest (including a small new area) is provided, where you decide who you prefer to travel with.
+      The mod includes time-triggered and scenery talks for both SoA and ToB, banters, interjections, and new items.
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Quayle-BG2-v7.5
 
   # ArtemiusI NPCs
   - name: paina
