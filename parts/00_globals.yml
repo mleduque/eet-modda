@@ -35,8 +35,8 @@ locations:
     cdtweaks:
       github_user: Gibberlings3
       repository: Tweaks-Anthology
-      release: v17
-      asset: lin-cdtweaks-v17.zip
+      branch: master
+      refresh: 7days
       patch:
         relative: patches/eet/cdtweaks-config.diff-check-v17
     Imoen4ever:
