@@ -520,7 +520,7 @@
     location:
       github_user: szaumoor
       repository: ZS_WeaponOils
-      tag: "1.4.3"
+      tag: "1.4.4"
   # overpowered item mods
   - name: DGItems
     overview: |
