@@ -1021,6 +1021,17 @@
       asset: darian-v2.5.iemod
     disabled_if:
       because: no content except the romance
+  - name: zdbae
+    description: Baeloth in BG2EE/EET
+    overview: |
+      SoA+ToB ; Baeloth in Coper Coronet
+      Banters, interjections, quest
+    components: ask
+    location:
+      github_user: dark0dave
+      repository: BaeBG2
+      release: v0.1.3
+      asset:  zdbae-v0.1.3.iemod
   - name: BG1NPCSoA
     description: "BG1 NPCs in BG2 plus new Athkatla district: Water Gardens"
     installation:
