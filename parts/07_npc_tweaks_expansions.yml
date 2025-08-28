@@ -389,7 +389,12 @@
       manifest_condition: prefer_edwin_bromance_over_romance
   - name: EdwinBromance
     description: Edwin Bromance
-    overview:
+    overview: |
+      An Edwin Friendship Mod that features a "barely-tolerated-acquaintances to True
+      Bros" friendship arc.
+        - Friendship!
+        - 9 talks. The first 3 are timed, 2 are Edwina-related, the remaining are main-quest related
+        - A chance for nonevil Charnames to turn Edwin LN
     components: ask
     location:
       github_user: Glittergear
