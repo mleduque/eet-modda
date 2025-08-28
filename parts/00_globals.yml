@@ -85,3 +85,6 @@ manifest_conditions:
   prefer_scs_over_iwdification_spells:
     not:
       because: iwdification is newer at the moment
+  manifest_condition:
+    because:
+      male charname

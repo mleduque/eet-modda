@@ -385,6 +385,20 @@
       repository: Edwin-Romance
       release: v4.0
       asset: edwin-romance-v4.0.iemod
+    disabled_if:
+      manifest_condition: prefer_edwin_bromance_over_romance
+  - name: EdwinBromance
+    description: Edwin Bromance
+    overview:
+    components: ask
+    location:
+      github_user: Glittergear
+      repository: EdwinBromance
+      release: v1.2
+      asset:  EdwinBromance.zip
+    disabled_if:
+      not:
+        manifest_condition: prefer_edwin_bromance_over_romance
   - name: Wings
     components:
       - 0 # Wings - Wings for BG2:EE
