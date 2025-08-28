@@ -561,10 +561,8 @@
     components:
       - 0 # Blood and Faith Installation: 1.0
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/glittergear/BloodAndFaith v1.1/BloodAndFaith
-      alt:
-        http: https://america.iegmc.com/g3/BloodAndFaith.v1.1.zip
-      layout:
-        strip_leading: 1
-        layout_type: single_dir
+      github_user: Glittergear
+      repository: BloodAndFaith
+      releases: v1.2
+      asset:  Blood.and.Faith.v1.2.zip
 
