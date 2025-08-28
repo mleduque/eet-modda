@@ -62,6 +62,16 @@ modules:
       layout:
         layout_type: single_dir
         strip_leading: 1
+  - name: PartyToDieFor
+    description: AParty To Die For
+    overview: |
+      Charname&Co get an invitation to a relaxing retreat on an island about a
+      day’s journey from Baldur’s Gate city. Little do they know that all the
+      guests are connected in an important way, and soon they realize that they
+      are all trapped there on the island, caught like flies in a web.
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/iemods-archive/glittergear/A Party to Die For
 
   - name: TenyaThermidor
     components:
