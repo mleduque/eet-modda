@@ -569,8 +569,8 @@
     location:
       github_user: Gibberlings3
       repository: G3_Community_Item_Pack
-      release: v1
-      asset: lin-g3cip-v1.zip
+      release: v2
+      asset: lin-g3cip-v2.zip
   - name: A7-MagicStore
     description: Magic Store of Vergadain
     overview: "This mod allows you to acquire a magical artifact that provides the means to visit any
