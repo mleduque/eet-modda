@@ -1030,8 +1030,8 @@
     location:
       github_user: dark0dave
       repository: BaeBG2
-      release: v0.1.3
-      asset:  zdbae-v0.1.3.iemod
+      release: v0.2.0
+      asset: zdbae-v0.2.0.iemod
   - name: BG1NPCSoA
     description: "BG1 NPCs in BG2 plus new Athkatla district: Water Gardens"
     installation:
