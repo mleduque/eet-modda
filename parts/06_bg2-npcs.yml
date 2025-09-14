@@ -324,7 +324,7 @@
       - new temple in Athkatla, new divination spells, new items
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/DynaheirBG2EE-vBETA1.5
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/DynaheirBG2EE-vBETA1.6
   - name: KhalidBG2
     description: Khalid BG2EE
     overview: |
