@@ -513,14 +513,14 @@
       github_user: ShadowfireAngel
       repository: Aelar-Wares
       commit: fd94110 # 1.4.1
-  - name: ZS_WeaponOils
+  - name: ZS_Consumables
     overview:
     components:
       - 100 # Install oils and insert them into the world: v1.4.3
     location:
       github_user: szaumoor
-      repository: ZS_WeaponOils
-      tag: "1.4.4"
+      repository: ZS_Consumables
+      tag: 1.0.0a
   # overpowered item mods
   - name: DGItems
     overview: |
