@@ -383,7 +383,7 @@
     location:
       github_user: bucketfulofsunshine
       repository: Lunia-For-Good-Parties
-      commit: 3c4bb66
+      tag: V1.3
 
   - name: BackBrynnlaw
     description: Back to Brynnlaw - SoA chap 6 - one main quest, 10 subquests
