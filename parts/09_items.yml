@@ -520,7 +520,7 @@
     location:
       github_user: szaumoor
       repository: ZS_Consumables
-      tag: 1.0.0a
+      tag: 1.0.1a
   # overpowered item mods
   - name: DGItems
     overview: |
