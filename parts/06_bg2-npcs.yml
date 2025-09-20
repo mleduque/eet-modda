@@ -903,7 +903,10 @@
       - 3  # Installation of adult romance content
       - 42 # Select Ajantis' Friendship Dialogues and Romance Speed: -> Speed: 30 minutes real time minimum between Dialogues
     location:
-      path: /home/mick/Games/modda-cache/static/lin-ajantisbg2-v20.zip
+      github_user: Gibberlings3
+      repository: Ajantis_BG2
+      release: v21
+      asset: ajantisbg2-v21.iemod
   - name: xan
     description: Xan NPC for BG2 - friendship, romance
     components:
