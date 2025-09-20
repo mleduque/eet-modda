@@ -203,8 +203,8 @@
     location:
       github_user: Gibberlings3
       repository: BG_Quests_And_Encounters
-      release: v29
-      asset: baldurs-gate-mini-quests-and-encounters-modification-29.iemod
+      release: v30
+      asset: baldurs-gate-mini-quests-and-encounters-modification-30.iemod
 
   - name: Loretakers
     components:

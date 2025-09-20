@@ -92,10 +92,11 @@
           replace: 'APPEND ~gtimes.ids~ ~1800 C#BRANDOCK_TIMERSHORT~ UNLESS ~C#BRANDOCK_TIMERSHORT~'
           with: 'APPEND ~gtimes.ids~ ~900 C#BRANDOCK_TIMERSHORT~ UNLESS ~C#BRANDOCK_TIMERSHORT~'
   - name: c#brage
-    description: bg1, brage redemption
+    description: Brage redemption
+    overview: BG1+SoD, quest+npc mod
     installation:
       general: crossmod component after AC_QUEST, bg1re, bg1ub, bgqe, bst, endlessbg1, finch, ntotsc, thalantyr, transitions, ajantisbg1, c#sodboabri, imoen4ever
-      after: EET
+      after: EET, bgqe
     components: # all except crossmod, kept for later
       - 0 # Brage's Redemption - Brage Joinable NPC for Baldur's Gate Saga: 8.0
       - 1 # Assign the mod's portrait and soundset to the original Brage in game: 8.0
