@@ -623,3 +623,13 @@
       github_user: Alexander12-creator
       repository: bg1_icons_pack_mod
       tag: "1.0"
+
+  - name: ZS_ItemPack
+    description: RoyalProtector's Item Pack
+    overview: Adds items into the world of BGEE and BG2EE. Each item is completely optional during the installation. Only like one? Only install one.
+    components: ask
+    location:
+      github_usr: szaumoor
+      repository: ZS_ItemPack
+      release: "1.0.0"
+      asset: ZS_ItemPack_1.0.0.zip
