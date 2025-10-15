@@ -272,8 +272,9 @@
     location:
       github_user: Gitjas
       repository: JA-AdventurePack
-      release: v1.0
-      asset: JA.BGT_AdvPack-v1.0.iemod
+      branch: master # has fixes
+      #release: v1.0
+      #asset: JA.BGT_AdvPack-v1.0.iemod
 
   - name: bg1re
     description: Baldur's Gate Romantic Encounters
