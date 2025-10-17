@@ -43,8 +43,8 @@
     location:
       github_user: Argent77
       repository: A7-ChaosSorcerer
-      release: v2.10
-      asset: A7-ChaosSorcerer-v2.10.iemod
+      release: v2.11
+      asset: A7-ChaosSorcerer-v2.11.iemod
       patches:
         - relative: patches/A7-ChaosSorcerer-remove_str_con_malus.diff
   - name: sword_and_fist

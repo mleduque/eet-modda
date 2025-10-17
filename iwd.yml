@@ -549,8 +549,8 @@ modules:
     location:
       github_user: Argent77
       repository: A7-ChaosSorcerer
-      release: v2.10
-      asset: A7-ChaosSorcerer-v2.;10.iemod
+      release: v2.11
+      asset: A7-ChaosSorcerer-v2.11.iemod
   - name: A7-CustomKits
     components:
       - 1 # Kit de Magelame -> Version originale: v1.6
