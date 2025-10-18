@@ -254,7 +254,7 @@
       - 0 #/ Lhannd - Baldur's Gate 2: EE NPC: v1.5
       - 1 #/ Lhannd: Player-Initiated Dialogues (PIDs): v1.5
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Lhannd v1.5
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Lhannd v2.0
   - name: fyalvara
     description: female human warrioress (rashemen), friendship, quest
     components:
