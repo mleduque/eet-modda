@@ -211,7 +211,10 @@
   # after kits
   - name: A7-MultiKits
     description: Multiclass Kits
-    overview: A mod that installs all kinds of true multiclass kit combinations based on single-class kits.
+    overview: |
+      With this mod it is possible to install true multiclass kits from any combination of single-class kits,
+      which allows unusual combinations such as Kensai/Assassin or Berserker/Wild Mage/Swashbuckler.
+      Custom kits from mods are considered as well if detected.
     components: ask
     location:
       github_user: Argent77
