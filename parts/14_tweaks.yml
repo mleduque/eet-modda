@@ -151,8 +151,8 @@
     location:
       github_user: Argent77
       repository: A7-NoEENPCs
-      release: v5.2
-      asset: A7-ConvenientEENPCs-v5.2.iemod
+      release: v5.3
+      asset: A7-ConvenientEENPCs-v5.3.iemod
   - name: S9BGEENPCTweaks
     description: S9 BGEENPC Tweaks for BGEE / SOD / BG2EE / EET
     comment: >
