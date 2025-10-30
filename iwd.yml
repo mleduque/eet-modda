@@ -922,8 +922,8 @@ modules:
     location:
       github_user: Argent77
       repository: HiddenGameplayOptions
-      release: v4.7
-      asset: A7-HiddenGameplayOptions-v4.7.iemod
+      release: v5.0
+      asset: A7-HiddenGameplayOptions-v5.0.iemod
   - name: A7-LightingPackEE
     components: ask
     location:

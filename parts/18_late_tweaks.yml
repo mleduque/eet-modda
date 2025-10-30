@@ -141,13 +141,12 @@
   - name: HiddenGameplayOptions
     installation:
       after: LeUI, cdtweaks
-    components:
-      - 0 # Install all Hidden Gameplay Options at once
+    components: ask
     location:
       github_user: Argent77
       repository: A7-HiddenGameplayOptions
-      release: v4.7
-      asset: A7-HiddenGameplayOptions-v4.7.iemod
+      release: v5.0
+      asset: A7-HiddenGameplayOptions-v5.0.iemod
 
   - name: jimfix
     description: Fixes and convenience tweaks aimed at an Ascension + SCS v33 install
