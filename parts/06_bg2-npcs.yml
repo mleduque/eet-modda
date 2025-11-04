@@ -77,7 +77,7 @@
           replace: 'RealSetGlobalTimer\("X3(?<c>.*)Timer","GLOBAL",3\d00\)'
           with: 'RealSetGlobalTimer("X3${c}Timer","GLOBAL",960)'
   - name: SkitiaNPCs
-    description: BG2 version of Skitia NPCs - components thatdon't warn
+    description: BG2 version of Skitia NPCs - components that don't warn
     components:
       - 1 # Helga Alternate Class: Fighter/Priest of Haelga -> Priest of Haelga (Fighter Multi-class): 1.1
       - 2 # Skitia NPCs: Romance Theme Soundtrack -> Romance Theme Music: 1.1
