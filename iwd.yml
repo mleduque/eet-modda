@@ -117,7 +117,7 @@ modules:
     overview:
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/TheWarOfBloomAndRot-v1.01
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/TheWarOfBloomAndRot-v1.1
 
 ##############
 # Kit(s) required by NPCs
