@@ -247,7 +247,7 @@ modules:
       - 2 # Crossmod Content: talks between LavaDelVortel's Dusky and Turald
       - 3 # Player-initiated talks
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/TuraldNPC.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/others/TuraldNPC.zip
   - name: KarihiNPC
     description: genasi pyromancer + friendship + romance + encounter + spells + crossmod banters support
     components:
