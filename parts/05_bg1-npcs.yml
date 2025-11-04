@@ -417,7 +417,7 @@
     components:
       - 0 #  Bristlelick the gnoll companion for BGEE: 2.0
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Bristlelick v2.3
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Bristlelick v2.4
       replace:
         - file_globs: ["scripts/l#2brist.baf", "scripts/l#brist.baf"]
           regex: true
