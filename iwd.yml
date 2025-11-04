@@ -111,7 +111,7 @@ modules:
     components:
       - 0 # Arszyk's Wonderful Decay - NPC and a late-game quest for IWD EE
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/ArszyksWonderfulDecay-vBETA1.1
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/ArszyksWonderfulDecay-vBETA1.4
   - name: TheWarOfBloomAndRot
     description:
     overview:
