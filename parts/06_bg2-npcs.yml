@@ -1083,6 +1083,19 @@
       repository: SearchGuild
       release: v.1.5.1
       asset: detective-guild-of-athkatla-1.5.1.iemod
+  - name: LivingClara
+    description: "Clara NPC mod: including Clara NPC and Darkside Anomen"
+    overview: |
+      This is an overhaul of Ratatoskr and BCaesar's "All Things Mazzy", created with authorization
+      from the original authors, for which we are very grateful.
+      - When facing Hexxat, Clara will no longer die. We've reworked the conclusion of Hexxat's companion
+        quest, allowing you to permanently destroy Hexxat and save Clara.
+      - If Anomen fails his paladin trial, this component adds extensive content for his Chaotic Neutral
+        alignment. With Clara's influence, Anomen might still achieve his goal of becoming a real paladin.
+    location:
+      github_user: trow
+      repository: LivingClara
+      branch: master
 
   - name: w_packmule
     components:
