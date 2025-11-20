@@ -633,3 +633,18 @@
       repository: ZS_ItemPack
       release: "1.0.2"
       asset: ZS_ItemPack_1.0.2.zip
+  - name: Standard-Awesome-Modpack
+    description: Standard Awesome Modpack
+    overview: |
+      Content mod for BG EET. Aims to flesh-out the city of Baldur's Gate and add additional flavor and choices to full EET runs.
+      major comp:
+        - Book Merchant in Baldur's Gate: Replaces a generic 'General Store' in Baldur's Gate with a merchant who sells books that offer permanent modifications
+      minor comp:
+        - Intelligence to Read Stat Tomes: Makes vanilla stat tomes/manual require 9 intelligence or higher to read (same as scrolls).
+        - Bonus Spell Sequencers: Two new spell sequencers for low-level spells - one at level 3 and one at level 5
+    components: ask
+    location:
+      github_user: StandardAwesome
+      repository: bgee-modpack
+      release: v1.0.0
+      assets: standard-awesome-modpack-v1.0.0.zip
