@@ -384,6 +384,14 @@
       github_user: bucketfulofsunshine
       repository: Lunia-For-Good-Parties
       tag: V1.3
+  - name: peacespeaker
+    description:
+    overview:
+    components: ask
+    location:
+      github_user: bucketfulofsunshine
+      repository: peacespeaker
+      tag: V2.3
 
   - name: BackBrynnlaw
     description: Back to Brynnlaw - SoA chap 6 - one main quest, 10 subquests
