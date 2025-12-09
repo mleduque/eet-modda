@@ -297,7 +297,12 @@ modules:
       refresh: 1week
       patch:
         relative: patches/iwd/cassia.diff
-
+  - name: Vito
+    description: Vito, a neutral kenku diviner
+    overview: small quest, a friendship path, a set of romantic dialogues, new spells, and a few new items.
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/Vito-v1.0
 ##############
 # Crossmod
 ##############
