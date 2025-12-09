@@ -172,7 +172,7 @@
     components:
       - 0 # Wilson Chronicles - expansion for our favorite bear companion: 1.9
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Wilson Chronicles v2.4.1
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Wilson Chronicles v2.5
       replace:
         - file_globs: ["baf/wilson_append.baf"]
           replace: 'RealSetGlobalTimer("L#WilsonFriendTime","GLOBAL",1200)'
