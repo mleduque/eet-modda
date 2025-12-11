@@ -261,7 +261,7 @@
       - 0 # Fyalvara - Baldur's Gate 2: EE NPC -> Make Fyalvara a kitless fighter.: v1.1
       - 3 # Fyalvara - install Player-Initiated Dialogues?: v1.1
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/fyalvara v1.2.3
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/fyalvara v1.3
   - name: verrBG2
     description: soa, same as above, romance
     components:
