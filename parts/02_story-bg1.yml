@@ -68,8 +68,8 @@
     location:
       github_user: The-Gate-Project
       repository: DarkHorizons
-      branch: main
-      refresh: 5days
+      release: v3.05
+      asset: Dark.Horizons-v3.05.iemod
     disabled_if:
       because: too much XP, too many OP items
 
