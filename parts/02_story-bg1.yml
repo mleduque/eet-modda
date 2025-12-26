@@ -455,13 +455,21 @@
       release: v32
       asset: the-bg1npc-project-v32.iemod
   - name: garrick-tt
-    description: extends Garrick - dialogues, encounters
+    description: Garrick, Tales of a Troubadour
+    overview: |
+      Garrick: Tales of a Troubadour is a little mod for Baldur’s Gate Trilogy and Baldur's Gate: Enhanced Edition
+      which aims to make the character of Garrick more interesting to play, adding new dialogues, new situations and
+      encounters as well as additional songs proper to the bard of Beregost. For this reason it is based on the
+      content introduced by BG1NPC and completes it.
+    installation:
+      after: bg1npc
     components:
       - 0 # Garrick : les contes d'un troubadour
     location:
-      github_user: mleduque
+      github_user: The-Gate-Project
       repository: garrick-tt
-      branch: k4thos-eet-compat
+      release: v1.28
+      asset: Garrick.Tales-of-a-Troubadour-v1.28.iemod
 
   - name: ExtraExpandedEnhancedEncounters
     components:
