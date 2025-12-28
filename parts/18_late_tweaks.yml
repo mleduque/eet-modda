@@ -191,8 +191,8 @@
     location:
       github_user: BGforgeNet
       repository: bg2-tweaks-and-tricks
-      release: v8.33
-      asset: tweaks-and-tricks-v8.33.iemod
+      release: v8.38
+      asset: tweaks-and-tricks-v8.38.iemod
   - name: zgtweaks
     components: ask
       ## Scroll drops

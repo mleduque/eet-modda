@@ -314,7 +314,8 @@
     overview: "This mod introduces a large number of weapons and accessories
               from the Planescape universe in the Baldur's Gate series. The items
               can be purchased from from a travelling merchant who is
-            available throughout the whole game."
+              available throughout the whole game.
+              Includes a ToB quest"
     readme: https://raw.githubusercontent.com/Argent77/A7-WaresOfThePlanes/devel/A7-WaresOfThePlanes/doc/item-descriptions.txt
     installation:
       after: ub[25]
@@ -325,8 +326,8 @@
     location:
       github_user: Argent77
       repository: A7-WaresOfThePlanes
-      release: v1.4
-      asset: A7-WaresOfThePlanes-v1.4.iemod
+      release: v2.0
+      asset: A7-WaresOfThePlanes-v2.0.iemod
   - name: Unofficial Item Pack
     description: BGII:EE - Unofficial Item Pack
     overview:
