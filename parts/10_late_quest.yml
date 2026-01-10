@@ -38,7 +38,7 @@
     location:
       github_user: abalabokhin
       repository: NWNForBG
-      tag: "0.99"
+      tag: "1.00"
   - name: IWD1_EET
     installation:
       after: EET
