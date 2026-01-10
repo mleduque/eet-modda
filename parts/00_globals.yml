@@ -18,8 +18,8 @@ locations:
     ajantisbg1:
       github_user: Gibberlings3
       repository: Ajantis_BG1_Expansion
-      release: v21
-      asset: ajantis-bg1-expansion-modification-21.iemod
+      release: v22
+      asset: ajantis-bg1-expansion-modification-22.iemod
       replace:
         - file_globs: ["lib/ajantis_bgt.tpa", "lib/ajantis_tutu.tpa", "lib/ajantis_bgee.tpa"]
           replace: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",500)'
