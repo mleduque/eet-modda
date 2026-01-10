@@ -62,8 +62,8 @@
     location:
       github_user: Gitjas
       repository: Brandock_the_Mage
-      release: v1.6
-      asset: brandock-the-mage-v1.6.iemod
+      release: v1.7
+      asset: brandock-the-mage-v1.7.iemod
       patches:
         - relative: patches/eet/brandock-crossmod-workaround.diff
       replace:
