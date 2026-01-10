@@ -467,5 +467,11 @@
       tag: "???"
     disabled_if:
       because: eet compat issues
+  - name: CerndRomance
+    description: Cernd Romance
+    overview: SoA+ToB romance with Cernd for  Nx and xN charnames + small quest
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/CerndRomance-v1.01
 
   # end NPC extensions
