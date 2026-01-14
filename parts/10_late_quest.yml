@@ -146,8 +146,8 @@
     location:
       github_user: Argent77
       repository: A7-TotLM-BG2EE
-      release: v4.1
-      asset: A7-TotLM-BG2EE-v4.1.iemod
+      release: v4.4
+      asset: A7-TotLM-BG2EE-v4.4.iemod
   - name: IWD_EET_integration
     description: SubtleDoctor's IWD EET Integration
     overview: Integraties IWD1 and IWD2 in the BG1ee or BG2ee campaigns OR add then to the campaign menu
