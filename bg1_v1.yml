@@ -69,7 +69,8 @@ modules:
       day’s journey from Baldur’s Gate city. Little do they know that all the
       guests are connected in an important way, and soon they realize that they
       are all trapped there on the island, caught like flies in a web.
-    components: ask
+    components:
+      - 0 # A Party to Die For: 1.0
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/glittergear/A Party to Die For
 
