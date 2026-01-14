@@ -786,3 +786,12 @@
       github_user: thisisulb
       repository: DruidGroveMakeover
       tag: V1.2
+
+  - name: TheForgottenEdge
+    description: The Forgotten Edge
+    overview: restores and expands upon Perdue’s forgotten short sword, turning it into a meaningful weapon path that spans both games. What begins as a modest blade in BG1 can later be reforged by Cromwell in BG2 into a deadly weapon of acid and shadow.
+    components: ask
+    location:
+      github_user: 11jo
+      repository: TheForgottenEdge
+      branch: main
