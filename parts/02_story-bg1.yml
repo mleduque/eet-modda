@@ -570,8 +570,7 @@
     components:
       - 0 # Blood and Faith Installation: 1.0
     location:
-      github_user: Glittergear
+      github_user: 11jo
       repository: BloodAndFaith
-      releases: v1.2
-      asset:  Blood.and.Faith.v1.2.zip
+      branch: proposal
 
