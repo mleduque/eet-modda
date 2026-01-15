@@ -649,3 +649,16 @@
       repository: bgee-modpack
       release: v1.0.0
       assets: standard-awesome-modpack-v1.0.0.zip
+  - name: Jarnip
+    description: Jarnip: A New Bonus Merchant in the Adventurer's Mart
+    overview: |
+        Adds a new bonus merchant, Jarnip, to the Adventurer's Mart
+        24 new items in total
+        Emphasis on kit- and race-specific bonuses and abilities
+        Balanced to be strong in SoA and viable in ToB
+        Includes one easter-egg item whose power comes at a price
+    components: ask
+    location:
+      github_user: 11jo
+      repository: Jarnip
+      branch: main
