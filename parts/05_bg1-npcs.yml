@@ -104,8 +104,8 @@
     location:
       github_user: Gitjas
       repository: Brages_Redemption
-      release: v9.1
-      asset: brages-redemption-brage-npc-9.1.iemod
+      release: v10.1
+      asset: brages-redemption-brage-npc-10.1.iemod
       replace:
         - file_globs: ["baf/C#BrageD.baf", "baf/c#brage1.baf"]
           replace: 'RealSetGlobalTimer("C#BE_BrageDialogueTimer","GLOBAL",3200)'
