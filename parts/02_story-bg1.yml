@@ -159,8 +159,8 @@
     location:
       github_user: Gibberlings3
       repository: Imoen4Ever
-      release: v11.5
-      asset: imoen-4-ever-v11.5.iemod
+      release: v11.6
+      asset: imoen-4-ever-v11.6.iemod
   - name: themed_tweaks
     components:
       - 60  # SoD - Give Imoen a special wand for palace attack scene
