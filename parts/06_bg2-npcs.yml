@@ -18,7 +18,7 @@
       #patch:
       #  relative: saerileth-unobnoxiousify.diff
     disabled_if:
-      because: Seems obnoxious (added: https://smolderingmodsbar.com/saerileth-bg2-ee/)
+      because:'Seems obnoxious (added: https://smolderingmodsbar.com/saerileth-bg2-ee/)'
   - name: imoen_forever # ok but disabled
     installation:
       after: { name: imoen_forever , component: 0 }

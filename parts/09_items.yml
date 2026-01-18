@@ -630,7 +630,7 @@
     overview: Adds items into the world of BGEE and BG2EE. Each item is completely optional during the installation. Only like one? Only install one.
     components: ask
     location:
-      github_usr: szaumoor
+      github_user: szaumoor
       repository: ZS_ItemPack
       release: "1.0.2"
       asset: ZS_ItemPack_1.0.2.zip
@@ -650,7 +650,7 @@
       release: v1.0.0
       assets: standard-awesome-modpack-v1.0.0.zip
   - name: Jarnip
-    description: Jarnip: A New Bonus Merchant in the Adventurer's Mart
+    description: "Jarnip: A New Bonus Merchant in the Adventurer's Mart"
     overview: |
         Adds a new bonus merchant, Jarnip, to the Adventurer's Mart
         24 new items in total
