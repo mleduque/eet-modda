@@ -12,8 +12,9 @@ modules:
     location:
       github_user: Argent77
       repository: A7-DlcMerger
-      release: v1.7
-      asset:  DlcMerger-v1.7.iemod
+      branch: devel
+      #release: v1.7
+      #asset:  DlcMerger-v1.7.iemod
   # EET can't merge EEFixpack right
   #- name: eefixpack
   #  components:
