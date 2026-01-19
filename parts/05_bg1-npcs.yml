@@ -547,8 +547,8 @@
     location:
       github_user: Gibberlings3
       repository: Road_To_Discovery_for_SoD
-      release: v5.0
-      asset: road-to-discovery-for-sod-5.0.iemod
+      release: v6.0
+      asset: road-to-discovery-for-sod-6.0.iemod
   - name: sodrtd
     description: Road To Discovery
     installation:
