@@ -228,10 +228,10 @@
     components:
       - 0 # Composant principal de Sword Coast Customs
     location:
-      github_user: mleduque
-      repository: cgordon-customs
-      branch: package
-      refresh: always
+      github_user: 11jo
+      repository: customs
+      branch: master
+      refresh: 7days
 
   - name: msfm
     description: add wizard staffs, items, robe tweaks, familiar tweaks
