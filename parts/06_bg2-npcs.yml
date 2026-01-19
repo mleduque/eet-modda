@@ -18,7 +18,7 @@
       #patch:
       #  relative: saerileth-unobnoxiousify.diff
     disabled_if:
-      because:'Seems obnoxious (added: https://smolderingmodsbar.com/saerileth-bg2-ee/)'
+      because: "Seems obnoxious (added: https://smolderingmodsbar.com/saerileth-bg2-ee/)"
   - name: imoen_forever # ok but disabled
     installation:
       after: { name: imoen_forever , component: 0 }
@@ -1092,6 +1092,7 @@
         quest, allowing you to permanently destroy Hexxat and save Clara.
       - If Anomen fails his paladin trial, this component adds extensive content for his Chaotic Neutral
         alignment. With Clara's influence, Anomen might still achieve his goal of becoming a real paladin.
+    components: ask
     location:
       github_user: trow
       repository: LivingClara

@@ -648,7 +648,7 @@
       github_user: StandardAwesome
       repository: bgee-modpack
       release: v1.0.0
-      assets: standard-awesome-modpack-v1.0.0.zip
+      asset: standard-awesome-modpack-v1.0.0.zip
   - name: Jarnip
     description: "Jarnip: A New Bonus Merchant in the Adventurer's Mart"
     overview: |

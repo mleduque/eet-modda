@@ -86,5 +86,4 @@ manifest_conditions:
     not:
       because: iwdification is newer at the moment
   prefer_edwin_bromance_over_romance:
-    because:
-      male charname
+    because: "male charname"
