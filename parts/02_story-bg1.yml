@@ -174,8 +174,8 @@
     location:
       github_user: lzenner
       repository: themed_tweaks
-      branch: main
-      refresh: 10days
+      release: v0.5
+      asset: themed-tweaks-v0.5.iemod
 
   - name: bgqe
     description: Baldur's Gate Mini Quests and Encounters
