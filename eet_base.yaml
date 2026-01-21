@@ -3716,8 +3716,7 @@ modules:
     location:
       github_user: abalabokhin
       repository: NWNForBG
-      branch: master
-      refresh: 10days
+      tag: "1.00"
   - name: IWD1_EET # ok
     installation:
       after: EET
