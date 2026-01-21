@@ -462,7 +462,7 @@
     location:
       github_user: Llewren
       repository: OphysiaBG1
-      release: v1.3
+      release: v1.4
       asset: OphysiaBG1.zip
   - name: IndiNPC
     description: bg1 one-day NPC, half-elven, lawful good fighter/mage, banters, small quest
