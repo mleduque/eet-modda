@@ -326,7 +326,7 @@
     components:
       - 1 # Install Crucible -> Fully Voiced NPCs using AI: v3.2
     location:
-      http: https://america.iegmc.com/morpheus562/crucible-4.4.1.zip
+      http: https://america.iegmc.com/morpheus562/crucible-4.5.zip
       patches:
         - relative: patches/eet/crucible-allow-mih.diff
 
