@@ -471,7 +471,7 @@
       - 0 # Garrick : les contes d'un troubadour
     location:
       github_user: The-Gate-Project
-      repository: garrick-tt
+      repository: Garrick_Tales-of-a-Troubadour
       release: v1.28
       asset: Garrick.Tales-of-a-Troubadour-v1.28.iemod
 
@@ -577,4 +577,17 @@
       github_user: 11jo
       repository: BloodAndFaith
       branch: proposal
+  - name: PartyToDieFor
+    description: AParty To Die For
+    overview: |
+      Charname&Co get an invitation to a relaxing retreat on an island about a
+      day’s journey from Baldur’s Gate city. Little do they know that all the
+      guests are connected in an important way, and soon they realize that they
+      are all trapped there on the island, caught like flies in a web.
+    components:
+      - 0 # A Party to Die For: 1.0
+    location:
+      github_user: Glittergear
+      repository: PartyToDieFor
+      tag: v1.1
 

@@ -273,7 +273,8 @@
     location:
       github_user: Skitia
       repository: Kale-BG1
-      tag: v1.72
+      branch: master
+      refresh: 3days
       patches:
         - relative: patches/eet/kale-crossmod.diff
       replace:
