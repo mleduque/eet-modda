@@ -256,18 +256,18 @@
       - 0 # The Dreadful Tales: In Love, Undeath - a new quest and companion for BG2EE -> Yes, but don't patch existing save games: v1.8.2
       - 2 #/ Xzele: Player-Initiated Dialogues: v1.8.2
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/the_dreadful_tales/InLoveUndeath v1.8.2
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/the_dreadful_tales/InLoveUndeath-v1.8.4
   - name: JuniperAndTheStoneLeech
     components:
       - 0 # The Dreadful Tales: Juniper and the Stone Leech - companion and a quest mod for BG2EE ToB: v1.7
       - 1 # The Dreadful Tales: Juniper and the Stone Leech - Player-Initiated Dialogues for Juniper: v1.7
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/the_dreadful_tales/JuniperAndTheStoneLeech v1.8.1
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/the_dreadful_tales/JuniperAndTheStoneLeech-v1.8.3
   - name: BloodiedStingsOfBarovia
     components:
       - 0 # The Bloodied Stings of Barovia - a dark Ravenloft adventure for Baldur's Gate 2 EE: v2.2
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/the_dreadful_tales/BloodiedStingsOfBarovia v2.5
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/the_dreadful_tales/BloodiedStingsOfBarovia-v2.6.1
 
   # various Lava
   - name: WhinHill
