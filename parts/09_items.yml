@@ -100,7 +100,7 @@
       - 11 # Add Breach Scrolls to Sorcerous Sundries
       - 27 # Add Ruby Ray Scrolls to Trademeet Store
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/morpheus/Forgotten-Armament-4.7
+      path: /home/mick/Games/modda-cache/iemods-archive/morpheus/Forgotten-Armament-5.1
       replace:
         - file_globs: ["components/stat_item_update.tpa"]
           replace: 'REPLACE_TEXTUALLY ~Set Strength to~ ~Increment Strength by~'

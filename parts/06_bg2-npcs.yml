@@ -268,7 +268,7 @@
       - 0 # Verr'Sza the rakshasa NPC for BG2EE: v2.2
 
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/VerrBG2 v2.2
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/VerrBG2-v2.3.1
   - name: Foundling
     description: "Colours of Infinity: Foundling"
     overview: Male ShadowAdpet, NE ; quest, dialogues, no romance
@@ -343,7 +343,7 @@
       The mod includes time-triggered and scenery talks for both SoA and ToB, banters, interjections, and new items.
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Quayle-BG2-v7.5
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Quayle-BG2-v7.5.1
 
   # ArtemiusI NPCs
   - name: paina
