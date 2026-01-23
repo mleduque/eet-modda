@@ -488,8 +488,8 @@
     location:
       github_user: evancauteren
       repository: bg2-autumns-twilight-mod
-      release: v1.3.0
-      asset: bg2-autumns-twilight-mod-1_3_0.zip #710Mb
+      release: v1.4.0
+      asset: bg2-autumns-twilight-mod.zip  #795 Mb
   # some ironmodder entries
   - name: im10kulyok
     description: 'Kulyok entry for Iron Modder 10: The Oldest Trick In The Book'
