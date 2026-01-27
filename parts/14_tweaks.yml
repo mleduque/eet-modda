@@ -39,14 +39,14 @@
           check: true
   - name: HouseTweaks
     description: The Artisan's Tweaks and Overhauls
-    components:
-      - 8 # House Tweaks: Monk Can Use Quarterstaves
-      - 14 # House Tweaks: Improved dialogues
-      - 15 # House Tweaks: Not-So-Indestructible Rats: 1.91
-      - 16 # House Tweaks: Good-Aligned Roleplay Rewards (BG2:EE): 1.91
-      #- 17 # House Tweaks: Cloak of Dragomir only decreases stats in daylight: 1.91
-      - 18 # House Tweaks: Give Stat Bonuses to EENPCs in BG2 (except Hexxat)
-      - 19 # House Tweaks: Useful Plot Items
+    components: ask
+      #- 8 # House Tweaks: Monk Can Use Quarterstaves
+      #- 14 # House Tweaks: Improved dialogues
+      #- 15 # House Tweaks: Not-So-Indestructible Rats: 1.91
+      #- 16 # House Tweaks: Good-Aligned Roleplay Rewards (BG2:EE): 1.91
+      ##- 17 # House Tweaks: Cloak of Dragomir only decreases stats in daylight: 1.91
+      #- 18 # House Tweaks: Give Stat Bonuses to EENPCs in BG2 (except Hexxat)
+      #- 19 # House Tweaks: Useful Plot Items
     location:
       github_user: ArtemiusI
       repository: House-Rule-Tweaks
