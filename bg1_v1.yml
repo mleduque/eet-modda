@@ -103,10 +103,10 @@ modules:
               own major quests and side quests, numerous new areas, items (some to be forged) and creatures.
               Also, two secret joinable NPCs to discover for those of evil alignment a bit further into the story."
     components:
-    - 0 # The Drizzt Saga pour BGEE / Tutu / BGT -> Version par defaut : zones connectees par des declencheurs de voyage: pre-v4.00
-    - 3 # Debut repousse : Drizzt revient apres la Tour de Durlag: pre-v4.00
-    - 5 # Reduire la puissance de certains objets: pre-v4.00
-    - 6 # XP recue pour les creatures reduite au 3/4: pre-v4.00
+      - 0 # The Drizzt Saga pour BGEE / Tutu / BGT -> Version par defaut : zones connectees par des declencheurs de voyage: pre-v4.00
+      - 3 # Debut repousse : Drizzt revient apres la Tour de Durlag: pre-v4.00
+      - 5 # Reduire la puissance de certains objets: pre-v4.00
+      - 6 # XP recue pour les creatures reduite au 3/4: pre-v4.00
     location:
       github_user: Black-Wyrm-Lair
       repository: Drizzt-Saga
