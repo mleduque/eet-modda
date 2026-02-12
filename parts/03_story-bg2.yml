@@ -736,21 +736,19 @@
       branch: main
       refresh: 10days
   - name: AjocMod
-    description: |
-      Ajoc's minimod - medium-sized quest, mini-quests, areas, items
-      actually a composite of original v1.6.5 + BWP patchess + EET patch
-    sources:
-      original: http://www.shsforums.net/files/download/119-ajocs-minimod/
-      bwp_patches: https://github.com/BigWorldSetup/BigWorldSetup-Fixpack/tree/master/Big%20World%20Fixpack/AjocMod
-      eet_patch: http://www.shsforums.net/index.php?app=core&module=attach&section=attach&attach_id=29207
-    installation:
-      general: needs TDD installed
-    components:
-      - 0 # AjocMod Weidu: v1.6.5
+    description: Ajoc's minimod
+    overview: |
+      A medium-sized quest
+      Brand-new areas
+      New monsters
+      New items
+      A couple of mini quests
+    components: ask
     location:
-      github_user: mleduque
+      github_user: Spellhold-Studios
       repository: AjocMod
-      tag: v1.6.5-mle # this version has BWS patches applied + ikki EET compat patch
+      branch: main
+      refresh: 3days
   - name: gbthfkp
     description: Expanded Thief Stronghold (bg2) - add quests to the thief stringhold
     installation:
