@@ -390,6 +390,7 @@
       Allows Lawful Good, Neutral Good, Chaotic Good & Lawful Neutral characters, that have a reputation
       of 14 or above, to travel to Resurrection Gorge.
       In fact, in this alternate version of events, Dorn himself becomes the villain of the story.
+    components: ask
     location:
       github_user: bucketfulofsunshine
       repository: the-pursuit-of-justice
