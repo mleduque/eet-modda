@@ -1047,8 +1047,8 @@
     location:
       github_user: Spellhold-Studios
       repository: BG1-NPCs-for-SoA-ToB
-      release: v.15.4.3
-      asset: bg1-npc-in-soatob-15.4.3.iemod
+      release: v.15.5
+      asset: bg1-npc-in-soatob-15.5.iemod
   - name: BG1NPCSoA
     description: component that warns
     components:
