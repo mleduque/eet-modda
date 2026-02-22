@@ -21,16 +21,18 @@ modules:
   #####################
   - name: EET  # needs EET/bgee_dir.txt with path to bg1 /game subdirectory inside
     location:
-      github_user: Gibberlings3
+      github_user: mleduque
       repository: EET
-      branch: GraionDilach:weidu-251-doubleslashes
+      branch: case-fixes
       layout:
           layout_type: multi_dir
           dirs:
             - EET
             - EET_end
       patches:
+        - relative: patches/eet/eet-at-now-exact.diff
         - relative: patches/eet/eet-allow-mods.diff
+        - relative: patches/eet/eet-extend-item-import.diff
     components:
       - 0 # EET core (importation de ressource)
     add_conf:
