@@ -662,3 +662,10 @@
       github_user: 11jo
       repository: Jarnip
       branch: main
+
+  - name: interestingitems
+    description: Interesting Items: A Balanced Item Pack Mod
+    overview: items for bg1 and bg2
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/iemods-archive/others/semiticgoddess/InterestingItems v1
