@@ -79,29 +79,29 @@ modules:
     components: # single component
       - 0 # Snowytoes Hamlet, a new area (IWD EE) -> Yes, but don't patch existing save games
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/Snowytoes v1.4
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/Snowytoes-v1.6
   - name: BlinkingDead
     components: # single component
       - 0 # Night of the Blinking Dead (IWD) -> Yes, but don't patch existing save games
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/BlinkingDead v3.02
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/BlinkingDead-v3.1
   - name: OurLady
     description: Tale of Our Lady Dreamless
     components: # single component
       - 0 # Tale of Our Lady Dreamless (IWD EE) -> Yes, but don't patch existing save games
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/Tale of Our Lady Dreamless v2.6
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/Tale-of-Our-Lady-Dreamless-v2.7
   - name: InnBB
     description: Below & Below Inn
     components: # single component
       - 0 # Below & Below Inn (IWD EE) -> Yes, but don't patch existing save games
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/InnBB v2.3
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/InnBB-v3.0
   - name: Skineater
     components: # single component
       - 0 # Terror of the Skineater (IWD EE) -> Yes, but don't patch existing save games
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/Skineater v2.4
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/Skineater-v2.5
   - name: GroveOfChaos
     components:
       - 0 # Xikasz's Grove Of Chaos - a quest & companion mod for IWD:EE -> Yes, but don't patch existing save games.: v1.0
