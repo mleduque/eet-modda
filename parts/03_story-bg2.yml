@@ -267,7 +267,7 @@
     components:
       - 0 # The Bloodied Stings of Barovia - a dark Ravenloft adventure for Baldur's Gate 2 EE: v2.2
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/the_dreadful_tales/BloodiedStingsOfBarovia-v2.6.1
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/the_dreadful_tales/BloodiedStingsOfBarovia v2.6.2
 
   # various Lava
   - name: WhinHill
