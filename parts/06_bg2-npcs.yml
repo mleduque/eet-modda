@@ -172,7 +172,7 @@
     components:
       - 0 # Wilson Chronicles - expansion for our favorite bear companion: 1.9
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Wilson Chronicles v2.5
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/WilsonChronicles v2.6
       replace:
         - file_globs: ["baf/wilson_append.baf"]
           replace: 'RealSetGlobalTimer("L#WilsonFriendTime","GLOBAL",1200)'
@@ -287,7 +287,7 @@
       - 5 # Optional: Drider, Dark Treant, Will-o'-wisp Enemies: v3.3
       - 6 # [CHEAT] Enable shaman stronghold for all classes: v3.3
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/willowisp v3.3
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/willowisp v3.5
       replace:
         - file_globs: [ "willowisp/baf/l0will.baf" ]
           replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",2400)'
