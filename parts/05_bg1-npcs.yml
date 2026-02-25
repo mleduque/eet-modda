@@ -441,7 +441,7 @@
   - name: ArkanisSoD
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/ArkanisSoD-v1.0
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/ArkanisSoD v1.1
   - name: EldothSoD
     components: ask
     location:
@@ -449,7 +449,7 @@
   - name: FaldornSoD
     components: ask
     location:
-      path:/home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/FaldornSoD-v1.0
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/FaldornSoD v1.1
   - name: MotherSoD
     components: ask
     location:
