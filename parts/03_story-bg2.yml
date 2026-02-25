@@ -223,19 +223,19 @@
     components:
       - 0 # Southern Edge: the new district of Athkatla -> Yes, but don't patch the existing save games: 3.4
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/SouthernEdge v5.2.1
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/SouthernEdge v6.0
   - name: Ooze
     description: "Athkatlan Grounds: The Ooze’s Lounge"
     components:
       - 0 # Le Salon des vases : une nouvelle zone sous les bas quartiers d'Athkatla: 2.92
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/Oozes Lounge v2.98
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/Oozes Lounge v2.99
   - name: TangledIsle
     description: "Athkatlan Grounds: The Tangled Oak Isle"
     components:
       - 0 # L'ile du Chene Enchevetre : une nouvelle zone d'Athkatla -> Oui , mais ne pas patcher les sauvegardes existantes: v2.26
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/TangledIsle v4.5.3
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/TangledIsle v4.7
   - name: BridgesBlock
     description: "Athkatlan Grounds: Bridge’s Block"
     components:
@@ -247,7 +247,7 @@
     components:
       - 0 # Alabaster Sands: the new area of Athkatla -> Yes, but don't patch existing save games: v1.0
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/AlabasterSands v1.8.1
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/AlabasterSands v1.9.2
 
   # The Dreadful Tales series
   - name: InLoveUndeath
