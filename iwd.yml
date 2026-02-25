@@ -230,7 +230,7 @@ modules:
   - name: bethany
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/Bethany v1.02
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/Bethany v1.03
   - name: DjinniCompanion
     components:
       - 2 # Afaaq, le compagnon Djinn (version IWD:EE): v2.9
