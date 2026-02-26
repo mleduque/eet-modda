@@ -212,8 +212,8 @@
     location:
       github_user: AciferBG
       repository: Loretakers
-      release: v2.2
-      asset: Loretakers.V2.2.zip
+      release: v2.6
+      asset: Loretakers_V2.6.zip
 
   # must be after Loretakers
   - name: JA#BGT_AdvPack
