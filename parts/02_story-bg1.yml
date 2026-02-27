@@ -591,3 +591,13 @@
       repository: PartyToDieFor
       tag: v1.1
 
+  - name: soa
+    description: The Stone of Askavar
+    components:
+      - 0 # The Stone of Askavar pour TotSC/Tutu/BGT/BGEE -> Version par defaut : zones reliees par des declencheurs de voyage: 2.6
+    location:
+      github_user: red-carnelian
+      repository: The-Stone-of-Askavar
+      release: "2.8"
+      asset: tsoaV2_8.zip
+
