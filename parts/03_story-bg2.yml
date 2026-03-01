@@ -732,7 +732,7 @@
       github_user: Spellhold-Studios
       repository: AjocMod
       branch: main
-      refresh: 3days
+      refresh: 7days
   - name: gbthfkp
     description: Expanded Thief Stronghold (bg2) - add quests to the thief stringhold
     installation:
@@ -787,3 +787,4 @@
       github_user: 11jo
       repository: TheForgottenEdge
       branch: main
+      refresh: 7days

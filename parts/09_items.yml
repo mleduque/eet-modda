@@ -308,7 +308,7 @@
       github_user: ArtemiusI
       repository: Bardic-Wonders
       branch: master
-      refresh: 2days
+      refresh: 7days
   - name: A7-WaresOfThePlanes
     description: Wares of the Planes
     overview: "This mod introduces a large number of weapons and accessories
@@ -466,8 +466,8 @@
     location:
       github_user: The-Gate-Project
       repository: RTT-ItemPack
-      release: v1.4
-      asset: return-to-trademeet-item-pack-v1.4.iemod
+      branch: master
+      refresh: 7days
   - name: iwditempack
     descriptin: SoA - adds  twelve Icewind Dale/Icewind Dale II related items to Joluv (Copper Coronet)
     forum: http://www.shsforums.net/topic/46557-iwd-item-pack-for-bg2/

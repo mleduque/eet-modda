@@ -28,10 +28,10 @@ locations:
           replace: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",3600)'
           with: 'RealSetGlobalTimer("C#AjantisFPTimer","GLOBAL",800)'
     ascension:
-      github_user:  InfinityMods
+      github_user:  Gibberlings3
       repository: Ascension
-      release: "2.0.29"
-      asset: ascension-2.0.29.iemod
+      release: "2.1.0"
+      asset: ascension-2.1.0.iemod
     cdtweaks:
       github_user: Gibberlings3
       repository: Tweaks-Anthology

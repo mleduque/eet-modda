@@ -51,7 +51,7 @@
       github_user: ArtemiusI
       repository: House-Rule-Tweaks
       branch: master
-      refresh: 2days
+      refresh: 7days
   - name: polyvorp
     components:
       - 10 # Rebalanced Vorpal Weapons (affects enemies and players)

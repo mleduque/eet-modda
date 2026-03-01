@@ -89,4 +89,8 @@
     components:
       - 10000 # Recorder Crossmod
 
+  - name: candlekeep_revisited
+    description: crossmod for candlekeep revisited (npcs)
+    components: ask
+
   # end crossmod

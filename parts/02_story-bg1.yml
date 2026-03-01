@@ -406,11 +406,7 @@
     installation:
       general: declare a cnoflict with Reflections, probably spurious
       before: [ Reflections ]
-    components:
-      - 0 # Candlekeep Revisited: BG1 Prologue Expansion
-      - 1 # Candlekeep Revisited: BG1 Expanded Starting Sequence
-      - 2 # Candlekeep Revisited: Osprey joinable NPC for SoD
-      - 3 # Candlekeep Revisited: New Portraits for Arkanis, Canderous, Deder, Mordaine, Osprey
+    components: ask
     location:
       github_user: ArtemiusI
       repository: Candlekeep-Revisited
@@ -472,8 +468,8 @@
     location:
       github_user: The-Gate-Project
       repository: Garrick_Tales-of-a-Troubadour
-      release: v1.28
-      asset: Garrick.Tales-of-a-Troubadour-v1.28.iemod
+      branch: master
+      refresh: 7days
 
   - name: ExtraExpandedEnhancedEncounters
     components:
@@ -552,8 +548,8 @@
     location:
       github_user: The-Gate-Project
       repository: Kara-Tur
-      branch: main
-      refresh: 10days
+      release: v2.02
+      asset: Kara-Tur-v2.02.iemod
   - name: ArtisansCaravans
     description: Caravans of Faerun
     overview: |
