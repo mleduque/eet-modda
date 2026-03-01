@@ -12,9 +12,8 @@ modules:
     location:
       github_user: Argent77
       repository: A7-DlcMerger
-      branch: devel
-      #release: v1.7
-      #asset:  DlcMerger-v1.7.iemod
+      release: v1.8
+      asset:  DlcMerger-v1.8.iemod
   # EET can't merge EEFixpack right
   #- name: eefixpack
   #  components:
@@ -39,7 +38,8 @@ modules:
     location:
       github_user: Pocket-Plane-Group
       repository: bg1ub
-      commit: 135f093 # One commit ahead of v17 because MODDER flag removal
+      release: v17.1
+      asset: bg1-unfinished-business-v17.1.iemod
 
   - name: baldurianbarhop
     description: Baldurian Bar Hop(ping)

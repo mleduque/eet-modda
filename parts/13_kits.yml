@@ -35,7 +35,8 @@
     location:
       github_user: ArtemiusI
       repository: The-Artisan-s-Kitpack
-      commit: 7c90bcd6cc2351 # v5.7 - 2025-06-13
+      branch: master
+      refresh: 7days
   - name: A7-ChaosSorcerer
     components:
       - 0 # Kit d'Ensorceleur du Chaos
@@ -66,7 +67,8 @@
     location:
       github_user: ArtemiusI
       repository: Shadow-Magic
-      commit: 'dfab37b9042668d13' # 3.4
+      branch: master
+      refresh: 7days
 
   - name: divine_remix
     components:

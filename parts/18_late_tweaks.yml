@@ -191,8 +191,8 @@
     location:
       github_user: BGforgeNet
       repository: bg2-tweaks-and-tricks
-      release: v8.38
-      asset: tweaks-and-tricks-v8.38.iemod
+      release: v8.39
+      asset: tweaks-and-tricks-v8.39.iemod
   - name: zgtweaks
     components: ask
       ## Scroll drops
@@ -236,41 +236,7 @@
       release: version-1.14
       asset: random-graion-tweaks-1.14.iemod
     ignore_warnings: true
-  - name: tnt
-    description: Tweaks and Tricks mod for Baldur's Gate 2
-    components: ask # avoid 34 (d5 random tweaks instead)
-      #- 0 # Smarter familiars: v8.19
-      #- 1 # More resilient familiars: v8.19
-      #- 3 # Improved trap detection: increase trap sense range: v8.19
-      #- 4 # Trap reminders -> disclose trap type: v8.19
-      #- 20 # Compliments and insults -> Reintroduce: v8.19
-      #- 24 # Hassle-free ammo: v8.19
-      #- 27 # Throwing weapons damage type -> Both of the above options: v8.19
-      #- 29 # Sensible Cloak of Mirroring: v8.19
-      #- 32 # Sensible wand of frost -> AoE: v8.19
-      #- 33 # Potion of Really Mirrored Eyes: v8.19
-      #- 35 # Improved Shandalar's cloak: v8.19
-      #- 36 # Algernon's cloak: usable once per day: v8.19
-      #- 37 # Improved Equalizer: v8.19
-      #- 39 # Working protection from poison: v8.19
-      #- 41 # Spider form ignores web: v8.19
-      #- 44 # Cheesy Slayer: reputation -> reduced loss: v8.19
-      #- 46 # Sensible Otiluke's Resilient Sphere: v8.19
-      #- 47 # Greater Command AoE: v8.19
-      #- 48 # Working Non-Detection: v8.19
-      #- 52 # Sensible Blade spins: v8.19
-      #- 56 # More ankheg armors by Taerom: v8.19
-      #- 65 # Improved strongholds: v8.19
-      #- 66 # Save Melicamp: v8.19
-      #- 68 # More map notes: v8.19
-      #- 70 # Mod romance cheats | POWER USER component, consult readme: v8.19
-      #- 74 # Add BG1 tomes stats bonuses to new BG2 characters -> Each stat except Wisdom gets +1, Wisdom gets +3: v8.19
-      #- 76 # Starting bags -> GSPA + holding: v8.19
-    location:
-      github_user: BGforgeNet
-      repository: bg2-tweaks-and-tricks
-      release: v8.35
-      asset: tweaks-and-tricks-v8.35.iemod
+
   - name: ZS_CanIStabYou
     components: ask
     location:

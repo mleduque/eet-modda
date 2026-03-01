@@ -357,7 +357,8 @@
     location:
       github_user: ArtemiusI
       repository: Aura_BG1
-      tag: v3.9a
+      branch: master
+      refresh: 7days
       patch:
         relative: patches/aura_bg1-select-artificer_and_timers.diff
     #prompt for class (1. Artificer)
@@ -473,8 +474,8 @@
     location:
       github_user: Pocket-Plane-Group
       repository: Indira_NPC
-      release: v15.1
-      asset: indira-npc-v15.1.iemod
+      branch: main
+      refresh: 7days
   - name: valerie
     description: bg1 cowled wizard npc,friendship, no quest
     components: [0]

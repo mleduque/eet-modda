@@ -93,4 +93,14 @@
     description: crossmod for candlekeep revisited (npcs)
     components: ask
 
+  - name: npcflirt
+    description: BioWare NPC Flirt Packs for BGII!
+    overview: Adds flirst and player initiated dialogues to the BGII BioWare romances!
+    components: ask
+    location:
+      github_user: Pocket-Plane-Group
+      repository: NPC_Flirt_Packs
+      release: v1.07
+      asset: NPCFlirtV107.zip
+
   # end crossmod

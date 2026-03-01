@@ -159,8 +159,8 @@
     location:
       github_user: BGforgeNet
       repository: bg2-wildmage
-      release: v2.3
-      asset: wild-mage-additions-v2.3.iemod
+      release: v2.4
+      asset: wild-mage-additions-v2.4.iemod
       replace:
         - file_globs: ['wild_spells/main.tpa']
           replace: 'OUTER_SET rhia_xp = 19000'

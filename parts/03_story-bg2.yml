@@ -462,7 +462,7 @@
     description: SimDing0's Quest Pack, previously d0questpack
     installation:
       before: alternatives
-    components: [0, 1, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+    components: all
     original_location: http://mods.pocketplane.net/questpack-v35-win.zip
     location:
     # alternative: http://america.iegmc.net/ppg/questpack-v35-win.zip
