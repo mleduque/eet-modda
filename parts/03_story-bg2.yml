@@ -338,13 +338,7 @@
     location:
       github_user: Glittergear
       repository: A-Fowl-Wish
-      release: v1.3
-      asset: FowlWish.v1.3.zip
-      alt:
-        file: /home/mick/Games/modda-cache/iemods-archive/glittergear/FowlWish.v1.3
-      layout:
-        layout_type: single_dir
-        strip_leading: 2
+      commit: 40676d3 # 1.4 not tagged
 
   - name: GoneNuts
     description: BG2, one quest mod
@@ -353,13 +347,8 @@
     location:
       github_user: Glittergear
       repository: GoneNuts
-      release: v1.1
-      asset: GoneNuts.zip
-      alt:
-        file: /home/mick/Games/modda-cache/iemods-archive/glittergear/GoneNuts_v1.1
-      layout:
-        layout_type: single_dir
-        strip_leading: 2
+      branch: master
+      refresh: 7days
   - name: DeadGardens
     description: BG2, one quest mod
     components:
@@ -367,13 +356,7 @@
     location:
       github_user: Glittergear
       repository: DeadGardens
-      release: v1.1
-      asset: DeadGardens.v1.1.zip
-      alt:
-        file: /home/mick/Games/modda-cache/ie-mods-archive/glittergear/DeadGardens.v1.1.zip
-      layout:
-        layout_type: single_dir
-        strip_leading: 1
+      commit: cfc6e92 # 1.2, not tagged
 
   # bucketfulofsunshine
   - name: lfgp

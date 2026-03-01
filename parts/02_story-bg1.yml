@@ -576,7 +576,8 @@
     location:
       github_user: 11jo
       repository: BloodAndFaith
-      branch: proposal
+      branch: master
+      refresh: 7days
   - name: PartyToDieFor
     description: AParty To Die For
     overview: |
@@ -589,7 +590,7 @@
     location:
       github_user: Glittergear
       repository: PartyToDieFor
-      tag: v1.1
+      commit: 12dc773d9b9 # 1.1, no tagged
 
   - name: soa
     description: The Stone of Askavar
