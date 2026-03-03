@@ -32,6 +32,7 @@ modules:
       repository: correctfrBG1EE
       branch: main
       refresh: 3days
+      size_hint: 210Mb
   - name: bg1ub
     description: BG1 Unfinished Business
     components: all
