@@ -475,7 +475,7 @@
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/CerndRomance-v1.01
 
   - name: Artisans_Rasaad_BG1
-    description: Rasaad Expansion for Baldur's Gate: Enhanced Edition
+    description: "Rasaad Expansion for Baldur's Gate: Enhanced Edition"
     overview: Add banters & interjections
     components:
       - 0 # Rasaad Expansion for Baldur's Gate: Enhanced Edition

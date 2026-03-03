@@ -664,7 +664,7 @@
       branch: main
 
   - name: interestingitems
-    description: Interesting Items: A Balanced Item Pack Mod
+    description: "Interesting Items: A Balanced Item Pack Mod"
     overview: items for bg1 and bg2
     components: ask
     location:
