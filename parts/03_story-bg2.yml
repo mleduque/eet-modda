@@ -293,8 +293,8 @@
       homepage: https://baldurs-gate.de/index.php?resources/dark-tidings.65/
       github_user: AciferBG
       repository: Dark-Tidings
-      release: v2.8
-      asset: Dark_Tidings_v2.8.zip
+      release: v3.0
+      asset: Dark_Tidings_v3.0.zip
   - name: godcall
     components:
       - 0 # Call Of The Lost Goddess V 2.1
