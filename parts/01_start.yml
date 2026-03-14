@@ -90,6 +90,7 @@ modules:
       repository: Baldurs-Gate-Graphical-Overhaul
       branch: master
       refresh: 1day
+      size_hint: 1.3Gb
 
   - name: reactivitypack
     description: Reactivity Pack
