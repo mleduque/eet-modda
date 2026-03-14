@@ -53,10 +53,6 @@
   - name: EET_end
     components:
       - 0 # Standard installation
-    location:
-      github_user: Gibberlings3
-      repository: EET
-      tag: v13.4
 
   - name: normalize_kit_table_cols
     description: SCS refusess to process some tables, normalize them before
