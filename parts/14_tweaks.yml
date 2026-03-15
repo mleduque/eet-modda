@@ -23,6 +23,16 @@
       - 10 # revised shield bonuses
       - 17 # weapon changes
       - 20 # revised backstabbing -> All Melee and Ranged Weapons Usable For Backstabbing
+    disabled_if:
+      because: will use zs_tweaks
+  - name: zs_tweaks
+    description: A tweak pack modification for the Enhanced Editions of Icewind Dale and Baldur's Gate.
+    components: ask
+    location:
+      github_user: mleduque
+      repository: ZSTweaks
+      branch: french
+      refresh: always
   - name: SubtleD_Item_Tweaks
     installation:
       after: spell_rev, cdtweaks
