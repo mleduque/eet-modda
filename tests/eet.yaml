@@ -1,0 +1,29 @@
+version: "1"
+global:
+  #lang_dir: "en_US"
+  #lang_preferences: ["#rx#^english", "american english", "#rx#^fran[cç]ais", french, ]
+  lang_dir: "fr_FR"
+  lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
+modules:
+
+  - name: EET  # needs EET/bgee_dir.txt with path to bg1 /game subdirectory inside
+    location:
+      github_user: mleduque
+      repository: EET
+      branch: case-fixes
+      patches:
+        - relative: patches/eet-at-now-exact.diff
+      layout:
+          layout_type: multi_dir
+          dirs:
+            - EET
+            - EET_end
+      size_hint: 210Mb
+    components:
+      - 0 # EET core (importation de ressource)
+    add_conf:
+      file_name: bgee_dir.txt
+      content: ../../bg1/game
+  - name: EET_end
+    components:
+      - 0 # Standard installation
