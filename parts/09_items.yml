@@ -682,6 +682,7 @@
     description: Make Twinkle a True 'Defender' Weapon
     overview: The Make Twinkle a True 'Defender' Weapon mod is a small WeiDU mod that adds the ability to the Twinkle scimitar to act as a true Defender weapon.
     components:
+      - 0 # make twinkle a defender weapon
     location:
       github_user: Gibberlings3
       repository: Twinkle_Defender
