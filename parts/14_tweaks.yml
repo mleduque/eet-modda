@@ -31,7 +31,7 @@
     location:
       github_user: mleduque
       repository: ZSTweaks
-      branch: french
+      branch: incomplete-french
       refresh: always
   - name: SubtleD_Item_Tweaks
     installation:
@@ -215,8 +215,8 @@
     location:
       github_user: Gibberlings3
       repository: Lore_From_Learning
-      release: v9
-      asset: lin-cdlore-v9.zip
+      release: v10
+      asset: lin-cdlore-v10.zip
   - name: cd_appraiser
     description: Bardic Appraisal
     overview: "Adds a single, at-will ability for any bard, kitted or unkitted. The ability

@@ -124,12 +124,14 @@
       layout:
         layout_type: single_dir_plus_tp2
   - name: dw_lanthorn
+    description: Restored Rhynn Lanthorn Quest
+    overview: restores the original extended quest for the Rhynn Lanthorn, which was present in the beta version of Baldur's Gate II but was cut before release
     components:
       - 20 # Restored Rhynn Lanthorn lens quest -> Expanded Version (adds four new locations where lenses can be found): Beta 3
     location:
       github_user: Gibberlings3
       repository: Restored-Rhynn-Lanthorn
-      release: v-beta-3
+      tag: v-beta-4
       asset: lin-dw_lanthorn-Beta_3.tar.gz
 
   - name: fadingpromises

@@ -58,6 +58,14 @@
       repository: sword_and_fist
       release: v12
       asset: lin-sword_and_fist-v12.zip
+  - name: spstuff
+    description: Sorcerer's Place Collection
+    components: ask
+    location:
+      github_user: Gibberlings3
+      repository: SP_Collection
+      release: v16
+      asset: lin-spstuff-v16.tar.gz
 
   # mostly for the extra quest
   - name: shadowadept # will prompt 2 times

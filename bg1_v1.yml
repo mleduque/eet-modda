@@ -14,13 +14,13 @@ modules:
       repository: A7-DlcMerger
       release: v1.8
       asset:  DlcMerger-v1.8.iemod
-  # EET can't merge EEFixpack right
-  #- name: eefixpack
-  #  components:
-  #  location:
-  #    github_user: Gibberlings3
-  #    repository: EE_Fixpack
-  #    commit: 089f5297b4 # french branch
+  - name: eefixpack
+    components: ask
+    location:
+      github_user: Gibberlings3
+      repository: EE_Fixpack
+      branch: master
+      refresh: 7days
   - name: correctfrbg1ee
     components:
     - 10 # Correction de la traduction de Baldur''s Gate : Enhanced Edition: 0.9

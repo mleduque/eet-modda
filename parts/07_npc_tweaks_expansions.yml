@@ -360,8 +360,8 @@
     location:
       github_user: Gibberlings3
       repository: Yoshimos_Remorse
-      release: v3.2
-      asset: lin-yoshimosremorse-v3.2.zip
+      release: v3.3
+      asset: lin-yoshimosremorse-v3.3.zip
   - name: keldorn_rom
     components:
       - 0

@@ -669,3 +669,21 @@
     components: ask
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/others/semiticgoddess/InterestingItems v1
+  - name: spstuff
+    description: Sorcerer's Place Collection - items only
+    components:
+      - 4 # Pack d'Objets pour Baldur's Gate 2, par Creslyn: v12
+    location:
+      github_user: Gibberlings3
+      repository: SP_Collection
+      release: v16
+      asset: lin-spstuff-v16.tar.gz
+  - name: cdtwinkle
+    description: Make Twinkle a True 'Defender' Weapon
+    overview: The Make Twinkle a True 'Defender' Weapon mod is a small WeiDU mod that adds the ability to the Twinkle scimitar to act as a true Defender weapon.
+    components:
+    location:
+      github_user: Gibberlings3
+      repository: Twinkle_Defender
+      release: v1
+      asset: lin-cdtwinkle-v1.zip

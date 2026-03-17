@@ -523,8 +523,8 @@
     location:
       github_user: Gibberlings3
       repository: AurenAseph
-      release: v12
-      asset: lin-aurenaseph-v12.zip
+      release: v13
+      asset: lin-aurenaseph-v13.zip
   - name: tyrisflare
     description: bg2+tob - female fighter/mage, quest, romance
     components:

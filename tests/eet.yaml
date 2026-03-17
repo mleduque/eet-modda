@@ -6,11 +6,19 @@ global:
   lang_preferences: ["#rx#^fran[cç]ais", french, "#rx#^english", "american english"]
 modules:
 
+  - name: eefixpack
+    components:
+      - 0 # Correctifs principaux: Alpha 3
+    location:
+      github_user: Gibberlings3
+      repository: EE_Fixpack
+      branch: master
+      refresh: 7days
   - name: EET  # needs EET/bgee_dir.txt with path to bg1 /game subdirectory inside
     location:
       github_user: mleduque
       repository: EET
-      branch: case-fixes
+      branch: case-fixes-debug
       patches:
         - relative: patches/eet-at-now-exact.diff
       layout:

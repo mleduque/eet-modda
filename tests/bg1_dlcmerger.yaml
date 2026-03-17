@@ -14,3 +14,11 @@ modules:
       asset: DlcMerger-v1.8.iemod
     components:
       - 1 # Merge DLC into game -> Merge "Siege of Dragonspear"  - name: iwdification
+  - name: eefixpack
+    components:
+      - 0 # Correctifs principaux: Alpha 3
+    location:
+      github_user: Gibberlings3
+      repository: EE_Fixpack
+      branch: master
+      refresh: 7days

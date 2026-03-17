@@ -4,6 +4,13 @@ modules:
   #####################
   #### Fixpacks
   #####################
+  - name: eefixpack
+    components: ask
+    location:
+      github_user: Gibberlings3
+      repository: EE_Fixpack
+      branch: master
+      refresh: 7days
   - name: correctfrbg2ee
     components:
       - 10 # Correction de la traduction de Baldur's Gate II : Enhanced Edition: 0.7
