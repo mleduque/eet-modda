@@ -72,7 +72,7 @@ modules:
       - 1 # unfinished business
     ignore_warnings: true # cannot verify trigger on IEex_LuaTrigger
     location:
-      http: https://iegmc.kjtd.net/iwd2fixpack/IWD2FIXPACKv7.zip
+      http: https://america.iegmc.com/iwd2fixpack/IWD2FIXPACKv7.zip
   - name: iwd2npc
     components:
     - 0 # 'Install Joinable NPCs for IWD2: Test_Build_1_for_v7'
@@ -92,7 +92,7 @@ modules:
     components:
       - 0 # comstore
     location:
-      http: https://iegmc.kjtd.net/com/CoMstore210.rar
+      https://america.iegmc.com/com/CoMstore210.rar
       layout:
         layout_type: single_dir_plus_tp2
   - name: iwd2-ease
