@@ -551,7 +551,7 @@
     components:
       - 0 # Navarra for BG2
     location:
-      http: https://iegmc.kjtd.net/g3/lin-navarra-v1.5.tar.gz
+      http: https://america.iegmc.com/g3/lin-navarra-v1.5.tar.gz
       # or /home/mick/Games/modda-cache/static/lin-navarra-v1.5.tar.gz
       patch:
         relative: patches/eet/navarra-timer-prompt-15min.diff
