@@ -301,7 +301,7 @@
       # started to give SSL errors
       github_user: mleduque
       repository: ImoenRomance
-      branch: main
+      tag: v4.1.3
       # no need to patch out romance conflicts because os component #1
       replace:
         - file_globs: ["dialogues/SOA/Love/RomanceContent.d", "scripts/SOA/misc/imoen2.baf"]
