@@ -217,7 +217,7 @@
     components:
       - 0 # Colours of Infinity: I Shall Never Forget: 6.0
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/colours_of_infinity/I Shall Never Forget v6.5.2
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/colours_of_infinity/I Shall Never Forget v6.5.4
 
   # Athkatlan Grounds series
   - name: SouthernEdge
