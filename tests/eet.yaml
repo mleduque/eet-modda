@@ -18,9 +18,9 @@ modules:
     location:
       github_user: mleduque
       repository: EET
-      branch: case-fixes-debug
-      patches:
-        - relative: patches/eet-at-now-exact.diff
+      branch: case-fixes
+      #patches:
+      #  - relative: patches/eet-at-now-exact.diff
       layout:
           layout_type: multi_dir
           dirs:
