@@ -31,7 +31,7 @@
     location:
       github_user: mleduque
       repository: ZSTweaks
-      branch: incomplete-french-1.6.8
+      branch: incomplete-french-1.6.9
       refresh: always
   - name: SubtleD_Item_Tweaks
     installation:
