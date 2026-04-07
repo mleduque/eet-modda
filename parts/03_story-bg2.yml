@@ -368,7 +368,7 @@
     location:
       github_user: bucketfulofsunshine
       repository: Lunia-For-Good-Parties
-      tag: V1.3.1
+      tag: V1.9
   - name: TPoJ
     description: The Pursuit of Justice (for BG2EE or EET)
     overview: |
@@ -379,7 +379,7 @@
     location:
       github_user: bucketfulofsunshine
       repository: the-pursuit-of-justice
-      tag: V0.9.9
+      tag: V1.0
   - name: peacespeaker
     description:
     overview:
