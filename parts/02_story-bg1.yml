@@ -570,10 +570,10 @@
     components:
       - 0 # Blood and Faith Installation: 1.0
     location:
-      github_user: 11jo
+      github_user: Glittergear
       repository: BloodAndFaith
-      branch: master
-      refresh: 7days
+      release: v1.4
+      asset: Blood-And-Faith-v1.4.iemod
   - name: PartyToDieFor
     description: AParty To Die For
     overview: |
