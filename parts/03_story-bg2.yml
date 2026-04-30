@@ -512,8 +512,8 @@
     location:
       github_user: Gibberlings3
       repository: g3anniversary
-      release: v13
-      asset: lin-g3anniversary-v13.zip
+      release: v14
+      asset: lin-g3anniversary-v14.zip
   - name: emad
     description: every mod and dog - 5 small quests (im sized)
     components:
