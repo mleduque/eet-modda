@@ -6,15 +6,15 @@
   - name: cowledmenace
     installation:
       general : after npc mods, before tweaks andEET_end
-    components:
-      - 1000 # Main Component - The Cowled Menace
-      - 2100 # Appropriate Items for High-Level Spellcasters
-      - 3000 # Mages cast Gate far from themselves, so they don't end up fighting their own summoned demon
+    components: ask
+      #- 1000 # Main Component - The Cowled Menace
+      #- 2100 # Appropriate Items for High-Level Spellcasters
+      #- 3000 # Mages cast Gate far from themselves, so they don't end up fighting their own summoned demon
     location:
       github_user: Gibberlings3
       repository: CowledMenace
-      release: "1.0.4"
-      asset: lin-cowledmenace-v1.0.2.zip
+      release: "2.0.2"
+      asset: lin-cowledmenace-v2.0.2.zip
 
   #########
   # Depend on iwdification
