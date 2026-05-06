@@ -344,12 +344,6 @@
       repository: edvin_unofficial_item_pack
       branch: v2.7b-french
       auth: PAT my_repositories
-      # https://www.gibberlings3.net/forums/topic/35873-incompatibility-with-bgiiee-unofficial-item-pack/
-      replace:
-        - file_globs: ['Setup-Unofficial Item Pack.tp2']
-          replace: 'COPY ~Unofficial Item Pack/new_items/MAGE18Z.CRE~ ~override/MAGE18Z.CRE~'
-          with: '' # delete the line
-          check: true
 
   # new stores or new inventory
   - name: Derats_Archery
