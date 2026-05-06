@@ -247,7 +247,7 @@
       - 0 # Faldorn NPC for BG2EE
       - 1 # Faldorn NPC for BG2EE: Player-Initiated Dialogues (PIDs)
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/FaldornBG2 v1.3
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/FaldornBG2 v1.4
   - name: Lhannd
     description: male CG fallen ranger, quest, friendship, romance
     components:
