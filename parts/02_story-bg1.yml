@@ -62,16 +62,17 @@
         layout_type: single_dir_plus_tp2
         tp2: Setup-TGC1E.tp2
   - name: DarkHorizons
-    description: old BG1 mod - one major quest, multiple minor quests
+    description: Dark Horizons
+    overview: old BG1 mod - one major quest, multiple minor quests, encounters
+    walkthrough:
+      - https://baldursgate.fandom.com/wiki/Dark_Horizons_walkthrough
     components:
       - 0 # Mod "Dark Horizons": 3.01
     location:
       github_user: The-Gate-Project
       repository: DarkHorizons
-      release: v3.05
-      asset: Dark.Horizons-v3.05.iemod
-    disabled_if:
-      because: too much XP, too many OP items
+      release: v3.06
+      asset: Dark.Horizons-v3.06.iemod
 
   - name: "c#endlessbg1"
     components:
