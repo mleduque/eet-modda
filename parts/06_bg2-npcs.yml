@@ -853,8 +853,10 @@
       - 1 # Xulaye's Player Initiated Dialogues
       - 2 # Korgan Fights at the Pits
     location:
-      http: http://europe.iegmc.net/xulaye/Xulaye%20v2.0.zip
-      rename: Xulaye_v2.0.zip
+      github_user: Spellhold-Studios
+      repository: Xulaye-NPC
+      release: v2.0
+      asset: Xulaye-v2.0.zip 
   - name: Tashia
     components: ask
     location:
