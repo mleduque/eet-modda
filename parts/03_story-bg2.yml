@@ -687,27 +687,12 @@
       - Riatavin town, main quest with travel by sea and in the underdark, with 3 side quests
       - Trollford abandonned village with one quest (dungeon crawl)
       - Onset of the Darkest Day : quest between end of SoA and ToB
-    components: none
-    installation:
-      general: DO NOT install any component, TDDz needs its mod files but does the installation
+    components: ask
     location:
-      http: http://europe.iegmc.net/tdd-weidu/TDDv1.14.rar
-      layout:
-        layout_type: single_dir_plus_tp2
-  - name: TDDz
-    description: TDDz is not a mod, it is just an way to install TDD for BG2EE with Worldmap and Extended Animation.
-    components:
-      - 0 # TDD - Core: v1.3.1
-      - 1 # TDD - Gué du troll: v1.3.1
-      - 2 # TDD - Eshpurta: v1.3.1
-      - 3 # TDD - Purskal: v1.3.1
-      - 4 # TDD - Riatavin: v1.3.1
-      - 5 # TDD - l'Avènement du Jour le plus Sombre: v1.3.1
-      - 6 # TDD - Robilard: v1.3.1
-    location:
-      github_user: SpellHold-Studios
-      repository: TDDz
-      tag: v1.3.1
+      github_user: Weigo
+      repository: The_Darkest_Day
+      branch: main
+      refresh: 6days
   - name: TDD_Hall-of-Knowledge
     description: Hall-of-Knowledge
     overview: |
