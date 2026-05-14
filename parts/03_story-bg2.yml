@@ -622,7 +622,8 @@
     location:
       github_user: Deratiseur
       repository: Ogre
-      tag: v4
+      release: v6.1
+      asset: Derats_Ogre-Version_6.1.iemod
   - name: alternatives
     description: "Add 2 options to thieves/vampire routes: paladin route or assissin route + alternative for temple stealing"
     installation:
