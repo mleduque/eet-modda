@@ -354,7 +354,8 @@
     location:
       github_user: Deratiseur
       repository: Archery
-      tag: v5.00
+      release: v7
+      asset: Derats_Archery-v7.iemod 
   - name: A7#ImprovedArcher
     description: Improved Archer - items
     overview: archer kit rebalance, new archer kits forother classes, items
