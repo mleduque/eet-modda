@@ -776,3 +776,14 @@
       repository: TheForgottenEdge
       branch: main
       refresh: 7days
+
+  - name: thoghma
+    description: In the Service of Oghma
+    overview: in the temple of Oghma, a new monk waits for you and offers you a small quest, which can bring you additional powers. 
+    components:
+      - 0
+    location:
+      github_user: Plutonium-X
+      repository: Quete_Oghma
+      release: v1.8
+      asset: thoghma-v1.8.iemod
