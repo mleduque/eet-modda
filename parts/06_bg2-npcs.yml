@@ -875,6 +875,13 @@
       asset:  KitanyaSoAv6-41.zip
     disabled_if:
       because: no time to examine right now
+  - name: AsharNPC
+    description: Ashar NPC
+    overview: Female half-orc barbarian NPC, frienship or romance, dialogues, interjections, banters
+    components:
+      - 0 # Ashar NPC/
+    location:
+      path: /home/mick/Games/modda-cache/iemods-archive/shs/AsharNPC_v131.rar      
 
   # one day npcs
   - name: allison
