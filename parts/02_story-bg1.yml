@@ -42,9 +42,9 @@
       - 13 # Reduire le nombre de capes de chaman -> Supprimer les capes generiques des pretres orques: 5.0.0
       - 15 # Parchemins de sort -> Version revisee (Sorts de niveau 6): 5.0.0
     location:
-      github_user: Spellhold-Studios
+      github_user: mleduque
       repository: NTotSC
-      branch: master
+      branch: angel+fr-update
       refresh: 10days
       patches:
         - relative: patches/eet/ntotsc-fix-fr.diff
