@@ -288,7 +288,7 @@
       #- 1200 # More cheating Wishes: -> Convenient Wish.: TB#Tweaks, V 2.99
       # prefer cdtweaks version
       #- 2550 # Faster Romances: -> Medium.: TB#Tweaks, V 2.99
-      # perfer other versions
+      # prefer other versions
       #- 4000 # 3rd edition style Strength: TB#Tweaks, V 2.99
       #- 4500 # 3rd edition style Dexterity: TB#Tweaks, V 2.99
       #- 5000 # 3rd edition style Constitution: TB#Tweaks, V 2.99
@@ -298,3 +298,10 @@
       github_user: mleduque
       repository: tb-tweaks
       branch: fr
+  - name: Sentrizeal_AA_Pack
+    description: Sentrizeal's Alternate Avatar Pack
+    overview:
+    components: ask
+    location: Replaces some avatar animations and fixes others
+      http: https://www.sentrizeal.com/downloaditm5
+      rename: SentrizealAvatarPack.zip
