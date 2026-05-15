@@ -462,9 +462,10 @@
       - 0 # Aurora's Shoes and Boots: v5.3 (EE & EET)
       - 20 # Petits portraits pour les PNJs -> Marchands uniquement: v5.3 (EE & EET)
     location:
-      github_user: mleduque
-      repository: Bookwyrme_Aurora_s_shoes
-      tag: "???"
+      github_user: Sampsca
+      repository: Auroras-Shoes-and-Boots
+      branch: master
+      refresh: 10days
     disabled_if:
       because: eet compat issues
   - name: CerndRomance
