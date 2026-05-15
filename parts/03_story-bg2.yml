@@ -788,3 +788,19 @@
       repository: Quete_Oghma
       release: v1.8
       asset: thoghma-v1.8.iemod
+  - name: TheUndying
+    description: The Undying
+    overview: |
+      SoA NPC + Quest + store mod
+      - Callisto: CE female elf berserker with quest ( in 5 encounters)
+      - Ninafer: LN female elf f/m
+      - 3 minor quests + 7 stores + items + new inn in the slums
+    website: 
+      - https://web.archive.org/web/20240805091007/https://mods.chosenofmystra.net/theundying/
+      - https://forums.beamdog.com/discussion/34297/the-undying-mod-bg2-ee-compatible/p1
+    components: ask
+    location:
+      github_user: 11jo
+      repository: The-Undying
+      branch: main
+      refresh: 7days
