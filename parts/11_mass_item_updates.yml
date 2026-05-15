@@ -19,7 +19,7 @@
     location:
       github_user: Sampsca
       repository: ThrownHammers
-      tag: v6.1.1
+      tag: v6.1.2
   - name: forgotten-armament
     description: Forgotten armaments - ability scoress
     components:
