@@ -328,7 +328,10 @@ modules:
   #- name: MinorNPCPortraitsforIWDEE
   #  components: ~
   #  location:
-  #    path: /home/mick/Games/modda-cache/static-iwd/Setup-MinorNPCPortraitsforIWDEEv1.04.zip
+  #    github_user: smeagolheart
+  #    repository: MinorNPCPortraitsforIWDEE
+  #    branch: master
+  #    refresh: 60days
 
 ##############
 # Spells
