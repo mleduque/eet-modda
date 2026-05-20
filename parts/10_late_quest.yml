@@ -13,8 +13,8 @@
     location:
       github_user: Gibberlings3
       repository: CowledMenace
-      release: "2.0.2"
-      asset: lin-cowledmenace-v2.0.2.zip
+      release: "2.0.3"
+      asset: lin-cowledmenace-v2.0.3.zip
 
   #########
   # Depend on iwdification
