@@ -250,6 +250,21 @@
       - 0 # Alabaster Sands: the new area of Athkatla -> Yes, but don't patch existing save games: v1.0
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/AlabasterSands v1.9.2
+  - name: InkGallery
+    description; Athkatlan Grounds: The Ink Gallery
+    overview: |
+      a new Athkatlan establishment, and a place of many wonderful books. Read them, and let the tomes 
+      present you with epic battles and deadly struggles. Become the main hero/heroine of these books, 
+      even if only for a short moment, and face powerful enemies. 
+      Test your mettle and learn how to become even stronger than you already are. Remember, however, 
+      that there is a fee to be paid.
+
+      You may find The Ink Gallery behind the Council of Six building -- it may be reached either through
+      its halls, or from outside, through the covered pathway right below the newly opened section of the 
+      area.
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/InkGallery-v1.01
 
   # The Dreadful Tales series
   - name: InLoveUndeath
