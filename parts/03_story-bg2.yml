@@ -538,7 +538,7 @@
       - 3 # Sous son charme
       - 5 # Pot-pourri de personnages
     location:
-      path: /home/mick/Games/modda-cache/static/emad_v11.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/g3/lin-emad-v12.zip
   - name: shardsofice
     description: Reworks of two Ironmodder entries (im2 and im6)
     components:
