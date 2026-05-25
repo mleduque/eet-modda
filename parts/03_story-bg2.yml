@@ -689,7 +689,8 @@
       asset: vampire-tales-v108.iemod
 
   - name: RoT
-    description: Region of Terror - BG2 mod, large quest mod focussed on Drizzt Do'Urden. 35 quests, 160 areas
+    description: Region of Terror
+    overview: SoA mod, large quest mod focussed on Drizzt Do'Urden. 35 quests, 160 areas, npcs, kits,spells
     components: ask
       #- 0 # Region Of Terror: pre-v6.0
       #- 3 # Alternative Maribur area (by Cuttooth): pre-v6.0
