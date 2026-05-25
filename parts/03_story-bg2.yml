@@ -618,7 +618,12 @@
     location:
       http: http://akadis.baldursgateworld.fr/Jan/zip/JansQuest1.5.0.zip
   - name: HerThiMoney
-    description: Heroes Thieves and Moneylenders - BG2 mod
+    description: Heroes Thieves and Moneylenders
+    overview: |
+      SoA ; Interjections+banters+mini quests+quest expansions
+      - Bank in Waukeen Promenade with two mutually exclusive quests and additional questin Brynnlaw
+      - Expansion of thieves stronghold - either romance with Aral or two quests
+      - Two detective-focused quests with new areas
     components: all
       #- 0 # Component 1. Interjections & Mini-quests (by Austin & Arcanecoast Team): 4.2.3
       #- 10 # Component 2. First Calimport Bank Pack (by Scheele & Austin & Arcanecoast Team): 4.2.3
