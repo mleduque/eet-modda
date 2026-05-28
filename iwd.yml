@@ -737,6 +737,19 @@ modules:
 ##############
 # Tweaks
 ##############
+  - name: cd_iwd_desc
+    description: Description Icons for IWD Items
+    overview: |
+      Description Icons for IWD Items (DI3)modifies the IWDEE UI to display description images
+      for items, in the same fashion that the BG series does. Artwork for existing items was created
+      by Parys, with a handful of images scavenged from BG/BG2 for identical items across the games. 
+    installation:
+      general: DI3 will work with Tweaks Anthology's Unique Icons component. For Tweaks Anthology version 18 or earlier, DI3 needs to be installed after it. For Anthology v19 or newer, you can install in either order, with Anthology going after being the preferred order.
+    components: ask
+    location:
+      github_user: Gibberlings3
+      repository: iwd_description_icons
+      tag: Beta_1
   - name: cdtweaks
     components: ask
   - name: S9HouseRules
