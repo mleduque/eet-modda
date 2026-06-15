@@ -683,3 +683,9 @@
       repository: Twinkle_Defender
       release: v1
       asset: lin-cdtwinkle-v1.zip
+  - name : uubelmring
+    description:  Belm ring mod - A djinn that can create +APR rings from Belm/Kundane/SNT 
+    overview: You meet a djinn that can convert each of the three speed weapons to +APR rings (ring vary in quality, not all three rings have full +1APR).
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/iemods-archive/others/uubelmring_v1.1.zip
