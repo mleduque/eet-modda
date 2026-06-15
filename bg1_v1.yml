@@ -21,6 +21,7 @@ modules:
       repository: EE_Fixpack
       branch: master
       refresh: 7days
+      size_hint: 126Mb
   - name: correctfrbg1ee
     components:
     - 10 # Correction de la traduction de Baldur''s Gate : Enhanced Edition: 0.9
@@ -76,6 +77,7 @@ modules:
       repository: Drizzt-Saga
       branch: master
       refresh: 10days
+      size_hint: 75Mb
   - name: EET_Tweaks
     description: "Baldur's Gate: Enhanced Edition Trilogy Tweaks (EET Tweaks)"
     overview: optional tweaks for Infinity Engine games
