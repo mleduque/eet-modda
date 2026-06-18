@@ -611,3 +611,18 @@
       repository: bfs-reactivity-pack
       branch: master
       refresh: 7days
+  - name: NecromancersQuestRestored
+    description: Necromancers Quest Restored (NQR)
+    overview: |
+      allows you to complete all three interconnected quests involving the necromancer duo (Arkion and
+      Nemphre) in Baldur's Gate city in a completely bloodless way.
+
+      This mod restores the freedom of choice originally present in classic BG1, allowing you to
+      successfully steal Arkion's amulet after returning it to Nemphre, rather than kill her.
+    components: 
+      - 0
+    location:
+      github_user: Dziadekkk
+      repository: NecromancersQuestRestored
+      release: "1.0"
+      asset: NecromancersQuestRestored.zip 
