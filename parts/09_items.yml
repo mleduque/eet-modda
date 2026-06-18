@@ -689,3 +689,12 @@
     components: ask
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/others/uubelmring_v1.1.zip
+  - name: k0_iskp
+    description: Sod items to BG2EE/EET
+    overview: Add SoD items to BG2EE or EET
+    components: ask
+    location:
+      github_user: dark0dave
+      repository: sod-items-to-bg2ee-eet
+      release: v4.0.0.RC9
+      asset: k0_iskp-v4.0.0.RC9.iemod
