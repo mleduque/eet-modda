@@ -305,3 +305,12 @@
     location: Replaces some avatar animations and fixes others
       http: https://www.sentrizeal.com/downloaditm5
       rename: SentrizealAvatarPack.zip
+  - name: A7-MiscTweaks
+    description:Argent's Miscellaneous Tweaks
+    overview: Loose collection of tweaks, cheats, and fixes.
+    components: ask
+    location:
+      github_user: Argent77
+      repository; A7-MiscTweak
+      release: v1.0
+      asset: A7-MiscTweaks-v1.0.iemod
