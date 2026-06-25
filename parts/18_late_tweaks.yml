@@ -275,6 +275,17 @@
       repository: kjeron_DUAL_TO_KIT
       tag: v0.35
 
+  - name: DaxTweaks
+    description: Dax Tweaks
+    overview: |
+      Various minor tweaks I (Dax) made for my game. Some of these tweaks were included in my mod
+      Cowled Menace before, but were moved here for simplicity's sake.
+    components: ask
+    location:
+      github_user: Maltodaxtrin
+      repository: Dax-Tweaks
+      release: "1.0"
+      asset: Dax.Tweaks.1.0.7z
 
   - name: 35thac0
     components: ask
