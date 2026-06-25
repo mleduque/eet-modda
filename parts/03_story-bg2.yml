@@ -313,6 +313,24 @@
       release: v3.0
       asset: Dark_Tidings_v3.0.zip
   - name: godcall
+    overview: Call of the Lost Goddess
+    description: |
+      Call of the Lost Goddess is a quest mod that adds new quests, areas, monsters and items to
+      Baldur's Gate 2- Enhanced Edition.
+      It is inspired by the pen-and-paper adventure For Duty and Deity by Dale Donovan.
+
+      - 46 new areas to explore (45 areas newly designed from scratch in 3D; 1 modified area from Icewind Dale)
+      - A new city district: Goldspires, accessible from the world map
+      - 40+ unique items to discover
+      - New monsters with custom animations: Vrocks, Dretches, Nighthags, and many more
+      - Challenging battles for experienced players
+      - Many side quests for a full gameplay experience
+      - Multiple roleplaying options to solve most quests
+      - 8-10 hours of gameplay
+      - Set during the Shadows of Amn (SoA) campaign
+      - Playable from the start of the game
+      - Game engine compatibility: BG2EE and EET
+      - Recommended character level: Level 10+
     components:
       - 0 # Call Of The Lost Goddess V 2.1
       - 50 # Install portraits for the major NPCs of the mod
@@ -320,8 +338,8 @@
     location:
       github_user: AciferBG
       repository: Call-of-the-Lost-Goddess
-      release: v2.6
-      asset: Call_of_the_lost_goddess_V_2.6.zip
+      release: v2.9
+      asset: Call_of_the_lost_goddess_V_2.9.zip
   - name: ThroneoftheMadGod
     description: Throne of the Mad God
     summary: >
