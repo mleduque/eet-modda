@@ -398,7 +398,7 @@
     location:
       github_user: mleduque # Gibberlings3
       repository: The_Calling
-      branch: french
+      branch: v6-french
       refresh: 3days
 
   - name: candlekeep_revisited
