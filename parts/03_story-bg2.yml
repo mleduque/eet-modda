@@ -364,6 +364,29 @@
       path: /home/mick/Games/modda-cache/iemods-archive/morpheus/crucible-5.0
       patches:
         - relative: patches/eet/crucible-allow-mih.diff
+  - name: Poisoned_pathways
+    description: Poisoned Pathways
+    overview: |
+      Poisoned Pathways is a quest mod for Baldur’s Gate II: Enhanced Edition (BG2EE) and Enhanced Edition
+      Trilogy (EET). It adds new content to the game after you encountered Renfeld in the early chapters of
+      the Shadows of Amn storyline.
+      The mod is inspired by the module "Into the Nest of Vipers" by Matthew G. Adkins, published in
+      Dungeon magazine #75.
+
+      - New quest content continuing the Renfeld story
+      - New areas to explore: a haunted elven ruin and a tranquil forest village
+      - New enemies with custom animations: face Chasmes, Zombie Treants and many more!
+      - Unique magical items
+      - Challenging battles and dialogue-driven progression
+      - Two new custom music tracks created for this mod; one additional music track from NWN
+      - Approx. 5 hours of gameplay
+      - Compatible with both BG2EE and EET    
+    components: ask
+    location:
+      github_user: AciferBG
+      repository: Poisoned-Pathways
+      release: v1.0
+      asset: Poisoned_Pathways_V_1.0.zip
 
   # Glittergear
   - name: FowlWish
