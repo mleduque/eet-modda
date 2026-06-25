@@ -326,8 +326,8 @@
     location:
       github_user: Argent77
       repository: A7-WaresOfThePlanes
-      release: v2.3
-      asset: A7-WaresOfThePlanes-v2.3.iemod
+      release: v2.4
+      asset: A7-WaresOfThePlanes-v2.4.iemod
   - name: Unofficial Item Pack
     description: BGII:EE - Unofficial Item Pack
     overview:
