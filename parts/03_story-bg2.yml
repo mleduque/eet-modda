@@ -355,8 +355,8 @@
     location:
       github_user: AciferBG
       repository: Throne-of-the-Mad-God
-      release: v1.9
-      asset: Throne_of_the_Mad_God_v1.9.zip
+      release: v2.2
+      asset: Throne_of_the_Mad_God_v2.2.zip
   - name: crucible
     components:
       - 1 # Install Crucible -> Fully Voiced NPCs using AI: v3.2
