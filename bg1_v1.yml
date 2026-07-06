@@ -12,8 +12,8 @@ modules:
     location:
       github_user: Argent77
       repository: A7-DlcMerger
-      release: v1.8
-      asset:  DlcMerger-v1.8.iemod
+      release: v2.1
+      asset:  DlcMerger-v2.1.iemod
   - name: eefixpack
     components: ask
     location:
