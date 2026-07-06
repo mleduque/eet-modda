@@ -46,12 +46,11 @@ modules:
   - name: baldurianbarhop
     description: Baldurian Bar Hop(ping)
     overview: A short collection of random D&D tavern encounters for BGEE.
-    components:
-      - 0 # Baldurian Bar Hop(ping)
+    components: ask
     location:
       github_user: bucketfulofsunshine
       repository: baldurian-bar-hop
-      tag: nightly0.4
+      tag: V0.9
   - name: TenyaThermidor
     components:
       - 0 # Tenya Thermidor for BG:EE
