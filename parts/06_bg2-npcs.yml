@@ -248,6 +248,29 @@
       - 1 # Faldorn NPC for BG2EE: Player-Initiated Dialogues (PIDs)
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/FaldornBG2 v1.4
+  - name: SharTeelBG2EE
+    description: SHAR-TEEL FOR BG2EE
+    overview: |
+      Allows players to meet and recruit Shar-Teel during Baldur's Gate II: Enhanced Edition's campaign.
+      The character comes with all dialogues (with the PC, other companions, and interjections).
+
+      The mod also comes with a "companions with benefits" relationship with the main character,
+      provided the PC is a male of any non-good alignment (evil or lawful/chaotic/true neutral),
+      with Strength and Charisma 10+.
+
+      You may meet her in Bodhi's Lair, no matter who you aligned with: Bodhi or the Shadow Thieves.
+      Know, however, that the path you took affects her dialogue and her kit, as she may start either
+      as a Deathly Reaver (gains a bonus vs. humans, level drain immunity, and may cast Vampiric
+      Touch) or as a Hot-Blooded Reaver (gains a bonus vs. undead, a great bonus to saving throws
+      vs. death, and may cast Haste on herself). Regardless of your choice, she also gains another
+      minor ability that matches her dislike of men.
+
+      Since there are both talks and a quest that kick in right after she joins, if you want to
+      discover all the mod has to offer, keep some major quests, mod-added content you may still
+      complete after joining one of the guilds, and Shar-Teel herself.
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/SharTeelBG2EE-v1.00
   - name: Lhannd
     description: male CG fallen ranger, quest, friendship, romance
     components:
