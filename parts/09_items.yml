@@ -698,3 +698,18 @@
       repository: sod-items-to-bg2ee-eet
       release: v4.0.0.RC9
       asset: k0_iskp-v4.0.0.RC9.iemod
+  - name: Jarnip
+    description: "Jarnip's Wares: A New Bonus Merchant in the Adventurer's Mart"
+    overview: |
+      Adds a new bonus merchant, Jarnip, to the Adventurer's Mart
+      - 24 new items in total
+      - Equipment tailored to specific classes and kits
+      - Balanced to be comparable to late SoA equipment
+      - Lore-friendly descriptions to match the atmosphere of the original game
+      - Designed to fit seamlessly into a vanilla BG2 experience
+    components: ask
+    location:
+      github_user: Carsomyr6
+      repository: Jarnip
+      release: Jarnip
+      asset: Jarnip-main.zip
