@@ -315,7 +315,8 @@
       - 24 # Le repaire du Moissonneur, par Lava (contenu adulte): 9.0
       - 25 # Le grand Zudini, par Kulyok (contenu adulte): 9.0
       - 26 # Le messager, par Thimblerig: 9.0
-      - 27 # Ender Sai : la recompense du heros, par Thimblerig (AVERTISSEMENT - consultez le fichier README !): 9.0
+      # JAP 48
+      #- 27 # Ender Sai : la recompense du heros, par Thimblerig (AVERTISSEMENT - consultez le fichier README !): 9.0
       - 28 # Les romanciers, par Thimblerig: 9.0
       - 29 # Les honnetes mensonges des Deux Rives, par Lava: 9.0
       - 30 # Le dilemme d'un necromancien, par jastey: 9.0
@@ -336,8 +337,8 @@
     location:
       github_user: Gibberlings3
       repository: BG1_Romantic_Encounters
-      release: v15
-      asset: baldurs-gate-romantic-encounters-modification-bg1re-15pre.iemod
+      release: v16
+      asset: baldurs-gate-romantic-encounters-modification-bg1re-16.iemod
   - name: AC_QUEST
     description: Ascalon's Questpack
     installation:
