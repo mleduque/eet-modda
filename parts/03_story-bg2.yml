@@ -301,6 +301,20 @@
       - 0 # Eilistraee's Song -> Yes, but don't patch the existing save games: 7.1
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Eilistraees Song v7.5.1
+  - name: Jimothy
+    description: The Life and Heroism of Jimothy The Raccoon
+    overview: |
+      The beloved Jimothy, the famous raccoon that took us by storm, was recently seen in Toril!
+      The mod adds a new quest to Baldur's Gate 2: EE, during which you will get your chance to
+      meet our little hero and listen to the stories the nobles of the Athkatlan Government District
+      have to say about him, but... it's not just that. There are dark clouds gathering above the
+      District. Will you and Jimothy keep the evil at bay?
+
+      The quest begins some time after your first arrival in the Government District, after you've
+      talked to the three guards at night. Remember to visit the district every now and then.
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Jimothy-v1.0
 
   # acifer
   - name: Tidings
