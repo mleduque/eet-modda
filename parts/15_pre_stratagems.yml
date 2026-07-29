@@ -47,8 +47,8 @@
     location:
       github_user: Spellhold-Studios
       repository: BP-BGT-Worldmap
-      release: v13.1.1
-      asset: worldmap-v13.1.1.iemod
+      release: v14.0.0
+      asset: bp-bgt-worldmap-v14.0.0.zip
 
   - name: EET_end
     components:
