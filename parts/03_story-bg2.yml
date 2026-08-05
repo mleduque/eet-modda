@@ -401,6 +401,7 @@
       repository: Poisoned-Pathways
       release: v1.4
       asset: Poisoned_Pathways_V_1.4.zip
+      size_hint: 132Mb
 
   # Glittergear
   - name: FowlWish
