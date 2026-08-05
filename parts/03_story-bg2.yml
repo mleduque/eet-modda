@@ -399,8 +399,8 @@
     location:
       github_user: AciferBG
       repository: Poisoned-Pathways
-      release: v1.0
-      asset: Poisoned_Pathways_V_1.0.zip
+      release: v1.4
+      asset: Poisoned_Pathways_V_1.4.zip
 
   # Glittergear
   - name: FowlWish
