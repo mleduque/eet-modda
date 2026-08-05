@@ -550,13 +550,14 @@
       after: hiddenadventure
     components:
       - 0 # Autumn's Twilight MOD: v1.3
-      #- 1 # Enemy Difficulty: Hard
+      - 1 # Install Optional Kits for Autumn's Twilight
+      #- 2 # Enemy Difficulty: Hard
     location:
       github_user: evancauteren
       repository: bg2-autumns-twilight-mod
-      release: v1.4.5-hotfix
+      release: v1.5.3
       asset: bg2-autumns-twilight-mod.zip
-      size_hint: 812Mb
+      size_hint: 814Mb
   # some ironmodder entries
   - name: im10kulyok
     description: 'Kulyok entry for Iron Modder 10: The Oldest Trick In The Book'
