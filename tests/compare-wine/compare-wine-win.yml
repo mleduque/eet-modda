@@ -758,7 +758,7 @@ modules:
   - 19 # House Tweaks: Restore Reputation Increase Sound Effect for BG2: 1.91
   - 20 # House Tweaks: Race Text Patch: 1.91
   location:
-    github_user: ArtemiusI
+    github_user: TheArtisanBG
     repository: House-Rule-Tweaks
     tag: v2.1a
     patch:

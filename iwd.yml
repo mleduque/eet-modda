@@ -124,7 +124,7 @@ modules:
     components:
     - 0 # The Artisan's Corner: Heart of Winter Ending Tweak
     location:
-      github_user: ArtemiusI
+      github_user: TheArtisanBG
       repository: HoWMod
       branch: main
       refresh: 7days
@@ -263,14 +263,14 @@ modules:
     components:
       - 0 # Karihi NPC for Icewind Dale: Enhanced Edition: 1.0
     location:
-      github_user: ArtemiusI
+      github_user: TheArtisanBG
       repository: KarihiNPC
       tag: v1.01
   - name: AthanasiosNPC
     description: chaotic good halfling, an aged priest of Tempus, always ready for a fight
     components: ask
     location:
-      github_user: ArtemiusI
+      github_user: TheArtisanBG
       repository: IWD-Athanasios-NPC
       branch: main
       refresh: 7days
@@ -278,7 +278,7 @@ modules:
     description: neutral dwarf, an avenger determined to become a capable druid
     components: ask
     location:
-      github_user: ArtemiusI
+      github_user: TheArtisanBG
       repository: IWD-Nirik-NPC
       branch: main
       refresh: 7days
@@ -286,7 +286,7 @@ modules:
     description: LG half-orc kensai
     components: ask
     location:
-      github_user: ArtemiusI
+      github_user: TheArtisanBG
       repository: IWD-Guldruk-NPC
       branch: main
       refresh: 7days
@@ -294,7 +294,7 @@ modules:
     components:
       - 0 # Minerva NPC for Icewind Dale: Enhanced Edition: 1.0
     location:
-      github_user: ArtemiusI
+      github_user: TheArtisanBG
       repository: MinervaNPC
       tag: v1.1
   - name: CassiaNPC
@@ -525,7 +525,7 @@ modules:
     overview: overhauls the majority of Icewind Dale: Enhanced Edition’s named, enchanted or otherwise unique items, as well as adding some new ones into the mix
     components: ask
     location:
-      github_user: ArtemiusI
+      github_user: TheArtisanBG
       repository: IWDEE-Frostforged
       branch: main
       refresh: 7days
@@ -573,7 +573,7 @@ modules:
       - 20000 # Artisan's Kitpack: Eldritch Knight (Fighter / Mage Kit): 4.6
       - 20001 # Artisan's Kitpack: Arcane Trickster (Mage / Thief Kit): 4.6
     location:
-      github_user: ArtemiusI
+      github_user: TheArtisanBG
       repository: The-Artisan-s-Kitpack
       tag: v4.6
   - name: A7-ChaosSorcerer
@@ -762,7 +762,7 @@ modules:
     description: The Artisan's Tweaks and Overhauls
     components: ask
     location:
-      github_user: ArtemiusI
+      github_user: TheArtisanBG
       repository: House-Rule-Tweaks
       tag: v2.5
   - name: aTweaks

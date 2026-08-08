@@ -33,7 +33,7 @@
       - 9001 # Artisan's Kitpack: Warhorn Shaman Kit: 4.8
       - 9101 # Artisan's Kitpack: Give M'khiin the Warhorn Shaman Kit: 4.8
     location:
-      github_user: ArtemiusI
+      github_user: TheArtisanBG
       repository: The-Artisan-s-Kitpack
       branch: master
       refresh: 7days
@@ -73,7 +73,7 @@
     ignore_warnings: true # WARNING: no effects altered on C0SA112.itm
     components: ask
     location:
-      github_user: ArtemiusI
+      github_user: TheArtisanBG
       repository: Shadow-Magic
       branch: master
       refresh: 7days

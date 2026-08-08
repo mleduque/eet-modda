@@ -305,7 +305,7 @@
     components:
       - 11 # Bardic Wonders: Items
     location:
-      github_user: ArtemiusI
+      github_user: TheArtisanBG
       repository: Bardic-Wonders
       branch: master
       refresh: 7days

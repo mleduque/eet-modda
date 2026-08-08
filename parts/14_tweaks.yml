@@ -58,7 +58,7 @@
       #- 18 # House Tweaks: Give Stat Bonuses to EENPCs in BG2 (except Hexxat)
       #- 19 # House Tweaks: Useful Plot Items
     location:
-      github_user: ArtemiusI
+      github_user: TheArtisanBG
       repository: House-Rule-Tweaks
       branch: master
       refresh: 7days

@@ -410,7 +410,7 @@
       before: [ Reflections ]
     components: ask
     location:
-      github_user: ArtemiusI
+      github_user: TheArtisanBG
       repository: Candlekeep-Revisited
       branch: main
       refresh: 5days
@@ -562,7 +562,7 @@
     components:
       - 0 # "Caravans of Faerun: A Better Way to Travel"
     location:
-      github_user: ArtemiusI
+      github_user: TheArtisanBG
       repository: Caravans-of-Faerun
       branch: main
       refresh: 10days

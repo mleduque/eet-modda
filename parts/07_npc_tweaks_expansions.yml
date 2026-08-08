@@ -481,7 +481,7 @@
     components:
       - 0 # Rasaad Expansion for Baldur's Gate: Enhanced Edition
     location:
-      github_user: ArtemiusI
+      github_user: TheArtisanBG
       repository: Rasaad-Expansion-BG1
       branch: master
       refresh: 7days

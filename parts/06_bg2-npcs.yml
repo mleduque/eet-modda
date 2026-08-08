@@ -373,7 +373,7 @@
     components:
       - 0 # Pai'Na NPC for BG:EE
     location:
-      github_user: ArtemiusI
+      github_user: TheArtisanBG
       repository: Pai-Na-NPC-mod-for-BG2-EE
       tag: v1.9
   - name: Sirene_BG2
@@ -383,7 +383,7 @@
       #- 0   # Sirene NPC for BG2:EE
       #- 2 # Choose an portrait for Sirene (check mod folder for portraits) -> Alternate Light Armor portrait by Sirick
     location:
-      github_user: ArtemiusI
+      github_user: TheArtisanBG
       repository: Sirene-NPC-for-BG2-EE
       branch: master
       refresh: 1week
