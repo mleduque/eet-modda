@@ -711,5 +711,14 @@
     location:
       github_user: Carsomyr6
       repository: Jarnip
-      release: Jarnip
+      release: v1.1.0
       asset: Jarnip-main.zip
+  - name: JarnipToB
+    description: Jarnip in ToB: A New Merchant in Saradush
+    overview: This mod for BG2: ToB adds a new merchant to Saradush and introduces six new legendary items.
+    components: ask
+    location:
+      github_user: Carsomyr6
+      repository: JarnipToB
+      release: v1.0.0
+      asset: JarnipToB-main.zip
