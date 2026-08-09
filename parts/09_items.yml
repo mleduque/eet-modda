@@ -644,19 +644,6 @@
       repository: bgee-modpack
       release: v1.0.0
       asset: standard-awesome-modpack-v1.0.0.zip
-  - name: Jarnip
-    description: "Jarnip: A New Bonus Merchant in the Adventurer's Mart"
-    overview: |
-        Adds a new bonus merchant, Jarnip, to the Adventurer's Mart
-        24 new items in total
-        Emphasis on kit- and race-specific bonuses and abilities
-        Balanced to be strong in SoA and viable in ToB
-        Includes one easter-egg item whose power comes at a price
-    components: ask
-    location:
-      github_user: 11jo
-      repository: Jarnip
-      branch: main
 
   - name: interestingitems
     description: "Interesting Items: A Balanced Item Pack Mod"
@@ -699,26 +686,28 @@
       release: v4.0.0.RC9
       asset: k0_iskp-v4.0.0.RC9.iemod
   - name: Jarnip
-    description: "Jarnip's Wares: A New Bonus Merchant in the Adventurer's Mart"
+    description: "Jarnip: A New Bonus Merchant for Baldur's Gate 2"
     overview: |
-      Adds a new bonus merchant, Jarnip, to the Adventurer's Mart
-      - 24 new items in total
-      - Equipment tailored to specific classes and kits
-      - Balanced to be comparable to late SoA equipment
-      - Lore-friendly descriptions to match the atmosphere of the original game
-      - Designed to fit seamlessly into a vanilla BG2 experience
+      This mod for Baldur's Gate 2 adds a new bonus merchant named Jarnip to Shadows
+      of Amn and Throne of Bhaal. Like his colleagues Joluv and Deidre, Jarnip sells
+      a collection of unique magical items to aid you during your adventures. Suffering
+      from an excess of gold pieces in your purse? The prices of Jarnip's wares are among
+      the highest on the Sword Coast, but his stock is carefully curated to satisfy the
+      expectations of even the most demanding customers.
+
+      Jarnip introduces 36 new items that were designed for Vanilla+ SCS/Insane playthroughs.
+      Rather than simply introducing more powerful gear, this mod expands the range of viable
+      equipment without rendering iconic BG2 weapons obsolete. Every new item was carefully
+      designed with balance in mind, and comes with class-specific bonuses and abilities.
+      The priority was to reinforce class fantasy while preserving the feel and progression
+      of the original game. Please note that other mods changing vanilla classes and kits
+      are likely to affect gameplay balance.
+
+      In Shadows of Amn, Jarnip can be found in the Adventurer's Mart in Athkatla. In Throne
+      of Bhaal, Jarnip finds himself trapped in the Tankard Tree tavern in Saradush.
     components: ask
     location:
       github_user: Carsomyr6
       repository: Jarnip
-      release: v1.1.0
+      release: v2.0.0
       asset: Jarnip-main.zip
-  - name: JarnipToB
-    description: Jarnip in ToB: A New Merchant in Saradush
-    overview: This mod for BG2: ToB adds a new merchant to Saradush and introduces six new legendary items.
-    components: ask
-    location:
-      github_user: Carsomyr6
-      repository: JarnipToB
-      release: v1.0.0
-      asset: JarnipToB-main.zip
