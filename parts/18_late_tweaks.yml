@@ -324,11 +324,6 @@
       repository: A7-LightingPackEE
       release: v3.2
       asset: lin-A7-LightingPackEE-v3.2.zip
-  - name: Sentrizeal_AA_Pack
-    description: Sentrizeal's Alternate Avatar Pack
-    components: ask
-    location:
-      path: /home/mick/Games/modda-cache/static/SentrizealAvatarPack.zip
 
   - name: PPE
     description: Portraits, Portraits Everywhere

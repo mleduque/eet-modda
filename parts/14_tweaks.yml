@@ -300,9 +300,9 @@
       branch: fr
   - name: Sentrizeal_AA_Pack
     description: Sentrizeal's Alternate Avatar Pack
-    overview:
+    overview: Replaces some avatar animations and fixes others
     components: ask
-    location: Replaces some avatar animations and fixes others
+    location:
       http: https://www.sentrizeal.com/downloaditm5
       rename: SentrizealAvatarPack.zip
   - name: A7-MiscTweaks
