@@ -46,7 +46,13 @@ modules:
   - name: baldurianbarhop
     description: Baldurian Bar Hop(ping)
     overview: A short collection of random D&D tavern encounters for BGEE.
-    components: ask
+    components:
+    - index: 0
+      component_name: 'Thirst Things First: v0.91'
+    - index: 10
+      component_name: 'Dress to Distress: v0.91'
+    - index: 20
+      component_name: 'Fully Booked & Plot Twist: v0.91'
     location:
       github_user: bucketfulofsunshine
       repository: baldurian-bar-hop
