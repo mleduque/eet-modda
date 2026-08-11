@@ -44,7 +44,7 @@
     location:
       github_user: mleduque
       repository: NTotSC
-      branch: angel+fr-update
+      branch: composite_angel_orcs_french
       refresh: 10days
       patches:
         - relative: patches/eet/ntotsc-fix-fr.diff
