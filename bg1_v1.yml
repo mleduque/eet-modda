@@ -25,10 +25,10 @@ modules:
       size_hint: 126Mb
   - name: correctfrbg1ee
     components:
-    - 10 # Correction de la traduction de Baldur''s Gate : Enhanced Edition: 0.9
-    - 20 # Patch audio francais: 0.9
-    - 40 # Suppression des ensembles de voix en anglais: 0.9
-    - 50 # Restauration des cinematiques classiques: 0.9
+      - 10 # Correction de la traduction de Baldur''s Gate : Enhanced Edition: 0.9
+      - 20 # Patch audio francais: 0.9
+      - 40 # Suppression des ensembles de voix en anglais: 0.9
+      - 50 # Restauration des cinematiques classiques: 0.9
     location:
       github_user: r-e-d
       repository: correctfrBG1EE
