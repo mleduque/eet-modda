@@ -5,7 +5,8 @@ modules:
   #### Fixpacks
   #####################
   - name: eefixpack
-    components: ask
+    components:
+      - 0 # 'Correctifs principaux: Beta 2 - Working Master'
     location:
       github_user: Gibberlings3
       repository: EE_Fixpack
