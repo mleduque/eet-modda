@@ -211,13 +211,13 @@
     components:
       - 0 # Colours of Infinity - The White Queen -> Yes, but don't patch the existing save games: 6.9
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/colours_of_infinity/The White Queen v7.4.1
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/colours_of_infinity/The White Queen v7.4.2
   - name: ISNF
     description: "Colours of Infinity: I Shall Never Forget"
     components:
       - 0 # Colours of Infinity: I Shall Never Forget: 6.0
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/colours_of_infinity/I Shall Never Forget v6.5.4
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/colours_of_infinity/I Shall Never Forget v6.5.6
 
   # Athkatlan Grounds series
   - name: SouthernEdge
@@ -231,7 +231,7 @@
     components:
       - 0 # Le Salon des vases : une nouvelle zone sous les bas quartiers d'Athkatla: 2.92
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/Oozes Lounge v2.99
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/Oozes Lounge v3.1
   - name: TangledIsle
     description: "Athkatlan Grounds: The Tangled Oak Isle"
     components:
@@ -249,7 +249,7 @@
     components:
       - 0 # Alabaster Sands: the new area of Athkatla -> Yes, but don't patch existing save games: v1.0
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/AlabasterSands v1.9.2
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/AlabasterSands v2.0
   - name: InkGallery
     description; Athkatlan Grounds: The Ink Gallery
     overview: |
@@ -264,7 +264,7 @@
       area.
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/InkGallery-v1.01
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/InkGallery-v1.4.1
 
   # The Dreadful Tales series
   - name: InLoveUndeath
@@ -273,13 +273,13 @@
       - 0 # The Dreadful Tales: In Love, Undeath - a new quest and companion for BG2EE -> Yes, but don't patch existing save games: v1.8.2
       - 2 #/ Xzele: Player-Initiated Dialogues: v1.8.2
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/the_dreadful_tales/InLoveUndeath-v1.8.4
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/the_dreadful_tales/InLoveUndeath-v1.8.5
   - name: JuniperAndTheStoneLeech
     components:
       - 0 # The Dreadful Tales: Juniper and the Stone Leech - companion and a quest mod for BG2EE ToB: v1.7
       - 1 # The Dreadful Tales: Juniper and the Stone Leech - Player-Initiated Dialogues for Juniper: v1.7
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/the_dreadful_tales/JuniperAndTheStoneLeech-v1.8.3
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/the_dreadful_tales/JuniperAndTheStoneLeech-v1.8.6
   - name: BloodiedStingsOfBarovia
     components:
       - 0 # The Bloodied Stings of Barovia - a dark Ravenloft adventure for Baldur's Gate 2 EE: v2.2
@@ -294,13 +294,13 @@
       - 2 # The Journey to the Whin Hill: add the optional minor joinable companion - Afu-Zuuvi
       - 3 # The Journey to the Whin Hill: Player-Initiated Dialogues for the optional companion - Afu-Zuuvi
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/WhinHill-v1.3.3
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/WhinHill-v1.4
   - name: Eilistraee
     description: Eilistraee's Song
     components:
       - 0 # Eilistraee's Song -> Yes, but don't patch the existing save games: 7.1
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Eilistraees Song v7.5.1
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Eilistraees Song v7.5.2
   - name: Jimothy
     description: The Life and Heroism of Jimothy The Raccoon
     overview: |

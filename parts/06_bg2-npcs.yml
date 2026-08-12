@@ -112,7 +112,7 @@
       - 0 # Petsy Chattertone: 4.2
       #- 1 # Petsy/Nephele crossmod banters: 4.2
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Petsy v4.2
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Petsy v4.4.3
       patch:
         relative: patches/eet/petsy-romance.diff
       replace:
@@ -172,7 +172,7 @@
     components:
       - 0 # Wilson Chronicles - expansion for our favorite bear companion: 1.9
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/WilsonChronicles v2.6
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/WilsonChronicles v2.7
       replace:
         - file_globs: ["baf/wilson_append.baf"]
           replace: 'RealSetGlobalTimer("L#WilsonFriendTime","GLOBAL",1200)'
@@ -221,7 +221,7 @@
       - 4 # Skie: The Cost of One Girl's Soul - Add Player-Initiated Dialogue (PID) for Eddard: 4.01
       - 5 # Skie: The Cost of One Girl's Soul - Add brand new SoD-oriented items to BG2: 4.01
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/SkieCost v7.00
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/SkieCost v7.1.1
       replace:
         - file_globs: ["dialogues/pid-*.d"]
           replace: 'RealSetGlobalTimer("L#SDSkiesNewSeriesTime","GLOBAL",3800)'
@@ -247,7 +247,7 @@
       - 0 # Faldorn NPC for BG2EE
       - 1 # Faldorn NPC for BG2EE: Player-Initiated Dialogues (PIDs)
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/FaldornBG2 v1.4
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/FaldornBG2 v1.5.1
   - name: SharTeelBG2EE
     description: SHAR-TEEL FOR BG2EE
     overview: |
@@ -284,7 +284,7 @@
       - 0 # Fyalvara - Baldur's Gate 2: EE NPC -> Make Fyalvara a kitless fighter.: v1.1
       - 3 # Fyalvara - install Player-Initiated Dialogues?: v1.1
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/fyalvara v1.3
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/fyalvara v1.4
   - name: verrBG2
     description: soa, same as above, romance
     components:
@@ -347,7 +347,7 @@
       - new temple in Athkatla, new divination spells, new items
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/DynaheirBG2EE-v1.1
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/DynaheirBG2EE-v1.3
   - name: KhalidBG2
     description: Khalid BG2EE
     overview: |
@@ -357,7 +357,7 @@
       - no romance but deep friendship path
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/LavasKhalidBG2 v1.07
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/LavasKhalidBG2 v1.08
   - name: Quayle
     description: QUAYLE BG2(EE)
     overview: |

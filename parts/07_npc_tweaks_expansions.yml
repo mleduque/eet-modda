@@ -13,7 +13,7 @@
       - 54 # Portraits for Viconia -> Use recolored Baldur's Gate 2 portrait (partially blue clothing): v7.3
       - 60 # Add special ability: Embrace of Shar: v7.3
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/ViconiaRevamped v7.3
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/ViconiaRevamped v7.4.1
   - name: chattyimoen
     description: bg1 - adds banters to Imoen
     components:

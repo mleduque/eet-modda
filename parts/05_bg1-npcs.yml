@@ -429,7 +429,7 @@
     components:
       - 0
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/WalahnanBG1 v2.00
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/WalahnanBG1 v2.01
       replace:
         - file_globs: ["dialogue/L#SWALAJ.d", "dialogue/L#WALAHJ.d"]
           replace: 'RealSetGlobalTimer("L#WalahnanUniquePIDTIME","GLOBAL",3800)'
@@ -443,7 +443,7 @@
     components:
       - 0 #  Bristlelick the gnoll companion for BGEE: 2.0
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Bristlelick v2.5
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Bristlelick v2.5.1
       replace:
         - file_globs: ["scripts/l#2brist.baf", "scripts/l#brist.baf"]
           regex: true
@@ -470,7 +470,7 @@
   - name: EldothSoD
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/EldothSoD-v1.0
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/EldothSoD-v1.1
   - name: FaldornSoD
     components: ask
     location:
