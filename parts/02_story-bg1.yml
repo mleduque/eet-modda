@@ -613,7 +613,7 @@
     location:
       github_user: bucketfulofsunshine
       repository: bfs-reactivity-pack
-      branch: master
+      branch: main
       refresh: 7days
   - name: NecromancersQuestRestored
     description: Necromancers Quest Restored (NQR)
