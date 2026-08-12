@@ -378,8 +378,8 @@
     location:
       github_user: AciferBG
       repository: Throne-of-the-Mad-God
-      release: v2.2
-      asset: Throne_of_the_Mad_God_v2.2.zip
+      release: v2.3
+      asset: Throne_of_the_Mad_God_v2.3.zip
   - name: crucible
     components:
       - 1 # Install Crucible -> Fully Voiced NPCs using AI: v3.2
@@ -429,7 +429,7 @@
     location:
       github_user: Glittergear
       repository: GoneNuts
-      branch: master
+      branch: main
       refresh: 7days
   - name: DeadGardens
     description: BG2, one quest mod
