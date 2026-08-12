@@ -628,5 +628,4 @@
     location:
       github_user: Dziadekkk
       repository: NecromancersQuestRestored
-      release: "1.2"
-      asset: NecromancersQuestRestored1.2.zip
+      tag: "v1.4"
