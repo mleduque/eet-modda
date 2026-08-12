@@ -238,7 +238,7 @@
     components:
       - 0 # Le Salon des vases : une nouvelle zone sous les bas quartiers d'Athkatla: 2.92
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/Oozes Lounge v3.1
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/Ooze Lounge v3.1
   - name: TangledIsle
     description: "Athkatlan Grounds: The Tangled Oak Isle"
     components:
