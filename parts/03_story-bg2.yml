@@ -105,12 +105,15 @@
     installation:
       general: at least component 5 must be after ub
       after: ub
-    components:
-      - 6 # Store Restorations (BG1): v1
-      - 7 # Quest Restorations (BG1): v1
-      - 12 # Artemis Entreri Encounter: v1
-      - 14 # Better Prepared Allies: v1
-      - 15 # Obtain Obscure Items: v1
+    components: 
+      - 8 # Store Restorations (BG1): v1
+      - 9 # Quest Restorations (BG1): v1
+      - 10 # Minor Restorations (BG1): v1
+      - 11 # Minor Restorations (BG2): v1
+      - 12 # Volo's Travels: v1
+      - 14 # Artemis Entreri Encounter: v1
+      - 16 # Better Prepared Allies: v1
+      - 17 # Obtain Obscure Items: v1
     location:
       github_user: AngelGryph
       repository: MadeInHeaven_FixesAndRestorations
