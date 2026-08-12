@@ -473,7 +473,7 @@
     location:
       github_user: The-Gate-Project
       repository: Garrick_Tales-of-a-Troubadour
-      branch: master
+      branch: main
       refresh: 7days
 
   - name: ExtraExpandedEnhancedEncounters
