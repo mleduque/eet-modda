@@ -388,13 +388,13 @@
   - name: thecalling
     description: The calling
     components:
-      - 0 # The Calling (L'appel): v6_WIP_test_build_06242024
-      - 10 # Forteresse gnoll amelioree: v6_WIP_test_build_06242024
-      - 61 # The Calling (L'Appel) : Chaman - Le RÃªve -> Utiliser des couleurs dans les dialogues: v6_WIP_test_build_06242024
-      - 70 # The Calling (L'Appel) : Moine - Restaurer Saiai no Hito: v6_WIP_test_build_06242024
-      - 50 # Rendre toutes les quetes de Calling accessibles a toutes les classes: v6_WIP_test_build_06242024
-      - 20 # Resolution pacifique a l'ile des loups-garous: v6_WIP_test_build_06242024
-      - 40 # Pack d'objets exotiques: v6_WIP_test_build_06242024
+      - 0 # The Calling (L'appel): v6
+      - 10 # Forteresse gnoll amelioree: v6
+      - 61 # The Calling (L'Appel) : Chaman - Le RÃªve -> Utiliser des couleurs dans les dialogues: v6
+      - 70 # The Calling (L'Appel) : Moine - Restaurer Saiai no Hito: v6
+      - 50 # Rendre toutes les quetes de Calling accessibles a toutes les classes: v6
+      - 20 # Resolution pacifique a l'ile des loups-garous: v6
+      - 40 # Pack d'objets exotiques -> Ajouter des objets exotiques: v6
     location:
       github_user: mleduque # Gibberlings3
       repository: The_Calling
