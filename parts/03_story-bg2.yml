@@ -308,7 +308,7 @@
     components:
       - 0 # Eilistraee's Song -> Yes, but don't patch the existing save games: 7.1
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Eilistraees Song v7.5.2
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Eilistraee Song v 7.5.2
   - name: Jimothy
     description: The Life and Heroism of Jimothy The Raccoon
     overview: |
