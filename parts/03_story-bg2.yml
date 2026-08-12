@@ -34,9 +34,13 @@
       - 1 # The Surgeon's Plight: v6
       - 2 # Hunted or Hunter?: v6
       - 3 # Enhanced Candlekeep Catacombs: v6
+      - 4 # Enhanced Ulcaster Ruins: v6
+      - 5 # Enhanced Xvart Village: v6
       - 6 # Enhanced Zombie Farm: v6
+      - 7 # Enhanced Trademeet Battles: v6
       - 14 # Tougher Spiders: v6
       - 16 # Ulcaster Stays Put: v6
+      - 17 # More Spectacles of Spectacle Charges: v6
     ignore_warnings: true
     location:
       github_user: AngelGryph
