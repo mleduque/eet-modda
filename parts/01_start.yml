@@ -100,18 +100,3 @@ modules:
       branch: master
       refresh: 1day
       size_hint: 1.3Gb
-
-  - name: reactivitypack
-    description: Reactivity Pack
-    overview: Small dialogue tweaks for class, race and other related flavour text.
-    components:
-      - 2 # Basic BG2EE Pack
-    location:
-      http: https://github.com/bucketfulofsunshine/bfs-reactivity-pack/releases/download/Nightly/bfs-reactivity-pack.zip
-      layout:
-        layout_type: single_dir
-        strip_leading: 1
-      replace:
-        - file_globs: ['setup-reactivitypack.tp2']
-          replace: 'REQUIRE_PREDICATE GAME_IS ~bg2ee~ ~This mod requires BG2EE~'
-          with: 'REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~This mod requires BG2EE~'
