@@ -648,9 +648,10 @@
       - 40 # Stores Balancing: v2.6
       - 50 # Item Balancing: v2.6
     location:
-      github_user: TotoR115
+      github_user: RiwsPy
       repository: ToA
-      branch: master
+      branch: trans_fr
+      refresh: 10days
   - name: tod
     description: Tower Of Deception - BG2 mod, dungeon-style
     components:
