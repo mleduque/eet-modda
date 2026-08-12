@@ -98,5 +98,5 @@ modules:
       github_user: Spellhold-Studios
       repository: Baldurs-Gate-Graphical-Overhaul
       branch: master
-      refresh: 1day
+      refresh: 5day
       size_hint: 1.3Gb
