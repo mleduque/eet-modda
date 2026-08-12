@@ -138,8 +138,8 @@
     location:
       github_user: Gibberlings3
       repository: Restored-Rhynn-Lanthorn
-      tag: v-beta-4
-      asset: lin-dw_lanthorn-Beta_3.tar.gz
+      release: v-beta-4
+      asset: dw-lanthorn-beta-4.iemod
 
   - name: fadingpromises
     components:
