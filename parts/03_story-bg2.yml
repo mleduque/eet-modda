@@ -269,7 +269,8 @@
       You may find The Ink Gallery behind the Council of Six building -- it may be reached either through
       its halls, or from outside, through the covered pathway right below the newly opened section of the 
       area.
-    components: ask
+    components:
+      - 0 # Athkatlan Grounds: The Ink Gallery: v1.4.1
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/InkGallery v1.4.1
 
