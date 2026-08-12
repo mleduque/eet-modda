@@ -444,7 +444,8 @@
   - name: lfgp
     description: Lunia-For-Good-Parties
     overview: Allows Lawful Good, Neutral Good, Chaotic Good & Lawful Neutral characters, that have a reputation of 14 or above, to travel to Lunia.
-    components: ask
+    components:
+      - 0 # Lunia for Good Parties: V1.9
     location:
       github_user: bucketfulofsunshine
       repository: Lunia-For-Good-Parties
@@ -455,7 +456,8 @@
       Allows Lawful Good, Neutral Good, Chaotic Good & Lawful Neutral characters, that have a reputation
       of 14 or above, to travel to Resurrection Gorge.
       In fact, in this alternate version of events, Dorn himself becomes the villain of the story.
-    components: ask
+    components:
+      - 0 # The Pursuit of Justice: 1.2
     location:
       github_user: bucketfulofsunshine
       repository: the-pursuit-of-justice
@@ -463,7 +465,8 @@
   - name: peacespeaker
     description:
     overview:
-    components: ask
+    components:
+      - 0 # Peacespeaker, The Anti-Violence Sword: 2.3
     location:
       github_user: bucketfulofsunshine
       repository: peacespeaker
