@@ -407,7 +407,11 @@
     installation:
       general: declare a cnoflict with Reflections, probably spurious
       before: [ Reflections ]
-    components: ask
+    components:
+      - 0 # Candlekeep Revisited: BG1 Prologue Expansion
+      - 1 # Candlekeep Revisited: BG1 Expanded Starting Sequence
+      - 2 # Candlekeep Revisited: Osprey joinable NPC for SoD
+      - 3 # Candlekeep Revisited: New Portraits for Arkanis, Canderous, Deder, Mordaine, Osprey
     location:
       github_user: TheArtisanBG
       repository: Candlekeep-Revisited
