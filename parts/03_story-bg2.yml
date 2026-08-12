@@ -543,7 +543,7 @@
       repository: Lucy_the_Wyvern
       release: v5.0
       asset: lucy-the-wyvern-v5.0.iemod
-  - name: questpack
+  - name: d0questpack
     description: SimDing0's Quest Pack, previously d0questpack
     installation:
       before: alternatives
