@@ -320,7 +320,8 @@
 
       The quest begins some time after your first arrival in the Government District, after you've
       talked to the three guards at night. Remember to visit the district every now and then.
-    components: ask
+    components:
+      - 0 # The Life and Heroism of Jimothy the Raccoon - A Quest Mod for BG2EE: v1.0
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Jimothy-v1.0
 
