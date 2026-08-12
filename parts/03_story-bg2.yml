@@ -296,13 +296,13 @@
 
   # various Lava
   - name: WhinHill
-    description: "THE JOURNEY TO THE WHIN HILL"
+    description: "The Journey To The Whin Hill"
     components:
       - 0 # The Journey to the Whin Hill - a Baldur's Gate 2: EE quest -> Yes, but don't patch existing save games
       - 2 # The Journey to the Whin Hill: add the optional minor joinable companion - Afu-Zuuvi
       - 3 # The Journey to the Whin Hill: Player-Initiated Dialogues for the optional companion - Afu-Zuuvi
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/WhinHill-v1.4
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/WhinHill v1.4
   - name: Eilistraee
     description: Eilistraee's Song
     components:
