@@ -870,8 +870,12 @@
 
   - name: TheForgottenEdge
     description: The Forgotten Edge
-    overview: restores and expands upon Perdue’s forgotten short sword, turning it into a meaningful weapon path that spans both games. What begins as a modest blade in BG1 can later be reforged by Cromwell in BG2 into a deadly weapon of acid and shadow.
-    components: ask
+    overview: |
+      restores and expands upon Perdue’s forgotten short sword, turning it into a meaningful weapon path
+      that spans both games. What begins as a modest blade in BG1 can later be reforged by Cromwell in*
+      BG2 into a deadly weapon of acid and shadow.
+    components:
+      - 0 # The Forgotten Edge - Items: 0.2
     location:
       github_user: 11jo
       repository: TheForgottenEdge
@@ -898,7 +902,10 @@
     website: 
       - https://web.archive.org/web/20240805091007/https://mods.chosenofmystra.net/theundying/
       - https://forums.beamdog.com/discussion/34297/the-undying-mod-bg2-ee-compatible/p1
-    components: ask
+    components:
+      - 0  #  "The Undying" Mod : 3.0
+      #- 3 # Harder ennemies
+    ignore_warnings: true
     location:
       github_user: 11jo
       repository: The-Undying
