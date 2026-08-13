@@ -586,7 +586,7 @@
     components:
       - 0
     location:
-      path: /home/mick/Games/modda-cache/static/im10_voloquest.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/ironmodder/im10_voloquest.zip
 
   # small G3 quest mods
   - name: g3anniversary
