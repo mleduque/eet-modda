@@ -770,6 +770,7 @@
       repository: Region_of_Terror
       branch: master
       refresh: 10days
+      size_hint: 585Mb
       patch:
         relative: patches/eet/rot-taming-drizzt.diff
   - name: TDD
