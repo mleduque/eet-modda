@@ -814,7 +814,8 @@
       New monsters
       New items
       A couple of mini quests
-    components: ask
+    components:
+      - 0 #0 // AjocMod: v1.7
     location:
       github_user: Spellhold-Studios
       repository: AjocMod
