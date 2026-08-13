@@ -851,7 +851,8 @@
       github_user: Spellhold-Studios
       repository: Check_the_Bodies
       branch: master
-      refresh: 3days
+      refresh: 13days
+      size_hint: 430Mb
       patches:
         - relative: patches/eet/ctb-more-quests.diff
 
