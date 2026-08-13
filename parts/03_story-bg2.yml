@@ -761,9 +761,10 @@
   - name: RoT
     description: Region of Terror
     overview: SoA mod, large quest mod focussed on Drizzt Do'Urden. 35 quests, 160 areas, npcs, kits,spells
-    components: ask
-      #- 0 # Region Of Terror: pre-v6.0
-      #- 3 # Alternative Maribur area (by Cuttooth): pre-v6.0
+    components:
+      - 0 # Region Of Terror: pre-v6.0
+      - 3 # Alternative Maribur area (by Cuttooth): pre-v6.0
+      # 4 (wizard spells is installed later)
     location:
       github_user: Spellhold-Studios
       repository: Region_of_Terror
