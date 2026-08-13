@@ -782,7 +782,7 @@
       - Onset of the Darkest Day : quest between end of SoA and ToB
     components: ask
     location:
-      github_user: Weigo
+      github_user: weigo87
       repository: The_Darkest_Day
       branch: main
       refresh: 6days
