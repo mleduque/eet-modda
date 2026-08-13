@@ -785,7 +785,8 @@
       github_user: weigo87
       repository: The_Darkest_Day
       branch: main
-      refresh: 6days
+      refresh: 1month
+      size_hint: 500Mb
   - name: TDD_Hall-of-Knowledge
     description: Hall-of-Knowledge
     overview: |
