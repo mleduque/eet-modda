@@ -781,7 +781,10 @@
       - Riatavin town, main quest with travel by sea and in the underdark, with 3 side quests
       - Trollford abandonned village with one quest (dungeon crawl)
       - Onset of the Darkest Day : quest between end of SoA and ToB
-    components: ask
+    components:
+      - 0 # TDD - Quests and new NPCs: v2.0 alpha
+      - 1 # TDD - BG1 NPCs: v2.0 alpha
+      # - 6 Item & Spell Balancing would be desireble
     location:
       github_user: weigo87
       repository: The_Darkest_Day
