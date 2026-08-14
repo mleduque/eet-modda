@@ -8,7 +8,9 @@
     components:
       - 0 # Imoen gets turned to stone in Promenade fight: 1.0
     location:
-      path: /home/mick/Games/modda-cache/static/ImoenIsStone_v1-0.zip
+      http: https://america.iegmc.com/g3/ImoenIsStone_v1-0.zip
+      alt:
+        file: /home/mick/Games/modda-cache/iemods-archive/g3/ImoenIsStone_v1-0.zip
   - name: Saerileth # ok but disabled
     components: ask
     location:
