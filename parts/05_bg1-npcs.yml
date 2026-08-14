@@ -471,7 +471,7 @@
   - name: EldothSoD
     components: ask
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/EldothSoD-v1.1
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/EldothSoD v1.1
   - name: FaldornSoD
     components: ask
     location:
