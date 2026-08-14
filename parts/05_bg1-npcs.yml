@@ -464,7 +464,8 @@
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/verrsza v6.3
   - name: ArkanisSoD
-    components: ask
+    components:
+      - 0 # Sir Arkanis for Siege of Dragonspear: v1.1
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/ArkanisSoD v1.1
   - name: EldothSoD
