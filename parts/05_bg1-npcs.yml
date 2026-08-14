@@ -374,7 +374,7 @@
       - 2 # ~Choose an portrait for Sirene (check mod folder for portraits): Alternate Light Armor portrait by Sirick
     location:
       github_user: TheArtisanBG
-      repository: Sirene-NPC
+      repository: Sirene-BG1
       branch: master
       refresh: 10days
       replace:
