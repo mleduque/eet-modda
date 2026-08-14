@@ -404,7 +404,8 @@
       - Two new custom music tracks created for this mod; one additional music track from NWN
       - Approx. 5 hours of gameplay
       - Compatible with both BG2EE and EET    
-    components: ask
+    components:
+      - 0 # Poisoned pathways: v1.5
     location:
       github_user: AciferBG
       repository: Poisoned-Pathways
