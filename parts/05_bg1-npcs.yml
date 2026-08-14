@@ -469,15 +469,18 @@
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/ArkanisSoD v1.1
   - name: EldothSoD
-    components: ask
+    components:
+      - 0 # Eldoth for the Siege of Dragonspear: v1.1
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/EldothSoD v1.1
   - name: FaldornSoD
-    components: ask
+    components:
+      - 0 # Faldorn for Siege of Dragonspear: v1.1
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/FaldornSoD v1.1
   - name: MotherSoD
-    components: ask
+    components:
+      - 0 # Mother Lost for Siege of Dragonspear: v1.0
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/MotherSoD-v1.0
 
