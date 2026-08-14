@@ -429,7 +429,7 @@
     components:
       - 0
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/WalahnanBG1 v2.01
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Walahnan v2.01
       replace:
         - file_globs: ["dialogue/L#SWALAJ.d", "dialogue/L#WALAHJ.d"]
           replace: 'RealSetGlobalTimer("L#WalahnanUniquePIDTIME","GLOBAL",3800)'
