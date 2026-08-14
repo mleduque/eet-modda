@@ -488,12 +488,11 @@
     description: chaotic good half-elven bard, friendship, banters
     components:
       - 0 # Ophysia, a Skald companion for BG:EE and SoD
-      - 1 # Optional: Give Ophysia interjections throughout BG1 content?
+      - 10 # Optional: Give Ophysia interjections throughout BG1 content?
     location:
       github_user: Llewren
       repository: OphysiaBG1
-      release: v1.4
-      asset: OphysiaBG1.zip
+      commit: 1793de8f5b20e
   - name: IndiNPC
     description: bg1 one-day NPC, half-elven, lawful good fighter/mage, banters, small quest
     components:
