@@ -241,13 +241,13 @@
       after: [ Aura, Emily, Helga, Kale, Recorder, Vienxay ]
     components:
       - 0 # Helga NPC Mod: 1.56
+      - 3 # Helga Alternate Class: Fighter/Priest of Haela -> Fighter/Priest of Haela (Fighter Multi-class): 1.57
     location:
       github_user: Skitia
       repository: Helga-BG1
       branch: master
       refresh: 3days
       patches:
-        - relative: patches/eet/helga_bg1-defaultportrait-nomusic.diff
         - relative: patches/eet/helga-crossmod.diff
       replace:
         - file_globs: ["Dialogue/SoD/X32HelgJ.D"]
