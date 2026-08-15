@@ -1142,7 +1142,9 @@
         quest, allowing you to permanently destroy Hexxat and save Clara.
       - If Anomen fails his paladin trial, this component adds extensive content for his Chaotic Neutral
         alignment. With Clara's influence, Anomen might still achieve his goal of becoming a real paladin.
-    components: ask
+    components:
+      - 0 # Clara et Anomen Sombre: Version 1.4.4
+      - 1 # Portrait optionnel pour Clara dans le style de BG2: Version 1.4.4
     location:
       github_user: mleduque
       repository: LivingClara
