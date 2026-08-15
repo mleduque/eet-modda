@@ -253,7 +253,7 @@
     components: [0]
     location:
       github_user: Spellhold-Studios
-      repository: SarevokFriendship
+      repository: Sarevok-Friendship
       release: v2.7
       asset: sarevok-friendship-v2.7.iemod
   - name: HexxatFriendship
