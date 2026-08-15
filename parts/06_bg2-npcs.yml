@@ -349,7 +349,9 @@
       - 2 major and 2 minor quests (SoA+ToB)
       - possibility to change Dynaheir's school
       - new temple in Athkatla, new divination spells, new items
-    components: ask
+    components:
+      - 0 # Dynaheir for Baldur's Gate 2: EE: v1.3
+      - 1 # Dynaheir for Baldur's Gate 2: EE - Player-Initiated Dialogues: v1.3
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/DynaheirBG2EE v1.3
   - name: KhalidBG2
