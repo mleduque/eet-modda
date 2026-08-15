@@ -978,7 +978,7 @@
   - name: yeslicknpc
     description: transposes bg1 dwarf in bg2 - banters, dialogue, no quest
     components:
-      - 1
+      - 1 # Yeslick NPC for BGII: SoA & ToB -> Yeslick is a Fighter-Alaghor of Clangeddin (cleric kit): v5.0
     location:
       github_user: Spellhold-Studios
       repository: Yeslick_NPC
@@ -986,7 +986,8 @@
       asset: yeslick-npc-v5.0.iemod
   - name: Branwen
     description: bg2+tob, adds branwen, friendship, romance, pid, banters, interjections
-    components: [0]
+    components:
+      - 0 # Branwen BG2 NPC mod for players and modders: v8pre
     location:
       github_user: Pocket-Plane-Group
       repository: Branwen_for_BGII
@@ -1071,7 +1072,8 @@
     overview: |
       SoA+ToB ; Baeloth in Coper Coronet
       Banters, interjections, quest
-    components: ask
+    components:
+      - 0 # Baeloth BG2: v0.20
     location:
       github_user: dark0dave
       repository: BaeBG2
