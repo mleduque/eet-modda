@@ -270,7 +270,9 @@
       Since there are both talks and a quest that kick in right after she joins, if you want to
       discover all the mod has to offer, keep some major quests, mod-added content you may still
       complete after joining one of the guilds, and Shar-Teel herself.
-    components: ask
+    components:
+      - 0 # Shar-Teel for Baldur's Gate 2: Enhanced Edition: v1.0
+      - 1 # Shar-Teel for Baldur's Gate 2: Enhanced Edition - Player Initiated Dialogues (PIDs): v1.0
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/SharTeelBG2EE-v1.00
   - name: Lhannd
