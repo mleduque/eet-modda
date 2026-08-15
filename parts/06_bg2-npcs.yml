@@ -361,7 +361,9 @@
       - friendship path
       - new version of Baron Ployer and Harpers quests
       - no romance but deep friendship path
-    components: ask
+    components:
+      - 0 # Khalid for BG2EE: v1.08
+      - 1 # Khalid for BG2EE: Player-Initiated Dialogues: v1.08
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/LavasKhalidBG2 v1.08
   - name: Quayle
