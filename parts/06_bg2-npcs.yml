@@ -1144,9 +1144,11 @@
         alignment. With Clara's influence, Anomen might still achieve his goal of becoming a real paladin.
     components: ask
     location:
-      github_user: trow
+      github_user: mleduque
       repository: LivingClara
-      branch: master
+      release: v1.4.4
+      branch: patch-1
+      refresh: always
 
   - name: w_packmule
     components:
