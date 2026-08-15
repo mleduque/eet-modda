@@ -952,8 +952,8 @@
   - name: xan
     description: Xan NPC for BG2 - friendship, romance
     components:
-      - 0
-      - 2
+      - 0 #/ Xan NPC MOD for Baldur's Gate II: v19
+      - 2 # Install alternate class for Xan? -> Change Xan's class to Mage: v19
     location:
       github_user: Pocket-Plane-Group
       repository: Xan_for_BGII
