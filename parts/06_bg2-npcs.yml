@@ -781,7 +781,7 @@
       - 1000 # The Beaurin Legacy for BG2:SoA & ToB & BGII:EE
       - 3010 # Minyae's Portrait -> Change Minyae's portrait to alternative by TamikaProud at DeviantArt
     location:
-      path: /home/mick/Games/modda-cache/static/lin-TheBeaurinLegacy-v5.3.tar.gz
+      path: /home/mick/Games/modda-cache/iemods-archive/g3/TheBeaurinLegacy-5.3
       replace:
         - file_globs: ['Dialogue/SoA/QI#MIJ.d', 'Dialogue/ToB/QI#M25J.d']
           replace: 'RealSetGlobalTimer("QI#MiTimer","GLOBAL",3600)'
