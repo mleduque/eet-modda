@@ -522,7 +522,7 @@
       - 0 # Haiass le Loup: v2.4
       - 10 #  Haiass peut être ressuscité -> Pénalisation modérée (-4 Constitution temporairement): v2.4
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/others/haiass_v2_4.zip
+      http: https://github.com/Backup-Gate/Clan_DLAN/raw/main/Clan_DLAN/Haiass-el-Lobo/haiass_v2_4.zip
 
   - name: isra
     components: [0]
