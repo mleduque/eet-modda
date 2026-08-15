@@ -372,7 +372,9 @@
       introduces Quayle from BG1 as a party joinable NPC. But the condition is ... Aerie's death.
       A mini quest (including a small new area) is provided, where you decide who you prefer to travel with.
       The mod includes time-triggered and scenery talks for both SoA and ToB, banters, interjections, and new items.
-    components: ask
+    components:
+      - 0 # Quayle NPC for Baldur's Gate 2: v7.6
+      - 1 # Quayle NPC: Player-Initiated Dialogues: v7.6
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Quayle-v7.6
 
