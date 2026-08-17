@@ -12,6 +12,7 @@ modules:
       repository: EE_Fixpack
       branch: master
       refresh: 7days
+      size_hint: 130Mb
   - name: correctfrbg2ee
     components:
       - 10 # Correction de la traduction de Baldur's Gate II : Enhanced Edition: 0.7

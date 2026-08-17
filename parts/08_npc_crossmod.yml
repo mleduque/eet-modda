@@ -97,7 +97,7 @@
   - name: npcflirt
     description: BioWare NPC Flirt Packs for BGII!
     overview: Adds flirst and player initiated dialogues to the BGII BioWare romances!
-    components: ask
+    components: all
     location:
       github_user: Pocket-Plane-Group
       repository: NPC_Flirt_Packs
