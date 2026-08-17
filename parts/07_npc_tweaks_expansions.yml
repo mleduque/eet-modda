@@ -472,7 +472,9 @@
   - name: CerndRomance
     description: Cernd Romance
     overview: SoA+ToB romance with Cernd for  Nx and xN charnames + small quest
-    components: ask
+    components:
+      - 0 # Cernd Romance for Baldur's Gate 2: Enhanced Edition: v1.01
+      - 1 # Cernd Romance - Player-Initiated Dialogues: v1.01
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/CerndRomance-v1.01
 
@@ -484,6 +486,6 @@
     location:
       github_user: TheArtisanBG
       repository: Rasaad-Expansion-BG1
-      branch: master
+      branch: main
       refresh: 7days
   # end NPC extensions
