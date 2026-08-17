@@ -23,7 +23,7 @@ modules:
       github_user: r-e-d
       repository: correctfrBG2EE
       branch: master
-      refresh: 4days
+      refresh: 14days
       size_hint: 400Mb
 
   #####################
