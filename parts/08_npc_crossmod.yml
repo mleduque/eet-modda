@@ -90,8 +90,9 @@
       - 10000 # Recorder Crossmod
 
   - name: candlekeep_revisited
-    description: crossmod for candlekeep revisited (npcs)
-    components: ask
+    description: crossmod for candlekeep revisited (crossmod)
+    components:
+      - 4 # Candlekeep Revisited: Osprey for SoD - Crossmod with Lava's Arkanis
 
   - name: npcflirt
     description: BioWare NPC Flirt Packs for BGII!
