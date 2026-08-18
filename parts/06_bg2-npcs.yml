@@ -1143,11 +1143,12 @@
       - 0 # Clara et Anomen Sombre: Version 1.4.4
       - 1 # Portrait optionnel pour Clara dans le style de BG2: Version 1.4.4
     location:
-      github_user: mleduque
+      github_user: trow
       repository: LivingClara
-      release: v1.4.4
-      branch: patch-1
-      refresh: always
+      branch: main
+      refresh: 4days
+      patches:
+        - relative: patches/eet/clara-readln.diff
 
   - name: w_packmule
     components:
