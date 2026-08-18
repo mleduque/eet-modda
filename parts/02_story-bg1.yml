@@ -26,7 +26,8 @@
       github_user: Spellhold-Studios
       repository: DSotSC
       branch: master
-      refresh: 7days
+      refresh: 17days
+      size_hint: 40MiB
   - name: ntotsc
     description: Northern Tales of the Sword Coast
     components:
