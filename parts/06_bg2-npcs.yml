@@ -1097,6 +1097,8 @@
     description: component that warns
     components:
       - 11 # ToB-part for Shar-Teel or/and Yeslick, Garrick, Branwen, Skie, Eldoth: 15.4
+          # warns because quayle was not installed (other variant)
+      - 50 # Gnomes in the City: Quayle & Tiax (SoA & ToB): 15.4
     ignore_warnings: true
   - name: BG1NPCSoA
     components:
@@ -1107,11 +1109,6 @@
       - 45 # Xzar and Monty Murder Mysteries (SoA & ToB) (R, 18+!): 15.4
       - 55 # Expanded cirqus quest -> Expanded cirqus quest (Standard difficulty): 15.4
       - 87 # Inter Component Banter Pack: 15.4
-  - name: BG1NPCSoA
-    components:
-      # warns because quayle was not installed (other variant)
-      - 50 # Gnomes in the City: Quayle & Tiax (SoA & ToB): 15.4
-    ignore_warn: true
   - name: SearchGuild
     description: '"Detective Guild of Athkatla" mod'
     overview: |
