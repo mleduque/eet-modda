@@ -18,6 +18,7 @@
       before: ntotsc
     components:
       - 0 # Dark Side of the Sword Coast (DSotSC)
+      # spells are after iwdification
       #- 1, # DSotSC Wizard spells
       #- 2, # DSotSC Priest spells
       #- 3 # More common encounters in vanilla areas
