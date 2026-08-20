@@ -643,13 +643,16 @@
     description: Tales of Anegh
     components:
       - 1 # Tales of Anegh (Weidu): v2.6
+      # - 2 # remove sound
+      # - 3 # Remove Nomoran from the following Areas - Waukeens Promenade (Chapter 6)
+      # - 4 # Remove Nomoran from the following Areas -Amkethran (ToB)
       - 10 # Creature Balancing: v2.6
       - 20 # AREA Balancing: v2.6
       - 30 # Dialog & Script Balancing: v2.6
       - 40 # Stores Balancing: v2.6
       - 50 # Item Balancing: v2.6
     location:
-      github_user: RiwsPy
+      github_user: RiwsPy #Gitjas version woth french translation
       repository: ToA
       branch: trans_fr
       refresh: 10days
