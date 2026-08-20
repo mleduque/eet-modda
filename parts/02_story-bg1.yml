@@ -502,10 +502,11 @@
       - 1 # NPC Character Portraits -> Give portraits to all characters added from this mod: v4.8
       - 4 # Add More Pickpocketable Items: v4.8
     location:
-      github_user: TotalMilk90
+      github_user: 11jo
       repository: gorgon
-      release: v4.8
-      asset: gorgon-v4.8.iemod
+      branch: main
+      refresh: 1week
+      size_hint: 20MiB
   - name: Blackhearts
     overview: Quest mod for Baldur's Gate Enhanced Edition that follows a plotline involving a character from Throne of Bhaal, Illasera, and a Red Wizard plot involving a dangerous new ally that has joined Sarevok's cause.
     installation:
