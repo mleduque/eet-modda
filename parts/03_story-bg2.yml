@@ -555,7 +555,8 @@
       github_user: Pocket-Plane-Group
       repository: QuestPack
       branch: master
-      refresh: 7days
+      refresh: 21days
+      size_hint: 20MiB
 
   - name: Autumns_Twilight
     description: Quest(dungeon) + 2 npcs
