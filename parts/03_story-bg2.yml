@@ -258,7 +258,7 @@
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/AlabasterSands v2.0
   - name: InkGallery
-    description; Athkatlan Grounds: The Ink Gallery
+    description: 'Athkatlan Grounds: The Ink Gallery'
     overview: |
       a new Athkatlan establishment, and a place of many wonderful books. Read them, and let the tomes 
       present you with epic battles and deadly struggles. Become the main hero/heroine of these books, 
@@ -273,6 +273,25 @@
       - 0 # Athkatlan Grounds: The Ink Gallery: v1.4.1
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/InkGallery v1.4.1
+  - name: SiamorphesWeaponry
+    description: "Athkatlan Grounds: Siamorphe's Weaponry"
+    overview: |
+      The mod adds a Shrine of Siamorphe to Athkatla's Government District - and it is a perfect place for
+      a place of worship of a deity of nobles and nobility in general. The Shrine, however, comes with more
+      than just the usual temple services. The priest sells items that were inspired by Siamorphe or somehow
+      connected to her portfolio. This mod greatly focuses on this new kind of items, and while it's not the
+      only type of content provided by the mod, it is Siamorphe's Weaponry's main feature.
+
+      Items bought at the shrine may level up. Each time an enemy is killed while holding such an item, it
+      is noted. Slay enough of those on your way, fill the items with blood-red essence, and they will become
+      stronger. Most of these items may be upgraded more than once.
+
+      Still, the mod also comes with a short quest: once you find out how much the priest misses his daughter,
+      you may decide to help him with the problem, and find a way for them to talk freely, even when they are
+      so far away from each other.
+    components: ask
+    location:
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/SiamorphesWeaponry-v1.0
 
   # The Dreadful Tales series
   - name: InLoveUndeath
