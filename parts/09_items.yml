@@ -10,8 +10,8 @@
     location:
       github_user: Gibberlings3
       repository: SpellRevisions
-      release: v4.20
-      asset: lin-spell_rev-v4-20.tar.gz
+      release: v4.21
+      asset: lin-spell_rev-v4-21.tar.gz
   - name: spell_rev
     description: spell_rev other components (don't warn)
     components:
