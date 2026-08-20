@@ -112,6 +112,26 @@
       repository: iwd_eet-party-banter
       branch: main
       refresh: 7days
+
+  - name: RoT
+    description: Region of Terror
+    overview: SoA mod, large quest mod focussed on Drizzt Do'Urden. 35 quests, 160 areas, npcs, kits,spells
+    install:
+      after: [IWD1_EET, IWD2_EET]
+      before: [IWD_EET_End]
+    components:
+      - 0 # Region Of Terror: pre-v6.0
+      - 3 # Alternative Maribur area (by Cuttooth): pre-v6.0
+      - 4 # wizard spells
+    location:
+      github_user: Spellhold-Studios
+      repository: Region_of_Terror
+      branch: master
+      refresh: 20days
+      size_hint: 585Mb
+      patch:
+        relative: patches/eet/rot-taming-drizzt.diff
+
   - name: IWD_EET_End
     installation:
       general: as late as possible in your installation, especially after mods that add NPCs, otherwise there may be problems with quests, dialogs, etc.
