@@ -65,6 +65,11 @@
       # Add spells and scrolls
       - 15 # Parchemins de sort -> Version revisee (Sorts de niveau 6): 5.0.0
 
+  - name: SOS
+    description: Shadows Over Soubar - spells
+    components:
+      - 5 # wizard spell
+
   - name: SubtleD_Spell_Tweaks
     description: SubtleD's Spell Tweaks - components that don't warn
     installation:

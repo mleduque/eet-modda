@@ -673,6 +673,7 @@
     components:
       - 0 # Main component
       - 1 # Selence arrives to Waukeens Promenade after the meeting with Gaelan in the slums
+        # - 3 # Biffing
       - 4 # Alternative Soubar area
     location:
       github_user: Spellhold-Studios
