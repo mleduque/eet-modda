@@ -793,7 +793,7 @@
       - Onset of the Darkest Day : quest between end of SoA and ToB
     components:
       - 0 # TDD - Quests and new NPCs: v2.0 alpha
-      - 1 # TDD - BG1 NPCs: v2.0 alpha
+      #- 1 # TDD - BG1 NPCs: v2.0 alpha
       # - 6 Item & Spell Balancing would be desireble
     location:
       github_user: weigo87
