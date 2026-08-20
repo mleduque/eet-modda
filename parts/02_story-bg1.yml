@@ -42,7 +42,8 @@
       - 11 # Haeball ameliore: 5.0.0
       - 12 # Ghotal ameliore: 5.0.0
       - 13 # Reduire le nombre de capes de chaman -> Supprimer les capes generiques des pretres orques: 5.0.0
-      - 15 # Parchemins de sort -> Version revisee (Sorts de niveau 6): 5.0.0
+      # Adds spalls and scrolls - AFTER iwdification
+      #- 15 # Parchemins de sort -> Version revisee (Sorts de niveau 6): 5.0.0
     location:
       github_user: mleduque
       repository: NTotSC

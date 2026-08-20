@@ -59,6 +59,12 @@
       - 1, # DSotSC Wizard spells
       - 2, # DSotSC Priest spells
 
+  - name: ntotsc
+    description: Northern Tales of the Sword Coast -spells
+    components:
+      # Add spells and scrolls
+      - 15 # Parchemins de sort -> Version revisee (Sorts de niveau 6): 5.0.0
+
   - name: SubtleD_Spell_Tweaks
     description: SubtleD's Spell Tweaks - components that don't warn
     installation:
