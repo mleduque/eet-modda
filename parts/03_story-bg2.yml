@@ -868,7 +868,7 @@
     components:
       - 0 # The Forgotten Edge - Items: 0.2
     location:
-      github_user: 11jo
+      github_user: mleduque
       repository: TheForgottenEdge
       branch: main
       refresh: 7days
