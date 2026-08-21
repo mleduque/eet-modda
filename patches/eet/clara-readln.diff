@@ -1,0 +1,17 @@
+diff --git a/LivingClara/LivingClara.tp2 b/LivingClara/LivingClara.tp2
+--- LivingClara/LivingClara.tp2
++++ LivingClara/LivingClara.tp2
+@@ -1038,12 +1038,7 @@ BEGIN @158 /*Optional BG2 Style Portrait for Clara*/
+ DESIGNATED 1 LABEL ~LivingClara-BG2_Style_Portrait~
+ REQUIRE_COMPONENT ~LivingClara.tp2~ ~0~ @54 /*You must have the main mod installed.*/
+ 
+-PRINT @159
+-ACTION_READLN how
+-OUTER_WHILE (!IS_AN_INT %how%) OR (%how% > 2) OR (%how% < 1) BEGIN
+-	PRINT @159
+-	ACTION_READLN how
+-END
++OUTER_SPRINT ~how~ 2
+ 
+ ACTION_IF (%how% = 1) THEN BEGIN
+ COPY ~LivingClara/characters/YF_ClarL.bmp~ ~override/YF_ClarL.bmp~ 

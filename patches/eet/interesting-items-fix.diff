@@ -1,0 +1,12 @@
+diff --git a/InterestingItems/InterestingItems.tp2 b/InterestingItems/InterestingItems.tp2
+--- InterestingItems/InterestingItems.tp2
++++ InterestingItems/InterestingItems.tp2
+@@ -553,7 +553,7 @@ COPY_EXISTING ~bdbeleg4.sto~ ~override/bdbeleg4.sto~      // belegarm special it
+ ADD_STORE_ITEM ~USIIR09~   AFTER  ~bag31~ #1 #0 #0 ~IDENTIFIED~ #1 // ring of scorching
+ ADD_STORE_ITEM ~USIIR11~   AFTER  ~bag31~ #1 #0 #0 ~IDENTIFIED~ #1 // ring of the alu fiend
+ 
+-COPY_EXISTING ~erdane.sto~ ~override/highhedg.sto~                  
++COPY_EXISTING ~erdane.sto~ ~override/erdane.sto~
+ ADD_STORE_ITEM ~USIIDAG1~   AFTER  ~wand05~ #1 #0 #0 ~IDENTIFIED~ #1 // vicious impulse
+ 
+ 
