@@ -23,12 +23,18 @@
 
   ## One and only one of the two next ones ##
   - name: iwdification
-    description: spell packs of iwdification
+    description: spell packs of iwdification - wizard
     installation:
       general: just the spell packs part early, before some story mods (TDD, Totlm, dsotsc)
     components:
       - 30 # IWD Arcane Spell Pack: Release Candidate 2
+    disabled_if:
+      manifest_condition: prefer_scs_over_iwdification_spells
+  - name: iwdification
+    description: spell packs of iwdification - divine
+    components:
       - 40 # IWD Divine Spell Pack: Release Candidate 2
+    ignore_warn: true
     disabled_if:
       manifest_condition: prefer_scs_over_iwdification_spells
   - name: stratagems
