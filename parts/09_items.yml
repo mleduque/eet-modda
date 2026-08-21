@@ -97,7 +97,7 @@
     components:
       - 1 # A Mod for the Orderly - Add a Keyring to Faerun!-> Consistency Plus version
     location:
-      path: /home/mick/Games/modda-cache/static/cliffkey-v7.zip
+      http: https://america.iegmc.com/g3/cliffkey-v7.zip
   - name: forgotten-armament
     description: Forgotten armaments
     components:
