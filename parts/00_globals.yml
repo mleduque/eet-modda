@@ -75,8 +75,7 @@ locations:
     stratagems:
       github_user: Gibberlings3
       repository: SwordCoastStratagems
-      release: v35.20
-      asset: lin-stratagems-35.20.zip
+      branch: master-plus-fixes
       patches:
         - relative: patches/eet/scs-config.diff
         - relative: patches/eet/scs-restore-bonus-scrolls.diff
