@@ -102,9 +102,12 @@
     description: Forgotten armaments
     components:
       # se limiter au nouveaux composants et quelques tweaks
+      # 4 will be added in 11_mass_item_updates
       - 20 # Add New Forgotten Armament Items into the Game
       - 11 # Add Breach Scrolls to Sorcerous Sundries
       - 27 # Add Ruby Ray Scrolls to Trademeet Store
+      - 18 # Add Potions of Acid Resistance
+      - 29 # Add Freedom Scrolls to Ribald's Store (Pre-Underdark)
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/morpheus/Forgotten-Armament-6.0
       replace:
