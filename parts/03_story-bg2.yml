@@ -289,7 +289,8 @@
       Still, the mod also comes with a short quest: once you find out how much the priest misses his daughter,
       you may decide to help him with the problem, and find a way for them to talk freely, even when they are
       so far away from each other.
-    components: ask
+    components:
+      - 0 # Athkatlan Grounds: Siamorphe's Weaponry - a new shop with levelling weapons: v1.0
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/SiamorphesWeaponry-v1.0
 
