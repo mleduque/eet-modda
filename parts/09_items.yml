@@ -34,7 +34,7 @@
     description: spell packs of iwdification - divine
     components:
       - 40 # IWD Divine Spell Pack: Release Candidate 2
-    ignore_warn: true
+    ignore_warnings: true
     disabled_if:
       manifest_condition: prefer_scs_over_iwdification_spells
   - name: stratagems
