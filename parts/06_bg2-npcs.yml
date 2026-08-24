@@ -46,6 +46,7 @@
       repository: SkitiaNPCs
       branch: master
       refresh: 3days
+      size_hint: 20MiB
       patches:
         # Note: ACTION_READLN appear in _commented-out_ code
         - relative: patches/eet/skitia-npc-bg2-romance-conflicts.diff
@@ -397,6 +398,7 @@
       repository: Sirene-NPC-for-BG2-EE
       branch: master
       refresh: 1week
+      size_hint: 33MiB
       patches:
         - relative: patches/eet/sirene-bg2.diff
       replace:
