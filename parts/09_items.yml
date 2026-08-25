@@ -206,8 +206,8 @@
     location:
       github_user: Dau1makan
       repository: Item-Pack
-      release: v2.3_itempack
-      asset: Item_Pack_v2.3.zip
+      release: v2.4_itempack
+      asset: Item_Pack_v2.4.zip
       layout:
         layout_type: single_dir_plus_tp2
   - name: thalan
@@ -226,8 +226,8 @@
       github_user: mleduque
       repository: BGEE-Thalantyr-Ex
       branch: french
-    disabled_if:
-      because: couldn't make it work in french, blame STATE_WHICH_SAYS
+    #disabled_if:
+    #  because: couldn't make it work in french, blame STATE_WHICH_SAYS
   - name: rr
     description: additional equipment only - component with WARNING
     components:
@@ -237,7 +237,8 @@
   - name: swordap
     description: Improved Haer'Dalis' Swords
     overview: This mod allows you to upgrade Haer'Dalis' swords in the Underdark.
-    components: [0]
+    components: 
+      - 0 # Epees ameliorees d'Haer'Dalis: v3.1.0
     location:
       github_user: Spellhold-Studios
       repository: HaerDalis_Swords
@@ -270,7 +271,7 @@
       - 13 # Add Wand Case: v1.57
       - 17 # Add Robes of Archimagi with colorsets from Mr. Pennyway's Cosmetic Changes mod: v1.57
     location:
-      github_user: mleduque
+      github_user: mleduque #Renegade0
       repository: msfm
       branch: eet
   - name: remastered_spell_icons
@@ -280,9 +281,9 @@
     - 0 # Install Remastered Spell Icons Core Component: v1.0
     - 1 # Use IWD:EE Colors (Green icons for summoning spells): v1.0
     location:
-      github_user: Renegade0
+      github_user: Selphira #Renegade0
       repository: RemasteredSpellIcons
-      tag: v1.2
+      branch: patch-1
   - name: underrep
     description: Under-Represented Items
     overview: |
