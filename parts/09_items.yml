@@ -161,7 +161,7 @@
       - 20 # Add New Forgotten Armament Items into the Game
       - 11 # Add Breach Scrolls to Sorcerous Sundries
       - 27 # Add Ruby Ray Scrolls to Trademeet Store
-      - 18 # Add Potions of Acid Resistance
+      - 28 # Add Potions of Acid Resistance
       - 29 # Add Freedom Scrolls to Ribald's Store (Pre-Underdark)
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/morpheus/Forgotten-Armament-6.0
