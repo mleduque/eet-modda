@@ -98,26 +98,7 @@
       - 1 # A Mod for the Orderly - Add a Keyring to Faerun!-> Consistency Plus version
     location:
       http: https://america.iegmc.com/g3/cliffkey-v7.zip
-  - name: forgotten-armament
-    description: Forgotten armaments
-    components:
-      # se limiter au nouveaux composants et quelques tweaks
-      # 4 will be added in 11_mass_item_updates
-      - 20 # Add New Forgotten Armament Items into the Game
-      - 11 # Add Breach Scrolls to Sorcerous Sundries
-      - 27 # Add Ruby Ray Scrolls to Trademeet Store
-      - 18 # Add Potions of Acid Resistance
-      - 29 # Add Freedom Scrolls to Ribald's Store (Pre-Underdark)
-    location:
-      path: /home/mick/Games/modda-cache/iemods-archive/morpheus/Forgotten-Armament-6.0
-      replace:
-        - file_globs: ["components/stat_item_update.tpa"]
-          replace: 'REPLACE_TEXTUALLY ~Set Strength to~ ~Increment Strength by~'
-          with: "REPLACE_TEXTUALLY ~Set Strength to~ ~Increment Strength by~\nREPLACE_TEXTUALLY ~Donne une Force de~ ~Porte la force à~"
-        - file_globs: ["components/stat_item_update.tpa"]
-          replace: 'REPLACE_TEXTUALLY ~Set Constitution to~ ~Increment Constitution by~'
-          with: "REPLACE_TEXTUALLY ~Set Constitution to~ ~Increment Constitution by~\nREPLACE_TEXTUALLY ~Augmente la Constitution à~ ~Augmente la Constitution de~"
-    ignore_warnings: true
+
   - name: zgbg2evermemory
     components:
       - 0 # Evermemory for BG2EE
@@ -144,10 +125,23 @@
   - name: mih_ip
     description: Made In Heaven Item Pack
     components:
+      # Note: Angel doesn't use DESIGNATED and sometimes component numbers change
       - 0 # Made in Heaven: Item Pack: v8
-      - 1 # Personal Items for NPCs: v8
-      - 8 # Improved Tome of Golems: v8
-      - 10 # Add Potions of Extra Healing in BG1: v8
+      - 1 # Made in Heaven: Gem Pack
+      - 2 # Personal Items for NPCs: v8
+      - 3 # BG2 Items for BG1
+      - 4 # IWD Items for BG1&2
+      - 5 # PST Items for BG1&2
+      # 6 # BG1-style Wands of Frost & -Lightning
+      # 7 # P&P Healing Potions (more random)
+      - 8 # Change item type of Holy Symbols
+      # 9 # Turn generic Full Plate into Field Plate
+      - 10 # 3e-style Bracers of Defense (EXPERIMENTAL)
+      - 11 # Improved Tome of Golems
+      - 12 # Miscellaneous Item Improvements (see readme)
+      - 13 # Add Potions of Extra Healing in BG1
+      # 14 # Nerf BG1 easter egg item
+      - 15 # Sensible Shops (see readme) -> 2 items moved in BG1, 2 others in BG2
     ignore_warnings: true
     location:
       github_user: AngelGryph
@@ -156,7 +150,29 @@
       refresh: 2days
       patches:
         - relative: patches/mih_ip-config.diff
-        - relative: patches/mih_ip-workaround.diff
+        - relative: patches/mih_ip-fix-gempack.diff
+        #- relative: patches/mih_ip-workaround.diff
+
+  - name: forgotten-armament
+    description: Forgotten armaments
+    components:
+      # se limiter au nouveaux composants et quelques tweaks
+      # 4 will be added in 11_mass_item_updates
+      - 20 # Add New Forgotten Armament Items into the Game
+      - 11 # Add Breach Scrolls to Sorcerous Sundries
+      - 27 # Add Ruby Ray Scrolls to Trademeet Store
+      - 18 # Add Potions of Acid Resistance
+      - 29 # Add Freedom Scrolls to Ribald's Store (Pre-Underdark)
+    location:
+      path: /home/mick/Games/modda-cache/iemods-archive/morpheus/Forgotten-Armament-6.0
+      replace:
+        - file_globs: ["components/stat_item_update.tpa"]
+          replace: 'REPLACE_TEXTUALLY ~Set Strength to~ ~Increment Strength by~'
+          with: "REPLACE_TEXTUALLY ~Set Strength to~ ~Increment Strength by~\nREPLACE_TEXTUALLY ~Donne une Force de~ ~Porte la force à~"
+        - file_globs: ["components/stat_item_update.tpa"]
+          replace: 'REPLACE_TEXTUALLY ~Set Constitution to~ ~Increment Constitution by~'
+          with: "REPLACE_TEXTUALLY ~Set Constitution to~ ~Increment Constitution by~\nREPLACE_TEXTUALLY ~Augmente la Constitution à~ ~Augmente la Constitution de~"
+    ignore_warnings: true
 
   # new upgrades
   - name: itemupgrade
