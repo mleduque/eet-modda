@@ -325,11 +325,11 @@
       release: v6.0.0
       asset: stuff-of-the-magi-6.0.0.iemod
   - name: BardicWonders
-    description: Bardic Wonders
+    description: Bardic Wonders _ items
     overview: bard kits( new and tweaks), new bard items, bardic inspiration (new unkitted bard power), armored casting
     readme: https://artisans-corner.com/bardic-wonders/
     components:
-      - 11 # Bardic Wonders: Items
+      - 2001 # Bardic Wonders: Items
     location:
       github_user: TheArtisanBG
       repository: Bardic-Wonders

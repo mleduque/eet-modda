@@ -70,6 +70,11 @@
     components:
       - 5 # wizard spell
 
+  - name: BardicWonders
+    description: Bardic Wonders - spells
+    components:
+      - 2008 # Bardic Wonders: New Bard Spells
+
   - name: SubtleD_Spell_Tweaks
     description: SubtleD's Spell Tweaks - components that don't warn
     installation:
