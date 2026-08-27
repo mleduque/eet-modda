@@ -206,15 +206,17 @@
     location:
       github_user: CrevsDaak
       repository: thalan
-      release: v4.5.1
-      asset: thalantyr-item-upgrade-v4.5.1.iemod
+      commit: 1e23454 # 4.5.1 plus one french-related fix - 2026-08-27
   - name: mod-thalantyr-ex
     description: extends Thalantyr Item Upgrade - more items
-    components: ask
+    components:
+      - 0 # Extension du mod Thalantyr Item Upgrade par Bardez
+      - 1 # Anneau de Protection de Koveras +2 -> Anneau de Koveras: Cadeau maudit
     location:
       github_user: mleduque
       repository: BGEE-Thalantyr-Ex
-      branch: french
+      release: french-1 # must do a release because of the submodule part
+      asset: modthalantyrex-v1.1.1.iemod
     #disabled_if:
     #  because: couldn't make it work in french, blame STATE_WHICH_SAYS
   - name: rr
