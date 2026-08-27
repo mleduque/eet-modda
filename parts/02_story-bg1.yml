@@ -490,8 +490,8 @@
     location:
       github_user: GraionDilach
       repository: ExtraExpandedEnhancedEncounters
-      release: "4.3"
-      asset: extra-enhanced-expanded-encounters-4.3.iemod
+      release: "4.4"
+      asset: extra-enhanced-expanded-encounters-4.4.iemod
       patch:
         relative: patches/eet/ExtraExpandedEnhancedEncouter-reducegnolls.diff
   - name: gorgon
