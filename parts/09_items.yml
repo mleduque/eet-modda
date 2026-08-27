@@ -726,7 +726,7 @@
     location:
       github_user: Carsomyr6
       repository: Jarnip
-      release: v2.0.0
+      release: v2.3.1
       asset: Jarnip-main.zip
 
   - name: iiItemMod
