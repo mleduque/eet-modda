@@ -345,6 +345,7 @@
       repository: A7-WaresOfThePlanes
       release: v2.5
       asset: A7-WaresOfThePlanes-v2.5.iemod
+    ignore_warnings: true # WARNING: no effects added to SPWI104.spl
   - name: Unofficial Item Pack
     description: BGII:EE - Unofficial Item Pack
     overview:
