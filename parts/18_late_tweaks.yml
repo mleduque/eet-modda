@@ -136,8 +136,8 @@
     location:
       github_user: r-e-d
       repository: EEUITweaks
-      release: v4.0.2
-      asset: eeuitweaks-4.0.2.iemod
+      release: v4.0.7
+      asset: eeuitweaks-4.0.7.iemod
   - name: HiddenGameplayOptions
     installation:
       after: LeUI, cdtweaks
