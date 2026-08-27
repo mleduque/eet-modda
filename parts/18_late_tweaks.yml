@@ -116,9 +116,10 @@
       - 4060 # Wand Case
       - 4070 # Key Ring
     location:
-      github_user: mleduque
+      github_user: K4thos
       repository: EET_Tweaks
-      branch: fr
+      branch: master
+      refresh: 21days
       patches:
         - relative: patches/eet/eet_tweaks-xpbonus.diff
           comment: continue distributing XP (plateau)
