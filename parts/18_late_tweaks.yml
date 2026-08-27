@@ -234,8 +234,8 @@
     location:
       github_user: GraionDilach
       repository: RandomGraionTweaks
-      release: version-1.14
-      asset: random-graion-tweaks-1.14.iemod
+      release: version-1.17
+      asset: random-graion-tweaks-1.17.iemod
     ignore_warnings: true
 
   - name: ZS_CanIStabYou
