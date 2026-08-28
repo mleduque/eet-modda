@@ -346,7 +346,7 @@
       release: v2.5
       asset: A7-WaresOfThePlanes-v2.5.iemod
     ignore_warnings: true # WARNING: no effects added to SPWI104.spl
-  - name: Unofficial Item Pack
+  - name: unofficialitempack
     description: BGII:EE - Unofficial Item Pack
     overview:
     original_thread: https://forums.beamdog.com/discussion/56567/mod-bgii-ee-unofficial-item-pack
@@ -359,9 +359,8 @@
       - 7 # Revision d'Action libre
     location:
       github_user: mleduque
-      repository: edvin_unofficial_item_pack
-      branch: v2.7b-french
-      auth: PAT my_repositories
+      repository: unofficialitempack
+      branch: french
 
   # new stores or new inventory
   - name: Derats_Archery
