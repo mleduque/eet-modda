@@ -478,7 +478,7 @@
     location:
       github_user: The-Gate-Project
       repository: RTT-ItemPack
-      branch: master
+      branch: main
       refresh: 7days
   - name: iwditempack
     descriptin: SoA - adds  twelve Icewind Dale/Icewind Dale II related items to Joluv (Copper Coronet)
