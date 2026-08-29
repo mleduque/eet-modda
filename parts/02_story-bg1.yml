@@ -525,7 +525,7 @@
     location:
       github_user: Gibberlings3
       repository: BS_Baldurans_Seatower
-      release: vEAOB.9
+      commit: e68bbd9 # vEAOB.9 + weigo fixes
       asset: bs-baldurans-seatower-veaob.9.iemod
 
   - name: SotSC
