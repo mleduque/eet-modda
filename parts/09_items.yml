@@ -641,7 +641,7 @@
   - name: ZS_ItemPack
     description: RoyalProtector's Item Pack
     overview: Adds items into the world of BGEE and BG2EE. Each item is completely optional during the installation. Only like one? Only install one.
-    components: ask
+    components: all
     location:
       github_user: szaumoor
       repository: ZS_ItemPack
