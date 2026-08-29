@@ -686,8 +686,8 @@
     location:
       github_user: Gibberlings3
       repository: SP_Collection
-      release: v16
-      asset: lin-spstuff-v16.tar.gz
+      release: v17
+      asset: lin-spstuff-v17.zip
   - name: cdtwinkle
     description: Make Twinkle a True 'Defender' Weapon
     overview: The Make Twinkle a True 'Defender' Weapon mod is a small WeiDU mod that adds the ability to the Twinkle scimitar to act as a true Defender weapon.
