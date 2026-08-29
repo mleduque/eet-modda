@@ -529,11 +529,12 @@
   - name: ZS_Consumables
     overview:
     components:
-      - 100 # Install oils and insert them into the world: v1.4.3
+      - 0 # Install consumables and spread them all through the world
     location:
-      github_user: szaumoor
+      github_user: mleduque
       repository: ZS_Consumables
-      tag: 1.0.5
+      branch: french
+      refresh: always
   # overpowered item mods
   - name: DGItems
     overview: |
