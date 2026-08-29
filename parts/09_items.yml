@@ -648,7 +648,7 @@
       release: "1.0.2"
       asset: ZS_ItemPack_1.0.2.zip
 
-  - name: Standard-Awesome-Modpack
+  - name: standard-awesome-modpack
     description: Standard Awesome Modpack
     overview: |
       Content mod for BG EET. Aims to flesh-out the city of Baldur's Gate and add additional flavor and choices to full EET runs.
@@ -657,12 +657,19 @@
       minor comp:
         - Intelligence to Read Stat Tomes: Makes vanilla stat tomes/manual require 9 intelligence or higher to read (same as scrolls).
         - Bonus Spell Sequencers: Two new spell sequencers for low-level spells - one at level 3 and one at level 5
-    components: ask
+    components:
+      - 10 # Install Magical Books Merchant in Baldur's Gate (Torvael's Tomes): v1.1.0
+      #- 100 # Install Intelligence Requirement to Read Stat Tomes: v1.1.0
+      - 101 # Install Extra Spell Sequencers: v1.1.0
+      - 102 # Install More Cursed items: v1.1.0
     location:
       github_user: StandardAwesome
       repository: bgee-modpack
-      release: v1.0.0
-      asset: standard-awesome-modpack-v1.0.0.zip
+      release: v1.1.0
+      asset: standard-awesome-modpack-v1.1.0.zip
+      layout:
+        strip_leading: 1
+        layout_type: single_dir
 
   - name: interestingitems
     description: "Interesting Items: A Balanced Item Pack Mod"
