@@ -674,7 +674,8 @@
   - name: interestingitems
     description: "Interesting Items: A Balanced Item Pack Mod"
     overview: items for bg1 and bg2
-    components: ask
+    components:
+      - 2 # Interesting Items for EET: v1.0
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/others/semiticgoddess/InterestingItems v1
 
