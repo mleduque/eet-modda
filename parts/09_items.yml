@@ -508,9 +508,9 @@
     components:
       - 0 # Marchand Mystigan (ToB requis)
     location:
-      http: https://akadis.baldursgateworld.fr/Mystigan/zip/Mystigan1.62.zip
+      path: /home/mick/Games/modda-cache/iemods-archive/akadis/Mystigan1.62.zip
       alt:
-        path: /home/mick/Games/modda-cache/iemods-archive/akadis/Mystigan1.62.zip
+        http: https://akadis.baldursgateworld.fr/Mystigan/zip/Mystigan1.62.zip
   - name: A7#ImprovedShamanicDance
     description: Improved Shamanic Dance - itrems only
     overview: "Allows the shaman to move at reduced speed while performing the dance + extends
