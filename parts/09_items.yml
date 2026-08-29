@@ -694,10 +694,10 @@
     components:
       - 0 # make twinkle a defender weapon
     location:
-      github_user: Gibberlings3
+      github_user: mleduque
       repository: Twinkle_Defender
-      release: v1
-      asset: lin-cdtwinkle-v1.zip
+      branch: french
+      refresh: always
   - name : uubelmring
     description:  Belm ring mod - A djinn that can create +APR rings from Belm/Kundane/SNT 
     overview: You meet a djinn that can convert each of the three speed weapons to +APR rings (ring vary in quality, not all three rings have full +1APR).
