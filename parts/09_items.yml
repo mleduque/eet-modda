@@ -701,7 +701,8 @@
   - name : uubelmring
     description:  Belm ring mod - A djinn that can create +APR rings from Belm/Kundane/SNT 
     overview: You meet a djinn that can convert each of the three speed weapons to +APR rings (ring vary in quality, not all three rings have full +1APR).
-    components: ask
+    components:
+      - 1001 # Belm ring mod: 1.1
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/others/uubelmring_v1.1.zip
   - name: k0_iskp
