@@ -6,10 +6,9 @@
   - name: cowledmenace
     installation:
       general : after npc mods, before tweaks andEET_end
-    components: ask
-      #- 1000 # Main Component - The Cowled Menace
-      #- 2100 # Appropriate Items for High-Level Spellcasters
-      #- 3000 # Mages cast Gate far from themselves, so they don't end up fighting their own summoned demon
+    components:
+      - 1000 # Main Component - The Cowled Menace
+      - 2100 # Appropriate Items for High-Level Spellcasters
     location:
       github_user: Gibberlings3
       repository: CowledMenace
@@ -39,6 +38,8 @@
       github_user: abalabokhin
       repository: NWNForBG
       tag: "1.00"
+    disabled_if:
+      manifest_condition: disable_nwn_in_bg
   - name: IWD1_EET
     installation:
       after: EET
@@ -85,17 +86,14 @@
       branch: main
       refresh: 5days
       replace:
-        # https://www.gibberlings3.net/forums/topic/37265-my-latest-super-modded-eet-game-with-more-iwd/?do=findComment&comment=338983
-        - file_globs: ['Setup-iwd2_eet.tp2']
-          replace: 'APPEND ~instant.ids~ ~34 UseItem(S:Object*,O:Target*)~    UNLESS ~UseItem~'
-          # comment-out
-          with: '// APPEND ~instant.ids~ ~34 UseItem(S:Object*,O:Target*)~    UNLESS ~UseItem~'
         # https://www.gibberlings3.net/forums/topic/36405-discussion-of-tipun%E2%80%99s-iwd-mods-and-their-integration-in-eet-games/?do=findComment&comment=326993
         - file_globs: ['lib/_spells.tph']
           replace: |-
             APPEND ~projectl.ids~ ~%prot%~
             APPEND ~missile.ids~  ~%misl%~
           with: '' # just delete
+    disabled_if:
+      manifest_condition: disable_iwd2_in_eet
   - name: iwd_eet-party-banter
     description: Icewind Dale in EET Party Banter
     installation:
@@ -112,6 +110,8 @@
       repository: iwd_eet-party-banter
       branch: main
       refresh: 7days
+    disabled_if:
+      because: https://github.com/The-Gate-Project/iwd_eet-party-banter/issues/4
 
   - name: RoT
     description: Region of Terror
@@ -131,6 +131,8 @@
       size_hint: 585Mb
       patch:
         relative: patches/eet/rot-taming-drizzt.diff
+    disabled_if:
+      manifest_condition: disable_rot
 
   - name: IWD_EET_End
     installation:
@@ -143,6 +145,11 @@
       repository: IWD_EET_End
       branch: main
       refresh: 5days
+    disabled_if:
+      all:
+        - manifest_condition: disable_iwd_in_eet
+        - manifest_condition: disable_iwd2_in_eet
+
   - name: A7-TotLM-BG2EE
     description: Trials of the Luremaster for Baldur's Gate
     overview: |
@@ -188,4 +195,8 @@
       github_user: 11jo
       repository:  IWD_EET_Integration
       branch: master
+    disabled_if:
+      all:
+        - manifest_condition: disable_iwd_in_eet
+        - manifest_condition: disable_iwd2_in_eet
 

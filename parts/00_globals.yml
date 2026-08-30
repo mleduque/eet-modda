@@ -86,3 +86,12 @@ manifest_conditions:
       because: iwdification is newer at the moment
   prefer_edwin_bromance_over_romance:
     because: "male charname"
+  disable_nwn_in_bg:
+    because: will got for a smaller install this time
+  disable_iwd_in_eet:
+    not:
+      because: will include subtled's easter egg
+  disable_iwd2_in_eet:
+    because: will got for a smaller install this time
+  disable_rot:
+    because: will got for a smaller install this time
