@@ -706,14 +706,19 @@
     location:
       path: /home/mick/Games/modda-cache/iemods-archive/others/uubelmring_v1.1.zip
   - name: k0_iskp
-    description: Sod items to BG2EE/EET
+    description: Sod items to BG2EE/EET - items
     overview: Add SoD items to BG2EE or EET
-    components: ask
+    components:
+      - 10000 # all SoD items + misc items + all imports
+      #- 4995 # all SoD spells
     location:
       github_user: dark0dave
       repository: sod-items-to-bg2ee-eet
-      release: v4.0.0.RC9
-      asset: k0_iskp-v4.0.0.RC9.iemod
+      release: v4.0.0
+      asset: k0_iskp-v4.0.0.iemod
+  - name: k0_iskp
+    descriptions: Sod items to BG2EE/EET - rest (if any)
+    components: ask
   - name: Jarnip
     description: "Jarnip: A New Bonus Merchant for Baldur's Gate 2"
     overview: |
@@ -734,12 +739,13 @@
 
       In Shadows of Amn, Jarnip can be found in the Adventurer's Mart in Athkatla. In Throne
       of Bhaal, Jarnip finds himself trapped in the Tankard Tree tavern in Saradush.
-    components: ask
+    components:
+      - 0 # Jarnip: A New Bonus Merchant in the Adventurer's Mart: v2.3.1
+      - 1 # Jarnip in ToB: A New Merchant in Saradush: v2.3.1
     location:
       github_user: Carsomyr6
       repository: Jarnip
-      release: v2.3.1
-      asset: Jarnip-main.zip
+      tag: v2.3.1
 
   - name: iiItemMod
     description: iiItem
