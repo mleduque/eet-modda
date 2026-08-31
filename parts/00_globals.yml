@@ -89,8 +89,7 @@ manifest_conditions:
   disable_nwn_in_bg:
     because: will got for a smaller install this time
   disable_iwd_in_eet:
-    not:
-      because: will include subtled's easter egg
+    because: will got for a smaller install this time
   disable_iwd2_in_eet:
     because: will got for a smaller install this time
   disable_rot:
