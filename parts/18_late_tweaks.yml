@@ -255,7 +255,7 @@
     location:
       github_user: subtledoctor
       repository: NPC_EE
-      commit: "6.5.5"
+      commit: "6.6"
   - name: DUAL_TO_KIT
     description: "Kjeron's 'Dual to Kit'"
     installation:
