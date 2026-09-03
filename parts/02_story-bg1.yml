@@ -421,20 +421,25 @@
       refresh: 5days
 
   - name: Reflections_Of_Destiny
-    description: Reflections of Destiny, an SoD Remix Mod
+    description: Reflections of Destiny - a Siege of Dragonspear content remix mod
     installation:
       after: EET, c#endless, thecalling
       before: EET_end
     components:
+      # compat issue with endlessbg1, transitions
+      # - 100 # The Future is Now
       - 110 # Reflections of Destiny BG1: The Mirror Shard: 0.9
+      # Too big a change + compat issue with sodrtd and another fine hell
+      # - 200 # Rewriting History
       - 220 # Reflections of Destiny SoD: Magical Realism: 0.9
       - 230 # Reflections of Destiny SoD: Nothing to Fear but Feyr Itself: 0.9
       - 240 # Reflections of Destiny SoD: The Precipice of Death: 0.9
+      # not needed as SoD will be mandatory
+      # - 330 # Wherever You Go, There You Are
     location:
-      github_user: subtledoctor
+      github_user: mleduque
       repository: Reflections-of-Destiny
-      branch: master
-      refresh: 4days
+      branch: 0.9.3-french
 
   - name: bg1npc
     description: The BG1NPC Project
