@@ -211,7 +211,7 @@
     location:
       github_user: mleduque
       repository: Faiths_and_Powers
-      branch: 0.91.4-fr
+      branch: 0.92-fr
       patches:
         - relative: patches/eet/fnp_configure.diff
         - relative: patches/eet/fnp_druid_scimitars.diff
