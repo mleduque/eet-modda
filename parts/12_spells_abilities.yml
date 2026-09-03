@@ -42,11 +42,6 @@
       # cdtweaks does this
       #- 170 # Ranger Class Update: Use IWD Spell Progression: v11
       - 120 # Thief Class Update: Evasion -> Add evasion to thieves and all thief kits: v11
-  - name: iwdification
-    description: iwdification -components with warnings
-    components:
-      - 100 # IWD Class Updates: Paladin: IWD Abilities and Skills
-    ignore_warnings: true
 
   - name: CtB
     description: Check the bodies - spells
