@@ -702,8 +702,8 @@
     location:
       github_user: Spellhold-Studios
       repository: Shadows-over-Soubar
-      release: v2.1.3
-      asset: shadows-over-soubar-2.1.3.iemod
+      branch: master
+      refresh: 30days
       patch:
         relative: patches/eet/sos.diff
   - name: JanQuest
