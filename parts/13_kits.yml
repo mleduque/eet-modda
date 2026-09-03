@@ -151,7 +151,7 @@
     location:
       github_user: UnearthedArcana
       repository: TomeAndBlood
-      branch: "1.4"
+      branch: "1.4.1"
   - name: refinements
     components:
       - 11 # Revised High Level Abilities -> Choose which classes get revised HLAs
