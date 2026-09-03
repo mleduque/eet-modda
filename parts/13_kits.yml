@@ -195,7 +195,7 @@
     location:
       github_user: UnearthedArcana
       repository: Might_and_Guile
-      tag: "5.8.9"
+      tag: "5.9"
   - name: Faiths_and_Powers
     components: ask
       #### INI ADDED
