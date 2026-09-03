@@ -192,7 +192,7 @@
       - 155 # Remove Overpowered Items from HoW
       - 160 # Add IWD1 Easter Egg Content to BG2
     location:
-      github_user: 11jo
+      github_user: subtledoctor
       repository:  IWD_EET_Integration
       branch: master
     disabled_if:
