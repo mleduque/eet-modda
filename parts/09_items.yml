@@ -153,7 +153,7 @@
       - 28 # Add Potions of Acid Resistance
       - 29 # Add Freedom Scrolls to Ribald's Store (Pre-Underdark)
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/morpheus/Forgotten-Armament-6.0
+      path: /home/mick/Games/modda-cache/iemods-archive/morpheus/Forgotten-Armament-7.0
       replace:
         - file_globs: ["components/stat_item_update.tpa"]
           replace: 'REPLACE_TEXTUALLY ~Set Strength to~ ~Increment Strength by~'
