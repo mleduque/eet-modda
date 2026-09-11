@@ -866,6 +866,24 @@
       size_hint: 430Mb
       patches:
         - relative: patches/eet/ctb-more-quests.diff
+  - name: tethyrforestpatch
+    description: Tethyr Forest Patch
+    overview: |
+      The original cave in the Forest of Tethyr going to AR2602 was being changed by CtB to go to
+      AR3530.  The mods TS-BP and Tashia still used AR2602 for quests and scripts.
+      I wanted to create a new entrance to the cave to AR2602 so all the mods' content	could be
+      achieved without CLUA console.  It seemed like a good idea but turned out to be harder
+      than I thought.
+
+      The new cave is south of the original entrance to AR2602 below a fallen tree and due west of
+      a little lake.
+    installation:
+      after: [CtB]
+    components:
+    location:
+      github_user: Spellhold-Studios
+      repository: Tethyr-Forest-Patch
+      tag: v3b
 
   - name: DruidGroveMakeover
     description: Druid Grove Area Makeover
