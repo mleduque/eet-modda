@@ -879,6 +879,7 @@
     installation:
       after: [CtB]
     components:
+      - 0 # Tethyr Forest Patch
     location:
       github_user: Spellhold-Studios
       repository: Tethyr-Forest-Patch
