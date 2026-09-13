@@ -133,7 +133,7 @@
     location:
       github_user: mleduque
       repository: SubtleD_Spell_Tweaks
-      tag: "2.9-fr"
+      tag: "2.9.2-fr"
       patches:
       # fix for compat with eeuitweaks
         - relative: patches/eet/subtled-spell-tweaks-identify.diff
