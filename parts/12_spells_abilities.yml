@@ -144,6 +144,7 @@
       - 1609 # Modifier 'Aube illusoire' pour ignorer la resistance a la magie: 2.9
       - 1707 # Modifier 'Rayon de soleil' pour ignorer la resistance a la magie: 2.9
       - 2110 # Modifier 'Identification' pour que le sort s'ameliore avec le niveau: 2.9
+    ignore_warnings: true
 
   - name : Weasels!
     components:
