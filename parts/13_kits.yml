@@ -121,7 +121,7 @@
       release: v19
       asset: lin-song_and_silence-v19.zip
   - name: rr
-    description: the rebalancing part
+    description: rogue rebalancing - the rebalancing part
     components:
       - 1 # thief kit revisions
       - 2 # Thief High Level Ability revisions
