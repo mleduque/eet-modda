@@ -1149,8 +1149,10 @@
       repository: LivingClara
       branch: main
       refresh: 4days
-      patches:
-        - relative: patches/eet/clara-readln.diff
+      replace:
+        - file_globs: [ 'LivingClara.tp2' ]
+          replace: 'ACTION_READLN how'
+          with: 'OUTER_SPRINT ~how~ 2'
 
   - name: w_packmule
     components:
