@@ -68,9 +68,8 @@
       asset: lin-spstuff-v16.tar.gz
 
   # mostly for the extra quest
-  - name: shadowadept # will prompt 2 times
+  - name: shadowadept
     description: shadowadept- main component only - because error
-    ignore_warnings: true # WARNING: no effects altered on C0SA112.itm
     components: ask
     location:
       github_user: TheArtisanBG
