@@ -116,7 +116,7 @@ modules:
       replace:
         - file_globs: [ "dlg/*.d" ]
           replace: '~See([ENEMY], FALSE)~'
-          replace: '~See([ENEMY], 0)~'
+          with: '~See([ENEMY], 0)~'
   - name: cdtweaks
     components:
     - 60 # 'Animation des armes amelioree: v16'

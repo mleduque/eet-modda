@@ -440,6 +440,11 @@
       github_user: mleduque
       repository: Reflections-of-Destiny
       branch: 0.9.3-french
+      replace:
+        - file_globs: [ "comp/comp_230.tpa" ]
+          replace: 'make sure cut-scene ends...?'
+          with: '// make sure cut-scene ends...?'
+          check: true
 
   - name: bg1npc
     description: The BG1NPC Project
