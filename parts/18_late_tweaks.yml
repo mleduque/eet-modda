@@ -30,7 +30,7 @@
     location:
       github_user: mleduque
       repository: magic_battles_revised
-      branch: 1.9.4
+      branch: 1.9.5
       patch:
       # align STR damage bonus on fighter for everyone + slight regen
         relative: patches/eet/mbr_spell_thrust_lv2.diff
