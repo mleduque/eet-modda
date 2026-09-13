@@ -312,5 +312,4 @@
     location:
       github_user: Argent77
       repository: A7-MiscTweak
-      release: v1.2
-      asset: A7-MiscTweaks-v1.2.iemod
+      commit: 843c77bce9b973bfa4d2

@@ -41,11 +41,11 @@
     components:
       - 0 # Kit d'Ensorceleur du Chaos
       - 30 # Ajouter des artefacts primordiaux
+      - 40 # Allow Wild Mages to use primordial artifacts
     location:
       github_user: Argent77
       repository: A7-ChaosSorcerer
-      release: v2.11
-      asset: A7-ChaosSorcerer-v2.11.iemod
+      commit: 3a2fb7430f619c # 2.11 + french update + allow mages to use prim artif
       patches:
         - relative: patches/A7-ChaosSorcerer-remove_str_con_malus.diff
   - name: sword_and_fist

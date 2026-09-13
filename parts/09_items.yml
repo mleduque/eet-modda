@@ -603,8 +603,7 @@
     location:
       github_user: Argent77
       repository: A7-MagicStore
-      release: v4.2
-      asset: A7-MagicStore-v4.2.iemod
+      commit: acbd9da175292c # 4.2 + french + secret feature
 
   - name: item_rev
     descritpion: Item Revisions - store component
