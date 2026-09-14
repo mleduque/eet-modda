@@ -74,7 +74,7 @@ locations:
     stratagems:
       github_user: Gibberlings3
       repository: SwordCoastStratagems
-      branch: master-plus-fixes
+      branch: v35.21-plus-fixes
       patches:
         - relative: patches/eet/scs-config.diff
         - relative: patches/eet/scs-restore-bonus-scrolls.diff
