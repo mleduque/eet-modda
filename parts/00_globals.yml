@@ -72,7 +72,7 @@ locations:
       repository: rr
       commit: 30ab9f7
     stratagems:
-      github_user: Gibberlings3
+      github_user: mleduque
       repository: SwordCoastStratagems
       branch: v35.21-plus-fixes
       patches:
