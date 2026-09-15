@@ -37,7 +37,7 @@ locations:
       branch: master
       refresh: 7days
       patch:
-        relative: patches/eet/cdtweaks-config.diff-check-v17
+        relative: patches/eet/cdtweaks-config.diff
     Imoen4ever:
       github_user: Gibberlings3
       repository: Imoen4Ever

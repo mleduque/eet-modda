@@ -3,7 +3,7 @@ new file mode 100644
 index 0000000..9fea77b
 --- /dev/null
 +++ cdtweaks/cdtweaks.txt
-@@ -0,0 +1,185 @@
+@@ -0,0 +1,184 @@
 +/*
 +The settings in this file allow for this mod to be installed in an unattended mode, e.g.
 +if you install Tweaks Anthology with the Big World Setup. A handful of components will
@@ -35,7 +35,7 @@ index 0000000..9fea77b
 +
 +// This variable will remove the racial requirement if set to 1
 +// e.g. a value of 1 will allow Viconia to romance gnomes, or Aerie half-orcs
-+OUTER_SET remove_romance_racial_requirements = 1
++OUTER_SET remove_romance_racial_requirements = 0
 +
 +// This variable will remove the gender-based requirements for romances if set to 1
 +// e.g. a value of 1 will allow Anomen to romance males or Jaheira to romance females
@@ -62,13 +62,12 @@ index 0000000..9fea77b
 +
 +// The following six stats will be used as the minimums by the component itself.
 +// All values must be between 6 and 15, or 0 if you don't want to change them.
-+OUTER_SET minimum_stats_strength     = 11
-+OUTER_SET minimum_stats_constitution = 11
-+OUTER_SET minimum_stats_dexterity    = 11
-+OUTER_SET minimum_stats_intelligence = 11
-+OUTER_SET minimum_stats_wisdom       = 11
-+OUTER_SET minimum_stats_charisma     = 11
-+
++OUTER_SET minimum_stats_strength     = 10
++OUTER_SET minimum_stats_constitution = 10
++OUTER_SET minimum_stats_dexterity    = 10
++OUTER_SET minimum_stats_intelligence = 10
++OUTER_SET minimum_stats_wisdom       = 10
++OUTER_SET minimum_stats_charisma     = 10
 +
 +
 +
@@ -106,13 +105,13 @@ index 0000000..9fea77b
 +
 +// Set this value to the number of save slots to cycle through. Up to 16 save slots are allowed.
 +// This value is only considered for games patched to version 2.0 or later. Default: 1 slot
-+OUTER_SET interval_save_count = 1
++OUTER_SET interval_save_count = 2
 +
 +// Set this value to 1 to use the custom "Interval-Save" slot whenever a save is created.
 +// Set this value to 0 to use the "Auto-Save" slot instead. Custom save slots are enforced
 +// if interval_save_count > 1. This value is only considered for games patched
 +// to version 2.0 or later. Default: 1
-+OUTER_SET interval_save_custom_slot = 1
++OUTER_SET interval_save_custom_slot = 2
 +
 +// Set this value to 1 to show a feedback message whenever an interval save is created.
 +// Set it to 0 to suppress any feedback. Default: 1
