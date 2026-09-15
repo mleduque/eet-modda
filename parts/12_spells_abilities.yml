@@ -162,6 +162,7 @@
   - name: stratagems
     components:
       - 2000 # Install all spelltweaks
+    ignore_warnings: true # WARNING: no effects altered on SPIN150.spl
 
   - name: wildmage
     components:
