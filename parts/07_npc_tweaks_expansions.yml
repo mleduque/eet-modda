@@ -488,4 +488,22 @@
       repository: Rasaad-Expansion-BG1
       branch: main
       refresh: 7days
+
+  - name: InterspeciesFriendship
+    description: 'Interspecies Friendship: Boo & Wilson'
+    overview: |
+      A tiny Baldur's Gate II mod that adds seven banters for Boo and Wilson.
+
+      When both Minsc and Wilson are in the party, Boo will pipe up in various situations. Over the course
+      of seven banters, Boo gradually gets to know Wilson and learns a thing or two from the best bear in
+      the world:
+      - How to help Minsc keep his berserker rage in check
+      - How to actually help Minsc in combat
+    components:
+      - 0 # Interspecies Friendship
+    location:
+      github_user: MephistoSatanDevil
+      repository: InterspeciesFriendship
+      commit: 6220f57 # 2026-09-16
+
   # end NPC extensions
