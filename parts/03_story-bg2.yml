@@ -428,8 +428,8 @@
     location:
       github_user: AciferBG
       repository: Poisoned-Pathways
-      release: v1.5
-      asset: Poisoned_Pathways_V_1.5.zip
+      release: v1.6
+      asset: Poisoned_Pathways_V_1.6.zip
       size_hint: 132Mb
 
   # Glittergear
