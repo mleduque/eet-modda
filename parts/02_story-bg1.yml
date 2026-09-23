@@ -530,13 +530,12 @@
       release: v2.03
       asset: blackhearts-v2.03.iemod
   - name: bst
-    components:
-      - 0 # The BS Company presents Balduran's Seatower: vEAOB.6
+    components: ask
     location:
       github_user: Gibberlings3
       repository: BS_Baldurans_Seatower
-      commit: e68bbd9 # vEAOB.9 + weigo fixes
-      asset: bs-baldurans-seatower-veaob.9.iemod
+      release: v1_Beta260923
+      asset: bs-baldurans-seatower-v1.0_beta260923.iemod
 
   - name: SotSC
     description: Shades of the Sword Coast
