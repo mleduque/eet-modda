@@ -68,9 +68,9 @@ locations:
       patches:
         - relative: patches/eet/iwdification-ini.diff
     rr:
-      github_user: TotoR115
+      github_user: Camdawg
       repository: rr
-      commit: 30ab9f7
+      branch: master
     stratagems:
       github_user: mleduque
       repository: SwordCoastStratagems
