@@ -343,8 +343,8 @@
     location:
       github_user: Argent77
       repository: A7-WaresOfThePlanes
-      release: v2.6
-      asset: A7-WaresOfThePlanes-v2.6.iemod
+      release: v2.7
+      asset: A7-WaresOfThePlanes-v2.7.iemod
     ignore_warnings: true # WARNING: no effects added to SPWI104.spl
   - name: unofficialitempack
     description: BGII:EE - Unofficial Item Pack
