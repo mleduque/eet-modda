@@ -92,24 +92,7 @@
       github_user: mleduque
       repository: jmerry_jtweaks
       tag: v3.1
-  - name: enchant
-    description: "Dee's 'Enchant the Missile Launchers: A Small Ranged Weapon Tweak'"
-    original_thread: https://forums.beamdog.com/discussion/58374/enchant-the-missile-launchers-ranged-weapon-tweak
-    original_dl: https://us.v-cdn.net/5019558/uploads/editor/hc/n0q8dnnbhnsc.zip
-    components:
-      - 0 # Enchant the Missile Launchers
-    location:
-      github_user: mleduque
-      repository: dee_enchant
-      tag: v1
-  - name: ammoless
-    components:
-      - 0 # Ammoless Launchers do not add their ammo's effects when using real ammo
-    location:
-      github_user: mleduque
-      repository: kjeron_ammoless
-      branch: fr
-      auth: PAT my_repositories
+
   - name: POISON_NO_BYPASS
     components:
       - 3 # Limited Exclusions(Anti-magic, AoE, Gaze): Mirror Image or Stoneskin
@@ -312,4 +295,26 @@
     location:
       github_user: Argent77
       repository: A7-MiscTweak
-      commit: 843c77bce9b973bfa4d2
+      commit: 093c95b683339ac70e92 # 1.3 plus compat fix for ammo
+  - name: enchant
+    description: "Dee's 'Enchant the Missile Launchers: A Small Ranged Weapon Tweak'"
+    original_thread: https://forums.beamdog.com/discussion/58374/enchant-the-missile-launchers-ranged-weapon-tweak
+    original_dl: https://us.v-cdn.net/5019558/uploads/editor/hc/n0q8dnnbhnsc.zip
+    components:
+      - 0 # Enchant the Missile Launchers
+    location:
+      github_user: mleduque
+      repository: dee_enchant
+      tag: v1
+    disabled_if:
+      because: superseded by Argent77 tweak component
+  - name: ammoless
+    components:
+      - 0 # Ammoless Launchers do not add their ammo's effects when using real ammo
+    location:
+      github_user: mleduque
+      repository: kjeron_ammoless
+      branch: fr
+      auth: PAT my_repositories
+    disabled_if:
+      because: conceptually incompatible with Argent77 tweak component
