@@ -115,11 +115,11 @@
     description: Made In Heaven Item Pack
     components:
       # Note: Angel doesn't use DESIGNATED and sometimes component numbers change
-      - 0 # Made in Heaven: Item Pack: v8
+      - 0 # Made in Heaven: Item Pack: v8 --- 150 items in all 4 games + 2 merchants, in FAI and Nashkel
       - 1 # Made in Heaven: Gem Pack
-      - 2 # Personal Items for NPCs: v8
+      - 2 # Personal Items for NPCs: v8  --- Imoen, Khalid, Jaheira, Minsc, Dynaheir and Yeslick.
       - 3 # BG2 Items for BG1
-      - 4 # IWD Items for BG1&2
+      - 4 # IWD Items for BG1&2   --- adds around 20 items to BG1 and BG2
       - 5 # PST Items for BG1&2
       # 6 # BG1-style Wands of Frost & -Lightning
       # 7 # P&P Healing Potions (more random)

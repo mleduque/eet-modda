@@ -25,6 +25,25 @@
       - 2300  # Sharper portraits of Abazigal and Gromnir for the Enhanced Edition, by DavidW
       - 2400  # Slightly improved cutscenes, by DavidW
 
+  - name: mih_fr
+    description: Made in Heaven - Fixes & Restoration; 'fixes' part only
+    installation:
+      general: at least component 5 must be after ub
+      after: ub
+    components: 
+      - 8 # Store Restorations (BG1): v1
+      - 9 # Quest Restorations (BG1): v1
+      - 10 # Minor Restorations (BG1): v1
+      - 11 # Minor Restorations (BG2): v1
+      - 12 # Volo's Travels: v1
+      - 14 # Artemis Entreri Encounter: v1
+      - 16 # Better Prepared Allies: v1
+      - 17 # Obtain Obscure Items: v1
+    location:
+      github_user: AngelGryph
+      repository: MadeInHeaven_FixesAndRestorations
+      branch: main
+      refresh: 7days
   - name: mih_eq
     description: Made In Heaven Encounters and Quests
     installation:
@@ -100,25 +119,6 @@
       branch: main
       refresh: 7days
 
-  - name: mih_fr
-    description: Made in Heaven - Fixes & Restoration; 'fixes' part only
-    installation:
-      general: at least component 5 must be after ub
-      after: ub
-    components: 
-      - 8 # Store Restorations (BG1): v1
-      - 9 # Quest Restorations (BG1): v1
-      - 10 # Minor Restorations (BG1): v1
-      - 11 # Minor Restorations (BG2): v1
-      - 12 # Volo's Travels: v1
-      - 14 # Artemis Entreri Encounter: v1
-      - 16 # Better Prepared Allies: v1
-      - 17 # Obtain Obscure Items: v1
-    location:
-      github_user: AngelGryph
-      repository: MadeInHeaven_FixesAndRestorations
-      branch: main
-      refresh: 7days
   - name: oversight
     components:
       - 0 # Sendai plus coriace (requiert ToB)
