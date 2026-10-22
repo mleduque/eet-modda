@@ -72,9 +72,10 @@ locations:
       repository: rr
       branch: master
     stratagems:
-      github_user: mleduque
+      github_user: AngelGryph
       repository: SwordCoastStratagems
-      branch: v35.21-plus-fixes
+      branch: master
+      refresh : 7days
       patches:
         - relative: patches/eet/scs-config.diff
         - relative: patches/eet/scs-restore-bonus-scrolls.diff
