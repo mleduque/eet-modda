@@ -589,8 +589,7 @@
     location:
       github_user: Glittergear
       repository: BloodAndFaith
-      release: v1.4
-      asset: Blood-And-Faith-v1.4.iemod
+      commmit: 8259105d861d7f69a8ac # king rat tweak + french translation
   - name: PartyToDieFor
     description: AParty To Die For
     overview: |
