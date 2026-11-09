@@ -462,7 +462,7 @@
     components:
       - 0 # Verr'Sza - the rakshasa NPC for BG1EE: 6.01
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/verrsza v6.3
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/verrsza v6.4
   - name: ArkanisSoD
     components:
       - 0 # Sir Arkanis for Siege of Dragonspear: v1.1
