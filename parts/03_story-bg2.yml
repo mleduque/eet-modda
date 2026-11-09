@@ -271,7 +271,7 @@
     components:
       - 0 # Athkatlan Grounds: The Ink Gallery: v1.4.1
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/InkGallery v1.4.1
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/InkGallery v1.5
   - name: SiamorphesWeaponry
     description: "Athkatlan Grounds: Siamorphe's Weaponry"
     overview: |
