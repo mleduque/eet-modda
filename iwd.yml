@@ -74,7 +74,7 @@ modules:
     components: # single component
       - 0 # La redecouverte de Kuldahar (IWDEE) -> Oui, mais sans corriger les sauvegarde existantes
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/Kuldahar v2.6
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/Kuldahar v2.6.1
   - name: Snowytoes
     components: # single component
       - 0 # Snowytoes Hamlet, a new area (IWD EE) -> Yes, but don't patch existing save games
