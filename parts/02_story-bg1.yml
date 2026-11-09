@@ -405,6 +405,19 @@
       branch: v6-french
       refresh: 3days
 
+  - name: CotSC
+    description: Baldur's Gate: Chronicles of the Sword Coast Mod
+    overview: Quests ans quest extensions for EET
+    installation:
+      after: [EET]
+      before: [BP-BGT-Worldmap]
+    components: ask
+    location:
+      github_user: HotaruPL
+      repository: Chronicles-of-the-Sword-Coast
+      release: CotSCV1.4 
+      asset: Chronicles.of.the.Sword.Coast.v1.4.zip
+
   - name: candlekeep_revisited
     description:  Candlekeep Revisited
     overview: A mod for expanding the content of the BG1 tutorial - dialogue with NPCs, 3 minor side-quests
