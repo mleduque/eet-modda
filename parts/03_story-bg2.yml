@@ -205,7 +205,7 @@
     components:
       - 0 # Colours of Infinity: Tales of the Deep Gardens -> Yes, but don't patch the existing save games: 12.7
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/colours_of_infinity/Tales of the Deep Gardens v12.96
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/colours_of_infinity/Tales of the Deep Gardens v12.97
   - name: Innershade
     description: "Colours of Infinity: Innershade"
     components:
