@@ -342,7 +342,7 @@
     components:
       - 0 # The Life and Heroism of Jimothy the Raccoon - A Quest Mod for BG2EE: v1.0
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Jimothy-v1.0
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/Jimothy-v1.2
 
   # acifer
   - name: Tidings
