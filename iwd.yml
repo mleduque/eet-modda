@@ -79,7 +79,7 @@ modules:
     components: # single component
       - 0 # Snowytoes Hamlet, a new area (IWD EE) -> Yes, but don't patch existing save games
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/Snowytoes-v1.6
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/iwd/Snowytoes-v1.7
   - name: BlinkingDead
     components: # single component
       - 0 # Night of the Blinking Dead (IWD) -> Yes, but don't patch existing save games
