@@ -291,7 +291,7 @@
     components:
       - 0 # Athkatlan Grounds: Siamorphe's Weaponry - a new shop with levelling weapons: v1.0
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/SiamorphesWeaponry-v1.0
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/athkathlan_grounds/SiamorphesWeaponry-v1.1
 
   # The Dreadful Tales series
   - name: InLoveUndeath
