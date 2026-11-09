@@ -315,7 +315,7 @@
       - 5 # Optional: Drider, Dark Treant, Will-o'-wisp Enemies: v3.3
       - 6 # [CHEAT] Enable shaman stronghold for all classes: v3.3
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/willowisp v3.5
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/willowisp v3.6
       replace:
         - file_globs: [ "willowisp/baf/l0will.baf" ]
           replace: 'RealSetGlobalTimer("L0WillTimer","GLOBAL",2400)'
