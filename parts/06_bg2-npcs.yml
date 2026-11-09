@@ -354,7 +354,7 @@
       - 0 # Dynaheir for Baldur's Gate 2: EE: v1.3
       - 1 # Dynaheir for Baldur's Gate 2: EE - Player-Initiated Dialogues: v1.3
     location:
-      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/DynaheirBG2EE v1.3
+      path: /home/mick/Games/modda-cache/iemods-archive/weaselmods/bg/oneshots/DynaheirBG2EE v1.4
   - name: KhalidBG2
     description: Khalid BG2EE
     overview: |
