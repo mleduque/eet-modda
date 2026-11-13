@@ -1153,6 +1153,23 @@
         - file_globs: [ 'LivingClara.tp2' ]
           replace: 'ACTION_READLN how'
           with: 'OUTER_SPRINT ~how~ 2'
+  - name: Derats_Defis
+    description: Telim'Gar's Insurmountable Challenges
+    overview: |
+      At the location of your choice (Athkatla, Watchtower, or Amkethran), you will encounter a Mithril
+      golem who will offer you challenges.
+
+      Each challenge consists of an "arena" in which you will encounter dozens of random monsters and
+      where you must find and kill the boss to claim victory.
+
+      There are 10 challenges to try, plus the final challenge once you've completed all 10.
+    components: ask
+    location:
+      github_user: Deratiseur
+      repository: Defis
+      release: v2
+      asset: Derats_Defis-v1.iemod
+      size_hint: 264Mb
 
   - name: w_packmule
     components:
