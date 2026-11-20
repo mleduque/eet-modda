@@ -20,7 +20,7 @@
     location:
       github_user: subtledoctor
       repository: SubtleD_Stat_Overhauls
-      branch: "1.8"
+      branch: "1.8.2"
       patches:
         - relative: patches/eet/subtled-stat-overhaul-config.diff
   - name: Magic_Battles_Revised
