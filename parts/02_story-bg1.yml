@@ -454,7 +454,7 @@
     location:
       github_user: mleduque
       repository: Reflections-of-Destiny
-      branch: 0.9.3-french
+      branch: 0.9.5-french
       replace:
         - file_globs: [ "comp/comp_230.tpa" ]
           replace: 'make sure cut-scene ends...?'
