@@ -906,10 +906,7 @@
     components:
       - 0 # The Forgotten Edge - Items: 0.2
     location:
-      github_user: mleduque
-      repository: TheForgottenEdge
-      branch: main
-      refresh: 7days
+      path: /home/mick/Games/modda-cache/iemods-archive/others/TheForgottenEdge_v0.2.zip
 
   - name: thoghma
     description: In the Service of Oghma
