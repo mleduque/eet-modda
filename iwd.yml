@@ -932,8 +932,8 @@ modules:
     location:
       github_user: D2-mods
       repository: Better-IWD-Pregen
-      release: v9.1
-      asset: better-iwd-pregen-v9.1.iemod
+      release: v9.3
+      asset: better-iwd-pregen-v9.3.iemod
   - name: fix_cre_script_names
     description: Some mod out there is altering various creatures' script names to "cre_strref." This hotfix changes the script name of all such creatures from "cre_strref" to their filename.
     components: ask

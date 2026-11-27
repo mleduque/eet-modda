@@ -238,6 +238,14 @@
       asset: random-graion-tweaks-1.17.iemod
     ignore_warnings: true
 
+  - name: d2-script
+    components: ask
+    location:
+      github_user: D2-mods
+      repository: Better-IWD-Pregen
+      release: v9.3
+      asset: better-iwd-pregen-v9.3.iemod
+
   - name: ZS_CanIStabYou
     components: ask
     location:
